@@ -1,0 +1,77 @@
+// MQTT topics
+
+/*
+    A topic is a string that the MQTT broker uses to filter messages for each connected client.
+    The topic object contains the following properties:
+        - (name of object): the name of the topic
+        - description: a description of the topic
+        - qos: the quality of service level to use for the topic
+        - role: array of id of the roles that can access the topic. The value will be the default for all sub-topics
+        - variables: array of variables that can be replaced in the topic
+        - deprecated: if true the topic is deprecated
+        - sub_topics: array of topics that will be appended to the current topic
+    The variables object contains the following properties:
+        - name: the name of the variable
+        - description: a description of the variable
+        - default (optional): the default value of the variable
+*/
+
+{
+    "fenice-evo/<device_id>": {
+        "description": "Root topic for all devices",
+        "qos": 0,
+        "role": [0, 2, 3],
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ],
+        "deprecated": false,
+        "sub_topics": {
+            "file_transaction/<transaction_id>": {
+                "description": "The file transaction topic",
+                "variables": [
+                    {
+                        "name": "transaction_id",
+                        "description": "The transaction ID"
+                    }
+                ],
+                "sub_topics": {
+                    "begin": {
+                        "description": "The begin topic"
+                    },
+                    "end": {
+                        "description": "The end topic"
+                    },
+                    "chunk": {
+                        "description": "The chunk topic"
+                    }
+                }
+            },
+            "data": {
+                "description": "The data topic, it contains all the CAN messages",
+                "roles": [0, 2, 3], // TODO: WTF tlm non può leggere data, da rivedere la tabella
+                "sub_topics": {
+                    "primary": {
+                        "description": "The primary data topic"
+                    },
+                    "secondary": {
+                        "description": "The secondary data topic"
+                    },
+                    "inverter": {
+                        "description": "The inverter data topic"
+                    },
+                    "gps": {
+                        "description": "The GPS data topic"
+                    },
+                    "brusa": {
+                        "description": "The Brusa data topic",
+                        "deprecated": true
+                    }
+                }
+            }
+        }
+    }
+}
