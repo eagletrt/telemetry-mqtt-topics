@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // The secondary data topic
     class SecondaryDataTopic
     {
     public:

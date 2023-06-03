@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // The data topic, it contains all the CAN messages
     class DataTopic
     {
     public:

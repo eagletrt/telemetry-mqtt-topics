@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // Root topic for all devices
     class FeniceEvoRootTopic
     {
     public:

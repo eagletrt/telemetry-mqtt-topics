@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // The GPS data topic
     class GPSDataTopic
     {
     public:

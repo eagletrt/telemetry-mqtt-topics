@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // The primary data topic
     class PrimaryDataTopic
     {
     public:

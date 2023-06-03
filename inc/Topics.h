@@ -11,7 +11,6 @@
 #include "SecondaryDataTopic.h"
 #include "InverterDataTopic.h"
 #include "GPSDataTopic.h"
-#include "BrusaDataTopic.h"
 
 namespace MQTTTopics {
  
@@ -25,7 +24,6 @@ namespace MQTTTopics {
 	class SecondaryDataTopic;
 	class InverterDataTopic;
 	class GPSDataTopic;
-	class BrusaDataTopic;
 
 }// namespace MQTTTopics
 

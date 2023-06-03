@@ -9,6 +9,8 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
+
+    // The inverter data topic
     class InverterDataTopic
     {
     public:
