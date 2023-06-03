@@ -4,6 +4,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
 
     # Default values
     topic = key
+    alias = None
     description = "Not defined"
     qos = 0
     role = [1,2,3,4]
@@ -13,6 +14,11 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     # Concatenate with parent topic
     if "topic" in parent_config:
         topic = parent_config["topic"] + "/" + key
+    if "alias" not in node:
+        print("ERROR! Alias not defined for topic: " + topic)
+        exit(1)
+    else:
+        alias = node["alias"]
     # Set description if defined
     if "description" in node:
         description = node["description"]
@@ -33,6 +39,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
 
     parsed_node = {
         "topic": topic,
+        "alias": alias,
         "description": description,
         "qos": qos,
         "role": role,
@@ -53,13 +60,11 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
 if __name__ == "__main__":
     import jstyleson as json
 
-    file_name = "topics.example.jsonc"
+    file_name = "topics.jsonc"
     topics = None
 
     with open(file_name, "r") as file:
         topics = json.load(file)
-
-    print ("✅ File loaded")
 
     topics_list = []
 
