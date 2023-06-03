@@ -1,7 +1,3 @@
-import utils.tree_parser as tree_parser
-
-
-
 def generate(topics_list, filename):
     with open(filename, "w") as file:
         file.write("# Topics\n\n")

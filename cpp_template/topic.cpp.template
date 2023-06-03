@@ -1,0 +1,22 @@
+#include "inc/topics/<alias>.h"
+
+namespace MQTTTopics {
+    const std::string <alias>::topic = "<topic>";
+    const uint8_t <alias>::qos = 0;
+    const std::unordered_set<uint8_t> <alias>::roles = {1, 2, 3, 4};
+
+    TopicString <alias>::get(<variables:params>) {
+        std::string str(topic);
+
+<variables:replaces>
+        return str;
+    }
+
+    int <alias>::qualityOfService() {
+        return static_cast<int>(qos);
+    }
+
+    bool <alias>::hasPermission(const unsigned int &role) {
+        return (roles.find(role) != roles.cend());
+    }
+}// namespace MQTTTopics

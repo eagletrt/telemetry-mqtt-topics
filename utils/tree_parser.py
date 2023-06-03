@@ -26,7 +26,6 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     if "qos" not in node and "qos" in parent_config:
         qos = parent_config["qos"]
     # Use role of the parent topic if not defined
-
     if "role" in node:
         role = node["role"]
     elif "role" in parent_config:

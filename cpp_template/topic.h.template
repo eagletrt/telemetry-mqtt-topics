@@ -1,0 +1,32 @@
+#ifndef <alias:upper>_H
+#define <alias:upper>_H
+
+#include "TopicString.h"
+#include "Topics.h"
+
+#include <cstdint>
+#include <string>
+#include <unordered_set>
+
+namespace MQTTTopics {
+    class <alias>
+    {
+    public:
+        <alias>() = delete;
+        <alias>(const <alias> &) = delete;
+        <alias> &operator=(const <alias> &) = delete;
+        ~<alias>() = delete;
+
+    public:
+        static TopicString get(<variables:params>);
+        static int qualityOfService();
+        static bool hasPermission(const unsigned int &role);
+
+    private:
+        static const std::string topic;
+        static const uint8_t qos;
+        static const std::unordered_set<uint8_t> roles;
+    };
+}// namespace MQTTTopics
+
+#endif

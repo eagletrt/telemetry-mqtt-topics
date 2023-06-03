@@ -1,10 +1,10 @@
 #ifndef TOPICS_H
 #define TOPICS_H
 
-#include "FileTransactionBegin.h"
-
+<includes>
 namespace MQTTTopics {
-    class FileTransactionBegin;
+ 
+<classes>
 }// namespace MQTTTopics
 
 #endif

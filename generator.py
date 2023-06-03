@@ -1,4 +1,5 @@
 import generators.md_generator as md_generator
+import generators.cpp_generator as cpp_generator
 import utils.tree_parser as tree_parser
 import jstyleson as json
 
@@ -17,3 +18,4 @@ if __name__ == "__main__":
 
     print("✅ Tree parsed")
     md_generator.generate(topics_list, "topics.md")
+    cpp_generator.generate(topics_list)
