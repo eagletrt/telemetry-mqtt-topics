@@ -1,0 +1,227 @@
+[
+    {
+        "topic": "fenice-evo/<device_id>",
+        "alias": "FeniceEvoRootTopic",
+        "description": "Root topic for all devices",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>",
+        "alias": "FileTransactionTopic",
+        "description": "The file transaction topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction_id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin",
+        "alias": "FileTransactionBeginTopic",
+        "description": "The begin topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction_id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/end",
+        "alias": "FileTransactionEndTopic",
+        "description": "The end topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction_id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk",
+        "alias": "FileTransactionChunkTopic",
+        "description": "The chunk topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction_id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data",
+        "alias": "DataTopic",
+        "description": "The data topic, it contains all the CAN messages",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data/primary",
+        "alias": "PrimaryDataTopic",
+        "description": "The primary data topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data/secondary",
+        "alias": "SecondaryDataTopic",
+        "description": "The secondary data topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data/inverter",
+        "alias": "InverterDataTopic",
+        "description": "The inverter data topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data/gps",
+        "alias": "GPSDataTopic",
+        "description": "The GPS data topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/data/brusa",
+        "alias": "BrusaDataTopic",
+        "description": "The Brusa data topic",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "deprecated": true,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    }
+]
