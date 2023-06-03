@@ -16,7 +16,7 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool <alias>::hasPermission(const unsigned int &role) {
+    bool <alias>::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
     }
 }// namespace MQTTTopics
