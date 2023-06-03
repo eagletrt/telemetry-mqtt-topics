@@ -1,7 +1,9 @@
 cmake-build-debug
 CMakeLists.txt
-
 .vscode
 .idea
-
 .clang-format
+__pycache__
+*/__pycache__
+output.txt
+topics.md
