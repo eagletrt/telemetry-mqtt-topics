@@ -15,19 +15,17 @@ namespace MQTTTopics {
         FileTransactionBegin() = delete;
         FileTransactionBegin(const FileTransactionBegin &) = delete;
         FileTransactionBegin &operator=(const FileTransactionBegin &) = delete;
-        ~FileTransactionBegin() = default;
-
-        FileTransactionBegin(const std::string &topic, const uint64_t &qos, const std::initializer_list<uint64_t> &roles);
+        ~FileTransactionBegin() = delete;
 
     public:
-        TopicString get(const std::string &deviceId = "telemetry", const std::string &transactionId = "") const;
-        int qualityOfService() const;
-        bool canSubscribe(const unsigned int &role) const;
+        static TopicString get(const std::string &transactionId, const std::string &deviceId = "telemetry");
+        static int qualityOfService();
+        static bool canSubscribe(const unsigned int &role);
 
     private:
-        const std::string topic;
-        const uint64_t qos;
-        const std::unordered_set<uint64_t> roles;
+        static const std::string topic;
+        static const uint8_t qos;
+        static const std::unordered_set<uint8_t> roles;
     };
 }// namespace MQTTTopics
 

@@ -5,7 +5,6 @@
 
 namespace MQTTTopics {
     class FileTransactionBegin;
-    extern const FileTransactionBegin fileTransactionBegin;
 }// namespace MQTTTopics
 
 #endif
