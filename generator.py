@@ -18,7 +18,11 @@ if __name__ == "__main__":
 
     print("✅ Tree parsed")
 
-    md_generator.generate(topics_list, "topics.md")
+    with open("topics.json", "w") as file:
+        file.write(json.dumps(topics_list, indent=4))
+    print("✅ JSON generated")
+
+    md_generator.generate(topics_list, "documentation.md")
     print("✅ Markdown generated")
 
     cpp_generator.generate(topics_list)
