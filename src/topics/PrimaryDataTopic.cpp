@@ -17,7 +17,7 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool PrimaryDataTopic::hasPermission(const unsigned int &role) {
+    bool PrimaryDataTopic::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
     }
 }// namespace MQTTTopics

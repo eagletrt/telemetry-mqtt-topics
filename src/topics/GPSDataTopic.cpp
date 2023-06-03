@@ -17,7 +17,7 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool GPSDataTopic::hasPermission(const unsigned int &role) {
+    bool GPSDataTopic::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
     }
 }// namespace MQTTTopics

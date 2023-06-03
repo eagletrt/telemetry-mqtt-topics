@@ -22,7 +22,7 @@ namespace MQTTTopics {
     public:
         static TopicString get(const std::string& transaction_id, const std::string& device_id = "telemetry");
         static int qualityOfService();
-        static bool hasPermission(const unsigned int &role);
+        static bool hasPermission(unsigned int role);
 
     private:
         static const std::string topic;
