@@ -4,6 +4,12 @@ import os
 def generate(topics_list):
     make_dirs()
     copy_static_files()
+
+    # Remove deprecated topics
+    for topic in topics_list:
+        if topic["deprecated"]:
+            topics_list.remove(topic)
+
     generate_namespace_file(topics_list)
     for topic in topics_list:
         generate_cpp(topic)
@@ -75,6 +81,9 @@ def generate_h(topic):
 
     # replace alias
     file_content = file_content.replace("<alias>", topic["alias"])
+
+    # replace desctiption
+    file_content = file_content.replace("<description>", f"// {topic['description']}")
 
     # replace get function parameters
     parameters = ""

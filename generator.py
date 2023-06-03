@@ -17,5 +17,9 @@ if __name__ == "__main__":
         topics_list.extend(tree_parser.parse_report_tree(key, value, {}))
 
     print("✅ Tree parsed")
+
     md_generator.generate(topics_list, "topics.md")
+    print("✅ Markdown generated")
+
     cpp_generator.generate(topics_list)
+    print("✅ C++ generated")

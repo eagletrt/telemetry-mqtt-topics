@@ -31,6 +31,8 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     elif "role" in parent_config:
         role = parent_config["role"]
     # Use deprecated of the parent topic
+    if "deprecated" in node and node["deprecated"]:
+        deprecated = True
     if "deprecated" in parent_config and parent_config["deprecated"]:
         deprecated = True
     # Concatenate with parent variables if defined
