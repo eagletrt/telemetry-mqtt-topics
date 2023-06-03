@@ -1,11 +1,8 @@
-name: Generate canlib
+name: Generate MQTT topics
 
 on:
   workflow_dispatch:
   push:
-    paths:
-      - "networks/**"
-      - ".github/**"
     branches:
       - master
 
@@ -18,18 +15,18 @@ jobs:
         name: Set up Python 3.10
         with:
           python-version: "3.10"
-      - name: Run canlib generator
+      - name: Run generator
         run: |
           pip install -r requirements.txt
           python3 generator.py
           mkdir -p /tmp/workspace
-          cp topics.md
+          cp topics.md /tmp/workspace
 
       - uses: actions/checkout@v2
         with:
           ref: build
 
-      - name: Push generated includes
+      - name: Push generated files
         id: commit
         run: |
           git config --global user.name 'github-actions[bot]'
