@@ -1,8 +1,8 @@
 #ifndef TOPIC_TEMPLATE_H
 #define TOPIC_TEMPLATE_H
 
+#include "MQTTTopics.h"
 #include "TopicString.h"
-#include "topics.h"
 
 #include <cstdint>
 #include <string>
