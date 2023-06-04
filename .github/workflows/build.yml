@@ -20,8 +20,7 @@ jobs:
           pip install -r requirements.txt
           python3 generator.py
           mkdir -p /tmp/workspace
-          cp -R inc src /tmp/workspace
-          cp documentation.md topics.json LICENCE .gitignore /tmp/workspace
+          cp out/* /tmp/workspace
 
       - uses: actions/checkout@v2
         with:

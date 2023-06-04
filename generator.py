@@ -2,6 +2,7 @@ import generators.md_generator as md_generator
 import generators.cpp_generator as cpp_generator
 import utils.tree_parser as tree_parser
 import jstyleson as json
+import os
 
 if __name__ == "__main__":
 
@@ -18,11 +19,15 @@ if __name__ == "__main__":
 
     print("✅ Tree parsed")
 
-    with open("topics.json", "w") as file:
+    # check if out dir exists
+    if not os.path.exists("out"):
+        os.makedirs("out")
+
+    with open("out/topics.json", "w") as file:
         file.write(json.dumps(topics_list, indent=4))
     print("✅ JSON generated")
 
-    md_generator.generate(topics_list, "documentation.md")
+    md_generator.generate(topics_list, "out/documentation.md")
     print("✅ Markdown generated")
 
     cpp_generator.generate(topics_list)

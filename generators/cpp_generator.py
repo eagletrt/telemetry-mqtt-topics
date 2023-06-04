@@ -16,30 +16,30 @@ def generate(topics_list):
         generate_h(topic)
 
 def make_dirs():
-    if not os.path.exists("src"):
-        os.makedirs("src")
-    if not os.path.exists("src/topics"):
-        os.makedirs("src/topics")
-    if not os.path.exists("inc"):
-        os.makedirs("inc")
-    if not os.path.exists("inc/topics"):
-        os.makedirs("inc/topics")
+    if not os.path.exists("out/src"):
+        os.makedirs("out/src")
+    if not os.path.exists("out/src/topics"):
+        os.makedirs("out/src/topics")
+    if not os.path.exists("out/inc"):
+        os.makedirs("out/inc")
+    if not os.path.exists("out/inc/topics"):
+        os.makedirs("out/inc/topics")
 
 def copy_static_files():
-    if not os.path.exists("inc/TopicString.h"):
+    if not os.path.exists("out/inc/TopicString.h"):
         with open("cpp_template/TopicString.h", "r") as file:
             file_content = file.read()
-        with open("inc/TopicString.h", "w") as file:
+        with open("out/inc/TopicString.h", "w") as file:
             file.write(file_content)
-    if not os.path.exists("src/TopicString.cpp"):
+    if not os.path.exists("out/src/TopicString.cpp"):
         with open("cpp_template/TopicString.cpp", "r") as file:
             file_content = file.read()
-        with open("src/TopicString.cpp", "w") as file:
+        with open("out/src/TopicString.cpp", "w") as file:
             file.write(file_content)
-    if not os.path.exists("cpp_template/CMakeLists.txt"):
+    if not os.path.exists("out/CMakeLists.txt"):
         with open("cpp_template/CMakeLists.txt", "r") as file:
             file_content = file.read()
-        with open("CMakeLists.txt", "w") as file:
+        with open("out/CMakeLists.txt", "w") as file:
             file.write(file_content)
 
 def generate_cpp(topic):
@@ -85,7 +85,7 @@ def generate_cpp(topic):
     # retain replace
     file_content = file_content.replace("<retain>", "true" if topic["retain"] else "false")
 
-    with open(f"src/topics/{topic['alias']}.cpp", "w") as file:
+    with open(f"out/src/topics/{topic['alias']}.cpp", "w") as file:
         file.write(file_content)
 
 def generate_h(topic):
@@ -114,7 +114,7 @@ def generate_h(topic):
         parameters = parameters[:-2]
     file_content = file_content.replace("<variables:params>", parameters)
 
-    with open(f"inc/topics/{topic['alias']}.h", "w") as file:
+    with open(f"out/inc/topics/{topic['alias']}.h", "w") as file:
         file.write(file_content)
 
 def generate_namespace_file(topics_list):
@@ -135,5 +135,5 @@ def generate_namespace_file(topics_list):
         classes += f"\tclass {topic['alias']};\n"
     file_content = file_content.replace("<classes>", classes)
 
-    with open("inc/Topics.h", "w") as file:
+    with open("out/inc/Topics.h", "w") as file:
         file.write(file_content)
