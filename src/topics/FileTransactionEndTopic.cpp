@@ -1,4 +1,4 @@
-#include "inc/topics/FileTransactionEndTopic.h"
+#include "FileTransactionEndTopic.h"
 
 namespace MQTTTopics {
     const std::string FileTransactionEndTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>/end";

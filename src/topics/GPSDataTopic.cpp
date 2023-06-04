@@ -1,4 +1,4 @@
-#include "inc/topics/GPSDataTopic.h"
+#include "GPSDataTopic.h"
 
 namespace MQTTTopics {
     const std::string GPSDataTopic::topic = "fenice-evo/<device_id>/data/gps";

@@ -1,4 +1,4 @@
-#include "inc/topics/FeniceEvoRootTopic.h"
+#include "FeniceEvoRootTopic.h"
 
 namespace MQTTTopics {
     const std::string FeniceEvoRootTopic::topic = "fenice-evo/<device_id>";

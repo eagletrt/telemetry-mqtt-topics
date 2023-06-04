@@ -1,4 +1,4 @@
-#include "inc/topics/DataTopic.h"
+#include "DataTopic.h"
 
 namespace MQTTTopics {
     const std::string DataTopic::topic = "fenice-evo/<device_id>/data";

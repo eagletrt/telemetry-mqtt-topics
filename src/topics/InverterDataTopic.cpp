@@ -1,4 +1,4 @@
-#include "inc/topics/InverterDataTopic.h"
+#include "InverterDataTopic.h"
 
 namespace MQTTTopics {
     const std::string InverterDataTopic::topic = "fenice-evo/<device_id>/data/inverter";

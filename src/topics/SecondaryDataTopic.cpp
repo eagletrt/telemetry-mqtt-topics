@@ -1,4 +1,4 @@
-#include "inc/topics/SecondaryDataTopic.h"
+#include "SecondaryDataTopic.h"
 
 namespace MQTTTopics {
     const std::string SecondaryDataTopic::topic = "fenice-evo/<device_id>/data/secondary";

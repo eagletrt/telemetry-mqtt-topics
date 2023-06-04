@@ -1,4 +1,4 @@
-#include "inc/topics/FileTransactionBeginTopic.h"
+#include "FileTransactionBeginTopic.h"
 
 namespace MQTTTopics {
     const std::string FileTransactionBeginTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin";
