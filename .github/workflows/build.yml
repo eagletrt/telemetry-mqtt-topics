@@ -20,7 +20,7 @@ jobs:
           pip install -r requirements.txt
           python3 generator.py
           mkdir -p /tmp/workspace
-          cp out/* /tmp/workspace
+          cp -R out/* /tmp/workspace
 
       - uses: actions/checkout@v2
         with:
