@@ -36,6 +36,11 @@ def copy_static_files():
             file_content = file.read()
         with open("src/TopicString.cpp", "w") as file:
             file.write(file_content)
+    if not os.path.exists("CMakelists.txt"):
+        with open("cpp_template/CMakelists.txt", "r") as file:
+            file_content = file.read()
+        with open("CMakelists.txt", "w") as file:
+            file.write(file_content)
 
 def generate_cpp(topic):
     file_content = ""
