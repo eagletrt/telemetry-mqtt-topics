@@ -3,7 +3,8 @@
 namespace MQTTTopics {
     const std::string FeniceEvoRootTopic::topic = "fenice-evo/<device_id>";
     const uint8_t FeniceEvoRootTopic::qos = 0;
-    const std::unordered_set<uint8_t> FeniceEvoRootTopic::roles = {1, 2, 3, 4};
+    const std::unordered_set<uint8_t> FeniceEvoRootTopic::roles = {0, 2, 3};
+    const bool FeniceEvoRootTopic::retain = false;
 
     TopicString FeniceEvoRootTopic::get(const std::string& device_id = "telemetry") {
         std::string str(topic);
@@ -19,5 +20,9 @@ namespace MQTTTopics {
 
     bool FeniceEvoRootTopic::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
+    }
+
+    bool FeniceEvoRootTopic::retained() {
+        return retain;
     }
 }// namespace MQTTTopics

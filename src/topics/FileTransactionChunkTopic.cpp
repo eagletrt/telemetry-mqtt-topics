@@ -3,7 +3,8 @@
 namespace MQTTTopics {
     const std::string FileTransactionChunkTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk";
     const uint8_t FileTransactionChunkTopic::qos = 0;
-    const std::unordered_set<uint8_t> FileTransactionChunkTopic::roles = {1, 2, 3, 4};
+    const std::unordered_set<uint8_t> FileTransactionChunkTopic::roles = {0, 2, 3};
+    const bool FileTransactionChunkTopic::retain = false;
 
     TopicString FileTransactionChunkTopic::get(const std::string& transaction_id, const std::string& device_id = "telemetry") {
         std::string str(topic);
@@ -20,5 +21,9 @@ namespace MQTTTopics {
 
     bool FileTransactionChunkTopic::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
+    }
+
+    bool FileTransactionChunkTopic::retained() {
+        return retain;
     }
 }// namespace MQTTTopics

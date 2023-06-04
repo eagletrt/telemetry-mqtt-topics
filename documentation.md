@@ -5,6 +5,7 @@
 > Root topic for all devices
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
@@ -13,6 +14,7 @@
 > The file transaction topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
   - transaction_id -> The transaction ID 
@@ -21,6 +23,7 @@
 > The begin topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
   - transaction_id -> The transaction ID 
@@ -29,6 +32,7 @@
 > The end topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
   - transaction_id -> The transaction ID 
@@ -37,6 +41,7 @@
 > The chunk topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
   - transaction_id -> The transaction ID 
@@ -45,6 +50,7 @@
 > The data topic, it contains all the CAN messages
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: Yes
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
@@ -53,6 +59,7 @@
 > The primary data topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: Yes
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
@@ -61,6 +68,7 @@
 > The secondary data topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: Yes
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
@@ -69,6 +77,7 @@
 > The inverter data topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: Yes
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
@@ -77,6 +86,7 @@
 > The GPS data topic
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
+- **Retain**: Yes
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 

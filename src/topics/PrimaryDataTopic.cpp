@@ -3,7 +3,8 @@
 namespace MQTTTopics {
     const std::string PrimaryDataTopic::topic = "fenice-evo/<device_id>/data/primary";
     const uint8_t PrimaryDataTopic::qos = 0;
-    const std::unordered_set<uint8_t> PrimaryDataTopic::roles = {1, 2, 3, 4};
+    const std::unordered_set<uint8_t> PrimaryDataTopic::roles = {0, 2, 3};
+    const bool PrimaryDataTopic::retain = true;
 
     TopicString PrimaryDataTopic::get(const std::string& device_id = "telemetry") {
         std::string str(topic);
@@ -19,5 +20,9 @@ namespace MQTTTopics {
 
     bool PrimaryDataTopic::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
+    }
+
+    bool PrimaryDataTopic::retained() {
+        return retain;
     }
 }// namespace MQTTTopics
