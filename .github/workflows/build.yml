@@ -21,7 +21,7 @@ jobs:
           python3 generator.py
           mkdir -p /tmp/workspace
           cp -R inc src /tmp/workspace
-          cp documentation.md topics.json /tmp/workspace
+          cp documentation.md topics.json LICENCE .gitignore /tmp/workspace
 
       - uses: actions/checkout@v2
         with:
