@@ -10,6 +10,8 @@ def generate(topics_list, filename):
                 file.write(f"- **Role**: ")
                 for role in topic["role"]:
                     file.write(f"{role} ")
+                file.write("\n- **Retain**: ")
+                file.write("Yes" if topic["retain"] else "No")
                 file.write("\n- **Variables**:\n")
                 for variable in topic["variables"]:
                     file.write(f"  - {variable['name']} -> {variable['description']} ")

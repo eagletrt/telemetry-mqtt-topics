@@ -8,6 +8,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     description = "Not defined"
     qos = 0
     role = [1,2,3,4]
+    retain = False
     deprecated = False
     variables = []
 
@@ -30,6 +31,11 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
         role = node["role"]
     elif "role" in parent_config:
         role = parent_config["role"]
+    # Use retain of the parent topic if not defined
+    if "retain" in node:
+        retain = node["retain"]
+    elif "retain" in parent_config:
+        retain = parent_config["retain"]
     # Use deprecated of the parent topic
     if "deprecated" in node and node["deprecated"]:
         deprecated = True
@@ -47,6 +53,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
         "description": description,
         "qos": qos,
         "role": role,
+        "retain": retain,
         "deprecated": deprecated,
         "variables": variables
     }

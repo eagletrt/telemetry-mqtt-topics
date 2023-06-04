@@ -66,6 +66,20 @@ def generate_cpp(topic):
         variables += f'\t\tstr.replace(str.find("<{name}>"), {len(name) + 2}, {name});\n'
     file_content = file_content.replace("<variables:replaces>", variables)
 
+    # qos replace
+    file_content = file_content.replace("<qos>", f"{topic['qos']}")
+
+    # role replace
+    roles = ""
+    for role in topic["role"]:
+        roles += f"{role}, "
+    if roles != "":
+        roles = roles[:-2]
+    file_content = file_content.replace("<roles>", roles)
+
+    # retain replace
+    file_content = file_content.replace("<retain>", "true" if topic["retain"] else "false")
+
     with open(f"src/topics/{topic['alias']}.cpp", "w") as file:
         file.write(file_content)
 

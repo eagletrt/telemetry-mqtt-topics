@@ -8,6 +8,7 @@
         - description: a description of the topic
         - qos: the quality of service level to use for the topic
         - role: array of id of the roles that can access the topic. The value will be the default for all sub-topics
+        - retain: if true the broker will store the last message and the last value of the retained flag
         - variables: array of variables that can be replaced in the topic
         - deprecated: if true the topic is deprecated
         - sub_topics: array of topics that will be appended to the current topic
@@ -23,6 +24,7 @@
         "description": "Root topic for all devices",
         "qos": 0,
         "role": [0, 2, 3],
+        "retain": false,
         "variables": [
             {
                 "name": "device_id",
@@ -60,6 +62,7 @@
                 "alias": "DataTopic",
                 "description": "The data topic, it contains all the CAN messages",
                 "roles": [0, 2, 3], // TODO: WTF tlm non può leggere data, da rivedere la tabella
+                "retain": true,
                 "sub_topics": {
                     "primary": {
                         "alias": "PrimaryDataTopic",

@@ -23,11 +23,13 @@ namespace MQTTTopics {
         static TopicString get(<variables:params>);
         static int qualityOfService();
         static bool hasPermission(unsigned int role);
+        static bool retained();
 
     private:
         static const std::string topic;
         static const uint8_t qos;
         static const std::unordered_set<uint8_t> roles;
+        static const bool retain;
     };
 }// namespace MQTTTopics
 

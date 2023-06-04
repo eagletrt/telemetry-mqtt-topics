@@ -5,7 +5,7 @@ import jstyleson as json
 
 if __name__ == "__main__":
 
-    file_name = "topics.jsonc"
+    file_name = "topics_tree.jsonc"
     topics = None
 
     with open(file_name, "r") as file:

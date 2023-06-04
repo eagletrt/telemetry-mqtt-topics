@@ -2,8 +2,9 @@
 
 namespace MQTTTopics {
     const std::string <alias>::topic = "<topic>";
-    const uint8_t <alias>::qos = 0;
-    const std::unordered_set<uint8_t> <alias>::roles = {1, 2, 3, 4};
+    const uint8_t <alias>::qos = <qos>;
+    const std::unordered_set<uint8_t> <alias>::roles = {<roles>};
+    const bool <alias>::retain = <retain>;
 
     TopicString <alias>::get(<variables:params>) {
         std::string str(topic);
@@ -18,5 +19,9 @@ namespace MQTTTopics {
 
     bool <alias>::hasPermission(unsigned int role) {
         return (roles.find(role) != roles.cend());
+    }
+
+    bool <alias>::retained() {
+        return retain;
     }
 }// namespace MQTTTopics
