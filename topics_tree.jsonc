@@ -20,8 +20,8 @@
 
 {
     "fenice-evo/<device_id>": {
-        "alias": "FeniceEvoRootTopic",
-        "description": "Root topic for the device",
+        "alias": "FeniceEvoTopic",
+        "description": "FeniceEvo topic for the device",
         "qos": 0,
         "role": [0, 2, 3],
         "retain": false,
@@ -39,24 +39,24 @@
                 "description": "Can data topic, it contains all the data from all the CAN bus",
                 "sub_topics": {
                     "primary": {
-                        "alias": "PrimaryDataTopic",
-                        "description": "Primary data topic, it contains all the data from the primary CAN bus"
+                        "alias": "DataPrimaryTopic",
+                        "description": "Data primary topic, it contains all the data from the primary CAN bus"
                     },
                     "secondary": {
-                        "alias": "SecondaryDataTopic",
-                        "description": "Secondary data topic, it contains all the data from the secondary CAN bus"
+                        "alias": "DataSecondaryTopic",
+                        "description": "Data secondary topic, it contains all the data from the secondary CAN bus"
                     },
                     "inverter": {
-                        "alias": "InverterDataTopic",
-                        "description": "Inverter data topic, it contains all the data from the inverter CAN bus"
+                        "alias": "DataInverterTopic",
+                        "description": "Data inverter topic, it contains all the data from the inverter CAN bus"
                     },
                     "gps": {
-                        "alias": "GpsDataTopic",
-                        "description": "GPS data topic, it contains all the data from the GPS CAN bus"
+                        "alias": "DataGpsTopic",
+                        "description": "Data GPS topic, it contains all the data from the GPS CAN bus"
                     },
                     "brusa": {
-                        "alias": "BrusaDataTopic",
-                        "description": "Brusa data topic, it contains all the data from the Brusa CAN bus",
+                        "alias": "DataBrusaTopic",
+                        "description": "Data brusa topic, it contains all the data from the Brusa CAN bus",
                         "deprecated": true
                     }
                 }
@@ -70,25 +70,25 @@
                         "description": "Status info topic, it contains the status of the running telemetry system"
                     },
                     "error": {
-                        "alias": "ErrorStatusTopic",
-                        "description": "Error status topic, it contains the errors of the running telemetry system"
+                        "alias": "StatusErrorTopic",
+                        "description": "Status error topic, it contains the errors of the running telemetry system"
                     },
                     "can_frequencies": {
-                        "alias": "CanFrequenciesStatusTopic",
-                        "description": "CAN frequencies status topic, it contains the frequencies of the CAN buses messages"
+                        "alias": "StatusCanFrequenciesTopic",
+                        "description": "Status CAN frequencies topic, it contains the frequencies of the CAN buses messages"
                     }
                 }
             },
-            "cmd": {
-                "alias": "CmdTopic",
+            "command": {
+                "alias": "CommandTopic",
                 "description": "Command topic, it contains all the commands for the telemetry system",
                 "sub_topics": {
-                    "cmd": {
-                        "alias": "CmdSendTopic",
+                    "command": {
+                        "alias": "CommandSendTopic",
                         "description": "Command send topic, it contains the command to run on the telemetry system"
                     },
                     "result": {
-                        "alias": "CmdResultTopic",
+                        "alias": "CommandResultTopic",
                         "description": "Command result topic, it contains the result of the command ran on the telemetry system"
                     }
                 }
@@ -130,90 +130,90 @@
                 "description": "Action topic, it contains all the actions to send to the telemetry system",
                 "sub_topics": {
                     "session_config": {
-                        "alias": "SessionConfigActionTopic",
-                        "description": "Session config action topic, it contains the session config actions",
+                        "alias": "ActionSessionConfigTopic",
+                        "description": "Action session config topic, it contains the session config actions",
                         "sub_topics": {
                             "set": {
-                                "alias": "SessionConfigSetActionTopic",
-                                "description": "Session config set action topic, it sets the session config file"
+                                "alias": "ActionSessionConfigSetTopic",
+                                "description": "Action session config set topic, it sets the session config file"
                             },
                             "get": {
-                                "alias": "SessionConfigGetActionTopic",
-                                "description": "Session config get action topic, it requests the session config file"
+                                "alias": "ActionSessionConfigGetTopic",
+                                "description": "Action session config get action topic, it requests the session config file"
                             },
                             "content": {
-                                "alias": "SessionConfigContentActionTopic",
-                                "description": "Session config content action topic, it contains the session config file content"
+                                "alias": "ActionSessionConfigContentTopic",
+                                "description": "Action session config content topic, it contains the session config file content"
                             }
                         }
                     },
                     "telemetry_config": {
-                        "alias": "TelemetryConfigActionTopic",
-                        "description": "Telemetry config action topic, it contains the telemetry config actions",
+                        "alias": "ActionTelemetryConfigTopic",
+                        "description": "Action telemetry config topic, it contains the telemetry config actions",
                         "sub_topics": {
                             "set": {
-                                "alias": "TelemetryConfigSetActionTopic",
-                                "description": "Telemetry config set action topic, it sets the telemetry config file"
+                                "alias": "ActionTelemetryConfigSetTopic",
+                                "description": "Action telemetry config set topic, it sets the telemetry config file"
                             },
                             "get": {
-                                "alias": "TelemetryConfigGetActionTopic",
-                                "description": "Telemetry config get action topic, it requests the telemetry config file"
+                                "alias": "ActionTelemetryConfigGetTopic",
+                                "description": "Action telemetry config get topic, it requests the telemetry config file"
                             },
                             "content": {
-                                "alias": "TelemetryConfigContentActionTopic",
-                                "description": "Telemetry config content action topic, it contains the telemetry config file content"
+                                "alias": "ActionTelemetryConfigContentTopic",
+                                "description": "Action telemetry config content topic, it contains the telemetry config file content"
                             }
                         }
                     },
                     "car_setup": {
-                        "alias": "CarSetupActionTopic",
+                        "alias": "ActionCarSetupTopic",
                         "description": "Car setup action topic, it contains the car setup actions",
                         "sub_topics": {
                             "set": {
-                                "alias": "CarSetupSetActionTopic",
-                                "description": "Car setup set action topic, it sets the car setup file"
+                                "alias": "ActionCarSetupSetTopic",
+                                "description": "Action car setup set topic, it sets the car setup file"
                             },
                             "get": {
-                                "alias": "CarSetupGetActionTopic",
-                                "description": "Car setup get action topic, it requests the car setup file"
+                                "alias": "ActionCarSetupGetTopic",
+                                "description": "Action car setup get action topic, it requests the car setup file"
                             },
                             "content": {
-                                "alias": "CarSetupContentActionTopic",
-                                "description": "Car setup content action topic, it contains the car setup file content"
+                                "alias": "ActionCarSetupContentTopic",
+                                "description": "Action car setup content action topic, it contains the car setup file content"
                             }
                         }
                     },
                     "+/set": {
-                        "alias": "SetConfigFileActionTopic",
-                        "description": "Set action topic, it gets all requests of config files to set"
+                        "alias": "ActionConfigFileSetTopic",
+                        "description": "Action config gile set topic, it gets all requests of config files to set"
                     },
                     "+/get": {
-                        "alias": "GetConfigFileActionTopic",
-                        "description": "Get action topic, it gets all requests of config files to get"
+                        "alias": "ActionConfigFileGetTopic",
+                        "description": "Action config file get topic, it gets all requests of config files to get"
                     },
                     "+/content": {
-                        "alias": "ContentConfigFileActionTopic",
-                        "description": "Content action topic, it gets all requests of config files content"
+                        "alias": "ActionConfigFileContentTopic",
+                        "description": "Action config file content topic, it gets all requests of config files content"
                     },
                     "kill": {
-                        "alias": "KillTelemetryActionTopic",
-                        "description": "Kill action topic, it contains the kill action for shutting down the telemetry system"
+                        "alias": "ActionKillTelemetryTopic",
+                        "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system"
                     },
                     "start": {
-                        "alias": "StartTelemetryActionTopic",
-                        "description": "Start action topic, it contains the start action for changing to RUN the FSM of the telemetry system"
+                        "alias": "ActionStartTelemetryTopic",
+                        "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system"
                     },
                     "stop": {
-                        "alias": "StopTelemetryActionTopic",
-                        "description": "Stop action topic, it contains the stop action for changing to IDLE the FSM of the telemetry system"
+                        "alias": "ActionStopTelemetryTopic",
+                        "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system"
                     },
                     "raw": {
-                        "alias": "RawActionTopic",
-                        "description": "Raw action topic, it contains custom commands to send to the telemetry system"
+                        "alias": "ActionRawTopic",
+                        "description": "Action raw topic, it contains custom commands to send to the telemetry system"
                     },
                     "lapcounter_reset": {
-                        "alias": "LapCounterResetActionTopic",
-                        "description": "Lap counter reset action topic, it contains the lap counter reset action for resetting the lap counter"
+                        "alias": "ActionResetLapCounterTopic",
+                        "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter"
                     }
                 }
             }
