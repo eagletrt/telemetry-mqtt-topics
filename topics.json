@@ -320,7 +320,7 @@
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>",
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>",
         "alias": "FileTransactionTopic",
         "description": "File transaction topic, it contains the file transaction data",
         "qos": 0,
@@ -338,13 +338,13 @@
                 "default": "telemetry"
             },
             {
-                "name": "transaction-id",
+                "name": "transaction_id",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/begin",
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin",
         "alias": "FileTransactionBeginTopic",
         "description": "File transaction begin topic, it contains the begin of a file transaction",
         "qos": 0,
@@ -362,13 +362,13 @@
                 "default": "telemetry"
             },
             {
-                "name": "transaction-id",
+                "name": "transaction_id",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/end",
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/end",
         "alias": "FileTransactionEndTopic",
         "description": "File transaction end topic, it contains the end of a file transaction",
         "qos": 0,
@@ -386,13 +386,13 @@
                 "default": "telemetry"
             },
             {
-                "name": "transaction-id",
+                "name": "transaction_id",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/chunk",
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk",
         "alias": "FileTransactionChunkTopic",
         "description": "File transaction chunk topic, it contains a chunk of a file transaction",
         "qos": 0,
@@ -410,7 +410,7 @@
                 "default": "telemetry"
             },
             {
-                "name": "transaction-id",
+                "name": "transaction_id",
                 "description": "The transaction ID"
             }
         ]

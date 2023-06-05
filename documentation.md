@@ -136,41 +136,41 @@
   - device_id -> The device ID (default: telemetry)
 
 ## FileTransactionTopic
-### fenice-evo/<device_id>/file_transaction/<transaction-id>
+### fenice-evo/<device_id>/file_transaction/<transaction_id>
 > File transaction topic, it contains the file transaction data
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
-  - transaction-id -> The transaction ID 
+  - transaction_id -> The transaction ID 
 ## FileTransactionBeginTopic
-### fenice-evo/<device_id>/file_transaction/<transaction-id>/begin
+### fenice-evo/<device_id>/file_transaction/<transaction_id>/begin
 > File transaction begin topic, it contains the begin of a file transaction
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
-  - transaction-id -> The transaction ID 
+  - transaction_id -> The transaction ID 
 ## FileTransactionEndTopic
-### fenice-evo/<device_id>/file_transaction/<transaction-id>/end
+### fenice-evo/<device_id>/file_transaction/<transaction_id>/end
 > File transaction end topic, it contains the end of a file transaction
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
-  - transaction-id -> The transaction ID 
+  - transaction_id -> The transaction ID 
 ## FileTransactionChunkTopic
-### fenice-evo/<device_id>/file_transaction/<transaction-id>/chunk
+### fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk
 > File transaction chunk topic, it contains a chunk of a file transaction
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
-  - transaction-id -> The transaction ID 
+  - transaction_id -> The transaction ID 
 ## ActionTopic
 ### fenice-evo/<device_id>/action
 > Action topic, it contains all the actions to send to the telemetry system
