@@ -101,12 +101,12 @@
                 "alias": "FileTransactionAckTopic",
                 "description": "File transaction ack topic, it contains the ack for a file transaction"
             },
-            "file_transaction/<transaction-id>": {
+            "file_transaction/<transaction_id>": {
                 "alias": "FileTransactionTopic",
                 "description": "File transaction topic, it contains the file transaction data",
                 "variables": [
                     {
-                        "name": "transaction-id",
+                        "name": "transaction_id",
                         "description": "The transaction ID"
                     }
                 ],
