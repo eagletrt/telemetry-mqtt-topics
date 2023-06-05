@@ -1,19 +1,19 @@
 #ifndef TOPICS_H
 #define TOPICS_H
 
-#include "FeniceEvoRootTopic.h"
+#include "FeniceEvoTopic.h"
 #include "DataTopic.h"
-#include "PrimaryDataTopic.h"
-#include "SecondaryDataTopic.h"
-#include "InverterDataTopic.h"
-#include "GpsDataTopic.h"
+#include "DataPrimaryTopic.h"
+#include "DataSecondaryTopic.h"
+#include "DataInverterTopic.h"
+#include "DataGpsTopic.h"
 #include "StatusTopic.h"
 #include "StatusStatusTopic.h"
-#include "ErrorStatusTopic.h"
-#include "CanFrequenciesStatusTopic.h"
-#include "CmdTopic.h"
-#include "CmdSendTopic.h"
-#include "CmdResultTopic.h"
+#include "StatusErrorTopic.h"
+#include "StatusCanFrequenciesTopic.h"
+#include "CommandTopic.h"
+#include "CommandSendTopic.h"
+#include "CommandResultTopic.h"
 #include "FileTransactionAskTopic.h"
 #include "FileTransactionAckTopic.h"
 #include "FileTransactionTopic.h"
@@ -21,42 +21,42 @@
 #include "FileTransactionEndTopic.h"
 #include "FileTransactionChunkTopic.h"
 #include "ActionTopic.h"
-#include "SessionConfigActionTopic.h"
-#include "SessionConfigSetActionTopic.h"
-#include "SessionConfigGetActionTopic.h"
-#include "SessionConfigContentActionTopic.h"
-#include "TelemetryConfigActionTopic.h"
-#include "TelemetryConfigSetActionTopic.h"
-#include "TelemetryConfigGetActionTopic.h"
-#include "TelemetryConfigContentActionTopic.h"
-#include "CarSetupActionTopic.h"
-#include "CarSetupSetActionTopic.h"
-#include "CarSetupGetActionTopic.h"
-#include "CarSetupContentActionTopic.h"
-#include "SetConfigFileActionTopic.h"
-#include "GetConfigFileActionTopic.h"
-#include "ContentConfigFileActionTopic.h"
-#include "KillTelemetryActionTopic.h"
-#include "StartTelemetryActionTopic.h"
-#include "StopTelemetryActionTopic.h"
-#include "RawActionTopic.h"
-#include "LapCounterResetActionTopic.h"
+#include "ActionSessionConfigTopic.h"
+#include "ActionSessionConfigSetTopic.h"
+#include "ActionSessionConfigGetTopic.h"
+#include "ActionSessionConfigContentTopic.h"
+#include "ActionTelemetryConfigTopic.h"
+#include "ActionTelemetryConfigSetTopic.h"
+#include "ActionTelemetryConfigGetTopic.h"
+#include "ActionTelemetryConfigContentTopic.h"
+#include "ActionCarSetupTopic.h"
+#include "ActionCarSetupSetTopic.h"
+#include "ActionCarSetupGetTopic.h"
+#include "ActionCarSetupContentTopic.h"
+#include "ActionConfigFileSetTopic.h"
+#include "ActionConfigFileGetTopic.h"
+#include "ActionConfigFileContentTopic.h"
+#include "ActionKillTelemetryTopic.h"
+#include "ActionStartTelemetryTopic.h"
+#include "ActionStopTelemetryTopic.h"
+#include "ActionRawTopic.h"
+#include "ActionResetLapCounterTopic.h"
 
 namespace MQTTTopics {
  
-	class FeniceEvoRootTopic;
+	class FeniceEvoTopic;
 	class DataTopic;
-	class PrimaryDataTopic;
-	class SecondaryDataTopic;
-	class InverterDataTopic;
-	class GpsDataTopic;
+	class DataPrimaryTopic;
+	class DataSecondaryTopic;
+	class DataInverterTopic;
+	class DataGpsTopic;
 	class StatusTopic;
 	class StatusStatusTopic;
-	class ErrorStatusTopic;
-	class CanFrequenciesStatusTopic;
-	class CmdTopic;
-	class CmdSendTopic;
-	class CmdResultTopic;
+	class StatusErrorTopic;
+	class StatusCanFrequenciesTopic;
+	class CommandTopic;
+	class CommandSendTopic;
+	class CommandResultTopic;
 	class FileTransactionAskTopic;
 	class FileTransactionAckTopic;
 	class FileTransactionTopic;
@@ -64,26 +64,26 @@ namespace MQTTTopics {
 	class FileTransactionEndTopic;
 	class FileTransactionChunkTopic;
 	class ActionTopic;
-	class SessionConfigActionTopic;
-	class SessionConfigSetActionTopic;
-	class SessionConfigGetActionTopic;
-	class SessionConfigContentActionTopic;
-	class TelemetryConfigActionTopic;
-	class TelemetryConfigSetActionTopic;
-	class TelemetryConfigGetActionTopic;
-	class TelemetryConfigContentActionTopic;
-	class CarSetupActionTopic;
-	class CarSetupSetActionTopic;
-	class CarSetupGetActionTopic;
-	class CarSetupContentActionTopic;
-	class SetConfigFileActionTopic;
-	class GetConfigFileActionTopic;
-	class ContentConfigFileActionTopic;
-	class KillTelemetryActionTopic;
-	class StartTelemetryActionTopic;
-	class StopTelemetryActionTopic;
-	class RawActionTopic;
-	class LapCounterResetActionTopic;
+	class ActionSessionConfigTopic;
+	class ActionSessionConfigSetTopic;
+	class ActionSessionConfigGetTopic;
+	class ActionSessionConfigContentTopic;
+	class ActionTelemetryConfigTopic;
+	class ActionTelemetryConfigSetTopic;
+	class ActionTelemetryConfigGetTopic;
+	class ActionTelemetryConfigContentTopic;
+	class ActionCarSetupTopic;
+	class ActionCarSetupSetTopic;
+	class ActionCarSetupGetTopic;
+	class ActionCarSetupContentTopic;
+	class ActionConfigFileSetTopic;
+	class ActionConfigFileGetTopic;
+	class ActionConfigFileContentTopic;
+	class ActionKillTelemetryTopic;
+	class ActionStartTelemetryTopic;
+	class ActionStopTelemetryTopic;
+	class ActionRawTopic;
+	class ActionResetLapCounterTopic;
 
 }// namespace MQTTTopics
 

@@ -1,8 +1,8 @@
 # Topics
 
-## FeniceEvoRootTopic
+## FeniceEvoTopic
 ### fenice-evo/<device_id>
-> Root topic for the device
+> FeniceEvo topic for the device
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
@@ -18,36 +18,36 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## PrimaryDataTopic
+## DataPrimaryTopic
 ### fenice-evo/<device_id>/data/primary
-> Primary data topic, it contains all the data from the primary CAN bus
+> Data primary topic, it contains all the data from the primary CAN bus
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SecondaryDataTopic
+## DataSecondaryTopic
 ### fenice-evo/<device_id>/data/secondary
-> Secondary data topic, it contains all the data from the secondary CAN bus
+> Data secondary topic, it contains all the data from the secondary CAN bus
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## InverterDataTopic
+## DataInverterTopic
 ### fenice-evo/<device_id>/data/inverter
-> Inverter data topic, it contains all the data from the inverter CAN bus
+> Data inverter topic, it contains all the data from the inverter CAN bus
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## GpsDataTopic
+## DataGpsTopic
 ### fenice-evo/<device_id>/data/gps
-> GPS data topic, it contains all the data from the GPS CAN bus
+> Data GPS topic, it contains all the data from the GPS CAN bus
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
@@ -72,26 +72,26 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ErrorStatusTopic
+## StatusErrorTopic
 ### fenice-evo/<device_id>/status/error
-> Error status topic, it contains the errors of the running telemetry system
+> Status error topic, it contains the errors of the running telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CanFrequenciesStatusTopic
+## StatusCanFrequenciesTopic
 ### fenice-evo/<device_id>/status/can_frequencies
-> CAN frequencies status topic, it contains the frequencies of the CAN buses messages
+> Status CAN frequencies topic, it contains the frequencies of the CAN buses messages
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CmdTopic
-### fenice-evo/<device_id>/cmd
+## CommandTopic
+### fenice-evo/<device_id>/command
 > Command topic, it contains all the commands for the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
@@ -99,8 +99,8 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CmdSendTopic
-### fenice-evo/<device_id>/cmd/cmd
+## CommandSendTopic
+### fenice-evo/<device_id>/command/command
 > Command send topic, it contains the command to run on the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
@@ -108,8 +108,8 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CmdResultTopic
-### fenice-evo/<device_id>/cmd/result
+## CommandResultTopic
+### fenice-evo/<device_id>/command/result
 > Command result topic, it contains the result of the command ran on the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
@@ -180,79 +180,79 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SessionConfigActionTopic
+## ActionSessionConfigTopic
 ### fenice-evo/<device_id>/action/session_config
-> Session config action topic, it contains the session config actions
+> Action session config topic, it contains the session config actions
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SessionConfigSetActionTopic
+## ActionSessionConfigSetTopic
 ### fenice-evo/<device_id>/action/session_config/set
-> Session config set action topic, it sets the session config file
+> Action session config set topic, it sets the session config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SessionConfigGetActionTopic
+## ActionSessionConfigGetTopic
 ### fenice-evo/<device_id>/action/session_config/get
-> Session config get action topic, it requests the session config file
+> Action session config get action topic, it requests the session config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SessionConfigContentActionTopic
+## ActionSessionConfigContentTopic
 ### fenice-evo/<device_id>/action/session_config/content
-> Session config content action topic, it contains the session config file content
+> Action session config content topic, it contains the session config file content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## TelemetryConfigActionTopic
+## ActionTelemetryConfigTopic
 ### fenice-evo/<device_id>/action/telemetry_config
-> Telemetry config action topic, it contains the telemetry config actions
+> Action telemetry config topic, it contains the telemetry config actions
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## TelemetryConfigSetActionTopic
+## ActionTelemetryConfigSetTopic
 ### fenice-evo/<device_id>/action/telemetry_config/set
-> Telemetry config set action topic, it sets the telemetry config file
+> Action telemetry config set topic, it sets the telemetry config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## TelemetryConfigGetActionTopic
+## ActionTelemetryConfigGetTopic
 ### fenice-evo/<device_id>/action/telemetry_config/get
-> Telemetry config get action topic, it requests the telemetry config file
+> Action telemetry config get topic, it requests the telemetry config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## TelemetryConfigContentActionTopic
+## ActionTelemetryConfigContentTopic
 ### fenice-evo/<device_id>/action/telemetry_config/content
-> Telemetry config content action topic, it contains the telemetry config file content
+> Action telemetry config content topic, it contains the telemetry config file content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CarSetupActionTopic
+## ActionCarSetupTopic
 ### fenice-evo/<device_id>/action/car_setup
 > Car setup action topic, it contains the car setup actions
 - **Quality of Service**: 0
@@ -261,99 +261,99 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CarSetupSetActionTopic
+## ActionCarSetupSetTopic
 ### fenice-evo/<device_id>/action/car_setup/set
-> Car setup set action topic, it sets the car setup file
+> Action car setup set topic, it sets the car setup file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CarSetupGetActionTopic
+## ActionCarSetupGetTopic
 ### fenice-evo/<device_id>/action/car_setup/get
-> Car setup get action topic, it requests the car setup file
+> Action car setup get action topic, it requests the car setup file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## CarSetupContentActionTopic
+## ActionCarSetupContentTopic
 ### fenice-evo/<device_id>/action/car_setup/content
-> Car setup content action topic, it contains the car setup file content
+> Action car setup content action topic, it contains the car setup file content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## SetConfigFileActionTopic
+## ActionConfigFileSetTopic
 ### fenice-evo/<device_id>/action/+/set
-> Set action topic, it gets all requests of config files to set
+> Action config gile set topic, it gets all requests of config files to set
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## GetConfigFileActionTopic
+## ActionConfigFileGetTopic
 ### fenice-evo/<device_id>/action/+/get
-> Get action topic, it gets all requests of config files to get
+> Action config file get topic, it gets all requests of config files to get
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ContentConfigFileActionTopic
+## ActionConfigFileContentTopic
 ### fenice-evo/<device_id>/action/+/content
-> Content action topic, it gets all requests of config files content
+> Action config file content topic, it gets all requests of config files content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## KillTelemetryActionTopic
+## ActionKillTelemetryTopic
 ### fenice-evo/<device_id>/action/kill
-> Kill action topic, it contains the kill action for shutting down the telemetry system
+> Action kill telemetry topic, it contains the kill action for shutting down the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## StartTelemetryActionTopic
+## ActionStartTelemetryTopic
 ### fenice-evo/<device_id>/action/start
-> Start action topic, it contains the start action for changing to RUN the FSM of the telemetry system
+> Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## StopTelemetryActionTopic
+## ActionStopTelemetryTopic
 ### fenice-evo/<device_id>/action/stop
-> Stop action topic, it contains the stop action for changing to IDLE the FSM of the telemetry system
+> Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## RawActionTopic
+## ActionRawTopic
 ### fenice-evo/<device_id>/action/raw
-> Raw action topic, it contains custom commands to send to the telemetry system
+> Action raw topic, it contains custom commands to send to the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## LapCounterResetActionTopic
+## ActionResetLapCounterTopic
 ### fenice-evo/<device_id>/action/lapcounter_reset
-> Lap counter reset action topic, it contains the lap counter reset action for resetting the lap counter
+> Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
