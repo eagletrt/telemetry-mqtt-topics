@@ -6,7 +6,7 @@ namespace MQTTTopics {
     const std::unordered_set<uint8_t> GPSDataTopic::roles = {0, 2, 3};
     const bool GPSDataTopic::retain = true;
 
-    TopicString GPSDataTopic::get(const std::string& device_id = "telemetry") {
+    TopicString GPSDataTopic::get(const std::string& device_id) {
         std::string str(topic);
 
 		str.replace(str.find("<device_id>"), 11, device_id);
