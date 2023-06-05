@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // The secondary data topic
+    // Secondary data topic, it contains all the data from the secondary CAN bus
     class SecondaryDataTopic
     {
     public:

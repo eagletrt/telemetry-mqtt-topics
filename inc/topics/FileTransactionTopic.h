@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // The file transaction topic
+    // File transaction topic, it contains the file transaction data
     class FileTransactionTopic
     {
     public:
@@ -20,7 +20,7 @@ namespace MQTTTopics {
         ~FileTransactionTopic() = delete;
 
     public:
-        static TopicString get(const std::string& transaction_id, const std::string& device_id = "telemetry");
+        static TopicString get(const std::string& transaction-id, const std::string& device_id = "telemetry");
         static int qualityOfService();
         static bool hasPermission(unsigned int role);
         static bool retained();

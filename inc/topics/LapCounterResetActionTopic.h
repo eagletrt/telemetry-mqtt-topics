@@ -1,5 +1,5 @@
-#ifndef G_P_S_DATA_TOPIC_H
-#define G_P_S_DATA_TOPIC_H
+#ifndef LAP_COUNTER_RESET_ACTION_TOPIC_H
+#define LAP_COUNTER_RESET_ACTION_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -10,14 +10,14 @@
 
 namespace MQTTTopics {
 
-    // The GPS data topic
-    class GPSDataTopic
+    // Lap counter reset action topic, it contains the lap counter reset action for resetting the lap counter
+    class LapCounterResetActionTopic
     {
     public:
-        GPSDataTopic() = delete;
-        GPSDataTopic(const GPSDataTopic &) = delete;
-        GPSDataTopic &operator=(const GPSDataTopic &) = delete;
-        ~GPSDataTopic() = delete;
+        LapCounterResetActionTopic() = delete;
+        LapCounterResetActionTopic(const LapCounterResetActionTopic &) = delete;
+        LapCounterResetActionTopic &operator=(const LapCounterResetActionTopic &) = delete;
+        ~LapCounterResetActionTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

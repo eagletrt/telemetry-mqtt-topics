@@ -1,16 +1,16 @@
 #include "FileTransactionBeginTopic.h"
 
 namespace MQTTTopics {
-    const std::string FileTransactionBeginTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin";
+    const std::string FileTransactionBeginTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction-id>/begin";
     const uint8_t FileTransactionBeginTopic::qos = 0;
     const std::unordered_set<uint8_t> FileTransactionBeginTopic::roles = {0, 2, 3};
     const bool FileTransactionBeginTopic::retain = false;
 
-    TopicString FileTransactionBeginTopic::get(const std::string& device_id, const std::string& transaction_id) {
+    TopicString FileTransactionBeginTopic::get(const std::string& device_id, const std::string& transaction-id) {
         std::string str(topic);
 
 		str.replace(str.find("<device_id>"), 11, device_id);
-		str.replace(str.find("<transaction_id>"), 16, transaction_id);
+		str.replace(str.find("<transaction-id>"), 16, transaction-id);
 
         return str;
     }

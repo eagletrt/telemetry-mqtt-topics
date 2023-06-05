@@ -2,7 +2,7 @@
     {
         "topic": "fenice-evo/<device_id>",
         "alias": "FeniceEvoRootTopic",
-        "description": "Root topic for all devices",
+        "description": "Root topic for the device",
         "qos": 0,
         "role": [
             0,
@@ -16,116 +16,20 @@
                 "name": "device_id",
                 "description": "The device ID",
                 "default": "telemetry"
-            }
-        ]
-    },
-    {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>",
-        "alias": "FileTransactionTopic",
-        "description": "The file transaction topic",
-        "qos": 0,
-        "role": [
-            0,
-            2,
-            3
-        ],
-        "retain": false,
-        "deprecated": false,
-        "variables": [
-            {
-                "name": "device_id",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transaction_id",
-                "description": "The transaction ID"
-            }
-        ]
-    },
-    {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin",
-        "alias": "FileTransactionBeginTopic",
-        "description": "The begin topic",
-        "qos": 0,
-        "role": [
-            0,
-            2,
-            3
-        ],
-        "retain": false,
-        "deprecated": false,
-        "variables": [
-            {
-                "name": "device_id",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transaction_id",
-                "description": "The transaction ID"
-            }
-        ]
-    },
-    {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/end",
-        "alias": "FileTransactionEndTopic",
-        "description": "The end topic",
-        "qos": 0,
-        "role": [
-            0,
-            2,
-            3
-        ],
-        "retain": false,
-        "deprecated": false,
-        "variables": [
-            {
-                "name": "device_id",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transaction_id",
-                "description": "The transaction ID"
-            }
-        ]
-    },
-    {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk",
-        "alias": "FileTransactionChunkTopic",
-        "description": "The chunk topic",
-        "qos": 0,
-        "role": [
-            0,
-            2,
-            3
-        ],
-        "retain": false,
-        "deprecated": false,
-        "variables": [
-            {
-                "name": "device_id",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transaction_id",
-                "description": "The transaction ID"
             }
         ]
     },
     {
         "topic": "fenice-evo/<device_id>/data",
         "alias": "DataTopic",
-        "description": "The data topic, it contains all the CAN messages",
+        "description": "Can data topic, it contains all the data from all the CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": false,
         "variables": [
             {
@@ -138,14 +42,14 @@
     {
         "topic": "fenice-evo/<device_id>/data/primary",
         "alias": "PrimaryDataTopic",
-        "description": "The primary data topic",
+        "description": "Primary data topic, it contains all the data from the primary CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": false,
         "variables": [
             {
@@ -158,14 +62,14 @@
     {
         "topic": "fenice-evo/<device_id>/data/secondary",
         "alias": "SecondaryDataTopic",
-        "description": "The secondary data topic",
+        "description": "Secondary data topic, it contains all the data from the secondary CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": false,
         "variables": [
             {
@@ -178,14 +82,14 @@
     {
         "topic": "fenice-evo/<device_id>/data/inverter",
         "alias": "InverterDataTopic",
-        "description": "The inverter data topic",
+        "description": "Inverter data topic, it contains all the data from the inverter CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": false,
         "variables": [
             {
@@ -197,15 +101,15 @@
     },
     {
         "topic": "fenice-evo/<device_id>/data/gps",
-        "alias": "GPSDataTopic",
-        "description": "The GPS data topic",
+        "alias": "GpsDataTopic",
+        "description": "GPS data topic, it contains all the data from the GPS CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": false,
         "variables": [
             {
@@ -218,15 +122,711 @@
     {
         "topic": "fenice-evo/<device_id>/data/brusa",
         "alias": "BrusaDataTopic",
-        "description": "The Brusa data topic",
+        "description": "Brusa data topic, it contains all the data from the Brusa CAN bus",
         "qos": 0,
         "role": [
             0,
             2,
             3
         ],
-        "retain": true,
+        "retain": false,
         "deprecated": true,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/status",
+        "alias": "StatusTopic",
+        "description": "Status topic, it contains all the status of the running telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/status/status",
+        "alias": "StatusStatusTopic",
+        "description": "Status info topic, it contains the status of the running telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/status/error",
+        "alias": "ErrorStatusTopic",
+        "description": "Error status topic, it contains the errors of the running telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/status/can_frequencies",
+        "alias": "CanFrequenciesStatusTopic",
+        "description": "CAN frequencies status topic, it contains the frequencies of the CAN buses messages",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/cmd",
+        "alias": "CmdTopic",
+        "description": "Command topic, it contains all the commands for the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/cmd/cmd",
+        "alias": "CmdSendTopic",
+        "description": "Command send topic, it contains the command to run on the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/cmd/result",
+        "alias": "CmdResultTopic",
+        "description": "Command result topic, it contains the result of the command ran on the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/ask",
+        "alias": "FileTransactionAskTopic",
+        "description": "File transaction ask topic, it contains the request for a file transaction",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/ack",
+        "alias": "FileTransactionAckTopic",
+        "description": "File transaction ack topic, it contains the ack for a file transaction",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>",
+        "alias": "FileTransactionTopic",
+        "description": "File transaction topic, it contains the file transaction data",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction-id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/begin",
+        "alias": "FileTransactionBeginTopic",
+        "description": "File transaction begin topic, it contains the begin of a file transaction",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction-id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/end",
+        "alias": "FileTransactionEndTopic",
+        "description": "File transaction end topic, it contains the end of a file transaction",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction-id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/file_transaction/<transaction-id>/chunk",
+        "alias": "FileTransactionChunkTopic",
+        "description": "File transaction chunk topic, it contains a chunk of a file transaction",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transaction-id",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action",
+        "alias": "ActionTopic",
+        "description": "Action topic, it contains all the actions to send to the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/session_config",
+        "alias": "SessionConfigActionTopic",
+        "description": "Session config action topic, it contains the session config actions",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/session_config/set",
+        "alias": "SessionConfigSetActionTopic",
+        "description": "Session config set action topic, it sets the session config file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/session_config/get",
+        "alias": "SessionConfigGetActionTopic",
+        "description": "Session config get action topic, it requests the session config file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/session_config/content",
+        "alias": "SessionConfigContentActionTopic",
+        "description": "Session config content action topic, it contains the session config file content",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/telemetry_config",
+        "alias": "TelemetryConfigActionTopic",
+        "description": "Telemetry config action topic, it contains the telemetry config actions",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/telemetry_config/set",
+        "alias": "TelemetryConfigSetActionTopic",
+        "description": "Telemetry config set action topic, it sets the telemetry config file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/telemetry_config/get",
+        "alias": "TelemetryConfigGetActionTopic",
+        "description": "Telemetry config get action topic, it requests the telemetry config file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/telemetry_config/content",
+        "alias": "TelemetryConfigContentActionTopic",
+        "description": "Telemetry config content action topic, it contains the telemetry config file content",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/car_setup",
+        "alias": "CarSetupActionTopic",
+        "description": "Car setup action topic, it contains the car setup actions",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/car_setup/set",
+        "alias": "CarSetupSetActionTopic",
+        "description": "Car setup set action topic, it sets the car setup file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/car_setup/get",
+        "alias": "CarSetupGetActionTopic",
+        "description": "Car setup get action topic, it requests the car setup file",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/car_setup/content",
+        "alias": "CarSetupContentActionTopic",
+        "description": "Car setup content action topic, it contains the car setup file content",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/+/set",
+        "alias": "SetConfigFileActionTopic",
+        "description": "Set action topic, it gets all requests of config files to set",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/+/get",
+        "alias": "GetConfigFileActionTopic",
+        "description": "Get action topic, it gets all requests of config files to get",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/+/content",
+        "alias": "ContentConfigFileActionTopic",
+        "description": "Content action topic, it gets all requests of config files content",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/kill",
+        "alias": "KillTelemetryActionTopic",
+        "description": "Kill action topic, it contains the kill action for shutting down the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/start",
+        "alias": "StartTelemetryActionTopic",
+        "description": "Start action topic, it contains the start action for changing to RUN the FSM of the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/stop",
+        "alias": "StopTelemetryActionTopic",
+        "description": "Stop action topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/raw",
+        "alias": "RawActionTopic",
+        "description": "Raw action topic, it contains custom commands to send to the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "fenice-evo/<device_id>/action/lapcounter_reset",
+        "alias": "LapCounterResetActionTopic",
+        "description": "Lap counter reset action topic, it contains the lap counter reset action for resetting the lap counter",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
         "variables": [
             {
                 "name": "device_id",

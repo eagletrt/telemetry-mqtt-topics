@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // The begin topic
+    // File transaction begin topic, it contains the begin of a file transaction
     class FileTransactionBeginTopic
     {
     public:
@@ -20,7 +20,7 @@ namespace MQTTTopics {
         ~FileTransactionBeginTopic() = delete;
 
     public:
-        static TopicString get(const std::string& transaction_id, const std::string& device_id = "telemetry");
+        static TopicString get(const std::string& transaction-id, const std::string& device_id = "telemetry");
         static int qualityOfService();
         static bool hasPermission(unsigned int role);
         static bool retained();

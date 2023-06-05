@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // Root topic for all devices
+    // Root topic for the device
     class FeniceEvoRootTopic
     {
     public:

@@ -4,7 +4,7 @@ namespace MQTTTopics {
     const std::string PrimaryDataTopic::topic = "fenice-evo/<device_id>/data/primary";
     const uint8_t PrimaryDataTopic::qos = 0;
     const std::unordered_set<uint8_t> PrimaryDataTopic::roles = {0, 2, 3};
-    const bool PrimaryDataTopic::retain = true;
+    const bool PrimaryDataTopic::retain = false;
 
     TopicString PrimaryDataTopic::get(const std::string& device_id) {
         std::string str(topic);

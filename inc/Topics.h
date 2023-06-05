@@ -2,28 +2,88 @@
 #define TOPICS_H
 
 #include "FeniceEvoRootTopic.h"
-#include "FileTransactionTopic.h"
-#include "FileTransactionBeginTopic.h"
-#include "FileTransactionEndTopic.h"
-#include "FileTransactionChunkTopic.h"
 #include "DataTopic.h"
 #include "PrimaryDataTopic.h"
 #include "SecondaryDataTopic.h"
 #include "InverterDataTopic.h"
-#include "GPSDataTopic.h"
+#include "GpsDataTopic.h"
+#include "StatusTopic.h"
+#include "StatusStatusTopic.h"
+#include "ErrorStatusTopic.h"
+#include "CanFrequenciesStatusTopic.h"
+#include "CmdTopic.h"
+#include "CmdSendTopic.h"
+#include "CmdResultTopic.h"
+#include "FileTransactionAskTopic.h"
+#include "FileTransactionAckTopic.h"
+#include "FileTransactionTopic.h"
+#include "FileTransactionBeginTopic.h"
+#include "FileTransactionEndTopic.h"
+#include "FileTransactionChunkTopic.h"
+#include "ActionTopic.h"
+#include "SessionConfigActionTopic.h"
+#include "SessionConfigSetActionTopic.h"
+#include "SessionConfigGetActionTopic.h"
+#include "SessionConfigContentActionTopic.h"
+#include "TelemetryConfigActionTopic.h"
+#include "TelemetryConfigSetActionTopic.h"
+#include "TelemetryConfigGetActionTopic.h"
+#include "TelemetryConfigContentActionTopic.h"
+#include "CarSetupActionTopic.h"
+#include "CarSetupSetActionTopic.h"
+#include "CarSetupGetActionTopic.h"
+#include "CarSetupContentActionTopic.h"
+#include "SetConfigFileActionTopic.h"
+#include "GetConfigFileActionTopic.h"
+#include "ContentConfigFileActionTopic.h"
+#include "KillTelemetryActionTopic.h"
+#include "StartTelemetryActionTopic.h"
+#include "StopTelemetryActionTopic.h"
+#include "RawActionTopic.h"
+#include "LapCounterResetActionTopic.h"
 
 namespace MQTTTopics {
  
 	class FeniceEvoRootTopic;
-	class FileTransactionTopic;
-	class FileTransactionBeginTopic;
-	class FileTransactionEndTopic;
-	class FileTransactionChunkTopic;
 	class DataTopic;
 	class PrimaryDataTopic;
 	class SecondaryDataTopic;
 	class InverterDataTopic;
-	class GPSDataTopic;
+	class GpsDataTopic;
+	class StatusTopic;
+	class StatusStatusTopic;
+	class ErrorStatusTopic;
+	class CanFrequenciesStatusTopic;
+	class CmdTopic;
+	class CmdSendTopic;
+	class CmdResultTopic;
+	class FileTransactionAskTopic;
+	class FileTransactionAckTopic;
+	class FileTransactionTopic;
+	class FileTransactionBeginTopic;
+	class FileTransactionEndTopic;
+	class FileTransactionChunkTopic;
+	class ActionTopic;
+	class SessionConfigActionTopic;
+	class SessionConfigSetActionTopic;
+	class SessionConfigGetActionTopic;
+	class SessionConfigContentActionTopic;
+	class TelemetryConfigActionTopic;
+	class TelemetryConfigSetActionTopic;
+	class TelemetryConfigGetActionTopic;
+	class TelemetryConfigContentActionTopic;
+	class CarSetupActionTopic;
+	class CarSetupSetActionTopic;
+	class CarSetupGetActionTopic;
+	class CarSetupContentActionTopic;
+	class SetConfigFileActionTopic;
+	class GetConfigFileActionTopic;
+	class ContentConfigFileActionTopic;
+	class KillTelemetryActionTopic;
+	class StartTelemetryActionTopic;
+	class StopTelemetryActionTopic;
+	class RawActionTopic;
+	class LapCounterResetActionTopic;
 
 }// namespace MQTTTopics
 

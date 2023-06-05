@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // The inverter data topic
+    // Inverter data topic, it contains all the data from the inverter CAN bus
     class InverterDataTopic
     {
     public:

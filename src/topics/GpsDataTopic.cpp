@@ -1,0 +1,28 @@
+#include "GpsDataTopic.h"
+
+namespace MQTTTopics {
+    const std::string GpsDataTopic::topic = "fenice-evo/<device_id>/data/gps";
+    const uint8_t GpsDataTopic::qos = 0;
+    const std::unordered_set<uint8_t> GpsDataTopic::roles = {0, 2, 3};
+    const bool GpsDataTopic::retain = false;
+
+    TopicString GpsDataTopic::get(const std::string& device_id) {
+        std::string str(topic);
+
+		str.replace(str.find("<device_id>"), 11, device_id);
+
+        return str;
+    }
+
+    int GpsDataTopic::qualityOfService() {
+        return static_cast<int>(qos);
+    }
+
+    bool GpsDataTopic::hasPermission(unsigned int role) {
+        return (roles.find(role) != roles.cend());
+    }
+
+    bool GpsDataTopic::retained() {
+        return retain;
+    }
+}// namespace MQTTTopics

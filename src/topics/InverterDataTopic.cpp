@@ -4,7 +4,7 @@ namespace MQTTTopics {
     const std::string InverterDataTopic::topic = "fenice-evo/<device_id>/data/inverter";
     const uint8_t InverterDataTopic::qos = 0;
     const std::unordered_set<uint8_t> InverterDataTopic::roles = {0, 2, 3};
-    const bool InverterDataTopic::retain = true;
+    const bool InverterDataTopic::retain = false;
 
     TopicString InverterDataTopic::get(const std::string& device_id) {
         std::string str(topic);
