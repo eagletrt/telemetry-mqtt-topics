@@ -65,8 +65,8 @@
                 "alias": "StatusTopic",
                 "description": "Status topic, it contains all the status of the running telemetry system",
                 "sub_topics": {
-                    "status": {
-                        "alias": "StatusStatusTopic",
+                    "info": {
+                        "alias": "StatusInfoTopic",
                         "description": "Status info topic, it contains the status of the running telemetry system"
                     },
                     "error": {
