@@ -1,11 +1,11 @@
 #include "ActionKillTelemetryTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionKillTelemetryTopic::topic = "fenice-evo/<device_id>/action/kill";
+    const std::string ActionKillTelemetryTopic::topic = fenice-evo/<device_id>/action/kill;
     const uint8_t ActionKillTelemetryTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionKillTelemetryTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> ActionKillTelemetryTopic::publishRoles = {<publishRoles>};
-    const bool ActionKillTelemetryTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> ActionKillTelemetryTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> ActionKillTelemetryTopic::publishRoles = {0};
+    const bool ActionKillTelemetryTopic::retained = false;
 
     TopicString ActionKillTelemetryTopic::get(const std::string& device_id) {
         std::string str(topic);

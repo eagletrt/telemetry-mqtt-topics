@@ -4,14 +4,19 @@
         "alias": "FeniceEvoTopic",
         "description": "FeniceEvo topic for the device",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -25,14 +30,16 @@
         "alias": "DataTopic",
         "description": "Can data topic, it contains all the data from all the CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -46,14 +53,16 @@
         "alias": "DataPrimaryTopic",
         "description": "Data primary topic, it contains all the data from the primary CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -67,14 +76,16 @@
         "alias": "DataSecondaryTopic",
         "description": "Data secondary topic, it contains all the data from the secondary CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -88,14 +99,16 @@
         "alias": "DataInverterTopic",
         "description": "Data inverter topic, it contains all the data from the inverter CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -109,14 +122,16 @@
         "alias": "DataGpsTopic",
         "description": "Data GPS topic, it contains all the data from the GPS CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -130,14 +145,16 @@
         "alias": "DataBrusaTopic",
         "description": "Data brusa topic, it contains all the data from the Brusa CAN bus",
         "qos": 0,
-        "role": [
-            1,
+        "subscribeRoles": [
+            0,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -151,14 +168,17 @@
         "alias": "StatusTopic",
         "description": "Status topic, it contains all the status of the running telemetry system",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": true,
         "variables": [
             {
                 "name": "device_id",
@@ -172,14 +192,17 @@
         "alias": "StatusInfoTopic",
         "description": "Status info topic, it contains the status of the running telemetry system",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": true,
         "variables": [
             {
                 "name": "device_id",
@@ -193,14 +216,17 @@
         "alias": "StatusErrorTopic",
         "description": "Status error topic, it contains the errors of the running telemetry system",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": true,
         "variables": [
             {
                 "name": "device_id",
@@ -214,14 +240,17 @@
         "alias": "StatusCanFrequenciesTopic",
         "description": "Status CAN frequencies topic, it contains the frequencies of the CAN buses messages",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1
+        ],
+        "retained": true,
         "variables": [
             {
                 "name": "device_id",
@@ -235,14 +264,19 @@
         "alias": "CommandTopic",
         "description": "Command topic, it contains all the commands for the telemetry system",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -256,14 +290,14 @@
         "alias": "CommandSendTopic",
         "description": "Command send topic, it contains the command to run on the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -277,14 +311,14 @@
         "alias": "CommandResultTopic",
         "description": "Command result topic, it contains the result of the command ran on the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -298,14 +332,14 @@
         "alias": "FileTransactionAskTopic",
         "description": "File transaction ask topic, it contains the request for a file transaction",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -319,14 +353,14 @@
         "alias": "FileTransactionAckTopic",
         "description": "File transaction ack topic, it contains the ack for a file transaction",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -340,14 +374,14 @@
         "alias": "FileTransactionTopic",
         "description": "File transaction topic, it contains the file transaction data",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -365,14 +399,14 @@
         "alias": "FileTransactionBeginTopic",
         "description": "File transaction begin topic, it contains the begin of a file transaction",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -390,14 +424,14 @@
         "alias": "FileTransactionEndTopic",
         "description": "File transaction end topic, it contains the end of a file transaction",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -415,14 +449,14 @@
         "alias": "FileTransactionChunkTopic",
         "description": "File transaction chunk topic, it contains a chunk of a file transaction",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -440,14 +474,19 @@
         "alias": "ActionTopic",
         "description": "Action topic, it contains all the actions to send to the telemetry system",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -461,14 +500,14 @@
         "alias": "ActionTelemetryConfigTopic",
         "description": "Action telemetry config topic, it contains the telemetry config actions",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -482,14 +521,14 @@
         "alias": "ActionTelemetryConfigSetTopic",
         "description": "Action telemetry config set topic, it sets the telemetry config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -503,14 +542,14 @@
         "alias": "ActionTelemetryConfigGetTopic",
         "description": "Action telemetry config get topic, it requests the telemetry config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -524,14 +563,14 @@
         "alias": "ActionTelemetryConfigContentTopic",
         "description": "Action telemetry config content topic, it contains the telemetry config file content",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -545,14 +584,19 @@
         "alias": "ActionSessionConfigTopic",
         "description": "Action session config topic, it contains the session config actions",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -566,14 +610,14 @@
         "alias": "ActionSessionConfigSetTopic",
         "description": "Action session config set topic, it sets the session config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -587,14 +631,14 @@
         "alias": "ActionSessionConfigGetTopic",
         "description": "Action session config get topic, it requests the session config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -608,14 +652,14 @@
         "alias": "ActionSessionConfigContentTopic",
         "description": "Action session config content topic, it contains the session config file content",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -629,14 +673,19 @@
         "alias": "ActionCarConfigTopic",
         "description": "Action car config topic, it contains the car config actions",
         "qos": 0,
-        "role": [
+        "subscribeRoles": [
+            0,
             1,
             2,
-            3,
-            4
+            3
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -650,14 +699,14 @@
         "alias": "ActionCarConfigSetTopic",
         "description": "Action car config set topic, it sets the car config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -671,14 +720,14 @@
         "alias": "ActionCarConfigGetTopic",
         "description": "Action car config get topic, it requests the car config file",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -692,14 +741,14 @@
         "alias": "ActionCarConfigContentTopic",
         "description": "Action car config content topic, it contains the car config file content",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -713,14 +762,14 @@
         "alias": "ActionConfigsSetTopic",
         "description": "Action configs set topic, it gets all requests of config files to set",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -734,14 +783,14 @@
         "alias": "ActionConfigsGetTopic",
         "description": "Action configs get topic, it gets all requests of config files to get",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0,
+            2
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -755,14 +804,14 @@
         "alias": "ActionConfigsContentTopic",
         "description": "Action configs content topic, it gets all requests of config files content",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            0,
+            2
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            1
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -776,14 +825,13 @@
         "alias": "ActionKillTelemetryTopic",
         "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -797,14 +845,13 @@
         "alias": "ActionStartTelemetryTopic",
         "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -818,14 +865,13 @@
         "alias": "ActionResetTelemetryTopic",
         "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -839,14 +885,13 @@
         "alias": "ActionStopTelemetryTopic",
         "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -860,14 +905,13 @@
         "alias": "ActionRawTopic",
         "description": "Action raw topic, it contains custom commands to send to the telemetry system",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -881,14 +925,13 @@
         "alias": "ActionResetLapCounterTopic",
         "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter",
         "qos": 0,
-        "role": [
-            1,
-            2,
-            3,
-            4
+        "subscribeRoles": [
+            1
         ],
-        "retain": false,
-        "deprecated": false,
+        "publishRoles": [
+            0
+        ],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",

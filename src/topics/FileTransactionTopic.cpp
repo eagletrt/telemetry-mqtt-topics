@@ -1,11 +1,11 @@
 #include "FileTransactionTopic.h"
 
 namespace MQTTTopics {
-    const std::string FileTransactionTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>";
+    const std::string FileTransactionTopic::topic = fenice-evo/<device_id>/file_transaction/<transaction_id>;
     const uint8_t FileTransactionTopic::qos = 0;
-    const std::unordered_set<uint8_t> FileTransactionTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> FileTransactionTopic::publishRoles = {<publishRoles>};
-    const bool FileTransactionTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> FileTransactionTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> FileTransactionTopic::publishRoles = {0, 2};
+    const bool FileTransactionTopic::retained = false;
 
     TopicString FileTransactionTopic::get(const std::string& transaction_id, const std::string& device_id) {
         std::string str(topic);

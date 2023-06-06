@@ -1,11 +1,11 @@
 #include "DataBrusaTopic.h"
 
 namespace MQTTTopics {
-    const std::string DataBrusaTopic::topic = "fenice-evo/<device_id>/data/brusa";
+    const std::string DataBrusaTopic::topic = fenice-evo/<device_id>/data/brusa;
     const uint8_t DataBrusaTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataBrusaTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> DataBrusaTopic::publishRoles = {<publishRoles>};
-    const bool DataBrusaTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> DataBrusaTopic::subscribeRoles = {0, 2, 3};
+    const std::unordered_set<uint8_t> DataBrusaTopic::publishRoles = {0, 1};
+    const bool DataBrusaTopic::retained = false;
 
     TopicString DataBrusaTopic::get(const std::string& device_id) {
         std::string str(topic);

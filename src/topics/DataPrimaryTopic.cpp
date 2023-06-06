@@ -1,11 +1,11 @@
 #include "DataPrimaryTopic.h"
 
 namespace MQTTTopics {
-    const std::string DataPrimaryTopic::topic = "fenice-evo/<device_id>/data/primary";
+    const std::string DataPrimaryTopic::topic = fenice-evo/<device_id>/data/primary;
     const uint8_t DataPrimaryTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataPrimaryTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> DataPrimaryTopic::publishRoles = {<publishRoles>};
-    const bool DataPrimaryTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> DataPrimaryTopic::subscribeRoles = {0, 2, 3};
+    const std::unordered_set<uint8_t> DataPrimaryTopic::publishRoles = {0, 1};
+    const bool DataPrimaryTopic::retained = false;
 
     TopicString DataPrimaryTopic::get(const std::string& device_id) {
         std::string str(topic);

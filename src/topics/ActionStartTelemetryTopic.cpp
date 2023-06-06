@@ -1,11 +1,11 @@
 #include "ActionStartTelemetryTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionStartTelemetryTopic::topic = "fenice-evo/<device_id>/action/start";
+    const std::string ActionStartTelemetryTopic::topic = fenice-evo/<device_id>/action/start;
     const uint8_t ActionStartTelemetryTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionStartTelemetryTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> ActionStartTelemetryTopic::publishRoles = {<publishRoles>};
-    const bool ActionStartTelemetryTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> ActionStartTelemetryTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> ActionStartTelemetryTopic::publishRoles = {0};
+    const bool ActionStartTelemetryTopic::retained = false;
 
     TopicString ActionStartTelemetryTopic::get(const std::string& device_id) {
         std::string str(topic);

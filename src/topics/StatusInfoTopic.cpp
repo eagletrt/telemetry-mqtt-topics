@@ -1,11 +1,11 @@
 #include "StatusInfoTopic.h"
 
 namespace MQTTTopics {
-    const std::string StatusInfoTopic::topic = "fenice-evo/<device_id>/status/info";
+    const std::string StatusInfoTopic::topic = fenice-evo/<device_id>/status/info;
     const uint8_t StatusInfoTopic::qos = 0;
-    const std::unordered_set<uint8_t> StatusInfoTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> StatusInfoTopic::publishRoles = {<publishRoles>};
-    const bool StatusInfoTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> StatusInfoTopic::subscribeRoles = {0, 1, 2, 3};
+    const std::unordered_set<uint8_t> StatusInfoTopic::publishRoles = {0, 1};
+    const bool StatusInfoTopic::retained = true;
 
     TopicString StatusInfoTopic::get(const std::string& device_id) {
         std::string str(topic);

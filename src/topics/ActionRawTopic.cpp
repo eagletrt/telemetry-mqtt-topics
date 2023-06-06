@@ -1,11 +1,11 @@
 #include "ActionRawTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionRawTopic::topic = "fenice-evo/<device_id>/action/raw";
+    const std::string ActionRawTopic::topic = fenice-evo/<device_id>/action/raw;
     const uint8_t ActionRawTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionRawTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> ActionRawTopic::publishRoles = {<publishRoles>};
-    const bool ActionRawTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> ActionRawTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> ActionRawTopic::publishRoles = {0};
+    const bool ActionRawTopic::retained = false;
 
     TopicString ActionRawTopic::get(const std::string& device_id) {
         std::string str(topic);

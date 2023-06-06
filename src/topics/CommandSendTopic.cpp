@@ -1,11 +1,11 @@
 #include "CommandSendTopic.h"
 
 namespace MQTTTopics {
-    const std::string CommandSendTopic::topic = "fenice-evo/<device_id>/command/send";
+    const std::string CommandSendTopic::topic = fenice-evo/<device_id>/command/send;
     const uint8_t CommandSendTopic::qos = 0;
-    const std::unordered_set<uint8_t> CommandSendTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> CommandSendTopic::publishRoles = {<publishRoles>};
-    const bool CommandSendTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> CommandSendTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> CommandSendTopic::publishRoles = {0, 2};
+    const bool CommandSendTopic::retained = false;
 
     TopicString CommandSendTopic::get(const std::string& device_id) {
         std::string str(topic);

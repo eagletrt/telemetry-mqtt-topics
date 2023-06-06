@@ -1,11 +1,11 @@
 #include "ActionTelemetryConfigSetTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionTelemetryConfigSetTopic::topic = "fenice-evo/<device_id>/action/telemetry_config/set";
+    const std::string ActionTelemetryConfigSetTopic::topic = fenice-evo/<device_id>/action/telemetry_config/set;
     const uint8_t ActionTelemetryConfigSetTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionTelemetryConfigSetTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> ActionTelemetryConfigSetTopic::publishRoles = {<publishRoles>};
-    const bool ActionTelemetryConfigSetTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> ActionTelemetryConfigSetTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> ActionTelemetryConfigSetTopic::publishRoles = {0, 2};
+    const bool ActionTelemetryConfigSetTopic::retained = false;
 
     TopicString ActionTelemetryConfigSetTopic::get(const std::string& device_id) {
         std::string str(topic);

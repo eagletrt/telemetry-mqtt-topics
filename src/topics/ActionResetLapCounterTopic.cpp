@@ -1,11 +1,11 @@
 #include "ActionResetLapCounterTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionResetLapCounterTopic::topic = "fenice-evo/<device_id>/action/reset_lapcounter";
+    const std::string ActionResetLapCounterTopic::topic = fenice-evo/<device_id>/action/reset_lapcounter;
     const uint8_t ActionResetLapCounterTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::subscribeRoles = {<subscribeRoles>};
-    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::publishRoles = {<publishRoles>};
-    const bool ActionResetLapCounterTopic::retained = <retained>;
+    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::subscribeRoles = {1};
+    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::publishRoles = {0};
+    const bool ActionResetLapCounterTopic::retained = false;
 
     TopicString ActionResetLapCounterTopic::get(const std::string& device_id) {
         std::string str(topic);
