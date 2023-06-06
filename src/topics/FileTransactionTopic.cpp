@@ -6,7 +6,7 @@ namespace MQTTTopics {
     const std::unordered_set<uint8_t> FileTransactionTopic::roles = {0, 2, 3};
     const bool FileTransactionTopic::retain = false;
 
-    TopicString FileTransactionTopic::get(const std::string& device_id, const std::string& transaction_id) {
+    TopicString FileTransactionTopic::get(const std::string& transaction_id, const std::string& device_id) {
         std::string str(topic);
 
 		str.replace(str.find("<device_id>"), 11, device_id);
