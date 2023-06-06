@@ -1,5 +1,5 @@
-#ifndef ACTION_CONFIG_FILE_CONTENT_TOPIC_H
-#define ACTION_CONFIG_FILE_CONTENT_TOPIC_H
+#ifndef ACTION_CONFIG_FILES_CONTENT_TOPIC_H
+#define ACTION_CONFIG_FILES_CONTENT_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -11,13 +11,13 @@
 namespace MQTTTopics {
 
     // Action config file content topic, it gets all requests of config files content
-    class ActionConfigFileContentTopic
+    class ActionConfigFilesContentTopic
     {
     public:
-        ActionConfigFileContentTopic() = delete;
-        ActionConfigFileContentTopic(const ActionConfigFileContentTopic &) = delete;
-        ActionConfigFileContentTopic &operator=(const ActionConfigFileContentTopic &) = delete;
-        ~ActionConfigFileContentTopic() = delete;
+        ActionConfigFilesContentTopic() = delete;
+        ActionConfigFilesContentTopic(const ActionConfigFilesContentTopic &) = delete;
+        ActionConfigFilesContentTopic &operator=(const ActionConfigFilesContentTopic &) = delete;
+        ~ActionConfigFilesContentTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

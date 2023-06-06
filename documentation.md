@@ -288,7 +288,7 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFileSetTopic
+## ActionConfigFilesSetterTopic
 ### fenice-evo/<device_id>/action/+/set
 > Action config gile set topic, it gets all requests of config files to set
 - **Quality of Service**: 0
@@ -297,7 +297,7 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFileGetTopic
+## ActionConfigFilesGetterTopic
 ### fenice-evo/<device_id>/action/+/get
 > Action config file get topic, it gets all requests of config files to get
 - **Quality of Service**: 0
@@ -306,7 +306,7 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFileContentTopic
+## ActionConfigFilesContentTopic
 ### fenice-evo/<device_id>/action/+/content
 > Action config file content topic, it gets all requests of config files content
 - **Quality of Service**: 0

@@ -33,9 +33,9 @@
 #include "ActionCarSetupSetTopic.h"
 #include "ActionCarSetupGetTopic.h"
 #include "ActionCarSetupContentTopic.h"
-#include "ActionConfigFileSetTopic.h"
-#include "ActionConfigFileGetTopic.h"
-#include "ActionConfigFileContentTopic.h"
+#include "ActionConfigFilesSetterTopic.h"
+#include "ActionConfigFilesGetterTopic.h"
+#include "ActionConfigFilesContentTopic.h"
 #include "ActionKillTelemetryTopic.h"
 #include "ActionStartTelemetryTopic.h"
 #include "ActionResetTelemetryTopic.h"
@@ -77,9 +77,9 @@ namespace MQTTTopics {
 	class ActionCarSetupSetTopic;
 	class ActionCarSetupGetTopic;
 	class ActionCarSetupContentTopic;
-	class ActionConfigFileSetTopic;
-	class ActionConfigFileGetTopic;
-	class ActionConfigFileContentTopic;
+	class ActionConfigFilesSetterTopic;
+	class ActionConfigFilesGetterTopic;
+	class ActionConfigFilesContentTopic;
 	class ActionKillTelemetryTopic;
 	class ActionStartTelemetryTopic;
 	class ActionResetTelemetryTopic;

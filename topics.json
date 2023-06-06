@@ -677,7 +677,7 @@
     },
     {
         "topic": "fenice-evo/<device_id>/action/+/set",
-        "alias": "ActionConfigFileSetTopic",
+        "alias": "ActionConfigFilesSetterTopic",
         "description": "Action config gile set topic, it gets all requests of config files to set",
         "qos": 0,
         "role": [
@@ -697,7 +697,7 @@
     },
     {
         "topic": "fenice-evo/<device_id>/action/+/get",
-        "alias": "ActionConfigFileGetTopic",
+        "alias": "ActionConfigFilesGetterTopic",
         "description": "Action config file get topic, it gets all requests of config files to get",
         "qos": 0,
         "role": [
@@ -717,7 +717,7 @@
     },
     {
         "topic": "fenice-evo/<device_id>/action/+/content",
-        "alias": "ActionConfigFileContentTopic",
+        "alias": "ActionConfigFilesContentTopic",
         "description": "Action config file content topic, it gets all requests of config files content",
         "qos": 0,
         "role": [
