@@ -3,19 +3,19 @@
 /*
     A topic is a string that the MQTT broker uses to filter messages for each connected client.
     The topic object contains the following properties:
-        - (name of object): the name of the topic
-        - alias: the alias of the topic, it will be used for the name of the class
-        - description: a description of the topic
-        - qos: the quality of service level to use for the topic
-        - role: array of id of the roles that can access the topic. The value will be the default for all sub-topics
-        - retain: if true the broker will store the last message and the last value of the retained flag
-        - variables: array of variables that can be replaced in the topic
-        - deprecated: if true the topic is deprecated
-        - sub_topics: array of topics that will be appended to the current topic
+        - (name of object): the name of the topic.
+        - alias: the alias of the topic, it will be used for the name of the class.
+        - description: a description of the topic.
+        - qos: the quality of service level to use for the topic.
+        - subscribeRoles: set of id of the roles that can subscribe to the topic. The value will be the default for all sub-topics.
+        - publishRoles: set of id of the roles that can publish to the topic. The value will be the default for all sub-topics.
+        - retained: if true the broker will store the last message and the last value of the retained flag.
+        - variables: array of variables that can be replaced in the topic.
+        - sub_topics: array of topics that will be appended to the current topic.
     The variables object contains the following properties:
-        - name: the name of the variable
-        - description: a description of the variable
-        - default (optional): the default value of the variable
+        - name: the name of the variable.
+        - description: a description of the variable.
+        - default (optional): the default value of the variable.
 */
 
 {
@@ -23,8 +23,9 @@
         "alias": "FeniceEvoTopic",
         "description": "FeniceEvo topic for the device",
         "qos": 0,
-        "role": [0, 2, 3],
-        "retain": false,
+        "subscribeRoles": [0, 1, 2, 3],
+        "publishRoles": [0, 1, 2, 3],
+        "retained": false,
         "variables": [
             {
                 "name": "device_id",
@@ -32,11 +33,14 @@
                 "default": "telemetry"
             }
         ],
-        "deprecated": false,
         "sub_topics": {
             "data": {
                 "alias": "DataTopic",
                 "description": "Can data topic, it contains all the data from all the CAN bus",
+                "qos": 0,
+                "subscribeRoles": [0, 2, 3],
+                "publishRoles": [0, 1],
+                "retained": false,
                 "sub_topics": {
                     "primary": {
                         "alias": "DataPrimaryTopic",
@@ -56,14 +60,17 @@
                     },
                     "brusa": {
                         "alias": "DataBrusaTopic",
-                        "description": "Data brusa topic, it contains all the data from the Brusa CAN bus",
-                        "deprecated": true
+                        "description": "Data brusa topic, it contains all the data from the Brusa CAN bus"
                     }
                 }
             },
             "status": {
                 "alias": "StatusTopic",
                 "description": "Status topic, it contains all the status of the running telemetry system",
+                "qos": 1,
+                "subscribeRoles": [0, 1, 2, 3],
+                "publishRoles": [0, 1],
+                "retained": true,
                 "sub_topics": {
                     "info": {
                         "alias": "StatusInfoTopic",
@@ -82,28 +89,46 @@
             "command": {
                 "alias": "CommandTopic",
                 "description": "Command topic, it contains all the commands for the telemetry system",
+                "qos": 2,
+                "retained": false,
                 "sub_topics": {
                     "send": {
                         "alias": "CommandSendTopic",
-                        "description": "Command send topic, it contains the command to run on the telemetry system"
+                        "description": "Command send topic, it contains the command to run on the telemetry system",
+                        "subscribeRoles": [1],
+                        "publishRoles": [0, 2]
                     },
                     "result": {
                         "alias": "CommandResultTopic",
-                        "description": "Command result topic, it contains the result of the command ran on the telemetry system"
+                        "description": "Command result topic, it contains the result of the command ran on the telemetry system",
+                        "subscribeRoles": [0, 2],
+                        "publishRoles": [1]
                     }
                 }
             },
             "file_transaction/ask": {
                 "alias": "FileTransactionAskTopic",
-                "description": "File transaction ask topic, it contains the request for a file transaction"
+                "description": "File transaction ask topic, it contains the request for a file transaction",
+                "qos": 2,
+                "subscribeRoles": [1],
+                "publishRoles": [0, 2],
+                "retained": false
             },
             "file_transaction/ack": {
                 "alias": "FileTransactionAckTopic",
-                "description": "File transaction ack topic, it contains the ack for a file transaction"
+                "description": "File transaction ack topic, it contains the ack for a file transaction",
+                "qos": 2,
+                "subscribeRoles": [0, 2],
+                "publishRoles": [1],
+                "retained": false
             },
             "file_transaction/<transaction_id>": {
                 "alias": "FileTransactionTopic",
                 "description": "File transaction topic, it contains the file transaction data",
+                "qos": 2,
+                "subscribeRoles": [1],
+                "publishRoles": [0, 2],
+                "retained": false,
                 "variables": [
                     {
                         "name": "transaction_id",
@@ -128,22 +153,32 @@
             "action": {
                 "alias": "ActionTopic",
                 "description": "Action topic, it contains all the actions to send to the telemetry system",
+                "qos": 0,
+                "retained": false,
                 "sub_topics": {
                     "telemetry_config": {
                         "alias": "ActionTelemetryConfigTopic",
                         "description": "Action telemetry config topic, it contains the telemetry config actions",
+                        "subscribeRoles": [1],
+                        "publishRoles": [0, 2],
                         "sub_topics": {
                             "set": {
                                 "alias": "ActionTelemetryConfigSetTopic",
-                                "description": "Action telemetry config set topic, it sets the telemetry config file"
+                                "description": "Action telemetry config set topic, it sets the telemetry config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "get": {
                                 "alias": "ActionTelemetryConfigGetTopic",
-                                "description": "Action telemetry config get topic, it requests the telemetry config file"
+                                "description": "Action telemetry config get topic, it requests the telemetry config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "content": {
                                 "alias": "ActionTelemetryConfigContentTopic",
-                                "description": "Action telemetry config content topic, it contains the telemetry config file content"
+                                "description": "Action telemetry config content topic, it contains the telemetry config file content",
+                                "subscribeRoles": [0, 2],
+                                "publishRoles": [1]
                             }
                         }
                     },
@@ -153,15 +188,21 @@
                         "sub_topics": {
                             "set": {
                                 "alias": "ActionSessionConfigSetTopic",
-                                "description": "Action session config set topic, it sets the session config file"
+                                "description": "Action session config set topic, it sets the session config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "get": {
                                 "alias": "ActionSessionConfigGetTopic",
-                                "description": "Action session config get topic, it requests the session config file"
+                                "description": "Action session config get topic, it requests the session config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "content": {
                                 "alias": "ActionSessionConfigContentTopic",
-                                "description": "Action session config content topic, it contains the session config file content"
+                                "description": "Action session config content topic, it contains the session config file content",
+                                "subscribeRoles": [0, 2],
+                                "publishRoles": [1]
                             }
                         }
                     },
@@ -171,53 +212,83 @@
                         "sub_topics": {
                             "set": {
                                 "alias": "ActionCarConfigSetTopic",
-                                "description": "Action car config set topic, it sets the car config file"
+                                "description": "Action car config set topic, it sets the car config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "get": {
                                 "alias": "ActionCarConfigGetTopic",
-                                "description": "Action car config get topic, it requests the car config file"
+                                "description": "Action car config get topic, it requests the car config file",
+                                "subscribeRoles": [1],
+                                "publishRoles": [0, 2]
                             },
                             "content": {
                                 "alias": "ActionCarConfigContentTopic",
-                                "description": "Action car config content topic, it contains the car config file content"
+                                "description": "Action car config content topic, it contains the car config file content",
+                                "subscribeRoles": [0, 2],
+                                "publishRoles": [1]
                             }
                         }
                     },
                     "+/set": {
                         "alias": "ActionConfigsSetTopic",
-                        "description": "Action configs set topic, it gets all requests of config files to set"
+                        "description": "Action configs set topic, it gets all requests of config files to set",
+                        "subscribeRoles": [1],
+                        "publishRoles": [0, 2]
                     },
                     "+/get": {
                         "alias": "ActionConfigsGetTopic",
-                        "description": "Action configs get topic, it gets all requests of config files to get"
+                        "description": "Action configs get topic, it gets all requests of config files to get",
+                        "subscribeRoles": [1],
+                        "publishRoles": [0, 2]
                     },
                     "+/content": {
                         "alias": "ActionConfigsContentTopic",
-                        "description": "Action configs content topic, it gets all requests of config files content"
+                        "description": "Action configs content topic, it gets all requests of config files content",
+                        "subscribeRoles": [0, 2],
+                        "publishRoles": [1]
                     },
                     "kill": {
                         "alias": "ActionKillTelemetryTopic",
-                        "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system"
+                        "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     },
                     "start": {
                         "alias": "ActionStartTelemetryTopic",
-                        "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system"
+                        "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     },
                     "reset": {
                         "alias": "ActionResetTelemetryTopic",
-                        "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system"
+                        "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     },
                     "stop": {
                         "alias": "ActionStopTelemetryTopic",
-                        "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system"
+                        "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     },
                     "raw": {
                         "alias": "ActionRawTopic",
-                        "description": "Action raw topic, it contains custom commands to send to the telemetry system"
+                        "description": "Action raw topic, it contains custom commands to send to the telemetry system",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     },
                     "reset_lapcounter": {
                         "alias": "ActionResetLapCounterTopic",
-                        "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter"
+                        "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter",
+                        "qos": 2,
+                        "subscribeRoles": [1],
+                        "publishRoles": [0]
                     }
                 }
             }
