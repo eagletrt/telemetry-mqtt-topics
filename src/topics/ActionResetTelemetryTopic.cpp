@@ -1,7 +1,7 @@
 #include "ActionResetTelemetryTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionResetTelemetryTopic::topic = fenice-evo/<device_id>/action/reset;
+    const std::string ActionResetTelemetryTopic::topic = "fenice-evo/<device_id>/action/reset";
     const uint8_t ActionResetTelemetryTopic::qos = 0;
     const std::unordered_set<uint8_t> ActionResetTelemetryTopic::subscribeRoles = {1};
     const std::unordered_set<uint8_t> ActionResetTelemetryTopic::publishRoles = {0};

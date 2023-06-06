@@ -1,7 +1,7 @@
 #include "DataSecondaryTopic.h"
 
 namespace MQTTTopics {
-    const std::string DataSecondaryTopic::topic = fenice-evo/<device_id>/data/secondary;
+    const std::string DataSecondaryTopic::topic = "fenice-evo/<device_id>/data/secondary";
     const uint8_t DataSecondaryTopic::qos = 0;
     const std::unordered_set<uint8_t> DataSecondaryTopic::subscribeRoles = {0, 2, 3};
     const std::unordered_set<uint8_t> DataSecondaryTopic::publishRoles = {0, 1};

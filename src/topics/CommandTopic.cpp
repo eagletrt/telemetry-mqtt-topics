@@ -1,7 +1,7 @@
 #include "CommandTopic.h"
 
 namespace MQTTTopics {
-    const std::string CommandTopic::topic = fenice-evo/<device_id>/command;
+    const std::string CommandTopic::topic = "fenice-evo/<device_id>/command";
     const uint8_t CommandTopic::qos = 0;
     const std::unordered_set<uint8_t> CommandTopic::subscribeRoles = {0, 1, 2, 3};
     const std::unordered_set<uint8_t> CommandTopic::publishRoles = {0, 1, 2, 3};

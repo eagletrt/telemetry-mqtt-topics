@@ -1,7 +1,7 @@
 #include "StatusTopic.h"
 
 namespace MQTTTopics {
-    const std::string StatusTopic::topic = fenice-evo/<device_id>/status;
+    const std::string StatusTopic::topic = "fenice-evo/<device_id>/status";
     const uint8_t StatusTopic::qos = 0;
     const std::unordered_set<uint8_t> StatusTopic::subscribeRoles = {0, 1, 2, 3};
     const std::unordered_set<uint8_t> StatusTopic::publishRoles = {0, 1};

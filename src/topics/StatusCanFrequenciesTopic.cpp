@@ -1,7 +1,7 @@
 #include "StatusCanFrequenciesTopic.h"
 
 namespace MQTTTopics {
-    const std::string StatusCanFrequenciesTopic::topic = fenice-evo/<device_id>/status/can_frequencies;
+    const std::string StatusCanFrequenciesTopic::topic = "fenice-evo/<device_id>/status/can_frequencies";
     const uint8_t StatusCanFrequenciesTopic::qos = 0;
     const std::unordered_set<uint8_t> StatusCanFrequenciesTopic::subscribeRoles = {0, 1, 2, 3};
     const std::unordered_set<uint8_t> StatusCanFrequenciesTopic::publishRoles = {0, 1};

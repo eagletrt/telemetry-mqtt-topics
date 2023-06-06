@@ -1,7 +1,7 @@
 #include "ActionConfigsGetTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionConfigsGetTopic::topic = fenice-evo/<device_id>/action/+/get;
+    const std::string ActionConfigsGetTopic::topic = "fenice-evo/<device_id>/action/+/get";
     const uint8_t ActionConfigsGetTopic::qos = 0;
     const std::unordered_set<uint8_t> ActionConfigsGetTopic::subscribeRoles = {1};
     const std::unordered_set<uint8_t> ActionConfigsGetTopic::publishRoles = {0, 2};

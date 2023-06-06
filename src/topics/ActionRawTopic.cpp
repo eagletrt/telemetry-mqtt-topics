@@ -1,7 +1,7 @@
 #include "ActionRawTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionRawTopic::topic = fenice-evo/<device_id>/action/raw;
+    const std::string ActionRawTopic::topic = "fenice-evo/<device_id>/action/raw";
     const uint8_t ActionRawTopic::qos = 0;
     const std::unordered_set<uint8_t> ActionRawTopic::subscribeRoles = {1};
     const std::unordered_set<uint8_t> ActionRawTopic::publishRoles = {0};
