@@ -5,11 +5,6 @@ def generate(topics_list):
     make_dirs()
     copy_static_files()
 
-    # Remove deprecated topics
-    for topic in topics_list:
-        if topic["deprecated"]:
-            topics_list.remove(topic)
-
     generate_namespace_file(topics_list)
     for topic in topics_list:
         generate_cpp(topic)
@@ -74,16 +69,24 @@ def generate_cpp(topic):
     # qos replace
     file_content = file_content.replace("<qos>", f"{topic['qos']}")
 
-    # role replace
-    roles = ""
-    for role in topic["role"]:
-        roles += f"{role}, "
-    if roles != "":
-        roles = roles[:-2]
-    file_content = file_content.replace("<roles>", roles)
+    # subscribe roles replace
+    subscribeRoles = ""
+    for subRole in topic["subscribeRoles"]:
+        subscribeRoles += f"{subRole}, "
+    if subscribeRoles != "":
+        subscribeRoles = subscribeRoles[:-2]
+    file_content = file_content.replace("<subscribeRoles>", subscribeRoles)
+    
+    # publish roles replace
+    publishRoles = ""
+    for pubRole in topic["publishRoles"]:
+        publishRoles += f"{pubRole}, "
+    if publishRoles != "":
+        publishRoles = publishRoles[:-2]
+    file_content = file_content.replace("<publishRoles>", publishRoles)
 
-    # retain replace
-    file_content = file_content.replace("<retain>", "true" if topic["retain"] else "false")
+    # retained replace
+    file_content = file_content.replace("<retained>", "true" if topic["retained"] else "false")
 
     with open(f"out/src/topics/{topic['alias']}.cpp", "w") as file:
         file.write(file_content)

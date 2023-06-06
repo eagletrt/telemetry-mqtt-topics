@@ -5,11 +5,11 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     # Default values
     topic = key
     alias = None
-    description = "Not defined"
+    description = ""
     qos = 0
-    role = [1,2,3,4]
-    retain = False
-    deprecated = False
+    subscribeRoles = [0, 1, 2, 3]
+    publishRoles = [0, 1, 2, 3]
+    retained = False
     variables = []
 
     # Concatenate with parent topic
@@ -26,21 +26,21 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     # Use qos of the parent topic if not defined
     if "qos" not in node and "qos" in parent_config:
         qos = parent_config["qos"]
-    # Use role of the parent topic if not defined
-    if "role" in node:
-        role = node["role"]
-    elif "role" in parent_config:
-        role = parent_config["role"]
+    # Use subscribe role of the parent topic if not defined
+    if "subscribeRoles" in node:
+        subscribeRoles = node["subscribeRoles"]
+    elif "subscribeRoles" in parent_config:
+        subscribeRoles = parent_config["subscribeRoles"]
+    # Use publish role of the parent topic if not defined
+    if "publishRoles" in node:
+        publishRoles = node["publishRoles"]
+    elif "publishRoles" in parent_config:
+        publishRoles = parent_config["publishRoles"]
     # Use retain of the parent topic if not defined
-    if "retain" in node:
-        retain = node["retain"]
-    elif "retain" in parent_config:
-        retain = parent_config["retain"]
-    # Use deprecated of the parent topic
-    if "deprecated" in node and node["deprecated"]:
-        deprecated = True
-    if "deprecated" in parent_config and parent_config["deprecated"]:
-        deprecated = True
+    if "retained" in node:
+        retained = node["retained"]
+    elif "retained" in parent_config:
+        retained = parent_config["retained"]
     # Concatenate with parent variables if defined
     if "variables" in parent_config:
         variables.extend(parent_config["variables"])
@@ -52,9 +52,9 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
         "alias": alias,
         "description": description,
         "qos": qos,
-        "role": role,
-        "retain": retain,
-        "deprecated": deprecated,
+        "subscribeRoles": subscribeRoles,
+        "publishRoles": publishRoles,
+        "retained": retained,
         "variables": variables
     }
 
