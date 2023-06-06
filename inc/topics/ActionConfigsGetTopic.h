@@ -1,5 +1,5 @@
-#ifndef ACTION_CONFIG_FILES_SETTER_TOPIC_H
-#define ACTION_CONFIG_FILES_SETTER_TOPIC_H
+#ifndef ACTION_CONFIGS_GET_TOPIC_H
+#define ACTION_CONFIGS_GET_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -10,14 +10,14 @@
 
 namespace MQTTTopics {
 
-    // Action config gile set topic, it gets all requests of config files to set
-    class ActionConfigFilesSetterTopic
+    // Action configs get topic, it gets all requests of config files to get
+    class ActionConfigsGetTopic
     {
     public:
-        ActionConfigFilesSetterTopic() = delete;
-        ActionConfigFilesSetterTopic(const ActionConfigFilesSetterTopic &) = delete;
-        ActionConfigFilesSetterTopic &operator=(const ActionConfigFilesSetterTopic &) = delete;
-        ~ActionConfigFilesSetterTopic() = delete;
+        ActionConfigsGetTopic() = delete;
+        ActionConfigsGetTopic(const ActionConfigsGetTopic &) = delete;
+        ActionConfigsGetTopic &operator=(const ActionConfigsGetTopic &) = delete;
+        ~ActionConfigsGetTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

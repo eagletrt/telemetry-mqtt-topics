@@ -100,7 +100,7 @@
   - device_id -> The device ID (default: telemetry)
 
 ## CommandSendTopic
-### fenice-evo/<device_id>/command/command
+### fenice-evo/<device_id>/command/send
 > Command send topic, it contains the command to run on the telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
@@ -180,42 +180,6 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionSessionConfigTopic
-### fenice-evo/<device_id>/action/session_config
-> Action session config topic, it contains the session config actions
-- **Quality of Service**: 0
-- **Role**: 0 2 3 
-- **Retain**: No
-- **Variables**:
-  - device_id -> The device ID (default: telemetry)
-
-## ActionSessionConfigSetTopic
-### fenice-evo/<device_id>/action/session_config/set
-> Action session config set topic, it sets the session config file
-- **Quality of Service**: 0
-- **Role**: 0 2 3 
-- **Retain**: No
-- **Variables**:
-  - device_id -> The device ID (default: telemetry)
-
-## ActionSessionConfigGetTopic
-### fenice-evo/<device_id>/action/session_config/get
-> Action session config get action topic, it requests the session config file
-- **Quality of Service**: 0
-- **Role**: 0 2 3 
-- **Retain**: No
-- **Variables**:
-  - device_id -> The device ID (default: telemetry)
-
-## ActionSessionConfigContentTopic
-### fenice-evo/<device_id>/action/session_config/content
-> Action session config content topic, it contains the session config file content
-- **Quality of Service**: 0
-- **Role**: 0 2 3 
-- **Retain**: No
-- **Variables**:
-  - device_id -> The device ID (default: telemetry)
-
 ## ActionTelemetryConfigTopic
 ### fenice-evo/<device_id>/action/telemetry_config
 > Action telemetry config topic, it contains the telemetry config actions
@@ -252,63 +216,99 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionCarSetupTopic
-### fenice-evo/<device_id>/action/car_setup
-> Car setup action topic, it contains the car setup actions
+## ActionSessionConfigTopic
+### fenice-evo/<device_id>/action/session_config
+> Action session config topic, it contains the session config actions
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionCarSetupSetTopic
-### fenice-evo/<device_id>/action/car_setup/set
-> Action car setup set topic, it sets the car setup file
+## ActionSessionConfigSetTopic
+### fenice-evo/<device_id>/action/session_config/set
+> Action session config set topic, it sets the session config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionCarSetupGetTopic
-### fenice-evo/<device_id>/action/car_setup/get
-> Action car setup get action topic, it requests the car setup file
+## ActionSessionConfigGetTopic
+### fenice-evo/<device_id>/action/session_config/get
+> Action session config get topic, it requests the session config file
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionCarSetupContentTopic
-### fenice-evo/<device_id>/action/car_setup/content
-> Action car setup content action topic, it contains the car setup file content
+## ActionSessionConfigContentTopic
+### fenice-evo/<device_id>/action/session_config/content
+> Action session config content topic, it contains the session config file content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFilesSetterTopic
+## ActionCarConfigTopic
+### fenice-evo/<device_id>/action/car_config
+> Action car config topic, it contains the car config actions
+- **Quality of Service**: 0
+- **Role**: 0 2 3 
+- **Retain**: No
+- **Variables**:
+  - device_id -> The device ID (default: telemetry)
+
+## ActionCarConfigSetTopic
+### fenice-evo/<device_id>/action/car_config/set
+> Action car config set topic, it sets the car config file
+- **Quality of Service**: 0
+- **Role**: 0 2 3 
+- **Retain**: No
+- **Variables**:
+  - device_id -> The device ID (default: telemetry)
+
+## ActionCarConfigGetTopic
+### fenice-evo/<device_id>/action/car_config/get
+> Action car config get topic, it requests the car config file
+- **Quality of Service**: 0
+- **Role**: 0 2 3 
+- **Retain**: No
+- **Variables**:
+  - device_id -> The device ID (default: telemetry)
+
+## ActionCarConfigContentTopic
+### fenice-evo/<device_id>/action/car_config/content
+> Action car config content topic, it contains the car config file content
+- **Quality of Service**: 0
+- **Role**: 0 2 3 
+- **Retain**: No
+- **Variables**:
+  - device_id -> The device ID (default: telemetry)
+
+## ActionConfigsSetTopic
 ### fenice-evo/<device_id>/action/+/set
-> Action config gile set topic, it gets all requests of config files to set
+> Action configs set topic, it gets all requests of config files to set
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFilesGetterTopic
+## ActionConfigsGetTopic
 ### fenice-evo/<device_id>/action/+/get
-> Action config file get topic, it gets all requests of config files to get
+> Action configs get topic, it gets all requests of config files to get
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## ActionConfigFilesContentTopic
+## ActionConfigsContentTopic
 ### fenice-evo/<device_id>/action/+/content
-> Action config file content topic, it gets all requests of config files content
+> Action configs content topic, it gets all requests of config files content
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
 - **Retain**: No
@@ -361,7 +361,7 @@
   - device_id -> The device ID (default: telemetry)
 
 ## ActionResetLapCounterTopic
-### fenice-evo/<device_id>/action/lapcounter_reset
+### fenice-evo/<device_id>/action/reset_lapcounter
 > Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter
 - **Quality of Service**: 0
 - **Role**: 0 2 3 

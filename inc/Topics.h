@@ -21,21 +21,21 @@
 #include "FileTransactionEndTopic.h"
 #include "FileTransactionChunkTopic.h"
 #include "ActionTopic.h"
-#include "ActionSessionConfigTopic.h"
-#include "ActionSessionConfigSetTopic.h"
-#include "ActionSessionConfigGetTopic.h"
-#include "ActionSessionConfigContentTopic.h"
 #include "ActionTelemetryConfigTopic.h"
 #include "ActionTelemetryConfigSetTopic.h"
 #include "ActionTelemetryConfigGetTopic.h"
 #include "ActionTelemetryConfigContentTopic.h"
-#include "ActionCarSetupTopic.h"
-#include "ActionCarSetupSetTopic.h"
-#include "ActionCarSetupGetTopic.h"
-#include "ActionCarSetupContentTopic.h"
-#include "ActionConfigFilesSetterTopic.h"
-#include "ActionConfigFilesGetterTopic.h"
-#include "ActionConfigFilesContentTopic.h"
+#include "ActionSessionConfigTopic.h"
+#include "ActionSessionConfigSetTopic.h"
+#include "ActionSessionConfigGetTopic.h"
+#include "ActionSessionConfigContentTopic.h"
+#include "ActionCarConfigTopic.h"
+#include "ActionCarConfigSetTopic.h"
+#include "ActionCarConfigGetTopic.h"
+#include "ActionCarConfigContentTopic.h"
+#include "ActionConfigsSetTopic.h"
+#include "ActionConfigsGetTopic.h"
+#include "ActionConfigsContentTopic.h"
 #include "ActionKillTelemetryTopic.h"
 #include "ActionStartTelemetryTopic.h"
 #include "ActionResetTelemetryTopic.h"
@@ -65,21 +65,21 @@ namespace MQTTTopics {
 	class FileTransactionEndTopic;
 	class FileTransactionChunkTopic;
 	class ActionTopic;
-	class ActionSessionConfigTopic;
-	class ActionSessionConfigSetTopic;
-	class ActionSessionConfigGetTopic;
-	class ActionSessionConfigContentTopic;
 	class ActionTelemetryConfigTopic;
 	class ActionTelemetryConfigSetTopic;
 	class ActionTelemetryConfigGetTopic;
 	class ActionTelemetryConfigContentTopic;
-	class ActionCarSetupTopic;
-	class ActionCarSetupSetTopic;
-	class ActionCarSetupGetTopic;
-	class ActionCarSetupContentTopic;
-	class ActionConfigFilesSetterTopic;
-	class ActionConfigFilesGetterTopic;
-	class ActionConfigFilesContentTopic;
+	class ActionSessionConfigTopic;
+	class ActionSessionConfigSetTopic;
+	class ActionSessionConfigGetTopic;
+	class ActionSessionConfigContentTopic;
+	class ActionCarConfigTopic;
+	class ActionCarConfigSetTopic;
+	class ActionCarConfigGetTopic;
+	class ActionCarConfigContentTopic;
+	class ActionConfigsSetTopic;
+	class ActionConfigsGetTopic;
+	class ActionConfigsContentTopic;
 	class ActionKillTelemetryTopic;
 	class ActionStartTelemetryTopic;
 	class ActionResetTelemetryTopic;

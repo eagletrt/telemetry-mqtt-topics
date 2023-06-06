@@ -1,5 +1,5 @@
-#ifndef ACTION_CAR_SETUP_SET_TOPIC_H
-#define ACTION_CAR_SETUP_SET_TOPIC_H
+#ifndef ACTION_CAR_CONFIG_GET_TOPIC_H
+#define ACTION_CAR_CONFIG_GET_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -10,14 +10,14 @@
 
 namespace MQTTTopics {
 
-    // Action car setup set topic, it sets the car setup file
-    class ActionCarSetupSetTopic
+    // Action car config get topic, it requests the car config file
+    class ActionCarConfigGetTopic
     {
     public:
-        ActionCarSetupSetTopic() = delete;
-        ActionCarSetupSetTopic(const ActionCarSetupSetTopic &) = delete;
-        ActionCarSetupSetTopic &operator=(const ActionCarSetupSetTopic &) = delete;
-        ~ActionCarSetupSetTopic() = delete;
+        ActionCarConfigGetTopic() = delete;
+        ActionCarConfigGetTopic(const ActionCarConfigGetTopic &) = delete;
+        ActionCarConfigGetTopic &operator=(const ActionCarConfigGetTopic &) = delete;
+        ~ActionCarConfigGetTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

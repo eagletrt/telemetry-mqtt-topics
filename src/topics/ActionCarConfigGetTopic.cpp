@@ -1,0 +1,28 @@
+#include "ActionCarConfigGetTopic.h"
+
+namespace MQTTTopics {
+    const std::string ActionCarConfigGetTopic::topic = "fenice-evo/<device_id>/action/car_config/get";
+    const uint8_t ActionCarConfigGetTopic::qos = 0;
+    const std::unordered_set<uint8_t> ActionCarConfigGetTopic::roles = {0, 2, 3};
+    const bool ActionCarConfigGetTopic::retain = false;
+
+    TopicString ActionCarConfigGetTopic::get(const std::string& device_id) {
+        std::string str(topic);
+
+		str.replace(str.find("<device_id>"), 11, device_id);
+
+        return str;
+    }
+
+    int ActionCarConfigGetTopic::qualityOfService() {
+        return static_cast<int>(qos);
+    }
+
+    bool ActionCarConfigGetTopic::hasPermission(unsigned int role) {
+        return (roles.find(role) != roles.cend());
+    }
+
+    bool ActionCarConfigGetTopic::retained() {
+        return retain;
+    }
+}// namespace MQTTTopics

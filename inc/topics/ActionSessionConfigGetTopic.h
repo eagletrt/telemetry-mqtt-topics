@@ -10,7 +10,7 @@
 
 namespace MQTTTopics {
 
-    // Action session config get action topic, it requests the session config file
+    // Action session config get topic, it requests the session config file
     class ActionSessionConfigGetTopic
     {
     public:
