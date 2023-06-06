@@ -184,15 +184,15 @@
                         }
                     },
                     "+/set": {
-                        "alias": "ActionConfigFileSetTopic",
+                        "alias": "ActionConfigFilesSetterTopic",
                         "description": "Action config gile set topic, it gets all requests of config files to set"
                     },
                     "+/get": {
-                        "alias": "ActionConfigFileGetTopic",
+                        "alias": "ActionConfigFilesGetterTopic",
                         "description": "Action config file get topic, it gets all requests of config files to get"
                     },
                     "+/content": {
-                        "alias": "ActionConfigFileContentTopic",
+                        "alias": "ActionConfigFilesContentTopic",
                         "description": "Action config file content topic, it gets all requests of config files content"
                     },
                     "kill": {
