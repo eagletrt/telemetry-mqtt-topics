@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string <alias>::topic = "<topic>";
     const uint8_t <alias>::qos = <qos>;
-    const std::unordered_set<uint8_t> <alias>::roles = {<roles>};
-    const bool <alias>::retain = <retain>;
+    const std::unordered_set<uint8_t> <alias>::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> <alias>::publishRoles = {<publishRoles>};
+    const bool <alias>::retained = <retained>;
 
     TopicString <alias>::get(<variables:params>) {
         std::string str(topic);
