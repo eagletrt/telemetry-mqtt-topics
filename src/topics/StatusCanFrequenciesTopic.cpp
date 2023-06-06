@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string StatusCanFrequenciesTopic::topic = "fenice-evo/<device_id>/status/can_frequencies";
     const uint8_t StatusCanFrequenciesTopic::qos = 0;
-    const std::unordered_set<uint8_t> StatusCanFrequenciesTopic::roles = {1, 2, 3, 4};
-    const bool StatusCanFrequenciesTopic::retain = false;
+    const std::unordered_set<uint8_t> StatusCanFrequenciesTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> StatusCanFrequenciesTopic::publishRoles = {<publishRoles>};
+    const bool StatusCanFrequenciesTopic::retained = <retained>;
 
     TopicString StatusCanFrequenciesTopic::get(const std::string& device_id) {
         std::string str(topic);

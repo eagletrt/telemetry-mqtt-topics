@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string ActionCarConfigTopic::topic = "fenice-evo/<device_id>/action/car_config";
     const uint8_t ActionCarConfigTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionCarConfigTopic::roles = {1, 2, 3, 4};
-    const bool ActionCarConfigTopic::retain = false;
+    const std::unordered_set<uint8_t> ActionCarConfigTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> ActionCarConfigTopic::publishRoles = {<publishRoles>};
+    const bool ActionCarConfigTopic::retained = <retained>;
 
     TopicString ActionCarConfigTopic::get(const std::string& device_id) {
         std::string str(topic);

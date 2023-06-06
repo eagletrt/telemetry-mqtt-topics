@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string DataGpsTopic::topic = "fenice-evo/<device_id>/data/gps";
     const uint8_t DataGpsTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataGpsTopic::roles = {1, 2, 3, 4};
-    const bool DataGpsTopic::retain = false;
+    const std::unordered_set<uint8_t> DataGpsTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> DataGpsTopic::publishRoles = {<publishRoles>};
+    const bool DataGpsTopic::retained = <retained>;
 
     TopicString DataGpsTopic::get(const std::string& device_id) {
         std::string str(topic);

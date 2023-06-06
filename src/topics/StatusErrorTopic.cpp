@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string StatusErrorTopic::topic = "fenice-evo/<device_id>/status/error";
     const uint8_t StatusErrorTopic::qos = 0;
-    const std::unordered_set<uint8_t> StatusErrorTopic::roles = {1, 2, 3, 4};
-    const bool StatusErrorTopic::retain = false;
+    const std::unordered_set<uint8_t> StatusErrorTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> StatusErrorTopic::publishRoles = {<publishRoles>};
+    const bool StatusErrorTopic::retained = <retained>;
 
     TopicString StatusErrorTopic::get(const std::string& device_id) {
         std::string str(topic);

@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string ActionSessionConfigGetTopic::topic = "fenice-evo/<device_id>/action/session_config/get";
     const uint8_t ActionSessionConfigGetTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::roles = {1, 2, 3, 4};
-    const bool ActionSessionConfigGetTopic::retain = false;
+    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::publishRoles = {<publishRoles>};
+    const bool ActionSessionConfigGetTopic::retained = <retained>;
 
     TopicString ActionSessionConfigGetTopic::get(const std::string& device_id) {
         std::string str(topic);

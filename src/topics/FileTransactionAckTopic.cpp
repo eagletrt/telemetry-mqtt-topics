@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string FileTransactionAckTopic::topic = "fenice-evo/<device_id>/file_transaction/ack";
     const uint8_t FileTransactionAckTopic::qos = 0;
-    const std::unordered_set<uint8_t> FileTransactionAckTopic::roles = {1, 2, 3, 4};
-    const bool FileTransactionAckTopic::retain = false;
+    const std::unordered_set<uint8_t> FileTransactionAckTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> FileTransactionAckTopic::publishRoles = {<publishRoles>};
+    const bool FileTransactionAckTopic::retained = <retained>;
 
     TopicString FileTransactionAckTopic::get(const std::string& device_id) {
         std::string str(topic);

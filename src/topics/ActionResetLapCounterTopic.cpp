@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string ActionResetLapCounterTopic::topic = "fenice-evo/<device_id>/action/reset_lapcounter";
     const uint8_t ActionResetLapCounterTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::roles = {1, 2, 3, 4};
-    const bool ActionResetLapCounterTopic::retain = false;
+    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> ActionResetLapCounterTopic::publishRoles = {<publishRoles>};
+    const bool ActionResetLapCounterTopic::retained = <retained>;
 
     TopicString ActionResetLapCounterTopic::get(const std::string& device_id) {
         std::string str(topic);

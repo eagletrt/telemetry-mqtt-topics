@@ -3,8 +3,9 @@
 namespace MQTTTopics {
     const std::string DataPrimaryTopic::topic = "fenice-evo/<device_id>/data/primary";
     const uint8_t DataPrimaryTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataPrimaryTopic::roles = {1, 2, 3, 4};
-    const bool DataPrimaryTopic::retain = false;
+    const std::unordered_set<uint8_t> DataPrimaryTopic::subscribeRoles = {<subscribeRoles>};
+    const std::unordered_set<uint8_t> DataPrimaryTopic::publishRoles = {<publishRoles>};
+    const bool DataPrimaryTopic::retained = <retained>;
 
     TopicString DataPrimaryTopic::get(const std::string& device_id) {
         std::string str(topic);
