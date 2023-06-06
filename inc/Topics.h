@@ -38,6 +38,7 @@
 #include "ActionConfigFileContentTopic.h"
 #include "ActionKillTelemetryTopic.h"
 #include "ActionStartTelemetryTopic.h"
+#include "ActionResetTelemetryTopic.h"
 #include "ActionStopTelemetryTopic.h"
 #include "ActionRawTopic.h"
 #include "ActionResetLapCounterTopic.h"
@@ -81,6 +82,7 @@ namespace MQTTTopics {
 	class ActionConfigFileContentTopic;
 	class ActionKillTelemetryTopic;
 	class ActionStartTelemetryTopic;
+	class ActionResetTelemetryTopic;
 	class ActionStopTelemetryTopic;
 	class ActionRawTopic;
 	class ActionResetLapCounterTopic;

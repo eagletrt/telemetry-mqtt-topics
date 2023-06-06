@@ -333,6 +333,15 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
+## ActionResetTelemetryTopic
+### fenice-evo/<device_id>/action/reset
+> Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system
+- **Quality of Service**: 0
+- **Role**: 0 2 3 
+- **Retain**: No
+- **Variables**:
+  - device_id -> The device ID (default: telemetry)
+
 ## ActionStopTelemetryTopic
 ### fenice-evo/<device_id>/action/stop
 > Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system

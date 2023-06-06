@@ -776,6 +776,26 @@
         ]
     },
     {
+        "topic": "fenice-evo/<device_id>/action/reset",
+        "alias": "ActionResetTelemetryTopic",
+        "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system",
+        "qos": 0,
+        "role": [
+            0,
+            2,
+            3
+        ],
+        "retain": false,
+        "deprecated": false,
+        "variables": [
+            {
+                "name": "device_id",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "fenice-evo/<device_id>/action/stop",
         "alias": "ActionStopTelemetryTopic",
         "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
