@@ -203,6 +203,10 @@
                         "alias": "ActionStartTelemetryTopic",
                         "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system"
                     },
+                    "reset": {
+                        "alias": "ActionResetTelemetryTopic",
+                        "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system"
+                    },
                     "stop": {
                         "alias": "ActionStopTelemetryTopic",
                         "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system"
