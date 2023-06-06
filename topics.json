@@ -160,8 +160,8 @@
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/status/status",
-        "alias": "StatusStatusTopic",
+        "topic": "fenice-evo/<device_id>/status/info",
+        "alias": "StatusInfoTopic",
         "description": "Status info topic, it contains the status of the running telemetry system",
         "qos": 0,
         "role": [

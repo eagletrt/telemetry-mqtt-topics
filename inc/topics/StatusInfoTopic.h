@@ -1,5 +1,5 @@
-#ifndef STATUS_STATUS_TOPIC_H
-#define STATUS_STATUS_TOPIC_H
+#ifndef STATUS_INFO_TOPIC_H
+#define STATUS_INFO_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -11,13 +11,13 @@
 namespace MQTTTopics {
 
     // Status info topic, it contains the status of the running telemetry system
-    class StatusStatusTopic
+    class StatusInfoTopic
     {
     public:
-        StatusStatusTopic() = delete;
-        StatusStatusTopic(const StatusStatusTopic &) = delete;
-        StatusStatusTopic &operator=(const StatusStatusTopic &) = delete;
-        ~StatusStatusTopic() = delete;
+        StatusInfoTopic() = delete;
+        StatusInfoTopic(const StatusInfoTopic &) = delete;
+        StatusInfoTopic &operator=(const StatusInfoTopic &) = delete;
+        ~StatusInfoTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

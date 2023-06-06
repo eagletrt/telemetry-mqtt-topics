@@ -8,7 +8,7 @@
 #include "DataInverterTopic.h"
 #include "DataGpsTopic.h"
 #include "StatusTopic.h"
-#include "StatusStatusTopic.h"
+#include "StatusInfoTopic.h"
 #include "StatusErrorTopic.h"
 #include "StatusCanFrequenciesTopic.h"
 #include "CommandTopic.h"
@@ -51,7 +51,7 @@ namespace MQTTTopics {
 	class DataInverterTopic;
 	class DataGpsTopic;
 	class StatusTopic;
-	class StatusStatusTopic;
+	class StatusInfoTopic;
 	class StatusErrorTopic;
 	class StatusCanFrequenciesTopic;
 	class CommandTopic;

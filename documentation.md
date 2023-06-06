@@ -63,8 +63,8 @@
 - **Variables**:
   - device_id -> The device ID (default: telemetry)
 
-## StatusStatusTopic
-### fenice-evo/<device_id>/status/status
+## StatusInfoTopic
+### fenice-evo/<device_id>/status/info
 > Status info topic, it contains the status of the running telemetry system
 - **Quality of Service**: 0
 - **Role**: 0 2 3 
