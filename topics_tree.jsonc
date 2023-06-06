@@ -83,7 +83,7 @@
                 "alias": "CommandTopic",
                 "description": "Command topic, it contains all the commands for the telemetry system",
                 "sub_topics": {
-                    "command": {
+                    "send": {
                         "alias": "CommandSendTopic",
                         "description": "Command send topic, it contains the command to run on the telemetry system"
                     },
@@ -129,24 +129,6 @@
                 "alias": "ActionTopic",
                 "description": "Action topic, it contains all the actions to send to the telemetry system",
                 "sub_topics": {
-                    "session_config": {
-                        "alias": "ActionSessionConfigTopic",
-                        "description": "Action session config topic, it contains the session config actions",
-                        "sub_topics": {
-                            "set": {
-                                "alias": "ActionSessionConfigSetTopic",
-                                "description": "Action session config set topic, it sets the session config file"
-                            },
-                            "get": {
-                                "alias": "ActionSessionConfigGetTopic",
-                                "description": "Action session config get action topic, it requests the session config file"
-                            },
-                            "content": {
-                                "alias": "ActionSessionConfigContentTopic",
-                                "description": "Action session config content topic, it contains the session config file content"
-                            }
-                        }
-                    },
                     "telemetry_config": {
                         "alias": "ActionTelemetryConfigTopic",
                         "description": "Action telemetry config topic, it contains the telemetry config actions",
@@ -165,35 +147,53 @@
                             }
                         }
                     },
-                    "car_setup": {
-                        "alias": "ActionCarSetupTopic",
-                        "description": "Car setup action topic, it contains the car setup actions",
+                    "session_config": {
+                        "alias": "ActionSessionConfigTopic",
+                        "description": "Action session config topic, it contains the session config actions",
                         "sub_topics": {
                             "set": {
-                                "alias": "ActionCarSetupSetTopic",
-                                "description": "Action car setup set topic, it sets the car setup file"
+                                "alias": "ActionSessionConfigSetTopic",
+                                "description": "Action session config set topic, it sets the session config file"
                             },
                             "get": {
-                                "alias": "ActionCarSetupGetTopic",
-                                "description": "Action car setup get action topic, it requests the car setup file"
+                                "alias": "ActionSessionConfigGetTopic",
+                                "description": "Action session config get topic, it requests the session config file"
                             },
                             "content": {
-                                "alias": "ActionCarSetupContentTopic",
-                                "description": "Action car setup content action topic, it contains the car setup file content"
+                                "alias": "ActionSessionConfigContentTopic",
+                                "description": "Action session config content topic, it contains the session config file content"
+                            }
+                        }
+                    },
+                    "car_config": {
+                        "alias": "ActionCarConfigTopic",
+                        "description": "Action car config topic, it contains the car config actions",
+                        "sub_topics": {
+                            "set": {
+                                "alias": "ActionCarConfigSetTopic",
+                                "description": "Action car config set topic, it sets the car config file"
+                            },
+                            "get": {
+                                "alias": "ActionCarConfigGetTopic",
+                                "description": "Action car config get topic, it requests the car config file"
+                            },
+                            "content": {
+                                "alias": "ActionCarConfigContentTopic",
+                                "description": "Action car config content topic, it contains the car config file content"
                             }
                         }
                     },
                     "+/set": {
-                        "alias": "ActionConfigFilesSetterTopic",
-                        "description": "Action config gile set topic, it gets all requests of config files to set"
+                        "alias": "ActionConfigsSetTopic",
+                        "description": "Action configs set topic, it gets all requests of config files to set"
                     },
                     "+/get": {
-                        "alias": "ActionConfigFilesGetterTopic",
-                        "description": "Action config file get topic, it gets all requests of config files to get"
+                        "alias": "ActionConfigsGetTopic",
+                        "description": "Action configs get topic, it gets all requests of config files to get"
                     },
                     "+/content": {
-                        "alias": "ActionConfigFilesContentTopic",
-                        "description": "Action config file content topic, it gets all requests of config files content"
+                        "alias": "ActionConfigsContentTopic",
+                        "description": "Action configs content topic, it gets all requests of config files content"
                     },
                     "kill": {
                         "alias": "ActionKillTelemetryTopic",
@@ -215,7 +215,7 @@
                         "alias": "ActionRawTopic",
                         "description": "Action raw topic, it contains custom commands to send to the telemetry system"
                     },
-                    "lapcounter_reset": {
+                    "reset_lapcounter": {
                         "alias": "ActionResetLapCounterTopic",
                         "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter"
                     }
