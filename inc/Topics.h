@@ -7,6 +7,7 @@
 #include "DataSecondaryTopic.h"
 #include "DataInverterTopic.h"
 #include "DataGpsTopic.h"
+#include "DataBrusaTopic.h"
 #include "StatusTopic.h"
 #include "StatusInfoTopic.h"
 #include "StatusErrorTopic.h"
@@ -51,6 +52,7 @@ namespace MQTTTopics {
 	class DataSecondaryTopic;
 	class DataInverterTopic;
 	class DataGpsTopic;
+	class DataBrusaTopic;
 	class StatusTopic;
 	class StatusInfoTopic;
 	class StatusErrorTopic;

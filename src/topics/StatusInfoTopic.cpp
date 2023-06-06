@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string StatusInfoTopic::topic = "fenice-evo/<device_id>/status/info";
     const uint8_t StatusInfoTopic::qos = 0;
-    const std::unordered_set<uint8_t> StatusInfoTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> StatusInfoTopic::roles = {1, 2, 3, 4};
     const bool StatusInfoTopic::retain = false;
 
     TopicString StatusInfoTopic::get(const std::string& device_id) {
@@ -18,11 +18,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool StatusInfoTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool StatusInfoTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool StatusInfoTopic::retained() {
-        return retain;
+    bool StatusInfoTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool StatusInfoTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics

@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string DataInverterTopic::topic = "fenice-evo/<device_id>/data/inverter";
     const uint8_t DataInverterTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataInverterTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> DataInverterTopic::roles = {1, 2, 3, 4};
     const bool DataInverterTopic::retain = false;
 
     TopicString DataInverterTopic::get(const std::string& device_id) {
@@ -18,11 +18,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool DataInverterTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool DataInverterTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool DataInverterTopic::retained() {
-        return retain;
+    bool DataInverterTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool DataInverterTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics

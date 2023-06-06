@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string DataGpsTopic::topic = "fenice-evo/<device_id>/data/gps";
     const uint8_t DataGpsTopic::qos = 0;
-    const std::unordered_set<uint8_t> DataGpsTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> DataGpsTopic::roles = {1, 2, 3, 4};
     const bool DataGpsTopic::retain = false;
 
     TopicString DataGpsTopic::get(const std::string& device_id) {
@@ -18,11 +18,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool DataGpsTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool DataGpsTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool DataGpsTopic::retained() {
-        return retain;
+    bool DataGpsTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool DataGpsTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics

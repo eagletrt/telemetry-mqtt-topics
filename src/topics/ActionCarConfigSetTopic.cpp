@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string ActionCarConfigSetTopic::topic = "fenice-evo/<device_id>/action/car_config/set";
     const uint8_t ActionCarConfigSetTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionCarConfigSetTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> ActionCarConfigSetTopic::roles = {1, 2, 3, 4};
     const bool ActionCarConfigSetTopic::retain = false;
 
     TopicString ActionCarConfigSetTopic::get(const std::string& device_id) {
@@ -18,11 +18,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool ActionCarConfigSetTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool ActionCarConfigSetTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool ActionCarConfigSetTopic::retained() {
-        return retain;
+    bool ActionCarConfigSetTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool ActionCarConfigSetTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics

@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string ActionTelemetryConfigTopic::topic = "fenice-evo/<device_id>/action/telemetry_config";
     const uint8_t ActionTelemetryConfigTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionTelemetryConfigTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> ActionTelemetryConfigTopic::roles = {1, 2, 3, 4};
     const bool ActionTelemetryConfigTopic::retain = false;
 
     TopicString ActionTelemetryConfigTopic::get(const std::string& device_id) {
@@ -18,11 +18,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool ActionTelemetryConfigTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool ActionTelemetryConfigTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool ActionTelemetryConfigTopic::retained() {
-        return retain;
+    bool ActionTelemetryConfigTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool ActionTelemetryConfigTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics

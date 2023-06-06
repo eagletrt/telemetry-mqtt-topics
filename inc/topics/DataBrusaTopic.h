@@ -1,5 +1,5 @@
-#ifndef ACTION_CAR_CONFIG_CONTENT_TOPIC_H
-#define ACTION_CAR_CONFIG_CONTENT_TOPIC_H
+#ifndef DATA_BRUSA_TOPIC_H
+#define DATA_BRUSA_TOPIC_H
 
 #include "TopicString.h"
 #include "Topics.h"
@@ -10,14 +10,14 @@
 
 namespace MQTTTopics {
 
-    // Action car config content topic, it contains the car config file content
-    class ActionCarConfigContentTopic
+    // Data brusa topic, it contains all the data from the Brusa CAN bus
+    class DataBrusaTopic
     {
     public:
-        ActionCarConfigContentTopic() = delete;
-        ActionCarConfigContentTopic(const ActionCarConfigContentTopic &) = delete;
-        ActionCarConfigContentTopic &operator=(const ActionCarConfigContentTopic &) = delete;
-        ~ActionCarConfigContentTopic() = delete;
+        DataBrusaTopic() = delete;
+        DataBrusaTopic(const DataBrusaTopic &) = delete;
+        DataBrusaTopic &operator=(const DataBrusaTopic &) = delete;
+        ~DataBrusaTopic() = delete;
 
     public:
         static TopicString get(const std::string& device_id = "telemetry");

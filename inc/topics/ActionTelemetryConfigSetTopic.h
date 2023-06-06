@@ -22,14 +22,16 @@ namespace MQTTTopics {
     public:
         static TopicString get(const std::string& device_id = "telemetry");
         static int qualityOfService();
-        static bool hasPermission(unsigned int role);
-        static bool retained();
+        static bool canSubscribe(unsigned int role);
+        static bool canPublish(unsigned int role);
+        static bool isRetained();
 
     private:
         static const std::string topic;
         static const uint8_t qos;
-        static const std::unordered_set<uint8_t> roles;
-        static const bool retain;
+        static const std::unordered_set<uint8_t> subscribeRoles;
+        static const std::unordered_set<uint8_t> publishRoles;
+        static const bool retained;
     };
 }// namespace MQTTTopics
 

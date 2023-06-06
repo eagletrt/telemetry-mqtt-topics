@@ -5,9 +5,10 @@
         "description": "FeniceEvo topic for the device",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -25,9 +26,10 @@
         "description": "Can data topic, it contains all the data from all the CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -45,9 +47,10 @@
         "description": "Data primary topic, it contains all the data from the primary CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -65,9 +68,10 @@
         "description": "Data secondary topic, it contains all the data from the secondary CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -85,9 +89,10 @@
         "description": "Data inverter topic, it contains all the data from the inverter CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -105,9 +110,10 @@
         "description": "Data GPS topic, it contains all the data from the GPS CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -125,12 +131,13 @@
         "description": "Data brusa topic, it contains all the data from the Brusa CAN bus",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
-        "deprecated": true,
+        "deprecated": false,
         "variables": [
             {
                 "name": "device_id",
@@ -145,9 +152,10 @@
         "description": "Status topic, it contains all the status of the running telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -165,9 +173,10 @@
         "description": "Status info topic, it contains the status of the running telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -185,9 +194,10 @@
         "description": "Status error topic, it contains the errors of the running telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -205,9 +215,10 @@
         "description": "Status CAN frequencies topic, it contains the frequencies of the CAN buses messages",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -225,9 +236,10 @@
         "description": "Command topic, it contains all the commands for the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -245,9 +257,10 @@
         "description": "Command send topic, it contains the command to run on the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -265,9 +278,10 @@
         "description": "Command result topic, it contains the result of the command ran on the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -285,9 +299,10 @@
         "description": "File transaction ask topic, it contains the request for a file transaction",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -305,9 +320,10 @@
         "description": "File transaction ack topic, it contains the ack for a file transaction",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -325,9 +341,10 @@
         "description": "File transaction topic, it contains the file transaction data",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -349,9 +366,10 @@
         "description": "File transaction begin topic, it contains the begin of a file transaction",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -373,9 +391,10 @@
         "description": "File transaction end topic, it contains the end of a file transaction",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -397,9 +416,10 @@
         "description": "File transaction chunk topic, it contains a chunk of a file transaction",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -421,9 +441,10 @@
         "description": "Action topic, it contains all the actions to send to the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -441,9 +462,10 @@
         "description": "Action telemetry config topic, it contains the telemetry config actions",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -461,9 +483,10 @@
         "description": "Action telemetry config set topic, it sets the telemetry config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -481,9 +504,10 @@
         "description": "Action telemetry config get topic, it requests the telemetry config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -501,9 +525,10 @@
         "description": "Action telemetry config content topic, it contains the telemetry config file content",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -521,9 +546,10 @@
         "description": "Action session config topic, it contains the session config actions",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -541,9 +567,10 @@
         "description": "Action session config set topic, it sets the session config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -561,9 +588,10 @@
         "description": "Action session config get topic, it requests the session config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -581,9 +609,10 @@
         "description": "Action session config content topic, it contains the session config file content",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -601,9 +630,10 @@
         "description": "Action car config topic, it contains the car config actions",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -621,9 +651,10 @@
         "description": "Action car config set topic, it sets the car config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -641,9 +672,10 @@
         "description": "Action car config get topic, it requests the car config file",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -661,9 +693,10 @@
         "description": "Action car config content topic, it contains the car config file content",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -681,9 +714,10 @@
         "description": "Action configs set topic, it gets all requests of config files to set",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -701,9 +735,10 @@
         "description": "Action configs get topic, it gets all requests of config files to get",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -721,9 +756,10 @@
         "description": "Action configs content topic, it gets all requests of config files content",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -741,9 +777,10 @@
         "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -761,9 +798,10 @@
         "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -781,9 +819,10 @@
         "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -801,9 +840,10 @@
         "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -821,9 +861,10 @@
         "description": "Action raw topic, it contains custom commands to send to the telemetry system",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,
@@ -841,9 +882,10 @@
         "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter",
         "qos": 0,
         "role": [
-            0,
+            1,
             2,
-            3
+            3,
+            4
         ],
         "retain": false,
         "deprecated": false,

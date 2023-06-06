@@ -3,7 +3,7 @@
 namespace MQTTTopics {
     const std::string FileTransactionTopic::topic = "fenice-evo/<device_id>/file_transaction/<transaction_id>";
     const uint8_t FileTransactionTopic::qos = 0;
-    const std::unordered_set<uint8_t> FileTransactionTopic::roles = {0, 2, 3};
+    const std::unordered_set<uint8_t> FileTransactionTopic::roles = {1, 2, 3, 4};
     const bool FileTransactionTopic::retain = false;
 
     TopicString FileTransactionTopic::get(const std::string& transaction_id, const std::string& device_id) {
@@ -19,11 +19,15 @@ namespace MQTTTopics {
         return static_cast<int>(qos);
     }
 
-    bool FileTransactionTopic::hasPermission(unsigned int role) {
-        return (roles.find(role) != roles.cend());
+     bool FileTransactionTopic::canSubscribe(unsigned int role) {
+        return (subscribeRoles.find(role) != subscribeRoles.cend());
     }
 
-    bool FileTransactionTopic::retained() {
-        return retain;
+    bool FileTransactionTopic::canPublish(unsigned int role) {
+        return (publishRoles.find(role) != publishRoles.cend());
+    }
+
+    bool FileTransactionTopic::isRetained() {
+        return retained;
     }
 }// namespace MQTTTopics
