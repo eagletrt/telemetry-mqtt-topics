@@ -56,7 +56,9 @@ def generate_cpp(topic):
 
     # replace get function parameters
     parameters = ""
-    for variable in topic["variables"]:
+    for variable in filter(lambda x: "default" not in x, topic["variables"]):
+        parameters += f"const std::string& {variable['name']}, "
+    for variable in filter(lambda x: "default" in x, topic["variables"]):
         parameters += f"const std::string& {variable['name']}, "
     if parameters != "":
         parameters = parameters[:-2]
