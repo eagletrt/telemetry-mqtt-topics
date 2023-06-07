@@ -7,7 +7,6 @@ class TopicString
 {
     friend TopicString operator/(const TopicString &lhs, const TopicString &rhs);
     friend TopicString operator/(const TopicString &lhs, const std::string &rhs);
-    friend TopicString operator/(const TopicString &lhs, char rhs);
 
 public:
     TopicString() = delete;
@@ -26,6 +25,5 @@ private:
 
 TopicString operator/(const TopicString &lhs, const TopicString &rhs);
 TopicString operator/(const TopicString &lhs, const std::string &rhs);
-TopicString operator/(const TopicString &lhs, char rhs);
 
 #endif

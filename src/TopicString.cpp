@@ -9,7 +9,3 @@ TopicString operator/(const TopicString &lhs, const TopicString &rhs) {
 TopicString operator/(const TopicString &lhs, const std::string &rhs) {
     return (lhs.topic + '/' + rhs);
 }
-
-TopicString operator/(const TopicString &lhs, char rhs) {
-    return (lhs.topic + '/' + rhs);
-}
