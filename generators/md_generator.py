@@ -6,12 +6,13 @@ def generate(topics_list, filename):
             file.write(f"### {topic['topic']}\n")
             file.write(f"> {topic['description']}\n")
             file.write(f"- **Quality of Service**: {topic['qos']}\n")
-            file.write(f"- **Role**: ")
+            file.write(f"- **Subscribe Roles**: ")
             for subRole in topic["subscribeRoles"]:
                 file.write(f"{subRole} ")
+            file.write(f"- **Publish Roles**: ")
             for pubRole in topic["publishRoles"]:
                 file.write(f"{pubRole} ")
-            file.write("\n- **Retain**: ")
+            file.write("\n- **Retained**: ")
             file.write("Yes" if topic["retained"] else "No")
             file.write("\n- **Variables**:\n")
             for variable in topic["variables"]:
