@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system
     class ActionStopTelemetryTopic
     {

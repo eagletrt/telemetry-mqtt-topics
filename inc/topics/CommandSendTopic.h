@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Command send topic, it contains the command to run on the telemetry system
     class CommandSendTopic
     {

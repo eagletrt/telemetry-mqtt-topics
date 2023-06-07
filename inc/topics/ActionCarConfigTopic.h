@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action car config topic, it contains the car config actions
     class ActionCarConfigTopic
     {

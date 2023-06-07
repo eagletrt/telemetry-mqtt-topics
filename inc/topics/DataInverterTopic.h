@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Data inverter topic, it contains all the data from the inverter CAN bus
     class DataInverterTopic
     {

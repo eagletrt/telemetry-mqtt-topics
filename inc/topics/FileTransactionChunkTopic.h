@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // File transaction chunk topic, it contains a chunk of a file transaction
     class FileTransactionChunkTopic
     {

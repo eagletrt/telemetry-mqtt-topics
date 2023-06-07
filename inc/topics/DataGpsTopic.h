@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Data GPS topic, it contains all the data from the GPS CAN bus
     class DataGpsTopic
     {

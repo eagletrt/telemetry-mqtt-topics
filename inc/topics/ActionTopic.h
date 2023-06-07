@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action topic, it contains all the actions to send to the telemetry system
     class ActionTopic
     {

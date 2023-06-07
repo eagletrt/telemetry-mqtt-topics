@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // File transaction begin topic, it contains the begin of a file transaction
     class FileTransactionBeginTopic
     {

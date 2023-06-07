@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Command result topic, it contains the result of the command ran on the telemetry system
     class CommandResultTopic
     {

@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Status error topic, it contains the errors of the running telemetry system
     class StatusErrorTopic
     {

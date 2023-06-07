@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // File transaction ack topic, it contains the ack for a file transaction
     class FileTransactionAckTopic
     {

@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action raw topic, it contains custom commands to send to the telemetry system
     class ActionRawTopic
     {

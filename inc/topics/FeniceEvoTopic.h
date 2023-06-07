@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // FeniceEvo topic for the device
     class FeniceEvoTopic
     {

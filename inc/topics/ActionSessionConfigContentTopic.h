@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action session config content topic, it contains the session config file content
     class ActionSessionConfigContentTopic
     {

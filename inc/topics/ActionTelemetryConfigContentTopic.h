@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action telemetry config content topic, it contains the telemetry config file content
     class ActionTelemetryConfigContentTopic
     {

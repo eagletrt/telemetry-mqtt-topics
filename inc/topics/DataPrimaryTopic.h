@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Data primary topic, it contains all the data from the primary CAN bus
     class DataPrimaryTopic
     {

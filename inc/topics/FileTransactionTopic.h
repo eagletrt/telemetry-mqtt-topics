@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // File transaction topic, it contains the file transaction data
     class FileTransactionTopic
     {

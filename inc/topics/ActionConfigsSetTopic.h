@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action configs set topic, it gets all requests of config files to set
     class ActionConfigsSetTopic
     {

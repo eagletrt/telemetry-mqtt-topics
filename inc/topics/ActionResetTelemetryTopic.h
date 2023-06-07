@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system
     class ActionResetTelemetryTopic
     {

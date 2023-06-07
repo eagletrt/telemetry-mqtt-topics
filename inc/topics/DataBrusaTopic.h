@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Data brusa topic, it contains all the data from the Brusa CAN bus
     class DataBrusaTopic
     {

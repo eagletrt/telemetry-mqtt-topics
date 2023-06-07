@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Status CAN frequencies topic, it contains the frequencies of the CAN buses messages
     class StatusCanFrequenciesTopic
     {

@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // File transaction end topic, it contains the end of a file transaction
     class FileTransactionEndTopic
     {

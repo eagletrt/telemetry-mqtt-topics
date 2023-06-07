@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action kill telemetry topic, it contains the kill action for shutting down the telemetry system
     class ActionKillTelemetryTopic
     {

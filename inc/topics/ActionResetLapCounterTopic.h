@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter
     class ActionResetLapCounterTopic
     {

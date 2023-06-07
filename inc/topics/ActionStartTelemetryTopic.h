@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system
     class ActionStartTelemetryTopic
     {

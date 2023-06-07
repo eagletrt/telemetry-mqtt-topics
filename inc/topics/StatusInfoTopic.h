@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 namespace MQTTTopics {
-
     // Status info topic, it contains the status of the running telemetry system
     class StatusInfoTopic
     {
