@@ -1,33 +1,18 @@
 #include "ActionCarConfigTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionCarConfigTopic::topic = "fenice-evo/<device_id>/action/car_config";
+    const std::string ActionCarConfigTopic::topic = "<vehicle_id>/<device_id>/action/car_config";
     const uint8_t ActionCarConfigTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionCarConfigTopic::subscribeRoles = {0, 1, 2, 3};
-    const std::unordered_set<uint8_t> ActionCarConfigTopic::publishRoles = {0, 1, 2, 3};
+    const std::unordered_set<uint8_t> ActionCarConfigTopic::subscribeRoles = {0, 1, 2, 3, 4, 128, 129};
+    const std::unordered_set<uint8_t> ActionCarConfigTopic::publishRoles = {0, 1, 2, 3, 4, 128, 129};
     const bool ActionCarConfigTopic::retained = false;
 
-    TopicString ActionCarConfigTopic::get(const std::string& device_id) {
+    TopicString ActionCarConfigTopic::get(const std::string& vehicleId, const std::string& deviceId) {
         std::string str(topic);
 
-		str.replace(str.find("<device_id>"), 11, device_id);
+		str.replace(str.find("<vehicleId>"), 11, vehicleId);
+		str.replace(str.find("<deviceId>"), 10, deviceId);
 
         return str;
-    }
-
-    int ActionCarConfigTopic::qualityOfService() {
-        return static_cast<int>(qos);
-    }
-
-     bool ActionCarConfigTopic::canSubscribe(unsigned int role) {
-        return (subscribeRoles.find(role) != subscribeRoles.cend());
-    }
-
-    bool ActionCarConfigTopic::canPublish(unsigned int role) {
-        return (publishRoles.find(role) != publishRoles.cend());
-    }
-
-    bool ActionCarConfigTopic::isRetained() {
-        return retained;
     }
 }// namespace MQTTTopics

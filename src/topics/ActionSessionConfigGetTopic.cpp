@@ -1,33 +1,18 @@
 #include "ActionSessionConfigGetTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionSessionConfigGetTopic::topic = "fenice-evo/<device_id>/action/session_config/get";
+    const std::string ActionSessionConfigGetTopic::topic = "<vehicle_id>/<device_id>/action/session_config/get";
     const uint8_t ActionSessionConfigGetTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::subscribeRoles = {1};
-    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::publishRoles = {0, 2};
+    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::subscribeRoles = {0, 1, 2, 3, 4, 128, 129};
+    const std::unordered_set<uint8_t> ActionSessionConfigGetTopic::publishRoles = {0, 1, 2, 3, 4, 128, 129};
     const bool ActionSessionConfigGetTopic::retained = false;
 
-    TopicString ActionSessionConfigGetTopic::get(const std::string& device_id) {
+    TopicString ActionSessionConfigGetTopic::get(const std::string& vehicleId, const std::string& deviceId) {
         std::string str(topic);
 
-		str.replace(str.find("<device_id>"), 11, device_id);
+		str.replace(str.find("<vehicleId>"), 11, vehicleId);
+		str.replace(str.find("<deviceId>"), 10, deviceId);
 
         return str;
-    }
-
-    int ActionSessionConfigGetTopic::qualityOfService() {
-        return static_cast<int>(qos);
-    }
-
-     bool ActionSessionConfigGetTopic::canSubscribe(unsigned int role) {
-        return (subscribeRoles.find(role) != subscribeRoles.cend());
-    }
-
-    bool ActionSessionConfigGetTopic::canPublish(unsigned int role) {
-        return (publishRoles.find(role) != publishRoles.cend());
-    }
-
-    bool ActionSessionConfigGetTopic::isRetained() {
-        return retained;
     }
 }// namespace MQTTTopics

@@ -1,7 +1,8 @@
 #ifndef TOPICS_H
 #define TOPICS_H
 
-#include "FeniceEvoTopic.h"
+#include "VehicleIdTopic.h"
+#include "VehicleIdDeviceIdTopic.h"
 #include "DataTopic.h"
 #include "DataPrimaryTopic.h"
 #include "DataSecondaryTopic.h"
@@ -37,16 +38,17 @@
 #include "ActionConfigsSetTopic.h"
 #include "ActionConfigsGetTopic.h"
 #include "ActionConfigsContentTopic.h"
-#include "ActionKillTelemetryTopic.h"
-#include "ActionStartTelemetryTopic.h"
-#include "ActionResetTelemetryTopic.h"
-#include "ActionStopTelemetryTopic.h"
+#include "ActionKillTopic.h"
+#include "ActionStartTopic.h"
+#include "ActionResetTopic.h"
+#include "ActionStopTopic.h"
 #include "ActionRawTopic.h"
 #include "ActionResetLapCounterTopic.h"
 
 namespace MQTTTopics {
  
-	class FeniceEvoTopic;
+	class VehicleIdTopic;
+	class VehicleIdDeviceIdTopic;
 	class DataTopic;
 	class DataPrimaryTopic;
 	class DataSecondaryTopic;
@@ -82,10 +84,10 @@ namespace MQTTTopics {
 	class ActionConfigsSetTopic;
 	class ActionConfigsGetTopic;
 	class ActionConfigsContentTopic;
-	class ActionKillTelemetryTopic;
-	class ActionStartTelemetryTopic;
-	class ActionResetTelemetryTopic;
-	class ActionStopTelemetryTopic;
+	class ActionKillTopic;
+	class ActionStartTopic;
+	class ActionResetTopic;
+	class ActionStopTopic;
 	class ActionRawTopic;
 	class ActionResetLapCounterTopic;
 

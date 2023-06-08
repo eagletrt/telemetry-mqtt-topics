@@ -1,33 +1,18 @@
 #include "ActionRawTopic.h"
 
 namespace MQTTTopics {
-    const std::string ActionRawTopic::topic = "fenice-evo/<device_id>/action/raw";
+    const std::string ActionRawTopic::topic = "<vehicle_id>/<device_id>/action/raw";
     const uint8_t ActionRawTopic::qos = 0;
-    const std::unordered_set<uint8_t> ActionRawTopic::subscribeRoles = {1};
-    const std::unordered_set<uint8_t> ActionRawTopic::publishRoles = {0};
+    const std::unordered_set<uint8_t> ActionRawTopic::subscribeRoles = {0, 1, 2, 3, 4, 128, 129};
+    const std::unordered_set<uint8_t> ActionRawTopic::publishRoles = {0, 1, 2, 3, 4, 128, 129};
     const bool ActionRawTopic::retained = false;
 
-    TopicString ActionRawTopic::get(const std::string& device_id) {
+    TopicString ActionRawTopic::get(const std::string& vehicleId, const std::string& deviceId) {
         std::string str(topic);
 
-		str.replace(str.find("<device_id>"), 11, device_id);
+		str.replace(str.find("<vehicleId>"), 11, vehicleId);
+		str.replace(str.find("<deviceId>"), 10, deviceId);
 
         return str;
-    }
-
-    int ActionRawTopic::qualityOfService() {
-        return static_cast<int>(qos);
-    }
-
-     bool ActionRawTopic::canSubscribe(unsigned int role) {
-        return (subscribeRoles.find(role) != subscribeRoles.cend());
-    }
-
-    bool ActionRawTopic::canPublish(unsigned int role) {
-        return (publishRoles.find(role) != publishRoles.cend());
-    }
-
-    bool ActionRawTopic::isRetained() {
-        return retained;
     }
 }// namespace MQTTTopics

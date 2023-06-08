@@ -1,940 +1,1601 @@
 [
     {
-        "topic": "fenice-evo/<device_id>",
-        "alias": "FeniceEvoTopic",
-        "description": "FeniceEvo topic for the device",
+        "topic": "<vehicle_id>",
+        "alias": "VehicleIdTopic",
+        "description": "<vehicleId>",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicle_id>/<device_id>",
+        "alias": "VehicleIdDeviceIdTopic",
+        "description": "<vehicleId>/<deviceId>",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data",
+        "topic": "<vehicle_id>/<device_id>/data",
         "alias": "DataTopic",
-        "description": "Can data topic, it contains all the data from all the CAN bus",
+        "description": "<vehicleId>/<deviceId>/data",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data/primary",
+        "topic": "<vehicle_id>/<device_id>/data/primary",
         "alias": "DataPrimaryTopic",
-        "description": "Data primary topic, it contains all the data from the primary CAN bus",
+        "description": "<vehicleId>/<deviceId>/data/primary",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data/secondary",
+        "topic": "<vehicle_id>/<device_id>/data/secondary",
         "alias": "DataSecondaryTopic",
-        "description": "Data secondary topic, it contains all the data from the secondary CAN bus",
+        "description": "<vehicleId>/<deviceId>/data/secondary",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data/inverter",
+        "topic": "<vehicle_id>/<device_id>/data/inverter",
         "alias": "DataInverterTopic",
-        "description": "Data inverter topic, it contains all the data from the inverter CAN bus",
+        "description": "<vehicleId>/<deviceId>/inverter",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data/gps",
+        "topic": "<vehicle_id>/<device_id>/data/gps",
         "alias": "DataGpsTopic",
-        "description": "Data GPS topic, it contains all the data from the GPS CAN bus",
+        "description": "<vehicleId>/<deviceId>/data/gps",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/data/brusa",
+        "topic": "<vehicle_id>/<device_id>/data/brusa",
         "alias": "DataBrusaTopic",
-        "description": "Data brusa topic, it contains all the data from the Brusa CAN bus",
+        "description": "<vehicleId>/<deviceId>/data/brusa",
         "qos": 0,
         "subscribeRoles": [
             0,
+            1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/status",
+        "topic": "<vehicle_id>/<device_id>/status",
         "alias": "StatusTopic",
-        "description": "Status topic, it contains all the status of the running telemetry system",
+        "description": "<vehicleId>/<deviceId>/status",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": true,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/status/info",
+        "topic": "<vehicle_id>/<device_id>/status/info",
         "alias": "StatusInfoTopic",
-        "description": "Status info topic, it contains the status of the running telemetry system",
+        "description": "<vehicleId>/<deviceId>/status/info",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": true,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/status/error",
+        "topic": "<vehicle_id>/<device_id>/status/error",
         "alias": "StatusErrorTopic",
-        "description": "Status error topic, it contains the errors of the running telemetry system",
+        "description": "<vehicleId>/<deviceId>/status/error",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": true,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/status/can_frequencies",
+        "topic": "<vehicle_id>/<device_id>/status/can_frequencies",
         "alias": "StatusCanFrequenciesTopic",
-        "description": "Status CAN frequencies topic, it contains the frequencies of the CAN buses messages",
+        "description": "<vehicleId>/<deviceId>/status/canFrequencies",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            1
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": true,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/command",
+        "topic": "<vehicle_id>/<device_id>/command",
         "alias": "CommandTopic",
-        "description": "Command topic, it contains all the commands for the telemetry system",
+        "description": "<vehicleId>/<deviceId>/command",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/command/send",
+        "topic": "<vehicle_id>/<device_id>/command/send",
         "alias": "CommandSendTopic",
-        "description": "Command send topic, it contains the command to run on the telemetry system",
+        "description": "<vehicleId>/<deviceId>/command/send",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/command/result",
+        "topic": "<vehicle_id>/<device_id>/command/result",
         "alias": "CommandResultTopic",
-        "description": "Command result topic, it contains the result of the command ran on the telemetry system",
+        "description": "<vehicleId>/<deviceId>/command/result",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/ask",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/ask",
         "alias": "FileTransactionAskTopic",
-        "description": "File transaction ask topic, it contains the request for a file transaction",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/ack",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/ack",
         "alias": "FileTransactionAckTopic",
-        "description": "File transaction ack topic, it contains the ack for a file transaction",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>",
         "alias": "FileTransactionTopic",
-        "description": "File transaction topic, it contains the file transaction data",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             },
             {
-                "name": "transaction_id",
+                "name": "transactionId",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/begin",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/begin",
         "alias": "FileTransactionBeginTopic",
-        "description": "File transaction begin topic, it contains the begin of a file transaction",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             },
             {
-                "name": "transaction_id",
+                "name": "transactionId",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/end",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/end",
         "alias": "FileTransactionEndTopic",
-        "description": "File transaction end topic, it contains the end of a file transaction",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             },
             {
-                "name": "transaction_id",
+                "name": "transactionId",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/file_transaction/<transaction_id>/chunk",
+        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/chunk",
         "alias": "FileTransactionChunkTopic",
-        "description": "File transaction chunk topic, it contains a chunk of a file transaction",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             },
             {
-                "name": "transaction_id",
+                "name": "transactionId",
                 "description": "The transaction ID"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action",
+        "topic": "<vehicle_id>/<device_id>/action",
         "alias": "ActionTopic",
-        "description": "Action topic, it contains all the actions to send to the telemetry system",
+        "description": "<vehicleId>/<deviceId>/action",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/telemetry_config",
+        "topic": "<vehicle_id>/<device_id>/action/telemetry_config",
         "alias": "ActionTelemetryConfigTopic",
-        "description": "Action telemetry config topic, it contains the telemetry config actions",
+        "description": "<vehicleId>/<deviceId>/action/telemetryConfig",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/telemetry_config/set",
+        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/set",
         "alias": "ActionTelemetryConfigSetTopic",
-        "description": "Action telemetry config set topic, it sets the telemetry config file",
+        "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/telemetry_config/get",
+        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/get",
         "alias": "ActionTelemetryConfigGetTopic",
-        "description": "Action telemetry config get topic, it requests the telemetry config file",
+        "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/telemetry_config/content",
+        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/content",
         "alias": "ActionTelemetryConfigContentTopic",
-        "description": "Action telemetry config content topic, it contains the telemetry config file content",
+        "description": "<vehicleId>/<deviceId>/action/telemetryConfig/content",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/session_config",
+        "topic": "<vehicle_id>/<device_id>/action/session_config",
         "alias": "ActionSessionConfigTopic",
-        "description": "Action session config topic, it contains the session config actions",
+        "description": "<vehicleId>/<deviceId>/action/sessionConfig",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/session_config/set",
+        "topic": "<vehicle_id>/<device_id>/action/session_config/set",
         "alias": "ActionSessionConfigSetTopic",
-        "description": "Action session config set topic, it sets the session config file",
+        "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/session_config/get",
+        "topic": "<vehicle_id>/<device_id>/action/session_config/get",
         "alias": "ActionSessionConfigGetTopic",
-        "description": "Action session config get topic, it requests the session config file",
+        "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/session_config/content",
+        "topic": "<vehicle_id>/<device_id>/action/session_config/content",
         "alias": "ActionSessionConfigContentTopic",
-        "description": "Action session config content topic, it contains the session config file content",
+        "description": "<vehicleId>/<deviceId>/action/sessionConfig/content",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/car_config",
+        "topic": "<vehicle_id>/<device_id>/action/car_config",
         "alias": "ActionCarConfigTopic",
-        "description": "Action car config topic, it contains the car config actions",
+        "description": "<vehicleId>/<deviceId>/action/actionCar",
         "qos": 0,
         "subscribeRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
             1,
             2,
-            3
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/car_config/set",
+        "topic": "<vehicle_id>/<device_id>/action/car_config/set",
         "alias": "ActionCarConfigSetTopic",
-        "description": "Action car config set topic, it sets the car config file",
+        "description": "<vehicleId>/<deviceId>/action/carConfig/set",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/car_config/get",
+        "topic": "<vehicle_id>/<device_id>/action/car_config/get",
         "alias": "ActionCarConfigGetTopic",
-        "description": "Action car config get topic, it requests the car config file",
+        "description": "<vehicleId>/<deviceId>/action/carConfig/get",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/car_config/content",
+        "topic": "<vehicle_id>/<device_id>/action/car_config/content",
         "alias": "ActionCarConfigContentTopic",
-        "description": "Action car config content topic, it contains the car config file content",
+        "description": "<vehicleId>/<deviceId>/action/carConfig/content",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/+/set",
+        "topic": "<vehicle_id>/<device_id>/action/+/set",
         "alias": "ActionConfigsSetTopic",
-        "description": "Action configs set topic, it gets all requests of config files to set",
+        "description": "<vehicleId>/<deviceId>/action/+/set",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/+/get",
+        "topic": "<vehicle_id>/<device_id>/action/+/get",
         "alias": "ActionConfigsGetTopic",
-        "description": "Action configs get topic, it gets all requests of config files to get",
+        "description": "<vehicleId>/<deviceId>/action/+/get",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/+/content",
+        "topic": "<vehicle_id>/<device_id>/action/+/content",
         "alias": "ActionConfigsContentTopic",
-        "description": "Action configs content topic, it gets all requests of config files content",
+        "description": "<vehicleId>/<deviceId>/action/+/content",
         "qos": 0,
         "subscribeRoles": [
             0,
-            2
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/kill",
-        "alias": "ActionKillTelemetryTopic",
-        "description": "Action kill telemetry topic, it contains the kill action for shutting down the telemetry system",
+        "topic": "<vehicle_id>/<device_id>/action/kill",
+        "alias": "ActionKillTopic",
+        "description": "<vehicleId>/<deviceId>/action/kill",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/start",
-        "alias": "ActionStartTelemetryTopic",
-        "description": "Action start telemetry topic, it contains the start action for changing to RUN the FSM of the telemetry system",
+        "topic": "<vehicle_id>/<device_id>/action/start",
+        "alias": "ActionStartTopic",
+        "description": "<vehicleId>/<deviceId>/action/start",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/reset",
-        "alias": "ActionResetTelemetryTopic",
-        "description": "Action reset telemetry topic, it contains the reset action for changing to UNINITIALIZED the FSM of the telemetry system",
+        "topic": "<vehicle_id>/<device_id>/action/reset",
+        "alias": "ActionResetTopic",
+        "description": "<vehicleId>/<deviceId>/action/reset",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/stop",
-        "alias": "ActionStopTelemetryTopic",
-        "description": "Action stop telemetry topic topic, it contains the stop action for changing to IDLE the FSM of the telemetry system",
+        "topic": "<vehicle_id>/<device_id>/action/stop",
+        "alias": "ActionStopTopic",
+        "description": "<vehicleId>/<deviceId>/action/stop",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/raw",
+        "topic": "<vehicle_id>/<device_id>/action/raw",
         "alias": "ActionRawTopic",
-        "description": "Action raw topic, it contains custom commands to send to the telemetry system",
+        "description": "<vehicleId>/<deviceId>/action/raw",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
         ]
     },
     {
-        "topic": "fenice-evo/<device_id>/action/reset_lapcounter",
+        "topic": "<vehicle_id>/<device_id>/action/reset_lapcounter",
         "alias": "ActionResetLapCounterTopic",
-        "description": "Action reset lap counter action topic, it contains the lap counter reset action for resetting the lap counter",
+        "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
         "qos": 0,
         "subscribeRoles": [
-            1
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "publishRoles": [
-            0
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
         ],
         "retained": false,
         "variables": [
             {
-                "name": "device_id",
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
                 "description": "The device ID",
                 "default": "telemetry"
             }
