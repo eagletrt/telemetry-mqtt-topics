@@ -40,7 +40,7 @@ def copy_static_files():
 def generate_cpp(topic):
     file_content = ""
 
-    with open("cpp_template/topic.cpp.template", "r") as file:
+    with open("cpp_template/src/Topic.cpp.template", "r") as file:
         file_content = file.read()
 
     # replace alias
@@ -94,7 +94,7 @@ def generate_cpp(topic):
 def generate_h(topic):
     file_content = ""
 
-    with open("cpp_template/topic.h.template", "r") as file:
+    with open("cpp_template/inc/Topic.h.template", "r") as file:
         file_content = file.read()
 
     # replace define name
@@ -123,7 +123,7 @@ def generate_h(topic):
 def generate_namespace_file(topics_list):
     file_content = ""
 
-    with open("cpp_template/namespace.h.template", "r") as file:
+    with open("cpp_template/inc/Topics.h.template", "r") as file:
         file_content = file.read()
 
     # replace includes

@@ -13,20 +13,4 @@ namespace MQTTTopics {
 <variables:replaces>
         return str;
     }
-
-    int <alias>::qualityOfService() {
-        return static_cast<int>(qos);
-    }
-
-     bool <alias>::canSubscribe(unsigned int role) {
-        return (subscribeRoles.find(role) != subscribeRoles.cend());
-    }
-
-    bool <alias>::canPublish(unsigned int role) {
-        return (publishRoles.find(role) != publishRoles.cend());
-    }
-
-    bool <alias>::isRetained() {
-        return retained;
-    }
 }// namespace MQTTTopics

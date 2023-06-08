@@ -1,0 +1,20 @@
+#ifndef <alias:upper>_H
+#define <alias:upper>_H
+
+#include "TopicString.h"
+#include "Topics.h"
+
+#include <cstdint>
+#include <string>
+#include <unordered_set>
+
+namespace MQTTTopics {
+    <description>
+    class <alias>
+    {
+    public:
+        static TopicString get(<variables:params>);
+    };
+}// namespace MQTTTopics
+
+#endif

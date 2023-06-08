@@ -1,4 +1,4 @@
-#include "TopicString.h"
+#include "../inc/TopicString.h"
 
 TopicString::TopicString(const std::string &topic) : topic(topic) {}
 
