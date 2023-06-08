@@ -22,12 +22,12 @@ def make_dirs():
 
 def copy_static_files():
     if not os.path.exists("out/inc/TopicString.h"):
-        with open("cpp_template/TopicString.h", "r") as file:
+        with open("cpp_template/inc/TopicString.h", "r") as file:
             file_content = file.read()
         with open("out/inc/TopicString.h", "w") as file:
             file.write(file_content)
     if not os.path.exists("out/src/TopicString.cpp"):
-        with open("cpp_template/TopicString.cpp", "r") as file:
+        with open("cpp_template/src/TopicString.cpp", "r") as file:
             file_content = file.read()
         with open("out/src/TopicString.cpp", "w") as file:
             file.write(file_content)
