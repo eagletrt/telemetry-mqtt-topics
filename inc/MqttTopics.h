@@ -16,7 +16,7 @@ public:
 public:
 
 	static const VehicleIdTopic vehicleIdTopic;
-	static const VehicleIdDeviceIdTopic vehicleIdDeviceIdTopic;
+	static const DeviceIdTopic deviceIdTopic;
 	static const DataTopic dataTopic;
 	static const DataPrimaryTopic dataPrimaryTopic;
 	static const DataSecondaryTopic dataSecondaryTopic;

@@ -1,6 +1,6 @@
 [
     {
-        "topic": "<vehicle_id>",
+        "topic": "<vehicleId>",
         "alias": "VehicleIdTopic",
         "description": "<vehicleId>",
         "qos": 0,
@@ -32,8 +32,8 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>",
-        "alias": "VehicleIdDeviceIdTopic",
+        "topic": "<vehicleId>/<deviceId>",
+        "alias": "DeviceIdTopic",
         "description": "<vehicleId>/<deviceId>",
         "qos": 0,
         "subscribeRoles": [
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data",
+        "topic": "<vehicleId>/<deviceId>/data",
         "alias": "DataTopic",
         "description": "<vehicleId>/<deviceId>/data",
         "qos": 0,
@@ -106,7 +106,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data/primary",
+        "topic": "<vehicleId>/<deviceId>/data/primary",
         "alias": "DataPrimaryTopic",
         "description": "<vehicleId>/<deviceId>/data/primary",
         "qos": 0,
@@ -143,7 +143,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data/secondary",
+        "topic": "<vehicleId>/<deviceId>/data/secondary",
         "alias": "DataSecondaryTopic",
         "description": "<vehicleId>/<deviceId>/data/secondary",
         "qos": 0,
@@ -180,7 +180,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data/inverter",
+        "topic": "<vehicleId>/<deviceId>/data/inverter",
         "alias": "DataInverterTopic",
         "description": "<vehicleId>/<deviceId>/inverter",
         "qos": 0,
@@ -217,7 +217,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data/gps",
+        "topic": "<vehicleId>/<deviceId>/data/gps",
         "alias": "DataGpsTopic",
         "description": "<vehicleId>/<deviceId>/data/gps",
         "qos": 0,
@@ -254,7 +254,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/data/brusa",
+        "topic": "<vehicleId>/<deviceId>/data/brusa",
         "alias": "DataBrusaTopic",
         "description": "<vehicleId>/<deviceId>/data/brusa",
         "qos": 0,
@@ -291,7 +291,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/status",
+        "topic": "<vehicleId>/<deviceId>/status",
         "alias": "StatusTopic",
         "description": "<vehicleId>/<deviceId>/status",
         "qos": 1,
@@ -328,7 +328,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/status/info",
+        "topic": "<vehicleId>/<deviceId>/status/info",
         "alias": "StatusInfoTopic",
         "description": "<vehicleId>/<deviceId>/status/info",
         "qos": 1,
@@ -365,7 +365,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/status/error",
+        "topic": "<vehicleId>/<deviceId>/status/error",
         "alias": "StatusErrorTopic",
         "description": "<vehicleId>/<deviceId>/status/error",
         "qos": 1,
@@ -402,7 +402,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/status/can_frequencies",
+        "topic": "<vehicleId>/<deviceId>/status/canFrequencies",
         "alias": "StatusCanFrequenciesTopic",
         "description": "<vehicleId>/<deviceId>/status/canFrequencies",
         "qos": 1,
@@ -439,7 +439,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/command",
+        "topic": "<vehicleId>/<deviceId>/command",
         "alias": "CommandTopic",
         "description": "<vehicleId>/<deviceId>/command",
         "qos": 2,
@@ -476,7 +476,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/command/send",
+        "topic": "<vehicleId>/<deviceId>/command/send",
         "alias": "CommandSendTopic",
         "description": "<vehicleId>/<deviceId>/command/send",
         "qos": 2,
@@ -513,7 +513,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/command/result",
+        "topic": "<vehicleId>/<deviceId>/command/result",
         "alias": "CommandResultTopic",
         "description": "<vehicleId>/<deviceId>/command/result",
         "qos": 2,
@@ -550,7 +550,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/ask",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/ask",
         "alias": "FileTransactionAskTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
         "qos": 2,
@@ -587,7 +587,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/ack",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/ack",
         "alias": "FileTransactionAckTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
         "qos": 2,
@@ -624,7 +624,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
         "alias": "FileTransactionTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
         "qos": 2,
@@ -665,7 +665,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/begin",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin",
         "alias": "FileTransactionBeginTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin",
         "qos": 2,
@@ -706,7 +706,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/end",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end",
         "alias": "FileTransactionEndTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end",
         "qos": 2,
@@ -747,7 +747,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/chunk",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
         "alias": "FileTransactionChunkTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
         "qos": 2,
@@ -788,7 +788,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action",
+        "topic": "<vehicleId>/<deviceId>/action",
         "alias": "ActionTopic",
         "description": "<vehicleId>/<deviceId>/action",
         "qos": 0,
@@ -825,7 +825,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/telemetry_config",
+        "topic": "<vehicleId>/<deviceId>/action/telemetryConfig",
         "alias": "ActionTelemetryConfigTopic",
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig",
         "qos": 0,
@@ -862,7 +862,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/set",
+        "topic": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
         "alias": "ActionTelemetryConfigSetTopic",
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
         "qos": 0,
@@ -899,7 +899,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/get",
+        "topic": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
         "alias": "ActionTelemetryConfigGetTopic",
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
         "qos": 0,
@@ -936,7 +936,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/telemetry_config/content",
+        "topic": "<vehicleId>/<deviceId>/action/telemetryConfig/content",
         "alias": "ActionTelemetryConfigContentTopic",
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/content",
         "qos": 0,
@@ -973,7 +973,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/session_config",
+        "topic": "<vehicleId>/<deviceId>/action/sessionConfig",
         "alias": "ActionSessionConfigTopic",
         "description": "<vehicleId>/<deviceId>/action/sessionConfig",
         "qos": 0,
@@ -1010,7 +1010,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/session_config/set",
+        "topic": "<vehicleId>/<deviceId>/action/sessionConfig/set",
         "alias": "ActionSessionConfigSetTopic",
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
         "qos": 0,
@@ -1047,7 +1047,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/session_config/get",
+        "topic": "<vehicleId>/<deviceId>/action/sessionConfig/get",
         "alias": "ActionSessionConfigGetTopic",
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
         "qos": 0,
@@ -1084,7 +1084,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/session_config/content",
+        "topic": "<vehicleId>/<deviceId>/action/sessionConfig/content",
         "alias": "ActionSessionConfigContentTopic",
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/content",
         "qos": 0,
@@ -1121,7 +1121,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/car_config",
+        "topic": "<vehicleId>/<deviceId>/action/carConfig",
         "alias": "ActionCarConfigTopic",
         "description": "<vehicleId>/<deviceId>/action/actionCar",
         "qos": 0,
@@ -1158,7 +1158,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/car_config/set",
+        "topic": "<vehicleId>/<deviceId>/action/carConfig/set",
         "alias": "ActionCarConfigSetTopic",
         "description": "<vehicleId>/<deviceId>/action/carConfig/set",
         "qos": 0,
@@ -1195,7 +1195,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/car_config/get",
+        "topic": "<vehicleId>/<deviceId>/action/carConfig/get",
         "alias": "ActionCarConfigGetTopic",
         "description": "<vehicleId>/<deviceId>/action/carConfig/get",
         "qos": 0,
@@ -1232,7 +1232,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/car_config/content",
+        "topic": "<vehicleId>/<deviceId>/action/carConfig/content",
         "alias": "ActionCarConfigContentTopic",
         "description": "<vehicleId>/<deviceId>/action/carConfig/content",
         "qos": 0,
@@ -1269,7 +1269,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/+/set",
+        "topic": "<vehicleId>/<deviceId>/action/+/set",
         "alias": "ActionConfigsSetTopic",
         "description": "<vehicleId>/<deviceId>/action/+/set",
         "qos": 0,
@@ -1306,7 +1306,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/+/get",
+        "topic": "<vehicleId>/<deviceId>/action/+/get",
         "alias": "ActionConfigsGetTopic",
         "description": "<vehicleId>/<deviceId>/action/+/get",
         "qos": 0,
@@ -1343,7 +1343,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/+/content",
+        "topic": "<vehicleId>/<deviceId>/action/+/content",
         "alias": "ActionConfigsContentTopic",
         "description": "<vehicleId>/<deviceId>/action/+/content",
         "qos": 0,
@@ -1380,7 +1380,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/kill",
+        "topic": "<vehicleId>/<deviceId>/action/kill",
         "alias": "ActionKillTopic",
         "description": "<vehicleId>/<deviceId>/action/kill",
         "qos": 2,
@@ -1417,7 +1417,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/start",
+        "topic": "<vehicleId>/<deviceId>/action/start",
         "alias": "ActionStartTopic",
         "description": "<vehicleId>/<deviceId>/action/start",
         "qos": 2,
@@ -1454,7 +1454,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/reset",
+        "topic": "<vehicleId>/<deviceId>/action/reset",
         "alias": "ActionResetTopic",
         "description": "<vehicleId>/<deviceId>/action/reset",
         "qos": 2,
@@ -1491,7 +1491,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/stop",
+        "topic": "<vehicleId>/<deviceId>/action/stop",
         "alias": "ActionStopTopic",
         "description": "<vehicleId>/<deviceId>/action/stop",
         "qos": 2,
@@ -1528,7 +1528,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/raw",
+        "topic": "<vehicleId>/<deviceId>/action/raw",
         "alias": "ActionRawTopic",
         "description": "<vehicleId>/<deviceId>/action/raw",
         "qos": 2,
@@ -1565,7 +1565,7 @@
         ]
     },
     {
-        "topic": "<vehicle_id>/<device_id>/action/reset_lapcounter",
+        "topic": "<vehicleId>/<deviceId>/action/resetLapcounter",
         "alias": "ActionResetLapCounterTopic",
         "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
         "qos": 2,

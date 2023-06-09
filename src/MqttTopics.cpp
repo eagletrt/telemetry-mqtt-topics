@@ -1,7 +1,7 @@
 #include "MqttTopics.h"
 
 const VehicleIdTopic MqttTopics::vehicleIdTopic = VehicleIdTopic();
-const VehicleIdDeviceIdTopic MqttTopics::vehicleIdDeviceIdTopic = VehicleIdDeviceIdTopic();
+const DeviceIdTopic MqttTopics::deviceIdTopic = DeviceIdTopic();
 const DataTopic MqttTopics::dataTopic = DataTopic();
 const DataPrimaryTopic MqttTopics::dataPrimaryTopic = DataPrimaryTopic();
 const DataSecondaryTopic MqttTopics::dataSecondaryTopic = DataSecondaryTopic();

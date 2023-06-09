@@ -22,17 +22,17 @@ public:
 };
 
 
-class VehicleIdDeviceIdTopic : public MqttTopic
+class DeviceIdTopic : public MqttTopic
 {
 	friend class MqttTopics;
 
 public:
-	VehicleIdDeviceIdTopic(const VehicleIdDeviceIdTopic &) = delete;
-	VehicleIdDeviceIdTopic &operator=(const VehicleIdDeviceIdTopic &) = delete;
-	~VehicleIdDeviceIdTopic() override = default;
+	DeviceIdTopic(const DeviceIdTopic &) = delete;
+	DeviceIdTopic &operator=(const DeviceIdTopic &) = delete;
+	~DeviceIdTopic() override = default;
 
 private:
-	VehicleIdDeviceIdTopic();
+	DeviceIdTopic();
 
 public:
 	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
