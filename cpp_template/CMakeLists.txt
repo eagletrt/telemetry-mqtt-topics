@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(INCLUDE_DIR_INTERNAL
         ${CMAKE_CURRENT_LIST_DIR}/inc
-        ${CMAKE_CURRENT_LIST_DIR}/inc/topics
         )
 
 include_directories(
@@ -17,7 +16,6 @@ include_directories(
 
 file(GLOB SOURCE_FILES
         "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp"
-        "${CMAKE_CURRENT_LIST_DIR}/src/topics/*.cpp"
         )
 
 get_property(DIRS DIRECTORY ${CMAKE_CURRENT_LIST_DIR} PROPERTY INCLUDE_DIRECTORIES)
