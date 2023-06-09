@@ -17,7 +17,14 @@ if __name__ == "__main__":
     for key, value in topics.items():
         topics_list.extend(tree_parser.parse_report_tree(key, value, {}))
 
-
+    roles = []
+    for topic in topics_list:
+        for role in topic['subscribeRoles']:
+            if role not in roles:
+                roles.append(role)
+        for role in topic['publishRoles']:
+            if role not in roles:
+                roles.append(role)
 
     print("✅ Tree parsed")
 
@@ -32,5 +39,5 @@ if __name__ == "__main__":
     md_generator.generate(topics_list, "out/documentation.md")
     print("✅ Markdown generated")
 
-    cpp_generator.generate(topics_list)
+    cpp_generator.generate(topics_list, roles)
     print("✅ C++ generated")

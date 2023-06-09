@@ -5,15 +5,20 @@
 std::vector<TopicString> MqttTopics::GetSubscribeTopics(unsigned int role) {
     std::vector<TopicString> ret;
 
-    // IDK
+    switch(role) {
+<switch_subscribe>
+    }
 
     return ret;
 }
 
+
 std::vector<TopicString> MqttTopics::GetPublishTopics(unsigned int role) {
     std::vector<TopicString> ret;
 
-    // IDK
+    switch(role) {
+<switch_publish>
+    }
 
     return ret;
 }

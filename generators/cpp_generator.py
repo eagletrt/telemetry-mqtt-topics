@@ -1,11 +1,11 @@
 import re
 import os
 
-def generate(topics_list):
+def generate(topics_list, roles):
     make_dirs()
     copy_static_files()
 
-    generate_cpp(topics_list)
+    generate_cpp(topics_list, roles)
     generate_h(topics_list)
 
 def make_dirs():
@@ -45,7 +45,7 @@ def copy_static_files():
         with open("out/CMakeLists.txt", "w") as file:
             file.write(file_content)
 
-def generate_cpp(topics_list):
+def generate_cpp(topics_list, roles):
     file_content = ""
 
     # generate MqttTopics.cpp
@@ -59,6 +59,30 @@ def generate_cpp(topics_list):
         topics += f"{topic_str}\n"
 
     file_content = file_content.replace("<topics>", topics)
+
+    # generate switch cases
+    subscribeRoles_str = ""
+    publishRoles_str = ""
+    for role in roles:
+        subscribe_case_str = f"\n\t\tcase {role}:"
+        publish_case_str = f"\n\t\tcase {role}:"
+
+        for topic in topics_list:
+            params = '\"+\", ' * len(topic['variables'])
+            params = params[:-2]
+
+            if "subscribeRoles" in topic and role in topic['subscribeRoles']:
+                subscribe_case_str += f"\n\t\t\tret.push_back({topic['alias'][0].lower() + topic['alias'][1:]}.get({params}));"
+            if "publishRoles" in topic and role in topic['publishRoles']:
+                publish_case_str += f"\n\t\t\tret.push_back({topic['alias'][0].lower() + topic['alias'][1:]}.get({params}));"
+
+        subscribe_case_str += "\n\t\t\tbreak;\n"
+        publish_case_str += "\n\t\t\tbreak;\n"
+    
+        subscribeRoles_str += subscribe_case_str
+        publishRoles_str += publish_case_str
+
+    file_content = file_content.replace("<switch_subscribe>", subscribeRoles_str).replace("<switch_publish>", publishRoles_str)
 
     with open(f"out/src/MqttTopics.cpp", "w") as file:
         file.write(file_content)

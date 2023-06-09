@@ -7,8 +7,8 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     alias = None
     description = ""
     qos = 0
-    subscribeRoles = [0, 1, 2, 3, 4, 128, 129]
-    publishRoles = [0, 1, 2, 3, 4, 128, 129]
+    subscribeRoles = []
+    publishRoles = []
     retained = False
     variables = []
 
