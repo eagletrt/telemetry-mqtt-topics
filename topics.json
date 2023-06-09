@@ -294,7 +294,7 @@
         "topic": "<vehicle_id>/<device_id>/status",
         "alias": "StatusTopic",
         "description": "<vehicleId>/<deviceId>/status",
-        "qos": 0,
+        "qos": 1,
         "subscribeRoles": [
             0,
             1,
@@ -331,7 +331,7 @@
         "topic": "<vehicle_id>/<device_id>/status/info",
         "alias": "StatusInfoTopic",
         "description": "<vehicleId>/<deviceId>/status/info",
-        "qos": 0,
+        "qos": 1,
         "subscribeRoles": [
             0,
             1,
@@ -368,7 +368,7 @@
         "topic": "<vehicle_id>/<device_id>/status/error",
         "alias": "StatusErrorTopic",
         "description": "<vehicleId>/<deviceId>/status/error",
-        "qos": 0,
+        "qos": 1,
         "subscribeRoles": [
             0,
             1,
@@ -405,7 +405,7 @@
         "topic": "<vehicle_id>/<device_id>/status/can_frequencies",
         "alias": "StatusCanFrequenciesTopic",
         "description": "<vehicleId>/<deviceId>/status/canFrequencies",
-        "qos": 0,
+        "qos": 1,
         "subscribeRoles": [
             0,
             1,
@@ -442,7 +442,7 @@
         "topic": "<vehicle_id>/<device_id>/command",
         "alias": "CommandTopic",
         "description": "<vehicleId>/<deviceId>/command",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -479,7 +479,7 @@
         "topic": "<vehicle_id>/<device_id>/command/send",
         "alias": "CommandSendTopic",
         "description": "<vehicleId>/<deviceId>/command/send",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -516,7 +516,7 @@
         "topic": "<vehicle_id>/<device_id>/command/result",
         "alias": "CommandResultTopic",
         "description": "<vehicleId>/<deviceId>/command/result",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -553,7 +553,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/ask",
         "alias": "FileTransactionAskTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -590,7 +590,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/ack",
         "alias": "FileTransactionAckTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -627,7 +627,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>",
         "alias": "FileTransactionTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -668,7 +668,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/begin",
         "alias": "FileTransactionBeginTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -709,7 +709,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/end",
         "alias": "FileTransactionEndTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -750,7 +750,7 @@
         "topic": "<vehicle_id>/<device_id>/file_transaction/<transaction_id>/chunk",
         "alias": "FileTransactionChunkTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1383,7 +1383,7 @@
         "topic": "<vehicle_id>/<device_id>/action/kill",
         "alias": "ActionKillTopic",
         "description": "<vehicleId>/<deviceId>/action/kill",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1420,7 +1420,7 @@
         "topic": "<vehicle_id>/<device_id>/action/start",
         "alias": "ActionStartTopic",
         "description": "<vehicleId>/<deviceId>/action/start",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1457,7 +1457,7 @@
         "topic": "<vehicle_id>/<device_id>/action/reset",
         "alias": "ActionResetTopic",
         "description": "<vehicleId>/<deviceId>/action/reset",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1494,7 +1494,7 @@
         "topic": "<vehicle_id>/<device_id>/action/stop",
         "alias": "ActionStopTopic",
         "description": "<vehicleId>/<deviceId>/action/stop",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1531,7 +1531,7 @@
         "topic": "<vehicle_id>/<device_id>/action/raw",
         "alias": "ActionRawTopic",
         "description": "<vehicleId>/<deviceId>/action/raw",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,
@@ -1568,7 +1568,7 @@
         "topic": "<vehicle_id>/<device_id>/action/reset_lapcounter",
         "alias": "ActionResetLapCounterTopic",
         "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
-        "qos": 0,
+        "qos": 2,
         "subscribeRoles": [
             0,
             1,

@@ -82,7 +82,7 @@
 ## StatusTopic
 ### <vehicle_id>/<device_id>/status
 > <vehicleId>/<deviceId>/status
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
 - **Variables**:
@@ -92,7 +92,7 @@
 ## StatusInfoTopic
 ### <vehicle_id>/<device_id>/status/info
 > <vehicleId>/<deviceId>/status/info
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
 - **Variables**:
@@ -102,7 +102,7 @@
 ## StatusErrorTopic
 ### <vehicle_id>/<device_id>/status/error
 > <vehicleId>/<deviceId>/status/error
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
 - **Variables**:
@@ -112,7 +112,7 @@
 ## StatusCanFrequenciesTopic
 ### <vehicle_id>/<device_id>/status/can_frequencies
 > <vehicleId>/<deviceId>/status/canFrequencies
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
 - **Variables**:
@@ -122,7 +122,7 @@
 ## CommandTopic
 ### <vehicle_id>/<device_id>/command
 > <vehicleId>/<deviceId>/command
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -132,7 +132,7 @@
 ## CommandSendTopic
 ### <vehicle_id>/<device_id>/command/send
 > <vehicleId>/<deviceId>/command/send
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -142,7 +142,7 @@
 ## CommandResultTopic
 ### <vehicle_id>/<device_id>/command/result
 > <vehicleId>/<deviceId>/command/result
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -152,7 +152,7 @@
 ## FileTransactionAskTopic
 ### <vehicle_id>/<device_id>/file_transaction/ask
 > <vehicleId>/<deviceId>/fileTransaction/ask
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -162,7 +162,7 @@
 ## FileTransactionAckTopic
 ### <vehicle_id>/<device_id>/file_transaction/ack
 > <vehicleId>/<deviceId>/fileTransaction/ack
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -172,7 +172,7 @@
 ## FileTransactionTopic
 ### <vehicle_id>/<device_id>/file_transaction/<transaction_id>
 > <vehicleId>/<deviceId>/fileTransaction/<transactionId>
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -182,7 +182,7 @@
 ## FileTransactionBeginTopic
 ### <vehicle_id>/<device_id>/file_transaction/<transaction_id>/begin
 > <vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -192,7 +192,7 @@
 ## FileTransactionEndTopic
 ### <vehicle_id>/<device_id>/file_transaction/<transaction_id>/end
 > <vehicleId>/<deviceId>/fileTransaction/<transactionId>/end
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -202,7 +202,7 @@
 ## FileTransactionChunkTopic
 ### <vehicle_id>/<device_id>/file_transaction/<transaction_id>/chunk
 > <vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -372,7 +372,7 @@
 ## ActionKillTopic
 ### <vehicle_id>/<device_id>/action/kill
 > <vehicleId>/<deviceId>/action/kill
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -382,7 +382,7 @@
 ## ActionStartTopic
 ### <vehicle_id>/<device_id>/action/start
 > <vehicleId>/<deviceId>/action/start
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -392,7 +392,7 @@
 ## ActionResetTopic
 ### <vehicle_id>/<device_id>/action/reset
 > <vehicleId>/<deviceId>/action/reset
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -402,7 +402,7 @@
 ## ActionStopTopic
 ### <vehicle_id>/<device_id>/action/stop
 > <vehicleId>/<deviceId>/action/stop
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -412,7 +412,7 @@
 ## ActionRawTopic
 ### <vehicle_id>/<device_id>/action/raw
 > <vehicleId>/<deviceId>/action/raw
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
@@ -422,7 +422,7 @@
 ## ActionResetLapCounterTopic
 ### <vehicle_id>/<device_id>/action/reset_lapcounter
 > <vehicleId>/<deviceId>/action/resetLapcounter
-- **Quality of Service**: 0
+- **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
 - **Variables**:
