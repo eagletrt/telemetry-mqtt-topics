@@ -91,8 +91,13 @@ def generate_cpp(topics_list):
         params = ""
         for variable in filter(lambda x: "default" not in x, topic["variables"]):
             params += f"const std::string &{variable['name']}, "
+        default_variables = []
         for variable in filter(lambda x: "default" in x, topic["variables"]):
-            params += f"const std::string &{variable['name']} = \"{variable['default']}\", "
+            default_variables.append(variable)
+        
+        default_variables.reverse()
+        for variable in default_variables:
+            params += f"const std::string &{variable['name']}, "
         if params != "":
             params = params[:-2]
 
@@ -140,7 +145,12 @@ def generate_h(topics_list):
         params = ""
         for variable in filter(lambda x: "default" not in x, topic["variables"]):
             params += f"const std::string &{variable['name']}, "
+
+        default_variables = []
         for variable in filter(lambda x: "default" in x, topic["variables"]):
+            default_variables.append(variable)
+        default_variables.reverse()
+        for variable in default_variables:
             params += f"const std::string &{variable['name']} = \"{variable['default']}\", "
         if params != "":
             params = params[:-2]
