@@ -7,8 +7,6 @@
 
 class MqttTopic
 {
-    friend class Topics;
-
 public:
     MqttTopic() = delete;
     MqttTopic(const MqttTopic &) = delete;

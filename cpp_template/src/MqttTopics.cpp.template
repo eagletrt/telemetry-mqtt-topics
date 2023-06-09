@@ -1,9 +1,6 @@
-#include "../inc/MqttTopics.h"
+#include "MqttTopics.h"
 
-const VehicleIdTopic MqttTopics::vehicleIdTopic = VehicleIdTopic();
-const FileTransactionBeginTopic MqttTopics::fileTransactionBeginTopic = FileTransactionBeginTopic();
-
-/* ... */
+<topics>
 
 std::vector<TopicString> MqttTopics::GetSubscribeTopics(unsigned int role) {
     std::vector<TopicString> ret;

@@ -14,10 +14,8 @@ public:
     ~MqttTopics() = delete;
 
 public:
-    static const VehicleIdTopic vehicleIdTopic;
-    static const FileTransactionBeginTopic fileTransactionBeginTopic;
 
-    /* ... */
+<topics>
 
 public:
     static std::vector<TopicString> GetSubscribeTopics(unsigned int role);

@@ -7,8 +7,8 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     alias = None
     description = ""
     qos = 0
-    subscribeRoles = [0, 1, 2, 3]
-    publishRoles = [0, 1, 2, 3]
+    subscribeRoles = [0, 1, 2, 3, 4, 128, 129]
+    publishRoles = [0, 1, 2, 3, 4, 128, 129]
     retained = False
     variables = []
 
@@ -24,7 +24,9 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     if "description" in node:
         description = node["description"]
     # Use qos of the parent topic if not defined
-    if "qos" not in node and "qos" in parent_config:
+    if "qos" in node:
+        qos = node["qos"]
+    elif "qos" in parent_config:
         qos = parent_config["qos"]
     # Use subscribe role of the parent topic if not defined
     if "subscribeRoles" in node:

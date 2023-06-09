@@ -17,6 +17,8 @@ if __name__ == "__main__":
     for key, value in topics.items():
         topics_list.extend(tree_parser.parse_report_tree(key, value, {}))
 
+
+
     print("✅ Tree parsed")
 
     # check if out dir exists

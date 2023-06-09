@@ -1,4 +1,4 @@
-#include "../inc/MqttTopic.h"
+#include "MqttTopic.h"
 
 MqttTopic::MqttTopic(const std::string &topic, uint8_t qos, const std::unordered_set<uint8_t> &subscribeRoles, const std::unordered_set<uint8_t> &publishRoles, bool retained)
     : topic(topic), qos(qos), subscribeRoles(subscribeRoles), publishRoles(publishRoles), retained(retained) {}

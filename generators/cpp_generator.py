@@ -5,138 +5,150 @@ def generate(topics_list):
     make_dirs()
     copy_static_files()
 
-    generate_namespace_file(topics_list)
-    for topic in topics_list:
-        generate_cpp(topic)
-        generate_h(topic)
+    generate_cpp(topics_list)
+    generate_h(topics_list)
 
 def make_dirs():
     if not os.path.exists("out/src"):
         os.makedirs("out/src")
-    if not os.path.exists("out/src/topics"):
-        os.makedirs("out/src/topics")
     if not os.path.exists("out/inc"):
         os.makedirs("out/inc")
-    if not os.path.exists("out/inc/topics"):
-        os.makedirs("out/inc/topics")
 
 def copy_static_files():
-    if not os.path.exists("out/inc/TopicString.h"):
+    if not os.path.exists("out/inc/TopicString.h"): # TopicString.h
         with open("cpp_template/inc/TopicString.h", "r") as file:
             file_content = file.read()
         with open("out/inc/TopicString.h", "w") as file:
             file.write(file_content)
-    if not os.path.exists("out/src/TopicString.cpp"):
+
+    if not os.path.exists("out/src/TopicString.cpp"): # TopicString.cpp
         with open("cpp_template/src/TopicString.cpp", "r") as file:
             file_content = file.read()
         with open("out/src/TopicString.cpp", "w") as file:
             file.write(file_content)
-    if not os.path.exists("out/CMakeLists.txt"):
+
+    if not os.path.exists("out/inc/MqttTopic.h"): # MqttTopic.h
+        with open("cpp_template/inc/MqttTopic.h", "r") as file:
+            file_content = file.read()
+        with open("out/inc/MqttTopic.h", "w") as file:
+            file.write(file_content)
+
+    if not os.path.exists("out/src/MqttTopic.cpp"): # MqttTopic.cpp
+        with open("cpp_template/src/MqttTopic.cpp", "r") as file:
+            file_content = file.read()
+        with open("out/src/MqttTopic.cpp", "w") as file:
+            file.write(file_content)
+
+    if not os.path.exists("out/CMakeLists.txt"): # CMakeLists.txt
         with open("cpp_template/CMakeLists.txt", "r") as file:
             file_content = file.read()
         with open("out/CMakeLists.txt", "w") as file:
             file.write(file_content)
 
-def generate_cpp(topic):
+def generate_cpp(topics_list):
     file_content = ""
 
-    with open("cpp_template/src/Topic.cpp.template", "r") as file:
+    # generate MqttTopics.cpp
+    with open("cpp_template/src/MqttTopics.cpp.template", "r") as file:
         file_content = file.read()
 
-    # replace alias
-    file_content = file_content.replace("<alias>", topic["alias"])
+    topics = ""
+    for topic in topics_list:
+        lowerCamel = topic['alias'][0].lower() + topic['alias'][1:] # first letter to lowercase
+        topic_str = f"const {topic['alias']} MqttTopics::{lowerCamel} = {topic['alias']}();"
+        topics += f"{topic_str}\n"
 
-    # replace topic
-    file_content = file_content.replace("<topic>", topic["topic"])
+    file_content = file_content.replace("<topics>", topics)
 
-    # replace get function parameters
-    parameters = ""
-    for variable in filter(lambda x: "default" not in x, topic["variables"]):
-        parameters += f"const std::string& {variable['name']}, "
-    for variable in filter(lambda x: "default" in x, topic["variables"]):
-        parameters += f"const std::string& {variable['name']}, "
-    if parameters != "":
-        parameters = parameters[:-2]
-    file_content = file_content.replace("<variables:params>", parameters)
-
-    # str replace variables
-    variables = ""
-    for variable in topic["variables"]:
-        name = variable["name"]
-        variables += f'\t\tstr.replace(str.find("<{name}>"), {len(name) + 2}, {name});\n'
-    file_content = file_content.replace("<variables:replaces>", variables)
-
-    # qos replace
-    file_content = file_content.replace("<qos>", f"{topic['qos']}")
-
-    # subscribe roles replace
-    subscribeRoles = ""
-    for subRole in topic["subscribeRoles"]:
-        subscribeRoles += f"{subRole}, "
-    if subscribeRoles != "":
-        subscribeRoles = subscribeRoles[:-2]
-    file_content = file_content.replace("<subscribeRoles>", subscribeRoles)
-    
-    # publish roles replace
-    publishRoles = ""
-    for pubRole in topic["publishRoles"]:
-        publishRoles += f"{pubRole}, "
-    if publishRoles != "":
-        publishRoles = publishRoles[:-2]
-    file_content = file_content.replace("<publishRoles>", publishRoles)
-
-    # retained replace
-    file_content = file_content.replace("<retained>", "true" if topic["retained"] else "false")
-
-    with open(f"out/src/topics/{topic['alias']}.cpp", "w") as file:
+    with open(f"out/src/MqttTopics.cpp", "w") as file:
         file.write(file_content)
 
-def generate_h(topic):
-    file_content = ""
 
-    with open("cpp_template/inc/Topic.h.template", "r") as file:
+    # generate MqttTopicsList.cpp
+    with open("cpp_template/src/MqttTopicsList.cpp.template", "r") as file:
         file_content = file.read()
 
-    # replace define name
-    upper = re.sub(r'(?<!^)(?=[A-Z])', '_', topic["alias"]).upper()
-    file_content = file_content.replace("<alias:upper>", upper)
+    definitions = ""
+    get_functions = ""
+    for topic in topics_list:
+        subscribeRoles = ""
+        for subRole in topic["subscribeRoles"]:
+            subscribeRoles += f"{subRole}, "
+        if subscribeRoles != "":
+            subscribeRoles = subscribeRoles[:-2]
+        
+        publishRoles = ""
+        for pubRole in topic["publishRoles"]:
+            publishRoles += f"{pubRole}, "
+        if publishRoles != "":
+            publishRoles = publishRoles[:-2]
 
-    # replace alias
-    file_content = file_content.replace("<alias>", topic["alias"])
+        retained = "true" if topic["retained"] else "false"
 
-    # replace desctiption
-    file_content = file_content.replace("<description>", f"// {topic['description']}")
+        topic_definition = f"{topic['alias']}::{topic['alias']}()\n\t: MqttTopic(\"{topic['topic']}\", {topic['qos']}, {{{subscribeRoles}}}, {{{publishRoles}}}, {retained}) {{}}"
+        definitions += f"\n{topic_definition}\n"
 
-    # replace get function parameters
-    parameters = ""
-    for variable in filter(lambda x: "default" not in x, topic["variables"]):
-        parameters += f"const std::string& {variable['name']}, "
-    for variable in filter(lambda x: "default" in x, topic["variables"]):
-        parameters += f"const std::string& {variable['name']} = \"{variable['default']}\", "
-    if parameters != "":
-        parameters = parameters[:-2]
-    file_content = file_content.replace("<variables:params>", parameters)
+        params = ""
+        for variable in filter(lambda x: "default" not in x, topic["variables"]):
+            params += f"const std::string &{variable['name']}, "
+        for variable in filter(lambda x: "default" in x, topic["variables"]):
+            params += f"const std::string &{variable['name']} = \"{variable['default']}\", "
+        if params != "":
+            params = params[:-2]
 
-    with open(f"out/inc/topics/{topic['alias']}.h", "w") as file:
+        variables = ""
+        for variable in topic["variables"]:
+            name = variable["name"]
+            variables += f'\tstr.replace(str.find("<{name}>"), {len(name) + 2}, {name});\n'
+
+        topic_get = f"TopicString {topic['alias']}::get({params}) const {{\n\tstd::string str(topic);\n\n{variables}\n\treturn str;\n}}"
+        get_functions += f"{topic_get}\n\n"
+
+    file_content = file_content.replace("<definitions>", definitions).replace("<get_functions>", get_functions)
+
+    with open(f"out/src/MqttTopicsList.cpp", "w") as file:
         file.write(file_content)
 
-def generate_namespace_file(topics_list):
+
+def generate_h(topics_list):
     file_content = ""
 
-    with open("cpp_template/inc/Topics.h.template", "r") as file:
+    # generate MqttTopics.h
+    with open("cpp_template/inc/MqttTopics.h.template", "r") as file:
         file_content = file.read()
 
-    # replace includes
-    includes = ""
+    # replace <topics>
+    topics = ""
     for topic in topics_list:
-        includes += f"#include \"{topic['alias']}.h\"\n"
-    file_content = file_content.replace("<includes>", includes)
+        lowerCamel = topic['alias'][0].lower() + topic['alias'][1:] # first letter to lowercase
+        topic_str = f"static const {topic['alias']} {lowerCamel};"
+        topics += f"\t{topic_str}\n"
 
-    # replace classes
-    classes = ""
+    file_content = file_content.replace("<topics>", topics)
+
+    with open(f"out/inc/MqttTopics.h", "w") as file:
+        file.write(file_content)
+
+
+    # generate MqttTopicsList.h
+    with open("cpp_template/inc/MqttTopicsList.h.template", "r") as file:
+        file_content = file.read()
+
+    # replace <topics>
+    topics = ""
     for topic in topics_list:
-        classes += f"\tclass {topic['alias']};\n"
-    file_content = file_content.replace("<classes>", classes)
+        params = ""
+        for variable in filter(lambda x: "default" not in x, topic["variables"]):
+            params += f"const std::string &{variable['name']}, "
+        for variable in filter(lambda x: "default" in x, topic["variables"]):
+            params += f"const std::string &{variable['name']} = \"{variable['default']}\", "
+        if params != "":
+            params = params[:-2]
+        get_str = f"TopicString get({params}) const;"
+        
+        topics += f"\nclass {topic['alias']} : public MqttTopic\n{{\n\tfriend class MqttTopics;\n\npublic:\n\t{topic['alias']}(const {topic['alias']} &) = delete;\n\t{topic['alias']} &operator=(const {topic['alias']} &) = delete;\n\t~{topic['alias']}() override = default;\n\nprivate:\n\t{topic['alias']}();\n\npublic:\n\t{get_str}\n}};\n\n"
 
-    with open("out/inc/Topics.h", "w") as file:
+    file_content = file_content.replace("<topics>", topics)
+
+    with open(f"out/inc/MqttTopicsList.h", "w") as file:
         file.write(file_content)
