@@ -2,9 +2,9 @@ def generate(topics_list, filename):
     with open(filename, "w") as file:
         file.write("# Topics\n\n")
         for topic in topics_list:
-            file.write(f"## {topic['alias']}\n")
-            file.write(f"### {topic['topic']}\n")
-            file.write(f"> {topic['description']}\n")
+            file.write(f"## {topic['alias'].replace('<', '&lt;')}\n")
+            file.write(f"### {topic['topic'].replace('<', '&lt;')}\n")
+            file.write(f"> {topic['description'].replace('<', '&lt;')}\n")
             file.write(f"- **Quality of Service**: {topic['qos']}\n")
             file.write(f"- **Subscribe Roles**: ")
             for subRole in topic["subscribeRoles"]:
