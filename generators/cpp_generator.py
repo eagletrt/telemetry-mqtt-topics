@@ -27,16 +27,16 @@ def copy_static_files():
         with open("out/src/TopicString.cpp", "w") as file:
             file.write(file_content)
 
-    if not os.path.exists("out/inc/MqttTopic.h"): # MqttTopic.h
-        with open("cpp_template/inc/MqttTopic.h", "r") as file:
+    if not os.path.exists("out/inc/MQTTTopic.h"): # MQTTTopic.h
+        with open("cpp_template/inc/MQTTTopic.h", "r") as file:
             file_content = file.read()
-        with open("out/inc/MqttTopic.h", "w") as file:
+        with open("out/inc/MQTTTopic.h", "w") as file:
             file.write(file_content)
 
-    if not os.path.exists("out/src/MqttTopic.cpp"): # MqttTopic.cpp
-        with open("cpp_template/src/MqttTopic.cpp", "r") as file:
+    if not os.path.exists("out/src/MQTTTopic.cpp"): # MQTTTopic.cpp
+        with open("cpp_template/src/MQTTTopic.cpp", "r") as file:
             file_content = file.read()
-        with open("out/src/MqttTopic.cpp", "w") as file:
+        with open("out/src/MQTTTopic.cpp", "w") as file:
             file.write(file_content)
 
     if not os.path.exists("out/CMakeLists.txt"): # CMakeLists.txt
@@ -48,14 +48,14 @@ def copy_static_files():
 def generate_cpp(topics_list, roles):
     file_content = ""
 
-    # generate MqttTopics.cpp
-    with open("cpp_template/src/MqttTopics.cpp.template", "r") as file:
+    # generate MQTTTopics.cpp
+    with open("cpp_template/src/MQTTTopics.cpp.template", "r") as file:
         file_content = file.read()
 
     topics = ""
     for topic in topics_list:
         lowerCamel = topic['alias'][0].lower() + topic['alias'][1:] # first letter to lowercase
-        topic_str = f"const {topic['alias']} MqttTopics::{lowerCamel} = {topic['alias']}();"
+        topic_str = f"const {topic['alias']} MQTTTopics::{lowerCamel} = {topic['alias']}();"
         topics += f"{topic_str}\n"
 
     file_content = file_content.replace("<topics>", topics)
@@ -84,12 +84,12 @@ def generate_cpp(topics_list, roles):
 
     file_content = file_content.replace("<switch_subscribe>", subscribeRoles_str).replace("<switch_publish>", publishRoles_str)
 
-    with open(f"out/src/MqttTopics.cpp", "w") as file:
+    with open(f"out/src/MQTTTopics.cpp", "w") as file:
         file.write(file_content)
 
 
-    # generate MqttTopicsList.cpp
-    with open("cpp_template/src/MqttTopicsList.cpp.template", "r") as file:
+    # generate MQTTTopicsList.cpp
+    with open("cpp_template/src/MQTTTopicsList.cpp.template", "r") as file:
         file_content = file.read()
 
     definitions = ""
@@ -109,7 +109,7 @@ def generate_cpp(topics_list, roles):
 
         retained = "true" if topic["retained"] else "false"
 
-        topic_definition = f"{topic['alias']}::{topic['alias']}()\n\t: MqttTopic(\"{topic['topic']}\", {topic['qos']}, {{{subscribeRoles}}}, {{{publishRoles}}}, {retained}) {{}}"
+        topic_definition = f"{topic['alias']}::{topic['alias']}()\n\t: MQTTTopic(\"{topic['topic']}\", {topic['qos']}, {{{subscribeRoles}}}, {{{publishRoles}}}, {retained}) {{}}"
         definitions += f"\n{topic_definition}\n"
 
         params = ""
@@ -135,15 +135,15 @@ def generate_cpp(topics_list, roles):
 
     file_content = file_content.replace("<definitions>", definitions).replace("<get_functions>", get_functions)
 
-    with open(f"out/src/MqttTopicsList.cpp", "w") as file:
+    with open(f"out/src/MQTTTopicsList.cpp", "w") as file:
         file.write(file_content)
 
 
 def generate_h(topics_list):
     file_content = ""
 
-    # generate MqttTopics.h
-    with open("cpp_template/inc/MqttTopics.h.template", "r") as file:
+    # generate MQTTTopics.h
+    with open("cpp_template/inc/MQTTTopics.h.template", "r") as file:
         file_content = file.read()
 
     # replace <topics>
@@ -155,12 +155,12 @@ def generate_h(topics_list):
 
     file_content = file_content.replace("<topics>", topics)
 
-    with open(f"out/inc/MqttTopics.h", "w") as file:
+    with open(f"out/inc/MQTTTopics.h", "w") as file:
         file.write(file_content)
 
 
-    # generate MqttTopicsList.h
-    with open("cpp_template/inc/MqttTopicsList.h.template", "r") as file:
+    # generate MQTTTopicsList.h
+    with open("cpp_template/inc/MQTTTopicsList.h.template", "r") as file:
         file_content = file.read()
 
     # replace <topics>
@@ -180,9 +180,9 @@ def generate_h(topics_list):
             params = params[:-2]
         get_str = f"TopicString get({params}) const;"
         
-        topics += f"\nclass {topic['alias']} : public MqttTopic\n{{\n\tfriend class MqttTopics;\n\npublic:\n\t{topic['alias']}(const {topic['alias']} &) = delete;\n\t{topic['alias']} &operator=(const {topic['alias']} &) = delete;\n\t~{topic['alias']}() override = default;\n\nprivate:\n\t{topic['alias']}();\n\npublic:\n\t{get_str}\n}};\n\n"
+        topics += f"\nclass {topic['alias']} : public MQTTTopic\n{{\n\tfriend class MQTTTopics;\n\npublic:\n\t{topic['alias']}(const {topic['alias']} &) = delete;\n\t{topic['alias']} &operator=(const {topic['alias']} &) = delete;\n\t~{topic['alias']}() override = default;\n\nprivate:\n\t{topic['alias']}();\n\npublic:\n\t{get_str}\n}};\n\n"
 
     file_content = file_content.replace("<topics>", topics)
 
-    with open(f"out/inc/MqttTopicsList.h", "w") as file:
+    with open(f"out/inc/MQTTTopicsList.h", "w") as file:
         file.write(file_content)
