@@ -1,134 +1,134 @@
-#include "MqttTopicsList.h"
+#include "MQTTTopicsList.h"
 
 
 VehicleIdTopic::VehicleIdTopic()
-	: MqttTopic("<vehicleId>", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DeviceIdTopic::DeviceIdTopic()
-	: MqttTopic("<vehicleId>/<deviceId>", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataTopic::DataTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataPrimaryTopic::DataPrimaryTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data/primary", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data/primary", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataSecondaryTopic::DataSecondaryTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data/secondary", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data/secondary", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataInverterTopic::DataInverterTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data/inverter", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data/inverter", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataGpsTopic::DataGpsTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data/gps", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data/gps", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 DataBrusaTopic::DataBrusaTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/data/brusa", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/data/brusa", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 StatusTopic::StatusTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/status", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/status", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
 
 StatusInfoTopic::StatusInfoTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/status/info", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/status/info", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
 
 StatusErrorTopic::StatusErrorTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/status/error", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/status/error", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
 
 StatusCanFrequenciesTopic::StatusCanFrequenciesTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/status/canFrequencies", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/status/canFrequencies", 1, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, true) {}
 
 CommandTopic::CommandTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/command", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/command", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 CommandSendTopic::CommandSendTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/command/send", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/command/send", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 CommandResultTopic::CommandResultTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/command/result", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/command/result", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionAskTopic::FileTransactionAskTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/ask", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/ask", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionAckTopic::FileTransactionAckTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/ack", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/ack", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionTopic::FileTransactionTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionBeginTopic::FileTransactionBeginTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionEndTopic::FileTransactionEndTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 FileTransactionChunkTopic::FileTransactionChunkTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionTopic::ActionTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionTelemetryConfigTopic::ActionTelemetryConfigTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/telemetryConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/telemetryConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionTelemetryConfigSetTopic::ActionTelemetryConfigSetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/telemetryConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/telemetryConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionTelemetryConfigGetTopic::ActionTelemetryConfigGetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/telemetryConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/telemetryConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionTelemetryConfigContentTopic::ActionTelemetryConfigContentTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/telemetryConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/telemetryConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionSessionConfigTopic::ActionSessionConfigTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/sessionConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/sessionConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionSessionConfigSetTopic::ActionSessionConfigSetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/sessionConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/sessionConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionSessionConfigGetTopic::ActionSessionConfigGetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/sessionConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/sessionConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionSessionConfigContentTopic::ActionSessionConfigContentTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/sessionConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/sessionConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionCarConfigTopic::ActionCarConfigTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/carConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/carConfig", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionCarConfigSetTopic::ActionCarConfigSetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/carConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/carConfig/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionCarConfigGetTopic::ActionCarConfigGetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/carConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/carConfig/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionCarConfigContentTopic::ActionCarConfigContentTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/carConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/carConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionConfigsSetTopic::ActionConfigsSetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/+/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/+/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionConfigsGetTopic::ActionConfigsGetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/+/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/+/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionConfigsContentTopic::ActionConfigsContentTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/+/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/+/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionKillTopic::ActionKillTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/kill", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/kill", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionStartTopic::ActionStartTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/start", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/start", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionResetTopic::ActionResetTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/reset", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/reset", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionStopTopic::ActionStopTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/stop", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/stop", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionRawTopic::ActionRawTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/raw", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/raw", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 ActionResetLapCounterTopic::ActionResetLapCounterTopic()
-	: MqttTopic("<vehicleId>/<deviceId>/action/resetLapcounter", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+	: MQTTTopic("<vehicleId>/<deviceId>/action/resetLapcounter", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 
 TopicString VehicleIdTopic::get(const std::string &vehicleId) const {

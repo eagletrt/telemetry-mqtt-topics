@@ -5,15 +5,15 @@
 #include <string>
 #include <unordered_set>
 
-class MqttTopic
+class MQTTTopic
 {
 public:
-    MqttTopic() = delete;
-    MqttTopic(const MqttTopic &) = delete;
-    MqttTopic &operator=(const MqttTopic &) = delete;
-    virtual ~MqttTopic() = default;
+    MQTTTopic() = delete;
+    MQTTTopic(const MQTTTopic &) = delete;
+    MQTTTopic &operator=(const MQTTTopic &) = delete;
+    virtual ~MQTTTopic() = default;
 
-    MqttTopic(const std::string &topic, uint8_t qos, const std::unordered_set<uint8_t> &subscribeRoles, const std::unordered_set<uint8_t> &publishRoles, bool retained);
+    MQTTTopic(const std::string &topic, uint8_t qos, const std::unordered_set<uint8_t> &subscribeRoles, const std::unordered_set<uint8_t> &publishRoles, bool retained);
 
 public:
     unsigned int qualityOfService() const;

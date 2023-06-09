@@ -1,13 +1,13 @@
 #ifndef MQTT_TOPICS_LIST_H
 #define MQTT_TOPICS_LIST_H
 
-#include "MqttTopic.h"
+#include "MQTTTopic.h"
 #include "TopicString.h"
 
 
-class VehicleIdTopic : public MqttTopic
+class VehicleIdTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	VehicleIdTopic(const VehicleIdTopic &) = delete;
@@ -22,9 +22,9 @@ public:
 };
 
 
-class DeviceIdTopic : public MqttTopic
+class DeviceIdTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DeviceIdTopic(const DeviceIdTopic &) = delete;
@@ -39,9 +39,9 @@ public:
 };
 
 
-class DataTopic : public MqttTopic
+class DataTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataTopic(const DataTopic &) = delete;
@@ -56,9 +56,9 @@ public:
 };
 
 
-class DataPrimaryTopic : public MqttTopic
+class DataPrimaryTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataPrimaryTopic(const DataPrimaryTopic &) = delete;
@@ -73,9 +73,9 @@ public:
 };
 
 
-class DataSecondaryTopic : public MqttTopic
+class DataSecondaryTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataSecondaryTopic(const DataSecondaryTopic &) = delete;
@@ -90,9 +90,9 @@ public:
 };
 
 
-class DataInverterTopic : public MqttTopic
+class DataInverterTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataInverterTopic(const DataInverterTopic &) = delete;
@@ -107,9 +107,9 @@ public:
 };
 
 
-class DataGpsTopic : public MqttTopic
+class DataGpsTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataGpsTopic(const DataGpsTopic &) = delete;
@@ -124,9 +124,9 @@ public:
 };
 
 
-class DataBrusaTopic : public MqttTopic
+class DataBrusaTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	DataBrusaTopic(const DataBrusaTopic &) = delete;
@@ -141,9 +141,9 @@ public:
 };
 
 
-class StatusTopic : public MqttTopic
+class StatusTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	StatusTopic(const StatusTopic &) = delete;
@@ -158,9 +158,9 @@ public:
 };
 
 
-class StatusInfoTopic : public MqttTopic
+class StatusInfoTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	StatusInfoTopic(const StatusInfoTopic &) = delete;
@@ -175,9 +175,9 @@ public:
 };
 
 
-class StatusErrorTopic : public MqttTopic
+class StatusErrorTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	StatusErrorTopic(const StatusErrorTopic &) = delete;
@@ -192,9 +192,9 @@ public:
 };
 
 
-class StatusCanFrequenciesTopic : public MqttTopic
+class StatusCanFrequenciesTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	StatusCanFrequenciesTopic(const StatusCanFrequenciesTopic &) = delete;
@@ -209,9 +209,9 @@ public:
 };
 
 
-class CommandTopic : public MqttTopic
+class CommandTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	CommandTopic(const CommandTopic &) = delete;
@@ -226,9 +226,9 @@ public:
 };
 
 
-class CommandSendTopic : public MqttTopic
+class CommandSendTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	CommandSendTopic(const CommandSendTopic &) = delete;
@@ -243,9 +243,9 @@ public:
 };
 
 
-class CommandResultTopic : public MqttTopic
+class CommandResultTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	CommandResultTopic(const CommandResultTopic &) = delete;
@@ -260,9 +260,9 @@ public:
 };
 
 
-class FileTransactionAskTopic : public MqttTopic
+class FileTransactionAskTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionAskTopic(const FileTransactionAskTopic &) = delete;
@@ -277,9 +277,9 @@ public:
 };
 
 
-class FileTransactionAckTopic : public MqttTopic
+class FileTransactionAckTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionAckTopic(const FileTransactionAckTopic &) = delete;
@@ -294,9 +294,9 @@ public:
 };
 
 
-class FileTransactionTopic : public MqttTopic
+class FileTransactionTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionTopic(const FileTransactionTopic &) = delete;
@@ -311,9 +311,9 @@ public:
 };
 
 
-class FileTransactionBeginTopic : public MqttTopic
+class FileTransactionBeginTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionBeginTopic(const FileTransactionBeginTopic &) = delete;
@@ -328,9 +328,9 @@ public:
 };
 
 
-class FileTransactionEndTopic : public MqttTopic
+class FileTransactionEndTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionEndTopic(const FileTransactionEndTopic &) = delete;
@@ -345,9 +345,9 @@ public:
 };
 
 
-class FileTransactionChunkTopic : public MqttTopic
+class FileTransactionChunkTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	FileTransactionChunkTopic(const FileTransactionChunkTopic &) = delete;
@@ -362,9 +362,9 @@ public:
 };
 
 
-class ActionTopic : public MqttTopic
+class ActionTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionTopic(const ActionTopic &) = delete;
@@ -379,9 +379,9 @@ public:
 };
 
 
-class ActionTelemetryConfigTopic : public MqttTopic
+class ActionTelemetryConfigTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionTelemetryConfigTopic(const ActionTelemetryConfigTopic &) = delete;
@@ -396,9 +396,9 @@ public:
 };
 
 
-class ActionTelemetryConfigSetTopic : public MqttTopic
+class ActionTelemetryConfigSetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionTelemetryConfigSetTopic(const ActionTelemetryConfigSetTopic &) = delete;
@@ -413,9 +413,9 @@ public:
 };
 
 
-class ActionTelemetryConfigGetTopic : public MqttTopic
+class ActionTelemetryConfigGetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionTelemetryConfigGetTopic(const ActionTelemetryConfigGetTopic &) = delete;
@@ -430,9 +430,9 @@ public:
 };
 
 
-class ActionTelemetryConfigContentTopic : public MqttTopic
+class ActionTelemetryConfigContentTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionTelemetryConfigContentTopic(const ActionTelemetryConfigContentTopic &) = delete;
@@ -447,9 +447,9 @@ public:
 };
 
 
-class ActionSessionConfigTopic : public MqttTopic
+class ActionSessionConfigTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionSessionConfigTopic(const ActionSessionConfigTopic &) = delete;
@@ -464,9 +464,9 @@ public:
 };
 
 
-class ActionSessionConfigSetTopic : public MqttTopic
+class ActionSessionConfigSetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionSessionConfigSetTopic(const ActionSessionConfigSetTopic &) = delete;
@@ -481,9 +481,9 @@ public:
 };
 
 
-class ActionSessionConfigGetTopic : public MqttTopic
+class ActionSessionConfigGetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionSessionConfigGetTopic(const ActionSessionConfigGetTopic &) = delete;
@@ -498,9 +498,9 @@ public:
 };
 
 
-class ActionSessionConfigContentTopic : public MqttTopic
+class ActionSessionConfigContentTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionSessionConfigContentTopic(const ActionSessionConfigContentTopic &) = delete;
@@ -515,9 +515,9 @@ public:
 };
 
 
-class ActionCarConfigTopic : public MqttTopic
+class ActionCarConfigTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionCarConfigTopic(const ActionCarConfigTopic &) = delete;
@@ -532,9 +532,9 @@ public:
 };
 
 
-class ActionCarConfigSetTopic : public MqttTopic
+class ActionCarConfigSetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionCarConfigSetTopic(const ActionCarConfigSetTopic &) = delete;
@@ -549,9 +549,9 @@ public:
 };
 
 
-class ActionCarConfigGetTopic : public MqttTopic
+class ActionCarConfigGetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionCarConfigGetTopic(const ActionCarConfigGetTopic &) = delete;
@@ -566,9 +566,9 @@ public:
 };
 
 
-class ActionCarConfigContentTopic : public MqttTopic
+class ActionCarConfigContentTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionCarConfigContentTopic(const ActionCarConfigContentTopic &) = delete;
@@ -583,9 +583,9 @@ public:
 };
 
 
-class ActionConfigsSetTopic : public MqttTopic
+class ActionConfigsSetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionConfigsSetTopic(const ActionConfigsSetTopic &) = delete;
@@ -600,9 +600,9 @@ public:
 };
 
 
-class ActionConfigsGetTopic : public MqttTopic
+class ActionConfigsGetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionConfigsGetTopic(const ActionConfigsGetTopic &) = delete;
@@ -617,9 +617,9 @@ public:
 };
 
 
-class ActionConfigsContentTopic : public MqttTopic
+class ActionConfigsContentTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionConfigsContentTopic(const ActionConfigsContentTopic &) = delete;
@@ -634,9 +634,9 @@ public:
 };
 
 
-class ActionKillTopic : public MqttTopic
+class ActionKillTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionKillTopic(const ActionKillTopic &) = delete;
@@ -651,9 +651,9 @@ public:
 };
 
 
-class ActionStartTopic : public MqttTopic
+class ActionStartTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionStartTopic(const ActionStartTopic &) = delete;
@@ -668,9 +668,9 @@ public:
 };
 
 
-class ActionResetTopic : public MqttTopic
+class ActionResetTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionResetTopic(const ActionResetTopic &) = delete;
@@ -685,9 +685,9 @@ public:
 };
 
 
-class ActionStopTopic : public MqttTopic
+class ActionStopTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionStopTopic(const ActionStopTopic &) = delete;
@@ -702,9 +702,9 @@ public:
 };
 
 
-class ActionRawTopic : public MqttTopic
+class ActionRawTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionRawTopic(const ActionRawTopic &) = delete;
@@ -719,9 +719,9 @@ public:
 };
 
 
-class ActionResetLapCounterTopic : public MqttTopic
+class ActionResetLapCounterTopic : public MQTTTopic
 {
-	friend class MqttTopics;
+	friend class MQTTTopics;
 
 public:
 	ActionResetLapCounterTopic(const ActionResetLapCounterTopic &) = delete;

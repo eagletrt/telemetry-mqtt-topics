@@ -1,17 +1,17 @@
 #ifndef MQTT_TOPICS_H
 #define MQTT_TOPICS_H
 
-#include "MqttTopicsList.h"
+#include "MQTTTopicsList.h"
 
 #include <vector>
 
-class MqttTopics
+class MQTTTopics
 {
 public:
-    MqttTopics() = delete;
-    MqttTopics(const MqttTopics &) = delete;
-    MqttTopics &operator=(const MqttTopics &) = delete;
-    ~MqttTopics() = delete;
+    MQTTTopics() = delete;
+    MQTTTopics(const MQTTTopics &) = delete;
+    MQTTTopics &operator=(const MQTTTopics &) = delete;
+    ~MQTTTopics() = delete;
 
 public:
 
