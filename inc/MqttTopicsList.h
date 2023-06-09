@@ -35,7 +35,7 @@ private:
 	VehicleIdDeviceIdTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -52,7 +52,7 @@ private:
 	DataTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -69,7 +69,7 @@ private:
 	DataPrimaryTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -86,7 +86,7 @@ private:
 	DataSecondaryTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -103,7 +103,7 @@ private:
 	DataInverterTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -120,7 +120,7 @@ private:
 	DataGpsTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -137,7 +137,7 @@ private:
 	DataBrusaTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -154,7 +154,7 @@ private:
 	StatusTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -171,7 +171,7 @@ private:
 	StatusInfoTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -188,7 +188,7 @@ private:
 	StatusErrorTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -205,7 +205,7 @@ private:
 	StatusCanFrequenciesTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -222,7 +222,7 @@ private:
 	CommandTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -239,7 +239,7 @@ private:
 	CommandSendTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -256,7 +256,7 @@ private:
 	CommandResultTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -273,7 +273,7 @@ private:
 	FileTransactionAskTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -290,7 +290,7 @@ private:
 	FileTransactionAckTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -307,7 +307,7 @@ private:
 	FileTransactionTopic();
 
 public:
-	TopicString get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &transactionId, const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -324,7 +324,7 @@ private:
 	FileTransactionBeginTopic();
 
 public:
-	TopicString get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &transactionId, const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -341,7 +341,7 @@ private:
 	FileTransactionEndTopic();
 
 public:
-	TopicString get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &transactionId, const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -358,7 +358,7 @@ private:
 	FileTransactionChunkTopic();
 
 public:
-	TopicString get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &transactionId, const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -375,7 +375,7 @@ private:
 	ActionTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -392,7 +392,7 @@ private:
 	ActionTelemetryConfigTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -409,7 +409,7 @@ private:
 	ActionTelemetryConfigSetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -426,7 +426,7 @@ private:
 	ActionTelemetryConfigGetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -443,7 +443,7 @@ private:
 	ActionTelemetryConfigContentTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -460,7 +460,7 @@ private:
 	ActionSessionConfigTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -477,7 +477,7 @@ private:
 	ActionSessionConfigSetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -494,7 +494,7 @@ private:
 	ActionSessionConfigGetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -511,7 +511,7 @@ private:
 	ActionSessionConfigContentTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -528,7 +528,7 @@ private:
 	ActionCarConfigTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -545,7 +545,7 @@ private:
 	ActionCarConfigSetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -562,7 +562,7 @@ private:
 	ActionCarConfigGetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -579,7 +579,7 @@ private:
 	ActionCarConfigContentTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -596,7 +596,7 @@ private:
 	ActionConfigsSetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -613,7 +613,7 @@ private:
 	ActionConfigsGetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -630,7 +630,7 @@ private:
 	ActionConfigsContentTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -647,7 +647,7 @@ private:
 	ActionKillTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -664,7 +664,7 @@ private:
 	ActionStartTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -681,7 +681,7 @@ private:
 	ActionResetTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -698,7 +698,7 @@ private:
 	ActionStopTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -715,7 +715,7 @@ private:
 	ActionRawTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 
@@ -732,7 +732,7 @@ private:
 	ActionResetLapCounterTopic();
 
 public:
-	TopicString get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const;
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
 };
 
 

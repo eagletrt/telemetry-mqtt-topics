@@ -131,7 +131,7 @@ ActionResetLapCounterTopic::ActionResetLapCounterTopic()
 	: MqttTopic("<vehicle_id>/<device_id>/action/reset_lapcounter", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
 
-TopicString VehicleIdTopic::get(const std::string &vehicleId = "feniceEvo") const {
+TopicString VehicleIdTopic::get(const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -139,16 +139,7 @@ TopicString VehicleIdTopic::get(const std::string &vehicleId = "feniceEvo") cons
 	return str;
 }
 
-TopicString VehicleIdDeviceIdTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
-	std::string str(topic);
-
-	str.replace(str.find("<vehicleId>"), 11, vehicleId);
-	str.replace(str.find("<deviceId>"), 10, deviceId);
-
-	return str;
-}
-
-TopicString DataTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString VehicleIdDeviceIdTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -157,7 +148,7 @@ TopicString DataTopic::get(const std::string &vehicleId = "feniceEvo", const std
 	return str;
 }
 
-TopicString DataPrimaryTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -166,7 +157,7 @@ TopicString DataPrimaryTopic::get(const std::string &vehicleId = "feniceEvo", co
 	return str;
 }
 
-TopicString DataSecondaryTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataPrimaryTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -175,7 +166,7 @@ TopicString DataSecondaryTopic::get(const std::string &vehicleId = "feniceEvo", 
 	return str;
 }
 
-TopicString DataInverterTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataSecondaryTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -184,7 +175,7 @@ TopicString DataInverterTopic::get(const std::string &vehicleId = "feniceEvo", c
 	return str;
 }
 
-TopicString DataGpsTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataInverterTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -193,7 +184,7 @@ TopicString DataGpsTopic::get(const std::string &vehicleId = "feniceEvo", const 
 	return str;
 }
 
-TopicString DataBrusaTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataGpsTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -202,7 +193,7 @@ TopicString DataBrusaTopic::get(const std::string &vehicleId = "feniceEvo", cons
 	return str;
 }
 
-TopicString StatusTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString DataBrusaTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -211,7 +202,7 @@ TopicString StatusTopic::get(const std::string &vehicleId = "feniceEvo", const s
 	return str;
 }
 
-TopicString StatusInfoTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString StatusTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -220,7 +211,7 @@ TopicString StatusInfoTopic::get(const std::string &vehicleId = "feniceEvo", con
 	return str;
 }
 
-TopicString StatusErrorTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString StatusInfoTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -229,7 +220,7 @@ TopicString StatusErrorTopic::get(const std::string &vehicleId = "feniceEvo", co
 	return str;
 }
 
-TopicString StatusCanFrequenciesTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString StatusErrorTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -238,7 +229,7 @@ TopicString StatusCanFrequenciesTopic::get(const std::string &vehicleId = "fenic
 	return str;
 }
 
-TopicString CommandTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString StatusCanFrequenciesTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -247,7 +238,7 @@ TopicString CommandTopic::get(const std::string &vehicleId = "feniceEvo", const 
 	return str;
 }
 
-TopicString CommandSendTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString CommandTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -256,7 +247,7 @@ TopicString CommandSendTopic::get(const std::string &vehicleId = "feniceEvo", co
 	return str;
 }
 
-TopicString CommandResultTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString CommandSendTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -265,7 +256,7 @@ TopicString CommandResultTopic::get(const std::string &vehicleId = "feniceEvo", 
 	return str;
 }
 
-TopicString FileTransactionAskTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString CommandResultTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -274,7 +265,7 @@ TopicString FileTransactionAskTopic::get(const std::string &vehicleId = "feniceE
 	return str;
 }
 
-TopicString FileTransactionAckTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionAskTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -283,17 +274,16 @@ TopicString FileTransactionAckTopic::get(const std::string &vehicleId = "feniceE
 	return str;
 }
 
-TopicString FileTransactionTopic::get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionAckTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
 	str.replace(str.find("<deviceId>"), 10, deviceId);
-	str.replace(str.find("<transactionId>"), 15, transactionId);
 
 	return str;
 }
 
-TopicString FileTransactionBeginTopic::get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionTopic::get(const std::string &transactionId, const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -303,7 +293,7 @@ TopicString FileTransactionBeginTopic::get(const std::string &transactionId, con
 	return str;
 }
 
-TopicString FileTransactionEndTopic::get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionBeginTopic::get(const std::string &transactionId, const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -313,7 +303,7 @@ TopicString FileTransactionEndTopic::get(const std::string &transactionId, const
 	return str;
 }
 
-TopicString FileTransactionChunkTopic::get(const std::string &transactionId, const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionEndTopic::get(const std::string &transactionId, const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -323,7 +313,17 @@ TopicString FileTransactionChunkTopic::get(const std::string &transactionId, con
 	return str;
 }
 
-TopicString ActionTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString FileTransactionChunkTopic::get(const std::string &transactionId, const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+	str.replace(str.find("<transactionId>"), 15, transactionId);
+
+	return str;
+}
+
+TopicString ActionTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -332,7 +332,7 @@ TopicString ActionTopic::get(const std::string &vehicleId = "feniceEvo", const s
 	return str;
 }
 
-TopicString ActionTelemetryConfigTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionTelemetryConfigTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -341,7 +341,7 @@ TopicString ActionTelemetryConfigTopic::get(const std::string &vehicleId = "feni
 	return str;
 }
 
-TopicString ActionTelemetryConfigSetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionTelemetryConfigSetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -350,7 +350,7 @@ TopicString ActionTelemetryConfigSetTopic::get(const std::string &vehicleId = "f
 	return str;
 }
 
-TopicString ActionTelemetryConfigGetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionTelemetryConfigGetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -359,7 +359,7 @@ TopicString ActionTelemetryConfigGetTopic::get(const std::string &vehicleId = "f
 	return str;
 }
 
-TopicString ActionTelemetryConfigContentTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionTelemetryConfigContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -368,7 +368,7 @@ TopicString ActionTelemetryConfigContentTopic::get(const std::string &vehicleId 
 	return str;
 }
 
-TopicString ActionSessionConfigTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionSessionConfigTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -377,7 +377,7 @@ TopicString ActionSessionConfigTopic::get(const std::string &vehicleId = "fenice
 	return str;
 }
 
-TopicString ActionSessionConfigSetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionSessionConfigSetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -386,7 +386,7 @@ TopicString ActionSessionConfigSetTopic::get(const std::string &vehicleId = "fen
 	return str;
 }
 
-TopicString ActionSessionConfigGetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionSessionConfigGetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -395,7 +395,7 @@ TopicString ActionSessionConfigGetTopic::get(const std::string &vehicleId = "fen
 	return str;
 }
 
-TopicString ActionSessionConfigContentTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionSessionConfigContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -404,7 +404,7 @@ TopicString ActionSessionConfigContentTopic::get(const std::string &vehicleId = 
 	return str;
 }
 
-TopicString ActionCarConfigTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionCarConfigTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -413,7 +413,7 @@ TopicString ActionCarConfigTopic::get(const std::string &vehicleId = "feniceEvo"
 	return str;
 }
 
-TopicString ActionCarConfigSetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionCarConfigSetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -422,7 +422,7 @@ TopicString ActionCarConfigSetTopic::get(const std::string &vehicleId = "feniceE
 	return str;
 }
 
-TopicString ActionCarConfigGetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionCarConfigGetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -431,7 +431,7 @@ TopicString ActionCarConfigGetTopic::get(const std::string &vehicleId = "feniceE
 	return str;
 }
 
-TopicString ActionCarConfigContentTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionCarConfigContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -440,7 +440,7 @@ TopicString ActionCarConfigContentTopic::get(const std::string &vehicleId = "fen
 	return str;
 }
 
-TopicString ActionConfigsSetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionConfigsSetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -449,7 +449,7 @@ TopicString ActionConfigsSetTopic::get(const std::string &vehicleId = "feniceEvo
 	return str;
 }
 
-TopicString ActionConfigsGetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionConfigsGetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -458,7 +458,7 @@ TopicString ActionConfigsGetTopic::get(const std::string &vehicleId = "feniceEvo
 	return str;
 }
 
-TopicString ActionConfigsContentTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionConfigsContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -467,7 +467,7 @@ TopicString ActionConfigsContentTopic::get(const std::string &vehicleId = "fenic
 	return str;
 }
 
-TopicString ActionKillTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionKillTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -476,7 +476,7 @@ TopicString ActionKillTopic::get(const std::string &vehicleId = "feniceEvo", con
 	return str;
 }
 
-TopicString ActionStartTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionStartTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -485,7 +485,7 @@ TopicString ActionStartTopic::get(const std::string &vehicleId = "feniceEvo", co
 	return str;
 }
 
-TopicString ActionResetTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionResetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -494,7 +494,7 @@ TopicString ActionResetTopic::get(const std::string &vehicleId = "feniceEvo", co
 	return str;
 }
 
-TopicString ActionStopTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionStopTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -503,7 +503,7 @@ TopicString ActionStopTopic::get(const std::string &vehicleId = "feniceEvo", con
 	return str;
 }
 
-TopicString ActionRawTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionRawTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
@@ -512,7 +512,7 @@ TopicString ActionRawTopic::get(const std::string &vehicleId = "feniceEvo", cons
 	return str;
 }
 
-TopicString ActionResetLapCounterTopic::get(const std::string &vehicleId = "feniceEvo", const std::string &deviceId = "telemetry") const {
+TopicString ActionResetLapCounterTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
