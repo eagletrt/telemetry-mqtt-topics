@@ -19,7 +19,7 @@
 */
 
 {
-    "<vehicle_id>": {
+    "<vehicleId>": {
         "alias": "VehicleIdTopic",
         "description": "<vehicleId>",
         "qos": 0,
@@ -34,8 +34,8 @@
             }
         ],
         "sub_topics": {
-            "<device_id>": {
-                "alias": "VehicleIdDeviceIdTopic",
+            "<deviceId>": {
+                "alias": "DeviceIdTopic",
                 "description": "<vehicleId>/<deviceId>",
                 "qos": 0,
                 "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
@@ -95,7 +95,7 @@
                                 "alias": "StatusErrorTopic",
                                 "description": "<vehicleId>/<deviceId>/status/error"
                             },
-                            "can_frequencies": {
+                            "canFrequencies": {
                                 "alias": "StatusCanFrequenciesTopic",
                                 "description": "<vehicleId>/<deviceId>/status/canFrequencies"
                             }
@@ -121,7 +121,7 @@
                             }
                         }
                     },
-                    "file_transaction/ask": {
+                    "fileTransaction/ask": {
                         "alias": "FileTransactionAskTopic",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
                         "qos": 2,
@@ -129,7 +129,7 @@
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
                         "retained": false
                     },
-                    "file_transaction/ack": {
+                    "fileTransaction/ack": {
                         "alias": "FileTransactionAckTopic",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
                         "qos": 2,
@@ -137,7 +137,7 @@
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
                         "retained": false
                     },
-                    "file_transaction/<transaction_id>": {
+                    "fileTransaction/<transactionId>": {
                         "alias": "FileTransactionTopic",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
                         "qos": 2,
@@ -171,7 +171,7 @@
                         "qos": 0,
                         "retained": false,
                         "sub_topics": {
-                            "telemetry_config": {
+                            "telemetryConfig": {
                                 "alias": "ActionTelemetryConfigTopic",
                                 "description": "<vehicleId>/<deviceId>/action/telemetryConfig",
                                 "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
@@ -197,7 +197,7 @@
                                     }
                                 }
                             },
-                            "session_config": {
+                            "sessionConfig": {
                                 "alias": "ActionSessionConfigTopic",
                                 "description": "<vehicleId>/<deviceId>/action/sessionConfig",
                                 "sub_topics": {
@@ -221,7 +221,7 @@
                                     }
                                 }
                             },
-                            "car_config": {
+                            "carConfig": {
                                 "alias": "ActionCarConfigTopic",
                                 "description": "<vehicleId>/<deviceId>/action/actionCar",
                                 "sub_topics": {
@@ -298,7 +298,7 @@
                                 "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                                 "publishRoles": [0, 1, 2, 3, 4, 128, 129]
                             },
-                            "reset_lapcounter": {
+                            "resetLapcounter": {
                                 "alias": "ActionResetLapCounterTopic",
                                 "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
                                 "qos": 2,
