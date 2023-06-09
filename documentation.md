@@ -1,8 +1,8 @@
 # Topics
 
 ## VehicleIdTopic
-### <vehicleId>
-> <vehicleId>
+### &lt;vehicleId>
+> &lt;vehicleId>
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -10,8 +10,8 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
 
 ## DeviceIdTopic
-### <vehicleId>/<deviceId>
-> <vehicleId>/<deviceId>
+### &lt;vehicleId>/&lt;deviceId>
+> &lt;vehicleId>/&lt;deviceId>
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -20,8 +20,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataTopic
-### <vehicleId>/<deviceId>/data
-> <vehicleId>/<deviceId>/data
+### &lt;vehicleId>/&lt;deviceId>/data
+> &lt;vehicleId>/&lt;deviceId>/data
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -30,8 +30,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataPrimaryTopic
-### <vehicleId>/<deviceId>/data/primary
-> <vehicleId>/<deviceId>/data/primary
+### &lt;vehicleId>/&lt;deviceId>/data/primary
+> &lt;vehicleId>/&lt;deviceId>/data/primary
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -40,8 +40,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataSecondaryTopic
-### <vehicleId>/<deviceId>/data/secondary
-> <vehicleId>/<deviceId>/data/secondary
+### &lt;vehicleId>/&lt;deviceId>/data/secondary
+> &lt;vehicleId>/&lt;deviceId>/data/secondary
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -50,8 +50,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataInverterTopic
-### <vehicleId>/<deviceId>/data/inverter
-> <vehicleId>/<deviceId>/inverter
+### &lt;vehicleId>/&lt;deviceId>/data/inverter
+> &lt;vehicleId>/&lt;deviceId>/inverter
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -60,8 +60,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataGpsTopic
-### <vehicleId>/<deviceId>/data/gps
-> <vehicleId>/<deviceId>/data/gps
+### &lt;vehicleId>/&lt;deviceId>/data/gps
+> &lt;vehicleId>/&lt;deviceId>/data/gps
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -70,8 +70,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## DataBrusaTopic
-### <vehicleId>/<deviceId>/data/brusa
-> <vehicleId>/<deviceId>/data/brusa
+### &lt;vehicleId>/&lt;deviceId>/data/brusa
+> &lt;vehicleId>/&lt;deviceId>/data/brusa
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -80,8 +80,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## StatusTopic
-### <vehicleId>/<deviceId>/status
-> <vehicleId>/<deviceId>/status
+### &lt;vehicleId>/&lt;deviceId>/status
+> &lt;vehicleId>/&lt;deviceId>/status
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
@@ -90,8 +90,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## StatusInfoTopic
-### <vehicleId>/<deviceId>/status/info
-> <vehicleId>/<deviceId>/status/info
+### &lt;vehicleId>/&lt;deviceId>/status/info
+> &lt;vehicleId>/&lt;deviceId>/status/info
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
@@ -100,8 +100,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## StatusErrorTopic
-### <vehicleId>/<deviceId>/status/error
-> <vehicleId>/<deviceId>/status/error
+### &lt;vehicleId>/&lt;deviceId>/status/error
+> &lt;vehicleId>/&lt;deviceId>/status/error
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
@@ -110,8 +110,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## StatusCanFrequenciesTopic
-### <vehicleId>/<deviceId>/status/canFrequencies
-> <vehicleId>/<deviceId>/status/canFrequencies
+### &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
+> &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: Yes
@@ -120,8 +120,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## CommandTopic
-### <vehicleId>/<deviceId>/command
-> <vehicleId>/<deviceId>/command
+### &lt;vehicleId>/&lt;deviceId>/command
+> &lt;vehicleId>/&lt;deviceId>/command
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -130,8 +130,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## CommandSendTopic
-### <vehicleId>/<deviceId>/command/send
-> <vehicleId>/<deviceId>/command/send
+### &lt;vehicleId>/&lt;deviceId>/command/send
+> &lt;vehicleId>/&lt;deviceId>/command/send
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -140,8 +140,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## CommandResultTopic
-### <vehicleId>/<deviceId>/command/result
-> <vehicleId>/<deviceId>/command/result
+### &lt;vehicleId>/&lt;deviceId>/command/result
+> &lt;vehicleId>/&lt;deviceId>/command/result
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -150,8 +150,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## FileTransactionAskTopic
-### <vehicleId>/<deviceId>/fileTransaction/ask
-> <vehicleId>/<deviceId>/fileTransaction/ask
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/ask
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/ask
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -160,8 +160,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## FileTransactionAckTopic
-### <vehicleId>/<deviceId>/fileTransaction/ack
-> <vehicleId>/<deviceId>/fileTransaction/ack
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/ack
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/ack
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -170,8 +170,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## FileTransactionTopic
-### <vehicleId>/<deviceId>/fileTransaction/<transactionId>
-> <vehicleId>/<deviceId>/fileTransaction/<transactionId>
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -180,8 +180,8 @@
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
 ## FileTransactionBeginTopic
-### <vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin
-> <vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -190,8 +190,8 @@
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
 ## FileTransactionEndTopic
-### <vehicleId>/<deviceId>/fileTransaction/<transactionId>/end
-> <vehicleId>/<deviceId>/fileTransaction/<transactionId>/end
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -200,8 +200,8 @@
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
 ## FileTransactionChunkTopic
-### <vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk
-> <vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -210,8 +210,8 @@
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
 ## ActionTopic
-### <vehicleId>/<deviceId>/action
-> <vehicleId>/<deviceId>/action
+### &lt;vehicleId>/&lt;deviceId>/action
+> &lt;vehicleId>/&lt;deviceId>/action
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -220,8 +220,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionTelemetryConfigTopic
-### <vehicleId>/<deviceId>/action/telemetryConfig
-> <vehicleId>/<deviceId>/action/telemetryConfig
+### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
+> &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -230,8 +230,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionTelemetryConfigSetTopic
-### <vehicleId>/<deviceId>/action/telemetryConfig/set
-> <vehicleId>/<deviceId>/action/telemetryConfig/set
+### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -240,8 +240,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionTelemetryConfigGetTopic
-### <vehicleId>/<deviceId>/action/telemetryConfig/get
-> <vehicleId>/<deviceId>/action/telemetryConfig/get
+### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -250,8 +250,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionTelemetryConfigContentTopic
-### <vehicleId>/<deviceId>/action/telemetryConfig/content
-> <vehicleId>/<deviceId>/action/telemetryConfig/content
+### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -260,8 +260,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionSessionConfigTopic
-### <vehicleId>/<deviceId>/action/sessionConfig
-> <vehicleId>/<deviceId>/action/sessionConfig
+### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
+> &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -270,8 +270,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionSessionConfigSetTopic
-### <vehicleId>/<deviceId>/action/sessionConfig/set
-> <vehicleId>/<deviceId>/action/sessionConfig/set
+### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -280,8 +280,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionSessionConfigGetTopic
-### <vehicleId>/<deviceId>/action/sessionConfig/get
-> <vehicleId>/<deviceId>/action/sessionConfig/get
+### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -290,8 +290,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionSessionConfigContentTopic
-### <vehicleId>/<deviceId>/action/sessionConfig/content
-> <vehicleId>/<deviceId>/action/sessionConfig/content
+### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -300,8 +300,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionCarConfigTopic
-### <vehicleId>/<deviceId>/action/carConfig
-> <vehicleId>/<deviceId>/action/actionCar
+### &lt;vehicleId>/&lt;deviceId>/action/carConfig
+> &lt;vehicleId>/&lt;deviceId>/action/actionCar
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -310,8 +310,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionCarConfigSetTopic
-### <vehicleId>/<deviceId>/action/carConfig/set
-> <vehicleId>/<deviceId>/action/carConfig/set
+### &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -320,8 +320,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionCarConfigGetTopic
-### <vehicleId>/<deviceId>/action/carConfig/get
-> <vehicleId>/<deviceId>/action/carConfig/get
+### &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -330,8 +330,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionCarConfigContentTopic
-### <vehicleId>/<deviceId>/action/carConfig/content
-> <vehicleId>/<deviceId>/action/carConfig/content
+### &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -340,8 +340,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionConfigsSetTopic
-### <vehicleId>/<deviceId>/action/+/set
-> <vehicleId>/<deviceId>/action/+/set
+### &lt;vehicleId>/&lt;deviceId>/action/+/set
+> &lt;vehicleId>/&lt;deviceId>/action/+/set
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -350,8 +350,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionConfigsGetTopic
-### <vehicleId>/<deviceId>/action/+/get
-> <vehicleId>/<deviceId>/action/+/get
+### &lt;vehicleId>/&lt;deviceId>/action/+/get
+> &lt;vehicleId>/&lt;deviceId>/action/+/get
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -360,8 +360,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionConfigsContentTopic
-### <vehicleId>/<deviceId>/action/+/content
-> <vehicleId>/<deviceId>/action/+/content
+### &lt;vehicleId>/&lt;deviceId>/action/+/content
+> &lt;vehicleId>/&lt;deviceId>/action/+/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -370,8 +370,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionKillTopic
-### <vehicleId>/<deviceId>/action/kill
-> <vehicleId>/<deviceId>/action/kill
+### &lt;vehicleId>/&lt;deviceId>/action/kill
+> &lt;vehicleId>/&lt;deviceId>/action/kill
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -380,8 +380,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionStartTopic
-### <vehicleId>/<deviceId>/action/start
-> <vehicleId>/<deviceId>/action/start
+### &lt;vehicleId>/&lt;deviceId>/action/start
+> &lt;vehicleId>/&lt;deviceId>/action/start
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -390,8 +390,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionResetTopic
-### <vehicleId>/<deviceId>/action/reset
-> <vehicleId>/<deviceId>/action/reset
+### &lt;vehicleId>/&lt;deviceId>/action/reset
+> &lt;vehicleId>/&lt;deviceId>/action/reset
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -400,8 +400,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionStopTopic
-### <vehicleId>/<deviceId>/action/stop
-> <vehicleId>/<deviceId>/action/stop
+### &lt;vehicleId>/&lt;deviceId>/action/stop
+> &lt;vehicleId>/&lt;deviceId>/action/stop
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -410,8 +410,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionRawTopic
-### <vehicleId>/<deviceId>/action/raw
-> <vehicleId>/<deviceId>/action/raw
+### &lt;vehicleId>/&lt;deviceId>/action/raw
+> &lt;vehicleId>/&lt;deviceId>/action/raw
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
@@ -420,8 +420,8 @@
   - deviceId -> The device ID (default: telemetry)
 
 ## ActionResetLapCounterTopic
-### <vehicleId>/<deviceId>/action/resetLapcounter
-> <vehicleId>/<deviceId>/action/resetLapcounter
+### &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
+> &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retained**: No
