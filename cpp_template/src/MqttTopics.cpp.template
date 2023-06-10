@@ -5,9 +5,7 @@
 std::vector<TopicString> MQTTTopics::GetSubscribeTopics(unsigned int role) {
     std::vector<TopicString> ret;
 
-    switch(role){
-<switch_subscribe>
-    }
+    // IDK
 
     return ret;
 }
@@ -15,9 +13,7 @@ std::vector<TopicString> MQTTTopics::GetSubscribeTopics(unsigned int role) {
 std::vector<TopicString> MQTTTopics::GetPublishTopics(unsigned int role) {
     std::vector<TopicString> ret;
 
-        switch(role){
-<switch_publish>
-    }
+    // IDK
 
     return ret;
 }
