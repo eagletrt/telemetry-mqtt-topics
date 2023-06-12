@@ -15,7 +15,7 @@ include_directories(
 )
 
 file(GLOB SOURCE_FILES
-        "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp"
+        "${CMAKE_CURRENT_LIST_DIR}/src/*.c"
         )
 
 get_property(DIRS DIRECTORY ${CMAKE_CURRENT_LIST_DIR} PROPERTY INCLUDE_DIRECTORIES)

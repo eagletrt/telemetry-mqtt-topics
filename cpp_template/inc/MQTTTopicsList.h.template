@@ -1,9 +1,0 @@
-#ifndef MQTT_TOPICS_LIST_H
-#define MQTT_TOPICS_LIST_H
-
-#include "MQTTTopic.h"
-#include "TopicString.h"
-
-<topics>
-
-#endif

@@ -1,5 +1,5 @@
 import generators.md_generator as md_generator
-import generators.cpp_generator as cpp_generator
+import generators.c_generator as c_generator
 import utils.tree_parser as tree_parser
 import jstyleson as json
 import os
@@ -39,5 +39,5 @@ if __name__ == "__main__":
     md_generator.generate(topics_list, "out/documentation.md")
     print("✅ Markdown generated")
 
-    cpp_generator.generate(topics_list, roles)
+    c_generator.generate(topics_list, roles)
     print("✅ C++ generated")
