@@ -1528,6 +1528,191 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/action/precharge",
+        "alias": "ActionPrechargeTopic",
+        "description": "<vehicleId>/<deviceId>/action/precharge",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/balance",
+        "alias": "ActionBalanceTopic",
+        "description": "<vehicleId>/<deviceId>/action/balance",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/stopBalance",
+        "alias": "ActionStopBalance",
+        "description": "<vehicleId>/<deviceId>/action/stopBalance",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/charge",
+        "alias": "ActionChargeTopic",
+        "description": "<vehicleId>/<deviceId>/action/charge",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/stopCharge",
+        "alias": "ActionStopCharge",
+        "description": "<vehicleId>/<deviceId>/action/stopCharge",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action/raw",
         "alias": "ActionRawTopic",
         "description": "<vehicleId>/<deviceId>/action/raw",

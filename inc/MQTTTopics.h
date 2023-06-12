@@ -56,6 +56,11 @@ public:
 	static const ActionStartTopic actionStartTopic;
 	static const ActionResetTopic actionResetTopic;
 	static const ActionStopTopic actionStopTopic;
+	static const ActionPrechargeTopic actionPrechargeTopic;
+	static const ActionBalanceTopic actionBalanceTopic;
+	static const ActionStopBalance actionStopBalance;
+	static const ActionChargeTopic actionChargeTopic;
+	static const ActionStopCharge actionStopCharge;
 	static const ActionRawTopic actionRawTopic;
 	static const ActionResetLapCounterTopic actionResetLapCounterTopic;
 

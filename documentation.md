@@ -409,6 +409,56 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## ActionPrechargeTopic
+### &lt;vehicleId>/&lt;deviceId>/action/precharge
+> &lt;vehicleId>/&lt;deviceId>/action/precharge
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionBalanceTopic
+### &lt;vehicleId>/&lt;deviceId>/action/balance
+> &lt;vehicleId>/&lt;deviceId>/action/balance
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionStopBalance
+### &lt;vehicleId>/&lt;deviceId>/action/stopBalance
+> &lt;vehicleId>/&lt;deviceId>/action/stopBalance
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionChargeTopic
+### &lt;vehicleId>/&lt;deviceId>/action/charge
+> &lt;vehicleId>/&lt;deviceId>/action/charge
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionStopCharge
+### &lt;vehicleId>/&lt;deviceId>/action/stopCharge
+> &lt;vehicleId>/&lt;deviceId>/action/stopCharge
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## ActionRawTopic
 ### &lt;vehicleId>/&lt;deviceId>/action/raw
 > &lt;vehicleId>/&lt;deviceId>/action/raw

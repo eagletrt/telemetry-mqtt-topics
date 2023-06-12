@@ -702,6 +702,91 @@ public:
 };
 
 
+class ActionPrechargeTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionPrechargeTopic(const ActionPrechargeTopic &) = delete;
+	ActionPrechargeTopic &operator=(const ActionPrechargeTopic &) = delete;
+	~ActionPrechargeTopic() override = default;
+
+private:
+	ActionPrechargeTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionBalanceTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionBalanceTopic(const ActionBalanceTopic &) = delete;
+	ActionBalanceTopic &operator=(const ActionBalanceTopic &) = delete;
+	~ActionBalanceTopic() override = default;
+
+private:
+	ActionBalanceTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionStopBalance : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionStopBalance(const ActionStopBalance &) = delete;
+	ActionStopBalance &operator=(const ActionStopBalance &) = delete;
+	~ActionStopBalance() override = default;
+
+private:
+	ActionStopBalance();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionChargeTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionChargeTopic(const ActionChargeTopic &) = delete;
+	ActionChargeTopic &operator=(const ActionChargeTopic &) = delete;
+	~ActionChargeTopic() override = default;
+
+private:
+	ActionChargeTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionStopCharge : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionStopCharge(const ActionStopCharge &) = delete;
+	ActionStopCharge &operator=(const ActionStopCharge &) = delete;
+	~ActionStopCharge() override = default;
+
+private:
+	ActionStopCharge();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
 class ActionRawTopic : public MQTTTopic
 {
 	friend class MQTTTopics;

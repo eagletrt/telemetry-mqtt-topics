@@ -124,6 +124,21 @@ ActionResetTopic::ActionResetTopic()
 ActionStopTopic::ActionStopTopic()
 	: MQTTTopic("<vehicleId>/<deviceId>/action/stop", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
+ActionPrechargeTopic::ActionPrechargeTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/precharge", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionBalanceTopic::ActionBalanceTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/balance", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionStopBalance::ActionStopBalance()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/stopBalance", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionChargeTopic::ActionChargeTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/charge", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionStopCharge::ActionStopCharge()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/stopCharge", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
 ActionRawTopic::ActionRawTopic()
 	: MQTTTopic("<vehicleId>/<deviceId>/action/raw", 2, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
@@ -495,6 +510,51 @@ TopicString ActionResetTopic::get(const std::string &deviceId, const std::string
 }
 
 TopicString ActionStopTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionPrechargeTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionBalanceTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionStopBalance::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionChargeTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionStopCharge::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);
