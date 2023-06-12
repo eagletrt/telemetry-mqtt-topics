@@ -103,6 +103,18 @@ ActionCarConfigGetTopic::ActionCarConfigGetTopic()
 ActionCarConfigContentTopic::ActionCarConfigContentTopic()
 	: MQTTTopic("<vehicleId>/<deviceId>/action/carConfig/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
+ActionHandcartSettingsTopic::ActionHandcartSettingsTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/handcartSettings", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionHandcartSettingsSetTopic::ActionHandcartSettingsSetTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/handcartSettings/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionHandcartSettingsGetTopic::ActionHandcartSettingsGetTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/handcartSettings/get", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
+ActionHandcartSettingsContentTopic::ActionHandcartSettingsContentTopic()
+	: MQTTTopic("<vehicleId>/<deviceId>/action/handcartSettings/content", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
+
 ActionConfigsSetTopic::ActionConfigsSetTopic()
 	: MQTTTopic("<vehicleId>/<deviceId>/action/+/set", 0, {0, 1, 2, 3, 4, 128, 129}, {0, 1, 2, 3, 4, 128, 129}, false) {}
 
@@ -447,6 +459,42 @@ TopicString ActionCarConfigGetTopic::get(const std::string &deviceId, const std:
 }
 
 TopicString ActionCarConfigContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionHandcartSettingsTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionHandcartSettingsSetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionHandcartSettingsGetTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
+	std::string str(topic);
+
+	str.replace(str.find("<vehicleId>"), 11, vehicleId);
+	str.replace(str.find("<deviceId>"), 10, deviceId);
+
+	return str;
+}
+
+TopicString ActionHandcartSettingsContentTopic::get(const std::string &deviceId, const std::string &vehicleId) const {
 	std::string str(topic);
 
 	str.replace(str.find("<vehicleId>"), 11, vehicleId);

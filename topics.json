@@ -1269,6 +1269,154 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/action/handcartSettings",
+        "alias": "ActionHandcartSettingsTopic",
+        "description": "<vehicleId>/<deviceId>/action/handcartSettings",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/handcartSettings/set",
+        "alias": "ActionHandcartSettingsSetTopic",
+        "description": "<vehicleId>/<deviceId>/action/handcartSettings/set",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/handcartSettings/get",
+        "alias": "ActionHandcartSettingsGetTopic",
+        "description": "<vehicleId>/<deviceId>/action/handcartSettings/get",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/handcartSettings/content",
+        "alias": "ActionHandcartSettingsContentTopic",
+        "description": "<vehicleId>/<deviceId>/action/handcartSettings/content",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retained": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action/+/set",
         "alias": "ActionConfigsSetTopic",
         "description": "<vehicleId>/<deviceId>/action/+/set",

@@ -583,6 +583,74 @@ public:
 };
 
 
+class ActionHandcartSettingsTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionHandcartSettingsTopic(const ActionHandcartSettingsTopic &) = delete;
+	ActionHandcartSettingsTopic &operator=(const ActionHandcartSettingsTopic &) = delete;
+	~ActionHandcartSettingsTopic() override = default;
+
+private:
+	ActionHandcartSettingsTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionHandcartSettingsSetTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionHandcartSettingsSetTopic(const ActionHandcartSettingsSetTopic &) = delete;
+	ActionHandcartSettingsSetTopic &operator=(const ActionHandcartSettingsSetTopic &) = delete;
+	~ActionHandcartSettingsSetTopic() override = default;
+
+private:
+	ActionHandcartSettingsSetTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionHandcartSettingsGetTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionHandcartSettingsGetTopic(const ActionHandcartSettingsGetTopic &) = delete;
+	ActionHandcartSettingsGetTopic &operator=(const ActionHandcartSettingsGetTopic &) = delete;
+	~ActionHandcartSettingsGetTopic() override = default;
+
+private:
+	ActionHandcartSettingsGetTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
+class ActionHandcartSettingsContentTopic : public MQTTTopic
+{
+	friend class MQTTTopics;
+
+public:
+	ActionHandcartSettingsContentTopic(const ActionHandcartSettingsContentTopic &) = delete;
+	ActionHandcartSettingsContentTopic &operator=(const ActionHandcartSettingsContentTopic &) = delete;
+	~ActionHandcartSettingsContentTopic() override = default;
+
+private:
+	ActionHandcartSettingsContentTopic();
+
+public:
+	TopicString get(const std::string &deviceId = "telemetry", const std::string &vehicleId = "feniceEvo") const;
+};
+
+
 class ActionConfigsSetTopic : public MQTTTopic
 {
 	friend class MQTTTopics;

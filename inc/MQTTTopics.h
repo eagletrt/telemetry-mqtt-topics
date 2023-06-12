@@ -49,6 +49,10 @@ public:
 	static const ActionCarConfigSetTopic actionCarConfigSetTopic;
 	static const ActionCarConfigGetTopic actionCarConfigGetTopic;
 	static const ActionCarConfigContentTopic actionCarConfigContentTopic;
+	static const ActionHandcartSettingsTopic actionHandcartSettingsTopic;
+	static const ActionHandcartSettingsSetTopic actionHandcartSettingsSetTopic;
+	static const ActionHandcartSettingsGetTopic actionHandcartSettingsGetTopic;
+	static const ActionHandcartSettingsContentTopic actionHandcartSettingsContentTopic;
 	static const ActionConfigsSetTopic actionConfigsSetTopic;
 	static const ActionConfigsGetTopic actionConfigsGetTopic;
 	static const ActionConfigsContentTopic actionConfigsContentTopic;

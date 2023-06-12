@@ -339,6 +339,46 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## ActionHandcartSettingsTopic
+### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
+> &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionHandcartSettingsSetTopic
+### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
+> &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionHandcartSettingsGetTopic
+### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
+> &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## ActionHandcartSettingsContentTopic
+### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
+> &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retained**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## ActionConfigsSetTopic
 ### &lt;vehicleId>/&lt;deviceId>/action/+/set
 > &lt;vehicleId>/&lt;deviceId>/action/+/set
