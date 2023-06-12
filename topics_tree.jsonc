@@ -291,6 +291,41 @@
                                 "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                                 "publishRoles": [0, 1, 2, 3, 4, 128, 129]
                             },
+                            "precharge": {
+                                "alias": "ActionPrechargeTopic",
+                                "description": "<vehicleId>/<deviceId>/action/precharge",
+                                "qos": 2,
+                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
+                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
+                            },
+                            "balance": {
+                                "alias": "ActionBalanceTopic",
+                                "description": "<vehicleId>/<deviceId>/action/balance",
+                                "qos": 2,
+                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
+                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
+                            },
+                            "stopBalance": {
+                                "alias": "ActionStopBalance",
+                                "description": "<vehicleId>/<deviceId>/action/stopBalance",
+                                "qos": 2,
+                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
+                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
+                            },
+                            "charge": {
+                                "alias": "ActionChargeTopic",
+                                "description": "<vehicleId>/<deviceId>/action/charge",
+                                "qos": 2,
+                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
+                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
+                            },
+                            "stopCharge": {
+                                "alias": "ActionStopCharge",
+                                "description": "<vehicleId>/<deviceId>/action/stopCharge",
+                                "qos": 2,
+                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
+                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
+                            },
                             "raw": {
                                 "alias": "ActionRawTopic",
                                 "description": "<vehicleId>/<deviceId>/action/raw",
