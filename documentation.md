@@ -29,9 +29,19 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## DataLastUpdateTopic
+### &lt;vehicleId>/&lt;deviceId>/data/last_update
+> Sends the last update timestamp of the data
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## DataPrimaryTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
-> &lt;vehicleId>/&lt;deviceId>/data/primary
+> Protobuffer data of primary network
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -41,7 +51,7 @@
 
 ## DataSecondaryTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
-> &lt;vehicleId>/&lt;deviceId>/data/secondary
+> Protobuffer data of secondary network
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -51,7 +61,7 @@
 
 ## DataInverterTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/inverter
-> &lt;vehicleId>/&lt;deviceId>/inverter
+> Protobuffer data of inverter network
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -61,7 +71,7 @@
 
 ## DataGpsTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
-> &lt;vehicleId>/&lt;deviceId>/data/gps
+> Protobuffer data of gps network
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No

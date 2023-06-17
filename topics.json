@@ -106,9 +106,46 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/data/last_update",
+        "alias": "DataLastUpdateTopic",
+        "description": "Sends the last update timestamp of the data",
+        "qos": 0,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/data/primary",
         "alias": "DataPrimaryTopic",
-        "description": "<vehicleId>/<deviceId>/data/primary",
+        "description": "Protobuffer data of primary network",
         "qos": 0,
         "subscribeRoles": [
             0,
@@ -145,7 +182,7 @@
     {
         "topic": "<vehicleId>/<deviceId>/data/secondary",
         "alias": "DataSecondaryTopic",
-        "description": "<vehicleId>/<deviceId>/data/secondary",
+        "description": "Protobuffer data of secondary network",
         "qos": 0,
         "subscribeRoles": [
             0,
@@ -182,7 +219,7 @@
     {
         "topic": "<vehicleId>/<deviceId>/data/inverter",
         "alias": "DataInverterTopic",
-        "description": "<vehicleId>/<deviceId>/inverter",
+        "description": "Protobuffer data of inverter network",
         "qos": 0,
         "subscribeRoles": [
             0,
@@ -219,7 +256,7 @@
     {
         "topic": "<vehicleId>/<deviceId>/data/gps",
         "alias": "DataGpsTopic",
-        "description": "<vehicleId>/<deviceId>/data/gps",
+        "description": "Protobuffer data of gps network",
         "qos": 0,
         "subscribeRoles": [
             0,
