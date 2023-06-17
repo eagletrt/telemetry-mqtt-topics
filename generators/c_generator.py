@@ -6,6 +6,7 @@ from .c_generator_strings import *
 def generate(topics_list, roles):
     make_dirs()
 
+    generate_extra()
     generate_c(topics_list, roles)
     generate_h(topics_list, roles)
 
@@ -16,6 +17,13 @@ def make_dirs():
     if not os.path.exists("out/inc"):
         os.makedirs("out/inc")
 
+def generate_extra():
+    if not os.path.exists("out/CMakeLists.txt"): # CMakeLists.txt
+        with open("cpp_template/CMakeLists.txt", "r") as file:
+            file_content = file.read()
+        with open("out/CMakeLists.txt", "w") as file:
+            file.write(file_content)
+    
 
 def generate_c(topics_list, roles):
     file_content = ""
