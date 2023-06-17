@@ -2,6 +2,7 @@
 #define MQTT_TOPICS_H
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdbool.h>
 
 #ifndef TOPIC_MAX_STR_LEN
