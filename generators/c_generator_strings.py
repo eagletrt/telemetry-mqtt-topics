@@ -1,3 +1,5 @@
+# mqtt_topics.c
+
 # <can_subscribe> and <can_publish>
 
 CAN_IF = '''if (role == ROLE_{role}){{
@@ -48,3 +50,26 @@ topic_t* build_{topic_name}({params}) {{
 '''
 
 TOPIC_PARAMS = '''const char* {param_name}, '''
+
+
+# mqtt_topics.h
+
+# <roles>
+
+ROLES_STR = '''
+    ROLE_{role} = {role},'''
+
+
+# <topics>
+
+TOPICS_STR = '''{topics_array_el}
+
+    TOPICS_NUM = {topics_num}'''
+
+
+TOPICS_ARRAY_EL = '''
+    {topic_name} = {topic_num},'''
+
+
+BUILD_FUNCTION_SIGNATURE = '''topic_t* build_{topic_name}({params});
+'''

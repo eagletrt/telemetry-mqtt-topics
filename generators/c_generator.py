@@ -35,7 +35,6 @@ def generate_c(topics_list, roles):
 
 
     # replace <can_subscribe> and <can_publish>
-    
     first = True
     sub_switch_str = ""
     pub_switch_str = ""
@@ -130,29 +129,27 @@ def generate_h(topics_list, roles):
     roles_str = ""
     for role in roles:
         if role == 128:
-            roles_str = roles_str[:-2] + "\n\n\t"
-        roles_str += f"ROLE_{role} = {role},\n\t"
-    roles_str = roles_str[:-2] + "\n"
+            roles_str = roles_str + "\n\t"
+        roles_str += ROLES_STR.format(role=role)
+    roles_str = roles_str[:-1]
 
     file_content = file_content.replace("<roles>", roles_str)
 
 
     # replace <topics>
-    topics = ""
-    first = True
+    topics_str = ""
+    topic_num = 0
+    topics_array_el = ""
     for topic in topics_list:
-        topic_str = ""
-        topic_enum = camel_to_snake(topic['alias']).upper()
-        if first:
-            first = False
-            topic_str += f"{topic_enum} = 0,"
-        else:
-            topic_str = f"\t{topic_enum},"
+        topics_array_el += TOPICS_ARRAY_EL.format(topic_name=camel_to_snake(topic['alias']).upper(),
+                                                  topic_num=topic_num)
+        topic_num += 1
+    
+    topics_str += TOPICS_STR.format(topics_array_el=topics_array_el,
+                                    topics_num=topic_num)
+        
 
-        topics += f"{topic_str}\n"
-    topics = topics[:-2]
-
-    file_content = file_content.replace("<topics>", topics)
+    file_content = file_content.replace("<topics>", topics_str)
 
 
     # replace <build_functions>
@@ -160,16 +157,15 @@ def generate_h(topics_list, roles):
     for topic in topics_list:
         params = ""
         for param in topic['variables']:
-            params += f"const char* {param['name']}, "
-        params = params[:-2]
+            params += TOPIC_PARAMS.format(param_name = param['name'])
+        if params != "":
+            params = params[:-2]
 
-        function_str = f"topic_t build_{camel_to_snake(topic['alias']).lower()}({params});"
-
-        build_functions += f"{function_str}\n"
+        build_functions += BUILD_FUNCTION_SIGNATURE.format(topic_name = camel_to_snake(topic['alias']).lower(),
+                                                            params = params)
 
     file_content = file_content.replace("<build_functions>", build_functions)
 
-    
     with open(f"out/inc/mqtt_topics.h", "w") as file:
         file.write(file_content)
 

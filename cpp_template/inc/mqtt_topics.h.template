@@ -14,12 +14,10 @@ extern "C" {
 #endif
 
 
-enum ROLES_T {
-    <roles>
+enum ROLES_T {<roles>
 }; 
 
-enum TOPICS_T {
-    <topics>
+enum TOPICS_T {<topics>
 };
 
 typedef struct topic_t {
