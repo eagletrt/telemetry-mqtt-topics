@@ -39,7 +39,7 @@ GET_PUB_SUB_CASE_ARRAY_EL = '''
 # <build_functions>
 
 BUILD_FUNCTION = '''
-topic_t* build_{topic_name}({params}) {{
+topic_t build_{topic_name}({params}) {{
     topic_t topic = {{
 		.qos = {topic_qos},
 		.retain = {topic_retain}
@@ -49,7 +49,7 @@ topic_t* build_{topic_name}({params}) {{
 }}
 '''
 
-TOPIC_PARAMS = '''const char* {param_name}, '''
+TOPIC_PARAMS = '''const char* {param_name}'''
 
 
 # mqtt_topics.h
@@ -71,5 +71,5 @@ TOPICS_ARRAY_EL = '''
     {topic_name} = {topic_num},'''
 
 
-BUILD_FUNCTION_SIGNATURE = '''topic_t* build_{topic_name}({params});
+BUILD_FUNCTION_SIGNATURE = '''topic_t build_{topic_name}({params});
 '''

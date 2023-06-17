@@ -91,22 +91,23 @@ def generate_c(topics_list, roles):
     # replace <build_functions>
     build_functions = ""
     for topic in topics_list:
-        params = ""
-        topic_str = ""
-        topic_params = ""
+        params = []
+        topic_params = []
+        print(topic)
+        print("\n\n")
+        topic_str = topic['topic']
         for param in topic['variables']:
-            params += TOPIC_PARAMS.format(param_name = param['name'])
-            topic_str += "%s/"
-            topic_params += f"{param['name']}, "
-        if params != "":
-            params = params[:-2]
-            topic_str = topic_str[:-1]
-            topic_params = topic_params[:-2]
+            params.append(TOPIC_PARAMS.format(param_name = param['name']))
+            # topic_str += "%s/"
+            topic_params.append(f"{param['name']}")
+            topic_str = topic_str.replace(f"<{param['name']}>", "%s")
+        topic_params = ', '.join(topic_params)
+        params = ', '.join(params)
 
         build_functions += BUILD_FUNCTION.format(topic_name = camel_to_snake(topic['alias']).lower(),
                                                  params = params,
                                                  topic_qos = topic['qos'],
-                                                 topic_retain = topic['retain'],
+                                                 topic_retain = str(topic['retain']).lower(),
                                                  topic_str = topic_str,
                                                  topic_params = topic_params)
 
@@ -155,11 +156,10 @@ def generate_h(topics_list, roles):
     # replace <build_functions>
     build_functions = ""
     for topic in topics_list:
-        params = ""
+        params = []
         for param in topic['variables']:
-            params += TOPIC_PARAMS.format(param_name = param['name'])
-        if params != "":
-            params = params[:-2]
+            params.append(TOPIC_PARAMS.format(param_name = param['name']))
+        params = ', '.join(params)
 
         build_functions += BUILD_FUNCTION_SIGNATURE.format(topic_name = camel_to_snake(topic['alias']).lower(),
                                                             params = params)
