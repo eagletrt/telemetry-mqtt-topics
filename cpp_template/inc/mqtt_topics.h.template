@@ -5,9 +5,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef TOPIC_MAX_STR_LEN
 #define TOPIC_MAX_STR_LEN 128
 #endif
+
 
 enum ROLES_T {
     <roles>
@@ -31,5 +36,9 @@ bool can_subscribe(enum ROLES_T role, enum TOPICS_T topic);
 bool can_publish(enum ROLES_T role, enum TOPICS_T topic);
 
 <build_functions>
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
