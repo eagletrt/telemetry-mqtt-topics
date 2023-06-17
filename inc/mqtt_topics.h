@@ -5,9 +5,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef TOPIC_MAX_STR_LEN
 #define TOPIC_MAX_STR_LEN 128
 #endif
+
 
 enum ROLES_T {
     ROLE_0 = 0,
@@ -142,5 +147,9 @@ topic_t build_topic_action_stop_(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
