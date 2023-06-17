@@ -27,8 +27,8 @@ typedef struct topic_t {
 }topic_t;
 
 void free_topics(topic_t* topic);
-void get_subscribe_topics(topic_t* dest, size_t* dimension, const enum ROLES_T role);
-void get_publish_topics(topic_t* dest, size_t* dimension, const enum ROLES_T role);
+void get_subscribe_topics(topic_t** dest, size_t* dimension, const enum ROLES_T role);
+void get_publish_topics(topic_t** dest, size_t* dimension, const enum ROLES_T role);
 
 bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic);
 bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic);

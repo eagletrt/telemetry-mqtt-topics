@@ -4,12 +4,16 @@
 
 CAN_IF = '''if (role == ROLE_{role}){{
         switch(topic) {{{can_case_el}
+            default:
+                break;
         }}
     }}'''
 
 
 CAN_ELIF = ''' else if (role == ROLE_{role}) {{
         switch(topic) {{{can_case_el}
+            default:
+                break;
         }}
     }}'''
 
@@ -28,13 +32,13 @@ CAN_ARRAY_EL = '''
 GET_PUB_SUB_SWITCH = '''
       case ROLE_{role}:
         *size = {pub_sub_topic_num};
-        dest = (topic_t*) malloc(sizeof(topic_t) * {pub_sub_topic_num});
+        *dest = (topic_t*) malloc(sizeof(topic_t) * {pub_sub_topic_num});
         {get_pub_sub_array_el}
         break;'''
 
 
 GET_PUB_SUB_CASE_ARRAY_EL = '''
-        dest[{i}] = build_{topic_name}({topic_params});'''
+        (*dest)[{i}] = build_{topic_name}({topic_params});'''
 
 
 # <build_functions>

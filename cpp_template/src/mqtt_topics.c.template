@@ -17,13 +17,17 @@ void free_topics(topic_t* topic){
         free(topic);
 }
 
-void get_subscribe_topics(topic_t* dest, size_t* size, const enum ROLES_T role){
+void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){<switch_sub_role>
+        default:
+            break;
     }
 }
 
-void get_publish_topics(topic_t* dest, size_t* size, const enum ROLES_T role){
+void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){<switch_pub_role>
+        default:
+            break;
     }
 }
 
