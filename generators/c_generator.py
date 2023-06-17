@@ -89,7 +89,7 @@ def generate_c(topics_list, roles):
         topic_str = "\""
         topic_params = ""
         for param in topic['variables']:
-            params += f"char* {param['name']}, "
+            params += f"const char* {param['name']}, "
             topic_str += "%s/"
             topic_params += f"{param['name']}, "
         if params != "":
@@ -148,7 +148,7 @@ def generate_h(topics_list, roles):
     for topic in topics_list:
         params = ""
         for param in topic['variables']:
-            params += f"char* {param['name']}, "
+            params += f"const char* {param['name']}, "
         params = params[:-2]
 
         function_str = f"topic_t build_{camel_to_snake(topic['alias']).lower()}({params});"
