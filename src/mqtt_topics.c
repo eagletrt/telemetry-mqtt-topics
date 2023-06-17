@@ -1,815 +1,813 @@
 #include "mqtt_topics.h"
 
 bool can_subscribe(enum ROLES_T role, enum TOPICS_T topic){
+    if (role == ROLE_0){
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_1) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_2) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_3) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_4) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_128) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_129) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    }
 
-  if (role == ROLE_0){
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_1) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_2) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_3) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_4) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_128) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_129) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	}
-
-  return false;
+    return false;
 }
 
 bool can_publish(enum ROLES_T role, enum TOPICS_T topic){
+    if (role == ROLE_0){
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_1) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_2) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_3) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_4) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_128) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    } else if (role == ROLE_129) {
+        switch(topic) {
+            case TOPIC_VEHICLE_ID:
+            case TOPIC_DEVICE_ID:
+            case TOPIC_DATA:
+            case TOPIC_DATA_PRIMARY:
+            case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_INVERTER:
+            case TOPIC_DATA_GPS:
+            case TOPIC_DATA_BRUSA:
+            case TOPIC_STATUS:
+            case TOPIC_STATUS_INFO:
+            case TOPIC_STATUS_ERROR:
+            case TOPIC_STATUS_CAN_FREQUENCIES:
+            case TOPIC_COMMAND:
+            case TOPIC_COMMAND_SEND:
+            case TOPIC_COMMAND_RESULT:
+            case TOPIC_FILE_TRANSACTION_ASK:
+            case TOPIC_FILE_TRANSACTION_ACK:
+            case TOPIC_FILE_TRANSACTION:
+            case TOPIC_FILE_TRANSACTION_BEGIN:
+            case TOPIC_FILE_TRANSACTION_END:
+            case TOPIC_FILE_TRANSACTION_CHUNK:
+            case TOPIC_ACTION:
+            case TOPIC_ACTION_TELEMETRY_CONFIG:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
+            case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
+            case TOPIC_ACTION_SESSION_CONFIG:
+            case TOPIC_ACTION_SESSION_CONFIG_SET:
+            case TOPIC_ACTION_SESSION_CONFIG_GET:
+            case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
+            case TOPIC_ACTION_CAR_CONFIG:
+            case TOPIC_ACTION_CAR_CONFIG_SET:
+            case TOPIC_ACTION_CAR_CONFIG_GET:
+            case TOPIC_ACTION_CAR_CONFIG_CONTENT:
+            case TOPIC_ACTION_HANDCART_SETTINGS:
+            case TOPIC_ACTION_HANDCART_SETTINGS_SET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_GET:
+            case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
+            case TOPIC_ACTION_CONFIGS_SET:
+            case TOPIC_ACTION_CONFIGS_GET:
+            case TOPIC_ACTION_CONFIGS_CONTENT:
+            case TOPIC_ACTION_KILL:
+            case TOPIC_ACTION_START:
+            case TOPIC_ACTION_RESET:
+            case TOPIC_ACTION_STOP:
+            case TOPIC_ACTION_PRECHARGE:
+            case TOPIC_ACTION_BALANCE:
+            case TOPIC_ACTION_STOP_B:
+            case TOPIC_ACTION_CHARGE:
+            case TOPIC_ACTION_STOP_:
+            case TOPIC_ACTION_RAW:
+            case TOPIC_ACTION_RESET_LAP_COUNTER:
+                return true;
+            break;
+        }
+    }
 
-  if (role == ROLE_0){
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_1) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_2) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_3) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_4) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_128) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	} else if (role == ROLE_129) {
-		switch(topic) {
-			case TOPIC_VEHICLE_ID:
-			case TOPIC_DEVICE_ID:
-			case TOPIC_DATA:
-			case TOPIC_DATA_PRIMARY:
-			case TOPIC_DATA_SECONDARY:
-			case TOPIC_DATA_INVERTER:
-			case TOPIC_DATA_GPS:
-			case TOPIC_DATA_BRUSA:
-			case TOPIC_STATUS:
-			case TOPIC_STATUS_INFO:
-			case TOPIC_STATUS_ERROR:
-			case TOPIC_STATUS_CAN_FREQUENCIES:
-			case TOPIC_COMMAND:
-			case TOPIC_COMMAND_SEND:
-			case TOPIC_COMMAND_RESULT:
-			case TOPIC_FILE_TRANSACTION_ASK:
-			case TOPIC_FILE_TRANSACTION_ACK:
-			case TOPIC_FILE_TRANSACTION:
-			case TOPIC_FILE_TRANSACTION_BEGIN:
-			case TOPIC_FILE_TRANSACTION_END:
-			case TOPIC_FILE_TRANSACTION_CHUNK:
-			case TOPIC_ACTION:
-			case TOPIC_ACTION_TELEMETRY_CONFIG:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_SET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_GET:
-			case TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT:
-			case TOPIC_ACTION_SESSION_CONFIG:
-			case TOPIC_ACTION_SESSION_CONFIG_SET:
-			case TOPIC_ACTION_SESSION_CONFIG_GET:
-			case TOPIC_ACTION_SESSION_CONFIG_CONTENT:
-			case TOPIC_ACTION_CAR_CONFIG:
-			case TOPIC_ACTION_CAR_CONFIG_SET:
-			case TOPIC_ACTION_CAR_CONFIG_GET:
-			case TOPIC_ACTION_CAR_CONFIG_CONTENT:
-			case TOPIC_ACTION_HANDCART_SETTINGS:
-			case TOPIC_ACTION_HANDCART_SETTINGS_SET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_GET:
-			case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-			case TOPIC_ACTION_CONFIGS_SET:
-			case TOPIC_ACTION_CONFIGS_GET:
-			case TOPIC_ACTION_CONFIGS_CONTENT:
-			case TOPIC_ACTION_KILL:
-			case TOPIC_ACTION_START:
-			case TOPIC_ACTION_RESET:
-			case TOPIC_ACTION_STOP:
-			case TOPIC_ACTION_PRECHARGE:
-			case TOPIC_ACTION_BALANCE:
-			case TOPIC_ACTION_STOP_B:
-			case TOPIC_ACTION_CHARGE:
-			case TOPIC_ACTION_STOP_:
-			case TOPIC_ACTION_RAW:
-			case TOPIC_ACTION_RESET_LAP_COUNTER:
-				return true;
-			break;
-		}
-	}
-
-  return false;
+    return false;
 }
 
 void free_topics(topic_t* topic){
@@ -1619,523 +1617,471 @@ topic_t* get_publish_topics(enum ROLES_T role){
     return ret;
 }
 
-topic_t build_topic_vehicle_id(const char* vehicleId) {
-	topic_t topic = {
-		.qos = 0,
-		.retain = false
-	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s", vehicleId);
 
-	return topic;
+topic_t* build_topic_vehicle_id(const char* vehicleId) {
+    topic_t topic = {
+		.qos = 0,
+		.retain = False
+	};
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s", vehicleId);
+    return topic;
 }
 
-topic_t build_topic_device_id(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_device_id(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data_primary(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data_primary(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data_secondary(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data_inverter(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data_inverter(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data_gps(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data_gps(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_data_brusa(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_data_brusa(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_status(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_status(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 1,
-		.retain = true
+		.retain = True
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_status_info(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_status_info(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 1,
-		.retain = true
+		.retain = True
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_status_error(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_status_error(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 1,
-		.retain = true
+		.retain = True
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_status_can_frequencies(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_status_can_frequencies(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 1,
-		.retain = true
+		.retain = True
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_command(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_command(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_command_send(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_command_send(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_command_result(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_command_result(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction_ask(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction_ask(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction_ack(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction_ack(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction(const char* vehicleId, const char* deviceId, const char* transactionId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction(const char* vehicleId, const char* deviceId, const char* transactionId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction_begin(const char* vehicleId, const char* deviceId, const char* transactionId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction_begin(const char* vehicleId, const char* deviceId, const char* transactionId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction_end(const char* vehicleId, const char* deviceId, const char* transactionId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction_end(const char* vehicleId, const char* deviceId, const char* transactionId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
+    return topic;
 }
 
-topic_t build_topic_file_transaction_chunk(const char* vehicleId, const char* deviceId, const char* transactionId) {
-	topic_t topic = {
+topic_t* build_topic_file_transaction_chunk(const char* vehicleId, const char* deviceId, const char* transactionId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
+    return topic;
 }
 
-topic_t build_topic_action(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_telemetry_config(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_telemetry_config(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_telemetry_config_set(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_telemetry_config_set(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_telemetry_config_get(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_telemetry_config_get(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_telemetry_config_content(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_telemetry_config_content(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_session_config(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_session_config(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_session_config_set(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_session_config_set(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_session_config_get(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_session_config_get(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_session_config_content(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_session_config_content(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_car_config(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_car_config(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_car_config_set(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_car_config_set(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_car_config_get(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_car_config_get(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_car_config_content(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_car_config_content(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_handcart_settings(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_handcart_settings(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_handcart_settings_set(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_handcart_settings_set(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_handcart_settings_get(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_handcart_settings_get(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_handcart_settings_content(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_handcart_settings_content(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_configs_set(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_configs_set(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_configs_get(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_configs_get(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_configs_content(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_configs_content(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 0,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_kill(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_kill(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_start(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_start(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_reset(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_reset(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_stop(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_stop(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_precharge(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_precharge(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_balance(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_balance(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_stop_b(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_stop_b(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_charge(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_charge(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_stop_(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_stop_(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_raw(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
 
-topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId) {
-	topic_t topic = {
+topic_t* build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
 		.qos = 2,
-		.retain = false
+		.retain = False
 	};
-	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
-
-	return topic;
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
+    return topic;
 }
-
