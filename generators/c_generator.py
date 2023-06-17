@@ -30,7 +30,7 @@ def generate_c(topics_list, roles):
 
 
     # generate mqtt_topic.c
-    with open("cpp_template/src/mqtt_topics.c", "r") as file:
+    with open("cpp_template/src/mqtt_topics.c.template", "r") as file:
         file_content = file.read()
 
 
@@ -110,7 +110,7 @@ def generate_h(topics_list, roles):
     file_content = ""
 
     # generate MQTTTopics.h
-    with open("cpp_template/inc/mqtt_topics.h", "r") as file:
+    with open("cpp_template/inc/mqtt_topics.h.template", "r") as file:
         file_content = file.read()
 
 
