@@ -20,7 +20,7 @@ enum TOPICS_T {
 typedef struct topic_t {
     char topic[TOPIC_MAX_STR_LEN];
     int qos;
-    bool retained;
+    bool retain;
 }topic_t;
 
 void free_topics(topic_t* topic);
