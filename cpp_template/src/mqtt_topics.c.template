@@ -1,12 +1,12 @@
 #include "mqtt_topics.h"
 
-bool can_subscribe(enum ROLES_T role, enum TOPICS_T topic){
+bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
     <can_subscribe>
 
     return false;
 }
 
-bool can_publish(enum ROLES_T role, enum TOPICS_T topic){
+bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
     <can_publish>
 
     return false;
@@ -17,22 +17,14 @@ void free_topics(topic_t* topic){
         free(topic);
 }
 
-topic_t* get_subscribe_topics(enum ROLES_T role){
-    topic_t* ret = NULL;
-
+void get_subscribe_topics(topic_t* dest, size_t* size, const enum ROLES_T role){
     switch(role){<switch_sub_role>
     }
-
-    return ret;
 }
 
-topic_t* get_publish_topics(enum ROLES_T role){
-    topic_t* ret = NULL;
-
+void get_publish_topics(topic_t* dest, size_t* size, const enum ROLES_T role){
     switch(role){<switch_pub_role>
     }
-
-    return ret;
 }
 
 <build_functions>

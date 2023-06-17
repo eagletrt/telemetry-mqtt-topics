@@ -93,8 +93,6 @@ def generate_c(topics_list, roles):
     for topic in topics_list:
         params = []
         topic_params = []
-        print(topic)
-        print("\n\n")
         topic_str = topic['topic']
         for param in topic['variables']:
             params.append(TOPIC_PARAMS.format(param_name = param['name']))
