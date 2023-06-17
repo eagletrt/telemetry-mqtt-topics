@@ -57,21 +57,25 @@
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
                         "retain": false,
                         "sub_topics": {
+                            "last_update": {
+                                "alias": "DataLastUpdateTopic",
+                                "description": "Sends the last update timestamp of the data"
+                            },
                             "primary": {
                                 "alias": "DataPrimaryTopic",
-                                "description": "<vehicleId>/<deviceId>/data/primary"
+                                "description": "Protobuffer data of primary network"
                             },
                             "secondary": {
                                 "alias": "DataSecondaryTopic",
-                                "description": "<vehicleId>/<deviceId>/data/secondary"
+                                "description": "Protobuffer data of secondary network"
                             },
                             "inverter": {
                                 "alias": "DataInverterTopic",
-                                "description": "<vehicleId>/<deviceId>/inverter"
+                                "description": "Protobuffer data of inverter network"
                             },
                             "gps": {
                                 "alias": "DataGpsTopic",
-                                "description": "<vehicleId>/<deviceId>/data/gps"
+                                "description": "Protobuffer data of gps network"
                             },
                             "brusa": {
                                 "alias": "DataBrusaTopic",
