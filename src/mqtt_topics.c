@@ -1622,7 +1622,7 @@ topic_t* get_publish_topics(enum ROLES_T role){
 topic_t build_topic_vehicle_id(const char* vehicleId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s", vehicleId);
 
@@ -1632,7 +1632,7 @@ topic_t build_topic_vehicle_id(const char* vehicleId) {
 topic_t build_topic_device_id(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1642,7 +1642,7 @@ topic_t build_topic_device_id(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_data(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1652,7 +1652,7 @@ topic_t build_topic_data(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_data_primary(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1662,7 +1662,7 @@ topic_t build_topic_data_primary(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1672,7 +1672,7 @@ topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId) 
 topic_t build_topic_data_inverter(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1682,7 +1682,7 @@ topic_t build_topic_data_inverter(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_data_gps(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1692,7 +1692,7 @@ topic_t build_topic_data_gps(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_data_brusa(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1702,7 +1702,7 @@ topic_t build_topic_data_brusa(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_status(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 1,
-		.retains = true
+		.retain = true
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1712,7 +1712,7 @@ topic_t build_topic_status(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_status_info(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 1,
-		.retains = true
+		.retain = true
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1722,7 +1722,7 @@ topic_t build_topic_status_info(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_status_error(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 1,
-		.retains = true
+		.retain = true
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1732,7 +1732,7 @@ topic_t build_topic_status_error(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_status_can_frequencies(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 1,
-		.retains = true
+		.retain = true
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1742,7 +1742,7 @@ topic_t build_topic_status_can_frequencies(const char* vehicleId, const char* de
 topic_t build_topic_command(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1752,7 +1752,7 @@ topic_t build_topic_command(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_command_send(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1762,7 +1762,7 @@ topic_t build_topic_command_send(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_command_result(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1772,7 +1772,7 @@ topic_t build_topic_command_result(const char* vehicleId, const char* deviceId) 
 topic_t build_topic_file_transaction_ask(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1782,7 +1782,7 @@ topic_t build_topic_file_transaction_ask(const char* vehicleId, const char* devi
 topic_t build_topic_file_transaction_ack(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1792,7 +1792,7 @@ topic_t build_topic_file_transaction_ack(const char* vehicleId, const char* devi
 topic_t build_topic_file_transaction(const char* vehicleId, const char* deviceId, const char* transactionId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
 
@@ -1802,7 +1802,7 @@ topic_t build_topic_file_transaction(const char* vehicleId, const char* deviceId
 topic_t build_topic_file_transaction_begin(const char* vehicleId, const char* deviceId, const char* transactionId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
 
@@ -1812,7 +1812,7 @@ topic_t build_topic_file_transaction_begin(const char* vehicleId, const char* de
 topic_t build_topic_file_transaction_end(const char* vehicleId, const char* deviceId, const char* transactionId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
 
@@ -1822,7 +1822,7 @@ topic_t build_topic_file_transaction_end(const char* vehicleId, const char* devi
 topic_t build_topic_file_transaction_chunk(const char* vehicleId, const char* deviceId, const char* transactionId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/%s", vehicleId, deviceId, transactionId);
 
@@ -1832,7 +1832,7 @@ topic_t build_topic_file_transaction_chunk(const char* vehicleId, const char* de
 topic_t build_topic_action(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1842,7 +1842,7 @@ topic_t build_topic_action(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_telemetry_config(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1852,7 +1852,7 @@ topic_t build_topic_action_telemetry_config(const char* vehicleId, const char* d
 topic_t build_topic_action_telemetry_config_set(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1862,7 +1862,7 @@ topic_t build_topic_action_telemetry_config_set(const char* vehicleId, const cha
 topic_t build_topic_action_telemetry_config_get(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1872,7 +1872,7 @@ topic_t build_topic_action_telemetry_config_get(const char* vehicleId, const cha
 topic_t build_topic_action_telemetry_config_content(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1882,7 +1882,7 @@ topic_t build_topic_action_telemetry_config_content(const char* vehicleId, const
 topic_t build_topic_action_session_config(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1892,7 +1892,7 @@ topic_t build_topic_action_session_config(const char* vehicleId, const char* dev
 topic_t build_topic_action_session_config_set(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1902,7 +1902,7 @@ topic_t build_topic_action_session_config_set(const char* vehicleId, const char*
 topic_t build_topic_action_session_config_get(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1912,7 +1912,7 @@ topic_t build_topic_action_session_config_get(const char* vehicleId, const char*
 topic_t build_topic_action_session_config_content(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1922,7 +1922,7 @@ topic_t build_topic_action_session_config_content(const char* vehicleId, const c
 topic_t build_topic_action_car_config(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1932,7 +1932,7 @@ topic_t build_topic_action_car_config(const char* vehicleId, const char* deviceI
 topic_t build_topic_action_car_config_set(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1942,7 +1942,7 @@ topic_t build_topic_action_car_config_set(const char* vehicleId, const char* dev
 topic_t build_topic_action_car_config_get(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1952,7 +1952,7 @@ topic_t build_topic_action_car_config_get(const char* vehicleId, const char* dev
 topic_t build_topic_action_car_config_content(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1962,7 +1962,7 @@ topic_t build_topic_action_car_config_content(const char* vehicleId, const char*
 topic_t build_topic_action_handcart_settings(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1972,7 +1972,7 @@ topic_t build_topic_action_handcart_settings(const char* vehicleId, const char* 
 topic_t build_topic_action_handcart_settings_set(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1982,7 +1982,7 @@ topic_t build_topic_action_handcart_settings_set(const char* vehicleId, const ch
 topic_t build_topic_action_handcart_settings_get(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -1992,7 +1992,7 @@ topic_t build_topic_action_handcart_settings_get(const char* vehicleId, const ch
 topic_t build_topic_action_handcart_settings_content(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2002,7 +2002,7 @@ topic_t build_topic_action_handcart_settings_content(const char* vehicleId, cons
 topic_t build_topic_action_configs_set(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2012,7 +2012,7 @@ topic_t build_topic_action_configs_set(const char* vehicleId, const char* device
 topic_t build_topic_action_configs_get(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2022,7 +2022,7 @@ topic_t build_topic_action_configs_get(const char* vehicleId, const char* device
 topic_t build_topic_action_configs_content(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 0,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2032,7 +2032,7 @@ topic_t build_topic_action_configs_content(const char* vehicleId, const char* de
 topic_t build_topic_action_kill(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2042,7 +2042,7 @@ topic_t build_topic_action_kill(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_start(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2052,7 +2052,7 @@ topic_t build_topic_action_start(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_reset(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2062,7 +2062,7 @@ topic_t build_topic_action_reset(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_stop(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2072,7 +2072,7 @@ topic_t build_topic_action_stop(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_precharge(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2082,7 +2082,7 @@ topic_t build_topic_action_precharge(const char* vehicleId, const char* deviceId
 topic_t build_topic_action_balance(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2092,7 +2092,7 @@ topic_t build_topic_action_balance(const char* vehicleId, const char* deviceId) 
 topic_t build_topic_action_stop_b(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2102,7 +2102,7 @@ topic_t build_topic_action_stop_b(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_charge(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2112,7 +2112,7 @@ topic_t build_topic_action_charge(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_stop_(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2122,7 +2122,7 @@ topic_t build_topic_action_stop_(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
@@ -2132,7 +2132,7 @@ topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId) {
 topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId) {
 	topic_t topic = {
 		.qos = 2,
-		.retains = false
+		.retain = false
 	};
 	snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s", vehicleId, deviceId);
 
