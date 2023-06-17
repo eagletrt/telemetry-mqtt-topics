@@ -22,11 +22,13 @@ typedef struct topic_t {
     bool retained;
 }topic_t;
 
+void free_topics(topic_t* topic);
+topic_t* get_subscribe_topics(enum ROLES_T role);
+topic_t* get_publish_topics(enum ROLES_T role);
 
 bool can_subscribe(enum ROLES_T role, enum TOPICS_T topic);
 bool can_publish(enum ROLES_T role, enum TOPICS_T topic);
 
-
-<get_functions>
+<build_functions>
 
 #endif

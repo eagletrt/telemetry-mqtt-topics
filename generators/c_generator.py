@@ -1,5 +1,6 @@
 import re
 import os
+from .c_generator_strings import *
 
 
 def generate(topics_list, roles):
@@ -21,34 +22,56 @@ def generate_c(topics_list, roles):
 
 
     # generate mqtt_topic.c
-    with open("cpp_template/src/mqtt_topic.c", "r") as file:
+    with open("cpp_template/src/mqtt_topics.c", "r") as file:
         file_content = file.read()
 
 
     # replace <can_subscribe> and <can_publish>
-    can_subscribe = ""
-    can_publish = ""
+    
+    can_subscribe_str = ""
+    can_publish_str = ""
     first = True
+    sub_switch_str = ""
+    pub_switch_str = ""
     for role in roles:
         if first:
             first = False
             role_if = f"if (role == ROLE_{role}){{\n\t\tswitch(topic) {{\n"
         else:
             role_if = f" else if (role == ROLE_{role}) {{\n\t\tswitch(topic) {{\n"
-        can_subscribe += role_if
-        can_publish += role_if
+        can_subscribe_str += role_if
+        can_publish_str += role_if
+        sub_num = 0
+        pub_num = 0
+        sub_case_el = ""
+        pub_case_el = ""
         for topic in topics_list:
             if "subscribeRoles" in topic and role in topic['subscribeRoles']:
-                can_subscribe += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
+                can_subscribe_str += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
+                sub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
+                    i = sub_num,
+                    topic_name=camel_to_snake(topic['alias']).lower(),
+                    topic_params=", ".join(['"+"' for param in topic['variables']])
+                )
+                sub_num += 1
             if "publishRoles" in topic and role in topic['publishRoles']:
-                can_publish += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
-        can_subscribe += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
-        can_publish += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
+                can_publish_str += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
+                pub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
+                    i = pub_num,
+                    topic_name=camel_to_snake(topic['alias']).lower(),
+                    topic_params=", ".join(['"+"' for param in topic['variables']])
+                )
+                pub_num += 1
+
+        sub_switch_str += GET_PUB_SUB_SWITCH.format(role=role, pub_sub_topic_num=sub_num, get_pub_sub_array_el=sub_case_el)
+        pub_switch_str += GET_PUB_SUB_SWITCH.format(role=role, pub_sub_topic_num=pub_num, get_pub_sub_array_el=pub_case_el)
+
+        can_subscribe_str += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
+        can_publish_str += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
     
-    can_subscribe += "\n\t}"
-    can_publish += "\n\t}"
-    
-    file_content = file_content.replace("<can_subscribe>", can_subscribe).replace("<can_publish>", can_publish)
+    file_content = file_content.replace("<can_subscribe>", can_subscribe_str).replace("<can_publish>", can_publish_str)
+    file_content = file_content.replace("<switch_sub_role>", sub_switch_str)
+    file_content = file_content.replace("<switch_pub_role>", pub_switch_str)
 
 
     # replace <build_functions>
@@ -71,7 +94,7 @@ def generate_c(topics_list, roles):
     file_content = file_content.replace("<build_functions>", build_functions)
 
 
-    with open(f"out/src/mqtt_topic.c", "w") as file:
+    with open(f"out/src/mqtt_topics.c", "w") as file:
         file.write(file_content)
 
 
@@ -79,7 +102,7 @@ def generate_h(topics_list, roles):
     file_content = ""
 
     # generate MQTTTopics.h
-    with open("cpp_template/inc/mqtt_topic.h", "r") as file:
+    with open("cpp_template/inc/mqtt_topics.h", "r") as file:
         file_content = file.read()
 
 
@@ -127,7 +150,7 @@ def generate_h(topics_list, roles):
     file_content = file_content.replace("<build_functions>", build_functions)
 
     
-    with open(f"out/inc/mqtt_topic.h", "w") as file:
+    with open(f"out/inc/mqtt_topics.h", "w") as file:
         file.write(file_content)
 
 
