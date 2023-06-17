@@ -1,17 +1,15 @@
 #include "mqtt_topics.h"
 
 bool can_subscribe(enum ROLES_T role, enum TOPICS_T topic){
+    <can_subscribe>
 
-  <can_subscribe>
-
-  return false;
+    return false;
 }
 
 bool can_publish(enum ROLES_T role, enum TOPICS_T topic){
+    <can_publish>
 
-  <can_publish>
-
-  return false;
+    return false;
 }
 
 void free_topics(topic_t* topic){

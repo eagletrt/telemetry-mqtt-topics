@@ -36,26 +36,21 @@ def generate_c(topics_list, roles):
 
     # replace <can_subscribe> and <can_publish>
     
-    can_subscribe_str = ""
-    can_publish_str = ""
     first = True
     sub_switch_str = ""
     pub_switch_str = ""
     for role in roles:
-        if first:
-            first = False
-            role_if = f"if (role == ROLE_{role}){{\n\t\tswitch(topic) {{\n"
-        else:
-            role_if = f" else if (role == ROLE_{role}) {{\n\t\tswitch(topic) {{\n"
-        can_subscribe_str += role_if
-        can_publish_str += role_if
         sub_num = 0
         pub_num = 0
         sub_case_el = ""
         pub_case_el = ""
-        for topic in topics_list:
+        can_sub_case_el = ""
+        can_pub_case_el = ""
+        can_sub_array_el = ""
+        can_pub_array_el = ""
+        for topic in topics_list:   
             if "subscribeRoles" in topic and role in topic['subscribeRoles']:
-                can_subscribe_str += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
+                can_sub_array_el += CAN_ARRAY_EL.format(topic_name=camel_to_snake(topic['alias']).upper())
                 sub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
                     i = sub_num,
                     topic_name=camel_to_snake(topic['alias']).lower(),
@@ -63,7 +58,7 @@ def generate_c(topics_list, roles):
                 )
                 sub_num += 1
             if "publishRoles" in topic and role in topic['publishRoles']:
-                can_publish_str += f"\t\t\tcase {camel_to_snake(topic['alias']).upper()}:\n"
+                can_pub_array_el += CAN_ARRAY_EL.format(topic_name=camel_to_snake(topic['alias']).upper())
                 pub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
                     i = pub_num,
                     topic_name=camel_to_snake(topic['alias']).lower(),
@@ -71,13 +66,25 @@ def generate_c(topics_list, roles):
                 )
                 pub_num += 1
 
+        can_sub_case_el += CAN_CASE_EL.format(can_array_el=can_sub_array_el)
+        can_pub_case_el += CAN_CASE_EL.format(can_array_el=can_pub_array_el)
+
+        if first:
+            first = False
+            can_sub_str = CAN_IF.format(role=role,
+                                        can_case_el=can_sub_case_el)
+            can_pub_str = CAN_IF.format(role=role,
+                                        can_case_el=can_pub_case_el)
+        else:
+            can_sub_str += CAN_ELIF.format(role=role,
+                                            can_case_el=can_sub_case_el)
+            can_pub_str += CAN_ELIF.format(role=role,
+                                            can_case_el=can_pub_case_el)
+
         sub_switch_str += GET_PUB_SUB_SWITCH.format(role=role, pub_sub_topic_num=sub_num, get_pub_sub_array_el=sub_case_el)
         pub_switch_str += GET_PUB_SUB_SWITCH.format(role=role, pub_sub_topic_num=pub_num, get_pub_sub_array_el=pub_case_el)
-
-        can_subscribe_str += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
-        can_publish_str += "\t\t\t\treturn true;\n\t\t\tbreak;\n\t\t}\n\t}"
     
-    file_content = file_content.replace("<can_subscribe>", can_subscribe_str).replace("<can_publish>", can_publish_str)
+    file_content = file_content.replace("<can_subscribe>", can_sub_str).replace("<can_publish>", can_pub_str)
     file_content = file_content.replace("<switch_sub_role>", sub_switch_str)
     file_content = file_content.replace("<switch_pub_role>", pub_switch_str)
 
@@ -86,18 +93,23 @@ def generate_c(topics_list, roles):
     build_functions = ""
     for topic in topics_list:
         params = ""
-        topic_str = "\""
+        topic_str = ""
         topic_params = ""
         for param in topic['variables']:
-            params += f"const char* {param['name']}, "
+            params += TOPIC_PARAMS.format(param_name = param['name'])
             topic_str += "%s/"
             topic_params += f"{param['name']}, "
         if params != "":
             params = params[:-2]
-            topic_str = topic_str[:-1] + "\""
+            topic_str = topic_str[:-1]
             topic_params = topic_params[:-2]
 
-        build_functions += f"topic_t build_{camel_to_snake(topic['alias']).lower()}({params}) {{\n\ttopic_t topic = {{\n\t\t.qos = {topic['qos']},\n\t\t.retain = {'true' if topic['retain'] else 'false'}\n\t}};\n\tsnprintf(topic.topic, TOPIC_MAX_STR_LEN, {topic_str}, {topic_params});\n\n\treturn topic;\n}}\n\n"
+        build_functions += BUILD_FUNCTION.format(topic_name = camel_to_snake(topic['alias']).lower(),
+                                                 params = params,
+                                                 topic_qos = topic['qos'],
+                                                 topic_retain = topic['retain'],
+                                                 topic_str = topic_str,
+                                                 topic_params = topic_params)
 
     file_content = file_content.replace("<build_functions>", build_functions)
 
