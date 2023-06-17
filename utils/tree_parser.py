@@ -9,7 +9,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     qos = 0
     subscribeRoles = []
     publishRoles = []
-    retained = False
+    retain = False
     variables = []
 
     # Concatenate with parent topic
@@ -39,10 +39,10 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     elif "publishRoles" in parent_config:
         publishRoles = parent_config["publishRoles"]
     # Use retain of the parent topic if not defined
-    if "retained" in node:
-        retained = node["retained"]
-    elif "retained" in parent_config:
-        retained = parent_config["retained"]
+    if "retain" in node:
+        retain = node["retain"]
+    elif "retain" in parent_config:
+        retain = parent_config["retain"]
     # Concatenate with parent variables if defined
     if "variables" in parent_config:
         variables.extend(parent_config["variables"])
@@ -56,7 +56,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
         "qos": qos,
         "subscribeRoles": subscribeRoles,
         "publishRoles": publishRoles,
-        "retained": retained,
+        "retain": retain,
         "variables": variables
     }
 

@@ -97,7 +97,7 @@ def generate_c(topics_list, roles):
             topic_str = topic_str[:-1] + "\""
             topic_params = topic_params[:-2]
 
-        build_functions += f"topic_t build_{camel_to_snake(topic['alias']).lower()}({params}) {{\n\ttopic_t topic = {{\n\t\t.qos = {topic['qos']},\n\t\t.retained = {'true' if topic['retained'] else 'false'}\n\t}};\n\tsnprintf(topic.topic, TOPIC_MAX_STR_LEN, {topic_str}, {topic_params});\n\n\treturn topic;\n}}\n\n"
+        build_functions += f"topic_t build_{camel_to_snake(topic['alias']).lower()}({params}) {{\n\ttopic_t topic = {{\n\t\t.qos = {topic['qos']},\n\t\t.retains = {'true' if topic['retain'] else 'false'}\n\t}};\n\tsnprintf(topic.topic, TOPIC_MAX_STR_LEN, {topic_str}, {topic_params});\n\n\treturn topic;\n}}\n\n"
 
     file_content = file_content.replace("<build_functions>", build_functions)
 

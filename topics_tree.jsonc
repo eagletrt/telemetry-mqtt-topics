@@ -9,7 +9,7 @@
         - qos: the quality of service level to use for the topic.
         - subscribeRoles: set of id of the roles that can subscribe to the topic. The value will be the default for all sub-topics.
         - publishRoles: set of id of the roles that can publish to the topic. The value will be the default for all sub-topics.
-        - retained: if true the broker will store the last message and the last value of the retained flag.
+        - retain: if true the broker will store the last message and the last value of the retain flag.
         - variables: array of variables that can be replaced in the topic.
         - sub_topics: array of topics that will be appended to the current topic.
     The variables object contains the following properties:
@@ -25,7 +25,7 @@
         "qos": 0,
         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-        "retained": false,
+        "retain": false,
         "variables": [
             {
                 "name": "vehicleId",
@@ -40,7 +40,7 @@
                 "qos": 0,
                 "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                 "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                "retained": false,
+                "retain": false,
                 "variables": [
                     {
                         "name": "deviceId",
@@ -55,7 +55,7 @@
                         "qos": 0,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                        "retained": false,
+                        "retain": false,
                         "sub_topics": {
                             "primary": {
                                 "alias": "DataPrimaryTopic",
@@ -85,7 +85,7 @@
                         "qos": 1,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                        "retained": true,
+                        "retain": true,
                         "sub_topics": {
                             "info": {
                                 "alias": "StatusInfoTopic",
@@ -105,7 +105,7 @@
                         "alias": "CommandTopic",
                         "description": "<vehicleId>/<deviceId>/command",
                         "qos": 2,
-                        "retained": false,
+                        "retain": false,
                         "sub_topics": {
                             "send": {
                                 "alias": "CommandSendTopic",
@@ -127,7 +127,7 @@
                         "qos": 2,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                        "retained": false
+                        "retain": false
                     },
                     "fileTransaction/ack": {
                         "alias": "FileTransactionAckTopic",
@@ -135,7 +135,7 @@
                         "qos": 2,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                        "retained": false
+                        "retain": false
                     },
                     "fileTransaction/<transactionId>": {
                         "alias": "FileTransactionTopic",
@@ -143,7 +143,7 @@
                         "qos": 2,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
-                        "retained": false,
+                        "retain": false,
                         "variables": [
                             {
                                 "name": "transactionId",
@@ -169,7 +169,7 @@
                         "alias": "ActionTopic",
                         "description": "<vehicleId>/<deviceId>/action",
                         "qos": 0,
-                        "retained": false,
+                        "retain": false,
                         "sub_topics": {
                             "telemetryConfig": {
                                 "alias": "ActionTelemetryConfigTopic",
