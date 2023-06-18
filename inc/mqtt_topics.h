@@ -42,45 +42,46 @@ enum TOPICS_T {
     TOPIC_COMMAND = 13,
     TOPIC_COMMAND_SEND = 14,
     TOPIC_COMMAND_RESULT = 15,
-    TOPIC_FILE_TRANSACTION_ASK = 16,
-    TOPIC_FILE_TRANSACTION_ACK = 17,
+    TOPIC_FILE_TRANSACTION_REQUEST = 16,
+    TOPIC_FILE_TRANSACTION_RESPONSE = 17,
     TOPIC_FILE_TRANSACTION = 18,
     TOPIC_FILE_TRANSACTION_BEGIN = 19,
     TOPIC_FILE_TRANSACTION_END = 20,
     TOPIC_FILE_TRANSACTION_CHUNK = 21,
-    TOPIC_ACTION = 22,
-    TOPIC_ACTION_TELEMETRY_CONFIG = 23,
-    TOPIC_ACTION_TELEMETRY_CONFIG_SET = 24,
-    TOPIC_ACTION_TELEMETRY_CONFIG_GET = 25,
-    TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT = 26,
-    TOPIC_ACTION_SESSION_CONFIG = 27,
-    TOPIC_ACTION_SESSION_CONFIG_SET = 28,
-    TOPIC_ACTION_SESSION_CONFIG_GET = 29,
-    TOPIC_ACTION_SESSION_CONFIG_CONTENT = 30,
-    TOPIC_ACTION_CAR_CONFIG = 31,
-    TOPIC_ACTION_CAR_CONFIG_SET = 32,
-    TOPIC_ACTION_CAR_CONFIG_GET = 33,
-    TOPIC_ACTION_CAR_CONFIG_CONTENT = 34,
-    TOPIC_ACTION_HANDCART_SETTINGS = 35,
-    TOPIC_ACTION_HANDCART_SETTINGS_SET = 36,
-    TOPIC_ACTION_HANDCART_SETTINGS_GET = 37,
-    TOPIC_ACTION_HANDCART_SETTINGS_CONTENT = 38,
-    TOPIC_ACTION_CONFIGS_SET = 39,
-    TOPIC_ACTION_CONFIGS_GET = 40,
-    TOPIC_ACTION_CONFIGS_CONTENT = 41,
-    TOPIC_ACTION_KILL = 42,
-    TOPIC_ACTION_START = 43,
-    TOPIC_ACTION_RESET = 44,
-    TOPIC_ACTION_STOP = 45,
-    TOPIC_ACTION_PRECHARGE = 46,
-    TOPIC_ACTION_BALANCE = 47,
-    TOPIC_ACTION_STOP_B = 48,
-    TOPIC_ACTION_CHARGE = 49,
-    TOPIC_ACTION_STOP_ = 50,
-    TOPIC_ACTION_RAW = 51,
-    TOPIC_ACTION_RESET_LAP_COUNTER = 52,
+    TOPIC_FILE_TRANSACTION_CHUNK_ACK = 22,
+    TOPIC_ACTION = 23,
+    TOPIC_ACTION_TELEMETRY_CONFIG = 24,
+    TOPIC_ACTION_TELEMETRY_CONFIG_SET = 25,
+    TOPIC_ACTION_TELEMETRY_CONFIG_GET = 26,
+    TOPIC_ACTION_TELEMETRY_CONFIG_CONTENT = 27,
+    TOPIC_ACTION_SESSION_CONFIG = 28,
+    TOPIC_ACTION_SESSION_CONFIG_SET = 29,
+    TOPIC_ACTION_SESSION_CONFIG_GET = 30,
+    TOPIC_ACTION_SESSION_CONFIG_CONTENT = 31,
+    TOPIC_ACTION_CAR_CONFIG = 32,
+    TOPIC_ACTION_CAR_CONFIG_SET = 33,
+    TOPIC_ACTION_CAR_CONFIG_GET = 34,
+    TOPIC_ACTION_CAR_CONFIG_CONTENT = 35,
+    TOPIC_ACTION_HANDCART_SETTINGS = 36,
+    TOPIC_ACTION_HANDCART_SETTINGS_SET = 37,
+    TOPIC_ACTION_HANDCART_SETTINGS_GET = 38,
+    TOPIC_ACTION_HANDCART_SETTINGS_CONTENT = 39,
+    TOPIC_ACTION_CONFIGS_SET = 40,
+    TOPIC_ACTION_CONFIGS_GET = 41,
+    TOPIC_ACTION_CONFIGS_CONTENT = 42,
+    TOPIC_ACTION_KILL = 43,
+    TOPIC_ACTION_START = 44,
+    TOPIC_ACTION_RESET = 45,
+    TOPIC_ACTION_STOP = 46,
+    TOPIC_ACTION_PRECHARGE = 47,
+    TOPIC_ACTION_BALANCE = 48,
+    TOPIC_ACTION_STOP_B = 49,
+    TOPIC_ACTION_CHARGE = 50,
+    TOPIC_ACTION_STOP_ = 51,
+    TOPIC_ACTION_RAW = 52,
+    TOPIC_ACTION_RESET_LAP_COUNTER = 53,
 
-    TOPICS_NUM = 53
+    TOPICS_NUM = 54
 };
 
 typedef struct topic_t {
@@ -112,12 +113,13 @@ topic_t build_topic_status_can_frequencies(const char* vehicleId, const char* de
 topic_t build_topic_command(const char* vehicleId, const char* deviceId);
 topic_t build_topic_command_send(const char* vehicleId, const char* deviceId);
 topic_t build_topic_command_result(const char* vehicleId, const char* deviceId);
-topic_t build_topic_file_transaction_ask(const char* vehicleId, const char* deviceId);
-topic_t build_topic_file_transaction_ack(const char* vehicleId, const char* deviceId);
+topic_t build_topic_file_transaction_request(const char* vehicleId, const char* deviceId);
+topic_t build_topic_file_transaction_response(const char* vehicleId, const char* deviceId);
 topic_t build_topic_file_transaction(const char* vehicleId, const char* deviceId, const char* transactionId);
 topic_t build_topic_file_transaction_begin(const char* vehicleId, const char* deviceId, const char* transactionId);
 topic_t build_topic_file_transaction_end(const char* vehicleId, const char* deviceId, const char* transactionId);
 topic_t build_topic_file_transaction_chunk(const char* vehicleId, const char* deviceId, const char* transactionId);
+topic_t build_topic_file_transaction_chunk_ack(const char* vehicleId, const char* deviceId, const char* transactionId);
 topic_t build_topic_action(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_telemetry_config(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_telemetry_config_set(const char* vehicleId, const char* deviceId);

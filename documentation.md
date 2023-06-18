@@ -159,9 +159,9 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## FileTransactionAskTopic
-### &lt;vehicleId>/&lt;deviceId>/fileTransaction/ask
-> &lt;vehicleId>/&lt;deviceId>/fileTransaction/ask
+## FileTransactionRequestTopic
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -169,9 +169,9 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## FileTransactionAckTopic
-### &lt;vehicleId>/&lt;deviceId>/fileTransaction/ack
-> &lt;vehicleId>/&lt;deviceId>/fileTransaction/ack
+## FileTransactionResponseTopic
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -212,6 +212,16 @@
 ## FileTransactionChunkTopic
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+  - transactionId -> The transaction ID 
+## FileTransactionChunkAckTopic
+### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
+> &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No

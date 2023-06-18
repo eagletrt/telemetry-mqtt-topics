@@ -587,9 +587,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/fileTransaction/ask",
-        "alias": "FileTransactionAskTopic",
-        "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/request",
+        "alias": "FileTransactionRequestTopic",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/request",
         "qos": 2,
         "subscribeRoles": [
             0,
@@ -624,9 +624,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/fileTransaction/ack",
-        "alias": "FileTransactionAckTopic",
-        "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/response",
+        "alias": "FileTransactionResponseTopic",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/response",
         "qos": 2,
         "subscribeRoles": [
             0,
@@ -787,6 +787,47 @@
         "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
         "alias": "FileTransactionChunkTopic",
         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            },
+            {
+                "name": "transactionId",
+                "description": "The transaction ID"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack",
+        "alias": "FileTransactionChunkAckTopic",
+        "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack",
         "qos": 2,
         "subscribeRoles": [
             0,
