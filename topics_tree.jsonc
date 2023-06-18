@@ -125,17 +125,17 @@
                             }
                         }
                     },
-                    "fileTransaction/ask": {
-                        "alias": "FileTransactionAskTopic",
-                        "description": "<vehicleId>/<deviceId>/fileTransaction/ask",
+                    "fileTransaction/request": {
+                        "alias": "FileTransactionRequestTopic",
+                        "description": "<vehicleId>/<deviceId>/fileTransaction/request",
                         "qos": 2,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
                         "retain": false
                     },
-                    "fileTransaction/ack": {
-                        "alias": "FileTransactionAckTopic",
-                        "description": "<vehicleId>/<deviceId>/fileTransaction/ack",
+                    "fileTransaction/response": {
+                        "alias": "FileTransactionResponseTopic",
+                        "description": "<vehicleId>/<deviceId>/fileTransaction/response",
                         "qos": 2,
                         "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
                         "publishRoles": [0, 1, 2, 3, 4, 128, 129],
@@ -166,6 +166,10 @@
                             "chunk": {
                                 "alias": "FileTransactionChunkTopic",
                                 "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk"
+                            },
+                            "chunk_ack": {
+                                "alias": "FileTransactionChunkAckTopic",
+                                "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack"
                             }
                         }
                     },
