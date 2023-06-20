@@ -277,24 +277,6 @@
                                     }
                                 }
                             },
-                            "+/set": {
-                                "alias": "ActionConfigsSetTopic",
-                                "description": "<vehicleId>/<deviceId>/action/+/set",
-                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
-                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
-                            },
-                            "+/get": {
-                                "alias": "ActionConfigsGetTopic",
-                                "description": "<vehicleId>/<deviceId>/action/+/get",
-                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
-                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
-                            },
-                            "+/content": {
-                                "alias": "ActionConfigsContentTopic",
-                                "description": "<vehicleId>/<deviceId>/action/+/content",
-                                "subscribeRoles": [0, 1, 2, 3, 4, 128, 129],
-                                "publishRoles": [0, 1, 2, 3, 4, 128, 129]
-                            },
                             "kill": {
                                 "alias": "ActionKillTopic",
                                 "description": "<vehicleId>/<deviceId>/action/kill",
