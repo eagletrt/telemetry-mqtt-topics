@@ -66,22 +66,19 @@ enum TOPICS_T {
     TOPIC_ACTION_HANDCART_SETTINGS_SET = 37,
     TOPIC_ACTION_HANDCART_SETTINGS_GET = 38,
     TOPIC_ACTION_HANDCART_SETTINGS_CONTENT = 39,
-    TOPIC_ACTION_CONFIGS_SET = 40,
-    TOPIC_ACTION_CONFIGS_GET = 41,
-    TOPIC_ACTION_CONFIGS_CONTENT = 42,
-    TOPIC_ACTION_KILL = 43,
-    TOPIC_ACTION_START = 44,
-    TOPIC_ACTION_RESET = 45,
-    TOPIC_ACTION_STOP = 46,
-    TOPIC_ACTION_PRECHARGE = 47,
-    TOPIC_ACTION_BALANCE = 48,
-    TOPIC_ACTION_STOP_B = 49,
-    TOPIC_ACTION_CHARGE = 50,
-    TOPIC_ACTION_STOP_ = 51,
-    TOPIC_ACTION_RAW = 52,
-    TOPIC_ACTION_RESET_LAP_COUNTER = 53,
+    TOPIC_ACTION_KILL = 40,
+    TOPIC_ACTION_START = 41,
+    TOPIC_ACTION_RESET = 42,
+    TOPIC_ACTION_STOP = 43,
+    TOPIC_ACTION_PRECHARGE = 44,
+    TOPIC_ACTION_BALANCE = 45,
+    TOPIC_ACTION_STOP_B = 46,
+    TOPIC_ACTION_CHARGE = 47,
+    TOPIC_ACTION_STOP_ = 48,
+    TOPIC_ACTION_RAW = 49,
+    TOPIC_ACTION_RESET_LAP_COUNTER = 50,
 
-    TOPICS_NUM = 54
+    TOPICS_NUM = 51
 };
 
 typedef struct topic_t {
@@ -137,9 +134,6 @@ topic_t build_topic_action_handcart_settings(const char* vehicleId, const char* 
 topic_t build_topic_action_handcart_settings_set(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_handcart_settings_get(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_handcart_settings_content(const char* vehicleId, const char* deviceId);
-topic_t build_topic_action_configs_set(const char* vehicleId, const char* deviceId);
-topic_t build_topic_action_configs_get(const char* vehicleId, const char* deviceId);
-topic_t build_topic_action_configs_content(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_kill(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_start(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_reset(const char* vehicleId, const char* deviceId);

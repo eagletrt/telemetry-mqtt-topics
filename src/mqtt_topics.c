@@ -43,9 +43,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -104,9 +101,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -165,9 +159,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -226,9 +217,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -287,9 +275,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -348,9 +333,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -409,9 +391,6 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -476,9 +455,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -537,9 +513,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -598,9 +571,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -659,9 +629,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -720,9 +687,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -781,9 +745,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -842,9 +803,6 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_HANDCART_SETTINGS_SET:
             case TOPIC_ACTION_HANDCART_SETTINGS_GET:
             case TOPIC_ACTION_HANDCART_SETTINGS_CONTENT:
-            case TOPIC_ACTION_CONFIGS_SET:
-            case TOPIC_ACTION_CONFIGS_GET:
-            case TOPIC_ACTION_CONFIGS_CONTENT:
             case TOPIC_ACTION_KILL:
             case TOPIC_ACTION_START:
             case TOPIC_ACTION_RESET:
@@ -874,8 +832,8 @@ void free_topics(topic_t* topic){
 void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -917,24 +875,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_1:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -976,24 +931,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_2:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1035,24 +987,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_3:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1094,24 +1043,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_4:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1153,24 +1099,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_128:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1212,24 +1155,21 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_129:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1271,20 +1211,17 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
         default:
             break;
@@ -1294,8 +1231,8 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
 void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1337,24 +1274,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_1:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1396,24 +1330,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_2:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1455,24 +1386,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_3:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1514,24 +1442,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_4:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1573,24 +1498,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_128:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1632,24 +1554,21 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_129:
-        *size = 54;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 54);
+        *size = 51;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1691,20 +1610,17 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
         (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
         (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_configs_set("+", "+");
-        (*dest)[41] = build_topic_action_configs_get("+", "+");
-        (*dest)[42] = build_topic_action_configs_content("+", "+");
-        (*dest)[43] = build_topic_action_kill("+", "+");
-        (*dest)[44] = build_topic_action_start("+", "+");
-        (*dest)[45] = build_topic_action_reset("+", "+");
-        (*dest)[46] = build_topic_action_stop("+", "+");
-        (*dest)[47] = build_topic_action_precharge("+", "+");
-        (*dest)[48] = build_topic_action_balance("+", "+");
-        (*dest)[49] = build_topic_action_stop_b("+", "+");
-        (*dest)[50] = build_topic_action_charge("+", "+");
-        (*dest)[51] = build_topic_action_stop_("+", "+");
-        (*dest)[52] = build_topic_action_raw("+", "+");
-        (*dest)[53] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[40] = build_topic_action_kill("+", "+");
+        (*dest)[41] = build_topic_action_start("+", "+");
+        (*dest)[42] = build_topic_action_reset("+", "+");
+        (*dest)[43] = build_topic_action_stop("+", "+");
+        (*dest)[44] = build_topic_action_precharge("+", "+");
+        (*dest)[45] = build_topic_action_balance("+", "+");
+        (*dest)[46] = build_topic_action_stop_b("+", "+");
+        (*dest)[47] = build_topic_action_charge("+", "+");
+        (*dest)[48] = build_topic_action_stop_("+", "+");
+        (*dest)[49] = build_topic_action_raw("+", "+");
+        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
         break;
         default:
             break;
@@ -2069,33 +1985,6 @@ topic_t build_topic_action_handcart_settings_content(const char* vehicleId, cons
 		.retain = false
 	};
     snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/handcartSettings/content", vehicleId, deviceId);
-    return topic;
-}
-
-topic_t build_topic_action_configs_set(const char* vehicleId, const char* deviceId) {
-    topic_t topic = {
-		.qos = 0,
-		.retain = false
-	};
-    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/+/set", vehicleId, deviceId);
-    return topic;
-}
-
-topic_t build_topic_action_configs_get(const char* vehicleId, const char* deviceId) {
-    topic_t topic = {
-		.qos = 0,
-		.retain = false
-	};
-    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/+/get", vehicleId, deviceId);
-    return topic;
-}
-
-topic_t build_topic_action_configs_content(const char* vehicleId, const char* deviceId) {
-    topic_t topic = {
-		.qos = 0,
-		.retain = false
-	};
-    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/+/content", vehicleId, deviceId);
     return topic;
 }
 
