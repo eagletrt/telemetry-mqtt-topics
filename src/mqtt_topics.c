@@ -9,6 +9,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -67,6 +68,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -125,6 +127,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -183,6 +186,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -241,6 +245,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -299,6 +304,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -357,6 +363,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -421,6 +428,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -479,6 +487,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -537,6 +546,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -595,6 +605,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -653,6 +664,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -711,6 +723,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -769,6 +782,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
+            case TOPIC_DATA_B_M_S:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -832,8 +846,8 @@ void free_topics(topic_t* topic){
 void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -841,55 +855,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_1:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -897,55 +912,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_2:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -953,55 +969,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_3:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1009,55 +1026,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_4:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1065,55 +1083,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_128:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1121,55 +1140,56 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_129:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1177,51 +1197,52 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
         default:
             break;
@@ -1231,8 +1252,8 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
 void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1240,55 +1261,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_1:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1296,55 +1318,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_2:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1352,55 +1375,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_3:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1408,55 +1432,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_4:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1464,55 +1489,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_128:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1520,55 +1546,56 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
       case ROLE_129:
-        *size = 51;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 51);
+        *size = 52;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 52);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1576,51 +1603,52 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_inverter("+", "+");
-        (*dest)[7] = build_topic_data_gps("+", "+");
-        (*dest)[8] = build_topic_data_brusa("+", "+");
-        (*dest)[9] = build_topic_status("+", "+");
-        (*dest)[10] = build_topic_status_info("+", "+");
-        (*dest)[11] = build_topic_status_error("+", "+");
-        (*dest)[12] = build_topic_status_can_frequencies("+", "+");
-        (*dest)[13] = build_topic_command("+", "+");
-        (*dest)[14] = build_topic_command_send("+", "+");
-        (*dest)[15] = build_topic_command_result("+", "+");
-        (*dest)[16] = build_topic_file_transaction_request("+", "+");
-        (*dest)[17] = build_topic_file_transaction_response("+", "+");
-        (*dest)[18] = build_topic_file_transaction("+", "+", "+");
-        (*dest)[19] = build_topic_file_transaction_begin("+", "+", "+");
-        (*dest)[20] = build_topic_file_transaction_end("+", "+", "+");
-        (*dest)[21] = build_topic_file_transaction_chunk("+", "+", "+");
-        (*dest)[22] = build_topic_file_transaction_chunk_ack("+", "+", "+");
-        (*dest)[23] = build_topic_action("+", "+");
-        (*dest)[24] = build_topic_action_telemetry_config("+", "+");
-        (*dest)[25] = build_topic_action_telemetry_config_set("+", "+");
-        (*dest)[26] = build_topic_action_telemetry_config_get("+", "+");
-        (*dest)[27] = build_topic_action_telemetry_config_content("+", "+");
-        (*dest)[28] = build_topic_action_session_config("+", "+");
-        (*dest)[29] = build_topic_action_session_config_set("+", "+");
-        (*dest)[30] = build_topic_action_session_config_get("+", "+");
-        (*dest)[31] = build_topic_action_session_config_content("+", "+");
-        (*dest)[32] = build_topic_action_car_config("+", "+");
-        (*dest)[33] = build_topic_action_car_config_set("+", "+");
-        (*dest)[34] = build_topic_action_car_config_get("+", "+");
-        (*dest)[35] = build_topic_action_car_config_content("+", "+");
-        (*dest)[36] = build_topic_action_handcart_settings("+", "+");
-        (*dest)[37] = build_topic_action_handcart_settings_set("+", "+");
-        (*dest)[38] = build_topic_action_handcart_settings_get("+", "+");
-        (*dest)[39] = build_topic_action_handcart_settings_content("+", "+");
-        (*dest)[40] = build_topic_action_kill("+", "+");
-        (*dest)[41] = build_topic_action_start("+", "+");
-        (*dest)[42] = build_topic_action_reset("+", "+");
-        (*dest)[43] = build_topic_action_stop("+", "+");
-        (*dest)[44] = build_topic_action_precharge("+", "+");
-        (*dest)[45] = build_topic_action_balance("+", "+");
-        (*dest)[46] = build_topic_action_stop_b("+", "+");
-        (*dest)[47] = build_topic_action_charge("+", "+");
-        (*dest)[48] = build_topic_action_stop_("+", "+");
-        (*dest)[49] = build_topic_action_raw("+", "+");
-        (*dest)[50] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[7] = build_topic_data_inverter("+", "+");
+        (*dest)[8] = build_topic_data_gps("+", "+");
+        (*dest)[9] = build_topic_data_brusa("+", "+");
+        (*dest)[10] = build_topic_status("+", "+");
+        (*dest)[11] = build_topic_status_info("+", "+");
+        (*dest)[12] = build_topic_status_error("+", "+");
+        (*dest)[13] = build_topic_status_can_frequencies("+", "+");
+        (*dest)[14] = build_topic_command("+", "+");
+        (*dest)[15] = build_topic_command_send("+", "+");
+        (*dest)[16] = build_topic_command_result("+", "+");
+        (*dest)[17] = build_topic_file_transaction_request("+", "+");
+        (*dest)[18] = build_topic_file_transaction_response("+", "+");
+        (*dest)[19] = build_topic_file_transaction("+", "+", "+");
+        (*dest)[20] = build_topic_file_transaction_begin("+", "+", "+");
+        (*dest)[21] = build_topic_file_transaction_end("+", "+", "+");
+        (*dest)[22] = build_topic_file_transaction_chunk("+", "+", "+");
+        (*dest)[23] = build_topic_file_transaction_chunk_ack("+", "+", "+");
+        (*dest)[24] = build_topic_action("+", "+");
+        (*dest)[25] = build_topic_action_telemetry_config("+", "+");
+        (*dest)[26] = build_topic_action_telemetry_config_set("+", "+");
+        (*dest)[27] = build_topic_action_telemetry_config_get("+", "+");
+        (*dest)[28] = build_topic_action_telemetry_config_content("+", "+");
+        (*dest)[29] = build_topic_action_session_config("+", "+");
+        (*dest)[30] = build_topic_action_session_config_set("+", "+");
+        (*dest)[31] = build_topic_action_session_config_get("+", "+");
+        (*dest)[32] = build_topic_action_session_config_content("+", "+");
+        (*dest)[33] = build_topic_action_car_config("+", "+");
+        (*dest)[34] = build_topic_action_car_config_set("+", "+");
+        (*dest)[35] = build_topic_action_car_config_get("+", "+");
+        (*dest)[36] = build_topic_action_car_config_content("+", "+");
+        (*dest)[37] = build_topic_action_handcart_settings("+", "+");
+        (*dest)[38] = build_topic_action_handcart_settings_set("+", "+");
+        (*dest)[39] = build_topic_action_handcart_settings_get("+", "+");
+        (*dest)[40] = build_topic_action_handcart_settings_content("+", "+");
+        (*dest)[41] = build_topic_action_kill("+", "+");
+        (*dest)[42] = build_topic_action_start("+", "+");
+        (*dest)[43] = build_topic_action_reset("+", "+");
+        (*dest)[44] = build_topic_action_stop("+", "+");
+        (*dest)[45] = build_topic_action_precharge("+", "+");
+        (*dest)[46] = build_topic_action_balance("+", "+");
+        (*dest)[47] = build_topic_action_stop_b("+", "+");
+        (*dest)[48] = build_topic_action_charge("+", "+");
+        (*dest)[49] = build_topic_action_stop_("+", "+");
+        (*dest)[50] = build_topic_action_raw("+", "+");
+        (*dest)[51] = build_topic_action_reset_lap_counter("+", "+");
         break;
         default:
             break;
@@ -1679,6 +1707,15 @@ topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId) 
 		.retain = false
 	};
     snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/data/secondary", vehicleId, deviceId);
+    return topic;
+}
+
+topic_t build_topic_data_b_m_s(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
+		.qos = 0,
+		.retain = false
+	};
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/data/bms", vehicleId, deviceId);
     return topic;
 }
 

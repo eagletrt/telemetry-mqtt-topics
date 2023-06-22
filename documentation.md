@@ -59,6 +59,16 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## DataBMSTopic
+### &lt;vehicleId>/&lt;deviceId>/data/bms
+> Protobuffer data of bms network
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## DataInverterTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/inverter
 > Protobuffer data of inverter network
