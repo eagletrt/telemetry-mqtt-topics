@@ -70,7 +70,7 @@
                                 "description": "Protobuffer data of secondary network"
                             },
                             "bms": {
-                                "alias": "DataBMSTopic",
+                                "alias": "DataBmsTopic",
                                 "description": "Protobuffer data of bms network"
                             },
                             "inverter": {
