@@ -32,7 +32,7 @@ enum TOPICS_T {
     TOPIC_DATA_LAST_UPDATE = 3,
     TOPIC_DATA_PRIMARY = 4,
     TOPIC_DATA_SECONDARY = 5,
-    TOPIC_DATA_B_M_S = 6,
+    TOPIC_DATA_BMS = 6,
     TOPIC_DATA_INVERTER = 7,
     TOPIC_DATA_GPS = 8,
     TOPIC_DATA_BRUSA = 9,
@@ -101,7 +101,7 @@ topic_t build_topic_data(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_last_update(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_primary(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId);
-topic_t build_topic_data_b_m_s(const char* vehicleId, const char* deviceId);
+topic_t build_topic_data_bms(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_inverter(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_gps(const char* vehicleId, const char* deviceId);
 topic_t build_topic_data_brusa(const char* vehicleId, const char* deviceId);

@@ -9,7 +9,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -68,7 +68,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -127,7 +127,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -186,7 +186,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -245,7 +245,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -304,7 +304,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -363,7 +363,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -428,7 +428,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -487,7 +487,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -546,7 +546,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -605,7 +605,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -664,7 +664,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -723,7 +723,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -782,7 +782,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_DATA_LAST_UPDATE:
             case TOPIC_DATA_PRIMARY:
             case TOPIC_DATA_SECONDARY:
-            case TOPIC_DATA_B_M_S:
+            case TOPIC_DATA_BMS:
             case TOPIC_DATA_INVERTER:
             case TOPIC_DATA_GPS:
             case TOPIC_DATA_BRUSA:
@@ -855,7 +855,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -912,7 +912,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -969,7 +969,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1026,7 +1026,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1083,7 +1083,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1140,7 +1140,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1197,7 +1197,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1261,7 +1261,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1318,7 +1318,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1375,7 +1375,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1432,7 +1432,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1489,7 +1489,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1546,7 +1546,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1603,7 +1603,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[3] = build_topic_data_last_update("+", "+");
         (*dest)[4] = build_topic_data_primary("+", "+");
         (*dest)[5] = build_topic_data_secondary("+", "+");
-        (*dest)[6] = build_topic_data_b_m_s("+", "+");
+        (*dest)[6] = build_topic_data_bms("+", "+");
         (*dest)[7] = build_topic_data_inverter("+", "+");
         (*dest)[8] = build_topic_data_gps("+", "+");
         (*dest)[9] = build_topic_data_brusa("+", "+");
@@ -1710,7 +1710,7 @@ topic_t build_topic_data_secondary(const char* vehicleId, const char* deviceId) 
     return topic;
 }
 
-topic_t build_topic_data_b_m_s(const char* vehicleId, const char* deviceId) {
+topic_t build_topic_data_bms(const char* vehicleId, const char* deviceId) {
     topic_t topic = {
 		.qos = 0,
 		.retain = false

@@ -59,7 +59,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataBMSTopic
+## DataBmsTopic
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
 - **Quality of Service**: 0

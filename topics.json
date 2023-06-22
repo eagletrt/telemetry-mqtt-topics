@@ -218,7 +218,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/data/bms",
-        "alias": "DataBMSTopic",
+        "alias": "DataBmsTopic",
         "description": "Protobuffer data of bms network",
         "qos": 0,
         "subscribeRoles": [
