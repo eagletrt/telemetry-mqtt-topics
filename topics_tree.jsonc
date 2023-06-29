@@ -106,6 +106,10 @@
                             "canFrequencies": {
                                 "alias": "StatusCanFrequenciesTopic",
                                 "description": "<vehicleId>/<deviceId>/status/canFrequencies"
+                            },
+                            "alert": {
+                                "alias": "StatusAlertTopic",
+                                "description": "Alert message, it contains a critical can message"
                             }
                         }
                     },
