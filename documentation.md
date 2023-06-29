@@ -139,6 +139,16 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## StatusAlertTopic
+### &lt;vehicleId>/&lt;deviceId>/status/alert
+> Alert message, it contains a critical can message
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: Yes
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## CommandTopic
 ### &lt;vehicleId>/&lt;deviceId>/command
 > &lt;vehicleId>/&lt;deviceId>/command

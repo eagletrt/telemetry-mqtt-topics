@@ -513,6 +513,43 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/status/alert",
+        "alias": "StatusAlertTopic",
+        "description": "Alert message, it contains a critical can message",
+        "qos": 1,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": true,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/command",
         "alias": "CommandTopic",
         "description": "<vehicleId>/<deviceId>/command",
