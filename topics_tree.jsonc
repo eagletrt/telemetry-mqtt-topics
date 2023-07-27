@@ -103,13 +103,21 @@
                                 "alias": "StatusErrorTopic",
                                 "description": "<vehicleId>/<deviceId>/status/error"
                             },
+                            "alert": {
+                                "alias": "StatusAlertTopic",
+                                "description": "Alert message, it contains a critical can message"
+                            },
                             "canFrequencies": {
                                 "alias": "StatusCanFrequenciesTopic",
                                 "description": "<vehicleId>/<deviceId>/status/canFrequencies"
                             },
-                            "alert": {
-                                "alias": "StatusAlertTopic",
-                                "description": "Alert message, it contains a critical can message"
+                            "lapCounterStatus": {
+                                "alias": "StatusLapCounterStatus",
+                                "description": "<vehicleId>/<deviceId>/status/lapCounterStatus"
+                            },
+                            "lapCounterLaps": {
+                                "alias": "StatusLapCounterLaps",
+                                "description": "<vehicleId>/<deviceId>/status/lapCounterLaps"
                             }
                         }
                     },
