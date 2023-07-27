@@ -129,6 +129,16 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
+## StatusAlertTopic
+### &lt;vehicleId>/&lt;deviceId>/status/alert
+> Alert message, it contains a critical can message
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: Yes
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
 ## StatusCanFrequenciesTopic
 ### &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 > &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
@@ -139,9 +149,19 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusAlertTopic
-### &lt;vehicleId>/&lt;deviceId>/status/alert
-> Alert message, it contains a critical can message
+## StatusLapCounterStatus
+### &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
+> &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: Yes
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## StatusLapCounterLaps
+### &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
+> &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes

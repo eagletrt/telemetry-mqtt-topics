@@ -476,6 +476,43 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/status/alert",
+        "alias": "StatusAlertTopic",
+        "description": "Alert message, it contains a critical can message",
+        "qos": 1,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": true,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/status/canFrequencies",
         "alias": "StatusCanFrequenciesTopic",
         "description": "<vehicleId>/<deviceId>/status/canFrequencies",
@@ -513,9 +550,46 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/status/alert",
-        "alias": "StatusAlertTopic",
-        "description": "Alert message, it contains a critical can message",
+        "topic": "<vehicleId>/<deviceId>/status/lapCounterStatus",
+        "alias": "StatusLapCounterStatus",
+        "description": "<vehicleId>/<deviceId>/status/lapCounterStatus",
+        "qos": 1,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": true,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/status/lapCounterLaps",
+        "alias": "StatusLapCounterLaps",
+        "description": "<vehicleId>/<deviceId>/status/lapCounterLaps",
         "qos": 1,
         "subscribeRoles": [
             0,
