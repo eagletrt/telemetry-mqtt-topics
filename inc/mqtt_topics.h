@@ -41,8 +41,8 @@ enum TOPICS_T {
     TOPIC_STATUS_ERROR = 12,
     TOPIC_STATUS_ALERT = 13,
     TOPIC_STATUS_CAN_FREQUENCIES = 14,
-    TOPIC_STATUS_LAP_COUNTER_ = 15,
-    TOPIC_STATUS_LAP_COUNTE = 16,
+    TOPIC_STATUS_LAP_COUNTER_STATUS = 15,
+    TOPIC_STATUS_LAP_COUNTER_LAPS = 16,
     TOPIC_COMMAND = 17,
     TOPIC_COMMAND_SEND = 18,
     TOPIC_COMMAND_RESULT = 19,
@@ -76,9 +76,9 @@ enum TOPICS_T {
     TOPIC_ACTION_STOP = 47,
     TOPIC_ACTION_PRECHARGE = 48,
     TOPIC_ACTION_BALANCE = 49,
-    TOPIC_ACTION_STOP_B = 50,
+    TOPIC_ACTION_STOP_BALANCE = 50,
     TOPIC_ACTION_CHARGE = 51,
-    TOPIC_ACTION_STOP_ = 52,
+    TOPIC_ACTION_STOP_CHARGE = 52,
     TOPIC_ACTION_RAW = 53,
     TOPIC_ACTION_RESET_LAP_COUNTER = 54,
 
@@ -113,8 +113,8 @@ topic_t build_topic_status_info(const char* vehicleId, const char* deviceId);
 topic_t build_topic_status_error(const char* vehicleId, const char* deviceId);
 topic_t build_topic_status_alert(const char* vehicleId, const char* deviceId);
 topic_t build_topic_status_can_frequencies(const char* vehicleId, const char* deviceId);
-topic_t build_topic_status_lap_counter_(const char* vehicleId, const char* deviceId);
-topic_t build_topic_status_lap_counte(const char* vehicleId, const char* deviceId);
+topic_t build_topic_status_lap_counter_status(const char* vehicleId, const char* deviceId);
+topic_t build_topic_status_lap_counter_laps(const char* vehicleId, const char* deviceId);
 topic_t build_topic_command(const char* vehicleId, const char* deviceId);
 topic_t build_topic_command_send(const char* vehicleId, const char* deviceId);
 topic_t build_topic_command_result(const char* vehicleId, const char* deviceId);
@@ -148,9 +148,9 @@ topic_t build_topic_action_reset(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_stop(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_precharge(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_balance(const char* vehicleId, const char* deviceId);
-topic_t build_topic_action_stop_b(const char* vehicleId, const char* deviceId);
+topic_t build_topic_action_stop_balance(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_charge(const char* vehicleId, const char* deviceId);
-topic_t build_topic_action_stop_(const char* vehicleId, const char* deviceId);
+topic_t build_topic_action_stop_charge(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId);
 
