@@ -170,6 +170,11 @@ def generate_h(topics_list, roles):
 
 def camel_to_snake(topic):
     pattern = re.compile(r'(?<!^)(?=[A-Z])')
-    str = "TOPIC_" + pattern.sub('_', topic).lower()[:-6]
+    snake_case = pattern.sub('_', topic).lower()
 
-    return str
+    if "topic" in snake_case:
+        snake_case = snake_case.replace("topic", "")
+    if snake_case[-1] == "_":
+        snake_case = snake_case[:-1]
+        
+    return "topic_" + snake_case
