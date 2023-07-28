@@ -81,8 +81,9 @@ enum TOPICS_T {
     TOPIC_ACTION_STOP_CHARGE = 52,
     TOPIC_ACTION_RAW = 53,
     TOPIC_ACTION_RESET_LAP_COUNTER = 54,
+    TOPIC_ACTION_SET_LAP_COUNTER_STATUS = 55,
 
-    TOPICS_NUM = 55
+    TOPICS_NUM = 56
 };
 
 typedef struct topic_t {
@@ -153,6 +154,7 @@ topic_t build_topic_action_charge(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_stop_charge(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_raw(const char* vehicleId, const char* deviceId);
 topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* deviceId);
+topic_t build_topic_action_set_lap_counter_status(const char* vehicleId, const char* deviceId);
 
 
 #ifdef __cplusplus

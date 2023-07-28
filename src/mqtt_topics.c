@@ -58,6 +58,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -120,6 +121,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -182,6 +184,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -244,6 +247,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -306,6 +310,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -368,6 +373,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -430,6 +436,7 @@ bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -498,6 +505,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -560,6 +568,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -622,6 +631,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -684,6 +694,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -746,6 +757,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -808,6 +820,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -870,6 +883,7 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
             case TOPIC_ACTION_STOP_CHARGE:
             case TOPIC_ACTION_RAW:
             case TOPIC_ACTION_RESET_LAP_COUNTER:
+            case TOPIC_ACTION_SET_LAP_COUNTER_STATUS:
                 return true;
             break;
             default:
@@ -888,8 +902,8 @@ void free_topics(topic_t* topic){
 void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -946,10 +960,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_1:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1006,10 +1021,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_2:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1066,10 +1082,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_3:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1126,10 +1143,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_4:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1186,10 +1204,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_128:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1246,10 +1265,11 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_129:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1306,6 +1326,7 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
         default:
             break;
@@ -1315,8 +1336,8 @@ void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role)
 void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
     switch(role){
       case ROLE_0:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1373,10 +1394,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_1:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1433,10 +1455,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_2:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1493,10 +1516,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_3:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1553,10 +1577,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_4:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1613,10 +1638,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_128:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1673,10 +1699,11 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
       case ROLE_129:
-        *size = 55;
-        *dest = (topic_t*) malloc(sizeof(topic_t) * 55);
+        *size = 56;
+        *dest = (topic_t*) malloc(sizeof(topic_t) * 56);
         
         (*dest)[0] = build_topic_vehicle_id("+");
         (*dest)[1] = build_topic_device_id("+", "+");
@@ -1733,6 +1760,7 @@ void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
         (*dest)[52] = build_topic_action_stop_charge("+", "+");
         (*dest)[53] = build_topic_action_raw("+", "+");
         (*dest)[54] = build_topic_action_reset_lap_counter("+", "+");
+        (*dest)[55] = build_topic_action_set_lap_counter_status("+", "+");
         break;
         default:
             break;
@@ -2232,5 +2260,14 @@ topic_t build_topic_action_reset_lap_counter(const char* vehicleId, const char* 
 		.retain = false
 	};
     snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/resetLapcounter", vehicleId, deviceId);
+    return topic;
+}
+
+topic_t build_topic_action_set_lap_counter_status(const char* vehicleId, const char* deviceId) {
+    topic_t topic = {
+		.qos = 2,
+		.retain = false
+	};
+    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "%s/%s/action/setLapcounterStatus", vehicleId, deviceId);
     return topic;
 }

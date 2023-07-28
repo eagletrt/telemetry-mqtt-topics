@@ -2048,5 +2048,42 @@
                 "default": "telemetry"
             }
         ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
+        "alias": "ActionSetLapCounterStatusTopic",
+        "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
+        "qos": 2,
+        "subscribeRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "publishRoles": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            128,
+            129
+        ],
+        "retain": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
     }
 ]
