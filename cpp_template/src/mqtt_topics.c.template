@@ -12,23 +12,22 @@ bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic){
     return false;
 }
 
-void free_topics(topic_t* topic){
-    if(topic)
-        free(topic);
-}
-
-void get_subscribe_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
+std::vector<topic_t> get_subscribe_topics(const enum ROLES_T role, const std::string vehicleId, const std::string deviceId, const std::string transactionId){
+    std::vector<topic_t> ret;
     switch(role){<switch_sub_role>
         default:
             break;
     }
+    return ret;
 }
 
-void get_publish_topics(topic_t** dest, size_t* size, const enum ROLES_T role){
+std::vector<topic_t> get_publish_topics(const enum ROLES_T role, const std::string vehicleId, const std::string deviceId, const std::string transactionId){
+    std::vector<topic_t> ret;
     switch(role){<switch_pub_role>
         default:
             break;
     }
+    return ret;
 }
 
 <build_functions>

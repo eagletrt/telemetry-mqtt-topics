@@ -31,30 +31,24 @@ CAN_ARRAY_EL = '''
 
 GET_PUB_SUB_SWITCH = '''
       case ROLE_{role}:
-        *size = {pub_sub_topic_num};
-        *dest = (topic_t*) malloc(sizeof(topic_t) * {pub_sub_topic_num});
+        ret.resize({pub_sub_topic_num});
         {get_pub_sub_array_el}
         break;'''
 
 
 GET_PUB_SUB_CASE_ARRAY_EL = '''
-        (*dest)[{i}] = build_{topic_name}({topic_params});'''
+        ret[{i}] = build_{topic_name}({topic_params});'''
 
 
 # <build_functions>
 
 BUILD_FUNCTION = '''
 topic_t build_{topic_name}({params}) {{
-    topic_t topic = {{
-		.qos = {topic_qos},
-		.retain = {topic_retain}
-	}};
-    snprintf(topic.topic, TOPIC_MAX_STR_LEN, "{topic_str}", {topic_params});
-    return topic;
+    return topic_t{{{topic_params}{topic_str}, {topic_qos}, {topic_retain}}};
 }}
 '''
 
-TOPIC_PARAMS = '''const char* {param_name}'''
+TOPIC_PARAMS = '''const std::string {param_name}'''
 
 
 # mqtt_topics.h

@@ -53,7 +53,7 @@ def generate_c(topics_list, roles):
                 sub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
                     i = sub_num,
                     topic_name=camel_to_snake(topic['alias']).lower(),
-                    topic_params=", ".join(['"+"' for param in topic['variables']])
+                    topic_params=", ".join([param['name'] for param in topic['variables']])
                 )
                 sub_num += 1
             if "publishRoles" in topic and role in topic['publishRoles']:
@@ -61,7 +61,7 @@ def generate_c(topics_list, roles):
                 pub_case_el += GET_PUB_SUB_CASE_ARRAY_EL.format(
                     i = pub_num,
                     topic_name=camel_to_snake(topic['alias']).lower(),
-                    topic_params=", ".join(['"+"' for param in topic['variables']])
+                    topic_params=", ".join([param['name'] for param in topic['variables']])
                 )
                 pub_num += 1
 
@@ -93,26 +93,29 @@ def generate_c(topics_list, roles):
     for topic in topics_list:
         params = []
         topic_params = []
-        topic_str = topic['topic']
+        ind = topic['topic'].rfind(">")+2
+        if ind >= len(topic['topic']):
+            topic_str = ""
+        else:
+            topic_str = f'+"/{topic["topic"][ind:]}"'
         for param in topic['variables']:
             params.append(TOPIC_PARAMS.format(param_name = param['name']))
             # topic_str += "%s/"
             topic_params.append(f"{param['name']}")
-            topic_str = topic_str.replace(f"<{param['name']}>", "%s")
-        topic_params = ', '.join(topic_params)
+        topic_params = '+"/"+'.join(topic_params)
         params = ', '.join(params)
 
         build_functions += BUILD_FUNCTION.format(topic_name = camel_to_snake(topic['alias']).lower(),
                                                  params = params,
                                                  topic_qos = topic['qos'],
                                                  topic_retain = str(topic['retain']).lower(),
-                                                 topic_str = topic_str,
+                                                 topic_str=topic_str,
                                                  topic_params = topic_params)
 
     file_content = file_content.replace("<build_functions>", build_functions)
 
 
-    with open(f"out/src/mqtt_topics.c", "w") as file:
+    with open(f"out/src/mqtt_topics.cpp", "w") as file:
         file.write(file_content)
 
 

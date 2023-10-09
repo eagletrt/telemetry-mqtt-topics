@@ -4,10 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include <vector>
+#include <string>
 
 #ifndef TOPIC_MAX_STR_LEN
 #define TOPIC_MAX_STR_LEN 128
@@ -21,22 +19,17 @@ enum TOPICS_T {<topics>
 };
 
 typedef struct topic_t {
-    char topic[TOPIC_MAX_STR_LEN];
+    std::string topic;
     int qos;
     bool retain;
 }topic_t;
 
-void free_topics(topic_t* topic);
-void get_subscribe_topics(topic_t** dest, size_t* dimension, const enum ROLES_T role);
-void get_publish_topics(topic_t** dest, size_t* dimension, const enum ROLES_T role);
+std::vector<topic_t> get_subscribe_topics(const enum ROLES_T role, const std::string vehicleId = "", const std::string deviceId = "", const std::string transactionId = "");
+std::vector<topic_t> get_publish_topics(const enum ROLES_T role, const std::string vehicleId = "", const std::string deviceId = "", const std::string transactionId = "");
 
 bool can_subscribe(const enum ROLES_T role, const enum TOPICS_T topic);
 bool can_publish(const enum ROLES_T role, const enum TOPICS_T topic);
 
 <build_functions>
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif
