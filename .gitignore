@@ -1,8 +1,9 @@
-cmake-build-debug
-.vscode
-.idea
-.clang-format
-__pycache__
-*/__pycache__
+.vscode/
+.idea/
+.generated/
+
 build/
-out/
+bin/
+test/
+
+__pycache__/

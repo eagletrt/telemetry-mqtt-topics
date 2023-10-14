@@ -1,0 +1,47 @@
+#ifndef MQTT_TOPICS_H
+#define MQTT_TOPICS_H
+
+#include <vector>
+#include <string>
+
+namespace MQTTTopics
+{
+enum class Roles 
+{
+    {%- for role in roles %}
+    ROLE_{{ role.upper() }} = {{ loop.index - 1}}
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+};
+
+enum class Topics
+{
+    {%- for topic in topics %}
+    {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}}
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+};
+
+struct Topic
+{
+    const std::string topic;
+    const int qos;
+    const bool retain;
+};
+
+std::vector<Topic> GetSubscribeTopics(const std::string& vehicleId, const std::string& deviceId, Roles role);
+std::vector<Topic> GetPublishTopics(const std::string& vehicleId, const std::string& deviceId, Roles role);
+
+bool CanSubscribe(Topics topic, Roles role);
+bool CanPublish(Topics topic, Roles role);
+
+{% for topic in topics -%}
+Topic {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }});
+{% endfor -%}
+}
+
+#endif

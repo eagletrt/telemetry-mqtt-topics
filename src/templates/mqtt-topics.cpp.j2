@@ -1,0 +1,129 @@
+#include "mqtt_topics.h"
+
+namespace MQTTTopics
+{
+std::vector<Topic> GetSubscribeTopics(const std::string& vehicleId, const std::string& deviceId, Roles role) {
+    std::vector<Topic> ret;
+    
+    switch(role) {
+        {%- for role in roles %}
+        case Roles::ROLE_{{ role }}:
+        {% for topic in topics -%}
+        {% if role in topic['subscribe_roles'] -%}
+        ret.emplace_back({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }}));
+        {% endif -%}
+        {% endfor -%}
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+
+    return ret;
+}
+
+std::vector<Topic> GetPublishTopics(const std::string& vehicleId, const std::string& deviceId, Roles role) {
+    std::vector<Topic> ret;
+    
+    switch(role) {
+    {%- for role in roles %}
+        case Roles::ROLE_{{ role }}:
+        {% for topic in topics -%}
+        {% if role in topic['publish_roles'] -%}
+        ret.emplace_back({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }}));
+        {% endif -%}
+        {% endfor -%}
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+    
+    return ret;
+}
+
+bool CanSubscribe(Topics topic, Roles role) {
+    switch(role) {
+    {%- for role in roles %}
+        case Roles::ROLE_{{ role }}:
+        switch(topic) {
+            {%set ns = namespace(check=0) -%}
+            {% for topic in topics -%}
+            {%- if role in topic['subscribe_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            {% if ns.check != 0 -%}
+            return true;
+            break;
+            {%- endif -%}
+            {% set ns.check = 0 %}
+            {% for topic in topics -%}
+            {%- if not role in topic['subscribe_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            {% if ns.check != 0 -%}
+            return false;
+            break;
+            {%- else %}
+            {% endif %}
+        }
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+
+    return false;
+}
+
+bool CanPublish(Topics topic, Roles role) {
+    switch(role) {
+    {%- for role in roles %}
+        case Roles::ROLE_{{ role }}:
+        switch(topic) {
+            {%set ns = namespace(check=0) -%}
+            {% for topic in topics -%}
+            {%- if role in topic['publish_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            {% if ns.check != 0 -%}
+            return true;
+            break;
+            {% endif -%}
+            {% set ns.check = 0 %}
+            {%- for topic in topics -%}
+            {%- if not role in topic['publish_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            {% if ns.check != 0 -%}
+            return false;
+            break;
+            {%- else %}
+            {%- endif %}
+        }
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+
+    return false;
+}
+{% for topic in topics %}
+Topic {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }}) {
+    std::string topic = {{ utils.topic_topic(topic) }};
+    int qos = {{ topic.qos }};
+    bool retain = {{ topic.retain|lower }};
+
+    return Topic{topic, qos, retain};
+}
+{% endfor -%}
+}
