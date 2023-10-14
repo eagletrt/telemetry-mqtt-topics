@@ -18,7 +18,7 @@ jobs:
       - name: Run generator
         run: |
           pip install -r requirements.txt
-          python3 generator.py
+          python3 src/generator/main.py . out
           mkdir -p /tmp/workspace
           cp -R out/* /tmp/workspace
 
