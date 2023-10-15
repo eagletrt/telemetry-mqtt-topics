@@ -119,7 +119,7 @@ bool CanPublish(Topics topic, Roles role) {
 }
 {% for topic in topics %}
 Topic {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }}) {
-    std::string topic = {{ utils.topic_topic(topic) }};
+    std::string topic = {{ utils.topic_topic_with_variables(topic) }};
     int qos = {{ topic.qos }};
     bool retain = {{ topic.retain|lower }};
 

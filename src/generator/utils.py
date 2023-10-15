@@ -122,25 +122,28 @@ def topic_get_parameters_values(topic: dict) -> str:
     
     return ret
 
-def topic_topic(topic: dict) -> str:
+def topic_topic_with_variables(topic: dict) -> str:
     ret = topic['topic']
-    if ret.endswith('<vehicleId>'):
-        ret = ret.replace('<vehicleId>', 'vehicleId')
-    else:
-        ret = ret.replace('<vehicleId>', 'vehicleId + "/" + ')
-        
-    if ret.endswith('<deviceId>'):
-        ret = ret.replace('/<deviceId>', 'deviceId')
-    else:
-        ret = ret.replace('/<deviceId>', 'deviceId + "/" + ')
-    
     
     for variable in topic['variables']:
-        if(variable['name'] != 'vehicleId' or variable['name'] != 'deviceId'):
-            ret = ret.replace(f'<{variable["name"]}>', '#')
-            
-    if not ret.endswith('vehicleId') and not ret.endswith('deviceId'):
-        ret = ret.replace('+ /', ' + "/')
-        ret += '"'
+        ret = ret.replace(f'/<{variable["name"]}>/', f' + "/" + {variable["name"]} + "/" + ')
+        ret = ret.replace(f'/<{variable["name"]}>', f' + "/" + {variable["name"]}')
+        ret = ret.replace(f'<{variable["name"]}>/', f'{variable["name"]} + "/" + ')
+        ret = ret.replace(f'<{variable["name"]}>', f'{variable["name"]} + "/" + ')
+        
+    split = ret.split()
+    for s in split:
+        if s != '"/"' and s != '+':
+            check = True
+            for variable in topic['variables']:
+                if s == variable['name']:
+                    check = False
+            if check:
+                split[split.index(s)] = f'"{s}"'
+    
+    ret = ' '.join(split)
+    
+    if ret.endswith('+ "/" +'):
+        ret = ret[:-8]
     
     return ret
