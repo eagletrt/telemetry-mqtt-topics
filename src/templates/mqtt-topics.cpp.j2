@@ -14,7 +14,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role
         case Roles::ROLE_{{ role }}:
         {% for topic in topics -%}
         {% if role in topic['subscribe_roles'] -%}
-        ret.emplace_back({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }}));
+        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
         {% endif -%}
         {% endfor -%}
         break;
@@ -38,7 +38,7 @@ std::vector<Topic> GetPublishTopics(Roles role
         case Roles::ROLE_{{ role }}:
         {% for topic in topics -%}
         {% if role in topic['publish_roles'] -%}
-        ret.emplace_back({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }}));
+        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
         {% endif -%}
         {% endfor -%}
         break;
@@ -65,9 +65,9 @@ bool CanSubscribe(Roles role, Topics topic) {
             {% if ns.check != 0 -%}
             return true;
             break;
-            {%- endif -%}
+            {% endif -%}
             {% set ns.check = 0 %}
-            {% for topic in topics -%}
+            {%- for topic in topics -%}
             {%- if not role in topic['subscribe_roles'] -%}
             {% set ns.check = 1 -%}
             case Topics::{{ utils.topic_enum_name(topic.alias) }}:
@@ -77,7 +77,7 @@ bool CanSubscribe(Roles role, Topics topic) {
             return false;
             break;
             {%- else %}
-            {% endif %}
+            {%- endif %}
         }
         break;
         {%- if not loop.last%}
