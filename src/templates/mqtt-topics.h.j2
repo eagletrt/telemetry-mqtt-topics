@@ -33,11 +33,19 @@ struct Topic
     const bool retain;
 };
 
-std::vector<Topic> GetSubscribeTopics(const std::string& vehicleId, const std::string& deviceId, Roles role);
-std::vector<Topic> GetPublishTopics(const std::string& vehicleId, const std::string& deviceId, Roles role);
+std::vector<Topic> GetSubscribeTopics(Roles role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+);
+std::vector<Topic> GetPublishTopics(Roles role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+);
 
-bool CanSubscribe(Topics topic, Roles role);
-bool CanPublish(Topics topic, Roles role);
+bool CanSubscribe(Roles role, Topics topic);
+bool CanPublish(Roles role, Topics topic);
 
 {% for topic in topics -%}
 Topic {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }});

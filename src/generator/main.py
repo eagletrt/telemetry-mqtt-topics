@@ -34,6 +34,7 @@ if __name__ == '__main__':
         topics.extend(utils.parse_report_tree(key, value, {}))
 
     roles = []
+    variables = []
     
     for topic in topics:
         for role in topic['subscribe_roles']:
@@ -42,15 +43,18 @@ if __name__ == '__main__':
         for role in topic['publish_roles']:
             if role not in roles:
                 roles.append(role)
+        for variable in topic['variables']:
+            if variable['name'] not in variables:
+                variables.append(variable['name'])
                                 
     print(f'Generating files...\n')
 
     with open(os.path.join(args.output_dir, 'mqtt_topics.h'), 'w') as file:
-        file.write(h_template.render(topics=topics, roles=roles, utils=utils))
+        file.write(h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated mqtt_topics.h')
         
     with open(os.path.join(args.output_dir, 'mqtt_topics.cpp'), 'w') as file:
-        file.write(cpp_template.render(topics=topics, roles=roles, utils=utils))
+        file.write(cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated mqtt_topics.cpp')
         
     with open(os.path.join(args.output_dir, 'CMakeLists.txt'), 'w') as file:

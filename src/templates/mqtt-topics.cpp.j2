@@ -2,7 +2,11 @@
 
 namespace MQTTTopics
 {
-std::vector<Topic> GetSubscribeTopics(const std::string& vehicleId, const std::string& deviceId, Roles role) {
+std::vector<Topic> GetSubscribeTopics(Roles role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+) {
     std::vector<Topic> ret;
     
     switch(role) {
@@ -22,7 +26,11 @@ std::vector<Topic> GetSubscribeTopics(const std::string& vehicleId, const std::s
     return ret;
 }
 
-std::vector<Topic> GetPublishTopics(const std::string& vehicleId, const std::string& deviceId, Roles role) {
+std::vector<Topic> GetPublishTopics(Roles role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+) {
     std::vector<Topic> ret;
     
     switch(role) {
@@ -42,7 +50,7 @@ std::vector<Topic> GetPublishTopics(const std::string& vehicleId, const std::str
     return ret;
 }
 
-bool CanSubscribe(Topics topic, Roles role) {
+bool CanSubscribe(Roles role, Topics topic) {
     switch(role) {
     {%- for role in roles %}
         case Roles::ROLE_{{ role }}:
@@ -80,7 +88,7 @@ bool CanSubscribe(Topics topic, Roles role) {
     return false;
 }
 
-bool CanPublish(Topics topic, Roles role) {
+bool CanPublish(Roles role, Topics topic) {
     switch(role) {
     {%- for role in roles %}
         case Roles::ROLE_{{ role }}:

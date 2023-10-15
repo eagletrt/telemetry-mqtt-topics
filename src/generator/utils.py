@@ -115,10 +115,7 @@ def topic_get_parameters_values(topic: dict) -> str:
     for variable in topic['variables']:
         if ret != '':
             ret += ', '
-        if(variable['name'] == 'vehicleId' or variable['name'] == 'deviceId'):
-            ret += variable['name']
-        else:
-            ret += '"#"'
+        ret += variable['name']
     
     return ret
 
