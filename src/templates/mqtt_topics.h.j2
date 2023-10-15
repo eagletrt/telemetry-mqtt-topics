@@ -19,11 +19,9 @@ enum class Roles
 enum class Topics
 {
     {%- for topic in topics %}
-    {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}}
-    {%- if not loop.last -%}
-    ,
-    {%- endif -%}
+    {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}},
     {%- endfor %}
+    TOPICS_COUNT = {{ topics|length }}
 };
 
 struct Topic

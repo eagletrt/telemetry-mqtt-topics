@@ -9,9 +9,9 @@ parser = argparse.ArgumentParser(description='Generate cpp code from topics_tree
 parser.add_argument('topics_tree_dir', type=str, help='directory path of topics_tree file')
 parser.add_argument('output_dir', type=str, help='directory path of generated files')
 
-with open('src/templates/mqtt-topics.h.j2', 'r') as file:
+with open('src/templates/mqtt_topics.h.j2', 'r') as file:
     h_template = jinja2.Template(file.read())
-with open('src/templates/mqtt-topics.cpp.j2', 'r') as file:
+with open('src/templates/mqtt_topics.cpp.j2', 'r') as file:
     cpp_template = jinja2.Template(file.read())
 with open('src/templates/CMakeLists.txt.j2', 'r') as file:
     cmake_template = jinja2.Template(file.read())
