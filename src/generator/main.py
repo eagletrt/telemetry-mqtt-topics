@@ -20,7 +20,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     os.path.isdir(args.topics_tree_dir) or parser.error(f'{args.topics_tree_dir} is not a directory')
-    os.makedirs(os.path.join(args.output_dir), exist_ok=True)
+    os.makedirs(os.path.join(args.output_dir, 'inc'), exist_ok=True)
+    os.makedirs(os.path.join(args.output_dir, 'src'), exist_ok=True)
     
     filename = 'topics_tree.jsonc'
     topics_json = None
@@ -49,11 +50,11 @@ if __name__ == '__main__':
                                 
     print(f'Generating files...\n')
 
-    with open(os.path.join(args.output_dir, 'mqtt_topics.h'), 'w') as file:
+    with open(os.path.join(args.output_dir, 'inc', 'mqtt_topics.h'), 'w') as file:
         file.write(h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated mqtt_topics.h')
         
-    with open(os.path.join(args.output_dir, 'mqtt_topics.cpp'), 'w') as file:
+    with open(os.path.join(args.output_dir, 'src', 'mqtt_topics.cpp'), 'w') as file:
         file.write(cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated mqtt_topics.cpp')
         

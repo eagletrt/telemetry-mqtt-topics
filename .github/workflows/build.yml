@@ -1,4 +1,4 @@
-name: Generate MQTT Topics
+name: Generate MQTT topics
 
 on:
   workflow_dispatch:
