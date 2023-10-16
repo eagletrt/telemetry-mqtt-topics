@@ -80,9 +80,9 @@ enum class Topics
 
 struct Topic
 {
-    const std::string topic;
-    const int qos;
-    const bool retain;
+    std::string topic;
+    int qos;
+    bool retain;
 };
 
 std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
