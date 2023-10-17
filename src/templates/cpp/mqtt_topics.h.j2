@@ -6,7 +6,7 @@
 
 namespace MQTTTopics
 {
-enum class Roles 
+enum class Roles
 {
     {%- for role in roles %}
     ROLE_{{ role.upper() }} = {{ loop.index - 1}}
@@ -34,12 +34,12 @@ struct Topic
 std::vector<Topic> GetSubscribeTopics(Roles role
     {%- for variable in variables -%}
     , const std::string& {{ variable }}
-    {%- endfor -%}    
+    {%- endfor -%}
 );
 std::vector<Topic> GetPublishTopics(Roles role
     {%- for variable in variables -%}
     , const std::string& {{ variable }}
-    {%- endfor -%}    
+    {%- endfor -%}
 );
 
 bool CanSubscribe(Roles role, Topics topic);

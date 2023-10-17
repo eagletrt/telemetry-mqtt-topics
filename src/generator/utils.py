@@ -7,10 +7,10 @@ def generate_md(topics, file):
         file.write(f"### {topic['topic'].replace('<', '&lt;')}\n")
         file.write(f"> {topic['description'].replace('<', '&lt;')}\n")
         file.write(f"- **Quality of Service**: {topic['qos']}\n")
-        file.write(f"- **Subscribe Roles**: ")
+        file.write("- **Subscribe Roles**: ")
         for subRole in topic["subscribe_roles"]:
             file.write(f"{subRole} ")
-        file.write(f"- **Publish Roles**: ")
+        file.write("- **Publish Roles**: ")
         for pubRole in topic["publish_roles"]:
             file.write(f"{pubRole} ")
         file.write("\n- **Retain**: ")
@@ -97,7 +97,7 @@ def topic_enum_name(topic: str) -> str:
     words = re.findall(r'[A-Z][a-z]*', topic)
     return ('_'.join(words).upper())
 
-def topic_get_name(topic: str) -> str: 
+def topic_get_name(topic: str) -> str:
     words = re.findall(r'[A-Z][a-z]*', topic)
     return ('GetTopic' + ''.join(words))
 
@@ -107,7 +107,6 @@ def topic_get_parameters(topic: dict) -> str:
         if ret != '':
             ret += ', '
         ret += 'const std::string& ' + variable['name']
-
     return ret
 
 def topic_get_parameters_values(topic: dict) -> str:
@@ -116,18 +115,18 @@ def topic_get_parameters_values(topic: dict) -> str:
         if ret != '':
             ret += ', '
         ret += variable['name']
-    
+
     return ret
 
 def topic_topic_with_variables(topic: dict) -> str:
     ret = topic['topic']
-    
+
     for variable in topic['variables']:
         ret = ret.replace(f'/<{variable["name"]}>/', f' + "/" + {variable["name"]} + "/" + ')
         ret = ret.replace(f'/<{variable["name"]}>', f' + "/" + {variable["name"]}')
         ret = ret.replace(f'<{variable["name"]}>/', f'{variable["name"]} + "/" + ')
         ret = ret.replace(f'<{variable["name"]}>', f'{variable["name"]} + "/" + ')
-        
+
     split = ret.split()
     for s in split:
         if s != '"/"' and s != '+':
@@ -137,10 +136,10 @@ def topic_topic_with_variables(topic: dict) -> str:
                     check = False
             if check:
                 split[split.index(s)] = f'"{s}"'
-    
+
     ret = ' '.join(split)
-    
+
     if ret.endswith('+ "/" +'):
         ret = ret[:-8]
-    
+
     return ret

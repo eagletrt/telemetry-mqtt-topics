@@ -1,0 +1,147 @@
+enum Roles {
+    {%- for role in roles %}
+    ROLE_{{ role.upper() }} = {{ loop.index - 1}}
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+}
+
+enum Topics
+{
+    {%- for topic in topics %}
+    {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}},
+    {%- endfor %}
+};
+
+class Topic {
+    topic: string
+    qos: number
+    retain: boolean
+}
+
+function getSubscribeTopics(role: Roles
+    {%- for variable in variables -%}
+    , {{ variable }}: string
+    {%- endfor -%}
+): Topic[] {
+    let topicsList: Topic[] = []
+
+    switch(role) {
+        {%- for role in roles %}
+        case Roles.ROLE_{{ role }}:
+        {% for topic in topics -%}
+        {% if role in topic['subscribe_roles'] -%}
+        topicsList.push(getTopic{{ topic.alias }}(
+            {%- for variable in topic.variables -%}
+        {{ variable["name"] }}
+        {%- if not loop.last -%}
+        {{ ", " }}
+        {%- endif -%}
+        {%- endfor -%}
+        ))
+        {% endif -%}
+        {% endfor -%}
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+
+    return topicsList
+}
+
+function getPublishTopics(role: Roles
+    {%- for variable in variables -%}
+    , {{ variable }}: string
+    {%- endfor -%}
+): Topic[] {
+    let topicsList: Topic[] = []
+
+    switch(role) {
+        {%- for role in roles %}
+        case Roles.ROLE_{{ role }}:
+        {% for topic in topics -%}
+        {% if role in topic['publish_roles'] -%}
+        topicsList.push(getTopic{{ topic.alias }}(
+            {%- for variable in topic.variables -%}
+        {{ variable["name"] }}
+        {%- if not loop.last -%}
+        {{ ", " }}
+        {%- endif -%}
+        {%- endfor -%}
+        ))
+        {% endif -%}
+        {% endfor -%}
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+
+    return topicsList
+}
+
+function canSubscribe(role: Roles, topic: Topics): boolean {
+    switch(role) {
+    {%- for role in roles %}
+        case Roles.ROLE_{{ role }}:
+        switch(topic) {
+            {%set ns = namespace(check=0) -%}
+            {% for topic in topics -%}
+            {%- if role in topic['subscribe_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics.{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            return true
+        }
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+    return false
+}
+
+function canPublish(role: Roles, topic: Topics): boolean {
+    switch(role) {
+    {%- for role in roles %}
+        case Roles.ROLE_{{ role }}:
+        switch(topic) {
+            {%set ns = namespace(check=0) -%}
+            {% for topic in topics -%}
+            {%- if role in topic['publish_roles'] -%}
+            {% set ns.check = 1 -%}
+            case Topics.{{ utils.topic_enum_name(topic.alias) }}:
+            {% endif -%}
+            {% endfor -%}
+            return true
+        }
+        break;
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+    return false
+}
+
+{% for topic in topics -%}
+function getTopic{{ topic.alias }}(
+    {%- for variable in topic.variables -%}
+    {{ variable["name"] }}: string
+    {%- if not loop.last -%}
+    {{ ", " }}
+    {%- endif -%}
+    {%- endfor -%}
+): Topic {
+
+    return {
+        topic: {{ utils.topic_topic_with_variables(topic) }},
+        qos: {{ topic.qos }},
+        retain: {{ topic.retain|lower }}
+    };
+}
+
+{% endfor -%}
+
