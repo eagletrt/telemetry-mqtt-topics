@@ -77,6 +77,10 @@
                                 "alias": "DataInverterTopic",
                                 "description": "Protobuffer data of inverter network"
                             },
+                            "simulator": {
+                                "alias": "DataSimulatorTopic",
+                                "description": "Protobuffer data of simulator network"
+                            },
                             "gps": {
                                 "alias": "DataGpsTopic",
                                 "description": "Protobuffer data of gps network"
