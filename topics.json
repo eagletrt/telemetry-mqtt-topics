@@ -292,7 +292,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/data/simulator",
-        "alias": "DataSimulatorTopic",
+        "alias": "DataSimulator",
         "description": "Protobuffer data of simulator network",
         "qos": "0",
         "subscribe_roles": [

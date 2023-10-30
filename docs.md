@@ -79,7 +79,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataSimulatorTopic
+## DataSimulator
 ### &lt;vehicleId>/&lt;deviceId>/data/simulator
 > Protobuffer data of simulator network
 - **Quality of Service**: 0

@@ -27,7 +27,7 @@ enum class Topics
     DATA_SECONDARY = 5,
     DATA_BMS = 6,
     DATA_INVERTER = 7,
-    DATA_SIMULATOR_TOPIC = 8,
+    DATA_SIMULATOR = 8,
     DATA_GPS = 9,
     DATA_BRUSA = 10,
     STATUS = 11,
@@ -100,7 +100,7 @@ Topic GetTopicDataPrimary(const std::string& vehicleId, const std::string& devic
 Topic GetTopicDataSecondary(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataBms(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataInverter(const std::string& vehicleId, const std::string& deviceId);
-Topic GetTopicDataSimulatorTopic(const std::string& vehicleId, const std::string& deviceId);
+Topic GetTopicDataSimulator(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataGps(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataBrusa(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicStatus(const std::string& vehicleId, const std::string& deviceId);
