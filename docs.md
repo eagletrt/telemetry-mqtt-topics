@@ -1,6 +1,6 @@
 # Topics
 
-## VehicleIdTopic
+## VehicleId
 ### &lt;vehicleId>
 > &lt;vehicleId>
 - **Quality of Service**: 0
@@ -9,7 +9,7 @@
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
 
-## DeviceIdTopic
+## DeviceId
 ### &lt;vehicleId>/&lt;deviceId>
 > &lt;vehicleId>/&lt;deviceId>
 - **Quality of Service**: 0
@@ -19,7 +19,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataTopic
+## Data
 ### &lt;vehicleId>/&lt;deviceId>/data
 > &lt;vehicleId>/&lt;deviceId>/data
 - **Quality of Service**: 0
@@ -29,7 +29,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataLastUpdateTopic
+## DataLastUpdate
 ### &lt;vehicleId>/&lt;deviceId>/data/last_update
 > Sends the last update timestamp of the data
 - **Quality of Service**: 0
@@ -39,7 +39,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataPrimaryTopic
+## DataPrimary
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
 - **Quality of Service**: 0
@@ -49,7 +49,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataSecondaryTopic
+## DataSecondary
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
 > Protobuffer data of secondary network
 - **Quality of Service**: 0
@@ -59,7 +59,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataBmsTopic
+## DataBms
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
 - **Quality of Service**: 0
@@ -69,7 +69,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataInverterTopic
+## DataInverter
 ### &lt;vehicleId>/&lt;deviceId>/data/inverter
 > Protobuffer data of inverter network
 - **Quality of Service**: 0
@@ -89,7 +89,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataGpsTopic
+## DataGps
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
 > Protobuffer data of gps network
 - **Quality of Service**: 0
@@ -99,7 +99,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataBrusaTopic
+## DataBrusa
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
 - **Quality of Service**: 0
@@ -109,7 +109,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusTopic
+## Status
 ### &lt;vehicleId>/&lt;deviceId>/status
 > &lt;vehicleId>/&lt;deviceId>/status
 - **Quality of Service**: 1
@@ -119,7 +119,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusInfoTopic
+## StatusInfo
 ### &lt;vehicleId>/&lt;deviceId>/status/info
 > &lt;vehicleId>/&lt;deviceId>/status/info
 - **Quality of Service**: 1
@@ -129,7 +129,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusErrorTopic
+## StatusError
 ### &lt;vehicleId>/&lt;deviceId>/status/error
 > &lt;vehicleId>/&lt;deviceId>/status/error
 - **Quality of Service**: 1
@@ -139,7 +139,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusAlertTopic
+## StatusAlert
 ### &lt;vehicleId>/&lt;deviceId>/status/alert
 > Alert message, it contains a critical can message
 - **Quality of Service**: 1
@@ -149,7 +149,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## StatusCanFrequenciesTopic
+## StatusCanFrequencies
 ### &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 > &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 - **Quality of Service**: 1
@@ -179,7 +179,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## CommandTopic
+## Command
 ### &lt;vehicleId>/&lt;deviceId>/command
 > &lt;vehicleId>/&lt;deviceId>/command
 - **Quality of Service**: 2
@@ -189,7 +189,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## CommandSendTopic
+## CommandSend
 ### &lt;vehicleId>/&lt;deviceId>/command/send
 > &lt;vehicleId>/&lt;deviceId>/command/send
 - **Quality of Service**: 2
@@ -199,7 +199,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## CommandResultTopic
+## CommandResult
 ### &lt;vehicleId>/&lt;deviceId>/command/result
 > &lt;vehicleId>/&lt;deviceId>/command/result
 - **Quality of Service**: 2
@@ -209,7 +209,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## FileTransactionRequestTopic
+## FileTransactionRequest
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
 - **Quality of Service**: 2
@@ -219,7 +219,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## FileTransactionResponseTopic
+## FileTransactionResponse
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
 - **Quality of Service**: 2
@@ -229,7 +229,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## FileTransactionTopic
+## FileTransaction
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
 - **Quality of Service**: 2
@@ -239,7 +239,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
-## FileTransactionBeginTopic
+## FileTransactionBegin
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
 - **Quality of Service**: 2
@@ -249,7 +249,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
-## FileTransactionEndTopic
+## FileTransactionEnd
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
 - **Quality of Service**: 2
@@ -259,7 +259,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
-## FileTransactionChunkTopic
+## FileTransactionChunk
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
 - **Quality of Service**: 2
@@ -269,7 +269,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
-## FileTransactionChunkAckTopic
+## FileTransactionChunkAck
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
 - **Quality of Service**: 2
@@ -279,7 +279,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
   - transactionId -> The transaction ID 
-## ActionTopic
+## Action
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action
 - **Quality of Service**: 0
@@ -289,7 +289,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionTelemetryConfigTopic
+## ActionTelemetryConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
 - **Quality of Service**: 0
@@ -299,7 +299,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionTelemetryConfigSetTopic
+## ActionTelemetryConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
 - **Quality of Service**: 0
@@ -309,7 +309,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionTelemetryConfigGetTopic
+## ActionTelemetryConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
 - **Quality of Service**: 0
@@ -319,7 +319,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionTelemetryConfigContentTopic
+## ActionTelemetryConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
 - **Quality of Service**: 0
@@ -329,7 +329,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionSessionConfigTopic
+## ActionSessionConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 - **Quality of Service**: 0
@@ -339,7 +339,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionSessionConfigSetTopic
+## ActionSessionConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
 - **Quality of Service**: 0
@@ -349,7 +349,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionSessionConfigGetTopic
+## ActionSessionConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
 - **Quality of Service**: 0
@@ -359,7 +359,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionSessionConfigContentTopic
+## ActionSessionConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
 - **Quality of Service**: 0
@@ -369,7 +369,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionCarConfigTopic
+## ActionCarConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig
 > &lt;vehicleId>/&lt;deviceId>/action/actionCar
 - **Quality of Service**: 0
@@ -379,7 +379,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionCarConfigSetTopic
+## ActionCarConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
 - **Quality of Service**: 0
@@ -389,7 +389,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionCarConfigGetTopic
+## ActionCarConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
 - **Quality of Service**: 0
@@ -399,7 +399,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionCarConfigContentTopic
+## ActionCarConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
 - **Quality of Service**: 0
@@ -409,7 +409,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionHandcartSettingsTopic
+## ActionHandcartSettings
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 - **Quality of Service**: 0
@@ -419,7 +419,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionHandcartSettingsSetTopic
+## ActionHandcartSettingsSet
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
 - **Quality of Service**: 0
@@ -429,7 +429,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionHandcartSettingsGetTopic
+## ActionHandcartSettingsGet
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
 - **Quality of Service**: 0
@@ -439,7 +439,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionHandcartSettingsContentTopic
+## ActionHandcartSettingsContent
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
 - **Quality of Service**: 0
@@ -449,7 +449,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionKillTopic
+## ActionKill
 ### &lt;vehicleId>/&lt;deviceId>/action/kill
 > &lt;vehicleId>/&lt;deviceId>/action/kill
 - **Quality of Service**: 2
@@ -459,7 +459,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionStartTopic
+## ActionStart
 ### &lt;vehicleId>/&lt;deviceId>/action/start
 > &lt;vehicleId>/&lt;deviceId>/action/start
 - **Quality of Service**: 2
@@ -469,7 +469,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionResetTopic
+## ActionReset
 ### &lt;vehicleId>/&lt;deviceId>/action/reset
 > &lt;vehicleId>/&lt;deviceId>/action/reset
 - **Quality of Service**: 2
@@ -479,7 +479,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionStopTopic
+## ActionStop
 ### &lt;vehicleId>/&lt;deviceId>/action/stop
 > &lt;vehicleId>/&lt;deviceId>/action/stop
 - **Quality of Service**: 2
@@ -489,7 +489,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionPrechargeTopic
+## ActionPrecharge
 ### &lt;vehicleId>/&lt;deviceId>/action/precharge
 > &lt;vehicleId>/&lt;deviceId>/action/precharge
 - **Quality of Service**: 2
@@ -499,7 +499,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionBalanceTopic
+## ActionBalance
 ### &lt;vehicleId>/&lt;deviceId>/action/balance
 > &lt;vehicleId>/&lt;deviceId>/action/balance
 - **Quality of Service**: 2
@@ -519,7 +519,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionChargeTopic
+## ActionCharge
 ### &lt;vehicleId>/&lt;deviceId>/action/charge
 > &lt;vehicleId>/&lt;deviceId>/action/charge
 - **Quality of Service**: 2
@@ -539,7 +539,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionRawTopic
+## ActionRaw
 ### &lt;vehicleId>/&lt;deviceId>/action/raw
 > &lt;vehicleId>/&lt;deviceId>/action/raw
 - **Quality of Service**: 2
@@ -549,7 +549,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionResetLapCounterTopic
+## ActionResetLapCounter
 ### &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
 > &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
 - **Quality of Service**: 2
@@ -559,7 +559,7 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## ActionSetLapCounterStatusTopic
+## ActionSetLapCounterStatus
 ### &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
 > &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
 - **Quality of Service**: 2
