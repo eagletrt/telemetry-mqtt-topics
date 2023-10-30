@@ -78,7 +78,7 @@
                                 "description": "Protobuffer data of inverter network"
                             },
                             "simulator": {
-                                "alias": "DataSimulatorTopic",
+                                "alias": "DataSimulator",
                                 "description": "Protobuffer data of simulator network"
                             },
                             "gps": {
