@@ -9,6 +9,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_0:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -69,6 +70,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_1:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -129,6 +131,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_2:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -189,6 +192,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_3:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -249,6 +253,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_4:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -309,6 +314,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_128:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -369,6 +375,7 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         case Roles::ROLE_129:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -437,6 +444,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_0:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -497,6 +505,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_1:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -557,6 +566,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_2:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -617,6 +627,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_3:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -677,6 +688,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_4:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -737,6 +749,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_128:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -797,6 +810,7 @@ std::vector<Topic> GetPublishTopics(Roles role, const std::string& vehicleId, co
         case Roles::ROLE_129:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
@@ -864,6 +878,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -929,6 +944,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -994,6 +1010,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1059,6 +1076,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1124,6 +1142,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1189,6 +1208,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1254,6 +1274,7 @@ bool CanSubscribe(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1325,6 +1346,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1390,6 +1412,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1455,6 +1478,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1520,6 +1544,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1585,6 +1610,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1650,6 +1676,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1715,6 +1742,7 @@ bool CanPublish(Roles role, Topics topic) {
         switch(topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
+            case Topics::DEVICE_VERSION:
             case Topics::DATA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::DATA_PRIMARY:
@@ -1792,6 +1820,14 @@ Topic GetTopicDeviceId(const std::string& vehicleId, const std::string& deviceId
     std::string topic = vehicleId + "/" + deviceId;
     int qos = 0;
     bool retain = false;
+
+    return Topic{topic, qos, retain};
+}
+
+Topic GetTopicDeviceVersion(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "version";
+    int qos = 1;
+    bool retain = true;
 
     return Topic{topic, qos, retain};
 }
