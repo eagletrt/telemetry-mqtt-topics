@@ -1873,7 +1873,7 @@ Topic GetTopicDataBms(const std::string& vehicleId, const std::string& deviceId)
 }
 
 Topic GetTopicDataInverter(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/inverter";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/inverters";
     int qos = 0;
     bool retain = false;
 

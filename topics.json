@@ -291,7 +291,7 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/inverter",
+        "topic": "<vehicleId>/<deviceId>/data/inverters",
         "alias": "DataInverter",
         "description": "Protobuffer data of inverter network",
         "qos": "0",
