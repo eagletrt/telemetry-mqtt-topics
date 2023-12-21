@@ -81,7 +81,7 @@
                                 "alias": "DataBms",
                                 "description": "Protobuffer data of bms network"
                             },
-                            "inverter": {
+                            "inverters": {
                                 "alias": "DataInverter",
                                 "description": "Protobuffer data of inverter network"
                             },
