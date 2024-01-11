@@ -57,10 +57,6 @@
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "sub_topics": {
-                            "last_update": {
-                                "alias": "DataLastUpdate",
-                                "description": "Sends the last update timestamp of the data"
-                            },
                             "primary": {
                                 "alias": "DataPrimary",
                                 "description": "Protobuffer data of primary network"
@@ -86,6 +82,10 @@
                                 "description": "<vehicleId>/<deviceId>/data/brusa"
                             }
                         }
+                    },
+                    "last_update": {
+                        "alias": "DataLastUpdate",
+                        "description": "Sends the last update timestamp of the data"
                     },
                     "status": {
                         "alias": "Status",
