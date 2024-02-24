@@ -39,16 +39,6 @@
   - vehicleId -> The vehicle ID (default: feniceEvo)
   - deviceId -> The device ID (default: telemetry)
 
-## DataLastUpdate
-### &lt;vehicleId>/&lt;deviceId>/data/last_update
-> Sends the last update timestamp of the data
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
-- **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
 ## DataPrimary
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
@@ -112,6 +102,16 @@
 ## DataBrusa
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+  - vehicleId -> The vehicle ID (default: feniceEvo)
+  - deviceId -> The device ID (default: telemetry)
+
+## DataLastUpdate
+### &lt;vehicleId>/&lt;deviceId>/last_update
+> Sends the last update timestamp of the data
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No

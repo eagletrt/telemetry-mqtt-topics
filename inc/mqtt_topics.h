@@ -23,14 +23,14 @@ enum class Topics
     DEVICE_ID = 1,
     DEVICE_VERSION = 2,
     DATA = 3,
-    DATA_LAST_UPDATE = 4,
-    DATA_PRIMARY = 5,
-    DATA_SECONDARY = 6,
-    DATA_BMS = 7,
-    DATA_INVERTER = 8,
-    DATA_SIMULATOR = 9,
-    DATA_GPS = 10,
-    DATA_BRUSA = 11,
+    DATA_PRIMARY = 4,
+    DATA_SECONDARY = 5,
+    DATA_BMS = 6,
+    DATA_INVERTER = 7,
+    DATA_SIMULATOR = 8,
+    DATA_GPS = 9,
+    DATA_BRUSA = 10,
+    DATA_LAST_UPDATE = 11,
     STATUS = 12,
     STATUS_INFO = 13,
     STATUS_ERROR = 14,
@@ -97,7 +97,6 @@ Topic GetTopicVehicleId(const std::string& vehicleId);
 Topic GetTopicDeviceId(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDeviceVersion(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicData(const std::string& vehicleId, const std::string& deviceId);
-Topic GetTopicDataLastUpdate(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataPrimary(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataSecondary(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataBms(const std::string& vehicleId, const std::string& deviceId);
@@ -105,6 +104,7 @@ Topic GetTopicDataInverter(const std::string& vehicleId, const std::string& devi
 Topic GetTopicDataSimulator(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataGps(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicDataBrusa(const std::string& vehicleId, const std::string& deviceId);
+Topic GetTopicDataLastUpdate(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicStatus(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicStatusInfo(const std::string& vehicleId, const std::string& deviceId);
 Topic GetTopicStatusError(const std::string& vehicleId, const std::string& deviceId);

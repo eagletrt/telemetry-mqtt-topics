@@ -143,43 +143,6 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/last_update",
-        "alias": "DataLastUpdate",
-        "description": "Sends the last update timestamp of the data",
-        "qos": "0",
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/data/primary",
         "alias": "DataPrimary",
         "description": "Protobuffer data of primary network",
@@ -405,6 +368,43 @@
         "topic": "<vehicleId>/<deviceId>/data/brusa",
         "alias": "DataBrusa",
         "description": "<vehicleId>/<deviceId>/data/brusa",
+        "qos": "0",
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            {
+                "name": "vehicleId",
+                "description": "The vehicle ID",
+                "default": "feniceEvo"
+            },
+            {
+                "name": "deviceId",
+                "description": "The device ID",
+                "default": "telemetry"
+            }
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/last_update",
+        "alias": "DataLastUpdate",
+        "description": "Sends the last update timestamp of the data",
         "qos": "0",
         "subscribe_roles": [
             "0",
