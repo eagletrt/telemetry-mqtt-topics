@@ -1,4 +1,24 @@
 import re
+from graphviz import Source
+
+def generate_readme(topics, file):
+    file.write("# Topics\n\n")
+    file.write("## Graph\n\n")
+    file.write("![Graph](topics.png)\n\n")
+    file.write("## Full description\n\n")
+    file.write("See [docs.md](docs.md) for full description\n\n")
+
+def generate_dot(topics, filename):
+    topics_dot = [
+        "\"" + "\" -- \"".join(el["topic"].split("/")[-2:]) + "\"" for el in topics
+    ]
+    topics_dot = ";\n".join(topics_dot)
+
+    out_str = f"""graph {{
+    {topics_dot}
+    }}"""
+    s = Source(out_str, format="png")
+    s.render(outfile=filename + ".png")
 
 def generate_md(topics, file):
     file.write("# Topics\n\n")

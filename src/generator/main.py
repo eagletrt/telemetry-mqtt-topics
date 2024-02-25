@@ -65,7 +65,14 @@ if __name__ == '__main__':
     with open(os.path.join(args.output_dir, 'topics.json'), 'w') as file:
         file.write(json.dumps(topics, indent=4))
         print('✅ Generated topics.json')
-        
+    
+    utils.generate_dot(topics, os.path.join(args.output_dir, 'topics'))
+    print('✅ Generated topics.dot and topics.png')
+
+    with open(os.path.join(args.output_dir, 'readme.md'), 'w') as file:
+        utils.generate_readme(topics, file)
+        print('✅ Generated readme.md')
+    
     with open(os.path.join(args.output_dir, 'docs.md'), 'w') as file:
         utils.generate_md(topics, file)
         print('✅ Generated docs.md')
