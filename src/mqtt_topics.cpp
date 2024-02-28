@@ -315,14 +315,6 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -376,14 +368,6 @@ std::vector<Topic> GetSubscribeTopics(Roles role, const std::string& vehicleId, 
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -1209,14 +1193,6 @@ bool CanSubscribe(Roles role, Topics topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
             case Topics::DEVICE_VERSION:
-            case Topics::DATA:
-            case Topics::DATA_PRIMARY:
-            case Topics::DATA_SECONDARY:
-            case Topics::DATA_BMS:
-            case Topics::DATA_INVERTER:
-            case Topics::DATA_SIMULATOR:
-            case Topics::DATA_GPS:
-            case Topics::DATA_BRUSA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::STATUS:
             case Topics::STATUS_INFO:
@@ -1266,7 +1242,16 @@ bool CanSubscribe(Roles role, Topics topic) {
             case Topics::ACTION_SET_LAP_COUNTER_STATUS:
             return true;
             break;
-            
+            case Topics::DATA:
+            case Topics::DATA_PRIMARY:
+            case Topics::DATA_SECONDARY:
+            case Topics::DATA_BMS:
+            case Topics::DATA_INVERTER:
+            case Topics::DATA_SIMULATOR:
+            case Topics::DATA_GPS:
+            case Topics::DATA_BRUSA:
+            return false;
+            break;
         }
         break;
         
@@ -1275,14 +1260,6 @@ bool CanSubscribe(Roles role, Topics topic) {
             case Topics::VEHICLE_ID:
             case Topics::DEVICE_ID:
             case Topics::DEVICE_VERSION:
-            case Topics::DATA:
-            case Topics::DATA_PRIMARY:
-            case Topics::DATA_SECONDARY:
-            case Topics::DATA_BMS:
-            case Topics::DATA_INVERTER:
-            case Topics::DATA_SIMULATOR:
-            case Topics::DATA_GPS:
-            case Topics::DATA_BRUSA:
             case Topics::DATA_LAST_UPDATE:
             case Topics::STATUS:
             case Topics::STATUS_INFO:
@@ -1332,7 +1309,16 @@ bool CanSubscribe(Roles role, Topics topic) {
             case Topics::ACTION_SET_LAP_COUNTER_STATUS:
             return true;
             break;
-            
+            case Topics::DATA:
+            case Topics::DATA_PRIMARY:
+            case Topics::DATA_SECONDARY:
+            case Topics::DATA_BMS:
+            case Topics::DATA_INVERTER:
+            case Topics::DATA_SIMULATOR:
+            case Topics::DATA_GPS:
+            case Topics::DATA_BRUSA:
+            return false;
+            break;
         }
         break;
     }

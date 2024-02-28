@@ -33,7 +33,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data
 > &lt;vehicleId>/&lt;deviceId>/data
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -43,7 +43,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -53,7 +53,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
 > Protobuffer data of secondary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -63,7 +63,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -73,7 +73,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/inverters
 > Protobuffer data of inverter network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -83,7 +83,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/simulator
 > Protobuffer data of simulator network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -93,7 +93,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
 > Protobuffer data of gps network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
@@ -103,7 +103,7 @@
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
   - vehicleId -> The vehicle ID (default: feniceEvo)
