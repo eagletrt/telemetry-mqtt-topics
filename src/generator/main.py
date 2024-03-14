@@ -45,8 +45,8 @@ if __name__ == '__main__':
             if role not in roles:
                 roles.append(role)
         for variable in topic['variables']:
-            if variable['name'] not in variables:
-                variables.append(variable['name'])
+            if variable not in variables:
+                variables.append(variable)
                                 
     print(f'Generating files...\n')
 
@@ -74,5 +74,5 @@ if __name__ == '__main__':
         print('✅ Generated readme.md')
     
     with open(os.path.join(args.output_dir, 'docs.md'), 'w') as file:
-        utils.generate_md(topics, file)
+        utils.generate_docs(topics, file)
         print('✅ Generated docs.md')

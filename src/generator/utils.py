@@ -20,7 +20,7 @@ def generate_dot(topics, filename):
     s = Source(out_str, format="png")
     s.render(outfile=filename + ".png")
 
-def generate_md(topics, file):
+def generate_docs(topics, file):
     file.write("# Topics\n\n")
     for topic in topics:
         file.write(f"## {topic['alias'].replace('<', '&lt;')}\n")
@@ -37,9 +37,7 @@ def generate_md(topics, file):
         file.write("Yes" if topic["retain"] else "No")
         file.write("\n- **Variables**:\n")
         for variable in topic["variables"]:
-            file.write(f"  - {variable['name']} -> {variable['description']} ")
-            if "default" in variable:
-                file.write(f"(default: {variable['default']})\n")
+            file.write(variable)
         file.write("\n")
 
 def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
@@ -124,7 +122,7 @@ def topic_get_parameters(topic: dict) -> str:
     for variable in topic['variables']:
         if ret != '':
             ret += ', '
-        ret += 'const std::string& ' + variable['name']
+        ret += 'const std::string& ' + variable
 
     return ret
 
@@ -133,7 +131,7 @@ def topic_get_parameters_values(topic: dict) -> str:
     for variable in topic['variables']:
         if ret != '':
             ret += ', '
-        ret += variable['name']
+        ret += variable
     
     return ret
 
@@ -141,17 +139,17 @@ def topic_topic_with_variables(topic: dict) -> str:
     ret = topic['topic']
     
     for variable in topic['variables']:
-        ret = ret.replace(f'/<{variable["name"]}>/', f' + "/" + {variable["name"]} + "/" + ')
-        ret = ret.replace(f'/<{variable["name"]}>', f' + "/" + {variable["name"]}')
-        ret = ret.replace(f'<{variable["name"]}>/', f'{variable["name"]} + "/" + ')
-        ret = ret.replace(f'<{variable["name"]}>', f'{variable["name"]} + "/" + ')
+        ret = ret.replace(f'/<{variable}>/', f' + "/" + {variable} + "/" + ')
+        ret = ret.replace(f'/<{variable}>', f' + "/" + {variable}')
+        ret = ret.replace(f'<{variable}>/', f'{variable} + "/" + ')
+        ret = ret.replace(f'<{variable}>', f'{variable} + "/" + ')
         
     split = ret.split()
     for s in split:
         if s != '"/"' and s != '+':
             check = True
             for variable in topic['variables']:
-                if s == variable['name']:
+                if s == variable:
                     check = False
             if check:
                 split[split.index(s)] = f'"{s}"'

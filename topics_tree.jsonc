@@ -12,10 +12,6 @@
         - retain: if true the broker will store the last message and the last value of the retain flag.
         - variables: array of variables that can be replaced in the topic.
         - sub_topics: array of topics that will be appended to the current topic.
-    The variables object contains the following properties:
-        - name: the name of the variable.
-        - description: a description of the variable.
-        - default (optional): the default value of the variable.
 */
 
 {
@@ -26,13 +22,7 @@
         "retain": false,
         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-        "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            }
-        ],
+        "variables": ["vehicleId"],
         "sub_topics": {
             "<deviceId>": {
                 "alias": "DeviceId",
@@ -41,13 +31,7 @@
                 "retain": false,
                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                "variables": [
-                    {
-                        "name": "deviceId",
-                        "description": "The device ID",
-                        "default": "telemetry"
-                    }
-                ],
+                "variables": ["deviceId"],
                 "sub_topics": {
                     "version": {
                         "alias": "DeviceVersion",
@@ -176,12 +160,7 @@
                         "retain": false,
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "variables": [
-                            {
-                                "name": "transactionId",
-                                "description": "The transaction ID"
-                            }
-                        ],
+                        "variables": ["transactionId"],
                         "sub_topics": {
                             "begin": {
                                 "alias": "FileTransactionBegin",
