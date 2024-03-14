@@ -1,17 +1,17 @@
 #include "mqtt_topics.h"
 
-namespace MQTTTopics
+namespace MQTT
 {
-std::vector<Topic> GetSubscribeTopics(Roles role
+std::vector<TopicMessage> GetSubscribeTopics(Role role
     {%- for variable in variables -%}
     , const std::string& {{ variable }}
     {%- endfor -%}    
 ) {
-    std::vector<Topic> ret;
+    std::vector<TopicMessage> ret;
     
     switch(role) {
         {%- for role in roles %}
-        case Roles::ROLE_{{ role }}:
+        case Role::role{{ role.capitalize() }}:
         {% for topic in topics -%}
         {% if role in topic['subscribe_roles'] -%}
         ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
@@ -26,16 +26,16 @@ std::vector<Topic> GetSubscribeTopics(Roles role
     return ret;
 }
 
-std::vector<Topic> GetPublishTopics(Roles role
+std::vector<TopicMessage> GetPublishTopics(Role role
     {%- for variable in variables -%}
     , const std::string& {{ variable }}
     {%- endfor -%}    
 ) {
-    std::vector<Topic> ret;
+    std::vector<TopicMessage> ret;
     
     switch(role) {
     {%- for role in roles %}
-        case Roles::ROLE_{{ role }}:
+        case Role::role{{ role.capitalize() }}:
         {% for topic in topics -%}
         {% if role in topic['publish_roles'] -%}
         ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
@@ -50,16 +50,16 @@ std::vector<Topic> GetPublishTopics(Roles role
     return ret;
 }
 
-bool CanSubscribe(Roles role, Topics topic) {
+bool CanSubscribe(Role role, Topic topic) {
     switch(role) {
     {%- for role in roles %}
-        case Roles::ROLE_{{ role }}:
+        case Role::role{{ role.capitalize() }}:
         switch(topic) {
             {%set ns = namespace(check=0) -%}
             {% for topic in topics -%}
             {%- if role in topic['subscribe_roles'] -%}
             {% set ns.check = 1 -%}
-            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
             {% if ns.check != 0 -%}
@@ -70,7 +70,7 @@ bool CanSubscribe(Roles role, Topics topic) {
             {%- for topic in topics -%}
             {%- if not role in topic['subscribe_roles'] -%}
             {% set ns.check = 1 -%}
-            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
             {% if ns.check != 0 -%}
@@ -88,16 +88,16 @@ bool CanSubscribe(Roles role, Topics topic) {
     return false;
 }
 
-bool CanPublish(Roles role, Topics topic) {
+bool CanPublish(Role role, Topic topic) {
     switch(role) {
     {%- for role in roles %}
-        case Roles::ROLE_{{ role }}:
+        case Role::role{{ role.capitalize() }}:
         switch(topic) {
             {%set ns = namespace(check=0) -%}
             {% for topic in topics -%}
             {%- if role in topic['publish_roles'] -%}
             {% set ns.check = 1 -%}
-            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
             {% if ns.check != 0 -%}
@@ -108,7 +108,7 @@ bool CanPublish(Roles role, Topics topic) {
             {%- for topic in topics -%}
             {%- if not role in topic['publish_roles'] -%}
             {% set ns.check = 1 -%}
-            case Topics::{{ utils.topic_enum_name(topic.alias) }}:
+            case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
             {% if ns.check != 0 -%}
@@ -126,12 +126,12 @@ bool CanPublish(Roles role, Topics topic) {
     return false;
 }
 {% for topic in topics %}
-Topic {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }}) {
+TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }}) {
     std::string topic = {{ utils.topic_topic_with_variables(topic) }};
     int qos = {{ topic.qos }};
     bool retain = {{ topic.retain|lower }};
 
-    return Topic{topic, qos, retain};
+    return TopicMessage{topic, qos, retain};
 }
 {% endfor -%}
 }

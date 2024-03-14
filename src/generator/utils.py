@@ -114,12 +114,10 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     return topics
 
 def topic_enum_name(topic: str) -> str:
-    words = re.findall(r'[A-Z][a-z]*', topic)
-    return ('_'.join(words).upper())
+    return (topic[0].lower() + topic[1:])
 
 def topic_get_name(topic: str) -> str: 
-    words = re.findall(r'[A-Z][a-z]*', topic)
-    return ('GetTopic' + ''.join(words))
+    return ('GetTopic' + topic)
 
 def topic_get_parameters(topic: dict) -> str:
     ret = str()
