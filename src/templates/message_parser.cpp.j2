@@ -4,9 +4,6 @@
 
 namespace MQTTTopics
 {
-MessageParser::TopicNode::TopicNode() :
-    parse(nullptr) { }
-
 MessageParser::MessageParser() {
     this->buildTree();
 }
@@ -30,7 +27,6 @@ void MessageParser::parseTopic(const std::string& topic) {
         (*(*node)->parse)((*node)->argument);
     }
 }
-
 
 void MessageParser::buildTree() {
     this->tree = std::make_unique<TopicNode>(TopicNode());
