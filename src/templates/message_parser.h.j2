@@ -6,37 +6,39 @@
 #include <memory>
 #include <unordered_map>
 
-namespace MqttTopics
+namespace MQTTTopics
 {
-class TopicNode
-{
-    friend class MessageParser;
-
-private:
-    TopicNode();
-    TopicNode(const TopicNode&) = default;
-    TopicNode& operator=(const TopicNode&) = default;
-    ~TopicNode() = default;
-
-private:
-    std::unique_ptr<std::function<void(void*)>> parse;
-    std::unordered_map<std::string, std::unique_ptr<TopicNode>> adjacent;
-};
-
 class MessageParser
 {
+private:
+    class TopicNode
+    {
+    public:
+        TopicNode() = default;
+        TopicNode(const TopicNode&) = default;
+        TopicNode& operator=(const TopicNode&) = default;
+        ~TopicNode() = default;
+
+        std::unique_ptr<std::function<void(void*)>> parse;
+        void* argument = nullptr;
+        std::unordered_map<std::string, std::unique_ptr<TopicNode>> adjacent;
+    };
+
 public:
     MessageParser();
     MessageParser(const MessageParser&) = default;
     MessageParser& operator=(const MessageParser&) = default;
     ~MessageParser() = default;
 
+    void setTopicParse(const std::string& topic, std::function<void(void*)> parse, void* argument = nullptr);
+    void parseTopic(const std::string& topic);
+
 private:
     void buildTree();
     void addTopic(std::unique_ptr<TopicNode>& node, const std::string& topic);
+    std::unique_ptr<TopicNode>* findNode(std::unique_ptr<TopicNode>& node, const std::string& topic);
 
-private:
-    std::unique_ptr<TopicNode> tree;
+    std::unique_ptr<MessageParser::TopicNode> tree;
 };
 }
 

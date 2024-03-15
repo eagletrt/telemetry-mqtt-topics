@@ -2,17 +2,38 @@
 
 #include <algorithm>
 
-namespace MqttTopics
+namespace MQTTTopics
 {
-TopicNode::TopicNode() :
+MessageParser::TopicNode::TopicNode() :
     parse(nullptr) { }
 
 MessageParser::MessageParser() {
     this->buildTree();
 }
 
+void MessageParser::setTopicParse(const std::string& topic, std::function<void(void*)> parse, void* argument) {
+    auto node = this->findNode(this->tree, topic);
+
+    if(node != nullptr) {
+        (*node)->parse = std::make_unique<std::function<void(void*)>>(parse);
+        
+        if(argument != nullptr) {
+            (*node)->argument = argument; 
+        }
+    }
+}
+
+void MessageParser::parseTopic(const std::string& topic) {
+    auto node = this->findNode(this->tree, topic);
+
+    if(node != nullptr) {
+        (*(*node)->parse)((*node)->argument);
+    }
+}
+
+
 void MessageParser::buildTree() {
-    this->tree.reset(new TopicNode());
+    this->tree = std::make_unique<TopicNode>(TopicNode());
     {% for topic in topics -%}
     this->addTopic(this->tree, "{{ topic['topic'] }}");
     {%- if not loop.last%}
@@ -26,14 +47,30 @@ void MessageParser::addTopic(std::unique_ptr<TopicNode>& node, const std::string
     }
 
     auto slash = std::find(topic.begin(), topic.end(), '/');
-    std::string subTopic = std::string(topic.begin(), slash);
-    
+    std::string subTopic = std::string(topic.begin(), slash + 1);
     auto iter = node->adjacent.find(subTopic);
 
     if(iter == node->adjacent.end()) {
-        iter = node->adjacent.emplace(subTopic, new TopicNode()).first;
+        iter = node->adjacent.emplace(subTopic, std::make_unique<TopicNode>(TopicNode())).first;
     }
 
     this->addTopic(iter->second, std::string(slash, topic.end()));
+}
+
+std::unique_ptr<MessageParser::TopicNode>* MessageParser::findNode(std::unique_ptr<TopicNode>& node, const std::string& topic) {
+    auto slash = std::find(topic.begin(), topic.end(), '/');
+
+    if(slash == topic.end()) {
+        return &node;
+    }
+
+    std::string subTopic = std::string(topic.begin(), slash + 1);
+    auto iter = node->adjacent.find(subTopic);
+
+    if(iter == node->adjacent.end()) {
+        return nullptr;
+    } 
+    
+    return findNode(iter->second, subTopic);
 }
 }
