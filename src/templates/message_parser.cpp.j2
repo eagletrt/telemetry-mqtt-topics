@@ -1,1 +1,39 @@
 #include "message_parser.h"
+
+#include <algorithm>
+
+namespace MqttTopics
+{
+TopicNode::TopicNode() :
+    parse(nullptr) { }
+
+MessageParser::MessageParser() {
+    this->buildTree();
+}
+
+void MessageParser::buildTree() {
+    this->tree.reset(new TopicNode());
+    {% for topic in topics -%}
+    this->addTopic(this->tree, "{{ topic['topic'] }}");
+    {%- if not loop.last%}
+    {%endif -%}
+    {%- endfor %}
+}
+
+void MessageParser::addTopic(std::unique_ptr<TopicNode>& node, const std::string& topic) {
+    if(topic.empty()) {
+        return;
+    }
+
+    auto slash = std::find(topic.begin(), topic.end(), '/');
+    std::string subTopic = std::string(topic.begin(), slash);
+    
+    auto iter = node->adjacent.find(subTopic);
+
+    if(iter == node->adjacent.end()) {
+        iter = node->adjacent.emplace(subTopic, new TopicNode()).first;
+    }
+
+    this->addTopic(iter->second, std::string(slash, topic.end()));
+}
+}

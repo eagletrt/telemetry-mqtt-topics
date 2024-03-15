@@ -13,13 +13,12 @@ class TopicNode
     friend class MessageParser;
 
 private:
-    explicit TopicNode(const std::string& topic);
+    TopicNode();
     TopicNode(const TopicNode&) = default;
     TopicNode& operator=(const TopicNode&) = default;
     ~TopicNode() = default;
 
 private:
-    const std::string topic;
     std::unique_ptr<std::function<void(void*)>> parse;
     std::unordered_map<std::string, std::unique_ptr<TopicNode>> adjacent;
 };
@@ -27,10 +26,14 @@ private:
 class MessageParser
 {
 public:
-    MessageParser() = default;
+    MessageParser();
     MessageParser(const MessageParser&) = default;
     MessageParser& operator=(const MessageParser&) = default;
     ~MessageParser() = default;
+
+private:
+    void buildTree();
+    void addTopic(std::unique_ptr<TopicNode>& node, const std::string& topic);
 
 private:
     std::unique_ptr<TopicNode> tree;
