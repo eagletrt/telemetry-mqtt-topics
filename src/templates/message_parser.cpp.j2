@@ -8,11 +8,11 @@ MessageParser::MessageParser() {
     this->buildTree();
 }
 
-void MessageParser::setTopicParse(const std::string& topic, std::function<void(void*)> parse, void* argument) {
+void MessageParser::setMessageParse(const std::string& topic, parse_t parse, void* argument) {
     auto node = this->findNode(this->tree, topic);
 
     if(node != nullptr) {
-        (*node)->parse = std::make_unique<std::function<void(void*)>>(parse);
+        (*node)->parse = std::make_unique<parse_t>(parse);
         
         if(argument != nullptr) {
             (*node)->argument = argument; 
@@ -20,11 +20,11 @@ void MessageParser::setTopicParse(const std::string& topic, std::function<void(v
     }
 }
 
-void MessageParser::parseTopic(const std::string& topic) {
+void MessageParser::parseMessage(const std::string& topic, const std::string& payload) {
     auto node = this->findNode(this->tree, topic);
 
     if(node != nullptr) {
-        (*(*node)->parse)((*node)->argument);
+        (*(*node)->parse)(payload, (*node)->argument);
     }
 }
 
