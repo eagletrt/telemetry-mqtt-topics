@@ -65,9 +65,13 @@ std::unique_ptr<MessageParser::TopicNode>* MessageParser::findNode(std::unique_p
     }
 
     std::string subTopic = std::string(topic.begin(), slash + 1);
-    auto iter = std::find_if(node->adjacent.begin(), node->adjacent.end(), [&subTopic](auto& p) {
-        return (p->first == subTopic || (p.first.front() == '<' && (p.first.back() == '>')));
-    });
+    auto iter = node->adjacent.find(subTopic);
+
+    if(iter == node->adjacent.end()) {
+        iter = std::find_if(node->adjacent.begin(), node->adjacent.end(), [](auto& p) {
+            return ((p.first.front() == '<') && (p.first.back() == '>'));
+        });
+    }
 
     if(iter == node->adjacent.end()) {
         return nullptr;
