@@ -15,9 +15,6 @@ private:
     {
     public:
         TopicNode() = default;
-        TopicNode(const TopicNode&) = default;
-        TopicNode& operator=(const TopicNode&) = default;
-        ~TopicNode() = default;
 
         std::unique_ptr<std::function<void(void*)>> parse;
         void* argument = nullptr;
@@ -26,9 +23,6 @@ private:
 
 public:
     MessageParser();
-    MessageParser(const MessageParser&) = default;
-    MessageParser& operator=(const MessageParser&) = default;
-    ~MessageParser() = default;
 
     void setTopicParse(const std::string& topic, std::function<void(void*)> parse, void* argument = nullptr);
     void parseTopic(const std::string& topic);
