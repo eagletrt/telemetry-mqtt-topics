@@ -9,7 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(
     ${PROJECT_NAME}
     STATIC
-    src/mqtt_topics.cpp
+    src/topics.cpp
+    src/message_parser.cpp
 )
 
 target_include_directories(
