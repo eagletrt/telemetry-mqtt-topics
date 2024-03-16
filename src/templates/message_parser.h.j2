@@ -22,7 +22,7 @@ private:
 
         std::unique_ptr<parse_t> parse;
         void* argument = nullptr;
-        std::unordered_map<std::string, std::unique_ptr<TopicNode>> adjacent;
+        std::unordered_map<std::string, TopicNode> adjacent;
     };
 
 public:
@@ -33,10 +33,10 @@ public:
 
 private:
     void buildTree();
-    void addTopic(std::unique_ptr<TopicNode>& node, const std::string& topic);
-    std::unique_ptr<TopicNode>* findNode(std::unique_ptr<TopicNode>& node, const std::string& topic);
+    void addTopic(TopicNode& node, const std::string& topic);
+    TopicNode* findNode(TopicNode& node, const std::string& topic);
 
-    std::unique_ptr<MessageParser::TopicNode> tree;
+    MessageParser::TopicNode tree;
 };
 }
 

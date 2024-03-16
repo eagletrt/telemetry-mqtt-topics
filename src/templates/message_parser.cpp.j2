@@ -12,10 +12,10 @@ void MessageParser::setMessageParse(const std::string& topic, parse_t parse, voi
     auto node = this->findNode(this->tree, topic);
 
     if(node != nullptr) {
-        (*node)->parse = std::make_unique<parse_t>(parse);
+        node->parse = std::make_unique<parse_t>(parse);
         
         if(argument != nullptr) {
-            (*node)->argument = argument; 
+            node->argument = argument; 
         }
     }
 }
@@ -24,12 +24,11 @@ void MessageParser::parseMessage(const std::string& topic, const std::string& pa
     auto node = this->findNode(this->tree, topic);
 
     if(node != nullptr) {
-        (*(*node)->parse)(payload, (*node)->argument);
+        (*node->parse)(payload, node->argument);
     }
 }
 
 void MessageParser::buildTree() {
-    this->tree = std::make_unique<TopicNode>(TopicNode());
     {% for topic in topics -%}
     this->addTopic(this->tree, "{{ topic['topic'] }}");
     {%- if not loop.last%}
@@ -37,42 +36,45 @@ void MessageParser::buildTree() {
     {%- endfor %}
 }
 
-void MessageParser::addTopic(std::unique_ptr<TopicNode>& node, const std::string& topic) {
+void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
     if(topic.empty()) {
         return;
     }
 
     auto slash = std::find(topic.begin(), topic.end(), '/');
-    std::string subTopic = std::string(topic.begin(), slash + 1);
-    auto iter = node->adjacent.find(subTopic);
 
-    if(iter == node->adjacent.end()) {
-        iter = node->adjacent.emplace(subTopic, std::make_unique<TopicNode>(TopicNode())).first;
+    std::string subTopic = std::string(topic.begin(), slash);
+    auto iter = node.adjacent.find(subTopic);
+
+    if(iter == node.adjacent.end()) {
+        iter = node.adjacent.emplace(subTopic, TopicNode()).first;
     }
 
-    this->addTopic(iter->second, std::string(slash, topic.end()));
+    if(slash != topic.end()) {
+        this->addTopic(iter->second, std::string(slash + 1, topic.end()));
+    }
 }
 
-std::unique_ptr<MessageParser::TopicNode>* MessageParser::findNode(std::unique_ptr<TopicNode>& node, const std::string& topic) {
-    auto slash = std::find(topic.begin(), topic.end(), '/');
-
-    if(slash == topic.end()) {
+MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::string& topic) {
+    if(topic.empty()) {
         return &node;
     }
 
-    std::string subTopic = std::string(topic.begin(), slash + 1);
-    auto iter = node->adjacent.find(subTopic);
+    auto slash = std::find(topic.begin(), topic.end(), '/');
 
-    if(iter == node->adjacent.end()) {
-        iter = std::find_if(node->adjacent.begin(), node->adjacent.end(), [](auto& p) {
+    std::string subTopic = std::string(topic.begin(), slash);
+    auto iter = node.adjacent.find(subTopic);
+
+    if(iter == node.adjacent.end()) {
+        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [](auto& p) {
             return ((p.first.front() == '<') && (p.first.back() == '>'));
         });
     }
 
-    if(iter == node->adjacent.end()) {
+    if(iter == node.adjacent.end()) {
         return nullptr;
     } 
     
-    return findNode(iter->second, subTopic);
+    return findNode(iter->second, std::string(slash + 1, topic.end()));
 }
 }
