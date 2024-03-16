@@ -56,10 +56,6 @@ void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
 }
 
 MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::string& topic) {
-    if(topic.empty()) {
-        return &node;
-    }
-
     auto slash = std::find(topic.begin(), topic.end(), '/');
 
     std::string subTopic = std::string(topic.begin(), slash);
@@ -75,6 +71,10 @@ MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::st
         return nullptr;
     } 
     
-    return findNode(iter->second, std::string(slash + 1, topic.end()));
+    if(slash == topic.end()) {
+        return &(iter->second);
+    } else {
+        return findNode(iter->second, std::string(slash + 1, topic.end()));
+    }
 }
 }
