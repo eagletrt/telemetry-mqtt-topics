@@ -1,6 +1,8 @@
 #ifndef MESSAGE_PARSER_H
 #define MESSAGE_PARSER_H
 
+#include "topics.h"
+
 #include <functional>
 #include <string>
 #include <memory>
@@ -12,7 +14,7 @@ class MessageParser
 {
 
 public:
-    typedef std::function<void(const std::string& payload, void*)> parse_t;
+    typedef void (*parse_t)(const std::string& payload, void*);
     
 private:
     class TopicNode
@@ -28,7 +30,7 @@ private:
 public:
     MessageParser();
 
-    void setMessageParse(const std::string& topic, parse_t parse, void* argument = nullptr);
+    void setMessageParse(Topic topic, parse_t parse, void* argument = nullptr);
     void parseMessage(const std::string& topic, const std::string& payload);
 
 private:

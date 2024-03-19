@@ -117,7 +117,7 @@ def topic_enum_name(topic: str) -> str:
 def topic_get_name(topic: str) -> str: 
     return ('GetTopic' + topic)
 
-def topic_get_parameters(topic: dict) -> str:
+def topic_get_variables(topic: dict) -> str:
     ret = str()
     for variable in topic['variables']:
         if ret != '':
@@ -126,7 +126,7 @@ def topic_get_parameters(topic: dict) -> str:
 
     return ret
 
-def topic_get_parameters_values(topic: dict) -> str:
+def topic_get_variables_values(topic: dict) -> str:
     ret = str()
     for variable in topic['variables']:
         if ret != '':

@@ -8,8 +8,8 @@ MessageParser::MessageParser() {
     this->buildTree();
 }
 
-void MessageParser::setMessageParse(const std::string& topic, parse_t parse, void* argument) {
-    auto node = this->findNode(this->tree, topic);
+void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
+    auto node = this->findNode(this->tree, GetTopic(topic).topic);
 
     if(node != nullptr) {
         node->parse = std::make_unique<parse_t>(parse);

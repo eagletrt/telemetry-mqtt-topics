@@ -14,7 +14,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role
         case Role::role{{ role.capitalize() }}:
         {% for topic in topics -%}
         {% if role in topic['subscribe_roles'] -%}
-        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
+        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }})));
         {% endif -%}
         {% endfor -%}
         break;
@@ -38,7 +38,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role
         case Role::role{{ role.capitalize() }}:
         {% for topic in topics -%}
         {% if role in topic['publish_roles'] -%}
-        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters_values(topic) }})));
+        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }})));
         {% endif -%}
         {% endfor -%}
         break;
@@ -125,8 +125,23 @@ bool CanPublish(Role role, Topic topic) {
 
     return false;
 }
+
+TopicMessage GetTopic(Topic topic
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%} 
+) {
+    switch(topic) {
+        {% for topic in topics -%}
+        case Topic::{{ utils.topic_enum_name(topic.alias) }}: 
+            return {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }});
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+    }
+}
 {% for topic in topics %}
-TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }}) {
+TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables(topic) }}) {
     std::string topic = {{ utils.topic_topic_with_variables(topic) }};
     int qos = {{ topic.qos }};
     bool retain = {{ topic.retain|lower }};

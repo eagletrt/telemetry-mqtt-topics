@@ -47,8 +47,13 @@ std::vector<TopicMessage> GetPublishTopics(Role role
 bool CanSubscribe(Role role, Topic topic);
 bool CanPublish(Role role, Topic topic);
 
+TopicMessage GetTopic(Topic topic
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }} = "<{{ variable }}>"
+    {%- endfor -%}    
+);
 {% for topic in topics -%}
-TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_parameters(topic) }});
+TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables(topic) }});
 {% endfor -%}
 }
 
