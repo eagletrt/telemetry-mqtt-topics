@@ -4,6 +4,18 @@
 
 namespace MQTTTopics
 {
+
+MessageParser::Variables::Variables(
+    {%- for variable in variables -%}
+    const std::string& {{ variable }}
+    {%- if not loop.last %}, {% endif -%}
+    {%- endfor -%}
+) :
+    {% for variable in variables -%}
+    {{ variable }}({{ variable }})
+    {%- if not loop.last %}, {% endif -%}
+    {%- endfor %} {}
+
 MessageParser::MessageParser() {
     this->buildTree();
 }
@@ -20,7 +32,7 @@ void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) 
     }
 }
 
-void MessageParser::parseMessage(const std::string& topic, const std::string& payload) {
+void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
     auto node = this->findNode(this->tree, topic);
 
     if(node != nullptr) {
