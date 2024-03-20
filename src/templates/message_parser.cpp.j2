@@ -108,7 +108,7 @@ MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::st
     if(slash == topic.end()) {
         return &(iter->second);
     } else {
-        return findNode(iter->second, std::string(slash + 1, topic.end()));
+        return findNode(iter->second, std::string(slash + 1, topic.end()), variables);
     }
 }
 }
