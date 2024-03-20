@@ -10,9 +10,7 @@ enum class Role
 {
     {%- for role in roles %}
     role{{ role.capitalize() }} = {{ loop.index - 1}}
-    {%- if not loop.last -%}
-    ,
-    {%- endif -%}
+    {%- if not loop.last -%} , {%- endif -%}
     {%- endfor %}
 };
 
@@ -20,9 +18,7 @@ enum class Topic
 {
     {%- for topic in topics %}
     {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}}
-    {%- if not loop.last -%}
-    ,
-    {%- endif -%}
+    {%- if not loop.last -%} , {%- endif -%}
     {%- endfor %}
 };
 
