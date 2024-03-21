@@ -14,9 +14,11 @@ with open('src/templates/topics.h.j2', 'r') as file:
 with open('src/templates/topics.cpp.j2', 'r') as file:
     topics_cpp_template = jinja2.Template(file.read())
 with open('src/templates/message_parser.h.j2', 'r') as file:
-    parser_h_template = jinja2.Template(file.read())
+    message_parser_h_template = jinja2.Template(file.read())
 with open('src/templates/message_parser.cpp.j2', 'r') as file:
-    parser_cpp_template = jinja2.Template(file.read())
+    message_parser_cpp_template = jinja2.Template(file.read())
+with open('src/templates/mqtt_topics.h.j2', 'r') as file:
+    mqtt_topics_h = jinja2.Template(file.read())
 with open('src/templates/CMakeLists.txt.j2', 'r') as file:
     cmake_template = jinja2.Template(file.read())
 
@@ -63,12 +65,16 @@ if __name__ == '__main__':
         print(f'✅ Generated topics.cpp')
         
     with open(os.path.join(args.output_dir, 'inc', 'message_parser.h'), 'w') as file:
-        file.write(parser_h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        file.write(message_parser_h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated message_parser.h')
         
     with open(os.path.join(args.output_dir, 'src', 'message_parser.cpp'), 'w') as file:
-        file.write(parser_cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        file.write(message_parser_cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
         print(f'✅ Generated message_parser.cpp')
+
+    with open(os.path.join(args.output_dir, 'mqtt_topics.h'), 'w') as file:
+        file.write(mqtt_topics_h.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated mqtt_topics.h')
         
     with open(os.path.join(args.output_dir, 'CMakeLists.txt'), 'w') as file:
         file.write(cmake_template.render())
