@@ -2,6 +2,9 @@
 
 namespace MQTTTopics
 {
+TopicMessage::TopicMessage(std::string&& topic, int qos, bool retain) :
+    topic(topic), qos(qos), retain(retain) {}
+
 std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
     std::vector<TopicMessage> ret;
     
@@ -918,11 +921,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role1:
         switch(topic) {
@@ -984,11 +985,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role2:
         switch(topic) {
@@ -1050,11 +1049,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role3:
         switch(topic) {
@@ -1116,11 +1113,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role4:
         switch(topic) {
@@ -1182,11 +1177,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role128:
         switch(topic) {
@@ -1240,8 +1233,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             case Topic::data:
             case Topic::dataPrimary:
             case Topic::dataSecondary:
@@ -1250,10 +1242,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::dataSimulator:
             case Topic::dataGps:
             case Topic::dataBrusa:
-            return false;
-            break;
+              return false;
         }
-        break;
         
         case Role::role129:
         switch(topic) {
@@ -1307,8 +1297,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             case Topic::data:
             case Topic::dataPrimary:
             case Topic::dataSecondary:
@@ -1317,10 +1306,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::dataSimulator:
             case Topic::dataGps:
             case Topic::dataBrusa:
-            return false;
-            break;
+              return false;
         }
-        break;
     }
 
     return false;
@@ -1388,11 +1375,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role1:
         switch(topic) {
@@ -1454,11 +1439,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role2:
         switch(topic) {
@@ -1520,11 +1503,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role3:
         switch(topic) {
@@ -1586,11 +1567,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role4:
         switch(topic) {
@@ -1652,11 +1631,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role128:
         switch(topic) {
@@ -1718,11 +1695,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
         
         case Role::role129:
         switch(topic) {
@@ -1784,11 +1759,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::actionRaw:
             case Topic::actionResetLapCounter:
             case Topic::actionSetLapCounterStatus:
-            return true;
-            break;
+              return true;
             
         }
-        break;
     }
 
     return false;
@@ -1913,6 +1886,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
         case Topic::actionSetLapCounterStatus: 
             return GetTopicActionSetLapCounterStatus(vehicleId, deviceId);
     }
+
+    return TopicMessage("", 0, false);
 }
 
 TopicMessage GetTopicVehicleId(const std::string& vehicleId) {
@@ -1920,7 +1895,7 @@ TopicMessage GetTopicVehicleId(const std::string& vehicleId) {
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDeviceId(const std::string& vehicleId, const std::string& deviceId) {
@@ -1928,7 +1903,7 @@ TopicMessage GetTopicDeviceId(const std::string& vehicleId, const std::string& d
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDeviceVersion(const std::string& vehicleId, const std::string& deviceId) {
@@ -1936,7 +1911,7 @@ TopicMessage GetTopicDeviceVersion(const std::string& vehicleId, const std::stri
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicData(const std::string& vehicleId, const std::string& deviceId) {
@@ -1944,7 +1919,7 @@ TopicMessage GetTopicData(const std::string& vehicleId, const std::string& devic
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataPrimary(const std::string& vehicleId, const std::string& deviceId) {
@@ -1952,7 +1927,7 @@ TopicMessage GetTopicDataPrimary(const std::string& vehicleId, const std::string
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataSecondary(const std::string& vehicleId, const std::string& deviceId) {
@@ -1960,7 +1935,7 @@ TopicMessage GetTopicDataSecondary(const std::string& vehicleId, const std::stri
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataBms(const std::string& vehicleId, const std::string& deviceId) {
@@ -1968,7 +1943,7 @@ TopicMessage GetTopicDataBms(const std::string& vehicleId, const std::string& de
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataInverter(const std::string& vehicleId, const std::string& deviceId) {
@@ -1976,7 +1951,7 @@ TopicMessage GetTopicDataInverter(const std::string& vehicleId, const std::strin
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataSimulator(const std::string& vehicleId, const std::string& deviceId) {
@@ -1984,7 +1959,7 @@ TopicMessage GetTopicDataSimulator(const std::string& vehicleId, const std::stri
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataGps(const std::string& vehicleId, const std::string& deviceId) {
@@ -1992,7 +1967,7 @@ TopicMessage GetTopicDataGps(const std::string& vehicleId, const std::string& de
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& deviceId) {
@@ -2000,7 +1975,7 @@ TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataLastUpdate(const std::string& vehicleId, const std::string& deviceId) {
@@ -2008,7 +1983,7 @@ TopicMessage GetTopicDataLastUpdate(const std::string& vehicleId, const std::str
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatus(const std::string& vehicleId, const std::string& deviceId) {
@@ -2016,7 +1991,7 @@ TopicMessage GetTopicStatus(const std::string& vehicleId, const std::string& dev
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusInfo(const std::string& vehicleId, const std::string& deviceId) {
@@ -2024,7 +1999,7 @@ TopicMessage GetTopicStatusInfo(const std::string& vehicleId, const std::string&
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string& deviceId) {
@@ -2032,7 +2007,7 @@ TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusAlert(const std::string& vehicleId, const std::string& deviceId) {
@@ -2040,7 +2015,7 @@ TopicMessage GetTopicStatusAlert(const std::string& vehicleId, const std::string
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const std::string& deviceId) {
@@ -2048,7 +2023,7 @@ TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const st
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusLapCounterStatus(const std::string& vehicleId, const std::string& deviceId) {
@@ -2056,7 +2031,7 @@ TopicMessage GetTopicStatusLapCounterStatus(const std::string& vehicleId, const 
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const std::string& deviceId) {
@@ -2064,7 +2039,7 @@ TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const st
     int qos = 1;
     bool retain = true;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& deviceId) {
@@ -2072,7 +2047,7 @@ TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& de
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicCommandSend(const std::string& vehicleId, const std::string& deviceId) {
@@ -2080,7 +2055,7 @@ TopicMessage GetTopicCommandSend(const std::string& vehicleId, const std::string
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::string& deviceId) {
@@ -2088,7 +2063,7 @@ TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::stri
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionRequest(const std::string& vehicleId, const std::string& deviceId) {
@@ -2096,7 +2071,7 @@ TopicMessage GetTopicFileTransactionRequest(const std::string& vehicleId, const 
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionResponse(const std::string& vehicleId, const std::string& deviceId) {
@@ -2104,7 +2079,7 @@ TopicMessage GetTopicFileTransactionResponse(const std::string& vehicleId, const
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransaction(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
@@ -2112,7 +2087,7 @@ TopicMessage GetTopicFileTransaction(const std::string& vehicleId, const std::st
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionBegin(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
@@ -2120,7 +2095,7 @@ TopicMessage GetTopicFileTransactionBegin(const std::string& vehicleId, const st
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionEnd(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
@@ -2128,7 +2103,7 @@ TopicMessage GetTopicFileTransactionEnd(const std::string& vehicleId, const std:
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
@@ -2136,7 +2111,7 @@ TopicMessage GetTopicFileTransactionChunk(const std::string& vehicleId, const st
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
@@ -2144,7 +2119,7 @@ TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicAction(const std::string& vehicleId, const std::string& deviceId) {
@@ -2152,7 +2127,7 @@ TopicMessage GetTopicAction(const std::string& vehicleId, const std::string& dev
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionTelemetryConfig(const std::string& vehicleId, const std::string& deviceId) {
@@ -2160,7 +2135,7 @@ TopicMessage GetTopicActionTelemetryConfig(const std::string& vehicleId, const s
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionTelemetryConfigSet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2168,7 +2143,7 @@ TopicMessage GetTopicActionTelemetryConfigSet(const std::string& vehicleId, cons
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionTelemetryConfigGet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2176,7 +2151,7 @@ TopicMessage GetTopicActionTelemetryConfigGet(const std::string& vehicleId, cons
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionTelemetryConfigContent(const std::string& vehicleId, const std::string& deviceId) {
@@ -2184,7 +2159,7 @@ TopicMessage GetTopicActionTelemetryConfigContent(const std::string& vehicleId, 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionSessionConfig(const std::string& vehicleId, const std::string& deviceId) {
@@ -2192,7 +2167,7 @@ TopicMessage GetTopicActionSessionConfig(const std::string& vehicleId, const std
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionSessionConfigSet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2200,7 +2175,7 @@ TopicMessage GetTopicActionSessionConfigSet(const std::string& vehicleId, const 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionSessionConfigGet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2208,7 +2183,7 @@ TopicMessage GetTopicActionSessionConfigGet(const std::string& vehicleId, const 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionSessionConfigContent(const std::string& vehicleId, const std::string& deviceId) {
@@ -2216,7 +2191,7 @@ TopicMessage GetTopicActionSessionConfigContent(const std::string& vehicleId, co
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionCarConfig(const std::string& vehicleId, const std::string& deviceId) {
@@ -2224,7 +2199,7 @@ TopicMessage GetTopicActionCarConfig(const std::string& vehicleId, const std::st
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionCarConfigSet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2232,7 +2207,7 @@ TopicMessage GetTopicActionCarConfigSet(const std::string& vehicleId, const std:
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2240,7 +2215,7 @@ TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std:
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId) {
@@ -2248,7 +2223,7 @@ TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const std::string& deviceId) {
@@ -2256,7 +2231,7 @@ TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const 
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2264,7 +2239,7 @@ TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, con
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId) {
@@ -2272,7 +2247,7 @@ TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, con
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId) {
@@ -2280,7 +2255,7 @@ TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId,
     int qos = 0;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string& deviceId) {
@@ -2288,7 +2263,7 @@ TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string&
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionStart(const std::string& vehicleId, const std::string& deviceId) {
@@ -2296,7 +2271,7 @@ TopicMessage GetTopicActionStart(const std::string& vehicleId, const std::string
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string& deviceId) {
@@ -2304,7 +2279,7 @@ TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionStop(const std::string& vehicleId, const std::string& deviceId) {
@@ -2312,7 +2287,7 @@ TopicMessage GetTopicActionStop(const std::string& vehicleId, const std::string&
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionPrecharge(const std::string& vehicleId, const std::string& deviceId) {
@@ -2320,7 +2295,7 @@ TopicMessage GetTopicActionPrecharge(const std::string& vehicleId, const std::st
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionBalance(const std::string& vehicleId, const std::string& deviceId) {
@@ -2328,7 +2303,7 @@ TopicMessage GetTopicActionBalance(const std::string& vehicleId, const std::stri
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionStopBalance(const std::string& vehicleId, const std::string& deviceId) {
@@ -2336,7 +2311,7 @@ TopicMessage GetTopicActionStopBalance(const std::string& vehicleId, const std::
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionCharge(const std::string& vehicleId, const std::string& deviceId) {
@@ -2344,7 +2319,7 @@ TopicMessage GetTopicActionCharge(const std::string& vehicleId, const std::strin
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::string& deviceId) {
@@ -2352,7 +2327,7 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId) {
@@ -2360,7 +2335,7 @@ TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& 
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId) {
@@ -2368,7 +2343,7 @@ TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const s
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, const std::string& deviceId) {
@@ -2376,6 +2351,6 @@ TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, con
     int qos = 2;
     bool retain = false;
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 }

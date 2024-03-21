@@ -81,6 +81,8 @@ enum class Topic
 
 struct TopicMessage
 {
+    TopicMessage(std::string&& topic, int qos, bool retain);
+
     std::string topic;
     int qos;
     bool retain;

@@ -136,13 +136,15 @@ MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::st
     auto iter = node.adjacent.find(subTopic);
 
     if(iter == node.adjacent.end()) {
-        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [](auto& p) {
-            if(p->first == "<vehicleId>" && subTopic == variables.vehicleId) {
+        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [&subTopic, &variables](auto& next) {
+            if(next.first == "<vehicleId>" && subTopic == variables.vehicleId) {
                 return true;
-            } else if(p->first == "<deviceId>" && subTopic == variables.deviceId) {
+            } else if(next.first == "<deviceId>" && subTopic == variables.deviceId) {
                 return true;
-            } else if(p->first == "<transactionId>" && subTopic == variables.transactionId) {
+            } else if(next.first == "<transactionId>" && subTopic == variables.transactionId) {
                 return true;
+            } else {
+                return false;
             }
         });
     }
