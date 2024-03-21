@@ -2,6 +2,9 @@
 
 namespace MQTTTopics
 {
+TopicMessage::TopicMessage(std::string&& topic, int qos, bool retain) :
+    topic(topic), qos(qos), retain(retain) {}
+
 std::vector<TopicMessage> GetSubscribeTopics(Role role
     {%- for variable in variables -%}
     , const std::string& {{ variable }}
@@ -62,9 +65,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 -%}
-            return true;
-            break;
+            {% if ns.check != 0 %}  return true;
             {% endif -%}
             {% set ns.check = 0 %}
             {%- for topic in topics -%}
@@ -73,13 +74,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 -%}
-            return false;
-            break;
+            {% if ns.check != 0 %}  return false;
             {%- else %}
             {%- endif %}
         }
-        break;
         {%- if not loop.last%}
         {%endif -%}
         {%- endfor %}
@@ -100,9 +98,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 -%}
-            return true;
-            break;
+            {% if ns.check != 0 %}  return true;
             {% endif -%}
             {% set ns.check = 0 %}
             {%- for topic in topics -%}
@@ -111,13 +107,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 -%}
-            return false;
-            break;
-            {%- else %}
+            {% if ns.check != 0 %}  return false;
             {%- endif %}
         }
-        break;
         {%- if not loop.last%}
         {%endif -%}
         {%- endfor %}
@@ -139,6 +131,8 @@ TopicMessage GetTopic(Topic topic
         {%endif -%}
         {%- endfor %}
     }
+
+    return TopicMessage("", 0, false);
 }
 {% for topic in topics %}
 TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables(topic) }}) {
@@ -146,7 +140,7 @@ TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variable
     int qos = {{ topic.qos }};
     bool retain = {{ topic.retain|lower }};
 
-    return TopicMessage{topic, qos, retain};
+    return TopicMessage(std::move(topic), qos, retain);
 }
 {% endfor -%}
 }

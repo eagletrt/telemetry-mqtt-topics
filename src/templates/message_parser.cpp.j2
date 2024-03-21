@@ -91,13 +91,15 @@ MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::st
     auto iter = node.adjacent.find(subTopic);
 
     if(iter == node.adjacent.end()) {
-        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [](auto& p) {
+        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [&subTopic, &variables](auto& next) {
             {% for variable in variables -%}
-            if(p->first == "<{{ variable }}>" && subTopic == variables.{{ variable }}) {
+            if(next.first == "<{{ variable }}>" && subTopic == variables.{{ variable }}) {
                 return true;
             }
             {%- if not loop.last %} else {% endif -%}
-            {%- endfor %}
+            {%- endfor %} else {
+                return false;
+            }
         });
     }
 
