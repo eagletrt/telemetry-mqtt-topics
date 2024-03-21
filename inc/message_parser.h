@@ -16,7 +16,6 @@ class MessageParser
 public:
     typedef void (*parse_t)(const std::string& payload, void*);
     
-private:
     struct Variables
     {
         Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
@@ -26,6 +25,7 @@ private:
         std::string transactionId;
     };
 
+private:
     struct TopicNode
     {
         std::unique_ptr<parse_t> parse;

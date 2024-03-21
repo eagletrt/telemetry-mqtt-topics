@@ -4,7 +4,6 @@
 
 namespace MQTTTopics
 {
-
 MessageParser::Variables::Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) :
     vehicleId(vehicleId), deviceId(deviceId), transactionId(transactionId) {}
 
