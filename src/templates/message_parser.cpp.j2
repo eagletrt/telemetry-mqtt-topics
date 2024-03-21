@@ -4,7 +4,6 @@
 
 namespace MQTTTopics
 {
-
 MessageParser::Variables::Variables(
     {%- for variable in variables -%}
     const std::string& {{ variable }}
