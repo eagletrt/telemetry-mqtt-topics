@@ -24,9 +24,9 @@ void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) 
 }
 
 void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
-    auto node = this->findNode(this->tree, topic, variables);
+    auto nodes = this->findNodesVariables(this->tree, topic, variables);
 
-    if(node != nullptr) {
+    for(auto& node : nodes) {
         (*node->parse)(payload, node->argument);
     }
 }
@@ -128,34 +128,48 @@ MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::st
     }
 }
 
-MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::string& topic, const Variables& variables) {
+std::vector<MessageParser::TopicNode*> MessageParser::findNodesVariables(TopicNode& node, const std::string& topic, const Variables& variables) {
+    std::vector<TopicNode*> ret;
+    findNodesVariablesRec(node, topic, variables, false, ret);
+
+    return ret;
+}
+
+void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret) {    
     auto slash = std::find(topic.begin(), topic.end(), '/');
-
     std::string subTopic = std::string(topic.begin(), slash);
-    auto iter = node.adjacent.find(subTopic);
 
-    if(iter == node.adjacent.end()) {
-        iter = std::find_if(node.adjacent.begin(), node.adjacent.end(), [&subTopic, &variables](auto& next) {
-            if(next.first == "<vehicleId>" && subTopic == variables.vehicleId) {
-                return true;
-            } else if(next.first == "<deviceId>" && subTopic == variables.deviceId) {
-                return true;
-            } else if(next.first == "<transactionId>" && subTopic == variables.transactionId) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+    if(subTopic == "#") {
+        hashtag = true;
     }
 
-    if(iter == node.adjacent.end()) {
-        return nullptr;
-    } 
-    
-    if(slash == topic.end()) {
-        return &(iter->second);
+    if(hashtag) {
+        for(auto& next : node.adjacent) {
+            ret.push_back(&(next.second));
+            findNodesVariablesRec(next.second, "", variables, hashtag, ret);
+        }
     } else {
-        return findNode(iter->second, std::string(slash + 1, topic.end()), variables);
+        for(auto& next : node.adjacent) {
+            bool match = false;
+
+            if(subTopic == "+" || subTopic == next.first) {
+                match = true;
+            } else if(next.first == "<vehicleId>" && subTopic == variables.vehicleId) {
+                match = true;
+            } else if(next.first == "<deviceId>" && subTopic == variables.deviceId) {
+                match = true;
+            } else if(next.first == "<transactionId>" && subTopic == variables.transactionId) {
+                match = true;
+            }
+
+            if(match) {
+                if(slash == topic.end()) {
+                    ret.push_back(&(next.second));
+                } else {
+                    findNodesVariablesRec(next.second, std::string(slash + 1, topic.end()), variables, hashtag, ret);
+                }
+            }
+        }
     }
 }
 }

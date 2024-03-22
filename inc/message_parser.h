@@ -42,7 +42,8 @@ private:
     void buildTree();
     void addTopic(TopicNode& node, const std::string& topic);
     static TopicNode* findNode(TopicNode& node, const std::string& topic);
-    static TopicNode* findNode(TopicNode& node, const std::string& topic, const Variables& variables);
+    static std::vector<TopicNode*> findNodesVariables(TopicNode& node, const std::string& topic, const Variables& variables);
+    static void findNodesVariablesRec(TopicNode& node, const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret);
 
     MessageParser::TopicNode tree;
 };
