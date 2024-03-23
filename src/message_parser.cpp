@@ -7,94 +7,7 @@ namespace MQTTTopics
 MessageParser::Variables::Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) :
     vehicleId(vehicleId), deviceId(deviceId), transactionId(transactionId) {}
 
-MessageParser::MessageParser() {
-    this->buildTree();
-}
-
-void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
-    auto node = this->findNode(this->tree, GetTopic(topic).topic);
-
-    if(node != nullptr) {
-        node->parse = std::make_unique<parse_t>(parse);
-        
-        if(argument != nullptr) {
-            node->argument = argument; 
-        }
-    }
-}
-
-void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
-    auto nodes = this->findNodesVariables(this->tree, topic, variables);
-
-    for(auto& node : nodes) {
-        if(node->parse != nullptr) {
-            (*node->parse)(payload, node->argument);
-        }
-    }
-}
-
-void MessageParser::buildTree() {
-    this->addTopic(this->tree, "<vehicleId>");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/version");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/primary");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/secondary");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/bms");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/inverters");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/simulator");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/gps");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/data/brusa");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/last_update");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/info");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/error");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/alert");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/canFrequencies");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/lapCounterStatus");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/status/lapCounterLaps");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/command");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/command/send");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/command/result");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/request");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/response");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/<transactionId>");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/telemetryConfig");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/telemetryConfig/set");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/telemetryConfig/get");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/telemetryConfig/content");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/sessionConfig");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/sessionConfig/set");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/sessionConfig/get");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/sessionConfig/content");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/carConfig");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/carConfig/set");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/carConfig/get");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/carConfig/content");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/handcartSettings");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/handcartSettings/set");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/handcartSettings/get");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/handcartSettings/content");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/kill");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/start");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/reset");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/stop");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/precharge");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/balance");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/stopBalance");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/charge");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/stopCharge");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/raw");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/resetLapcounter");
-    this->addTopic(this->tree, "<vehicleId>/<deviceId>/action/setLapcounterStatus");
-}
-
-void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
+void MessageParser::TopicNode::addNode(const std::string& topic) {
     if(topic.empty()) {
         return;
     }
@@ -102,42 +15,42 @@ void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
     auto slash = std::find(topic.begin(), topic.end(), '/');
 
     std::string subTopic = std::string(topic.begin(), slash);
-    auto iter = node.adjacent.find(subTopic);
+    auto iter = this->adjacent.find(subTopic);
 
-    if(iter == node.adjacent.end()) {
-        iter = node.adjacent.emplace(subTopic, TopicNode()).first;
+    if(iter == this->adjacent.end()) {
+        iter = this->adjacent.emplace(subTopic, TopicNode()).first;
     }
 
     if(slash != topic.end()) {
-        this->addTopic(iter->second, std::string(slash + 1, topic.end()));
+        iter->second.addNode(std::string(slash + 1, topic.end()));
     }
 }
 
-MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::string& topic) {
+MessageParser::TopicNode* MessageParser::TopicNode::findNode(const std::string& topic) {
     auto slash = std::find(topic.begin(), topic.end(), '/');
 
     std::string subTopic = std::string(topic.begin(), slash);
-    auto iter = node.adjacent.find(subTopic);
+    auto iter = this->adjacent.find(subTopic);
 
-    if(iter == node.adjacent.end()) {
+    if(iter == this->adjacent.end()) {
         return nullptr;
     } 
     
     if(slash == topic.end()) {
         return &(iter->second);
     } else {
-        return findNode(iter->second, std::string(slash + 1, topic.end()));
+        return iter->second.findNode(std::string(slash + 1, topic.end()));
     }
 }
 
-std::vector<MessageParser::TopicNode*> MessageParser::findNodesVariables(TopicNode& node, const std::string& topic, const Variables& variables) {
+std::vector<MessageParser::TopicNode*> MessageParser::TopicNode::findNodesVariables(const std::string& topic, const Variables& variables) {
     std::vector<TopicNode*> ret;
-    findNodesVariablesRec(node, topic, variables, false, ret);
+    this->findNodesVariablesRec(topic, variables, false, ret);
 
     return ret;
 }
 
-void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret) {    
+void MessageParser::TopicNode::findNodesVariablesRec(const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret) {    
     auto slash = std::find(topic.begin(), topic.end(), '/');
     std::string subTopic = std::string(topic.begin(), slash);
 
@@ -146,12 +59,12 @@ void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& to
     }
 
     if(hashtag) {
-        for(auto& next : node.adjacent) {
+        for(auto& next : this->adjacent) {
             ret.push_back(&(next.second));
-            findNodesVariablesRec(next.second, "", variables, hashtag, ret);
+            next.second.findNodesVariablesRec("", variables, hashtag, ret);
         }
     } else {
-        for(auto& next : node.adjacent) {
+        for(auto& next : this->adjacent) {
             bool match = false;
 
             if(subTopic == "+" || subTopic == next.first) {
@@ -168,9 +81,92 @@ void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& to
                 if(slash == topic.end()) {
                     ret.push_back(&(next.second));
                 } else {
-                    findNodesVariablesRec(next.second, std::string(slash + 1, topic.end()), variables, hashtag, ret);
+                    next.second.findNodesVariablesRec(std::string(slash + 1, topic.end()), variables, hashtag, ret);
                 }
             }
+        }
+    }
+}
+
+MessageParser::MessageParser() {
+    this->tree.addNode("<vehicleId>");
+    this->tree.addNode("<vehicleId>/<deviceId>");
+    this->tree.addNode("<vehicleId>/<deviceId>/version");
+    this->tree.addNode("<vehicleId>/<deviceId>/data");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/primary");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/secondary");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/bms");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/inverters");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/simulator");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/gps");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/brusa");
+    this->tree.addNode("<vehicleId>/<deviceId>/last_update");
+    this->tree.addNode("<vehicleId>/<deviceId>/status");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/info");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/error");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/alert");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/canFrequencies");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterLaps");
+    this->tree.addNode("<vehicleId>/<deviceId>/command");
+    this->tree.addNode("<vehicleId>/<deviceId>/command/send");
+    this->tree.addNode("<vehicleId>/<deviceId>/command/result");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/request");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/response");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/begin");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk");
+    this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack");
+    this->tree.addNode("<vehicleId>/<deviceId>/action");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/sessionConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/sessionConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/sessionConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/sessionConfig/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/kill");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/start");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/reset");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/stop");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/precharge");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/balance");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/stopBalance");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/charge");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/stopCharge");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus");
+}
+
+void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
+    auto node = this->tree.findNode(GetTopic(topic).topic);
+
+    if(node != nullptr) {
+        node->parse = std::make_unique<parse_t>(parse);
+        
+        if(argument != nullptr) {
+            node->argument = argument; 
+        }
+    }
+}
+
+void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
+    auto nodes = this->tree.findNodesVariables(topic, variables);
+
+    for(auto& node : nodes) {
+        if(node->parse != nullptr) {
+            (*node->parse)(payload, node->argument);
         }
     }
 }
