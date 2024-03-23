@@ -3,7 +3,6 @@
 
 #include "topics.h"
 
-#include <functional>
 #include <string>
 #include <memory>
 #include <unordered_map>
