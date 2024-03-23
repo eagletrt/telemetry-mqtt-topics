@@ -35,7 +35,9 @@ void MessageParser::parseMessage(const Variables& variables, const std::string& 
     auto nodes = this->findNodesVariables(this->tree, topic, variables);
 
     for(auto& node : nodes) {
-        (*node->parse)(payload, node->argument);
+        if(node->parse != nullptr) {
+            (*node->parse)(payload, node->argument);
+        }
     }
 }
 
