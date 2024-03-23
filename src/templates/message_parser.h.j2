@@ -37,6 +37,11 @@ private:
         std::unique_ptr<parse_t> parse;
         void* argument = nullptr;
         std::unordered_map<std::string, TopicNode> adjacent;
+
+        void addNode(const std::string& topic);
+        TopicNode* findNode(const std::string& topic);
+        std::vector<TopicNode*> findNodesVariables(const std::string& topic, const Variables& variables);
+        void findNodesVariablesRec(const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret);
     };
 
 public:
@@ -46,12 +51,6 @@ public:
     void parseMessage(const Variables& variables, const std::string& topic, const std::string& payload);
 
 private:
-    void buildTree();
-    void addTopic(TopicNode& node, const std::string& topic);
-    static TopicNode* findNode(TopicNode& node, const std::string& topic);
-    static std::vector<TopicNode*> findNodesVariables(TopicNode& node, const std::string& topic, const Variables& variables);
-    static void findNodesVariablesRec(TopicNode& node, const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret);
-
     MessageParser::TopicNode tree;
 };
 }

@@ -15,41 +15,7 @@ MessageParser::Variables::Variables(
     {%- if not loop.last %}, {% endif -%}
     {%- endfor %} {}
 
-MessageParser::MessageParser() {
-    this->buildTree();
-}
-
-void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
-    auto node = this->findNode(this->tree, GetTopic(topic).topic);
-
-    if(node != nullptr) {
-        node->parse = std::make_unique<parse_t>(parse);
-        
-        if(argument != nullptr) {
-            node->argument = argument; 
-        }
-    }
-}
-
-void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
-    auto nodes = this->findNodesVariables(this->tree, topic, variables);
-
-    for(auto& node : nodes) {
-        if(node->parse != nullptr) {
-            (*node->parse)(payload, node->argument);
-        }
-    }
-}
-
-void MessageParser::buildTree() {
-    {% for topic in topics -%}
-    this->addTopic(this->tree, "{{ topic['topic'] }}");
-    {%- if not loop.last%}
-    {%endif -%}
-    {%- endfor %}
-}
-
-void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
+void MessageParser::TopicNode::addNode(const std::string& topic) {
     if(topic.empty()) {
         return;
     }
@@ -57,42 +23,42 @@ void MessageParser::addTopic(TopicNode& node, const std::string& topic) {
     auto slash = std::find(topic.begin(), topic.end(), '/');
 
     std::string subTopic = std::string(topic.begin(), slash);
-    auto iter = node.adjacent.find(subTopic);
+    auto iter = this->adjacent.find(subTopic);
 
-    if(iter == node.adjacent.end()) {
-        iter = node.adjacent.emplace(subTopic, TopicNode()).first;
+    if(iter == this->adjacent.end()) {
+        iter = this->adjacent.emplace(subTopic, TopicNode()).first;
     }
 
     if(slash != topic.end()) {
-        this->addTopic(iter->second, std::string(slash + 1, topic.end()));
+        iter->second.addNode(std::string(slash + 1, topic.end()));
     }
 }
 
-MessageParser::TopicNode* MessageParser::findNode(TopicNode& node, const std::string& topic) {
+MessageParser::TopicNode* MessageParser::TopicNode::findNode(const std::string& topic) {
     auto slash = std::find(topic.begin(), topic.end(), '/');
 
     std::string subTopic = std::string(topic.begin(), slash);
-    auto iter = node.adjacent.find(subTopic);
+    auto iter = this->adjacent.find(subTopic);
 
-    if(iter == node.adjacent.end()) {
+    if(iter == this->adjacent.end()) {
         return nullptr;
     } 
     
     if(slash == topic.end()) {
         return &(iter->second);
     } else {
-        return findNode(iter->second, std::string(slash + 1, topic.end()));
+        return iter->second.findNode(std::string(slash + 1, topic.end()));
     }
 }
 
-std::vector<MessageParser::TopicNode*> MessageParser::findNodesVariables(TopicNode& node, const std::string& topic, const Variables& variables) {
+std::vector<MessageParser::TopicNode*> MessageParser::TopicNode::findNodesVariables(const std::string& topic, const Variables& variables) {
     std::vector<TopicNode*> ret;
-    findNodesVariablesRec(node, topic, variables, false, ret);
+    this->findNodesVariablesRec(topic, variables, false, ret);
 
     return ret;
 }
 
-void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret) {    
+void MessageParser::TopicNode::findNodesVariablesRec(const std::string& topic, const Variables& variables, bool hashtag, std::vector<TopicNode*>& ret) {    
     auto slash = std::find(topic.begin(), topic.end(), '/');
     std::string subTopic = std::string(topic.begin(), slash);
 
@@ -101,12 +67,12 @@ void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& to
     }
 
     if(hashtag) {
-        for(auto& next : node.adjacent) {
+        for(auto& next : this->adjacent) {
             ret.push_back(&(next.second));
-            findNodesVariablesRec(next.second, "", variables, hashtag, ret);
+            next.second.findNodesVariablesRec("", variables, hashtag, ret);
         }
     } else {
-        for(auto& next : node.adjacent) {
+        for(auto& next : this->adjacent) {
             bool match = false;
 
             if(subTopic == "+" || subTopic == next.first) {
@@ -121,9 +87,39 @@ void MessageParser::findNodesVariablesRec(TopicNode& node, const std::string& to
                 if(slash == topic.end()) {
                     ret.push_back(&(next.second));
                 } else {
-                    findNodesVariablesRec(next.second, std::string(slash + 1, topic.end()), variables, hashtag, ret);
+                    next.second.findNodesVariablesRec(std::string(slash + 1, topic.end()), variables, hashtag, ret);
                 }
             }
+        }
+    }
+}
+
+MessageParser::MessageParser() {
+    {% for topic in topics -%}
+    this->tree.addNode("{{ topic['topic'] }}");
+    {%- if not loop.last%}
+    {%endif -%}
+    {%- endfor %}
+}
+
+void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
+    auto node = this->tree.findNode(GetTopic(topic).topic);
+
+    if(node != nullptr) {
+        node->parse = std::make_unique<parse_t>(parse);
+        
+        if(argument != nullptr) {
+            node->argument = argument; 
+        }
+    }
+}
+
+void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
+    auto nodes = this->tree.findNodesVariables(topic, variables);
+
+    for(auto& node : nodes) {
+        if(node->parse != nullptr) {
+            (*node->parse)(payload, node->argument);
         }
     }
 }
