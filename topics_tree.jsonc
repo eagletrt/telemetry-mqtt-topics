@@ -22,7 +22,7 @@
     "<vehicleId>": {
         "alias": "VehicleId",
         "description": "<vehicleId>",
-        "qos": "0",
+        "qos": 0,
         "retain": false,
         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
@@ -37,7 +37,7 @@
             "<deviceId>": {
                 "alias": "DeviceId",
                 "description": "<vehicleId>/<deviceId>",
-                "qos": "0",
+                "qos": 0,
                 "retain": false,
                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
@@ -60,7 +60,7 @@
                     "data": {
                         "alias": "Data",
                         "description": "<vehicleId>/<deviceId>/data",
-                        "qos": "0",
+                        "qos": 0,
                         "retain": false,
                         "subscribe_roles": ["0", "1", "2", "3", "4"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
@@ -102,7 +102,7 @@
                     "status": {
                         "alias": "Status",
                         "description": "<vehicleId>/<deviceId>/status",
-                        "qos": "1",
+                        "qos": 1,
                         "retain": true,
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
@@ -136,7 +136,7 @@
                     "command": {
                         "alias": "Command",
                         "description": "<vehicleId>/<deviceId>/command",
-                        "qos": "2",
+                        "qos": 2,
                         "retain": false,
                         "sub_topics": {
                             "send": {
@@ -156,7 +156,7 @@
                     "fileTransaction/request": {
                         "alias": "FileTransactionRequest",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/request",
-                        "qos": "2",
+                        "qos": 2,
                         "retain": false,
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
@@ -164,7 +164,7 @@
                     "fileTransaction/response": {
                         "alias": "FileTransactionResponse",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/response",
-                        "qos": "2",
+                        "qos": 2,
                         "retain": false,
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
@@ -172,7 +172,7 @@
                     "fileTransaction/<transactionId>": {
                         "alias": "FileTransaction",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
-                        "qos": "2",
+                        "qos": 2,
                         "retain": false,
                         "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                         "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
@@ -204,7 +204,7 @@
                     "action": {
                         "alias": "Action",
                         "description": "<vehicleId>/<deviceId>/action",
-                        "qos": "0",
+                        "qos": 0,
                         "retain": false,
                         "sub_topics": {
                             "telemetryConfig": {
@@ -308,84 +308,84 @@
                             "kill": {
                                 "alias": "ActionKill",
                                 "description": "<vehicleId>/<deviceId>/action/kill",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "start": {
                                 "alias": "ActionStart",
                                 "description": "<vehicleId>/<deviceId>/action/start",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "reset": {
                                 "alias": "ActionReset",
                                 "description": "<vehicleId>/<deviceId>/action/reset",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "stop": {
                                 "alias": "ActionStop",
                                 "description": "<vehicleId>/<deviceId>/action/stop",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "precharge": {
                                 "alias": "ActionPrecharge",
                                 "description": "<vehicleId>/<deviceId>/action/precharge",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "balance": {
                                 "alias": "ActionBalance",
                                 "description": "<vehicleId>/<deviceId>/action/balance",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "stopBalance": {
                                 "alias": "ActionStopBalance",
                                 "description": "<vehicleId>/<deviceId>/action/stopBalance",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "charge": {
                                 "alias": "ActionCharge",
                                 "description": "<vehicleId>/<deviceId>/action/charge",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "stopCharge": {
                                 "alias": "ActionStopCharge",
                                 "description": "<vehicleId>/<deviceId>/action/stopCharge",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "raw": {
                                 "alias": "ActionRaw",
                                 "description": "<vehicleId>/<deviceId>/action/raw",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "resetLapcounter": {
                                 "alias": "ActionResetLapCounter",
                                 "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             },
                             "setLapcounterStatus": {
                                 "alias": "ActionSetLapCounterStatus",
                                 "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
-                                "qos": "2",
+                                "qos": 2,
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
                             }
