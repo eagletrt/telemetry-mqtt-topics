@@ -24,11 +24,7 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            }
+            "vehicleId"
         ]
     },
     {
@@ -56,16 +52,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -93,16 +81,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -128,16 +108,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -163,16 +135,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -198,16 +162,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -233,16 +189,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -268,16 +216,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -303,16 +243,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -338,16 +270,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -373,16 +297,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -410,16 +326,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -447,16 +355,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -484,16 +384,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -521,16 +413,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -558,16 +442,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -595,16 +471,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -632,16 +500,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -669,16 +529,8 @@
         ],
         "retain": true,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -706,16 +558,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -743,16 +587,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -780,16 +616,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -817,16 +645,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -854,16 +674,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -891,20 +703,9 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transactionId",
-                "description": "The transaction ID"
-            }
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
@@ -932,20 +733,9 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transactionId",
-                "description": "The transaction ID"
-            }
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
@@ -973,20 +763,9 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transactionId",
-                "description": "The transaction ID"
-            }
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
@@ -1014,20 +793,9 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transactionId",
-                "description": "The transaction ID"
-            }
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
@@ -1055,20 +823,9 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            },
-            {
-                "name": "transactionId",
-                "description": "The transaction ID"
-            }
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
@@ -1096,16 +853,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1133,16 +882,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1170,16 +911,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1207,16 +940,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1244,16 +969,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1281,16 +998,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1318,16 +1027,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1355,16 +1056,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1392,16 +1085,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1429,16 +1114,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1466,16 +1143,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1503,16 +1172,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1540,16 +1201,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1577,16 +1230,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1614,16 +1259,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1651,16 +1288,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1688,16 +1317,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1725,16 +1346,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1762,16 +1375,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1799,16 +1404,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1836,16 +1433,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1873,16 +1462,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1910,16 +1491,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1947,16 +1520,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1984,16 +1549,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -2021,16 +1578,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -2058,16 +1607,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -2095,16 +1636,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -2132,16 +1665,8 @@
         ],
         "retain": false,
         "variables": [
-            {
-                "name": "vehicleId",
-                "description": "The vehicle ID",
-                "default": "feniceEvo"
-            },
-            {
-                "name": "deviceId",
-                "description": "The device ID",
-                "default": "telemetry"
-            }
+            "vehicleId",
+            "deviceId"
         ]
     }
 ]

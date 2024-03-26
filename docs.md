@@ -7,8 +7,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-
+vehicleId
 ## DeviceId
 ### &lt;vehicleId>/&lt;deviceId>
 > &lt;vehicleId>/&lt;deviceId>
@@ -16,9 +15,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DeviceVersion
 ### &lt;vehicleId>/&lt;deviceId>/version
 > The payload contains the current CAN version hash of the device.
@@ -26,9 +23,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## Data
 ### &lt;vehicleId>/&lt;deviceId>/data
 > &lt;vehicleId>/&lt;deviceId>/data
@@ -36,9 +31,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataPrimary
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
@@ -46,9 +39,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataSecondary
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
 > Protobuffer data of secondary network
@@ -56,9 +47,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataBms
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
@@ -66,9 +55,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataInverter
 ### &lt;vehicleId>/&lt;deviceId>/data/inverters
 > Protobuffer data of inverter network
@@ -76,9 +63,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataSimulator
 ### &lt;vehicleId>/&lt;deviceId>/data/simulator
 > Protobuffer data of simulator network
@@ -86,9 +71,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataGps
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
 > Protobuffer data of gps network
@@ -96,9 +79,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataBrusa
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
@@ -106,9 +87,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## DataLastUpdate
 ### &lt;vehicleId>/&lt;deviceId>/last_update
 > Sends the last update timestamp of the data
@@ -116,9 +95,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## Status
 ### &lt;vehicleId>/&lt;deviceId>/status
 > &lt;vehicleId>/&lt;deviceId>/status
@@ -126,9 +103,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusInfo
 ### &lt;vehicleId>/&lt;deviceId>/status/info
 > &lt;vehicleId>/&lt;deviceId>/status/info
@@ -136,9 +111,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusError
 ### &lt;vehicleId>/&lt;deviceId>/status/error
 > &lt;vehicleId>/&lt;deviceId>/status/error
@@ -146,9 +119,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusAlert
 ### &lt;vehicleId>/&lt;deviceId>/status/alert
 > Alert message, it contains a critical can message
@@ -156,9 +127,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusCanFrequencies
 ### &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 > &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
@@ -166,9 +135,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusLapCounterStatus
 ### &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
 > &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
@@ -176,9 +143,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## StatusLapCounterLaps
 ### &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
 > &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
@@ -186,9 +151,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## Command
 ### &lt;vehicleId>/&lt;deviceId>/command
 > &lt;vehicleId>/&lt;deviceId>/command
@@ -196,9 +159,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## CommandSend
 ### &lt;vehicleId>/&lt;deviceId>/command/send
 > &lt;vehicleId>/&lt;deviceId>/command/send
@@ -206,9 +167,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## CommandResult
 ### &lt;vehicleId>/&lt;deviceId>/command/result
 > &lt;vehicleId>/&lt;deviceId>/command/result
@@ -216,9 +175,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## FileTransactionRequest
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
@@ -226,9 +183,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## FileTransactionResponse
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/response
@@ -236,9 +191,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## FileTransaction
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>
@@ -246,9 +199,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-  - transactionId -> The transaction ID 
+vehicleIddeviceIdtransactionId
 ## FileTransactionBegin
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/begin
@@ -256,9 +207,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-  - transactionId -> The transaction ID 
+vehicleIddeviceIdtransactionId
 ## FileTransactionEnd
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/end
@@ -266,9 +215,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-  - transactionId -> The transaction ID 
+vehicleIddeviceIdtransactionId
 ## FileTransactionChunk
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk
@@ -276,9 +223,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-  - transactionId -> The transaction ID 
+vehicleIddeviceIdtransactionId
 ## FileTransactionChunkAck
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/&lt;transactionId>/chunk_ack
@@ -286,9 +231,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-  - transactionId -> The transaction ID 
+vehicleIddeviceIdtransactionId
 ## Action
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action
@@ -296,9 +239,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionTelemetryConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig
@@ -306,9 +247,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionTelemetryConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/set
@@ -316,9 +255,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionTelemetryConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/get
@@ -326,9 +263,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionTelemetryConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
@@ -336,9 +271,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionSessionConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
@@ -346,9 +279,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionSessionConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/set
@@ -356,9 +287,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionSessionConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/get
@@ -366,9 +295,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionSessionConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
@@ -376,9 +303,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionCarConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig
 > &lt;vehicleId>/&lt;deviceId>/action/actionCar
@@ -386,9 +311,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionCarConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/set
@@ -396,9 +319,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionCarConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/get
@@ -406,9 +327,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionCarConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
@@ -416,9 +335,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionHandcartSettings
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
@@ -426,9 +343,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionHandcartSettingsSet
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/set
@@ -436,9 +351,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionHandcartSettingsGet
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/get
@@ -446,9 +359,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionHandcartSettingsContent
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings/content
@@ -456,9 +367,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionKill
 ### &lt;vehicleId>/&lt;deviceId>/action/kill
 > &lt;vehicleId>/&lt;deviceId>/action/kill
@@ -466,9 +375,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionStart
 ### &lt;vehicleId>/&lt;deviceId>/action/start
 > &lt;vehicleId>/&lt;deviceId>/action/start
@@ -476,9 +383,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionReset
 ### &lt;vehicleId>/&lt;deviceId>/action/reset
 > &lt;vehicleId>/&lt;deviceId>/action/reset
@@ -486,9 +391,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionStop
 ### &lt;vehicleId>/&lt;deviceId>/action/stop
 > &lt;vehicleId>/&lt;deviceId>/action/stop
@@ -496,9 +399,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionPrecharge
 ### &lt;vehicleId>/&lt;deviceId>/action/precharge
 > &lt;vehicleId>/&lt;deviceId>/action/precharge
@@ -506,9 +407,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionBalance
 ### &lt;vehicleId>/&lt;deviceId>/action/balance
 > &lt;vehicleId>/&lt;deviceId>/action/balance
@@ -516,9 +415,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionStopBalance
 ### &lt;vehicleId>/&lt;deviceId>/action/stopBalance
 > &lt;vehicleId>/&lt;deviceId>/action/stopBalance
@@ -526,9 +423,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionCharge
 ### &lt;vehicleId>/&lt;deviceId>/action/charge
 > &lt;vehicleId>/&lt;deviceId>/action/charge
@@ -536,9 +431,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionStopCharge
 ### &lt;vehicleId>/&lt;deviceId>/action/stopCharge
 > &lt;vehicleId>/&lt;deviceId>/action/stopCharge
@@ -546,9 +439,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionRaw
 ### &lt;vehicleId>/&lt;deviceId>/action/raw
 > &lt;vehicleId>/&lt;deviceId>/action/raw
@@ -556,9 +447,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionResetLapCounter
 ### &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
 > &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
@@ -566,9 +455,7 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
 ## ActionSetLapCounterStatus
 ### &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
 > &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
@@ -576,6 +463,4 @@
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
-  - vehicleId -> The vehicle ID (default: feniceEvo)
-  - deviceId -> The device ID (default: telemetry)
-
+vehicleIddeviceId
