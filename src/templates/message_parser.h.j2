@@ -1,5 +1,5 @@
-#ifndef MESSAGE_PARSER_H
-#define MESSAGE_PARSER_H
+#ifndef MQTT_TOPICS_MESSAGE_PARSER_H
+#define MQTT_TOPICS_MESSAGE_PARSER_H
 
 #include "topics.h"
 

@@ -1,5 +1,5 @@
-#ifndef TOPICS_H
-#define TOPICS_H
+#ifndef MQTT_TOPICS_TOPICS_H
+#define MQTT_TOPICS_TOPICS_H
 
 #include <vector>
 #include <string>
