@@ -8,3 +8,4 @@ out/
 test/
 
 __pycache__/
+venv/
