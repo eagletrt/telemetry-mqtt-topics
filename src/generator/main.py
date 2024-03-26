@@ -9,10 +9,16 @@ parser = argparse.ArgumentParser(description='Generate cpp code from topics_tree
 parser.add_argument('topics_tree_dir', type=str, help='directory path of topics_tree file')
 parser.add_argument('output_dir', type=str, help='directory path of generated files')
 
+with open('src/templates/topics.h.j2', 'r') as file:
+    topic_h_template = jinja2.Template(file.read())
+with open('src/templates/topics.cpp.j2', 'r') as file:
+    topics_cpp_template = jinja2.Template(file.read())
+with open('src/templates/message_parser.h.j2', 'r') as file:
+    message_parser_h_template = jinja2.Template(file.read())
+with open('src/templates/message_parser.cpp.j2', 'r') as file:
+    message_parser_cpp_template = jinja2.Template(file.read())
 with open('src/templates/mqtt_topics.h.j2', 'r') as file:
-    h_template = jinja2.Template(file.read())
-with open('src/templates/mqtt_topics.cpp.j2', 'r') as file:
-    cpp_template = jinja2.Template(file.read())
+    mqtt_topics_h = jinja2.Template(file.read())
 with open('src/templates/CMakeLists.txt.j2', 'r') as file:
     cmake_template = jinja2.Template(file.read())
 
@@ -45,18 +51,30 @@ if __name__ == '__main__':
             if role not in roles:
                 roles.append(role)
         for variable in topic['variables']:
-            if variable['name'] not in variables:
-                variables.append(variable['name'])
+            if variable not in variables:
+                variables.append(variable)
                                 
     print(f'Generating files...\n')
 
-    with open(os.path.join(args.output_dir, 'inc', 'mqtt_topics.h'), 'w') as file:
-        file.write(h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
-        print(f'✅ Generated mqtt_topics.h')
+    with open(os.path.join(args.output_dir, 'inc', 'topics.h'), 'w') as file:
+        file.write(topic_h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated topics.h')
         
-    with open(os.path.join(args.output_dir, 'src', 'mqtt_topics.cpp'), 'w') as file:
-        file.write(cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
-        print(f'✅ Generated mqtt_topics.cpp')
+    with open(os.path.join(args.output_dir, 'src', 'topics.cpp'), 'w') as file:
+        file.write(topics_cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated topics.cpp')
+        
+    with open(os.path.join(args.output_dir, 'inc', 'message_parser.h'), 'w') as file:
+        file.write(message_parser_h_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated message_parser.h')
+        
+    with open(os.path.join(args.output_dir, 'src', 'message_parser.cpp'), 'w') as file:
+        file.write(message_parser_cpp_template.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated message_parser.cpp')
+
+    with open(os.path.join(args.output_dir, 'mqtt_topics.h'), 'w') as file:
+        file.write(mqtt_topics_h.render(topics=topics, roles=roles, variables=variables, utils=utils))
+        print(f'✅ Generated mqtt_topics.h')
         
     with open(os.path.join(args.output_dir, 'CMakeLists.txt'), 'w') as file:
         file.write(cmake_template.render())
@@ -74,5 +92,5 @@ if __name__ == '__main__':
         print('✅ Generated readme.md')
     
     with open(os.path.join(args.output_dir, 'docs.md'), 'w') as file:
-        utils.generate_md(topics, file)
+        utils.generate_docs(topics, file)
         print('✅ Generated docs.md')

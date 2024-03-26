@@ -1,0 +1,58 @@
+#ifndef TOPICS_H
+#define TOPICS_H
+
+#include <vector>
+#include <string>
+
+namespace MQTTTopics
+{
+enum class Role 
+{
+    {%- for role in roles %}
+    role{{ role.capitalize() }} = {{ loop.index - 1}}
+    {%- if not loop.last -%} , {%- endif -%}
+    {%- endfor %}
+};
+
+enum class Topic
+{
+    {%- for topic in topics %}
+    {{ utils.topic_enum_name(topic.alias) }} = {{ loop.index - 1}}
+    {%- if not loop.last -%} , {%- endif -%}
+    {%- endfor %}
+};
+
+struct TopicMessage
+{
+    TopicMessage(std::string&& topic, int qos, bool retain);
+
+    std::string topic;
+    int qos;
+    bool retain;
+};
+
+std::vector<TopicMessage> GetSubscribeTopics(Role role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+);
+std::vector<TopicMessage> GetPublishTopics(Role role
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }}
+    {%- endfor -%}    
+);
+
+bool CanSubscribe(Role role, Topic topic);
+bool CanPublish(Role role, Topic topic);
+
+TopicMessage GetTopic(Topic topic
+    {%- for variable in variables -%}
+    , const std::string& {{ variable }} = "<{{ variable }}>"
+    {%- endfor -%}    
+);
+{% for topic in topics -%}
+TopicMessage {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables(topic) }});
+{% endfor -%}
+}
+
+#endif

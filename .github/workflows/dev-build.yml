@@ -1,10 +1,10 @@
-name: Generate MQTT topics
+name: Generate MQTT topics dev-build
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   library:
@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          ref: build
+          ref: dev-build
 
       - name: Push generated files
         id: commit
