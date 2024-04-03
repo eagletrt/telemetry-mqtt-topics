@@ -111,8 +111,11 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
 
     return topics
 
+def role_enum_name(role: str) -> str:
+    return 'role_' + re.sub(r'(?<!^)(?=[A-Z])', '_', role).lower()
+
 def topic_enum_name(topic: str) -> str:
-    return (topic[0].lower() + topic[1:])
+    return re.sub(r'(?<!^)(?=[A-Z])', '_', topic).lower()
 
 def topic_get_name(topic: str) -> str: 
     return ('GetTopic' + topic)
