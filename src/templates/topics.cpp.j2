@@ -14,7 +14,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role
     
     switch(role) {
         {%- for role in roles %}
-        case Role::role{{ role.capitalize() }}:
+        case Role::{{ utils.role_enum_name(role) }}:
         {% for topic in topics -%}
         {% if role in topic['subscribe_roles'] -%}
         ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }})));
@@ -38,7 +38,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role
     
     switch(role) {
     {%- for role in roles %}
-        case Role::role{{ role.capitalize() }}:
+        case Role::{{ utils.role_enum_name(role) }}:
         {% for topic in topics -%}
         {% if role in topic['publish_roles'] -%}
         ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }})));
@@ -56,7 +56,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role
 bool CanSubscribe(Role role, Topic topic) {
     switch(role) {
     {%- for role in roles %}
-        case Role::role{{ role.capitalize() }}:
+        case Role::{{ utils.role_enum_name(role) }}:
         switch(topic) {
             {%set ns = namespace(check=0) -%}
             {% for topic in topics -%}
@@ -89,7 +89,7 @@ bool CanSubscribe(Role role, Topic topic) {
 bool CanPublish(Role role, Topic topic) {
     switch(role) {
     {%- for role in roles %}
-        case Role::role{{ role.capitalize() }}:
+        case Role::{{ utils.role_enum_name(role) }}:
         switch(topic) {
             {%set ns = namespace(check=0) -%}
             {% for topic in topics -%}
