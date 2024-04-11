@@ -96,14 +96,14 @@ void MessageParser::TopicNode::findNodesVariablesRec(const std::string& topic, c
 
 MessageParser::MessageParser() {
     {% for topic in topics -%}
-    this->tree->addNode("{{ topic['topic'] }}");
+    this->tree.addNode("{{ topic['topic'] }}");
     {%- if not loop.last%}
     {%endif -%}
     {%- endfor %}
 }
 
 void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
-    auto node = this->tree->findNode(GetTopic(topic).topic);
+    auto node = this->tree.findNode(GetTopic(topic).topic);
 
     if(node != nullptr) {
         (*node)->parse = std::make_unique<parse_t>(parse);
@@ -115,7 +115,7 @@ void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) 
 }
 
 void MessageParser::parseMessage(const Variables& variables, const std::string& topic, const std::string& payload) {
-    auto nodes = this->tree->findNodesVariables(topic, variables);
+    auto nodes = this->tree.findNodesVariables(topic, variables);
 
     for(auto& node : nodes) {
         if((*node)->parse != nullptr) {
