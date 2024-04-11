@@ -43,7 +43,7 @@ public:
     void parseMessage(const Variables& variables, const std::string& topic, const std::string& payload);
 
 private:
-    std::unique_ptr<TopicNode> tree;
+    TopicNode tree;
 };
 }
 
