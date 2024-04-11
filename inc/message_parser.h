@@ -12,7 +12,7 @@ namespace MQTTTopics
 class MessageParser
 {
 public:
-    typedef void (*parse_t)(const std::string& payload, void*);
+    typedef void (*parse_t)(const std::string& payload, void* argument);
     
     struct Variables
     {
