@@ -88,6 +88,22 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ExtraTlmData
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data
+> &lt;vehicleId>/&lt;deviceId>/extra_tlm_data
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataVehicleState
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/vehicle_stata
+> Protobuffer data of vehicle state
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataLastUpdate
 ### &lt;vehicleId>/&lt;deviceId>/last_update
 > Sends the last update timestamp of the data
@@ -173,6 +189,14 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/command/result
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## steer
+### &lt;vehicleId>/&lt;deviceId>/command/steer
+> &lt;vehicleId>/&lt;deviceId>/command/steer
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
