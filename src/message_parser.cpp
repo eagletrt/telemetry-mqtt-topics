@@ -100,6 +100,8 @@ MessageParser::MessageParser() {
     this->tree->addNode("<vehicleId>/<deviceId>/data/simulator");
     this->tree->addNode("<vehicleId>/<deviceId>/data/gps");
     this->tree->addNode("<vehicleId>/<deviceId>/data/brusa");
+    this->tree->addNode("<vehicleId>/<deviceId>/extra_tlm_data");
+    this->tree->addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicle_stata");
     this->tree->addNode("<vehicleId>/<deviceId>/last_update");
     this->tree->addNode("<vehicleId>/<deviceId>/status");
     this->tree->addNode("<vehicleId>/<deviceId>/status/info");
@@ -111,6 +113,7 @@ MessageParser::MessageParser() {
     this->tree->addNode("<vehicleId>/<deviceId>/command");
     this->tree->addNode("<vehicleId>/<deviceId>/command/send");
     this->tree->addNode("<vehicleId>/<deviceId>/command/result");
+    this->tree->addNode("<vehicleId>/<deviceId>/command/steer");
     this->tree->addNode("<vehicleId>/<deviceId>/fileTransaction/request");
     this->tree->addNode("<vehicleId>/<deviceId>/fileTransaction/response");
     this->tree->addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>");

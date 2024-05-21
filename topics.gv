@@ -10,6 +10,8 @@ graph {
 "data" -- "simulator";
 "data" -- "gps";
 "data" -- "brusa";
+"<deviceId>" -- "extra_tlm_data";
+"extra_tlm_data" -- "vehicle_stata";
 "<deviceId>" -- "last_update";
 "<deviceId>" -- "status";
 "status" -- "info";
@@ -21,6 +23,7 @@ graph {
 "<deviceId>" -- "command";
 "command" -- "send";
 "command" -- "result";
+"command" -- "steer";
 "fileTransaction" -- "request";
 "fileTransaction" -- "response";
 "fileTransaction" -- "<transactionId>";
