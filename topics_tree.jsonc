@@ -79,6 +79,20 @@
                             }
                         }
                     },
+                    "extra_tlm_data": {
+                        "alias": "ExtraTlmData",
+                        "description": "<vehicleId>/<deviceId>/extra_tlm_data",
+                        "qos": 0,
+                        "retain": false,
+                        "subscribe_roles": ["0", "1", "2", "3", "4"],
+                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                        "sub_topics": { 
+                            "vehicle_stata": {
+                                "alias": "ExtraTlmDataVehicleState",
+                                "description": "Protobuffer data of vehicle state"
+                            }
+                        }
+                    },
                     "last_update": {
                         "alias": "DataLastUpdate",
                         "description": "Sends the last update timestamp of the data"
@@ -134,6 +148,12 @@
                                 "description": "<vehicleId>/<deviceId>/command/result",
                                 "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
                                 "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                            },
+                            "steer": {
+                                "alias": "steer",
+                                "description": "<vehicleId>/<deviceId>/command/steer",
+                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                                "publish_roles": ["0", "128"]
                             }
                         }
                     },
