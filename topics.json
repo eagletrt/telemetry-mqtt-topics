@@ -676,7 +676,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/command/steer",
-        "alias": "steer",
+        "alias": "CommandSteer",
         "description": "<vehicleId>/<deviceId>/command/steer",
         "qos": 2,
         "subscribe_roles": [

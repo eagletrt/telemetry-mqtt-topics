@@ -192,7 +192,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## steer
+## CommandSteer
 ### &lt;vehicleId>/&lt;deviceId>/command/steer
 > &lt;vehicleId>/&lt;deviceId>/command/steer
 - **Quality of Service**: 2

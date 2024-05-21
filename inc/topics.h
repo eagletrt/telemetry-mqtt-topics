@@ -43,7 +43,7 @@ enum class Topic
     command = 21,
     command_send = 22,
     command_result = 23,
-    steer = 24,
+    command_steer = 24,
     file_transaction_request = 25,
     file_transaction_response = 26,
     file_transaction = 27,
@@ -122,7 +122,7 @@ TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const st
 TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicCommandSend(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicsteer(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicCommandSteer(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransactionRequest(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransactionResponse(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransaction(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
