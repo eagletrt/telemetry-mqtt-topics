@@ -329,9 +329,63 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/vehicle_stata",
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/vehicleState",
         "alias": "ExtraTlmDataVehicleState",
         "description": "Protobuffer data of vehicle state",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/baseline",
+        "alias": "ExtraTlmDataBaseline",
+        "description": "Protobuffer data of vehicle state",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins",
+        "alias": "ExtraTlmDataGpsMapOrigins",
+        "description": "Protobuffer data of gps map origins",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -1491,6 +1545,64 @@
         "alias": "ActionStop",
         "description": "<vehicleId>/<deviceId>/action/stop",
         "qos": 2,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/startBaseline",
+        "alias": "ActionStartBaseline",
+        "description": "<vehicleId>/<deviceId>/action/start_baseline",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/stopBaseline",
+        "alias": "ActionStopBaseline",
+        "description": "<vehicleId>/<deviceId>/action/stop_baseline",
+        "qos": 0,
         "subscribe_roles": [
             "0",
             "1",

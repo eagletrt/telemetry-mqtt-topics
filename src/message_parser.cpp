@@ -101,7 +101,9 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/gps");
     this->tree.addNode("<vehicleId>/<deviceId>/data/brusa");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data");
-    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicle_stata");
+    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState");
+    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline");
+    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins");
     this->tree.addNode("<vehicleId>/<deviceId>/last_update");
     this->tree.addNode("<vehicleId>/<deviceId>/status");
     this->tree.addNode("<vehicleId>/<deviceId>/status/info");
@@ -142,6 +144,8 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/start");
     this->tree.addNode("<vehicleId>/<deviceId>/action/reset");
     this->tree.addNode("<vehicleId>/<deviceId>/action/stop");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/startBaseline");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/stopBaseline");
     this->tree.addNode("<vehicleId>/<deviceId>/action/precharge");
     this->tree.addNode("<vehicleId>/<deviceId>/action/balance");
     this->tree.addNode("<vehicleId>/<deviceId>/action/stopBalance");

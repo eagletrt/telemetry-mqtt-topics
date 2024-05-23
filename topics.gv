@@ -11,7 +11,9 @@ graph {
 "data" -- "gps";
 "data" -- "brusa";
 "<deviceId>" -- "extra_tlm_data";
-"extra_tlm_data" -- "vehicle_stata";
+"extra_tlm_data" -- "vehicleState";
+"extra_tlm_data" -- "baseline";
+"extra_tlm_data" -- "gpsMapOrigins";
 "<deviceId>" -- "last_update";
 "<deviceId>" -- "status";
 "status" -- "info";
@@ -52,6 +54,8 @@ graph {
 "action" -- "start";
 "action" -- "reset";
 "action" -- "stop";
+"action" -- "startBaseline";
+"action" -- "stopBaseline";
 "action" -- "precharge";
 "action" -- "balance";
 "action" -- "stopBalance";

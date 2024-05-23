@@ -23,6 +23,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -63,6 +65,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -87,6 +91,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -127,6 +133,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -151,6 +159,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -191,6 +201,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -215,6 +227,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -255,6 +269,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -279,6 +295,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -319,6 +337,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -373,6 +393,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -427,6 +449,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -459,6 +483,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -499,6 +525,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -523,6 +551,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -562,6 +592,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -586,6 +618,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -625,6 +659,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -649,6 +685,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -688,6 +726,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -712,6 +752,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -751,6 +793,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -775,6 +819,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -815,6 +861,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -839,6 +887,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -878,6 +928,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -909,6 +961,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -949,6 +1003,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -976,6 +1032,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1016,6 +1074,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1043,6 +1103,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1083,6 +1145,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1110,6 +1174,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1150,6 +1216,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1177,6 +1245,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1217,6 +1287,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1274,6 +1346,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1293,6 +1367,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
               return false;
         }
         
@@ -1341,6 +1417,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1360,6 +1438,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
               return false;
         }
     }
@@ -1384,6 +1464,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1424,6 +1506,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1451,6 +1535,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1490,6 +1576,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1518,6 +1606,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1557,6 +1647,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1585,6 +1677,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1624,6 +1718,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1652,6 +1748,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1691,6 +1789,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1719,6 +1819,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1759,6 +1861,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1786,6 +1890,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1825,6 +1931,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_start:
             case Topic::action_reset:
             case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
             case Topic::action_precharge:
             case Topic::action_balance:
             case Topic::action_stop_balance:
@@ -1870,6 +1978,10 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicExtraTlmData(vehicleId, deviceId);
         case Topic::extra_tlm_data_vehicle_state: 
             return GetTopicExtraTlmDataVehicleState(vehicleId, deviceId);
+        case Topic::extra_tlm_data_baseline: 
+            return GetTopicExtraTlmDataBaseline(vehicleId, deviceId);
+        case Topic::extra_tlm_data_gps_map_origins: 
+            return GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId);
         case Topic::data_last_update: 
             return GetTopicDataLastUpdate(vehicleId, deviceId);
         case Topic::status: 
@@ -1950,6 +2062,10 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionReset(vehicleId, deviceId);
         case Topic::action_stop: 
             return GetTopicActionStop(vehicleId, deviceId);
+        case Topic::action_start_baseline: 
+            return GetTopicActionStartBaseline(vehicleId, deviceId);
+        case Topic::action_stop_baseline: 
+            return GetTopicActionStopBaseline(vehicleId, deviceId);
         case Topic::action_precharge: 
             return GetTopicActionPrecharge(vehicleId, deviceId);
         case Topic::action_balance: 
@@ -2068,7 +2184,23 @@ TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::strin
 }
 
 TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicle_stata";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicleState";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/baseline";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins";
     int qos = 0;
     bool retain = false;
 
@@ -2390,6 +2522,22 @@ TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string
 TopicMessage GetTopicActionStop(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/stop";
     int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionStartBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/startBaseline";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionStopBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/stopBaseline";
+    int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);

@@ -97,8 +97,24 @@ vehicleIddeviceId
 - **Variables**:
 vehicleIddeviceId
 ## ExtraTlmDataVehicleState
-### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/vehicle_stata
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/vehicleState
 > Protobuffer data of vehicle state
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataBaseline
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/baseline
+> Protobuffer data of vehicle state
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataGpsMapOrigins
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/gpsMapOrigins
+> Protobuffer data of gps map origins
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
@@ -420,6 +436,22 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/stop
 > &lt;vehicleId>/&lt;deviceId>/action/stop
 - **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionStartBaseline
+### &lt;vehicleId>/&lt;deviceId>/action/startBaseline
+> &lt;vehicleId>/&lt;deviceId>/action/start_baseline
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionStopBaseline
+### &lt;vehicleId>/&lt;deviceId>/action/stopBaseline
+> &lt;vehicleId>/&lt;deviceId>/action/stop_baseline
+- **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
