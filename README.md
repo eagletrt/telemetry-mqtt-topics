@@ -115,7 +115,7 @@ parse_t is the type for parse callback functions; argument is passed through set
 ```
 MessageParser();
 ```
-MessageParser is the default contructor.
+MessageParser is the default constructor.
 ```
 void setMessageParse(Topic topic, parse_t parse, void* argument = nullptr);
 ```
