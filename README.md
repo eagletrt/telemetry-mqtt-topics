@@ -6,6 +6,7 @@ MQTT-topics is a code generation library for C++ to handle MQTT topics and make 
 Given a _topics_tree.jsonc_ file that describes the topics as a tree structure, it generates two header files (topics.h, 
 message_parser.h) and two source files (topics.cpp, message_parser.cpp), besides creating a CMakeLists.txt file to integrate the code with your main project and a header "mqtt_topics.h".
 
+## Example
 ### topics_tree.jsonc
     {
         "<vehicleId>": {
@@ -40,7 +41,6 @@ This is an example of _topics_tree.jsonc_; each topic is described by its name a
 - variables: different values for variable fields can match the same topic.
 - sub_topics: topic's subtopics, such as \<vehicleId>/data for \<vehicleId>. 
           
-## Example
 ### topics.h
 The generated topics.h header provides the following structures:
 ```
