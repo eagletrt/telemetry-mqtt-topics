@@ -40,7 +40,7 @@ This is an example of _topics_tree.jsonc_; each topic is described by its name a
 - variables: different values for variable fields can match the same topic.
 - sub_topics: topic's subtopics, such as \<vehicleId>/data for \<vehicleId>. 
           
-
+## Example
 ### topics.h
 The generated topics.h header provides the following structures:
 ```
@@ -124,3 +124,10 @@ setMessageParse is used to set parse as the function callback for the passed top
 void parseMessage(const Variables& variables, const std::string& topic, const std::string& payload);
 ```
 parseMessage matches and calls the previously set parse callback functions, for the message with the passed topic and payload, considering the passed variable fields values.
+
+## Usage
+- Generate the code with: *python3 src/generator/main.py topics_tree_dir output_dir*.
+- Copy the output directory in your project.
+- Add add_subdirectory(path/to/output/directory) to your main CMakeLists.txt.
+- Include "mqtt_topics.h" in your files and use the library code.
+
