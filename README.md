@@ -96,7 +96,7 @@ TopicMessage GetTopicData(const std::string& vehicleId);
 GetTopic... functions set can be used to build a TopicMessage with the passed values for variable fields.
 
 ### message_parser.h
-The generated message_parser.h header provides the MessageParser class which expose the following types and methods:
+The generated message_parser.h header provides the MessageParser class which exposes the following types and methods:
   ```
 struct Variables
 {
