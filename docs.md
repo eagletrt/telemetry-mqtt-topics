@@ -149,7 +149,7 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/status/error
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: Yes
+- **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## StatusAlert
@@ -157,7 +157,7 @@ vehicleIddeviceId
 > Alert message, it contains a critical can message
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: Yes
+- **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## StatusCanFrequencies
@@ -309,7 +309,7 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/action/telemetryConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ActionSessionConfig
@@ -341,7 +341,7 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ActionCarConfig
@@ -373,7 +373,7 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/action/carConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ActionHandcartSettings

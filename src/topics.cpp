@@ -2234,7 +2234,7 @@ TopicMessage GetTopicStatusInfo(const std::string& vehicleId, const std::string&
 TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/error";
     int qos = 1;
-    bool retain = true;
+    bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2242,7 +2242,7 @@ TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string
 TopicMessage GetTopicStatusAlert(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/alert";
     int qos = 1;
-    bool retain = true;
+    bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2394,7 +2394,7 @@ TopicMessage GetTopicActionTelemetryConfigGet(const std::string& vehicleId, cons
 TopicMessage GetTopicActionTelemetryConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/content";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2426,7 +2426,7 @@ TopicMessage GetTopicActionSessionConfigGet(const std::string& vehicleId, const 
 TopicMessage GetTopicActionSessionConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/content";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2458,7 +2458,7 @@ TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std:
 TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/content";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
