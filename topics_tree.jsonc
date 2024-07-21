@@ -1,5 +1,4 @@
 // MQTT topics
-
 /*
     Topic := string that the MQTT broker uses to filter messages for each connected client.
     The Topic object contains the following properties:
@@ -13,42 +12,107 @@
         - variables: array of variables that can be replaced in the topic.
         - sub_topics: array of topics that will be appended to the current topic.
 */
-
 {
     "<vehicleId>": {
         "alias": "VehicleId",
         "description": "<vehicleId>",
         "qos": 0,
         "retain": false,
-        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-        "variables": ["vehicleId"],
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "variables": [
+            "vehicleId"
+        ],
         "sub_topics": {
             "<deviceId>": {
                 "alias": "DeviceId",
                 "description": "<vehicleId>/<deviceId>",
                 "qos": 0,
                 "retain": false,
-                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                "variables": ["deviceId"],
+                "subscribe_roles": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "128",
+                    "129"
+                ],
+                "publish_roles": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "128",
+                    "129"
+                ],
+                "variables": [
+                    "deviceId"
+                ],
                 "sub_topics": {
                     "version": {
                         "alias": "DeviceVersion",
                         "description": "The payload contains the current CAN version hash of the device.",
                         "qos": 1,
                         "retain": true,
-                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ]
                     },
                     "data": {
                         "alias": "Data",
                         "description": "<vehicleId>/<deviceId>/data",
                         "qos": 0,
                         "retain": false,
-                        "subscribe_roles": ["0", "1", "2", "3", "4"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "sub_topics": { 
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "sub_topics": {
                             "primary": {
                                 "alias": "DataPrimary",
                                 "description": "Protobuffer data of primary network"
@@ -84,9 +148,23 @@
                         "description": "<vehicleId>/<deviceId>/extra_tlm_data",
                         "qos": 0,
                         "retain": false,
-                        "subscribe_roles": ["0", "1", "2", "3", "4"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "sub_topics": { 
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "sub_topics": {
                             "vehicleState": {
                                 "alias": "ExtraTlmDataVehicleState",
                                 "description": "Protobuffer data of vehicle state"
@@ -110,8 +188,24 @@
                         "description": "<vehicleId>/<deviceId>/status",
                         "qos": 1,
                         "retain": true,
-                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
                         "sub_topics": {
                             "info": {
                                 "alias": "StatusInfo",
@@ -119,10 +213,12 @@
                             },
                             "error": {
                                 "alias": "StatusError",
+                                "retain": false,
                                 "description": "<vehicleId>/<deviceId>/status/error"
                             },
                             "alert": {
                                 "alias": "StatusAlert",
+                                "retain": false,
                                 "description": "Alert message, it contains a critical can message"
                             },
                             "canFrequencies": {
@@ -148,20 +244,63 @@
                             "send": {
                                 "alias": "CommandSend",
                                 "description": "<vehicleId>/<deviceId>/command/send",
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "result": {
                                 "alias": "CommandResult",
                                 "description": "<vehicleId>/<deviceId>/command/result",
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "steer": {
                                 "alias": "CommandSteer",
                                 "description": "<vehicleId>/<deviceId>/command/steer",
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "128"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "128"
+                                ]
                             }
                         }
                     },
@@ -170,25 +309,75 @@
                         "description": "<vehicleId>/<deviceId>/fileTransaction/request",
                         "qos": 2,
                         "retain": false,
-                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ]
                     },
                     "fileTransaction/response": {
                         "alias": "FileTransactionResponse",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/response",
                         "qos": 2,
                         "retain": false,
-                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ]
                     },
                     "fileTransaction/<transactionId>": {
                         "alias": "FileTransaction",
                         "description": "<vehicleId>/<deviceId>/fileTransaction/<transactionId>",
                         "qos": 2,
                         "retain": false,
-                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                        "variables": ["transactionId"],
+                        "subscribe_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "publish_roles": [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "128",
+                            "129"
+                        ],
+                        "variables": [
+                            "transactionId"
+                        ],
                         "sub_topics": {
                             "begin": {
                                 "alias": "FileTransactionBegin",
@@ -217,26 +406,91 @@
                             "telemetryConfig": {
                                 "alias": "ActionTelemetryConfig",
                                 "description": "<vehicleId>/<deviceId>/action/telemetryConfig",
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
                                 "sub_topics": {
                                     "set": {
                                         "alias": "ActionTelemetryConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "get": {
                                         "alias": "ActionTelemetryConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "content": {
                                         "alias": "ActionTelemetryConfigContent",
                                         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/content",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "retain": true,
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     }
                                 }
                             },
@@ -247,20 +501,69 @@
                                     "set": {
                                         "alias": "ActionSessionConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "get": {
                                         "alias": "ActionSessionConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "content": {
                                         "alias": "ActionSessionConfigContent",
                                         "description": "<vehicleId>/<deviceId>/action/sessionConfig/content",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "retain": true,
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     }
                                 }
                             },
@@ -271,20 +574,69 @@
                                     "set": {
                                         "alias": "ActionCarConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/carConfig/set",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "get": {
                                         "alias": "ActionCarConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/carConfig/get",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "content": {
                                         "alias": "ActionCarConfigContent",
                                         "description": "<vehicleId>/<deviceId>/action/carConfig/content",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "retain": true,
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     }
                                 }
                             },
@@ -295,20 +647,68 @@
                                     "set": {
                                         "alias": "ActionHandcartSettingsSet",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/set",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "get": {
                                         "alias": "ActionHandcartSettingsGet",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/get",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "content": {
                                         "alias": "ActionHandcartSettingsContent",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/content",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     }
                                 }
                             },
@@ -316,99 +716,323 @@
                                 "alias": "ActionKill",
                                 "description": "<vehicleId>/<deviceId>/action/kill",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "start": {
                                 "alias": "ActionStart",
                                 "description": "<vehicleId>/<deviceId>/action/start",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "reset": {
                                 "alias": "ActionReset",
                                 "description": "<vehicleId>/<deviceId>/action/reset",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "stop": {
                                 "alias": "ActionStop",
                                 "description": "<vehicleId>/<deviceId>/action/stop",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "startBaseline": {
                                 "alias": "ActionStartBaseline",
                                 "description": "<vehicleId>/<deviceId>/action/start_baseline",
                                 "qos": 0,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "stopBaseline": {
                                 "alias": "ActionStopBaseline",
                                 "description": "<vehicleId>/<deviceId>/action/stop_baseline",
                                 "qos": 0,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "precharge": {
                                 "alias": "ActionPrecharge",
                                 "description": "<vehicleId>/<deviceId>/action/precharge",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "balance": {
                                 "alias": "ActionBalance",
                                 "description": "<vehicleId>/<deviceId>/action/balance",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "stopBalance": {
                                 "alias": "ActionStopBalance",
                                 "description": "<vehicleId>/<deviceId>/action/stopBalance",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "charge": {
                                 "alias": "ActionCharge",
                                 "description": "<vehicleId>/<deviceId>/action/charge",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "stopCharge": {
                                 "alias": "ActionStopCharge",
                                 "description": "<vehicleId>/<deviceId>/action/stopCharge",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "raw": {
                                 "alias": "ActionRaw",
                                 "description": "<vehicleId>/<deviceId>/action/raw",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "resetLapcounter": {
                                 "alias": "ActionResetLapCounter",
                                 "description": "<vehicleId>/<deviceId>/action/resetLapcounter",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             },
                             "setLapcounterStatus": {
                                 "alias": "ActionSetLapCounterStatus",
                                 "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
                                 "qos": 2,
-                                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
                             }
                         }
                     }
