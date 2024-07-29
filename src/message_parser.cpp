@@ -140,6 +140,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/get");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig/content");
     this->tree.addNode("<vehicleId>/<deviceId>/action/kill");
     this->tree.addNode("<vehicleId>/<deviceId>/action/start");
     this->tree.addNode("<vehicleId>/<deviceId>/action/reset");

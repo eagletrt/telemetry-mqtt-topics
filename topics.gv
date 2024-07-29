@@ -50,6 +50,10 @@ graph {
 "handcartSettings" -- "set";
 "handcartSettings" -- "get";
 "handcartSettings" -- "content";
+"action" -- "lapCounterConfig";
+"lapCounterConfig" -- "set";
+"lapCounterConfig" -- "get";
+"lapCounterConfig" -- "content";
 "action" -- "kill";
 "action" -- "start";
 "action" -- "reset";

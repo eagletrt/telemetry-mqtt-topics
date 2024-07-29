@@ -61,6 +61,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -129,6 +133,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -197,6 +205,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -265,6 +277,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -333,6 +349,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -389,6 +409,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -445,6 +469,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -521,6 +549,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -588,6 +620,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -655,6 +691,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -722,6 +762,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -789,6 +833,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -857,6 +905,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -924,6 +976,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -999,6 +1055,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1070,6 +1130,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1141,6 +1205,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1212,6 +1280,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1283,6 +1355,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1342,6 +1418,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1413,6 +1493,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1502,6 +1586,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1572,6 +1660,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1643,6 +1735,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1714,6 +1810,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1785,6 +1885,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1857,6 +1961,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1927,6 +2035,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -2054,6 +2166,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionHandcartSettingsGet(vehicleId, deviceId);
         case Topic::action_handcart_settings_content: 
             return GetTopicActionHandcartSettingsContent(vehicleId, deviceId);
+        case Topic::action_lap_counter_config: 
+            return GetTopicActionLapCounterConfig(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_set: 
+            return GetTopicActionLapCounterConfigSet(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_get: 
+            return GetTopicActionLapCounterConfigGet(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_content: 
+            return GetTopicActionLapCounterConfigContent(vehicleId, deviceId);
         case Topic::action_kill: 
             return GetTopicActionKill(vehicleId, deviceId);
         case Topic::action_start: 
@@ -2489,6 +2609,38 @@ TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, con
 
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/content";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/content";
     int qos = 0;
     bool retain = false;
 

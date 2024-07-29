@@ -70,20 +70,24 @@ enum class Topic
     action_handcart_settings_set = 48,
     action_handcart_settings_get = 49,
     action_handcart_settings_content = 50,
-    action_kill = 51,
-    action_start = 52,
-    action_reset = 53,
-    action_stop = 54,
-    action_start_baseline = 55,
-    action_stop_baseline = 56,
-    action_precharge = 57,
-    action_balance = 58,
-    action_stop_balance = 59,
-    action_charge = 60,
-    action_stop_charge = 61,
-    action_raw = 62,
-    action_reset_lap_counter = 63,
-    action_set_lap_counter_status = 64
+    action_lap_counter_config = 51,
+    action_lap_counter_config_set = 52,
+    action_lap_counter_config_get = 53,
+    action_lap_counter_config_content = 54,
+    action_kill = 55,
+    action_start = 56,
+    action_reset = 57,
+    action_stop = 58,
+    action_start_baseline = 59,
+    action_stop_baseline = 60,
+    action_precharge = 61,
+    action_balance = 62,
+    action_stop_balance = 63,
+    action_charge = 64,
+    action_stop_charge = 65,
+    action_raw = 66,
+    action_reset_lap_counter = 67,
+    action_set_lap_counter_status = 68
 };
 
 struct TopicMessage
@@ -153,6 +157,10 @@ TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const 
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionLapCounterConfigContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionStart(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string& deviceId);

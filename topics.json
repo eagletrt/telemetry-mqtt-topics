@@ -1454,6 +1454,122 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig",
+        "alias": "ActionLapCounterConfig",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
+        "alias": "ActionLapCounterConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
+        "alias": "ActionLapCounterConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
+        "alias": "ActionLapCounterConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action/kill",
         "alias": "ActionKill",
         "description": "<vehicleId>/<deviceId>/action/kill",
