@@ -719,20 +719,68 @@
                                     "set": {
                                         "alias": "ActionLapCounterConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "get": {
                                         "alias": "ActionLapCounterConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     },
                                     "content": {
                                         "alias": "ActionLapCounterConfigContent",
                                         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
-                                        "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                                        "publish_roles": ["0", "1", "2", "3", "4", "128", "129"]
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129"
+                                        ]
                                     }
                                 }
                             },
