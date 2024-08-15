@@ -104,11 +104,6 @@
                             "4"
                         ],
                         "publish_roles": [
-                            "0",
-                            "1",
-                            "2",
-                            "3",
-                            "4",
                             "128",
                             "129"
                         ],
@@ -156,11 +151,6 @@
                             "4"
                         ],
                         "publish_roles": [
-                            "0",
-                            "1",
-                            "2",
-                            "3",
-                            "4",
                             "128",
                             "129"
                         ],
@@ -436,11 +426,6 @@
                                         "alias": "ActionTelemetryConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -456,11 +441,6 @@
                                         "alias": "ActionTelemetryConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -484,11 +464,6 @@
                                             "4"
                                         ],
                                         "publish_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ]
@@ -503,11 +478,6 @@
                                         "alias": "ActionSessionConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -523,11 +493,6 @@
                                         "alias": "ActionSessionConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -551,11 +516,6 @@
                                             "4"
                                         ],
                                         "publish_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ]
@@ -570,11 +530,6 @@
                                         "alias": "ActionCarConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/carConfig/set",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -590,11 +545,6 @@
                                         "alias": "ActionCarConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/carConfig/get",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -618,11 +568,6 @@
                                             "4"
                                         ],
                                         "publish_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ]
@@ -637,11 +582,6 @@
                                         "alias": "ActionHandcartSettingsSet",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/set",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -657,11 +597,6 @@
                                         "alias": "ActionHandcartSettingsGet",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/get",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -684,11 +619,6 @@
                                             "4"
                                         ],
                                         "publish_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ]
@@ -703,11 +633,6 @@
                                         "alias": "ActionLapCounterConfigSet",
                                         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -723,11 +648,6 @@
                                         "alias": "ActionLapCounterConfigGet",
                                         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
                                         "subscribe_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ],
@@ -750,11 +670,6 @@
                                             "4"
                                         ],
                                         "publish_roles": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
                                             "128",
                                             "129"
                                         ]
@@ -779,9 +694,7 @@
                                     "1",
                                     "2",
                                     "3",
-                                    "4",
-                                    "128",
-                                    "129"
+                                    "4"
                                 ]
                             },
                             "start": {
@@ -802,9 +715,7 @@
                                     "1",
                                     "2",
                                     "3",
-                                    "4",
-                                    "128",
-                                    "129"
+                                    "4"
                                 ]
                             },
                             "reset": {
@@ -825,9 +736,7 @@
                                     "1",
                                     "2",
                                     "3",
-                                    "4",
-                                    "128",
-                                    "129"
+                                    "4"
                                 ]
                             },
                             "stop": {
@@ -848,9 +757,7 @@
                                     "1",
                                     "2",
                                     "3",
-                                    "4",
-                                    "128",
-                                    "129"
+                                    "4"
                                 ]
                             },
                             "startBaseline": {
@@ -1049,11 +956,6 @@
                                 "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
                                 "qos": 2,
                                 "subscribe_roles": [
-                                    "0",
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
                                     "128",
                                     "129"
                                 ],
