@@ -46,24 +46,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
@@ -78,7 +68,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
         case Role::role_1:
@@ -118,24 +107,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
@@ -150,7 +129,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
         case Role::role_2:
@@ -190,24 +168,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
@@ -222,7 +190,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
         case Role::role_3:
@@ -262,24 +229,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
@@ -294,7 +251,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
         case Role::role_4:
@@ -334,24 +290,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
@@ -366,7 +312,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
         case Role::role_128:
@@ -475,18 +420,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -510,23 +443,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -547,18 +475,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -581,23 +497,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -618,18 +529,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -652,23 +551,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -689,18 +583,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -723,23 +605,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -760,18 +637,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -794,23 +659,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
@@ -873,10 +733,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         break;
         
@@ -925,10 +781,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         break;
     }
@@ -976,24 +828,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::action:
             case Topic::action_telemetry_config:
-            case Topic::action_telemetry_config_set:
-            case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
-            case Topic::action_car_config_set:
-            case Topic::action_car_config_get:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
-            case Topic::action_handcart_settings_set:
-            case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1008,9 +850,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
         }
         
         case Role::role_1:
@@ -1051,24 +903,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::action:
             case Topic::action_telemetry_config:
-            case Topic::action_telemetry_config_set:
-            case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
-            case Topic::action_car_config_set:
-            case Topic::action_car_config_get:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
-            case Topic::action_handcart_settings_set:
-            case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1083,9 +925,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
         }
         
         case Role::role_2:
@@ -1126,24 +978,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::action:
             case Topic::action_telemetry_config:
-            case Topic::action_telemetry_config_set:
-            case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
-            case Topic::action_car_config_set:
-            case Topic::action_car_config_get:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
-            case Topic::action_handcart_settings_set:
-            case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1158,9 +1000,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
         }
         
         case Role::role_3:
@@ -1201,24 +1053,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::action:
             case Topic::action_telemetry_config:
-            case Topic::action_telemetry_config_set:
-            case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
-            case Topic::action_car_config_set:
-            case Topic::action_car_config_get:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
-            case Topic::action_handcart_settings_set:
-            case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1233,9 +1075,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
         }
         
         case Role::role_4:
@@ -1276,24 +1128,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::action:
             case Topic::action_telemetry_config:
-            case Topic::action_telemetry_config_set:
-            case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
-            case Topic::action_car_config_set:
-            case Topic::action_car_config_get:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
-            case Topic::action_handcart_settings_set:
-            case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1308,9 +1150,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
         }
         
         case Role::role_128:
@@ -1474,18 +1326,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::extra_tlm_data:
-            case Topic::extra_tlm_data_vehicle_state:
-            case Topic::extra_tlm_data_baseline:
-            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1509,23 +1349,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
-            case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1541,7 +1376,24 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config_content:
+              return false;
         }
         
         case Role::role_1:
@@ -1549,18 +1401,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::extra_tlm_data:
-            case Topic::extra_tlm_data_vehicle_state:
-            case Topic::extra_tlm_data_baseline:
-            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1583,23 +1423,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
-            case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1615,7 +1450,24 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
               return true;
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config_content:
               return false;
         }
         
@@ -1624,18 +1476,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::extra_tlm_data:
-            case Topic::extra_tlm_data_vehicle_state:
-            case Topic::extra_tlm_data_baseline:
-            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1658,23 +1498,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
-            case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1690,7 +1525,24 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
               return true;
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config_content:
               return false;
         }
         
@@ -1699,18 +1551,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::extra_tlm_data:
-            case Topic::extra_tlm_data_vehicle_state:
-            case Topic::extra_tlm_data_baseline:
-            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1733,23 +1573,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
-            case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1765,7 +1600,24 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
               return true;
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config_content:
               return false;
         }
         
@@ -1774,18 +1626,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::extra_tlm_data:
-            case Topic::extra_tlm_data_vehicle_state:
-            case Topic::extra_tlm_data_baseline:
-            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1808,23 +1648,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
-            case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -1840,7 +1675,24 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
               return true;
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config_content:
               return false;
         }
         
@@ -1891,10 +1743,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
-            case Topic::action_kill:
-            case Topic::action_start:
-            case Topic::action_reset:
-            case Topic::action_stop:
             case Topic::action_raw:
               return true;
             case Topic::action_telemetry_config_set:
@@ -1907,6 +1755,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
             case Topic::action_start_baseline:
             case Topic::action_stop_baseline:
             case Topic::action_precharge:
@@ -1965,10 +1817,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
-            case Topic::action_kill:
-            case Topic::action_start:
-            case Topic::action_reset:
-            case Topic::action_stop:
             case Topic::action_raw:
               return true;
             case Topic::command_steer:
@@ -1982,6 +1830,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
             case Topic::action_start_baseline:
             case Topic::action_stop_baseline:
             case Topic::action_precharge:

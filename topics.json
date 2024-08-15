@@ -98,11 +98,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -125,11 +120,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -152,11 +142,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -179,11 +164,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -206,11 +186,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -233,11 +208,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -260,11 +230,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -287,11 +252,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -314,11 +274,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -341,11 +296,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -368,11 +318,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -395,11 +340,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1008,11 +948,6 @@
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1035,11 +970,6 @@
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1069,11 +999,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1118,11 +1043,6 @@
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1145,11 +1065,6 @@
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1179,11 +1094,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1228,11 +1138,6 @@
         "description": "<vehicleId>/<deviceId>/action/carConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1255,11 +1160,6 @@
         "description": "<vehicleId>/<deviceId>/action/carConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1289,11 +1189,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1338,11 +1233,6 @@
         "description": "<vehicleId>/<deviceId>/action/handcartSettings/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1365,11 +1255,6 @@
         "description": "<vehicleId>/<deviceId>/action/handcartSettings/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1399,11 +1284,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1448,11 +1328,6 @@
         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1475,11 +1350,6 @@
         "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1509,11 +1379,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1542,9 +1407,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1571,9 +1434,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1600,9 +1461,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1629,9 +1488,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1890,11 +1747,6 @@
         "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
         "qos": 2,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
