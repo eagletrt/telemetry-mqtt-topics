@@ -171,11 +171,13 @@
                             },
                             "baseline": {
                                 "alias": "ExtraTlmDataBaseline",
-                                "description": "Protobuffer data of vehicle state"
+                                "description": "Protobuffer data of vehicle state",
+                                "retain": true
                             },
                             "gpsMapOrigins": {
                                 "alias": "ExtraTlmDataGpsMapOrigins",
-                                "description": "Protobuffer data of gps map origins"
+                                "description": "Protobuffer data of gps map origins",
+                                "retain": true
                             }
                         }
                     },
