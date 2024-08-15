@@ -109,7 +109,7 @@ vehicleIddeviceId
 > Protobuffer data of vehicle state
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ExtraTlmDataGpsMapOrigins
@@ -117,7 +117,7 @@ vehicleIddeviceId
 > Protobuffer data of gps map origins
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## DataLastUpdate

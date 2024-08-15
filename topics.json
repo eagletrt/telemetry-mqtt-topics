@@ -376,7 +376,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -403,7 +403,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"

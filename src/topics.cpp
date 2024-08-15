@@ -2250,7 +2250,7 @@ TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, cons
 TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/baseline";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2258,7 +2258,7 @@ TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const st
 TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
