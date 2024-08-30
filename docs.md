@@ -440,6 +440,38 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ActionLapCounterTrack
+### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
+> &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionLapCounterTrackSet
+### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/set
+> &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionLapCounterTrackGet
+### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/get
+> &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionLapCounterTrackContent
+### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/content
+> &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## ActionKill
 ### &lt;vehicleId>/&lt;deviceId>/action/kill
 > &lt;vehicleId>/&lt;deviceId>/action/kill

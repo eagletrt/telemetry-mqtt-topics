@@ -1389,6 +1389,101 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack",
+        "alias": "ActionLapCounterTrack",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/set",
+        "alias": "ActionLapCounterTrackSet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/get",
+        "alias": "ActionLapCounterTrackGet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
+        "alias": "ActionLapCounterTrackContent",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action/kill",
         "alias": "ActionKill",
         "description": "<vehicleId>/<deviceId>/action/kill",

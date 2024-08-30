@@ -54,6 +54,10 @@ graph {
 "lapCounterConfig" -- "set";
 "lapCounterConfig" -- "get";
 "lapCounterConfig" -- "content";
+"action" -- "lapCounterTrack";
+"lapCounterTrack" -- "set";
+"lapCounterTrack" -- "get";
+"lapCounterTrack" -- "content";
 "action" -- "kill";
 "action" -- "start";
 "action" -- "reset";
