@@ -11,7 +11,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -39,7 +40,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -95,7 +97,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -117,7 +120,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -139,7 +143,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -161,7 +166,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -183,7 +189,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -205,7 +212,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -227,7 +235,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -249,7 +258,333 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger",
+        "alias": "DataCameraLogger",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can",
+        "alias": "DataCameraLoggerCan",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAngularRate",
+        "alias": "DataCameraLoggerImuAngularRate",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAngularRate",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAcceleration",
+        "alias": "DataCameraLoggerImuAcceleration",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAcceleration",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/vehiclePosition",
+        "alias": "DataCameraLoggerVehiclePosition",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehiclePosition",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/vehicleSpeed",
+        "alias": "DataCameraLoggerVehicleSpeed",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehicleSpeed",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/frontAngularVelocity",
+        "alias": "DataCameraLoggerFrontAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/frontAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/rearLeftAngularVelocity",
+        "alias": "DataCameraLoggerRearLeftAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearLeftAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/rearRightAngularVelocity",
+        "alias": "DataCameraLoggerRearRightAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearRightAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps",
+        "alias": "DataCameraLoggerGps",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/HPPOSLLH",
+        "alias": "DataCameraLoggerGpsHPPOSLLH",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/HPPOSLLH",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/PVT",
+        "alias": "DataCameraLoggerGpsPVT",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/PVT",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/RELPOSNED",
+        "alias": "DataCameraLoggerGpsRELPOSNED",
+        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/RELPOSNED",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129",
+            "130"
         ],
         "publish_roles": [
             "128",
@@ -577,7 +912,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -896,7 +1232,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -1020,7 +1357,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -1115,7 +1453,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -1210,7 +1549,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -1305,7 +1645,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -1400,7 +1741,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",

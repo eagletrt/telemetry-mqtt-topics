@@ -4,7 +4,7 @@
 ### &lt;vehicleId>
 > &lt;vehicleId>
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleId
@@ -12,7 +12,7 @@ vehicleId
 ### &lt;vehicleId>/&lt;deviceId>
 > &lt;vehicleId>/&lt;deviceId>
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -28,7 +28,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data
 > &lt;vehicleId>/&lt;deviceId>/data
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -36,7 +36,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -44,7 +44,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
 > Protobuffer data of secondary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -52,7 +52,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -60,7 +60,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/inverters
 > Protobuffer data of inverter network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -68,7 +68,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/simulator
 > Protobuffer data of simulator network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -76,7 +76,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
 > Protobuffer data of gps network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -84,7 +84,111 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLogger
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerCan
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerImuAngularRate
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/imuAngularRate
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/imuAngularRate
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerImuAcceleration
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/imuAcceleration
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/imuAcceleration
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerVehiclePosition
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/vehiclePosition
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/vehiclePosition
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerVehicleSpeed
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/vehicleSpeed
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/vehicleSpeed
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerFrontAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/frontAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/frontAngularVelocity
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerRearLeftAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/rearLeftAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/rearLeftAngularVelocity
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerRearRightAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/rearRightAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/can/rearRightAngularVelocity
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerGps
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerGpsHPPOSLLH
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/HPPOSLLH
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/HPPOSLLH
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerGpsPVT
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/PVT
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/PVT
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerGpsRELPOSNED
+### &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/RELPOSNED
+> &lt;vehicleId>/&lt;deviceId>/data/camera-logger/gps/RELPOSNED
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -188,7 +292,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/command
 > &lt;vehicleId>/&lt;deviceId>/command
 - **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -276,7 +380,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -316,7 +420,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -348,7 +452,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig
 > &lt;vehicleId>/&lt;deviceId>/action/actionCar
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -380,7 +484,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -412,7 +516,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -444,7 +548,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
