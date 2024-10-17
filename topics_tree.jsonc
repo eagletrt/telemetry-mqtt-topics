@@ -25,7 +25,8 @@
             "3",
             "4",
             "128",
-            "129"
+            "129",
+            "130"
         ],
         "publish_roles": [
             "0",
@@ -52,7 +53,8 @@
                     "3",
                     "4",
                     "128",
-                    "129"
+                    "129",
+                    "130"
                 ],
                 "publish_roles": [
                     "0",
@@ -101,7 +103,8 @@
                             "1",
                             "2",
                             "3",
-                            "4"
+                            "4",
+                            "130"
                         ],
                         "publish_roles": [
                             "128",
@@ -135,6 +138,106 @@
                             "brusa": {
                                 "alias": "DataBrusa",
                                 "description": "<vehicleId>/<deviceId>/data/brusa"
+                            },
+                            "camera-logger": {
+                                "alias": "DataCameraLogger",
+                                "description": "<vehicleId>/<deviceId>/data/camera-logger",
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129",
+                                    "130"
+                                ],
+                                "publish_roles": [
+                                    "128",
+                                    "129"
+                                ],
+                                "sub_topics": {
+                                    "can": {
+                                        "alias": "DataCameraLoggerCan",
+                                        "description": "<vehicleId>/<deviceId>/data/camera-logger/can",
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129",
+                                            "130"
+                                        ],
+                                        "publish_roles": [
+                                            "128",
+                                            "129"
+                                        ],
+                                        "sub_topics": {
+                                            "imuAngularRate": {
+                                                "alias": "DataCameraLoggerImuAngularRate",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAngularRate"
+                                            },
+                                            "imuAcceleration": {
+                                                "alias": "DataCameraLoggerImuAcceleration",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAcceleration"
+                                            },
+                                            "vehiclePosition": {
+                                                "alias": "DataCameraLoggerVehiclePosition",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehiclePosition"
+                                            },
+                                            "vehicleSpeed": {
+                                                "alias": "DataCameraLoggerVehicleSpeed",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehicleSpeed"
+                                            },
+                                            "frontAngularVelocity": {
+                                                "alias": "DataCameraLoggerFrontAngularVelocity",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/frontAngularVelocity"
+                                            },
+                                            "rearLeftAngularVelocity": {
+                                                "alias": "DataCameraLoggerRearLeftAngularVelocity",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearLeftAngularVelocity"
+                                            },
+                                            "rearRightAngularVelocity": {
+                                                "alias": "DataCameraLoggerRearRightAngularVelocity",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearRightAngularVelocity"
+                                            }
+                                        }
+                                    },
+                                    "gps": {
+                                        "alias": "DataCameraLoggerGps",
+                                        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps",
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4",
+                                            "128",
+                                            "129",
+                                            "130"
+                                        ],
+                                        "publish_roles": [
+                                            "128",
+                                            "129"
+                                        ],
+                                        "sub_topics": {
+                                            "HPPOSLLH": {
+                                                "alias": "DataCameraLoggerGpsHPPOSLLH",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/HPPOSLLH"
+                                            },
+                                            "PVT": {
+                                                "alias": "DataCameraLoggerGpsPVT",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/PVT"
+                                            },
+                                            "RELPOSNED": {
+                                                "alias": "DataCameraLoggerGpsRELPOSNED",
+                                                "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/RELPOSNED"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     },
