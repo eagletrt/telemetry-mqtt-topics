@@ -23,13 +23,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -99,13 +99,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -175,13 +175,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -251,13 +251,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -327,13 +327,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -393,19 +393,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
@@ -456,19 +443,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
@@ -528,13 +502,13 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -856,13 +830,13 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -920,13 +894,13 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
@@ -993,13 +967,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1085,13 +1059,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1177,13 +1151,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1269,13 +1243,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1361,13 +1335,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1443,19 +1417,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data_camera_logger:
-            case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
-            case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
             case Topic::command:
             case Topic::command_send:
             case Topic::command_result:
@@ -1509,6 +1470,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_brusa:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
+            case Topic::data_camera_logger_gps_p_v_t:
+            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1535,19 +1509,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
-            case Topic::data_camera_logger:
-            case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
-            case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
             case Topic::command:
             case Topic::command_send:
             case Topic::command_result:
@@ -1601,6 +1562,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_brusa:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
+            case Topic::data_camera_logger_gps_p_v_t:
+            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1636,13 +1610,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1788,13 +1762,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1879,13 +1853,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -1971,13 +1945,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2063,13 +2037,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2155,13 +2129,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2195,13 +2169,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2287,13 +2261,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2379,13 +2353,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
-            case Topic::data_camera_logger_imu_angular_rate:
-            case Topic::data_camera_logger_imu_acceleration:
-            case Topic::data_camera_logger_vehicle_position:
-            case Topic::data_camera_logger_vehicle_speed:
-            case Topic::data_camera_logger_front_angular_velocity:
-            case Topic::data_camera_logger_rear_left_angular_velocity:
-            case Topic::data_camera_logger_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
@@ -2487,20 +2461,20 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicDataCameraLogger(vehicleId, deviceId);
         case Topic::data_camera_logger_can: 
             return GetTopicDataCameraLoggerCan(vehicleId, deviceId);
-        case Topic::data_camera_logger_imu_angular_rate: 
-            return GetTopicDataCameraLoggerImuAngularRate(vehicleId, deviceId);
-        case Topic::data_camera_logger_imu_acceleration: 
-            return GetTopicDataCameraLoggerImuAcceleration(vehicleId, deviceId);
-        case Topic::data_camera_logger_vehicle_position: 
-            return GetTopicDataCameraLoggerVehiclePosition(vehicleId, deviceId);
-        case Topic::data_camera_logger_vehicle_speed: 
-            return GetTopicDataCameraLoggerVehicleSpeed(vehicleId, deviceId);
-        case Topic::data_camera_logger_front_angular_velocity: 
-            return GetTopicDataCameraLoggerFrontAngularVelocity(vehicleId, deviceId);
-        case Topic::data_camera_logger_rear_left_angular_velocity: 
-            return GetTopicDataCameraLoggerRearLeftAngularVelocity(vehicleId, deviceId);
-        case Topic::data_camera_logger_rear_right_angular_velocity: 
-            return GetTopicDataCameraLoggerRearRightAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_imu_angular_rate: 
+            return GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_imu_acceleration: 
+            return GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_vehicle_position: 
+            return GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_vehicle_speed: 
+            return GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_front_angular_velocity: 
+            return GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_rear_left_angular_velocity: 
+            return GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_rear_right_angular_velocity: 
+            return GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId);
         case Topic::data_camera_logger_gps: 
             return GetTopicDataCameraLoggerGps(vehicleId, deviceId);
         case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h: 
@@ -2727,7 +2701,7 @@ TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& 
 }
 
 TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger";
     int qos = 0;
     bool retain = false;
 
@@ -2735,63 +2709,63 @@ TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::s
 }
 
 TopicMessage GetTopicDataCameraLoggerCan(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerImuAngularRate(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/imuAngularRate";
+TopicMessage GetTopicDataCameraLoggerCanImuAngularRate(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/imuAngularRate";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerImuAcceleration(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/imuAcceleration";
+TopicMessage GetTopicDataCameraLoggerCanImuAcceleration(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/imuAcceleration";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerVehiclePosition(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/vehiclePosition";
+TopicMessage GetTopicDataCameraLoggerCanVehiclePosition(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/vehiclePosition";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerVehicleSpeed(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/vehicleSpeed";
+TopicMessage GetTopicDataCameraLoggerCanVehicleSpeed(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/vehicleSpeed";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerFrontAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/frontAngularVelocity";
+TopicMessage GetTopicDataCameraLoggerCanFrontAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/frontAngularVelocity";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/rearLeftAngularVelocity";
+TopicMessage GetTopicDataCameraLoggerCanRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/rearLeftAngularVelocity";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/can/rearRightAngularVelocity";
+TopicMessage GetTopicDataCameraLoggerCanRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/can/rearRightAngularVelocity";
     int qos = 0;
     bool retain = false;
 
@@ -2799,7 +2773,7 @@ TopicMessage GetTopicDataCameraLoggerRearRightAngularVelocity(const std::string&
 }
 
 TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/gps";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps";
     int qos = 0;
     bool retain = false;
 
@@ -2807,7 +2781,7 @@ TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std
 }
 
 TopicMessage GetTopicDataCameraLoggerGpsHPPOSLLH(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/gps/HPPOSLLH";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/HPPOSLLH";
     int qos = 0;
     bool retain = false;
 
@@ -2815,7 +2789,7 @@ TopicMessage GetTopicDataCameraLoggerGpsHPPOSLLH(const std::string& vehicleId, c
 }
 
 TopicMessage GetTopicDataCameraLoggerGpsPVT(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/gps/PVT";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/PVT";
     int qos = 0;
     bool retain = false;
 
@@ -2823,7 +2797,7 @@ TopicMessage GetTopicDataCameraLoggerGpsPVT(const std::string& vehicleId, const 
 }
 
 TopicMessage GetTopicDataCameraLoggerGpsRELPOSNED(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera-logger/gps/RELPOSNED";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/RELPOSNED";
     int qos = 0;
     bool retain = false;
 

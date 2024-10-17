@@ -33,13 +33,13 @@ enum class Topic
     data_brusa = 10,
     data_camera_logger = 11,
     data_camera_logger_can = 12,
-    data_camera_logger_imu_angular_rate = 13,
-    data_camera_logger_imu_acceleration = 14,
-    data_camera_logger_vehicle_position = 15,
-    data_camera_logger_vehicle_speed = 16,
-    data_camera_logger_front_angular_velocity = 17,
-    data_camera_logger_rear_left_angular_velocity = 18,
-    data_camera_logger_rear_right_angular_velocity = 19,
+    data_camera_logger_can_imu_angular_rate = 13,
+    data_camera_logger_can_imu_acceleration = 14,
+    data_camera_logger_can_vehicle_position = 15,
+    data_camera_logger_can_vehicle_speed = 16,
+    data_camera_logger_can_front_angular_velocity = 17,
+    data_camera_logger_can_rear_left_angular_velocity = 18,
+    data_camera_logger_can_rear_right_angular_velocity = 19,
     data_camera_logger_gps = 20,
     data_camera_logger_gps_h_p_p_o_s_l_l_h = 21,
     data_camera_logger_gps_p_v_t = 22,
@@ -137,13 +137,13 @@ TopicMessage GetTopicDataGps(const std::string& vehicleId, const std::string& de
 TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCan(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerImuAngularRate(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerImuAcceleration(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerVehiclePosition(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerVehicleSpeed(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerFrontAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanImuAngularRate(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanImuAcceleration(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanVehiclePosition(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanVehicleSpeed(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanFrontAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerCanRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerGpsHPPOSLLH(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerGpsPVT(const std::string& vehicleId, const std::string& deviceId);

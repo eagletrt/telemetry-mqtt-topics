@@ -272,9 +272,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger",
         "alias": "DataCameraLogger",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -282,8 +282,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -297,9 +295,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can",
         "alias": "DataCameraLoggerCan",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -307,8 +305,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -322,9 +318,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAngularRate",
-        "alias": "DataCameraLoggerImuAngularRate",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAngularRate",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/imuAngularRate",
+        "alias": "DataCameraLoggerCanImuAngularRate",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/imuAngularRate",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -332,8 +328,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -347,9 +341,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAcceleration",
-        "alias": "DataCameraLoggerImuAcceleration",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/imuAcceleration",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/imuAcceleration",
+        "alias": "DataCameraLoggerCanImuAcceleration",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/imuAcceleration",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -357,8 +351,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -372,9 +364,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/vehiclePosition",
-        "alias": "DataCameraLoggerVehiclePosition",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehiclePosition",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/vehiclePosition",
+        "alias": "DataCameraLoggerCanVehiclePosition",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/vehiclePosition",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -382,8 +374,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -397,9 +387,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/vehicleSpeed",
-        "alias": "DataCameraLoggerVehicleSpeed",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/vehicleSpeed",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/vehicleSpeed",
+        "alias": "DataCameraLoggerCanVehicleSpeed",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/vehicleSpeed",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -407,8 +397,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -422,9 +410,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/frontAngularVelocity",
-        "alias": "DataCameraLoggerFrontAngularVelocity",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/frontAngularVelocity",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/frontAngularVelocity",
+        "alias": "DataCameraLoggerCanFrontAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/frontAngularVelocity",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -432,8 +420,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -447,9 +433,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/rearLeftAngularVelocity",
-        "alias": "DataCameraLoggerRearLeftAngularVelocity",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearLeftAngularVelocity",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/rearLeftAngularVelocity",
+        "alias": "DataCameraLoggerCanRearLeftAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/rearLeftAngularVelocity",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -457,8 +443,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -472,9 +456,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/can/rearRightAngularVelocity",
-        "alias": "DataCameraLoggerRearRightAngularVelocity",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/can/rearRightAngularVelocity",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/can/rearRightAngularVelocity",
+        "alias": "DataCameraLoggerCanRearRightAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/can/rearRightAngularVelocity",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -482,8 +466,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -497,9 +479,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps",
         "alias": "DataCameraLoggerGps",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -507,8 +489,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -522,9 +502,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/HPPOSLLH",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH",
         "alias": "DataCameraLoggerGpsHPPOSLLH",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/HPPOSLLH",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -532,8 +512,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -547,9 +525,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/PVT",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/PVT",
         "alias": "DataCameraLoggerGpsPVT",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/PVT",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/PVT",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -557,8 +535,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [
@@ -572,9 +548,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera-logger/gps/RELPOSNED",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED",
         "alias": "DataCameraLoggerGpsRELPOSNED",
-        "description": "<vehicleId>/<deviceId>/data/camera-logger/gps/RELPOSNED",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -582,8 +558,6 @@
             "2",
             "3",
             "4",
-            "128",
-            "129",
             "130"
         ],
         "publish_roles": [

@@ -10,8 +10,8 @@ graph {
 "data" -- "simulator";
 "data" -- "gps";
 "data" -- "brusa";
-"data" -- "camera-logger";
-"camera-logger" -- "can";
+"data" -- "camera_logger";
+"camera_logger" -- "can";
 "can" -- "imuAngularRate";
 "can" -- "imuAcceleration";
 "can" -- "vehiclePosition";
@@ -19,7 +19,7 @@ graph {
 "can" -- "frontAngularVelocity";
 "can" -- "rearLeftAngularVelocity";
 "can" -- "rearRightAngularVelocity";
-"camera-logger" -- "gps";
+"camera_logger" -- "gps";
 "gps" -- "HPPOSLLH";
 "gps" -- "PVT";
 "gps" -- "RELPOSNED";
