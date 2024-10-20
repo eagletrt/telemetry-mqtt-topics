@@ -4,7 +4,7 @@
 ### &lt;vehicleId>
 > &lt;vehicleId>
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleId
@@ -12,7 +12,7 @@ vehicleId
 ### &lt;vehicleId>/&lt;deviceId>
 > &lt;vehicleId>/&lt;deviceId>
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -28,7 +28,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data
 > &lt;vehicleId>/&lt;deviceId>/data
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -36,7 +36,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/primary
 > Protobuffer data of primary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -44,7 +44,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/secondary
 > Protobuffer data of secondary network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -52,7 +52,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/bms
 > Protobuffer data of bms network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -60,7 +60,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/inverters
 > Protobuffer data of inverter network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -68,7 +68,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/simulator
 > Protobuffer data of simulator network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -76,7 +76,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/gps
 > Protobuffer data of gps network
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -84,7 +84,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -292,7 +292,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/command
 > &lt;vehicleId>/&lt;deviceId>/command
 - **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -380,7 +380,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -420,7 +420,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 > &lt;vehicleId>/&lt;deviceId>/action/sessionConfig
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -452,7 +452,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/carConfig
 > &lt;vehicleId>/&lt;deviceId>/action/actionCar
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -484,7 +484,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -516,7 +516,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -548,7 +548,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterTrack
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 130 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId

@@ -490,16 +490,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         break;
         
         case Role::role_130:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
@@ -513,13 +503,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
         break;
     }
 
@@ -1598,16 +1581,6 @@ bool CanSubscribe(Role role, Topic topic) {
         
         case Role::role_130:
         switch(topic) {
-            case Topic::vehicle_id:
-            case Topic::device_id:
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -1621,15 +1594,18 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
             case Topic::data_camera_logger_gps_p_v_t:
             case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
-            case Topic::command:
-            case Topic::action:
-            case Topic::action_session_config:
-            case Topic::action_car_config:
-            case Topic::action_handcart_settings:
-            case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_track:
               return true;
+            case Topic::vehicle_id:
+            case Topic::device_id:
             case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1642,6 +1618,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
+            case Topic::command:
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
@@ -1652,22 +1629,28 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_end:
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
+            case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
             case Topic::action_session_config_content:
+            case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_car_config_content:
+            case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
+            case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
