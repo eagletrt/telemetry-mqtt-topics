@@ -20,9 +20,9 @@ graph {
 "can" -- "rearLeftAngularVelocity";
 "can" -- "rearRightAngularVelocity";
 "camera_logger" -- "gps";
-"gps" -- "HPPOSLLH";
-"gps" -- "PVT";
-"gps" -- "RELPOSNED";
+"gps" -- "hpposllh";
+"gps" -- "pvt";
+"gps" -- "relposned";
 "<deviceId>" -- "extra_tlm_data";
 "extra_tlm_data" -- "vehicleState";
 "extra_tlm_data" -- "baseline";

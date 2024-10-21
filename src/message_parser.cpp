@@ -110,9 +110,9 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/can/rearLeftAngularVelocity");
     this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/can/rearRightAngularVelocity");
     this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/PVT");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/hpposllh");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/pvt");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/camera_logger/gps/relposned");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline");

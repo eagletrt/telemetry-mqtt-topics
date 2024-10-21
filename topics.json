@@ -492,9 +492,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH",
-        "alias": "DataCameraLoggerGpsHPPOSLLH",
-        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/hpposllh",
+        "alias": "DataCameraLoggerGpsHpposllh",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/hpposllh",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -515,9 +515,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/PVT",
-        "alias": "DataCameraLoggerGpsPVT",
-        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/PVT",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/pvt",
+        "alias": "DataCameraLoggerGpsPvt",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/pvt",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -538,9 +538,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED",
-        "alias": "DataCameraLoggerGpsRELPOSNED",
-        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED",
+        "topic": "<vehicleId>/<deviceId>/data/camera_logger/gps/relposned",
+        "alias": "DataCameraLoggerGpsRelposned",
+        "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/relposned",
         "qos": 0,
         "subscribe_roles": [
             "0",

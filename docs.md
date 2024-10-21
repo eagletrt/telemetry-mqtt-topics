@@ -168,25 +168,25 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## DataCameraLoggerGpsHPPOSLLH
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/HPPOSLLH
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/HPPOSLLH
+## DataCameraLoggerGpsHpposllh
+### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/hpposllh
+> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/hpposllh
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## DataCameraLoggerGpsPVT
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/PVT
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/PVT
+## DataCameraLoggerGpsPvt
+### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/pvt
+> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/pvt
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## DataCameraLoggerGpsRELPOSNED
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/RELPOSNED
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/RELPOSNED
+## DataCameraLoggerGpsRelposned
+### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/relposned
+> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/relposned
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No

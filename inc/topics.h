@@ -41,9 +41,9 @@ enum class Topic
     data_camera_logger_can_rear_left_angular_velocity = 18,
     data_camera_logger_can_rear_right_angular_velocity = 19,
     data_camera_logger_gps = 20,
-    data_camera_logger_gps_h_p_p_o_s_l_l_h = 21,
-    data_camera_logger_gps_p_v_t = 22,
-    data_camera_logger_gps_r_e_l_p_o_s_n_e_d = 23,
+    data_camera_logger_gps_hpposllh = 21,
+    data_camera_logger_gps_pvt = 22,
+    data_camera_logger_gps_relposned = 23,
     extra_tlm_data = 24,
     extra_tlm_data_vehicle_state = 25,
     extra_tlm_data_baseline = 26,
@@ -145,9 +145,9 @@ TopicMessage GetTopicDataCameraLoggerCanFrontAngularVelocity(const std::string& 
 TopicMessage GetTopicDataCameraLoggerCanRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCanRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerGpsHPPOSLLH(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerGpsPVT(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicDataCameraLoggerGpsRELPOSNED(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerGpsHpposllh(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerGpsPvt(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataCameraLoggerGpsRelposned(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const std::string& deviceId);

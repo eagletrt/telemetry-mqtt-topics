@@ -31,9 +31,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -107,9 +107,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -183,9 +183,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -259,9 +259,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -335,9 +335,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -500,9 +500,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         break;
     }
 
@@ -821,9 +821,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -885,9 +885,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
@@ -958,9 +958,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1050,9 +1050,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1142,9 +1142,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1234,9 +1234,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1326,9 +1326,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1463,9 +1463,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1555,9 +1555,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1591,9 +1591,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -1753,9 +1753,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1844,9 +1844,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -1936,9 +1936,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2028,9 +2028,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2120,9 +2120,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2160,9 +2160,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2252,9 +2252,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2344,9 +2344,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_can_rear_left_angular_velocity:
             case Topic::data_camera_logger_can_rear_right_angular_velocity:
             case Topic::data_camera_logger_gps:
-            case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h:
-            case Topic::data_camera_logger_gps_p_v_t:
-            case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
@@ -2460,12 +2460,12 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId);
         case Topic::data_camera_logger_gps: 
             return GetTopicDataCameraLoggerGps(vehicleId, deviceId);
-        case Topic::data_camera_logger_gps_h_p_p_o_s_l_l_h: 
-            return GetTopicDataCameraLoggerGpsHPPOSLLH(vehicleId, deviceId);
-        case Topic::data_camera_logger_gps_p_v_t: 
-            return GetTopicDataCameraLoggerGpsPVT(vehicleId, deviceId);
-        case Topic::data_camera_logger_gps_r_e_l_p_o_s_n_e_d: 
-            return GetTopicDataCameraLoggerGpsRELPOSNED(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_hpposllh: 
+            return GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_pvt: 
+            return GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_relposned: 
+            return GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId);
         case Topic::extra_tlm_data: 
             return GetTopicExtraTlmData(vehicleId, deviceId);
         case Topic::extra_tlm_data_vehicle_state: 
@@ -2763,24 +2763,24 @@ TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerGpsHPPOSLLH(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/HPPOSLLH";
+TopicMessage GetTopicDataCameraLoggerGpsHpposllh(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/hpposllh";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerGpsPVT(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/PVT";
+TopicMessage GetTopicDataCameraLoggerGpsPvt(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/pvt";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataCameraLoggerGpsRELPOSNED(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/RELPOSNED";
+TopicMessage GetTopicDataCameraLoggerGpsRelposned(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/camera_logger/gps/relposned";
     int qos = 0;
     bool retain = false;
 
