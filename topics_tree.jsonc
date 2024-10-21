@@ -214,17 +214,17 @@
                                             "129"
                                         ],
                                         "sub_topics": {
-                                            "HPPOSLLH": {
-                                                "alias": "DataCameraLoggerGpsHPPOSLLH",
-                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/HPPOSLLH"
+                                            "hpposllh": {
+                                                "alias": "DataCameraLoggerGpsHpposllh",
+                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/hpposllh"
                                             },
-                                            "PVT": {
-                                                "alias": "DataCameraLoggerGpsPVT",
-                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/PVT"
+                                            "pvt": {
+                                                "alias": "DataCameraLoggerGpsPvt",
+                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/pvt"
                                             },
-                                            "RELPOSNED": {
-                                                "alias": "DataCameraLoggerGpsRELPOSNED",
-                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/RELPOSNED"
+                                            "relposned": {
+                                                "alias": "DataCameraLoggerGpsRelposned",
+                                                "description": "<vehicleId>/<deviceId>/data/camera_logger/gps/relposned"
                                             }
                                         }
                                     }
