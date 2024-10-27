@@ -50,6 +50,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -126,6 +127,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -202,6 +204,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -278,6 +281,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -354,6 +358,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -397,6 +402,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -447,6 +453,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -529,6 +536,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -840,6 +848,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -977,6 +986,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1069,6 +1079,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1161,6 +1172,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1253,6 +1265,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1345,6 +1358,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1404,6 +1418,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1496,6 +1511,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1622,6 +1638,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1694,6 +1711,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1852,6 +1870,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -1944,6 +1963,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2036,6 +2056,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2128,6 +2149,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2179,6 +2201,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2293,6 +2316,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
             case Topic::action_session_config_set:
@@ -2363,6 +2387,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_send:
             case Topic::command_result:
             case Topic::command_steer:
+            case Topic::command_steer_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2498,6 +2523,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicCommandResult(vehicleId, deviceId);
         case Topic::command_steer: 
             return GetTopicCommandSteer(vehicleId, deviceId);
+        case Topic::command_steer_status: 
+            return GetTopicCommandSteerStatus(vehicleId, deviceId);
         case Topic::file_transaction_request: 
             return GetTopicFileTransactionRequest(vehicleId, deviceId);
         case Topic::file_transaction_response: 
@@ -2909,6 +2936,14 @@ TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::stri
 
 TopicMessage GetTopicCommandSteer(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "command/steer";
+    int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicCommandSteerStatus(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "command/steerStatus";
     int qos = 2;
     bool retain = false;
 

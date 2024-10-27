@@ -320,6 +320,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## CommandSteerStatus
+### &lt;vehicleId>/&lt;deviceId>/command/steerStatus
+> &lt;vehicleId>/&lt;deviceId>/command/steerStatus
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## FileTransactionRequest
 ### &lt;vehicleId>/&lt;deviceId>/fileTransaction/request
 > &lt;vehicleId>/&lt;deviceId>/fileTransaction/request

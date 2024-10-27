@@ -39,6 +39,7 @@ graph {
 "command" -- "send";
 "command" -- "result";
 "command" -- "steer";
+"command" -- "steerStatus";
 "fileTransaction" -- "request";
 "fileTransaction" -- "response";
 "fileTransaction" -- "<transactionId>";

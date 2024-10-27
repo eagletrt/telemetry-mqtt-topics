@@ -129,6 +129,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/command/send");
     this->tree.addNode("<vehicleId>/<deviceId>/command/result");
     this->tree.addNode("<vehicleId>/<deviceId>/command/steer");
+    this->tree.addNode("<vehicleId>/<deviceId>/command/steerStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/request");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/response");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>");
