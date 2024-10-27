@@ -392,6 +392,23 @@
                                     "0",
                                     "128"
                                 ]
+                            },
+                            "steerStatus": {
+                                "alias": "CommandSteerStatus",
+                                "description": "<vehicleId>/<deviceId>/command/steerStatus",
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ],
+                                "publish_roles": [
+                                    "0",
+                                    "128"
+                                ]
                             }
                         }
                     },
