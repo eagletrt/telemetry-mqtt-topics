@@ -89,104 +89,112 @@ vehicleIddeviceId
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLogger
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCan
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanImuAngularRate
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/imuAngularRate
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/imuAngularRate
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/imuAngularRate
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/imuAngularRate
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanImuAcceleration
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/imuAcceleration
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/imuAcceleration
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/imuAcceleration
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/imuAcceleration
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanVehiclePosition
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/vehiclePosition
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/vehiclePosition
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/vehiclePosition
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/vehiclePosition
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanVehicleSpeed
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/vehicleSpeed
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/vehicleSpeed
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/vehicleSpeed
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/vehicleSpeed
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanFrontAngularVelocity
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/frontAngularVelocity
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/frontAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/frontAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/frontAngularVelocity
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanRearLeftAngularVelocity
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/rearLeftAngularVelocity
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/rearLeftAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/rearLeftAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/rearLeftAngularVelocity
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerCanRearRightAngularVelocity
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/rearRightAngularVelocity
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/can/rearRightAngularVelocity
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/rearRightAngularVelocity
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/rearRightAngularVelocity
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## DataCameraLoggerCanSteerAngle
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/steerAngle
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/can/steerAngle
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerGps
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerGpsHpposllh
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/hpposllh
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/hpposllh
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/hpposllh
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/hpposllh
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerGpsPvt
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/pvt
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/pvt
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/pvt
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/pvt
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLoggerGpsRelposned
-### &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/relposned
-> &lt;vehicleId>/&lt;deviceId>/data/camera_logger/gps/relposned
+### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/relposned
+> &lt;vehicleId>/&lt;deviceId>/data/cameraLogger/GPS/relposned
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
