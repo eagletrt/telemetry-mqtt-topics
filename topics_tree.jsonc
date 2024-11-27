@@ -136,6 +136,10 @@
                                 "alias": "DataBrusa",
                                 "description": "<vehicleId>/<deviceId>/data/brusa"
                             },
+                            "temporary": {
+                                "alias": "DataTemporary",
+                                "description": "Proto serialized with serializers, with unspecified and volatile structure."
+                            },
                             "cameraLogger": {
                                 "alias": "DataCameraLogger",
                                 "description": "<vehicleId>/<deviceId>/data/cameraLogger",
@@ -682,6 +686,58 @@
                                     "content": {
                                         "alias": "ActionHandcartSettingsContent",
                                         "description": "<vehicleId>/<deviceId>/action/handcartSettings/content",
+                                        "subscribe_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ],
+                                        "publish_roles": [
+                                            "128",
+                                            "129"
+                                        ]
+                                    }
+                                }
+                            },
+                            "rawJSONConfig": {
+                                "alias": "rawJSONConfig",
+                                "description": "<vehicleId>/<deviceId>/action/rawJSONConfig",
+                                "sub_topics": {
+                                    "set": {
+                                        "alias": "rawJSONConfigSet",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
+                                        "subscribe_roles": [
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ]
+                                    },
+                                    "get": {
+                                        "alias": "rawJSONConfigGet",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
+                                        "subscribe_roles": [
+                                            "128",
+                                            "129"
+                                        ],
+                                        "publish_roles": [
+                                            "0",
+                                            "1",
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ]
+                                    },
+                                    "content": {
+                                        "alias": "rawJSONConfigContent",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
+                                        "retain": true,
                                         "subscribe_roles": [
                                             "0",
                                             "1",
