@@ -469,6 +469,90 @@
                             }
                         }
                     },
+                    "info": {
+                        "alias": "Info",
+                        "description": "<vehicleId>/<deviceId>/info",
+                        "qos": 0,
+                        "retain": false,
+                        "sub_topics": {
+                            "version": {
+                                "alias": "Info",
+                                "description": "<vehicleId>/<deviceId>/info",
+                                "qos": 0,
+                                "retain": false,
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4"
+                                ],  
+                                "publish_roles": [
+                                    "128",
+                                    "129"
+                                ]
+                            },
+                            "user_info": {
+                                "alias": "Info",
+                                "description": "<vehicleId>/<deviceId>/info",
+                                "qos": 0,
+                                "retain": false,
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4"
+                                ],  
+                                "publish_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "128",
+                                    "129"
+                                ]
+                            },
+                            "session_info": {
+                                "alias": "Info",
+                                "description": "<vehicleId>/<deviceId>/info",
+                                "qos": 0,
+                                "retain": false,
+                                "subscribe_roles": [
+                                    "0",
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4"
+                                ],
+                                "publish_roles": [
+                                    "128",
+                                    "129"
+                                ],
+                                "sub_topics": {
+                                    "started": {
+                                        "alias": "InfoSessionStarted",
+                                        "description": "Sent when the session is started",
+                                        "qos": 0,
+                                        "retain": false
+                                    },
+                                    "stopped": {
+                                        "alias": "InfoSessionStopped",
+                                        "description": "Sent when the session is stopped",
+                                        "qos": 0,
+                                        "retain": false
+                                    },
+                                    "logging": {
+                                        "alias": "InfoSessionKeepalive",
+                                        "description": "Repeatedly sent, like a keepalive, to indicate that the session is still active",
+                                        "qos": 0,
+                                        "retain": false
+                                    }
+                                }
+                            }
+                        }
+                    },
                     "action": {
                         "alias": "Action",
                         "description": "<vehicleId>/<deviceId>/action",
