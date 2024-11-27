@@ -476,7 +476,7 @@
                         "retain": false,
                         "sub_topics": {
                             "version": {
-                                "alias": "Info",
+                                "alias": "InfoVersion",
                                 "description": "<vehicleId>/<deviceId>/info",
                                 "qos": 0,
                                 "retain": false,
@@ -492,8 +492,8 @@
                                     "129"
                                 ]
                             },
-                            "user_info": {
-                                "alias": "Info",
+                            "user": {
+                                "alias": "InfoUser",
                                 "description": "<vehicleId>/<deviceId>/info",
                                 "qos": 0,
                                 "retain": false,
@@ -514,8 +514,8 @@
                                     "129"
                                 ]
                             },
-                            "session_info": {
-                                "alias": "Info",
+                            "session": {
+                                "alias": "InfoSession",
                                 "description": "<vehicleId>/<deviceId>/info",
                                 "qos": 0,
                                 "retain": false,
@@ -784,13 +784,13 @@
                                     }
                                 }
                             },
-                            "rawJSONConfig": {
-                                "alias": "rawJSONConfig",
-                                "description": "<vehicleId>/<deviceId>/action/rawJSONConfig",
+                            "rawJsonConfig": {
+                                "alias": "rawJsonConfig",
+                                "description": "<vehicleId>/<deviceId>/action/rawJsonConfig",
                                 "sub_topics": {
                                     "set": {
-                                        "alias": "rawJSONConfigSet",
-                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
+                                        "alias": "rawJsonConfigSet",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/set",
                                         "subscribe_roles": [
                                             "128",
                                             "129"
@@ -804,8 +804,8 @@
                                         ]
                                     },
                                     "get": {
-                                        "alias": "rawJSONConfigGet",
-                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
+                                        "alias": "rawJsonConfigGet",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/get",
                                         "subscribe_roles": [
                                             "128",
                                             "129"
@@ -819,8 +819,8 @@
                                         ]
                                     },
                                     "content": {
-                                        "alias": "rawJSONConfigContent",
-                                        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
+                                        "alias": "rawJsonConfigContent",
+                                        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/content",
                                         "retain": true,
                                         "subscribe_roles": [
                                             "0",
