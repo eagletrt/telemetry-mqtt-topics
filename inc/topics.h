@@ -69,9 +69,9 @@ enum class Topic
     file_transaction_chunk = 46,
     file_transaction_chunk_ack = 47,
     info = 48,
-    info = 49,
-    info = 50,
-    info = 51,
+    info_version = 49,
+    info_user = 50,
+    info_session = 51,
     info_session_started = 52,
     info_session_stopped = 53,
     info_session_keepalive = 54,
@@ -92,10 +92,10 @@ enum class Topic
     action_handcart_settings_set = 69,
     action_handcart_settings_get = 70,
     action_handcart_settings_content = 71,
-    raw_j_s_o_n_config = 72,
-    raw_j_s_o_n_config_set = 73,
-    raw_j_s_o_n_config_get = 74,
-    raw_j_s_o_n_config_content = 75,
+    raw_json_config = 72,
+    raw_json_config_set = 73,
+    raw_json_config_get = 74,
+    raw_json_config_content = 75,
     action_lap_counter_config = 76,
     action_lap_counter_config_set = 77,
     action_lap_counter_config_get = 78,
@@ -185,9 +185,9 @@ TopicMessage GetTopicFileTransactionEnd(const std::string& vehicleId, const std:
 TopicMessage GetTopicFileTransactionChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoVersion(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoUser(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoSession(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId);
@@ -208,10 +208,10 @@ TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const 
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJSONConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJSONConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJSONConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJSONConfigContent(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJsonConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId);

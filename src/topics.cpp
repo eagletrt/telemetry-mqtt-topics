@@ -59,9 +59,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -74,8 +74,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -145,9 +145,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -160,8 +160,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -231,9 +231,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -246,8 +246,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -317,9 +317,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -332,8 +332,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -403,9 +403,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -418,8 +418,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -467,9 +467,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -520,9 +520,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -593,7 +593,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -607,9 +607,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -653,7 +653,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -667,9 +667,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -713,7 +713,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -727,9 +727,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -773,7 +773,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -787,9 +787,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -833,7 +833,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -847,9 +847,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -922,9 +922,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -937,8 +937,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -994,9 +994,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
@@ -1009,8 +1009,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJSONConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -1078,9 +1078,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1093,8 +1093,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -1121,8 +1121,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -1182,9 +1182,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1197,8 +1197,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -1225,8 +1225,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -1286,9 +1286,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1301,8 +1301,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -1329,8 +1329,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -1390,9 +1390,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1405,8 +1405,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -1433,8 +1433,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -1494,9 +1494,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1509,8 +1509,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -1537,8 +1537,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -1576,9 +1576,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -1635,9 +1635,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1645,7 +1645,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -1680,9 +1680,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -1739,9 +1739,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1749,7 +1749,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -1807,9 +1807,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1830,10 +1830,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -1889,7 +1889,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
+            case Topic::info_user:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -1903,9 +1903,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -1954,8 +1954,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -1963,7 +1963,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -1991,7 +1991,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
+            case Topic::info_user:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2005,9 +2005,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -2058,8 +2058,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
             case Topic::command_steer_status:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2067,7 +2067,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -2095,7 +2095,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
+            case Topic::info_user:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2109,9 +2109,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -2162,8 +2162,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
             case Topic::command_steer_status:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2171,7 +2171,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -2199,7 +2199,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
+            case Topic::info_user:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2213,9 +2213,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -2266,8 +2266,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
             case Topic::command_steer_status:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2275,7 +2275,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -2303,7 +2303,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
+            case Topic::info_user:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2317,9 +2317,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -2370,8 +2370,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::command_steer:
             case Topic::command_steer_status:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2379,7 +2379,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
               return false;
@@ -2436,9 +2436,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2451,8 +2451,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -2467,8 +2467,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -2538,9 +2538,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2553,8 +2553,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
@@ -2571,8 +2571,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
@@ -2644,9 +2644,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info:
-            case Topic::info:
-            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
@@ -2667,10 +2667,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::action_handcart_settings_content:
-            case Topic::raw_j_s_o_n_config:
-            case Topic::raw_j_s_o_n_config_set:
-            case Topic::raw_j_s_o_n_config_get:
-            case Topic::raw_j_s_o_n_config_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
@@ -2800,12 +2800,12 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId);
         case Topic::info: 
             return GetTopicInfo(vehicleId, deviceId);
-        case Topic::info: 
-            return GetTopicInfo(vehicleId, deviceId);
-        case Topic::info: 
-            return GetTopicInfo(vehicleId, deviceId);
-        case Topic::info: 
-            return GetTopicInfo(vehicleId, deviceId);
+        case Topic::info_version: 
+            return GetTopicInfoVersion(vehicleId, deviceId);
+        case Topic::info_user: 
+            return GetTopicInfoUser(vehicleId, deviceId);
+        case Topic::info_session: 
+            return GetTopicInfoSession(vehicleId, deviceId);
         case Topic::info_session_started: 
             return GetTopicInfoSessionStarted(vehicleId, deviceId);
         case Topic::info_session_stopped: 
@@ -2846,14 +2846,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionHandcartSettingsGet(vehicleId, deviceId);
         case Topic::action_handcart_settings_content: 
             return GetTopicActionHandcartSettingsContent(vehicleId, deviceId);
-        case Topic::raw_j_s_o_n_config: 
-            return GetTopicrawJSONConfig(vehicleId, deviceId);
-        case Topic::raw_j_s_o_n_config_set: 
-            return GetTopicrawJSONConfigSet(vehicleId, deviceId);
-        case Topic::raw_j_s_o_n_config_get: 
-            return GetTopicrawJSONConfigGet(vehicleId, deviceId);
-        case Topic::raw_j_s_o_n_config_content: 
-            return GetTopicrawJSONConfigContent(vehicleId, deviceId);
+        case Topic::raw_json_config: 
+            return GetTopicrawJsonConfig(vehicleId, deviceId);
+        case Topic::raw_json_config_set: 
+            return GetTopicrawJsonConfigSet(vehicleId, deviceId);
+        case Topic::raw_json_config_get: 
+            return GetTopicrawJsonConfigGet(vehicleId, deviceId);
+        case Topic::raw_json_config_content: 
+            return GetTopicrawJsonConfigContent(vehicleId, deviceId);
         case Topic::action_lap_counter_config: 
             return GetTopicActionLapCounterConfig(vehicleId, deviceId);
         case Topic::action_lap_counter_config_set: 
@@ -3295,7 +3295,7 @@ TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& devic
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicInfoVersion(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "info/version";
     int qos = 0;
     bool retain = false;
@@ -3303,16 +3303,16 @@ TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& devic
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "info/user_info";
+TopicMessage GetTopicInfoUser(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/user";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session_info";
+TopicMessage GetTopicInfoSession(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session";
     int qos = 0;
     bool retain = false;
 
@@ -3320,7 +3320,7 @@ TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& devic
 }
 
 TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session_info/started";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/started";
     int qos = 0;
     bool retain = false;
 
@@ -3328,7 +3328,7 @@ TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std:
 }
 
 TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session_info/stopped";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/stopped";
     int qos = 0;
     bool retain = false;
 
@@ -3336,7 +3336,7 @@ TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std:
 }
 
 TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session_info/logging";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/logging";
     int qos = 0;
     bool retain = false;
 
@@ -3479,32 +3479,32 @@ TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId,
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJSONConfig(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJSONConfig";
+TopicMessage GetTopicrawJsonConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJSONConfigSet(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJSONConfig/set";
+TopicMessage GetTopicrawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/set";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJSONConfigGet(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJSONConfig/get";
+TopicMessage GetTopicrawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/get";
     int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJSONConfigContent(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJSONConfig/content";
+TopicMessage GetTopicrawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/content";
     int qos = 0;
     bool retain = true;
 

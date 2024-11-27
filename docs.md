@@ -392,7 +392,7 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## Info
+## InfoVersion
 ### &lt;vehicleId>/&lt;deviceId>/info/version
 > &lt;vehicleId>/&lt;deviceId>/info
 - **Quality of Service**: 0
@@ -400,16 +400,16 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## Info
-### &lt;vehicleId>/&lt;deviceId>/info/user_info
+## InfoUser
+### &lt;vehicleId>/&lt;deviceId>/info/user
 > &lt;vehicleId>/&lt;deviceId>/info
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## Info
-### &lt;vehicleId>/&lt;deviceId>/info/session_info
+## InfoSession
+### &lt;vehicleId>/&lt;deviceId>/info/session
 > &lt;vehicleId>/&lt;deviceId>/info
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
@@ -417,7 +417,7 @@ vehicleIddeviceId
 - **Variables**:
 vehicleIddeviceId
 ## InfoSessionStarted
-### &lt;vehicleId>/&lt;deviceId>/info/session_info/started
+### &lt;vehicleId>/&lt;deviceId>/info/session/started
 > Sent when the session is started
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
@@ -425,7 +425,7 @@ vehicleIddeviceId
 - **Variables**:
 vehicleIddeviceId
 ## InfoSessionStopped
-### &lt;vehicleId>/&lt;deviceId>/info/session_info/stopped
+### &lt;vehicleId>/&lt;deviceId>/info/session/stopped
 > Sent when the session is stopped
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
@@ -433,7 +433,7 @@ vehicleIddeviceId
 - **Variables**:
 vehicleIddeviceId
 ## InfoSessionKeepalive
-### &lt;vehicleId>/&lt;deviceId>/info/session_info/logging
+### &lt;vehicleId>/&lt;deviceId>/info/session/logging
 > Repeatedly sent, like a keepalive, to indicate that the session is still active
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
@@ -576,33 +576,33 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJSONConfig
-### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig
-> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig
+## rawJsonConfig
+### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig
+> &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJSONConfigSet
-### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/set
-> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/set
+## rawJsonConfigSet
+### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/set
 - **Quality of Service**: 0
 - **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJSONConfigGet
-### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/get
-> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/get
+## rawJsonConfigGet
+### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/get
 - **Quality of Service**: 0
 - **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJSONConfigContent
-### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/content
-> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/content
+## rawJsonConfigContent
+### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: Yes

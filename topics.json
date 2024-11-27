@@ -1225,7 +1225,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/info/version",
-        "alias": "Info",
+        "alias": "InfoVersion",
         "description": "<vehicleId>/<deviceId>/info",
         "qos": 0,
         "subscribe_roles": [
@@ -1246,8 +1246,8 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/info/user_info",
-        "alias": "Info",
+        "topic": "<vehicleId>/<deviceId>/info/user",
+        "alias": "InfoUser",
         "description": "<vehicleId>/<deviceId>/info",
         "qos": 0,
         "subscribe_roles": [
@@ -1273,8 +1273,8 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/info/session_info",
-        "alias": "Info",
+        "topic": "<vehicleId>/<deviceId>/info/session",
+        "alias": "InfoSession",
         "description": "<vehicleId>/<deviceId>/info",
         "qos": 0,
         "subscribe_roles": [
@@ -1295,7 +1295,7 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/info/session_info/started",
+        "topic": "<vehicleId>/<deviceId>/info/session/started",
         "alias": "InfoSessionStarted",
         "description": "Sent when the session is started",
         "qos": 0,
@@ -1317,7 +1317,7 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/info/session_info/stopped",
+        "topic": "<vehicleId>/<deviceId>/info/session/stopped",
         "alias": "InfoSessionStopped",
         "description": "Sent when the session is stopped",
         "qos": 0,
@@ -1339,7 +1339,7 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/info/session_info/logging",
+        "topic": "<vehicleId>/<deviceId>/info/session/logging",
         "alias": "InfoSessionKeepalive",
         "description": "Repeatedly sent, like a keepalive, to indicate that the session is still active",
         "qos": 0,
@@ -1770,9 +1770,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig",
-        "alias": "rawJSONConfig",
-        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig",
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig",
+        "alias": "rawJsonConfig",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -1799,9 +1799,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
-        "alias": "rawJSONConfigSet",
-        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/set",
+        "alias": "rawJsonConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/set",
         "qos": 0,
         "subscribe_roles": [
             "128",
@@ -1821,9 +1821,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
-        "alias": "rawJSONConfigGet",
-        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/get",
+        "alias": "rawJsonConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/get",
         "qos": 0,
         "subscribe_roles": [
             "128",
@@ -1843,9 +1843,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
-        "alias": "rawJSONConfigContent",
-        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/content",
+        "alias": "rawJsonConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/content",
         "qos": 0,
         "subscribe_roles": [
             "0",
