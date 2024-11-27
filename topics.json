@@ -262,6 +262,28 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/data/temporary",
+        "alias": "DataTemporary",
+        "description": "Proto serialized with serializers, with unspecified and volatile structure.",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/data/cameraLogger",
         "alias": "DataCameraLogger",
         "description": "<vehicleId>/<deviceId>/data/cameraLogger",
@@ -917,64 +939,6 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/command/send",
-        "alias": "CommandSend",
-        "description": "<vehicleId>/<deviceId>/command/send",
-        "qos": 2,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
-        "topic": "<vehicleId>/<deviceId>/command/result",
-        "alias": "CommandResult",
-        "description": "<vehicleId>/<deviceId>/command/result",
-        "qos": 2,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/command/steer",
         "alias": "CommandSteer",
         "description": "<vehicleId>/<deviceId>/command/steer",
@@ -1228,6 +1192,172 @@
             "vehicleId",
             "deviceId",
             "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info",
+        "alias": "Info",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/version",
+        "alias": "Info",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/user_info",
+        "alias": "Info",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session_info",
+        "alias": "Info",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session_info/started",
+        "alias": "InfoSessionStarted",
+        "description": "Sent when the session is started",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session_info/stopped",
+        "alias": "InfoSessionStopped",
+        "description": "Sent when the session is stopped",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session_info/logging",
+        "alias": "InfoSessionKeepalive",
+        "description": "Repeatedly sent, like a keepalive, to indicate that the session is still active",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
         ]
     },
     {
@@ -1634,6 +1764,101 @@
             "129"
         ],
         "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig",
+        "alias": "rawJSONConfig",
+        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
+        "alias": "rawJSONConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
+        "alias": "rawJSONConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
+        "alias": "rawJSONConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/rawJSONConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"

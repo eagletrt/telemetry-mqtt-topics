@@ -88,6 +88,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## DataTemporary
+### &lt;vehicleId>/&lt;deviceId>/data/temporary
+> Proto serialized with serializers, with unspecified and volatile structure.
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataCameraLogger
 ### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
 > &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
@@ -304,22 +312,6 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## CommandSend
-### &lt;vehicleId>/&lt;deviceId>/command/send
-> &lt;vehicleId>/&lt;deviceId>/command/send
-- **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceId
-## CommandResult
-### &lt;vehicleId>/&lt;deviceId>/command/result
-> &lt;vehicleId>/&lt;deviceId>/command/result
-- **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceId
 ## CommandSteer
 ### &lt;vehicleId>/&lt;deviceId>/command/steer
 > &lt;vehicleId>/&lt;deviceId>/command/steer
@@ -392,6 +384,62 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## Info
+### &lt;vehicleId>/&lt;deviceId>/info
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## Info
+### &lt;vehicleId>/&lt;deviceId>/info/version
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## Info
+### &lt;vehicleId>/&lt;deviceId>/info/user_info
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## Info
+### &lt;vehicleId>/&lt;deviceId>/info/session_info
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## InfoSessionStarted
+### &lt;vehicleId>/&lt;deviceId>/info/session_info/started
+> Sent when the session is started
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## InfoSessionStopped
+### &lt;vehicleId>/&lt;deviceId>/info/session_info/stopped
+> Sent when the session is stopped
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## InfoSessionKeepalive
+### &lt;vehicleId>/&lt;deviceId>/info/session_info/logging
+> Repeatedly sent, like a keepalive, to indicate that the session is still active
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## Action
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action
@@ -526,6 +574,38 @@ vehicleIddeviceId
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## rawJSONConfig
+### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig
+> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## rawJSONConfigSet
+### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## rawJSONConfigGet
+### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## rawJSONConfigContent
+### &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/rawJSONConfig/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ActionLapCounterConfig

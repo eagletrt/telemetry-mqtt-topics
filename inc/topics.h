@@ -31,83 +31,93 @@ enum class Topic
     data_simulator = 8,
     data_gps = 9,
     data_brusa = 10,
-    data_camera_logger = 11,
-    data_camera_logger_can = 12,
-    data_camera_logger_can_imu_angular_rate = 13,
-    data_camera_logger_can_imu_acceleration = 14,
-    data_camera_logger_can_vehicle_position = 15,
-    data_camera_logger_can_vehicle_speed = 16,
-    data_camera_logger_can_front_angular_velocity = 17,
-    data_camera_logger_can_rear_left_angular_velocity = 18,
-    data_camera_logger_can_rear_right_angular_velocity = 19,
-    data_camera_logger_can_steer_angle = 20,
-    data_camera_logger_gps = 21,
-    data_camera_logger_gps_hpposllh = 22,
-    data_camera_logger_gps_pvt = 23,
-    data_camera_logger_gps_relposned = 24,
-    extra_tlm_data = 25,
-    extra_tlm_data_vehicle_state = 26,
-    extra_tlm_data_baseline = 27,
-    extra_tlm_data_gps_map_origins = 28,
-    data_last_update = 29,
-    status = 30,
-    status_info = 31,
-    status_error = 32,
-    status_alert = 33,
-    status_can_frequencies = 34,
-    status_lap_counter_status = 35,
-    status_lap_counter_laps = 36,
-    command = 37,
-    command_send = 38,
-    command_result = 39,
-    command_steer = 40,
-    command_steer_status = 41,
-    file_transaction_request = 42,
-    file_transaction_response = 43,
-    file_transaction = 44,
-    file_transaction_begin = 45,
-    file_transaction_end = 46,
-    file_transaction_chunk = 47,
-    file_transaction_chunk_ack = 48,
-    action = 49,
-    action_telemetry_config = 50,
-    action_telemetry_config_set = 51,
-    action_telemetry_config_get = 52,
-    action_telemetry_config_content = 53,
-    action_session_config = 54,
-    action_session_config_set = 55,
-    action_session_config_get = 56,
-    action_session_config_content = 57,
-    action_car_config = 58,
-    action_car_config_set = 59,
-    action_car_config_get = 60,
-    action_car_config_content = 61,
-    action_handcart_settings = 62,
-    action_handcart_settings_set = 63,
-    action_handcart_settings_get = 64,
-    action_handcart_settings_content = 65,
-    action_lap_counter_config = 66,
-    action_lap_counter_config_set = 67,
-    action_lap_counter_config_get = 68,
-    action_lap_counter_config_content = 69,
-    action_lap_counter_track = 70,
-    action_lap_counter_track_set = 71,
-    action_lap_counter_track_get = 72,
-    action_lap_counter_track_content = 73,
-    action_kill = 74,
-    action_start = 75,
-    action_reset = 76,
-    action_stop = 77,
-    action_start_baseline = 78,
-    action_stop_baseline = 79,
-    action_precharge = 80,
-    action_balance = 81,
-    action_stop_balance = 82,
-    action_charge = 83,
-    action_stop_charge = 84,
-    action_raw = 85,
-    action_reset_lap_counter = 86,
-    action_set_lap_counter_status = 87
+    data_temporary = 11,
+    data_camera_logger = 12,
+    data_camera_logger_can = 13,
+    data_camera_logger_can_imu_angular_rate = 14,
+    data_camera_logger_can_imu_acceleration = 15,
+    data_camera_logger_can_vehicle_position = 16,
+    data_camera_logger_can_vehicle_speed = 17,
+    data_camera_logger_can_front_angular_velocity = 18,
+    data_camera_logger_can_rear_left_angular_velocity = 19,
+    data_camera_logger_can_rear_right_angular_velocity = 20,
+    data_camera_logger_can_steer_angle = 21,
+    data_camera_logger_gps = 22,
+    data_camera_logger_gps_hpposllh = 23,
+    data_camera_logger_gps_pvt = 24,
+    data_camera_logger_gps_relposned = 25,
+    extra_tlm_data = 26,
+    extra_tlm_data_vehicle_state = 27,
+    extra_tlm_data_baseline = 28,
+    extra_tlm_data_gps_map_origins = 29,
+    data_last_update = 30,
+    status = 31,
+    status_info = 32,
+    status_error = 33,
+    status_alert = 34,
+    status_can_frequencies = 35,
+    status_lap_counter_status = 36,
+    status_lap_counter_laps = 37,
+    command = 38,
+    command_steer = 39,
+    command_steer_status = 40,
+    file_transaction_request = 41,
+    file_transaction_response = 42,
+    file_transaction = 43,
+    file_transaction_begin = 44,
+    file_transaction_end = 45,
+    file_transaction_chunk = 46,
+    file_transaction_chunk_ack = 47,
+    info = 48,
+    info = 49,
+    info = 50,
+    info = 51,
+    info_session_started = 52,
+    info_session_stopped = 53,
+    info_session_keepalive = 54,
+    action = 55,
+    action_telemetry_config = 56,
+    action_telemetry_config_set = 57,
+    action_telemetry_config_get = 58,
+    action_telemetry_config_content = 59,
+    action_session_config = 60,
+    action_session_config_set = 61,
+    action_session_config_get = 62,
+    action_session_config_content = 63,
+    action_car_config = 64,
+    action_car_config_set = 65,
+    action_car_config_get = 66,
+    action_car_config_content = 67,
+    action_handcart_settings = 68,
+    action_handcart_settings_set = 69,
+    action_handcart_settings_get = 70,
+    action_handcart_settings_content = 71,
+    raw_j_s_o_n_config = 72,
+    raw_j_s_o_n_config_set = 73,
+    raw_j_s_o_n_config_get = 74,
+    raw_j_s_o_n_config_content = 75,
+    action_lap_counter_config = 76,
+    action_lap_counter_config_set = 77,
+    action_lap_counter_config_get = 78,
+    action_lap_counter_config_content = 79,
+    action_lap_counter_track = 80,
+    action_lap_counter_track_set = 81,
+    action_lap_counter_track_get = 82,
+    action_lap_counter_track_content = 83,
+    action_kill = 84,
+    action_start = 85,
+    action_reset = 86,
+    action_stop = 87,
+    action_start_baseline = 88,
+    action_stop_baseline = 89,
+    action_precharge = 90,
+    action_balance = 91,
+    action_stop_balance = 92,
+    action_charge = 93,
+    action_stop_charge = 94,
+    action_raw = 95,
+    action_reset_lap_counter = 96,
+    action_set_lap_counter_status = 97
 };
 
 struct TopicMessage
@@ -137,6 +147,7 @@ TopicMessage GetTopicDataInverter(const std::string& vehicleId, const std::strin
 TopicMessage GetTopicDataSimulator(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataGps(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataTemporary(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCan(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCanImuAngularRate(const std::string& vehicleId, const std::string& deviceId);
@@ -164,8 +175,6 @@ TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const st
 TopicMessage GetTopicStatusLapCounterStatus(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicCommandSend(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicCommandSteer(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicCommandSteerStatus(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransactionRequest(const std::string& vehicleId, const std::string& deviceId);
@@ -175,6 +184,13 @@ TopicMessage GetTopicFileTransactionBegin(const std::string& vehicleId, const st
 TopicMessage GetTopicFileTransactionEnd(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicFileTransactionChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicAction(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionTelemetryConfig(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionTelemetryConfigSet(const std::string& vehicleId, const std::string& deviceId);
@@ -192,6 +208,10 @@ TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const 
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJSONConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJSONConfigSet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJSONConfigGet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicrawJSONConfigContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId);

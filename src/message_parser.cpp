@@ -100,6 +100,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/simulator");
     this->tree.addNode("<vehicleId>/<deviceId>/data/gps");
     this->tree.addNode("<vehicleId>/<deviceId>/data/brusa");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/temporary");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate");
@@ -127,8 +128,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterLaps");
     this->tree.addNode("<vehicleId>/<deviceId>/command");
-    this->tree.addNode("<vehicleId>/<deviceId>/command/send");
-    this->tree.addNode("<vehicleId>/<deviceId>/command/result");
     this->tree.addNode("<vehicleId>/<deviceId>/command/steer");
     this->tree.addNode("<vehicleId>/<deviceId>/command/steerStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/request");
@@ -138,6 +137,13 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/end");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack");
+    this->tree.addNode("<vehicleId>/<deviceId>/info");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/version");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/user_info");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/session_info");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/session_info/started");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/session_info/stopped");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/session_info/logging");
     this->tree.addNode("<vehicleId>/<deviceId>/action");
     this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig");
     this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/set");
@@ -155,6 +161,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/get");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rawJSONConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rawJSONConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rawJSONConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rawJSONConfig/content");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterConfig/get");

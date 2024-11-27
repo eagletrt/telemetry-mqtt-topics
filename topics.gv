@@ -10,6 +10,7 @@ graph {
 "data" -- "simulator";
 "data" -- "gps";
 "data" -- "brusa";
+"data" -- "temporary";
 "data" -- "cameraLogger";
 "cameraLogger" -- "can";
 "can" -- "imuAngularRate";
@@ -37,8 +38,6 @@ graph {
 "status" -- "lapCounterStatus";
 "status" -- "lapCounterLaps";
 "<deviceId>" -- "command";
-"command" -- "send";
-"command" -- "result";
 "command" -- "steer";
 "command" -- "steerStatus";
 "fileTransaction" -- "request";
@@ -48,6 +47,13 @@ graph {
 "<transactionId>" -- "end";
 "<transactionId>" -- "chunk";
 "<transactionId>" -- "chunk_ack";
+"<deviceId>" -- "info";
+"info" -- "version";
+"info" -- "user_info";
+"info" -- "session_info";
+"session_info" -- "started";
+"session_info" -- "stopped";
+"session_info" -- "logging";
 "<deviceId>" -- "action";
 "action" -- "telemetryConfig";
 "telemetryConfig" -- "set";
@@ -65,6 +71,10 @@ graph {
 "handcartSettings" -- "set";
 "handcartSettings" -- "get";
 "handcartSettings" -- "content";
+"action" -- "rawJSONConfig";
+"rawJSONConfig" -- "set";
+"rawJSONConfig" -- "get";
+"rawJSONConfig" -- "content";
 "action" -- "lapCounterConfig";
 "lapCounterConfig" -- "set";
 "lapCounterConfig" -- "get";
