@@ -336,50 +336,6 @@
                         "qos": 2,
                         "retain": false,
                         "sub_topics": {
-                            "send": {
-                                "alias": "CommandSend",
-                                "description": "<vehicleId>/<deviceId>/command/send",
-                                "subscribe_roles": [
-                                    "0",
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
-                                    "128",
-                                    "129"
-                                ],
-                                "publish_roles": [
-                                    "0",
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
-                                    "128",
-                                    "129"
-                                ]
-                            },
-                            "result": {
-                                "alias": "CommandResult",
-                                "description": "<vehicleId>/<deviceId>/command/result",
-                                "subscribe_roles": [
-                                    "0",
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
-                                    "128",
-                                    "129"
-                                ],
-                                "publish_roles": [
-                                    "0",
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
-                                    "128",
-                                    "129"
-                                ]
-                            },
                             "steer": {
                                 "alias": "CommandSteer",
                                 "description": "<vehicleId>/<deviceId>/command/steer",
@@ -526,7 +482,7 @@
                                     "4",
                                     "128",
                                     "129"
-                                ],
+                                ],  
                                 "publish_roles": [
                                     "0",
                                     "1",
