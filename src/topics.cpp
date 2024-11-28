@@ -74,8 +74,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -160,8 +160,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -246,8 +246,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -332,8 +332,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -418,8 +418,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -468,9 +468,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -522,9 +522,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -610,9 +610,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -671,9 +671,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -732,9 +732,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -793,9 +793,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -854,9 +854,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
@@ -944,8 +944,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -1016,8 +1016,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicrawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
@@ -2872,13 +2872,13 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
         case Topic::action_handcart_settings_content: 
             return GetTopicActionHandcartSettingsContent(vehicleId, deviceId);
         case Topic::raw_json_config: 
-            return GetTopicrawJsonConfig(vehicleId, deviceId);
+            return GetTopicRawJsonConfig(vehicleId, deviceId);
         case Topic::raw_json_config_set: 
-            return GetTopicrawJsonConfigSet(vehicleId, deviceId);
+            return GetTopicRawJsonConfigSet(vehicleId, deviceId);
         case Topic::raw_json_config_get: 
-            return GetTopicrawJsonConfigGet(vehicleId, deviceId);
+            return GetTopicRawJsonConfigGet(vehicleId, deviceId);
         case Topic::raw_json_config_content: 
-            return GetTopicrawJsonConfigContent(vehicleId, deviceId);
+            return GetTopicRawJsonConfigContent(vehicleId, deviceId);
         case Topic::action_lap_counter_config: 
             return GetTopicActionLapCounterConfig(vehicleId, deviceId);
         case Topic::action_lap_counter_config_set: 
@@ -3512,7 +3512,7 @@ TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId,
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJsonConfig(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicRawJsonConfig(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig";
     int qos = 0;
     bool retain = false;
@@ -3520,7 +3520,7 @@ TopicMessage GetTopicrawJsonConfig(const std::string& vehicleId, const std::stri
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicRawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/set";
     int qos = 0;
     bool retain = false;
@@ -3528,7 +3528,7 @@ TopicMessage GetTopicrawJsonConfigSet(const std::string& vehicleId, const std::s
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicRawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/get";
     int qos = 0;
     bool retain = false;
@@ -3536,7 +3536,7 @@ TopicMessage GetTopicrawJsonConfigGet(const std::string& vehicleId, const std::s
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicrawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicRawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/content";
     int qos = 0;
     bool retain = true;

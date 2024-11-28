@@ -210,10 +210,10 @@ TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const 
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJsonConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicrawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicRawJsonConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicRawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicRawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicRawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId);

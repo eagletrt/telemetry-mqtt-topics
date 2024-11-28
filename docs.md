@@ -584,7 +584,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJsonConfig
+## RawJsonConfig
 ### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig
 > &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig
 - **Quality of Service**: 0
@@ -592,7 +592,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJsonConfigSet
+## RawJsonConfigSet
 ### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/set
 - **Quality of Service**: 0
@@ -600,7 +600,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJsonConfigGet
+## RawJsonConfigGet
 ### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/get
 > &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/get
 - **Quality of Service**: 0
@@ -608,7 +608,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## rawJsonConfigContent
+## RawJsonConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/rawJsonConfig/content
 - **Quality of Service**: 0
