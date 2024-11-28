@@ -25,6 +25,7 @@ graph {
 "GPS" -- "hpposllh";
 "GPS" -- "pvt";
 "GPS" -- "relposned";
+"<deviceId>" -- "extra_data_to_log";
 "<deviceId>" -- "extra_tlm_data";
 "extra_tlm_data" -- "vehicleState";
 "extra_tlm_data" -- "baseline";

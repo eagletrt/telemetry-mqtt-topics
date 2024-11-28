@@ -606,6 +606,28 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/extra_data_to_log",
+        "alias": "ExtraDataToLog",
+        "description": "<vehicleId>/<deviceId>/extra_data_to_log",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/extra_tlm_data",
         "alias": "ExtraTlmData",
         "description": "<vehicleId>/<deviceId>/extra_tlm_data",

@@ -115,6 +115,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/GPS/hpposllh");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/GPS/pvt");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/GPS/relposned");
+    this->tree.addNode("<vehicleId>/<deviceId>/extra_data_to_log");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline");

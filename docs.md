@@ -208,6 +208,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ExtraDataToLog
+### &lt;vehicleId>/&lt;deviceId>/extra_data_to_log
+> &lt;vehicleId>/&lt;deviceId>/extra_data_to_log
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## ExtraTlmData
 ### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data
 > &lt;vehicleId>/&lt;deviceId>/extra_tlm_data
