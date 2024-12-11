@@ -89,36 +89,40 @@ enum class Topic
     action_car_config_set = 66,
     action_car_config_get = 67,
     action_car_config_content = 68,
-    action_handcart_settings = 69,
-    action_handcart_settings_set = 70,
-    action_handcart_settings_get = 71,
-    action_handcart_settings_content = 72,
-    raw_json_config = 73,
-    raw_json_config_set = 74,
-    raw_json_config_get = 75,
-    raw_json_config_content = 76,
-    action_lap_counter_config = 77,
-    action_lap_counter_config_set = 78,
-    action_lap_counter_config_get = 79,
-    action_lap_counter_config_content = 80,
-    action_lap_counter_track = 81,
-    action_lap_counter_track_set = 82,
-    action_lap_counter_track_get = 83,
-    action_lap_counter_track_content = 84,
-    action_kill = 85,
-    action_start = 86,
-    action_reset = 87,
-    action_stop = 88,
-    action_start_baseline = 89,
-    action_stop_baseline = 90,
-    action_precharge = 91,
-    action_balance = 92,
-    action_stop_balance = 93,
-    action_charge = 94,
-    action_stop_charge = 95,
-    action_raw = 96,
-    action_reset_lap_counter = 97,
-    action_set_lap_counter_status = 98
+    action_baseline_config = 69,
+    action_baseline_config_set = 70,
+    action_baseline_config_get = 71,
+    action_baseline_config_content = 72,
+    action_handcart_settings = 73,
+    action_handcart_settings_set = 74,
+    action_handcart_settings_get = 75,
+    action_handcart_settings_content = 76,
+    raw_json_config = 77,
+    raw_json_config_set = 78,
+    raw_json_config_get = 79,
+    raw_json_config_content = 80,
+    action_lap_counter_config = 81,
+    action_lap_counter_config_set = 82,
+    action_lap_counter_config_get = 83,
+    action_lap_counter_config_content = 84,
+    action_lap_counter_track = 85,
+    action_lap_counter_track_set = 86,
+    action_lap_counter_track_get = 87,
+    action_lap_counter_track_content = 88,
+    action_kill = 89,
+    action_start = 90,
+    action_reset = 91,
+    action_stop = 92,
+    action_start_baseline = 93,
+    action_stop_baseline = 94,
+    action_precharge = 95,
+    action_balance = 96,
+    action_stop_balance = 97,
+    action_charge = 98,
+    action_stop_charge = 99,
+    action_raw = 100,
+    action_reset_lap_counter = 101,
+    action_set_lap_counter_status = 102
 };
 
 struct TopicMessage
@@ -206,6 +210,10 @@ TopicMessage GetTopicActionCarConfig(const std::string& vehicleId, const std::st
 TopicMessage GetTopicActionCarConfigSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionBaselineConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionBaselineConfigSet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionBaselineConfigGet(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicActionBaselineConfigContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);

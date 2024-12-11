@@ -158,6 +158,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/get");
     this->tree.addNode("<vehicleId>/<deviceId>/action/carConfig/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/baselineConfig");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/baselineConfig/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/baselineConfig/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/baselineConfig/content");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/handcartSettings/get");

@@ -68,6 +68,10 @@ graph {
 "carConfig" -- "set";
 "carConfig" -- "get";
 "carConfig" -- "content";
+"action" -- "baselineConfig";
+"baselineConfig" -- "set";
+"baselineConfig" -- "get";
+"baselineConfig" -- "content";
 "action" -- "handcartSettings";
 "handcartSettings" -- "set";
 "handcartSettings" -- "get";

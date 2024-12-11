@@ -72,6 +72,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -158,6 +160,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -244,6 +248,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -330,6 +336,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -416,6 +424,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -465,6 +475,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -519,6 +532,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -607,6 +623,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -668,6 +687,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -729,6 +751,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -790,6 +815,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -851,6 +879,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
@@ -942,6 +973,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -1014,6 +1047,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
@@ -1098,6 +1133,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -1127,6 +1164,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -1203,6 +1242,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -1232,6 +1273,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -1308,6 +1351,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -1337,6 +1382,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -1413,6 +1460,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -1442,6 +1491,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -1518,6 +1569,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -1547,6 +1600,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -1586,6 +1641,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -1657,6 +1715,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -1691,6 +1750,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -1762,6 +1824,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -1841,6 +1904,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -1916,6 +1983,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -1978,6 +2048,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -2019,6 +2090,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2083,6 +2157,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -2124,6 +2199,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2188,6 +2266,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -2229,6 +2308,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2293,6 +2375,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -2334,6 +2417,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2398,6 +2484,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
@@ -2469,6 +2556,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -2486,6 +2575,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -2572,6 +2663,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config:
@@ -2591,6 +2684,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
@@ -2686,6 +2781,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2863,6 +2962,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionCarConfigGet(vehicleId, deviceId);
         case Topic::action_car_config_content: 
             return GetTopicActionCarConfigContent(vehicleId, deviceId);
+        case Topic::action_baseline_config: 
+            return GetTopicActionBaselineConfig(vehicleId, deviceId);
+        case Topic::action_baseline_config_set: 
+            return GetTopicActionBaselineConfigSet(vehicleId, deviceId);
+        case Topic::action_baseline_config_get: 
+            return GetTopicActionBaselineConfigGet(vehicleId, deviceId);
+        case Topic::action_baseline_config_content: 
+            return GetTopicActionBaselineConfigContent(vehicleId, deviceId);
         case Topic::action_handcart_settings: 
             return GetTopicActionHandcartSettings(vehicleId, deviceId);
         case Topic::action_handcart_settings_set: 
@@ -3474,6 +3581,38 @@ TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std:
 
 TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/content";
+    int qos = 0;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/content";
     int qos = 0;
     bool retain = true;
 

@@ -552,6 +552,38 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
+## ActionBaselineConfig
+### &lt;vehicleId>/&lt;deviceId>/action/baselineConfig
+> &lt;vehicleId>/&lt;deviceId>/action/actionBaseline
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionBaselineConfigSet
+### &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionBaselineConfigGet
+### &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionBaselineConfigContent
+### &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## ActionHandcartSettings
 ### &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
 > &lt;vehicleId>/&lt;deviceId>/action/handcartSettings
