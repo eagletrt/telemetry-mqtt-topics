@@ -481,6 +481,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -538,7 +539,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
@@ -632,6 +632,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -696,6 +697,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -760,6 +762,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -824,6 +827,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -888,6 +892,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -1058,7 +1063,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -1671,6 +1676,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -1749,7 +1755,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1782,7 +1787,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info_telemetry_replay_ready:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
@@ -1862,6 +1866,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2021,6 +2026,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2091,7 +2097,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2131,6 +2136,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2203,7 +2209,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2243,6 +2248,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2315,7 +2321,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2355,6 +2360,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2427,7 +2433,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2467,6 +2472,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2539,7 +2545,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2719,7 +2724,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay:
-            case Topic::info_telemetry_replay_start:
+            case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2746,7 +2751,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::command_steer:
             case Topic::command_steer_status:
-            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
             case Topic::action_session_config_set:

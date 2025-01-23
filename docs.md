@@ -428,7 +428,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/telemetryReplay/ready
 > Sent when the telemetry replay is ready
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 129 130 - **Publish Roles**: 128 
+- **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -436,7 +436,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/telemetryReplay/start
 > Sent to start telemetry replay
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 129 - **Publish Roles**: 129 130 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 130 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
