@@ -51,6 +51,9 @@ graph {
 "<deviceId>" -- "info";
 "info" -- "version";
 "info" -- "user";
+"info" -- "telemetryReplay";
+"telemetryReplay" -- "ready";
+"telemetryReplay" -- "start";
 "info" -- "session";
 "session" -- "started";
 "session" -- "stopped";

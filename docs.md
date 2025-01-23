@@ -416,6 +416,30 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## InfoTelemetryReplay
+### &lt;vehicleId>/&lt;deviceId>/info/telemetryReplay
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## InfoTelemetryReplayReady
+### &lt;vehicleId>/&lt;deviceId>/info/telemetryReplay/ready
+> Sent when the telemetry replay is ready
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 129 130 - **Publish Roles**: 128 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## InfoTelemetryReplayStart
+### &lt;vehicleId>/&lt;deviceId>/info/telemetryReplay/start
+> Sent to start telemetry replay
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 129 - **Publish Roles**: 129 130 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## InfoSession
 ### &lt;vehicleId>/&lt;deviceId>/info/session
 > &lt;vehicleId>/&lt;deviceId>/info

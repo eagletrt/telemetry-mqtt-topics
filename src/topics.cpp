@@ -61,6 +61,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -149,6 +152,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -237,6 +243,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -325,6 +334,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -413,6 +425,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -465,6 +480,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -522,6 +538,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
@@ -578,6 +596,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
         break;
     }
 
@@ -962,6 +981,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -1036,6 +1057,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
@@ -1061,6 +1084,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_130:
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         break;
     }
     
@@ -1122,6 +1146,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1231,6 +1258,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1340,6 +1370,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1449,6 +1482,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1558,6 +1594,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1631,6 +1670,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_telemetry_replay:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -1708,6 +1748,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1740,6 +1782,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -1817,6 +1861,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -1848,6 +1893,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_hpposllh:
             case Topic::data_camera_logger_gps_pvt:
             case Topic::data_camera_logger_gps_relposned:
+            case Topic::info_telemetry_replay_ready:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -1887,6 +1933,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2041,6 +2089,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2150,6 +2201,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_steer:
             case Topic::command_steer_status:
             case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2259,6 +2313,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_steer:
             case Topic::command_steer_status:
             case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2368,6 +2425,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_steer:
             case Topic::command_steer_status:
             case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2477,6 +2537,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::command_steer:
             case Topic::command_steer_status:
             case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2545,6 +2608,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2569,6 +2634,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::extra_data_to_log:
+            case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
             case Topic::action_session_config_set:
@@ -2652,6 +2718,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2678,6 +2746,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::command_steer:
             case Topic::command_steer_status:
+            case Topic::info_telemetry_replay_ready:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
             case Topic::action_session_config_set:
@@ -2712,6 +2781,8 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_130:
         switch(topic) {
+            case Topic::info_telemetry_replay_start:
+              return true;
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
@@ -2764,6 +2835,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_version:
             case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2928,6 +3001,12 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicInfoVersion(vehicleId, deviceId);
         case Topic::info_user: 
             return GetTopicInfoUser(vehicleId, deviceId);
+        case Topic::info_telemetry_replay: 
+            return GetTopicInfoTelemetryReplay(vehicleId, deviceId);
+        case Topic::info_telemetry_replay_ready: 
+            return GetTopicInfoTelemetryReplayReady(vehicleId, deviceId);
+        case Topic::info_telemetry_replay_start: 
+            return GetTopicInfoTelemetryReplayStart(vehicleId, deviceId);
         case Topic::info_session: 
             return GetTopicInfoSession(vehicleId, deviceId);
         case Topic::info_session_started: 
@@ -3445,6 +3524,30 @@ TopicMessage GetTopicInfoVersion(const std::string& vehicleId, const std::string
 
 TopicMessage GetTopicInfoUser(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "info/user";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplay(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplayReady(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/ready";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplayStart(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/start";
     int qos = 0;
     bool retain = false;
 

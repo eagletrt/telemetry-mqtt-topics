@@ -1295,6 +1295,75 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay",
+        "alias": "InfoTelemetryReplay",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay/ready",
+        "alias": "InfoTelemetryReplayReady",
+        "description": "Sent when the telemetry replay is ready",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "129",
+            "130"
+        ],
+        "publish_roles": [
+            "128"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay/start",
+        "alias": "InfoTelemetryReplayStart",
+        "description": "Sent to start telemetry replay",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "129"
+        ],
+        "publish_roles": [
+            "129",
+            "130"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/info/session",
         "alias": "InfoSession",
         "description": "<vehicleId>/<deviceId>/info",
