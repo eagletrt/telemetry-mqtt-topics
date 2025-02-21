@@ -1,0 +1,50 @@
+from anytree import Node, RenderTree, LevelOrderIter, AsciiStyle, find
+
+
+class MessageParser:
+
+    def __init__(self):
+        self.tree = Node("<vehicleId>", function=None)
+        {% for topic in topics -%}
+        self.addNode("{{ topic['topic'] }}")
+        {%- if not loop.last%}
+        {%endif -%}
+        {%- endfor %}
+        
+
+    def addNode(self, topic):
+        if topic != "":
+            topic_split = topic.split("/")
+        for i in range(len(topic_split)):
+            notFound = True
+            for node in LevelOrderIter(self.tree, maxlevel=i + 1):
+                if node.name == topic_split[i]:
+                    notFound = False
+            if notFound:
+                print(topic_split[i])
+                _parent = find(self.tree, lambda node: node.name == topic_split[i - 1])
+                Node(topic_split[i], parent=_parent, function=None)
+
+    def findNode(self, topic):
+        if topic != "":
+            topic_split = topic.split("/")
+        _node = None
+        for i in range(len(topic_split)):
+            notFound = True
+            for node in LevelOrderIter(self.tree, maxlevel=i + 1):
+                if node.name == topic_split[i]:
+                    _node = node
+                    notFound = False
+            if notFound:
+                return False
+
+        return _node
+
+    def setMessageParse(self, topic, parse_function):
+        _node = self.findNode(topic)
+        _node.function = parse_function
+        return True
+
+    def parseMessage(self, topic, payload):
+        _node = self.findNode(topic)
+        return _node.function(payload)
