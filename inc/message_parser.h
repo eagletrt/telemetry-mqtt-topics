@@ -12,7 +12,7 @@ namespace MQTTTopics
 class MessageParser
 {
 public:
-    typedef void (*parse_t)(const std::string& payload, void*);
+    typedef void (*parse_t)(const std::string& payload, void* argument);
     
     struct Variables
     {
@@ -43,7 +43,7 @@ public:
     void parseMessage(const Variables& variables, const std::string& topic, const std::string& payload);
 
 private:
-    std::unique_ptr<TopicNode> tree;
+    TopicNode tree;
 };
 }
 

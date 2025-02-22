@@ -98,11 +98,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -125,11 +120,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -152,11 +142,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -179,11 +164,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -206,11 +186,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -233,11 +208,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -260,11 +230,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -287,13 +252,374 @@
             "4"
         ],
         "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/temporary",
+        "alias": "DataTemporary",
+        "description": "Proto serialized with serializers, with unspecified and volatile structure.",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger",
+        "alias": "DataCameraLogger",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger",
+        "qos": 0,
+        "subscribe_roles": [
             "0",
             "1",
             "2",
             "3",
             "4",
+            "130"
+        ],
+        "publish_roles": [
             "128",
             "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can",
+        "alias": "DataCameraLoggerCan",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate",
+        "alias": "DataCameraLoggerCanImuAngularRate",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/imuAcceleration",
+        "alias": "DataCameraLoggerCanImuAcceleration",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/imuAcceleration",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/vehiclePosition",
+        "alias": "DataCameraLoggerCanVehiclePosition",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/vehiclePosition",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/vehicleSpeed",
+        "alias": "DataCameraLoggerCanVehicleSpeed",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/vehicleSpeed",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/frontAngularVelocity",
+        "alias": "DataCameraLoggerCanFrontAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/frontAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/rearLeftAngularVelocity",
+        "alias": "DataCameraLoggerCanRearLeftAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/rearLeftAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/rearRightAngularVelocity",
+        "alias": "DataCameraLoggerCanRearRightAngularVelocity",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/rearRightAngularVelocity",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/can/steerAngle",
+        "alias": "DataCameraLoggerCanSteerAngle",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/can/steerAngle",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/GPS",
+        "alias": "DataCameraLoggerGps",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/GPS",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/hpposllh",
+        "alias": "DataCameraLoggerGpsHpposllh",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/hpposllh",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/pvt",
+        "alias": "DataCameraLoggerGpsPvt",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/pvt",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/relposned",
+        "alias": "DataCameraLoggerGpsRelposned",
+        "description": "<vehicleId>/<deviceId>/data/cameraLogger/GPS/relposned",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_data_to_log",
+        "alias": "ExtraDataToLog",
+        "description": "<vehicleId>/<deviceId>/extra_data_to_log",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -314,11 +640,6 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -329,7 +650,7 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/vehicle_stata",
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/vehicleState",
         "alias": "ExtraTlmDataVehicleState",
         "description": "Protobuffer data of vehicle state",
         "qos": 0,
@@ -341,15 +662,54 @@
             "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
         "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/baseline",
+        "alias": "ExtraTlmDataBaseline",
+        "description": "Protobuffer data of vehicle state",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins",
+        "alias": "ExtraTlmDataGpsMapOrigins",
+        "description": "Protobuffer data of gps map origins",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -365,9 +725,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -394,9 +752,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -423,9 +779,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -452,9 +806,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -465,7 +817,7 @@
             "128",
             "129"
         ],
-        "retain": true,
+        "retain": false,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -481,9 +833,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -494,7 +844,7 @@
             "128",
             "129"
         ],
-        "retain": true,
+        "retain": false,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -510,9 +860,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -539,9 +887,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -568,9 +914,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
             "0",
@@ -617,67 +961,33 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/command/send",
-        "alias": "CommandSend",
-        "description": "<vehicleId>/<deviceId>/command/send",
-        "qos": 2,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
-        "topic": "<vehicleId>/<deviceId>/command/result",
-        "alias": "CommandResult",
-        "description": "<vehicleId>/<deviceId>/command/result",
-        "qos": 2,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/command/steer",
-        "alias": "steer",
+        "alias": "CommandSteer",
         "description": "<vehicleId>/<deviceId>/command/steer",
+        "qos": 2,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "128"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/command/steerStatus",
+        "alias": "CommandSteerStatus",
+        "description": "<vehicleId>/<deviceId>/command/steerStatus",
         "qos": 2,
         "subscribe_roles": [
             "0",
@@ -907,6 +1217,246 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/info",
+        "alias": "Info",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/version",
+        "alias": "InfoVersion",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/user",
+        "alias": "InfoUser",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay",
+        "alias": "InfoTelemetryReplay",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay/ready",
+        "alias": "InfoTelemetryReplayReady",
+        "description": "Sent when the telemetry replay is ready",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/telemetryReplay/start",
+        "alias": "InfoTelemetryReplayStart",
+        "description": "Sent to start telemetry replay",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "130"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session",
+        "alias": "InfoSession",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session/started",
+        "alias": "InfoSessionStarted",
+        "description": "Sent when the session is started",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session/stopped",
+        "alias": "InfoSessionStopped",
+        "description": "Sent when the session is stopped",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/session/logging",
+        "alias": "InfoSessionKeepalive",
+        "description": "Repeatedly sent, like a keepalive, to indicate that the session is still active",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action",
         "alias": "Action",
         "description": "<vehicleId>/<deviceId>/action",
@@ -970,11 +1520,6 @@
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -983,9 +1528,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -999,11 +1542,6 @@
         "description": "<vehicleId>/<deviceId>/action/telemetryConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1012,9 +1550,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1032,20 +1568,13 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -1086,11 +1615,6 @@
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1099,9 +1623,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1115,11 +1637,6 @@
         "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1128,9 +1645,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1148,20 +1663,13 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -1202,11 +1710,6 @@
         "description": "<vehicleId>/<deviceId>/action/carConfig/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1215,9 +1718,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1231,11 +1732,6 @@
         "description": "<vehicleId>/<deviceId>/action/carConfig/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1244,9 +1740,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1264,6 +1758,28 @@
             "1",
             "2",
             "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/baselineConfig",
+        "alias": "ActionBaselineConfig",
+        "description": "<vehicleId>/<deviceId>/action/actionBaseline",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
             "4",
             "128",
             "129"
@@ -1278,6 +1794,72 @@
             "129"
         ],
         "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/baselineConfig/set",
+        "alias": "ActionBaselineConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/baselineConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/baselineConfig/get",
+        "alias": "ActionBaselineConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/baselineConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/baselineConfig/content",
+        "alias": "ActionBaselineConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/baselineConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -1318,11 +1900,6 @@
         "description": "<vehicleId>/<deviceId>/action/handcartSettings/set",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1331,9 +1908,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1347,11 +1922,6 @@
         "description": "<vehicleId>/<deviceId>/action/handcartSettings/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1360,9 +1930,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1380,6 +1948,28 @@
             "1",
             "2",
             "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig",
+        "alias": "RawJsonConfig",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
             "4",
             "128",
             "129"
@@ -1390,6 +1980,262 @@
             "2",
             "3",
             "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/set",
+        "alias": "RawJsonConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/get",
+        "alias": "RawJsonConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rawJsonConfig/content",
+        "alias": "RawJsonConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/rawJsonConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig",
+        "alias": "ActionLapCounterConfig",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
+        "alias": "ActionLapCounterConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
+        "alias": "ActionLapCounterConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
+        "alias": "ActionLapCounterConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack",
+        "alias": "ActionLapCounterTrack",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/set",
+        "alias": "ActionLapCounterTrackSet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/get",
+        "alias": "ActionLapCounterTrackGet",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
+        "alias": "ActionLapCounterTrackContent",
+        "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
             "128",
             "129"
         ],
@@ -1418,9 +2264,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1447,9 +2291,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1476,9 +2318,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1505,9 +2345,61 @@
             "1",
             "2",
             "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/startBaseline",
+        "alias": "ActionStartBaseline",
+        "description": "<vehicleId>/<deviceId>/action/start_baseline",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
             "4",
             "128",
             "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/stopBaseline",
+        "alias": "ActionStopBaseline",
+        "description": "<vehicleId>/<deviceId>/action/stop_baseline",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1534,9 +2426,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1563,9 +2453,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1592,9 +2480,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1621,9 +2507,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1650,9 +2534,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1708,9 +2590,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -1724,11 +2604,6 @@
         "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
         "qos": 2,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "128",
             "129"
         ],
@@ -1737,9 +2612,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "128",
-            "129"
+            "4"
         ],
         "retain": false,
         "variables": [

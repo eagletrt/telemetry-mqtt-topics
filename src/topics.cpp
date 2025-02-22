@@ -9,7 +9,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
     std::vector<TopicMessage> ret;
     
     switch(role) {
-        case Role::role0:
+        case Role::role_0:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -21,8 +21,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -32,9 +49,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -42,27 +58,39 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -70,10 +98,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role1:
+        case Role::role_1:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -85,8 +112,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -96,9 +140,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -106,27 +149,39 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -134,10 +189,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role2:
+        case Role::role_2:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -149,8 +203,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -160,9 +231,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -170,27 +240,39 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -198,10 +280,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role3:
+        case Role::role_3:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -213,8 +294,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -224,9 +322,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -234,27 +331,39 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -262,10 +371,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role4:
+        case Role::role_4:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -277,8 +385,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -288,9 +413,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -298,27 +422,97 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        break;
+        
+        case Role::role_128:
+        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
+        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -329,22 +523,14 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role128:
+        case Role::role_129:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -352,27 +538,39 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -383,58 +581,22 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role129:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        case Role::role_130:
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
         break;
     }
 
@@ -445,20 +607,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
     std::vector<TopicMessage> ret;
     
     switch(role) {
-        case Role::role0:
+        case Role::role_0:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -468,9 +621,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -478,27 +630,40 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -509,20 +674,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role1:
+        case Role::role_1:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -532,8 +688,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -541,27 +695,40 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -572,20 +739,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role2:
+        case Role::role_2:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -595,8 +753,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -604,27 +760,40 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -635,20 +804,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role3:
+        case Role::role_3:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -658,8 +818,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -667,27 +825,40 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -698,20 +869,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role4:
+        case Role::role_4:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -721,8 +883,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -730,27 +890,40 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
@@ -761,7 +934,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role128:
+        case Role::role_128:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -773,8 +946,25 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -784,9 +974,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -794,38 +983,36 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
         
-        case Role::role129:
+        case Role::role_129:
         ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
@@ -837,8 +1024,25 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
@@ -848,8 +1052,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSend(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandResult(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -857,35 +1059,37 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
         ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
+        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        break;
+        
+        case Role::role_130:
+        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         break;
     }
     
@@ -894,472 +1098,899 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
 
 bool CanSubscribe(Role role, Topic topic) {
     switch(role) {
-        case Role::role0:
+        case Role::role_0:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
             case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
               return true;
-            
-        }
-        
-        case Role::role1:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            
-        }
-        
-        case Role::role2:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            
-        }
-        
-        case Role::role3:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            
-        }
-        
-        case Role::role4:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            
-        }
-        
-        case Role::role128:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
+            case Topic::extra_data_to_log:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_set_lap_counter_status:
               return false;
         }
         
-        case Role::role129:
+        case Role::role_1:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+              return true;
+            case Topic::extra_data_to_log:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_2:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+              return true;
+            case Topic::extra_data_to_log:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_3:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+              return true;
+            case Topic::extra_data_to_log:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_4:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+              return true;
+            case Topic::extra_data_to_log:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_128:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_start:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
             case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
+              return false;
+        }
+        
+        case Role::role_129:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_telemetry_replay_start:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
+              return true;
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
+              return false;
+        }
+        
+        case Role::role_130:
+        switch(topic) {
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::info_telemetry_replay_ready:
+              return true;
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::extra_data_to_log:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return false;
         }
     }
@@ -1369,472 +2000,899 @@ bool CanSubscribe(Role role, Topic topic) {
 
 bool CanPublish(Role role, Topic topic) {
     switch(role) {
-        case Role::role0:
+        case Role::role_0:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
-            
-        }
-        
-        case Role::role1:
-        switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
             case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
-            case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
-            case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
-            case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
-              return true;
-            case Topic::steer:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
               return false;
         }
         
-        case Role::role2:
+        case Role::role_1:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
-            case Topic::steer:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
               return false;
         }
         
-        case Role::role3:
+        case Role::role_2:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
-            case Topic::steer:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
               return false;
         }
         
-        case Role::role4:
+        case Role::role_3:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
-            case Topic::steer:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
               return false;
         }
         
-        case Role::role128:
+        case Role::role_4:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
-            case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::extra_data_to_log:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::steer:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay_start:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return true;
-            
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::info_version:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_content:
+              return false;
         }
         
-        case Role::role129:
+        case Role::role_128:
         switch(topic) {
-            case Topic::vehicleId:
-            case Topic::deviceId:
-            case Topic::deviceVersion:
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
             case Topic::data:
-            case Topic::dataPrimary:
-            case Topic::dataSecondary:
-            case Topic::dataBms:
-            case Topic::dataInverter:
-            case Topic::dataSimulator:
-            case Topic::dataGps:
-            case Topic::dataBrusa:
-            case Topic::extraTlmData:
-            case Topic::extraTlmDataVehicleState:
-            case Topic::dataLastUpdate:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
             case Topic::status:
-            case Topic::statusInfo:
-            case Topic::statusError:
-            case Topic::statusAlert:
-            case Topic::statusCanFrequencies:
-            case Topic::statusLapCounterStatus:
-            case Topic::statusLapCounterLaps:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
-            case Topic::commandSend:
-            case Topic::commandResult:
-            case Topic::fileTransactionRequest:
-            case Topic::fileTransactionResponse:
-            case Topic::fileTransaction:
-            case Topic::fileTransactionBegin:
-            case Topic::fileTransactionEnd:
-            case Topic::fileTransactionChunk:
-            case Topic::fileTransactionChunkAck:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
-            case Topic::actionTelemetryConfig:
-            case Topic::actionTelemetryConfigSet:
-            case Topic::actionTelemetryConfigGet:
-            case Topic::actionTelemetryConfigContent:
-            case Topic::actionSessionConfig:
-            case Topic::actionSessionConfigSet:
-            case Topic::actionSessionConfigGet:
-            case Topic::actionSessionConfigContent:
-            case Topic::actionCarConfig:
-            case Topic::actionCarConfigSet:
-            case Topic::actionCarConfigGet:
-            case Topic::actionCarConfigContent:
-            case Topic::actionHandcartSettings:
-            case Topic::actionHandcartSettingsSet:
-            case Topic::actionHandcartSettingsGet:
-            case Topic::actionHandcartSettingsContent:
-            case Topic::actionKill:
-            case Topic::actionStart:
-            case Topic::actionReset:
-            case Topic::actionStop:
-            case Topic::actionPrecharge:
-            case Topic::actionBalance:
-            case Topic::actionStopBalance:
-            case Topic::actionCharge:
-            case Topic::actionStopCharge:
-            case Topic::actionRaw:
-            case Topic::actionResetLapCounter:
-            case Topic::actionSetLapCounterStatus:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_raw:
               return true;
-            case Topic::steer:
+            case Topic::extra_data_to_log:
+            case Topic::info_telemetry_replay_start:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_129:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_raw:
+              return true;
+            case Topic::extra_data_to_log:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::info_telemetry_replay_start:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_130:
+        switch(topic) {
+            case Topic::info_telemetry_replay_start:
+              return true;
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_data_to_log:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
               return false;
         }
     }
@@ -1844,127 +2902,217 @@ bool CanPublish(Role role, Topic topic) {
 
 TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
     switch(topic) {
-        case Topic::vehicleId: 
+        case Topic::vehicle_id: 
             return GetTopicVehicleId(vehicleId);
-        case Topic::deviceId: 
+        case Topic::device_id: 
             return GetTopicDeviceId(vehicleId, deviceId);
-        case Topic::deviceVersion: 
+        case Topic::device_version: 
             return GetTopicDeviceVersion(vehicleId, deviceId);
         case Topic::data: 
             return GetTopicData(vehicleId, deviceId);
-        case Topic::dataPrimary: 
+        case Topic::data_primary: 
             return GetTopicDataPrimary(vehicleId, deviceId);
-        case Topic::dataSecondary: 
+        case Topic::data_secondary: 
             return GetTopicDataSecondary(vehicleId, deviceId);
-        case Topic::dataBms: 
+        case Topic::data_bms: 
             return GetTopicDataBms(vehicleId, deviceId);
-        case Topic::dataInverter: 
+        case Topic::data_inverter: 
             return GetTopicDataInverter(vehicleId, deviceId);
-        case Topic::dataSimulator: 
+        case Topic::data_simulator: 
             return GetTopicDataSimulator(vehicleId, deviceId);
-        case Topic::dataGps: 
+        case Topic::data_gps: 
             return GetTopicDataGps(vehicleId, deviceId);
-        case Topic::dataBrusa: 
+        case Topic::data_brusa: 
             return GetTopicDataBrusa(vehicleId, deviceId);
-        case Topic::extraTlmData: 
+        case Topic::data_temporary: 
+            return GetTopicDataTemporary(vehicleId, deviceId);
+        case Topic::data_camera_logger: 
+            return GetTopicDataCameraLogger(vehicleId, deviceId);
+        case Topic::data_camera_logger_can: 
+            return GetTopicDataCameraLoggerCan(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_imu_angular_rate: 
+            return GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_imu_acceleration: 
+            return GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_vehicle_position: 
+            return GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_vehicle_speed: 
+            return GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_front_angular_velocity: 
+            return GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_rear_left_angular_velocity: 
+            return GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_rear_right_angular_velocity: 
+            return GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId);
+        case Topic::data_camera_logger_can_steer_angle: 
+            return GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps: 
+            return GetTopicDataCameraLoggerGps(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_hpposllh: 
+            return GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_pvt: 
+            return GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId);
+        case Topic::data_camera_logger_gps_relposned: 
+            return GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId);
+        case Topic::extra_data_to_log: 
+            return GetTopicExtraDataToLog(vehicleId, deviceId);
+        case Topic::extra_tlm_data: 
             return GetTopicExtraTlmData(vehicleId, deviceId);
-        case Topic::extraTlmDataVehicleState: 
+        case Topic::extra_tlm_data_vehicle_state: 
             return GetTopicExtraTlmDataVehicleState(vehicleId, deviceId);
-        case Topic::dataLastUpdate: 
+        case Topic::extra_tlm_data_baseline: 
+            return GetTopicExtraTlmDataBaseline(vehicleId, deviceId);
+        case Topic::extra_tlm_data_gps_map_origins: 
+            return GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId);
+        case Topic::data_last_update: 
             return GetTopicDataLastUpdate(vehicleId, deviceId);
         case Topic::status: 
             return GetTopicStatus(vehicleId, deviceId);
-        case Topic::statusInfo: 
+        case Topic::status_info: 
             return GetTopicStatusInfo(vehicleId, deviceId);
-        case Topic::statusError: 
+        case Topic::status_error: 
             return GetTopicStatusError(vehicleId, deviceId);
-        case Topic::statusAlert: 
+        case Topic::status_alert: 
             return GetTopicStatusAlert(vehicleId, deviceId);
-        case Topic::statusCanFrequencies: 
+        case Topic::status_can_frequencies: 
             return GetTopicStatusCanFrequencies(vehicleId, deviceId);
-        case Topic::statusLapCounterStatus: 
+        case Topic::status_lap_counter_status: 
             return GetTopicStatusLapCounterStatus(vehicleId, deviceId);
-        case Topic::statusLapCounterLaps: 
+        case Topic::status_lap_counter_laps: 
             return GetTopicStatusLapCounterLaps(vehicleId, deviceId);
         case Topic::command: 
             return GetTopicCommand(vehicleId, deviceId);
-        case Topic::commandSend: 
-            return GetTopicCommandSend(vehicleId, deviceId);
-        case Topic::commandResult: 
-            return GetTopicCommandResult(vehicleId, deviceId);
-        case Topic::steer: 
-            return GetTopicsteer(vehicleId, deviceId);
-        case Topic::fileTransactionRequest: 
+        case Topic::command_steer: 
+            return GetTopicCommandSteer(vehicleId, deviceId);
+        case Topic::command_steer_status: 
+            return GetTopicCommandSteerStatus(vehicleId, deviceId);
+        case Topic::file_transaction_request: 
             return GetTopicFileTransactionRequest(vehicleId, deviceId);
-        case Topic::fileTransactionResponse: 
+        case Topic::file_transaction_response: 
             return GetTopicFileTransactionResponse(vehicleId, deviceId);
-        case Topic::fileTransaction: 
+        case Topic::file_transaction: 
             return GetTopicFileTransaction(vehicleId, deviceId, transactionId);
-        case Topic::fileTransactionBegin: 
+        case Topic::file_transaction_begin: 
             return GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId);
-        case Topic::fileTransactionEnd: 
+        case Topic::file_transaction_end: 
             return GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId);
-        case Topic::fileTransactionChunk: 
+        case Topic::file_transaction_chunk: 
             return GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId);
-        case Topic::fileTransactionChunkAck: 
+        case Topic::file_transaction_chunk_ack: 
             return GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId);
+        case Topic::info: 
+            return GetTopicInfo(vehicleId, deviceId);
+        case Topic::info_version: 
+            return GetTopicInfoVersion(vehicleId, deviceId);
+        case Topic::info_user: 
+            return GetTopicInfoUser(vehicleId, deviceId);
+        case Topic::info_telemetry_replay: 
+            return GetTopicInfoTelemetryReplay(vehicleId, deviceId);
+        case Topic::info_telemetry_replay_ready: 
+            return GetTopicInfoTelemetryReplayReady(vehicleId, deviceId);
+        case Topic::info_telemetry_replay_start: 
+            return GetTopicInfoTelemetryReplayStart(vehicleId, deviceId);
+        case Topic::info_session: 
+            return GetTopicInfoSession(vehicleId, deviceId);
+        case Topic::info_session_started: 
+            return GetTopicInfoSessionStarted(vehicleId, deviceId);
+        case Topic::info_session_stopped: 
+            return GetTopicInfoSessionStopped(vehicleId, deviceId);
+        case Topic::info_session_keepalive: 
+            return GetTopicInfoSessionKeepalive(vehicleId, deviceId);
         case Topic::action: 
             return GetTopicAction(vehicleId, deviceId);
-        case Topic::actionTelemetryConfig: 
+        case Topic::action_telemetry_config: 
             return GetTopicActionTelemetryConfig(vehicleId, deviceId);
-        case Topic::actionTelemetryConfigSet: 
+        case Topic::action_telemetry_config_set: 
             return GetTopicActionTelemetryConfigSet(vehicleId, deviceId);
-        case Topic::actionTelemetryConfigGet: 
+        case Topic::action_telemetry_config_get: 
             return GetTopicActionTelemetryConfigGet(vehicleId, deviceId);
-        case Topic::actionTelemetryConfigContent: 
+        case Topic::action_telemetry_config_content: 
             return GetTopicActionTelemetryConfigContent(vehicleId, deviceId);
-        case Topic::actionSessionConfig: 
+        case Topic::action_session_config: 
             return GetTopicActionSessionConfig(vehicleId, deviceId);
-        case Topic::actionSessionConfigSet: 
+        case Topic::action_session_config_set: 
             return GetTopicActionSessionConfigSet(vehicleId, deviceId);
-        case Topic::actionSessionConfigGet: 
+        case Topic::action_session_config_get: 
             return GetTopicActionSessionConfigGet(vehicleId, deviceId);
-        case Topic::actionSessionConfigContent: 
+        case Topic::action_session_config_content: 
             return GetTopicActionSessionConfigContent(vehicleId, deviceId);
-        case Topic::actionCarConfig: 
+        case Topic::action_car_config: 
             return GetTopicActionCarConfig(vehicleId, deviceId);
-        case Topic::actionCarConfigSet: 
+        case Topic::action_car_config_set: 
             return GetTopicActionCarConfigSet(vehicleId, deviceId);
-        case Topic::actionCarConfigGet: 
+        case Topic::action_car_config_get: 
             return GetTopicActionCarConfigGet(vehicleId, deviceId);
-        case Topic::actionCarConfigContent: 
+        case Topic::action_car_config_content: 
             return GetTopicActionCarConfigContent(vehicleId, deviceId);
-        case Topic::actionHandcartSettings: 
+        case Topic::action_baseline_config: 
+            return GetTopicActionBaselineConfig(vehicleId, deviceId);
+        case Topic::action_baseline_config_set: 
+            return GetTopicActionBaselineConfigSet(vehicleId, deviceId);
+        case Topic::action_baseline_config_get: 
+            return GetTopicActionBaselineConfigGet(vehicleId, deviceId);
+        case Topic::action_baseline_config_content: 
+            return GetTopicActionBaselineConfigContent(vehicleId, deviceId);
+        case Topic::action_handcart_settings: 
             return GetTopicActionHandcartSettings(vehicleId, deviceId);
-        case Topic::actionHandcartSettingsSet: 
+        case Topic::action_handcart_settings_set: 
             return GetTopicActionHandcartSettingsSet(vehicleId, deviceId);
-        case Topic::actionHandcartSettingsGet: 
+        case Topic::action_handcart_settings_get: 
             return GetTopicActionHandcartSettingsGet(vehicleId, deviceId);
-        case Topic::actionHandcartSettingsContent: 
+        case Topic::action_handcart_settings_content: 
             return GetTopicActionHandcartSettingsContent(vehicleId, deviceId);
-        case Topic::actionKill: 
+        case Topic::raw_json_config: 
+            return GetTopicRawJsonConfig(vehicleId, deviceId);
+        case Topic::raw_json_config_set: 
+            return GetTopicRawJsonConfigSet(vehicleId, deviceId);
+        case Topic::raw_json_config_get: 
+            return GetTopicRawJsonConfigGet(vehicleId, deviceId);
+        case Topic::raw_json_config_content: 
+            return GetTopicRawJsonConfigContent(vehicleId, deviceId);
+        case Topic::action_lap_counter_config: 
+            return GetTopicActionLapCounterConfig(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_set: 
+            return GetTopicActionLapCounterConfigSet(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_get: 
+            return GetTopicActionLapCounterConfigGet(vehicleId, deviceId);
+        case Topic::action_lap_counter_config_content: 
+            return GetTopicActionLapCounterConfigContent(vehicleId, deviceId);
+        case Topic::action_lap_counter_track: 
+            return GetTopicActionLapCounterTrack(vehicleId, deviceId);
+        case Topic::action_lap_counter_track_set: 
+            return GetTopicActionLapCounterTrackSet(vehicleId, deviceId);
+        case Topic::action_lap_counter_track_get: 
+            return GetTopicActionLapCounterTrackGet(vehicleId, deviceId);
+        case Topic::action_lap_counter_track_content: 
+            return GetTopicActionLapCounterTrackContent(vehicleId, deviceId);
+        case Topic::action_kill: 
             return GetTopicActionKill(vehicleId, deviceId);
-        case Topic::actionStart: 
+        case Topic::action_start: 
             return GetTopicActionStart(vehicleId, deviceId);
-        case Topic::actionReset: 
+        case Topic::action_reset: 
             return GetTopicActionReset(vehicleId, deviceId);
-        case Topic::actionStop: 
+        case Topic::action_stop: 
             return GetTopicActionStop(vehicleId, deviceId);
-        case Topic::actionPrecharge: 
+        case Topic::action_start_baseline: 
+            return GetTopicActionStartBaseline(vehicleId, deviceId);
+        case Topic::action_stop_baseline: 
+            return GetTopicActionStopBaseline(vehicleId, deviceId);
+        case Topic::action_precharge: 
             return GetTopicActionPrecharge(vehicleId, deviceId);
-        case Topic::actionBalance: 
+        case Topic::action_balance: 
             return GetTopicActionBalance(vehicleId, deviceId);
-        case Topic::actionStopBalance: 
+        case Topic::action_stop_balance: 
             return GetTopicActionStopBalance(vehicleId, deviceId);
-        case Topic::actionCharge: 
+        case Topic::action_charge: 
             return GetTopicActionCharge(vehicleId, deviceId);
-        case Topic::actionStopCharge: 
+        case Topic::action_stop_charge: 
             return GetTopicActionStopCharge(vehicleId, deviceId);
-        case Topic::actionRaw: 
+        case Topic::action_raw: 
             return GetTopicActionRaw(vehicleId, deviceId);
-        case Topic::actionResetLapCounter: 
+        case Topic::action_reset_lap_counter: 
             return GetTopicActionResetLapCounter(vehicleId, deviceId);
-        case Topic::actionSetLapCounterStatus: 
+        case Topic::action_set_lap_counter_status: 
             return GetTopicActionSetLapCounterStatus(vehicleId, deviceId);
     }
 
@@ -2059,6 +3207,134 @@ TopicMessage GetTopicDataBrusa(const std::string& vehicleId, const std::string& 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
+TopicMessage GetTopicDataTemporary(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/temporary";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCan(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanImuAngularRate(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/imuAngularRate";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanImuAcceleration(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/imuAcceleration";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanVehiclePosition(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/vehiclePosition";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanVehicleSpeed(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/vehicleSpeed";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanFrontAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/frontAngularVelocity";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanRearLeftAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/rearLeftAngularVelocity";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanRearRightAngularVelocity(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/rearRightAngularVelocity";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerCanSteerAngle(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/steerAngle";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerGps(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerGpsHpposllh(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/hpposllh";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerGpsPvt(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/pvt";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataCameraLoggerGpsRelposned(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/relposned";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraDataToLog(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_data_to_log";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
 TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data";
     int qos = 0;
@@ -2068,9 +3344,25 @@ TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::strin
 }
 
 TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicle_stata";
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicleState";
     int qos = 0;
     bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/baseline";
+    int qos = 0;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins";
+    int qos = 0;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2102,7 +3394,7 @@ TopicMessage GetTopicStatusInfo(const std::string& vehicleId, const std::string&
 TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/error";
     int qos = 1;
-    bool retain = true;
+    bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2110,7 +3402,7 @@ TopicMessage GetTopicStatusError(const std::string& vehicleId, const std::string
 TopicMessage GetTopicStatusAlert(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/alert";
     int qos = 1;
-    bool retain = true;
+    bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2147,24 +3439,16 @@ TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& de
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicCommandSend(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "command/send";
-    int qos = 2;
-    bool retain = false;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicCommandResult(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "command/result";
-    int qos = 2;
-    bool retain = false;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicsteer(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicCommandSteer(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "command/steer";
+    int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicCommandSteerStatus(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "command/steerStatus";
     int qos = 2;
     bool retain = false;
 
@@ -2227,6 +3511,86 @@ TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const
     return TopicMessage(std::move(topic), qos, retain);
 }
 
+TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoVersion(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/version";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoUser(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/user";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplay(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplayReady(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/ready";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoTelemetryReplayStart(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/start";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoSession(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/started";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/stopped";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/logging";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
 TopicMessage GetTopicAction(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action";
     int qos = 0;
@@ -2262,7 +3626,7 @@ TopicMessage GetTopicActionTelemetryConfigGet(const std::string& vehicleId, cons
 TopicMessage GetTopicActionTelemetryConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/content";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2294,7 +3658,7 @@ TopicMessage GetTopicActionSessionConfigGet(const std::string& vehicleId, const 
 TopicMessage GetTopicActionSessionConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/content";
     int qos = 0;
-    bool retain = false;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2326,7 +3690,39 @@ TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std:
 TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/content";
     int qos = 0;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig";
+    int qos = 0;
     bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionBaselineConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/content";
+    int qos = 0;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
@@ -2363,6 +3759,102 @@ TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId,
     return TopicMessage(std::move(topic), qos, retain);
 }
 
+TopicMessage GetTopicRawJsonConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicRawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicRawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicRawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/content";
+    int qos = 0;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterConfigContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/content";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterTrack(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterTrackSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterTrackGet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionLapCounterTrackContent(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/content";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
 TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/kill";
     int qos = 2;
@@ -2390,6 +3882,22 @@ TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string
 TopicMessage GetTopicActionStop(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/stop";
     int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionStartBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/startBaseline";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionStopBaseline(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/stopBaseline";
+    int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
