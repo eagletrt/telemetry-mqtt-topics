@@ -9,7 +9,7 @@ namespace MQTTTopics
 enum class Role 
 {
     {%- for role in roles %}
-    role{{ role.capitalize() }} = {{ loop.index - 1}}
+    {{ utils.role_enum_name(role) }} = {{ loop.index - 1}}
     {%- if not loop.last -%} , {%- endif -%}
     {%- endfor %}
 };
