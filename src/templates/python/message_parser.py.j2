@@ -41,10 +41,18 @@ class MessageParser:
         return _node
 
     def setMessageParse(self, topic, parse_function):
-        _node = self.findNode(topic)
+        topic_split = topic.split("/")
+        topic_split[0] = "<vehicleId>"
+        topic_split[1] = "<deviceId>"
+        _topic = "/".join(topic_split)
+        _node = self.findNode(_topic)
         _node.function = parse_function
         return True
 
     def parseMessage(self, topic, payload):
-        _node = self.findNode(topic)
+        topic_split = topic.split("/")
+        topic_split[0] = "<vehicleId>"
+        topic_split[1] = "<deviceId>"
+        _topic = "/".join(topic_split)
+        _node = self.findNode(_topic)
         return _node.function(payload)
