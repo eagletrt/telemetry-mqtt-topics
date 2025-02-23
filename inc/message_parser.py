@@ -128,7 +128,7 @@ class MessageParser:
                 layer=layer,
                 function=None,
             )
-
+    //TODO fix
     def findNode(self, topic):
         if topic != "":
             topic_split = topic.split("/")
@@ -140,18 +140,18 @@ class MessageParser:
                     _node = node
                     notFound = False
             if notFound:
-                return False
+                break
 
         return _node
 
-    def setMessageParse(self, topic, parse_function):
+    def setMessageParse(self, topic, parse_function,argument):
         topic_split = topic.split("/")
         topic_split[0] = "<vehicleId>"
         topic_split[1] = "<deviceId>"
         _topic = "/".join(topic_split)
         _node = self.findNode(_topic)
-        _node.function = parse_function
-        return True
+        if _node != None:
+            _node.function = lambda payload: parse_function(payload,argument)
 
     def parseMessage(self, topic, payload):
         topic_split = topic.split("/")
