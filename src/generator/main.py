@@ -61,7 +61,9 @@ if __name__ == "__main__":
                 variables.append(variable)
 
     print(f"Generating files...\n")
-
+    with open(os.path.join(args.output_dir, "inc", "__init__.py"), "w") as file:
+        print(f"✅ Generated __init__.py")
+        pass
     with open(os.path.join(args.output_dir, "inc", "message_parser.py"), "w") as file:
         file.write(message_parser_template.render(topics=topics, roles=roles))
         print(f"✅ Generated message_parser.py")
