@@ -128,7 +128,7 @@ class MessageParser:
                 layer=layer,
                 function=None,
             )
-    //TODO fix
+    # TODO fix
     def findNode(self, topic):
         if topic != "":
             topic_split = topic.split("/")
