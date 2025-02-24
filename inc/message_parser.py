@@ -126,6 +126,7 @@ class MessageParser:
                 topic_split[len(topic_split) - 1],
                 parent=_parent,
                 obj=None,
+                layer=layer,
                 function=None,
             )
     # TODO fix
