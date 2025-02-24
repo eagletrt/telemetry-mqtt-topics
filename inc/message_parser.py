@@ -4,7 +4,7 @@ from anytree import Node, RenderTree, LevelOrderIter, AsciiStyle, find
 class MessageParser:
 
     def __init__(self):
-        self.tree = Node("<vehicleId>",obj=None, layer=0, function=None)
+        self.tree = Node("<vehicleId>",arg=None, layer=0, function=None)
         self.addNode("<vehicleId>",1)
         self.addNode("<vehicleId>/<deviceId>",2)
         self.addNode("<vehicleId>/<deviceId>/version",3)
@@ -113,10 +113,9 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus",4)
         
 
-    def addNode(self, topic,layer):
+    def addNode(self, topic, layer):
         if topic != "":
             topic_split = topic.split("/")
-            print(topic_split[len(topic_split) - 1])
             _parent = find(
                 self.tree,
                 lambda node: node.name == topic_split[len(topic_split) - 2]
@@ -125,10 +124,11 @@ class MessageParser:
             Node(
                 topic_split[len(topic_split) - 1],
                 parent=_parent,
-                obj=None,
+                arg=None,
                 layer=layer,
                 function=None,
             )
+
     # TODO fix
     def findNode(self, topic):
         if topic != "":
@@ -145,15 +145,15 @@ class MessageParser:
 
         return _node
 
-    def setMessageParse(self, topic, parse_function,argument):
+    def setMessageParse(self, topic, parse_function, argument):
         topic_split = topic.split("/")
         topic_split[0] = "<vehicleId>"
         topic_split[1] = "<deviceId>"
         _topic = "/".join(topic_split)
         _node = self.findNode(_topic)
         if _node != None:
-            _node.function = parse_function()
-            _node.obj = argument
+            _node.function = parse_function
+            _node.arg = argument
 
     def parseMessage(self, topic, payload):
         topic_split = topic.split("/")
@@ -161,4 +161,4 @@ class MessageParser:
         topic_split[1] = "<deviceId>"
         _topic = "/".join(topic_split)
         _node = self.findNode(_topic)
-        return _node.function(payload,_node.obj)
+        _node.function(payload, _node.arg)
