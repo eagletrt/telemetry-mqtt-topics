@@ -12,7 +12,9 @@ parser.add_argument(
 parser.add_argument("output_dir", type=str, help="directory path of generated files")
 
 with open("src/templates/python/message_parser.py.j2", "r") as file:
-    message_parser_template = jinja2.Template(file.read())
+    message_parser_py_template = jinja2.Template(file.read())
+with open("src/templates/python/topics.py.j2", "r") as file:
+    topics_py_template = jinja2.Template(file.read())
 with open("src/templates/topics.h.j2", "r") as file:
     topic_h_template = jinja2.Template(file.read())
 with open("src/templates/topics.cpp.j2", "r") as file:
@@ -65,8 +67,11 @@ if __name__ == "__main__":
         print(f"✅ Generated __init__.py")
         pass
     with open(os.path.join(args.output_dir, "inc", "message_parser.py"), "w") as file:
-        file.write(message_parser_template.render(topics=topics, roles=roles))
+        file.write(message_parser_py_template.render(topics=topics, roles=roles))
         print(f"✅ Generated message_parser.py")
+    with open(os.path.join(args.output_dir, "inc", "topics.py"), "w") as file:
+        file.write(topics_py_template.render(topics=topics, roles=roles, utils=utils))
+        print(f"✅ Generated topics.py")
     with open(os.path.join(args.output_dir, "inc", "topics.h"), "w") as file:
         file.write(
             topic_h_template.render(

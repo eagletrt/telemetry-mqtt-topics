@@ -1,0 +1,7 @@
+from enum import Enum, auto
+
+class Topic(Enum):
+    {%- for topic in topics %}
+    {{ utils.topic_enum_name(topic.alias) }} = auto()
+    {%- if not loop.last -%} , {%- endif -%}
+    {%- endfor %}
