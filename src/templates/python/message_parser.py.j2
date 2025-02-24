@@ -4,15 +4,15 @@ from anytree import Node, RenderTree, LevelOrderIter, AsciiStyle, find
 class MessageParser:
 
     def __init__(self):
-        self.tree = Node("<vehicleId>",obj=None, function=None)
+        self.tree = Node("<vehicleId>",obj=None, layer=0, function=None)
         {% for topic in topics -%}
-        self.addNode("{{ topic['topic'] }}")
+        self.addNode("{{ topic['topic'] }}",{{(topic['topic']).split("/") | length}})
         {%- if not loop.last%}
         {%endif -%}
         {%- endfor %}
         
 
-    def addNode(self, topic):
+    def addNode(self, topic,layer):
         if topic != "":
             topic_split = topic.split("/")
             print(topic_split[len(topic_split) - 1])
