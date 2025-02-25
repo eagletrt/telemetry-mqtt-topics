@@ -1,0 +1,99 @@
+<vehicleId>
++-- <deviceId>
+    |-- version
+    |-- data
+    |   |-- primary
+    |   |-- secondary
+    |   |-- bms
+    |   |-- inverters
+    |   |-- simulator
+    |   |-- gps
+    |   |-- brusa
+    |   |-- temporary
+    |   +-- cameraLogger
+    |       |-- can
+    |       |   |-- imuAngularRate
+    |       |   |-- imuAcceleration
+    |       |   |-- vehiclePosition
+    |       |   |-- vehicleSpeed
+    |       |   |-- frontAngularVelocity
+    |       |   |-- rearLeftAngularVelocity
+    |       |   |-- rearRightAngularVelocity
+    |       |   +-- steerAngle
+    |       +-- GPS
+    |           |-- hpposllh
+    |           |-- pvt
+    |           +-- relposned
+    |-- extra_data_to_log
+    |-- extra_tlm_data
+    |   |-- vehicleState
+    |   |-- baseline
+    |   +-- gpsMapOrigins
+    |-- last_update
+    |-- status
+    |   |-- info
+    |   |-- error
+    |   |-- alert
+    |   |-- canFrequencies
+    |   |-- lapCounterStatus
+    |   +-- lapCounterLaps
+    |-- command
+    |   |-- steer
+    |   +-- steerStatus
+    |-- info
+    |   |-- version
+    |   |-- user
+    |   |-- telemetryReplay
+    |   |   |-- ready
+    |   |   +-- start
+    |   +-- session
+    |       |-- started
+    |       |-- stopped
+    |       +-- logging
+    +-- action
+        |-- telemetryConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- sessionConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- carConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- baselineConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- handcartSettings
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- rawJsonConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- lapCounterConfig
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- lapCounterTrack
+        |   |-- set
+        |   |-- get
+        |   +-- content
+        |-- kill
+        |-- start
+        |-- reset
+        |-- stop
+        |-- startBaseline
+        |-- stopBaseline
+        |-- precharge
+        |-- balance
+        |-- stopBalance
+        |-- charge
+        |-- stopCharge
+        |-- raw
+        |-- resetLapcounter
+        +-- setLapcounterStatus
