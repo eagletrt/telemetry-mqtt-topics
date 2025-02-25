@@ -107,3 +107,535 @@ class Topic(Enum):
     action_raw = auto(),
     action_reset_lap_counter = auto(),
     action_set_lap_counter_status = auto()
+
+
+
+def GetTopicVehicleId(vehicleId):
+    topic = vehicleId;
+    return topic;
+
+
+def GetTopicDeviceId(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId;
+    return topic;
+
+
+def GetTopicDeviceVersion(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "version";
+    return topic;
+
+
+def GetTopicData(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data";
+    return topic;
+
+
+def GetTopicDataPrimary(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/primary";
+    return topic;
+
+
+def GetTopicDataSecondary(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/secondary";
+    return topic;
+
+
+def GetTopicDataBms(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/bms";
+    return topic;
+
+
+def GetTopicDataInverter(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/inverters";
+    return topic;
+
+
+def GetTopicDataSimulator(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/simulator";
+    return topic;
+
+
+def GetTopicDataGps(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/gps";
+    return topic;
+
+
+def GetTopicDataBrusa(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/brusa";
+    return topic;
+
+
+def GetTopicDataTemporary(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/temporary";
+    return topic;
+
+
+def GetTopicDataCameraLogger(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCan(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/imuAngularRate";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/imuAcceleration";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/vehiclePosition";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/vehicleSpeed";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/frontAngularVelocity";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/rearLeftAngularVelocity";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/rearRightAngularVelocity";
+    return topic;
+
+
+def GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/can/steerAngle";
+    return topic;
+
+
+def GetTopicDataCameraLoggerGps(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS";
+    return topic;
+
+
+def GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/hpposllh";
+    return topic;
+
+
+def GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/pvt";
+    return topic;
+
+
+def GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger/GPS/relposned";
+    return topic;
+
+
+def GetTopicExtraDataToLog(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_data_to_log";
+    return topic;
+
+
+def GetTopicExtraTlmData(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data";
+    return topic;
+
+
+def GetTopicExtraTlmDataVehicleState(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicleState";
+    return topic;
+
+
+def GetTopicExtraTlmDataBaseline(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/baseline";
+    return topic;
+
+
+def GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins";
+    return topic;
+
+
+def GetTopicDataLastUpdate(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "last_update";
+    return topic;
+
+
+def GetTopicStatus(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status";
+    return topic;
+
+
+def GetTopicStatusInfo(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/info";
+    return topic;
+
+
+def GetTopicStatusError(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/error";
+    return topic;
+
+
+def GetTopicStatusAlert(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/alert";
+    return topic;
+
+
+def GetTopicStatusCanFrequencies(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/canFrequencies";
+    return topic;
+
+
+def GetTopicStatusLapCounterStatus(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/lapCounterStatus";
+    return topic;
+
+
+def GetTopicStatusLapCounterLaps(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "status/lapCounterLaps";
+    return topic;
+
+
+def GetTopicCommand(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "command";
+    return topic;
+
+
+def GetTopicCommandSteer(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "command/steer";
+    return topic;
+
+
+def GetTopicCommandSteerStatus(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "command/steerStatus";
+    return topic;
+
+
+def GetTopicFileTransactionRequest(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction/request";
+    return topic;
+
+
+def GetTopicFileTransactionResponse(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction/response";
+    return topic;
+
+
+def GetTopicFileTransaction(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction" + "/" + transactionId;
+    return topic;
+
+
+def GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction" + "/" + transactionId + "/" + "begin";
+    return topic;
+
+
+def GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction" + "/" + transactionId + "/" + "end";
+    return topic;
+
+
+def GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction" + "/" + transactionId + "/" + "chunk";
+    return topic;
+
+
+def GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "fileTransaction" + "/" + transactionId + "/" + "chunk_ack";
+    return topic;
+
+
+def GetTopicInfo(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info";
+    return topic;
+
+
+def GetTopicInfoVersion(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version";
+    return topic;
+
+
+def GetTopicInfoUser(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/user";
+    return topic;
+
+
+def GetTopicInfoTelemetryReplay(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay";
+    return topic;
+
+
+def GetTopicInfoTelemetryReplayReady(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/ready";
+    return topic;
+
+
+def GetTopicInfoTelemetryReplayStart(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/start";
+    return topic;
+
+
+def GetTopicInfoSession(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session";
+    return topic;
+
+
+def GetTopicInfoSessionStarted(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/started";
+    return topic;
+
+
+def GetTopicInfoSessionStopped(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/stopped";
+    return topic;
+
+
+def GetTopicInfoSessionKeepalive(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/logging";
+    return topic;
+
+
+def GetTopicAction(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action";
+    return topic;
+
+
+def GetTopicActionTelemetryConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig";
+    return topic;
+
+
+def GetTopicActionTelemetryConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/set";
+    return topic;
+
+
+def GetTopicActionTelemetryConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/get";
+    return topic;
+
+
+def GetTopicActionTelemetryConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/content";
+    return topic;
+
+
+def GetTopicActionSessionConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig";
+    return topic;
+
+
+def GetTopicActionSessionConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/set";
+    return topic;
+
+
+def GetTopicActionSessionConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/get";
+    return topic;
+
+
+def GetTopicActionSessionConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/content";
+    return topic;
+
+
+def GetTopicActionCarConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig";
+    return topic;
+
+
+def GetTopicActionCarConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/set";
+    return topic;
+
+
+def GetTopicActionCarConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/get";
+    return topic;
+
+
+def GetTopicActionCarConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/content";
+    return topic;
+
+
+def GetTopicActionBaselineConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig";
+    return topic;
+
+
+def GetTopicActionBaselineConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/set";
+    return topic;
+
+
+def GetTopicActionBaselineConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/get";
+    return topic;
+
+
+def GetTopicActionBaselineConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/content";
+    return topic;
+
+
+def GetTopicActionHandcartSettings(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings";
+    return topic;
+
+
+def GetTopicActionHandcartSettingsSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/set";
+    return topic;
+
+
+def GetTopicActionHandcartSettingsGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/get";
+    return topic;
+
+
+def GetTopicActionHandcartSettingsContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/content";
+    return topic;
+
+
+def GetTopicRawJsonConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig";
+    return topic;
+
+
+def GetTopicRawJsonConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/set";
+    return topic;
+
+
+def GetTopicRawJsonConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/get";
+    return topic;
+
+
+def GetTopicRawJsonConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/content";
+    return topic;
+
+
+def GetTopicActionLapCounterConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig";
+    return topic;
+
+
+def GetTopicActionLapCounterConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/set";
+    return topic;
+
+
+def GetTopicActionLapCounterConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/get";
+    return topic;
+
+
+def GetTopicActionLapCounterConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/content";
+    return topic;
+
+
+def GetTopicActionLapCounterTrack(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack";
+    return topic;
+
+
+def GetTopicActionLapCounterTrackSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/set";
+    return topic;
+
+
+def GetTopicActionLapCounterTrackGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/get";
+    return topic;
+
+
+def GetTopicActionLapCounterTrackContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/content";
+    return topic;
+
+
+def GetTopicActionKill(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/kill";
+    return topic;
+
+
+def GetTopicActionStart(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/start";
+    return topic;
+
+
+def GetTopicActionReset(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/reset";
+    return topic;
+
+
+def GetTopicActionStop(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stop";
+    return topic;
+
+
+def GetTopicActionStartBaseline(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/startBaseline";
+    return topic;
+
+
+def GetTopicActionStopBaseline(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopBaseline";
+    return topic;
+
+
+def GetTopicActionPrecharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/precharge";
+    return topic;
+
+
+def GetTopicActionBalance(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/balance";
+    return topic;
+
+
+def GetTopicActionStopBalance(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopBalance";
+    return topic;
+
+
+def GetTopicActionCharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/charge";
+    return topic;
+
+
+def GetTopicActionStopCharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopCharge";
+    return topic;
+
+
+def GetTopicActionRaw(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/raw";
+    return topic;
+
+
+def GetTopicActionResetLapCounter(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/resetLapcounter";
+    return topic;
+
+
+def GetTopicActionSetLapCounterStatus(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/setLapcounterStatus";
+    return topic;
+
