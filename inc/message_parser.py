@@ -4,7 +4,7 @@ from anytree import Node, RenderTree, LevelOrderIter, AsciiStyle, find
 class MessageParser:
 
     def __init__(self):
-        self.tree = Node("<vehicleId>",arg=None, layer=0, function=None)
+        self.tree = None
         self.addNode("<vehicleId>",1)
         self.addNode("<vehicleId>/<deviceId>",2)
         self.addNode("<vehicleId>/<deviceId>/version",3)
@@ -111,38 +111,48 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/action/raw",4)
         self.addNode("<vehicleId>/<deviceId>/action/resetLapcounter",4)
         self.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus",4)
-        
+        with open("topics_tree.txt", "w") as file:
+            file.write(RenderTree(self.tree, style=AsciiStyle()).by_attr())
 
     def addNode(self, topic, layer):
         if topic != "":
             topic_split = topic.split("/")
-            _parent = find(
-                self.tree,
-                lambda node: node.name == topic_split[len(topic_split) - 2]
-                and node.layer == layer - 1,
-            )
-            Node(
-                topic_split[len(topic_split) - 1],
-                parent=_parent,
-                arg=None,
-                layer=layer,
-                function=None,
-            )
+            if self.tree != None:
+                _parent = find(
+                    self.tree,
+                    lambda node: node.name == topic_split[len(topic_split) - 2]
+                    and node.layer == layer - 1,
+                )
+                Node(
+                    topic_split[len(topic_split) - 1],
+                    parent=_parent,
+                    arg=None,
+                    layer=layer,
+                    function=None,
+                )
+            else:
+                self.tree = Node(
+                    topic_split[len(topic_split) - 1],
+                    arg=None,
+                    layer=layer,
+                    function=None,
+                )
 
-    # TODO fix
     def findNode(self, topic):
         if topic != "":
             topic_split = topic.split("/")
+        topic_split[0] = "<vehicleId>"
+        topic_split[1] = "<deviceId>"
+        _topic_split = "/".join(topic_split)
+        topic_split = _topic_split.split("/")
         _node = None
+        match = [False] * len(topic_split)
         for i in range(len(topic_split)):
-            notFound = True
             for node in LevelOrderIter(self.tree, maxlevel=i + 1):
                 if node.name == topic_split[i]:
+                    print(node.name + "==" + topic_split[i])
                     _node = node
-                    notFound = False
-            if notFound:
-                break
-
+                    match[i] = True
         return _node
 
     def setMessageParse(self, topic, parse_function, argument):
