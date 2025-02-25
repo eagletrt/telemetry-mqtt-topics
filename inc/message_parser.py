@@ -111,8 +111,6 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/action/raw",4)
         self.addNode("<vehicleId>/<deviceId>/action/resetLapcounter",4)
         self.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus",4)
-        with open("topics_tree.txt", "w") as file:
-            file.write(RenderTree(self.tree, style=AsciiStyle()).by_attr())
 
     def addNode(self, topic, layer):
         if topic != "":
@@ -150,7 +148,6 @@ class MessageParser:
         for i in range(len(topic_split)):
             for node in LevelOrderIter(self.tree, maxlevel=i + 1):
                 if node.name == topic_split[i]:
-                    print(node.name + "==" + topic_split[i])
                     _node = node
                     match[i] = True
         return _node
@@ -171,4 +168,5 @@ class MessageParser:
         topic_split[1] = "<deviceId>"
         _topic = "/".join(topic_split)
         _node = self.findNode(_topic)
-        _node.function(payload, _node.arg)
+        if _node != None and _node.function != None and _node.arg != None:
+            _node.function(payload, _node.arg)
