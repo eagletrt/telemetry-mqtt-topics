@@ -5,3 +5,11 @@ class Topic(Enum):
     {{ utils.topic_enum_name(topic.alias) }} = auto()
     {%- if not loop.last -%} , {%- endif -%}
     {%- endfor %}
+
+
+{% for topic in topics %}
+def {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_py(topic) }}):
+    topic = {{ utils.topic_topic_with_variables(topic) }};
+    return topic;
+
+{% endfor -%}
