@@ -177,6 +177,7 @@
               "gpsMapOrigins": {
                 "alias": "ExtraTlmDataGpsMapOrigins",
                 "description": "Protobuffer data of gps map origins",
+                "subscribe_roles": ["0", "1", "2", "3", "4", "131"],
                 "retain": true
               }
             }
