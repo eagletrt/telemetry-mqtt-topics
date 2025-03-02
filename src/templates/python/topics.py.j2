@@ -34,3 +34,19 @@ def GetSubscribeTopics(role {%- for variable in variables -%}, {{ variable }} {%
             {%- if not loop.last%}
             {%endif -%}
             {%- endfor %}
+
+def GetPublishTopics(role {%- for variable in variables -%}, {{ variable }} {%- endfor -%}):
+    ret = []
+
+    match role:
+        {%- for role in roles %}
+        case Role.{{ utils.role_enum_name(role) }}:
+            {% for topic in topics -%}
+            {% if role in topic['subscribe_roles'] -%}
+            ret.append({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }}))
+            {% endif -%}
+            {% endfor -%}
+            return ret
+            {%- if not loop.last%}
+            {%endif -%}
+            {%- endfor %}
