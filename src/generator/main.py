@@ -70,7 +70,11 @@ if __name__ == "__main__":
         file.write(message_parser_py_template.render(topics=topics, roles=roles))
         print(f"✅ Generated message_parser.py")
     with open(os.path.join(args.output_dir, "inc", "topics.py"), "w") as file:
-        file.write(topics_py_template.render(topics=topics, roles=roles, utils=utils))
+        file.write(
+            topics_py_template.render(
+                topics=topics, roles=roles, variables=variables, utils=utils
+            )
+        )
         print(f"✅ Generated topics.py")
     with open(os.path.join(args.output_dir, "inc", "topics.h"), "w") as file:
         file.write(

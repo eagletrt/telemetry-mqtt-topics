@@ -1,5 +1,11 @@
 from enum import Enum, auto
 
+class Role(Enum):
+    {%- for role in roles %}
+    {{ utils.role_enum_name(role) }} = {{ loop.index - 1}}
+    {%- if not loop.last -%} , {%- endif -%}
+    {%- endfor %}
+
 class Topic(Enum):
     {%- for topic in topics %}
     {{ utils.topic_enum_name(topic.alias) }} = auto()
@@ -9,7 +15,22 @@ class Topic(Enum):
 
 {% for topic in topics %}
 def {{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_py(topic) }}):
-    topic = {{ utils.topic_topic_with_variables(topic) }};
-    return topic;
-
+    topic = {{ utils.topic_topic_with_variables(topic) }}
+    return topic
 {% endfor -%}
+
+def GetSubscribeTopics(role {%- for variable in variables -%}, {{ variable }} {%- endfor -%}):
+    ret = []
+
+    match role:
+        {%- for role in roles %}
+        case Role.{{ utils.role_enum_name(role) }}:
+            {% for topic in topics -%}
+            {% if role in topic['subscribe_roles'] -%}
+            ret.append({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }}))
+            {% endif -%}
+            {% endfor -%}
+            return ret
+            {%- if not loop.last%}
+            {%endif -%}
+            {%- endfor %}
