@@ -42,7 +42,7 @@ def GetPublishTopics(role {%- for variable in variables -%}, {{ variable }} {%- 
         {%- for role in roles %}
         case Role.{{ utils.role_enum_name(role) }}:
             {% for topic in topics -%}
-            {% if role in topic['subscribe_roles'] -%}
+            {% if role in topic['publish_roles'] -%}
             ret.append({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }}))
             {% endif -%}
             {% endfor -%}
