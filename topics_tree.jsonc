@@ -215,11 +215,13 @@
               },
               "lapCounterStatus": {
                 "alias": "StatusLapCounterStatus",
-                "description": "<vehicleId>/<deviceId>/status/lapCounterStatus"
+                "description": "<vehicleId>/<deviceId>/status/lapCounterStatus",
+                "publish_roles": ["0", "1", "2", "3", "4", "128", "129", "131"]
               },
               "lapCounterLaps": {
                 "alias": "StatusLapCounterLaps",
-                "description": "<vehicleId>/<deviceId>/status/lapCounterLaps"
+                "description": "<vehicleId>/<deviceId>/status/lapCounterLaps",
+                "publish_roles": ["0", "1", "2", "3", "4", "128", "129", "131"]
               }
             }
           },
