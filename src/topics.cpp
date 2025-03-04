@@ -469,6 +469,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
@@ -528,6 +530,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
@@ -601,6 +605,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         
         case Role::role_131:
         ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
@@ -1110,8 +1116,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_131:
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         break;
     }
     
@@ -1686,6 +1690,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_id:
             case Topic::device_version:
             case Topic::extra_data_to_log:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
@@ -1772,8 +1778,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay_ready:
@@ -1798,6 +1802,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_id:
             case Topic::device_version:
             case Topic::extra_data_to_log:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
@@ -1883,8 +1889,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay:
@@ -2019,6 +2023,8 @@ bool CanSubscribe(Role role, Topic topic) {
         case Role::role_131:
         switch(topic) {
             case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
@@ -2069,8 +2075,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
@@ -3032,9 +3036,6 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_131:
         switch(topic) {
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
-              return true;
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
@@ -3072,6 +3073,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:

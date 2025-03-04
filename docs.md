@@ -300,7 +300,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
 > &lt;vehicleId>/&lt;deviceId>/status/lapCounterStatus
 - **Quality of Service**: 1
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 131 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
@@ -308,7 +308,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
 > &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
 - **Quality of Service**: 1
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 131 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId

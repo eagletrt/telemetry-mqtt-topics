@@ -1008,6 +1008,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             ret.append(GetTopicCommand(vehicleId, deviceId))
             ret.append(GetTopicCommandSteer(vehicleId, deviceId))
             ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
@@ -1067,6 +1069,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             ret.append(GetTopicCommand(vehicleId, deviceId))
             ret.append(GetTopicCommandSteer(vehicleId, deviceId))
             ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
@@ -1140,6 +1144,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             
         case Role.role_131:
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
@@ -1645,6 +1651,4 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             return ret
             
         case Role.role_131:
-            ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
-            ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             return ret
