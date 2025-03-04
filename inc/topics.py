@@ -1645,4 +1645,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             return ret
             
         case Role.role_131:
+            ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             return ret

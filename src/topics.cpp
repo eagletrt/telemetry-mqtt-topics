@@ -1110,6 +1110,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_131:
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         break;
     }
     
@@ -3030,6 +3032,9 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_131:
         switch(topic) {
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+              return true;
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
@@ -3067,8 +3072,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
