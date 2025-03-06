@@ -243,23 +243,31 @@
               }
             }
           },
-          "command": {
-            "alias": "Command",
-            "description": "<vehicleId>/<deviceId>/command",
+          "as":{
+            "alias": "AS",
+            "description": "<vehicleId>/<deviceId>/as",
             "qos": 2,
             "retain": false,
-            "sub_topics": {
-              "steer": {
-                "alias": "CommandSteer",
-                "description": "<vehicleId>/<deviceId>/command/steer",
-                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                "publish_roles": ["0", "128"]
-              },
-              "steerStatus": {
-                "alias": "CommandSteerStatus",
-                "description": "<vehicleId>/<deviceId>/command/steerStatus",
-                "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
-                "publish_roles": ["0", "128"]
+            "sub_topics":{
+              "commands": {
+                "alias": "ASCommands",
+                "description": "<vehicleId>/<deviceId>/as/commands",
+                "qos": 2,
+                "retain": false,
+                "sub_topics": {
+                  "setValues": {
+                    "alias": "ASCommandsSetValues",
+                    "description": "<vehicleId>/<deviceId>/as/commands/setValues",
+                    "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                    "publish_roles": ["0", "128", "130"]
+                  },
+                  "setStatus": {
+                    "alias": "ASCommandsSetStatus",
+                    "description": "<vehicleId>/<deviceId>/as/commands/setStatus",
+                    "subscribe_roles": ["0", "1", "2", "3", "4", "128", "129"],
+                    "publish_roles": ["0", "128", "130"]
+                  }
+                }
               }
             }
           },
