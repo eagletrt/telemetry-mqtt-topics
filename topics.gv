@@ -104,5 +104,8 @@ graph {
 "action" -- "stopCharge";
 "action" -- "raw";
 "action" -- "resetLapcounter";
-"action" -- "setLapcounterStatus"
+"action" -- "setLapcounterStatus";
+"<vehicleId>" -- "simulator";
+"simulator" -- "inputs";
+"simulator" -- "outputs"
     }

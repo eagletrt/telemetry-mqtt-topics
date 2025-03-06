@@ -126,7 +126,10 @@ enum class Topic
     action_stop_charge = 102,
     action_raw = 103,
     action_reset_lap_counter = 104,
-    action_set_lap_counter_status = 105
+    action_set_lap_counter_status = 105,
+    simulator = 106,
+    simulator_inputs = 107,
+    simulator_outputs = 108
 };
 
 struct TopicMessage
@@ -251,6 +254,9 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicsimulator(const std::string& vehicleId);
+TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId);
+TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId);
 }
 
 #endif

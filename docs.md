@@ -848,3 +848,27 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## simulator
+### &lt;vehicleId>/simulator
+> data from and to the simulator
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleId
+## simulatorInputs
+### &lt;vehicleId>/simulator/inputs
+> 
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleId
+## simulatorOutputs
+### &lt;vehicleId>/simulator/outputs
+> 
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleId

@@ -98,6 +98,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_1:
@@ -189,6 +192,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_2:
@@ -280,6 +286,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_3:
@@ -371,6 +380,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_4:
@@ -462,6 +474,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_128:
@@ -695,6 +710,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_1:
@@ -760,6 +778,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_2:
@@ -825,6 +846,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_3:
@@ -890,6 +914,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_4:
@@ -955,6 +982,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
         break;
         
         case Role::role_128:
@@ -1214,6 +1244,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1326,6 +1359,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1438,6 +1474,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1550,6 +1589,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1662,6 +1704,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1793,6 +1838,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -1905,6 +1953,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -2017,6 +2068,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -2129,6 +2183,9 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
     }
@@ -2204,6 +2261,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2314,6 +2374,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2426,6 +2489,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2538,6 +2604,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2650,6 +2719,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2807,6 +2879,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -2919,6 +2994,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -3031,6 +3109,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
         
@@ -3142,6 +3223,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::action_set_lap_counter_status:
+            case Topic::simulator:
+            case Topic::simulator_inputs:
+            case Topic::simulator_outputs:
               return false;
         }
     }
@@ -3363,6 +3447,12 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionResetLapCounter(vehicleId, deviceId);
         case Topic::action_set_lap_counter_status: 
             return GetTopicActionSetLapCounterStatus(vehicleId, deviceId);
+        case Topic::simulator: 
+            return GetTopicsimulator(vehicleId);
+        case Topic::simulator_inputs: 
+            return GetTopicsimulatorInputs(vehicleId);
+        case Topic::simulator_outputs: 
+            return GetTopicsimulatorOutputs(vehicleId);
     }
 
     return TopicMessage("", 0, false);
@@ -4211,6 +4301,30 @@ TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const s
 TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/setLapcounterStatus";
     int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicsimulator(const std::string& vehicleId) {
+    std::string topic = vehicleId + "/" + "simulator";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId) {
+    std::string topic = vehicleId + "/" + "simulator/inputs";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId) {
+    std::string topic = vehicleId + "/" + "simulator/outputs";
+    int qos = 0;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
