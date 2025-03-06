@@ -312,27 +312,35 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
-## Command
-### &lt;vehicleId>/&lt;deviceId>/command
-> &lt;vehicleId>/&lt;deviceId>/command
+## AS
+### &lt;vehicleId>/&lt;deviceId>/as
+> &lt;vehicleId>/&lt;deviceId>/as
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## CommandSteer
-### &lt;vehicleId>/&lt;deviceId>/command/steer
-> &lt;vehicleId>/&lt;deviceId>/command/steer
+## ASCommands
+### &lt;vehicleId>/&lt;deviceId>/as/commands
+> &lt;vehicleId>/&lt;deviceId>/as/commands
 - **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## CommandSteerStatus
-### &lt;vehicleId>/&lt;deviceId>/command/steerStatus
-> &lt;vehicleId>/&lt;deviceId>/command/steerStatus
+## ASCommandsSetValues
+### &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
+> &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
 - **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 130 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ASCommandsSetStatus
+### &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
+> &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 130 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId

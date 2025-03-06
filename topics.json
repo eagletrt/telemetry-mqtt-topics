@@ -939,9 +939,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/command",
-        "alias": "Command",
-        "description": "<vehicleId>/<deviceId>/command",
+        "topic": "<vehicleId>/<deviceId>/as",
+        "alias": "AS",
+        "description": "<vehicleId>/<deviceId>/as",
         "qos": 2,
         "subscribe_roles": [
             "0",
@@ -968,9 +968,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/command/steer",
-        "alias": "CommandSteer",
-        "description": "<vehicleId>/<deviceId>/command/steer",
+        "topic": "<vehicleId>/<deviceId>/as/commands",
+        "alias": "ASCommands",
+        "description": "<vehicleId>/<deviceId>/as/commands",
         "qos": 2,
         "subscribe_roles": [
             "0",
@@ -983,7 +983,12 @@
         ],
         "publish_roles": [
             "0",
-            "128"
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
         ],
         "retain": false,
         "variables": [
@@ -992,9 +997,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/command/steerStatus",
-        "alias": "CommandSteerStatus",
-        "description": "<vehicleId>/<deviceId>/command/steerStatus",
+        "topic": "<vehicleId>/<deviceId>/as/commands/setValues",
+        "alias": "ASCommandsSetValues",
+        "description": "<vehicleId>/<deviceId>/as/commands/setValues",
         "qos": 2,
         "subscribe_roles": [
             "0",
@@ -1007,7 +1012,33 @@
         ],
         "publish_roles": [
             "0",
-            "128"
+            "128",
+            "130"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/as/commands/setStatus",
+        "alias": "ASCommandsSetStatus",
+        "description": "<vehicleId>/<deviceId>/as/commands/setStatus",
+        "qos": 2,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "128",
+            "130"
         ],
         "retain": false,
         "variables": [

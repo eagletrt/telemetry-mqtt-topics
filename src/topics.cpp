@@ -48,9 +48,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -143,9 +144,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -238,9 +240,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -333,9 +336,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -428,9 +432,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -491,9 +496,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -552,9 +558,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -663,9 +670,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -734,7 +742,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -803,7 +812,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -872,7 +882,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -941,7 +952,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -1036,9 +1048,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -1114,7 +1127,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
@@ -1152,6 +1166,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_130:
+        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
         break;
         
@@ -1204,9 +1220,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1320,9 +1337,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1436,9 +1454,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1552,9 +1571,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1668,9 +1688,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1752,9 +1773,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1868,9 +1890,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2019,9 +2042,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2147,9 +2171,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2228,9 +2253,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2344,7 +2370,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2426,8 +2453,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2460,7 +2487,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2542,8 +2570,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2576,7 +2604,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2658,8 +2687,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2692,7 +2721,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2774,8 +2804,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2834,9 +2864,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2950,7 +2981,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2987,8 +3019,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::extra_data_to_log:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
@@ -3028,6 +3060,8 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_130:
         switch(topic) {
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::info_telemetry_replay_start:
               return true;
             case Topic::vehicle_id:
@@ -3069,9 +3103,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -3183,9 +3216,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::command:
-            case Topic::command_steer:
-            case Topic::command_steer_status:
+            case Topic::a_s:
+            case Topic::a_s_commands:
+            case Topic::a_s_commands_set_values:
+            case Topic::a_s_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -3341,12 +3375,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicStatusLapCounterStatus(vehicleId, deviceId);
         case Topic::status_lap_counter_laps: 
             return GetTopicStatusLapCounterLaps(vehicleId, deviceId);
-        case Topic::command: 
-            return GetTopicCommand(vehicleId, deviceId);
-        case Topic::command_steer: 
-            return GetTopicCommandSteer(vehicleId, deviceId);
-        case Topic::command_steer_status: 
-            return GetTopicCommandSteerStatus(vehicleId, deviceId);
+        case Topic::a_s: 
+            return GetTopicAS(vehicleId, deviceId);
+        case Topic::a_s_commands: 
+            return GetTopicASCommands(vehicleId, deviceId);
+        case Topic::a_s_commands_set_values: 
+            return GetTopicASCommandsSetValues(vehicleId, deviceId);
+        case Topic::a_s_commands_set_status: 
+            return GetTopicASCommandsSetStatus(vehicleId, deviceId);
         case Topic::file_transaction_request: 
             return GetTopicFileTransactionRequest(vehicleId, deviceId);
         case Topic::file_transaction_response: 
@@ -3800,24 +3836,32 @@ TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const st
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicCommand(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "command";
+TopicMessage GetTopicAS(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "as";
     int qos = 2;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicCommandSteer(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "command/steer";
+TopicMessage GetTopicASCommands(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands";
     int qos = 2;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicCommandSteerStatus(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "command/steerStatus";
+TopicMessage GetTopicASCommandsSetValues(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands/setValues";
+    int qos = 2;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicASCommandsSetStatus(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands/setStatus";
     int qos = 2;
     bool retain = false;
 
