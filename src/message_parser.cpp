@@ -198,6 +198,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/simulator");
     this->tree.addNode("<vehicleId>/simulator/inputs");
     this->tree.addNode("<vehicleId>/simulator/outputs");
+    this->tree.addNode("<vehicleId>/simulator/initialState");
 }
 
 void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {

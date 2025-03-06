@@ -2711,5 +2711,29 @@
         "variables": [
             "vehicleId"
         ]
+    },
+    {
+        "topic": "<vehicleId>/simulator/initialState",
+        "alias": "simulatorInitialState",
+        "description": "",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId"
+        ]
     }
 ]

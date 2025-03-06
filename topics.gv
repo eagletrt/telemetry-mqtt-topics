@@ -107,5 +107,6 @@ graph {
 "action" -- "setLapcounterStatus";
 "<vehicleId>" -- "simulator";
 "simulator" -- "inputs";
-"simulator" -- "outputs"
+"simulator" -- "outputs";
+"simulator" -- "initialState"
     }

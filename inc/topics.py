@@ -120,7 +120,8 @@ class Topic(Enum):
     action_set_lap_counter_status = auto(),
     simulator = auto(),
     simulator_inputs = auto(),
-    simulator_outputs = auto()
+    simulator_outputs = auto(),
+    simulator_initial_state = auto()
 
 
 
@@ -559,6 +560,10 @@ def GetTopicsimulatorInputs(vehicleId):
 def GetTopicsimulatorOutputs(vehicleId):
     topic = vehicleId + "/" + "simulator/outputs"
     return topic
+
+def GetTopicsimulatorInitialState(vehicleId):
+    topic = vehicleId + "/" + "simulator/initialState"
+    return topic
 def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
     ret = []
 
@@ -655,6 +660,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_1:
@@ -749,6 +755,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_2:
@@ -843,6 +850,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_3:
@@ -937,6 +945,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_4:
@@ -1031,6 +1040,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_128:
@@ -1263,6 +1273,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_1:
@@ -1331,6 +1342,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_2:
@@ -1399,6 +1411,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_3:
@@ -1467,6 +1480,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_4:
@@ -1535,6 +1549,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicsimulator(vehicleId))
             ret.append(GetTopicsimulatorInputs(vehicleId))
             ret.append(GetTopicsimulatorOutputs(vehicleId))
+            ret.append(GetTopicsimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_128:

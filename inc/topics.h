@@ -129,7 +129,8 @@ enum class Topic
     action_set_lap_counter_status = 105,
     simulator = 106,
     simulator_inputs = 107,
-    simulator_outputs = 108
+    simulator_outputs = 108,
+    simulator_initial_state = 109
 };
 
 struct TopicMessage
@@ -257,6 +258,7 @@ TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, con
 TopicMessage GetTopicsimulator(const std::string& vehicleId);
 TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId);
 TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId);
+TopicMessage GetTopicsimulatorInitialState(const std::string& vehicleId);
 }
 
 #endif

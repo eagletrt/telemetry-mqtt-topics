@@ -114,6 +114,7 @@ class MessageParser:
         self.addNode("<vehicleId>/simulator",2)
         self.addNode("<vehicleId>/simulator/inputs",3)
         self.addNode("<vehicleId>/simulator/outputs",3)
+        self.addNode("<vehicleId>/simulator/initialState",3)
 
     def addNode(self, topic, layer):
         if topic != "":

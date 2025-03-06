@@ -101,6 +101,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_1:
@@ -195,6 +196,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_2:
@@ -289,6 +291,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_3:
@@ -383,6 +386,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_4:
@@ -477,6 +481,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_128:
@@ -713,6 +718,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_1:
@@ -781,6 +787,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_2:
@@ -849,6 +856,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_3:
@@ -917,6 +925,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_4:
@@ -985,6 +994,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
         ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_128:
@@ -1247,6 +1257,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1362,6 +1373,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1477,6 +1489,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1592,6 +1605,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1707,6 +1721,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1841,6 +1856,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -1956,6 +1972,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -2071,6 +2088,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -2186,6 +2204,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
     }
@@ -2264,6 +2283,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2377,6 +2397,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2492,6 +2513,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2607,6 +2629,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2722,6 +2745,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2882,6 +2906,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -2997,6 +3022,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -3112,6 +3138,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
         
@@ -3226,6 +3253,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
+            case Topic::simulator_initial_state:
               return false;
         }
     }
@@ -3453,6 +3481,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicsimulatorInputs(vehicleId);
         case Topic::simulator_outputs: 
             return GetTopicsimulatorOutputs(vehicleId);
+        case Topic::simulator_initial_state: 
+            return GetTopicsimulatorInitialState(vehicleId);
     }
 
     return TopicMessage("", 0, false);
@@ -4324,6 +4354,14 @@ TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId) {
 
 TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId) {
     std::string topic = vehicleId + "/" + "simulator/outputs";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicsimulatorInitialState(const std::string& vehicleId) {
+    std::string topic = vehicleId + "/" + "simulator/initialState";
     int qos = 0;
     bool retain = false;
 
