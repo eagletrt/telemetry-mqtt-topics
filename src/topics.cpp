@@ -469,6 +469,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
@@ -528,6 +530,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommand(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteer(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicCommandSteerStatus(vehicleId, deviceId)));
@@ -597,6 +601,25 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        break;
+        
+        case Role::role_131:
+        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
         break;
     }
 
@@ -1090,6 +1113,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         
         case Role::role_130:
         ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        break;
+        
+        case Role::role_131:
         break;
     }
     
@@ -1664,6 +1690,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_id:
             case Topic::device_version:
             case Topic::extra_data_to_log:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
@@ -1750,8 +1778,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay_ready:
@@ -1776,6 +1802,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_id:
             case Topic::device_version:
             case Topic::extra_data_to_log:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
             case Topic::command:
             case Topic::command_steer:
             case Topic::command_steer_status:
@@ -1861,8 +1889,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::status_lap_counter_status:
-            case Topic::status_lap_counter_laps:
             case Topic::info_version:
             case Topic::info_user:
             case Topic::info_telemetry_replay:
@@ -1977,6 +2003,118 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_131:
+        switch(topic) {
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config_get:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
+              return true;
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_data_to_log:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -2842,6 +2980,117 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_user:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action:
+            case Topic::action_telemetry_config:
+            case Topic::action_telemetry_config_set:
+            case Topic::action_telemetry_config_get:
+            case Topic::action_telemetry_config_content:
+            case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
+            case Topic::action_car_config:
+            case Topic::action_car_config_set:
+            case Topic::action_car_config_get:
+            case Topic::action_car_config_content:
+            case Topic::action_baseline_config:
+            case Topic::action_baseline_config_set:
+            case Topic::action_baseline_config_get:
+            case Topic::action_baseline_config_content:
+            case Topic::action_handcart_settings:
+            case Topic::action_handcart_settings_set:
+            case Topic::action_handcart_settings_get:
+            case Topic::action_handcart_settings_content:
+            case Topic::raw_json_config:
+            case Topic::raw_json_config_set:
+            case Topic::raw_json_config_get:
+            case Topic::raw_json_config_content:
+            case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
+            case Topic::action_kill:
+            case Topic::action_start:
+            case Topic::action_reset:
+            case Topic::action_stop:
+            case Topic::action_start_baseline:
+            case Topic::action_stop_baseline:
+            case Topic::action_precharge:
+            case Topic::action_balance:
+            case Topic::action_stop_balance:
+            case Topic::action_charge:
+            case Topic::action_stop_charge:
+            case Topic::action_raw:
+            case Topic::action_reset_lap_counter:
+            case Topic::action_set_lap_counter_status:
+              return false;
+        }
+        
+        case Role::role_131:
+        switch(topic) {
+            case Topic::vehicle_id:
+            case Topic::device_id:
+            case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_camera_logger:
+            case Topic::data_camera_logger_can:
+            case Topic::data_camera_logger_can_imu_angular_rate:
+            case Topic::data_camera_logger_can_imu_acceleration:
+            case Topic::data_camera_logger_can_vehicle_position:
+            case Topic::data_camera_logger_can_vehicle_speed:
+            case Topic::data_camera_logger_can_front_angular_velocity:
+            case Topic::data_camera_logger_can_rear_left_angular_velocity:
+            case Topic::data_camera_logger_can_rear_right_angular_velocity:
+            case Topic::data_camera_logger_can_steer_angle:
+            case Topic::data_camera_logger_gps:
+            case Topic::data_camera_logger_gps_hpposllh:
+            case Topic::data_camera_logger_gps_pvt:
+            case Topic::data_camera_logger_gps_relposned:
+            case Topic::extra_data_to_log:
+            case Topic::extra_tlm_data:
+            case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_baseline:
+            case Topic::extra_tlm_data_gps_map_origins:
+            case Topic::data_last_update:
+            case Topic::status:
+            case Topic::status_info:
+            case Topic::status_error:
+            case Topic::status_alert:
+            case Topic::status_can_frequencies:
+            case Topic::status_lap_counter_status:
+            case Topic::status_lap_counter_laps:
+            case Topic::command:
+            case Topic::command_steer:
+            case Topic::command_steer_status:
+            case Topic::file_transaction_request:
+            case Topic::file_transaction_response:
+            case Topic::file_transaction:
+            case Topic::file_transaction_begin:
+            case Topic::file_transaction_end:
+            case Topic::file_transaction_chunk:
+            case Topic::file_transaction_chunk_ack:
+            case Topic::info:
+            case Topic::info_version:
+            case Topic::info_user:
+            case Topic::info_telemetry_replay:
+            case Topic::info_telemetry_replay_ready:
+            case Topic::info_telemetry_replay_start:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:

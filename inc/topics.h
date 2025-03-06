@@ -15,7 +15,8 @@ enum class Role
     role_4 = 4,
     role_128 = 5,
     role_129 = 6,
-    role_130 = 7
+    role_130 = 7,
+    role_131 = 8
 };
 
 enum class Topic
