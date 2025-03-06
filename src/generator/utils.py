@@ -1,6 +1,7 @@
 import re
 from graphviz import Source
 
+
 def generate_readme(topics, file):
     file.write("# Topics\n\n")
     file.write("## Graph\n\n")
@@ -8,9 +9,10 @@ def generate_readme(topics, file):
     file.write("## Full description\n\n")
     file.write("See [docs.md](docs.md) for full description\n\n")
 
+
 def generate_dot(topics, filename):
     topics_dot = [
-        "\"" + "\" -- \"".join(el["topic"].split("/")[-2:]) + "\"" for el in topics
+        '"' + '" -- "'.join(el["topic"].split("/")[-2:]) + '"' for el in topics
     ]
     topics_dot = ";\n".join(topics_dot)
 
@@ -19,6 +21,7 @@ def generate_dot(topics, filename):
     }}"""
     s = Source(out_str, format="png")
     s.render(outfile=filename + ".png")
+
 
 def generate_docs(topics, file):
     file.write("# Topics\n\n")
@@ -39,6 +42,7 @@ def generate_docs(topics, file):
         for variable in topic["variables"]:
             file.write(variable)
         file.write("\n")
+
 
 def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
     topics = []
@@ -98,7 +102,7 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
         "subscribe_roles": subscribe_roles,
         "publish_roles": publish_roles,
         "retain": retain,
-        "variables": variables
+        "variables": variables,
     }
 
     # Append the parsed node to the list
@@ -111,55 +115,71 @@ def parse_report_tree(key: str, node: dict, parent_config: dict) -> list:
 
     return topics
 
+
 def role_enum_name(role: str) -> str:
-    return 'role_' + re.sub(r'(?<!^)(?=[A-Z])', '_', role).lower()
+    return "role_" + re.sub(r"(?<!^)(?=[A-Z])", "_", role).lower()
+
 
 def topic_enum_name(topic: str) -> str:
-    return re.sub(r'(?<!^)(?=[A-Z])', '_', topic).lower()
+    return re.sub(r"(?<!^)(?=[A-Z])", "_", topic).lower()
 
-def topic_get_name(topic: str) -> str: 
-    return ('GetTopic' + topic)
+
+def topic_get_name(topic: str) -> str:
+    return "GetTopic" + topic
+
 
 def topic_get_variables(topic: dict) -> str:
     ret = str()
-    for variable in topic['variables']:
-        if ret != '':
-            ret += ', '
-        ret += 'const std::string& ' + variable
+    for variable in topic["variables"]:
+        if ret != "":
+            ret += ", "
+        ret += "const std::string& " + variable
 
     return ret
+
+
+def topic_get_variables_py(topic: dict) -> str:
+    ret = str()
+    for variable in topic["variables"]:
+        if ret != "":
+            ret += ", "
+        ret += variable
+
+    return ret
+
 
 def topic_get_variables_values(topic: dict) -> str:
     ret = str()
-    for variable in topic['variables']:
-        if ret != '':
-            ret += ', '
+    for variable in topic["variables"]:
+        if ret != "":
+            ret += ", "
         ret += variable
-    
+
     return ret
 
+
 def topic_topic_with_variables(topic: dict) -> str:
-    ret = topic['topic']
-    
-    for variable in topic['variables']:
-        ret = ret.replace(f'/<{variable}>/', f' + "/" + {variable} + "/" + ')
-        ret = ret.replace(f'/<{variable}>', f' + "/" + {variable}')
-        ret = ret.replace(f'<{variable}>/', f'{variable} + "/" + ')
-        ret = ret.replace(f'<{variable}>', f'{variable} + "/" + ')
-        
+    ret = topic["topic"]
+
+    for variable in topic["variables"]:
+        ret = ret.replace(f"/<{variable}>/", f' + "/" + {variable} + "/" + ')
+        ret = ret.replace(f"/<{variable}>", f' + "/" + {variable}')
+        ret = ret.replace(f"<{variable}>/", f'{variable} + "/" + ')
+        ret = ret.replace(f"<{variable}>", f'{variable} + "/" + ')
+
     split = ret.split()
     for s in split:
-        if s != '"/"' and s != '+':
+        if s != '"/"' and s != "+":
             check = True
-            for variable in topic['variables']:
+            for variable in topic["variables"]:
                 if s == variable:
                     check = False
             if check:
                 split[split.index(s)] = f'"{s}"'
-    
-    ret = ' '.join(split)
-    
+
+    ret = " ".join(split)
+
     if ret.endswith('+ "/" +'):
         ret = ret[:-8]
-    
+
     return ret
