@@ -713,6 +713,9 @@
           },
           "outputs": {
             "alias": "simulatorOutputs"
+          },
+          "initialState": {
+            "alias": "simulatorInitialState"
           }
         }
       }
