@@ -701,7 +701,7 @@
         }
       },
       "simulator": {
-        "alias": "simulator",
+        "alias": "Simulator",
         "description": "data from and to the simulator",
         "qos": 0,
         "retain": false,
@@ -709,13 +709,13 @@
         "publish_roles": ["0", "1", "2", "3", "4"],
         "sub_topics": {
           "inputs": {
-            "alias": "simulatorInputs"
+            "alias": "SimulatorInputs"
           },
           "outputs": {
-            "alias": "simulatorOutputs"
+            "alias": "SimulatorOutputs"
           },
           "initialState": {
-            "alias": "simulatorInitialState"
+            "alias": "SimulatorInitialState"
           }
         }
       }
