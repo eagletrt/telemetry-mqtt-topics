@@ -98,10 +98,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_1:
@@ -193,10 +193,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_2:
@@ -288,10 +288,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_3:
@@ -383,10 +383,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_4:
@@ -478,10 +478,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_128:
@@ -715,10 +715,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_1:
@@ -784,10 +784,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_2:
@@ -853,10 +853,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_3:
@@ -922,10 +922,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_4:
@@ -991,10 +991,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicsimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicsimulatorInitialState(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
+        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
         break;
         
         case Role::role_128:
@@ -3476,13 +3476,13 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
         case Topic::action_set_lap_counter_status: 
             return GetTopicActionSetLapCounterStatus(vehicleId, deviceId);
         case Topic::simulator: 
-            return GetTopicsimulator(vehicleId);
+            return GetTopicSimulator(vehicleId);
         case Topic::simulator_inputs: 
-            return GetTopicsimulatorInputs(vehicleId);
+            return GetTopicSimulatorInputs(vehicleId);
         case Topic::simulator_outputs: 
-            return GetTopicsimulatorOutputs(vehicleId);
+            return GetTopicSimulatorOutputs(vehicleId);
         case Topic::simulator_initial_state: 
-            return GetTopicsimulatorInitialState(vehicleId);
+            return GetTopicSimulatorInitialState(vehicleId);
     }
 
     return TopicMessage("", 0, false);
@@ -4336,7 +4336,7 @@ TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, con
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicsimulator(const std::string& vehicleId) {
+TopicMessage GetTopicSimulator(const std::string& vehicleId) {
     std::string topic = vehicleId + "/" + "simulator";
     int qos = 0;
     bool retain = false;
@@ -4344,7 +4344,7 @@ TopicMessage GetTopicsimulator(const std::string& vehicleId) {
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId) {
+TopicMessage GetTopicSimulatorInputs(const std::string& vehicleId) {
     std::string topic = vehicleId + "/" + "simulator/inputs";
     int qos = 0;
     bool retain = false;
@@ -4352,7 +4352,7 @@ TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId) {
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId) {
+TopicMessage GetTopicSimulatorOutputs(const std::string& vehicleId) {
     std::string topic = vehicleId + "/" + "simulator/outputs";
     int qos = 0;
     bool retain = false;
@@ -4360,7 +4360,7 @@ TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId) {
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicsimulatorInitialState(const std::string& vehicleId) {
+TopicMessage GetTopicSimulatorInitialState(const std::string& vehicleId) {
     std::string topic = vehicleId + "/" + "simulator/initialState";
     int qos = 0;
     bool retain = false;

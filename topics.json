@@ -2642,7 +2642,7 @@
     },
     {
         "topic": "<vehicleId>/simulator",
-        "alias": "simulator",
+        "alias": "Simulator",
         "description": "data from and to the simulator",
         "qos": 0,
         "subscribe_roles": [
@@ -2666,7 +2666,7 @@
     },
     {
         "topic": "<vehicleId>/simulator/inputs",
-        "alias": "simulatorInputs",
+        "alias": "SimulatorInputs",
         "description": "",
         "qos": 0,
         "subscribe_roles": [
@@ -2690,7 +2690,7 @@
     },
     {
         "topic": "<vehicleId>/simulator/outputs",
-        "alias": "simulatorOutputs",
+        "alias": "SimulatorOutputs",
         "description": "",
         "qos": 0,
         "subscribe_roles": [
@@ -2714,7 +2714,7 @@
     },
     {
         "topic": "<vehicleId>/simulator/initialState",
-        "alias": "simulatorInitialState",
+        "alias": "SimulatorInitialState",
         "description": "",
         "qos": 0,
         "subscribe_roles": [

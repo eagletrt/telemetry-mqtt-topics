@@ -848,7 +848,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## simulator
+## Simulator
 ### &lt;vehicleId>/simulator
 > data from and to the simulator
 - **Quality of Service**: 0
@@ -856,7 +856,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleId
-## simulatorInputs
+## SimulatorInputs
 ### &lt;vehicleId>/simulator/inputs
 > 
 - **Quality of Service**: 0
@@ -864,7 +864,7 @@ vehicleId
 - **Retain**: No
 - **Variables**:
 vehicleId
-## simulatorOutputs
+## SimulatorOutputs
 ### &lt;vehicleId>/simulator/outputs
 > 
 - **Quality of Service**: 0
@@ -872,7 +872,7 @@ vehicleId
 - **Retain**: No
 - **Variables**:
 vehicleId
-## simulatorInitialState
+## SimulatorInitialState
 ### &lt;vehicleId>/simulator/initialState
 > 
 - **Quality of Service**: 0

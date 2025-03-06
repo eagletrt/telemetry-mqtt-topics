@@ -255,10 +255,10 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicsimulator(const std::string& vehicleId);
-TopicMessage GetTopicsimulatorInputs(const std::string& vehicleId);
-TopicMessage GetTopicsimulatorOutputs(const std::string& vehicleId);
-TopicMessage GetTopicsimulatorInitialState(const std::string& vehicleId);
+TopicMessage GetTopicSimulator(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorInputs(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorOutputs(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorInitialState(const std::string& vehicleId);
 }
 
 #endif
