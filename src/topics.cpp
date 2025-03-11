@@ -644,9 +644,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
     }
 
@@ -2131,9 +2130,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_baseline_config_get:
             case Topic::action_baseline_config_content:
             case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
+            case Topic::action_set_lap_counter_status:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -2210,8 +2208,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -2225,7 +2225,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
             case Topic::simulator:
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:

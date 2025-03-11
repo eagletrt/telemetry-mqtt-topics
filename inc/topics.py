@@ -1208,9 +1208,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
-            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
-            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             return ret
 
 def GetPublishTopics(role, vehicleId, deviceId, transactionId):
