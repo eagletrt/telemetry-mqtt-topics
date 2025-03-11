@@ -620,6 +620,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
         ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
+        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
         break;
     }
 
@@ -2038,6 +2039,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
+            case Topic::action_set_lap_counter_status:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -2128,7 +2130,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_stop_charge:
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
-            case Topic::action_set_lap_counter_status:
               return false;
         }
     }
