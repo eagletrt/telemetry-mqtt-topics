@@ -1209,6 +1209,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             return ret
 

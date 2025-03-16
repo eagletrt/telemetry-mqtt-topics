@@ -788,7 +788,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/stopBaseline
 > &lt;vehicleId>/&lt;deviceId>/action/stop_baseline
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
