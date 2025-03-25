@@ -17,7 +17,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role
         case Role::{{ utils.role_enum_name(role) }}:
         {% for topic in topics -%}
         {% if role in topic['subscribe_roles'] -%}
-        ret.emplace_back(std::move({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }})));
+        ret.emplace_back({{ utils.topic_get_name(topic.alias) }}({{ utils.topic_get_variables_values(topic) }}));
         {% endif -%}
         {% endfor -%}
         break;
