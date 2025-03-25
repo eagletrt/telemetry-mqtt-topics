@@ -51,9 +51,10 @@ class Topic(Enum):
     status_can_frequencies = auto(),
     status_lap_counter_status = auto(),
     status_lap_counter_laps = auto(),
-    command = auto(),
-    command_steer = auto(),
-    command_steer_status = auto(),
+    a_s = auto(),
+    a_s_commands = auto(),
+    a_s_commands_set_values = auto(),
+    a_s_commands_set_status = auto(),
     file_transaction_request = auto(),
     file_transaction_response = auto(),
     file_transaction = auto(),
@@ -117,7 +118,11 @@ class Topic(Enum):
     action_stop_charge = auto(),
     action_raw = auto(),
     action_reset_lap_counter = auto(),
-    action_set_lap_counter_status = auto()
+    action_set_lap_counter_status = auto(),
+    simulator = auto(),
+    simulator_inputs = auto(),
+    simulator_outputs = auto(),
+    simulator_initial_state = auto()
 
 
 
@@ -277,16 +282,20 @@ def GetTopicStatusLapCounterLaps(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "status/lapCounterLaps"
     return topic
 
-def GetTopicCommand(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "command"
+def GetTopicAS(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "as"
     return topic
 
-def GetTopicCommandSteer(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "command/steer"
+def GetTopicASCommands(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "as/commands"
     return topic
 
-def GetTopicCommandSteerStatus(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "command/steerStatus"
+def GetTopicASCommandsSetValues(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "as/commands/setValues"
+    return topic
+
+def GetTopicASCommandsSetStatus(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "as/commands/setStatus"
     return topic
 
 def GetTopicFileTransactionRequest(vehicleId, deviceId):
@@ -544,6 +553,22 @@ def GetTopicActionResetLapCounter(vehicleId, deviceId):
 def GetTopicActionSetLapCounterStatus(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/setLapcounterStatus"
     return topic
+
+def GetTopicSimulator(vehicleId):
+    topic = vehicleId + "/" + "simulator"
+    return topic
+
+def GetTopicSimulatorInputs(vehicleId):
+    topic = vehicleId + "/" + "simulator/inputs"
+    return topic
+
+def GetTopicSimulatorOutputs(vehicleId):
+    topic = vehicleId + "/" + "simulator/outputs"
+    return topic
+
+def GetTopicSimulatorInitialState(vehicleId):
+    topic = vehicleId + "/" + "simulator/initialState"
+    return topic
 def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
     ret = []
 
@@ -587,9 +612,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -637,6 +663,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_1:
@@ -678,9 +708,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -728,6 +759,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_2:
@@ -769,9 +804,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -819,6 +855,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_3:
@@ -860,9 +900,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -910,6 +951,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_4:
@@ -951,9 +996,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1001,6 +1047,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_128:
@@ -1010,9 +1060,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1071,9 +1122,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1156,9 +1208,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
-            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
-            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             return ret
 
@@ -1179,9 +1230,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1231,6 +1283,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_1:
@@ -1246,7 +1302,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1296,6 +1353,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_2:
@@ -1311,7 +1372,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1361,6 +1423,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_3:
@@ -1376,7 +1442,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1426,6 +1493,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_4:
@@ -1441,7 +1512,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1491,6 +1563,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicSimulator(vehicleId))
+            ret.append(GetTopicSimulatorInputs(vehicleId))
+            ret.append(GetTopicSimulatorOutputs(vehicleId))
+            ret.append(GetTopicSimulatorInitialState(vehicleId))
             return ret
             
         case Role.role_128:
@@ -1532,9 +1608,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteer(vehicleId, deviceId))
-            ret.append(GetTopicCommandSteerStatus(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1610,7 +1687,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicCommand(vehicleId, deviceId))
+            ret.append(GetTopicAS(vehicleId, deviceId))
+            ret.append(GetTopicASCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
             ret.append(GetTopicFileTransaction(vehicleId, deviceId, transactionId))
@@ -1648,6 +1726,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             return ret
             
         case Role.role_130:
+            ret.append(GetTopicASCommandsSetValues(vehicleId, deviceId))
+            ret.append(GetTopicASCommandsSetStatus(vehicleId, deviceId))
             ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
             return ret
             

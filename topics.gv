@@ -38,9 +38,10 @@ graph {
 "status" -- "canFrequencies";
 "status" -- "lapCounterStatus";
 "status" -- "lapCounterLaps";
-"<deviceId>" -- "command";
-"command" -- "steer";
-"command" -- "steerStatus";
+"<deviceId>" -- "as";
+"as" -- "commands";
+"commands" -- "setValues";
+"commands" -- "setStatus";
 "fileTransaction" -- "request";
 "fileTransaction" -- "response";
 "fileTransaction" -- "<transactionId>";
@@ -104,5 +105,9 @@ graph {
 "action" -- "stopCharge";
 "action" -- "raw";
 "action" -- "resetLapcounter";
-"action" -- "setLapcounterStatus"
+"action" -- "setLapcounterStatus";
+"<vehicleId>" -- "simulator";
+"simulator" -- "inputs";
+"simulator" -- "outputs";
+"simulator" -- "initialState"
     }

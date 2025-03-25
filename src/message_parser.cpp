@@ -128,9 +128,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/status/canFrequencies");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterLaps");
-    this->tree.addNode("<vehicleId>/<deviceId>/command");
-    this->tree.addNode("<vehicleId>/<deviceId>/command/steer");
-    this->tree.addNode("<vehicleId>/<deviceId>/command/steerStatus");
+    this->tree.addNode("<vehicleId>/<deviceId>/as");
+    this->tree.addNode("<vehicleId>/<deviceId>/as/commands");
+    this->tree.addNode("<vehicleId>/<deviceId>/as/commands/setValues");
+    this->tree.addNode("<vehicleId>/<deviceId>/as/commands/setStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/request");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/response");
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>");
@@ -195,6 +196,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
     this->tree.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus");
+    this->tree.addNode("<vehicleId>/simulator");
+    this->tree.addNode("<vehicleId>/simulator/inputs");
+    this->tree.addNode("<vehicleId>/simulator/outputs");
+    this->tree.addNode("<vehicleId>/simulator/initialState");
 }
 
 void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
