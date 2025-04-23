@@ -74,8 +74,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 %}  return false;
-            {%- else %}
+            {% if ns.check != 0 %}default:
+              return false;
             {%- endif %}
         }
         {%- if not loop.last%}
@@ -107,7 +107,9 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::{{ utils.topic_enum_name(topic.alias) }}:
             {% endif -%}
             {% endfor -%}
-            {% if ns.check != 0 %}  return false;
+            {% if ns.check != 0 %} 
+            default: 
+              return false;
             {%- endif %}
         }
         {%- if not loop.last%}
