@@ -1294,6 +1294,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1411,6 +1412,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1528,6 +1530,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1645,6 +1648,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1762,6 +1766,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1879,6 +1884,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -1996,6 +2002,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -2113,6 +2120,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -2230,6 +2238,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
     }
@@ -2353,6 +2362,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2470,6 +2481,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2587,6 +2600,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2704,6 +2719,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2821,6 +2838,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2938,6 +2957,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
@@ -3055,6 +3076,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
@@ -3172,6 +3195,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
@@ -3288,6 +3313,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
     }
