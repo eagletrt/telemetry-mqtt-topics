@@ -940,7 +940,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/as",
-        "alias": "AS",
+        "alias": "As",
         "description": "<vehicleId>/<deviceId>/as",
         "qos": 2,
         "subscribe_roles": [
@@ -969,7 +969,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/as/commands",
-        "alias": "ASCommands",
+        "alias": "AsCommands",
         "description": "<vehicleId>/<deviceId>/as/commands",
         "qos": 2,
         "subscribe_roles": [
@@ -998,7 +998,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/as/commands/setValues",
-        "alias": "ASCommandsSetValues",
+        "alias": "AsCommandsSetValues",
         "description": "<vehicleId>/<deviceId>/as/commands/setValues",
         "qos": 2,
         "subscribe_roles": [
@@ -1023,7 +1023,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/as/commands/setStatus",
-        "alias": "ASCommandsSetStatus",
+        "alias": "AsCommandsSetStatus",
         "description": "<vehicleId>/<deviceId>/as/commands/setStatus",
         "qos": 2,
         "subscribe_roles": [
