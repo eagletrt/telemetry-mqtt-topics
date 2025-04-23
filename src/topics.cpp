@@ -10,643 +10,643 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
     
     switch(role) {
         case Role::role_0:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_1:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_2:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_3:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_4:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_128:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
         break;
         
         case Role::role_129:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
         break;
         
         case Role::role_130:
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
         break;
         
         case Role::role_131:
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
         break;
     }
 
@@ -658,517 +658,517 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
     
     switch(role) {
         case Role::role_0:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_1:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_2:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_3:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_4:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraDataToLog(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackSet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackGet(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionKill(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStart(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionReset(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStop(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStartBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionPrecharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopBalance(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionStopCharge(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionResetLapCounter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSetLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicSimulator(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorOutputs(vehicleId)));
-        ret.emplace_back(std::move(GetTopicSimulatorInitialState(vehicleId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStop(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStartBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionPrecharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopBalance(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionStopCharge(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSetLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicSimulator(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorOutputs(vehicleId));
+        ret.emplace_back(GetTopicSimulatorInitialState(vehicleId));
         break;
         
         case Role::role_128:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         break;
         
         case Role::role_129:
-        ret.emplace_back(std::move(GetTopicVehicleId(vehicleId)));
-        ret.emplace_back(std::move(GetTopicDeviceId(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDeviceVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataPrimary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSecondary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBms(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataInverter(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataSimulator(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataBrusa(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataTemporary(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLogger(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCan(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmData(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataBaseline(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicDataLastUpdate(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusError(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusAlert(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusCanFrequencies(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicStatusLapCounterLaps(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAS(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommands(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionRequest(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionResponse(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicFileTransaction(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId)));
-        ret.emplace_back(std::move(GetTopicInfo(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoVersion(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoUser(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplay(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSession(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStarted(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionStopped(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoSessionKeepalive(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicAction(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionTelemetryConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionSessionConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionCarConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionBaselineConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettings(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionHandcartSettingsContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicRawJsonConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfig(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterConfigContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrack(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionLapCounterTrackContent(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicActionRaw(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicVehicleId(vehicleId));
+        ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanImuAcceleration(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehiclePosition(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanVehicleSpeed(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanFrontAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearLeftAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanRearRightAngularVelocity(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerCanSteerAngle(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusError(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAs(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransactionResponse(vehicleId, deviceId));
+        ret.emplace_back(GetTopicFileTransaction(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionBegin(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionEnd(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAction(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettings(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionHandcartSettingsContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         break;
         
         case Role::role_130:
-        ret.emplace_back(std::move(GetTopicASCommandsSetValues(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicASCommandsSetStatus(vehicleId, deviceId)));
-        ret.emplace_back(std::move(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId)));
+        ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
+        ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         break;
         
         case Role::role_131:
@@ -1220,10 +1220,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1294,6 +1294,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1337,10 +1338,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1411,6 +1412,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1454,10 +1456,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1528,6 +1530,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1571,10 +1574,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1645,6 +1648,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1688,10 +1692,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1762,6 +1766,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_set_lap_counter_status:
+            default:
               return false;
         }
         
@@ -1773,10 +1778,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1879,6 +1884,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -1890,10 +1896,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -1996,6 +2002,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -2042,10 +2049,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2113,6 +2120,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
         
@@ -2171,10 +2179,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2230,6 +2238,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+            default:
               return false;
         }
     }
@@ -2253,10 +2262,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2353,6 +2362,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2370,8 +2381,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2453,8 +2464,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2470,6 +2481,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2487,8 +2500,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2570,8 +2583,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2587,6 +2600,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2604,8 +2619,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2687,8 +2702,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2704,6 +2719,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2721,8 +2738,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2804,8 +2821,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -2821,6 +2838,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+             
+            default: 
               return false;
         }
         
@@ -2864,10 +2883,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -2938,6 +2957,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
@@ -2981,8 +3002,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -3019,8 +3040,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::extra_data_to_log:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
@@ -3055,13 +3076,15 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
         case Role::role_130:
         switch(topic) {
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::info_telemetry_replay_start:
               return true;
             case Topic::vehicle_id:
@@ -3103,8 +3126,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
+            case Topic::as:
+            case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -3172,6 +3195,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
         
@@ -3216,10 +3241,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
-            case Topic::a_s:
-            case Topic::a_s_commands:
-            case Topic::a_s_commands_set_values:
-            case Topic::a_s_commands_set_status:
+            case Topic::as:
+            case Topic::as_commands:
+            case Topic::as_commands_set_values:
+            case Topic::as_commands_set_status:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
             case Topic::file_transaction:
@@ -3288,6 +3313,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::simulator_inputs:
             case Topic::simulator_outputs:
             case Topic::simulator_initial_state:
+             
+            default: 
               return false;
         }
     }
@@ -3375,14 +3402,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicStatusLapCounterStatus(vehicleId, deviceId);
         case Topic::status_lap_counter_laps: 
             return GetTopicStatusLapCounterLaps(vehicleId, deviceId);
-        case Topic::a_s: 
-            return GetTopicAS(vehicleId, deviceId);
-        case Topic::a_s_commands: 
-            return GetTopicASCommands(vehicleId, deviceId);
-        case Topic::a_s_commands_set_values: 
-            return GetTopicASCommandsSetValues(vehicleId, deviceId);
-        case Topic::a_s_commands_set_status: 
-            return GetTopicASCommandsSetStatus(vehicleId, deviceId);
+        case Topic::as: 
+            return GetTopicAs(vehicleId, deviceId);
+        case Topic::as_commands: 
+            return GetTopicAsCommands(vehicleId, deviceId);
+        case Topic::as_commands_set_values: 
+            return GetTopicAsCommandsSetValues(vehicleId, deviceId);
+        case Topic::as_commands_set_status: 
+            return GetTopicAsCommandsSetStatus(vehicleId, deviceId);
         case Topic::file_transaction_request: 
             return GetTopicFileTransactionRequest(vehicleId, deviceId);
         case Topic::file_transaction_response: 
@@ -3836,7 +3863,7 @@ TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const st
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicAS(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicAs(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "as";
     int qos = 2;
     bool retain = false;
@@ -3844,7 +3871,7 @@ TopicMessage GetTopicAS(const std::string& vehicleId, const std::string& deviceI
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicASCommands(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicAsCommands(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands";
     int qos = 2;
     bool retain = false;
@@ -3852,7 +3879,7 @@ TopicMessage GetTopicASCommands(const std::string& vehicleId, const std::string&
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicASCommandsSetValues(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicAsCommandsSetValues(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands/setValues";
     int qos = 2;
     bool retain = false;
@@ -3860,7 +3887,7 @@ TopicMessage GetTopicASCommandsSetValues(const std::string& vehicleId, const std
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicASCommandsSetStatus(const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicAsCommandsSetStatus(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "as/commands/setStatus";
     int qos = 2;
     bool retain = false;

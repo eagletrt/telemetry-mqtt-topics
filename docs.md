@@ -312,7 +312,7 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
-## AS
+## As
 ### &lt;vehicleId>/&lt;deviceId>/as
 > &lt;vehicleId>/&lt;deviceId>/as
 - **Quality of Service**: 2
@@ -320,7 +320,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## ASCommands
+## AsCommands
 ### &lt;vehicleId>/&lt;deviceId>/as/commands
 > &lt;vehicleId>/&lt;deviceId>/as/commands
 - **Quality of Service**: 2
@@ -328,7 +328,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## ASCommandsSetValues
+## AsCommandsSetValues
 ### &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
 > &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
 - **Quality of Service**: 2
@@ -336,7 +336,7 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## ASCommandsSetStatus
+## AsCommandsSetStatus
 ### &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
 > &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
 - **Quality of Service**: 2

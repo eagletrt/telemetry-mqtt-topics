@@ -60,10 +60,10 @@ enum class Topic
     status_can_frequencies = 36,
     status_lap_counter_status = 37,
     status_lap_counter_laps = 38,
-    a_s = 39,
-    a_s_commands = 40,
-    a_s_commands_set_values = 41,
-    a_s_commands_set_status = 42,
+    as = 39,
+    as_commands = 40,
+    as_commands_set_values = 41,
+    as_commands_set_status = 42,
     file_transaction_request = 43,
     file_transaction_response = 44,
     file_transaction = 45,
@@ -189,10 +189,10 @@ TopicMessage GetTopicStatusAlert(const std::string& vehicleId, const std::string
 TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicStatusLapCounterStatus(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicStatusLapCounterLaps(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicAS(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicASCommands(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicASCommandsSetValues(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicASCommandsSetStatus(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicAs(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicAsCommands(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicAsCommandsSetValues(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicAsCommandsSetStatus(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransactionRequest(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransactionResponse(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicFileTransaction(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
