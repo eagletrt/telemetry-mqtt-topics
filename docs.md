@@ -692,7 +692,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/set
 - **Quality of Service**: 0
-- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 128 129 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -708,7 +708,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -856,6 +856,22 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## query
+### &lt;vehicleId>/query
+> query from telemetry-app
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleId
+## Response
+### &lt;vehicleId>/query/response
+> 
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleId
 ## Simulator
 ### &lt;vehicleId>/simulator
 > data from and to the simulator

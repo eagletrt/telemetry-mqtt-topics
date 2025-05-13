@@ -119,6 +119,8 @@ class Topic(Enum):
     action_raw = auto(),
     action_reset_lap_counter = auto(),
     action_set_lap_counter_status = auto(),
+    query = auto(),
+    response = auto(),
     simulator = auto(),
     simulator_inputs = auto(),
     simulator_outputs = auto(),
@@ -554,6 +556,14 @@ def GetTopicActionSetLapCounterStatus(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/setLapcounterStatus"
     return topic
 
+def GetTopicquery(vehicleId):
+    topic = vehicleId + "/" + "query"
+    return topic
+
+def GetTopicResponse(vehicleId):
+    topic = vehicleId + "/" + "query/response"
+    return topic
+
 def GetTopicSimulator(vehicleId):
     topic = vehicleId + "/" + "simulator"
     return topic
@@ -663,6 +673,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -759,6 +771,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -855,6 +869,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -951,6 +967,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1047,6 +1065,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1207,10 +1227,14 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             return ret
 
 def GetPublishTopics(role, vehicleId, deviceId, transactionId):
@@ -1283,6 +1307,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1353,6 +1379,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1423,6 +1451,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1493,6 +1523,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1563,6 +1595,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             ret.append(GetTopicSimulator(vehicleId))
             ret.append(GetTopicSimulatorInputs(vehicleId))
             ret.append(GetTopicSimulatorOutputs(vehicleId))
@@ -1732,4 +1766,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             return ret
             
         case Role.role_131:
+            ret.append(GetTopicquery(vehicleId))
+            ret.append(GetTopicResponse(vehicleId))
             return ret
