@@ -196,8 +196,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
     this->tree.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus");
-    this->tree.addNode("<vehicleId>/query");
-    this->tree.addNode("<vehicleId>/query/response");
     this->tree.addNode("<vehicleId>/simulator");
     this->tree.addNode("<vehicleId>/simulator/inputs");
     this->tree.addNode("<vehicleId>/simulator/outputs");

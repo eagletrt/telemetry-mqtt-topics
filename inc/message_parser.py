@@ -112,8 +112,6 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/action/raw",4)
         self.addNode("<vehicleId>/<deviceId>/action/resetLapcounter",4)
         self.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus",4)
-        self.addNode("<vehicleId>/query",2)
-        self.addNode("<vehicleId>/query/response",3)
         self.addNode("<vehicleId>/simulator",2)
         self.addNode("<vehicleId>/simulator/inputs",3)
         self.addNode("<vehicleId>/simulator/outputs",3)

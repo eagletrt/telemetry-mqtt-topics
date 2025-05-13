@@ -106,8 +106,6 @@ graph {
 "action" -- "raw";
 "action" -- "resetLapcounter";
 "action" -- "setLapcounterStatus";
-"<vehicleId>" -- "query";
-"query" -- "response";
 "<vehicleId>" -- "simulator";
 "simulator" -- "inputs";
 "simulator" -- "outputs";

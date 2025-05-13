@@ -856,22 +856,6 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## query
-### &lt;vehicleId>/query
-> query from telemetry-app
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleId
-## Response
-### &lt;vehicleId>/query/response
-> 
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleId
 ## Simulator
 ### &lt;vehicleId>/simulator
 > data from and to the simulator
