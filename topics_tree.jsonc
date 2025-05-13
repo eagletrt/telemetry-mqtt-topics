@@ -717,19 +717,6 @@
           }
         }
       },
-      "query" : {
-        "alias": "query",
-        "description": "query from telemetry-app",
-        "qos": 0,
-        "retain": false,
-        "subscribe_roles": ["0", "1", "2", "3", "4","131"],
-        "publish_roles": ["0", "1", "2", "3", "4","131"],
-        "sub_topics":{
-          "response":{
-            "alias": "Response"
-          }
-        }
-      },
       "simulator": {
         "alias": "Simulator",
         "description": "data from and to the simulator",
