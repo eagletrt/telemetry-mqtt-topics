@@ -35,37 +35,57 @@ class MessageParser:
                     function=None,
                 )
 
-    def findNode(self, topic):
-        if topic != "":
-            topic_split = topic.split("/")
-        topic_split[0] = "<vehicleId>"
-        topic_split[1] = "<deviceId>"
-        _topic_split = "/".join(topic_split)
-        topic_split = _topic_split.split("/")
+    def findNode(self,variables, topic):
+        topic_splitWithVariables = topic.split("/")
+        matchV=False
+        matchD=False
+        matchT=False
+        foundT=False
         _node = None
-        match = [False] * len(topic_split)
-        for i in range(len(topic_split)):
+        for i in range(len(topic_splitWithVariables)):
             for node in LevelOrderIter(self.tree, maxlevel=i + 1):
-                if node.name == topic_split[i]:
+                if(node.name == "<vehicleId>"):
+                    if(topic_splitWithVariables[i]!="#" and topic_splitWithVariables[i]!="+"):
+                        for var in variables:
+                            if(topic_splitWithVariables[i]==var):
+                                matchV=True
+                    else:
+                        matchV=True 
+                elif(node.name == "<deviceId>"):
+                    if(topic_splitWithVariables[i]!="#" and topic_splitWithVariables[i]!="+"):
+                        for var in variables:
+                            if(topic_splitWithVariables[i]==var):
+                                matchD=True
+                    else:
+                        matchD=True 
+                elif(node.name == "<transactionId>"):
+                    foundT = True
+                    if(topic_splitWithVariables[i]!="#" and topic_splitWithVariables[i]!="+"):
+                        for var in variables:
+                            if(topic_splitWithVariables[i]==var):
+                                matchT=True
+                    else:
+                       matchT = True
+                else:
                     _node = node
-                    match[i] = True
-        return _node
+        
+        if(matchV and matchD):
+            if(foundT):
+                if(matchT):
+                    return _node
+        else:
+            return None
 
     def setMessageParse(self, topic, parse_function, argument):
-        topic_split = topic.split("/")
-        topic_split[0] = "<vehicleId>"
-        topic_split[1] = "<deviceId>"
-        _topic = "/".join(topic_split)
-        _node = self.findNode(_topic)
+        _node = self.findNode(["#","#","#"],topic) # ignore varibles
         if _node != None:
             _node.function = parse_function
             _node.arg = argument
+    
 
-    def parseMessage(self, topic, payload):
-        topic_split = topic.split("/")
-        topic_split[0] = "<vehicleId>"
-        topic_split[1] = "<deviceId>"
-        _topic = "/".join(topic_split)
-        _node = self.findNode(_topic)
+
+    
+    def parseMessage(self,variables, topic, payload):
+        _node = self.findNode(variables,topic)
         if _node != None and _node.function != None and _node.arg != None:
             _node.function(payload, _node.arg)
