@@ -35,55 +35,40 @@ class MessageParser:
                     function=None,
                 )
 
-    def findNode(self,variables, topic):
+    def findNode(self, variables, topic):
         topic_splitWithVariables = topic.split("/")
-        hashtag = 3;
-        matchV=False
-        matchD=False
-        matchT=False
-        foundT=False
         _node = None
-        for i in range(len(topic_splitWithVariables)):
-            for node in LevelOrderIter(self.tree, maxlevel=i + 1):
-                
-                if(node.name == "<vehicleId>"):
-                    for var in variables:
-                        if(topic_splitWithVariables[i]==var):
-                            matchV=True
-                    if(not matchV):
-                        if("#" in variables and hashtag>0):
-                            matchV = True
-                            hashtag -=1     
-                elif(node.name == "<deviceId>"):
-                    for var in variables:
-                        if(topic_splitWithVariables[i]==var):
-                            matchD=True
-                    if(not matchD):
-                        if("#" in variables and hashtag>0):
-                            matchD = True
-                            hashtag -=1 
-                elif(node.name == "<transactionId>"):
-                    foundT = True
-                    for var in variables:
-                        if(topic_splitWithVariables[i]==var):
-                            matchT=True
-                    if(not matchT):
-                        if("#" in variables and hashtag>0):
-                            matchT = True
-                            hashtag -=1 
-                else:
-                    _node = node
+        matchV = matchD = matchT = False
+        foundT = False
 
-        if(not foundT):
-            if(matchV and matchD):
-                return _node
-            else:
-                return None
+        for i, node in enumerate(LevelOrderIter(self.tree)):
+            if i >= len(topic_splitWithVariables):
+                break
+            part = topic_splitWithVariables[i]
+
+            if node.name == "<vehicleId>":
+                if len(variables) > 0 and variables[0] == part:
+                    matchV = True
+                elif "#" in variables:
+                    matchV = True
+            elif node.name == "<deviceId>":
+                if len(variables) > 1 and variables[1] == part:
+                    matchD = True
+                elif "#" in variables:
+                    matchD = True
+            elif node.name == "<transactionId>":
+                foundT = True
+                if len(variables) > 2 and variables[2] == part:
+                    matchT = True
+                elif "#" in variables:
+                    matchT = True
+            elif node.name == part:
+                _node = node
+
+        if not foundT:
+            return _node if matchV and matchD else None
         else:
-            if(matchV and matchD and matchT):
-                return _node
-            else:
-                return None 
+            return _node if matchV and matchD and matchT else None
 
     def setMessageParse(self, topic, parse_function, argument):
         _node = self.findNode(["#","#","#"],topic) # ignore varibles
