@@ -155,18 +155,18 @@ class MessageParser:
             if node.name == "<vehicleId>":
                 if len(variables) > 0 and variables[0] == part:
                     matchV = True
-                elif "#" in variables:
+                elif "#" in variables[0]:
                     matchV = True
             elif node.name == "<deviceId>":
                 if len(variables) > 1 and variables[1] == part:
                     matchD = True
-                elif "#" in variables:
+                elif "#" in variables[1]:
                     matchD = True
             elif node.name == "<transactionId>":
                 foundT = True
                 if len(variables) > 2 and variables[2] == part:
                     matchT = True
-                elif "#" in variables:
+                elif "#" in variables[2]:
                     matchT = True
             elif node.name == part:
                 _node = node
