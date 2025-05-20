@@ -195,10 +195,11 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
     this->tree.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus");
-    this->tree.addNode("<vehicleId>/simulator");
-    this->tree.addNode("<vehicleId>/simulator/inputs");
-    this->tree.addNode("<vehicleId>/simulator/outputs");
-    this->tree.addNode("<vehicleId>/simulator/initialState");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/content");
 }
 
 void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {

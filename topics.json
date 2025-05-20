@@ -2645,99 +2645,143 @@
         ]
     },
     {
-        "topic": "<vehicleId>/simulator",
-        "alias": "Simulator",
-        "description": "data from and to the simulator",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>",
+        "alias": "Query",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>",
         "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
-            "vehicleId"
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
-        "topic": "<vehicleId>/simulator/inputs",
-        "alias": "SimulatorInputs",
-        "description": "",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/baseline",
+        "alias": "QueryBaseline",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline",
         "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
-            "vehicleId"
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
-        "topic": "<vehicleId>/simulator/outputs",
-        "alias": "SimulatorOutputs",
-        "description": "",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get",
+        "alias": "QueryBaselineGet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get",
         "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
-            "vehicleId"
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     },
     {
-        "topic": "<vehicleId>/simulator/initialState",
-        "alias": "SimulatorInitialState",
-        "description": "",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/set",
+        "alias": "QueryBaselineSet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/set",
         "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
-            "vehicleId"
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content",
+        "alias": "QueryBaselineContent",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
         ]
     }
 ]

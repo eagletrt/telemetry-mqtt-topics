@@ -105,8 +105,9 @@ graph {
 "action" -- "raw";
 "action" -- "resetLapcounter";
 "action" -- "setLapcounterStatus";
-"<vehicleId>" -- "simulator";
-"simulator" -- "inputs";
-"simulator" -- "outputs";
-"simulator" -- "initialState"
+"query" -- "<transactionId>";
+"<transactionId>" -- "baseline";
+"baseline" -- "get";
+"baseline" -- "set";
+"baseline" -- "content"
     }

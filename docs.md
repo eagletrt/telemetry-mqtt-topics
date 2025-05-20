@@ -848,35 +848,43 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## Simulator
-### &lt;vehicleId>/simulator
-> data from and to the simulator
+## Query
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
-vehicleId
-## SimulatorInputs
-### &lt;vehicleId>/simulator/inputs
-> 
+vehicleIddeviceIdtransactionId
+## QueryBaseline
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
-vehicleId
-## SimulatorOutputs
-### &lt;vehicleId>/simulator/outputs
-> 
+vehicleIddeviceIdtransactionId
+## QueryBaselineGet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/get
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/get
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
-vehicleId
-## SimulatorInitialState
-### &lt;vehicleId>/simulator/initialState
-> 
+vehicleIddeviceIdtransactionId
+## QueryBaselineSet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/set
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/set
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
-vehicleId
+vehicleIddeviceIdtransactionId
+## QueryBaselineContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/content
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/baseline/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId

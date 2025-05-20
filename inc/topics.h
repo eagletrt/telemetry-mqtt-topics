@@ -127,10 +127,11 @@ enum class Topic
     action_raw = 103,
     action_reset_lap_counter = 104,
     action_set_lap_counter_status = 105,
-    simulator = 106,
-    simulator_inputs = 107,
-    simulator_outputs = 108,
-    simulator_initial_state = 109
+    query = 106,
+    query_baseline = 107,
+    query_baseline_get = 108,
+    query_baseline_set = 109,
+    query_baseline_content = 110
 };
 
 struct TopicMessage
@@ -255,10 +256,11 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionSetLapCounterStatus(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicSimulator(const std::string& vehicleId);
-TopicMessage GetTopicSimulatorInputs(const std::string& vehicleId);
-TopicMessage GetTopicSimulatorOutputs(const std::string& vehicleId);
-TopicMessage GetTopicSimulatorInitialState(const std::string& vehicleId);
+TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryBaseline(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryBaselineGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryBaselineSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryBaselineContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 }
 
 #endif
