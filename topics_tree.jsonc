@@ -706,8 +706,39 @@
                 "publish_roles": ["0", "1", "2", "3", "4"]
               }
             }
+          },
+          "query/<transactionId>": {
+            "alias": "Query",
+            "description": "<vehicleId>/<deviceId>/query/<transactionId>",
+            "qos": 0,
+            "retain": false,
+            "subscribe_roles": ["0", "1", "2", "3", "4","131"],
+            "publish_roles": ["0", "1", "2", "3", "4","131"],
+            "variables": ["transactionId"],
+            "sub_topics": {
+              "baseline": {
+                "alias": "QueryBaseline",
+                "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline",
+                "subscribe_roles": ["0", "1", "2", "3", "4","131"],
+                "publish_roles": ["0", "1", "2", "3", "4","131"],
+                "sub_topics":{
+                  "get":{
+                    "alias": "QueryBaselineGet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get"
+                  },
+                  "set":{
+                    "alias": "QueryBaselineSet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/set"
+                  },
+                  "content":{
+                    "alias": "QueryBaselineContent",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content"
+                  }
+                }
+              }
+            }
           }
-        }
+          
       },
       "simulator": {
         "alias": "Simulator",
@@ -730,4 +761,5 @@
       }
     }
   }
+}
 }
