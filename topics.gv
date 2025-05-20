@@ -38,8 +38,7 @@ graph {
 "status" -- "canFrequencies";
 "status" -- "lapCounterStatus";
 "status" -- "lapCounterLaps";
-"<deviceId>" -- "as";
-"as" -- "commands";
+"<deviceId>" -- "commands";
 "commands" -- "setValues";
 "commands" -- "setStatus";
 "fileTransaction" -- "request";

@@ -44,10 +44,9 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/status/canFrequencies",4)
         self.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus",4)
         self.addNode("<vehicleId>/<deviceId>/status/lapCounterLaps",4)
-        self.addNode("<vehicleId>/<deviceId>/as",3)
-        self.addNode("<vehicleId>/<deviceId>/as/commands",4)
-        self.addNode("<vehicleId>/<deviceId>/as/commands/setValues",5)
-        self.addNode("<vehicleId>/<deviceId>/as/commands/setStatus",5)
+        self.addNode("<vehicleId>/<deviceId>/commands",3)
+        self.addNode("<vehicleId>/<deviceId>/commands/setValues",4)
+        self.addNode("<vehicleId>/<deviceId>/commands/setStatus",4)
         self.addNode("<vehicleId>/<deviceId>/fileTransaction/request",4)
         self.addNode("<vehicleId>/<deviceId>/fileTransaction/response",4)
         self.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>",4)
@@ -147,34 +146,35 @@ class MessageParser:
         matchV = matchD = matchT = False
         foundT = False
 
-        for i, node in enumerate(LevelOrderIter(self.tree)):
-            if i >= len(topic_splitWithVariables):
-                break
-            part = topic_splitWithVariables[i]
+        for i in range(len(topic_splitWithVariables)):
+            for node in LevelOrderIter(self.tree, maxlevel=i + 1):
+                    if node.name == topic_splitWithVariables[i]:
+                        _node = node
+                    else:
+                        if(node.name == "<vehicleId>"):
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchV = True
+                        
 
-            if node.name == "<vehicleId>":
-                if len(variables) > 0 and variables[0] == part:
-                    matchV = True
-                elif "#" in variables[0]:
-                    matchV = True
-            elif node.name == "<deviceId>":
-                if len(variables) > 1 and variables[1] == part:
-                    matchD = True
-                elif "#" in variables[1]:
-                    matchD = True
-            elif node.name == "<transactionId>":
-                foundT = True
-                if len(variables) > 2 and variables[2] == part:
-                    matchT = True
-                elif "#" in variables[2]:
-                    matchT = True
-            elif node.name == part:
-                _node = node
-
-        if not foundT:
-            return _node if matchV and matchD else None
+                        if(node.name == "<deviceId>"):
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchD = True
+                        
+                        if(node.name == "<transactionId>"):
+                            foundT = True
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchT = True
+                    
+        if(matchV and matchD):
+            return _node
+        elif(foundT and matchV and matchD and matchT):
+            return _node
         else:
-            return _node if matchV and matchD and matchT else None
+            return None
+
 
     def setMessageParse(self, topic, parse_function, argument):
         _node = self.findNode(["#","#","#"],topic) # ignore varibles

@@ -312,33 +312,25 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
-## As
-### &lt;vehicleId>/&lt;deviceId>/as
-> &lt;vehicleId>/&lt;deviceId>/as
-- **Quality of Service**: 2
-- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceId
 ## AsCommands
-### &lt;vehicleId>/&lt;deviceId>/as/commands
-> &lt;vehicleId>/&lt;deviceId>/as/commands
+### &lt;vehicleId>/&lt;deviceId>/commands
+> &lt;vehicleId>/&lt;deviceId>/asCommands
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## AsCommandsSetValues
-### &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
-> &lt;vehicleId>/&lt;deviceId>/as/commands/setValues
+### &lt;vehicleId>/&lt;deviceId>/commands/setValues
+> &lt;vehicleId>/&lt;deviceId>/asCommands/setValues
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 130 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
 ## AsCommandsSetStatus
-### &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
-> &lt;vehicleId>/&lt;deviceId>/as/commands/setStatus
+### &lt;vehicleId>/&lt;deviceId>/commands/setStatus
+> &lt;vehicleId>/&lt;deviceId>/asCommands/setStatus
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 128 130 
 - **Retain**: No
@@ -692,7 +684,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/set
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/set
 - **Quality of Service**: 0
-- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Subscribe Roles**: 128 129 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -708,7 +700,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId

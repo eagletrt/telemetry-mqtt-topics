@@ -51,7 +51,6 @@ class Topic(Enum):
     status_can_frequencies = auto(),
     status_lap_counter_status = auto(),
     status_lap_counter_laps = auto(),
-    as = auto(),
     as_commands = auto(),
     as_commands_set_values = auto(),
     as_commands_set_status = auto(),
@@ -282,20 +281,16 @@ def GetTopicStatusLapCounterLaps(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "status/lapCounterLaps"
     return topic
 
-def GetTopicAs(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "as"
-    return topic
-
 def GetTopicAsCommands(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "as/commands"
+    topic = vehicleId + "/" + deviceId + "/" + "commands"
     return topic
 
 def GetTopicAsCommandsSetValues(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "as/commands/setValues"
+    topic = vehicleId + "/" + deviceId + "/" + "commands/setValues"
     return topic
 
 def GetTopicAsCommandsSetStatus(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "as/commands/setStatus"
+    topic = vehicleId + "/" + deviceId + "/" + "commands/setStatus"
     return topic
 
 def GetTopicFileTransactionRequest(vehicleId, deviceId):
@@ -612,7 +607,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -708,7 +702,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -804,7 +797,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -900,7 +892,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -996,7 +987,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -1060,7 +1050,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -1122,7 +1111,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -1207,7 +1195,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
@@ -1230,7 +1220,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -1302,7 +1291,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
@@ -1372,7 +1360,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
@@ -1442,7 +1429,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
@@ -1512,7 +1498,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
@@ -1608,7 +1593,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
@@ -1687,7 +1671,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicStatusCanFrequencies(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
-            ret.append(GetTopicAs(vehicleId, deviceId))
             ret.append(GetTopicAsCommands(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionRequest(vehicleId, deviceId))
             ret.append(GetTopicFileTransactionResponse(vehicleId, deviceId))
