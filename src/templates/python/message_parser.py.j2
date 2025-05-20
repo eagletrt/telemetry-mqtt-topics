@@ -43,10 +43,32 @@ class MessageParser:
 
         for i in range(len(topic_splitWithVariables)):
             for node in LevelOrderIter(self.tree, maxlevel=i + 1):
-                if node.name == topic_splitWithVariables[i]:
-                    _node = node
-    
-        return _node
+                    if node.name == topic_splitWithVariables[i]:
+                        _node = node
+                    else:
+                        if(node.name == "<vehicleId>"):
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchV = True
+                        
+
+                        if(node.name == "<deviceId>"):
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchD = True
+                        
+                        if(node.name == "<transactionId>"):
+                            foundT = True
+                            if(topic_splitWithVariables[i] in variables or "#" in variables):
+                                #matchV
+                                matchT = True
+                    
+        if(matchV and matchD):
+            return _node
+        elif(foundT and matchV and matchD and matchT):
+            return _node
+        else:
+            return None
 
 
     def setMessageParse(self, topic, parse_function, argument):
