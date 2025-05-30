@@ -58,6 +58,7 @@ graph {
 "session" -- "started";
 "session" -- "stopped";
 "session" -- "logging";
+"info" -- "newLap";
 "<deviceId>" -- "action";
 "action" -- "telemetryConfig";
 "telemetryConfig" -- "set";

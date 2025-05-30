@@ -148,6 +148,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/info/session/started");
     this->tree.addNode("<vehicleId>/<deviceId>/info/session/stopped");
     this->tree.addNode("<vehicleId>/<deviceId>/info/session/logging");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/newLap");
     this->tree.addNode("<vehicleId>/<deviceId>/action");
     this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig");
     this->tree.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/set");

@@ -71,6 +71,7 @@ class Topic(Enum):
     info_session_started = auto(),
     info_session_stopped = auto(),
     info_session_keepalive = auto(),
+    info_new_lap = auto(),
     action = auto(),
     action_telemetry_config = auto(),
     action_telemetry_config_set = auto(),
@@ -362,6 +363,10 @@ def GetTopicInfoSessionKeepalive(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "info/session/logging"
     return topic
 
+def GetTopicInfoNewLap(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/newLap"
+    return topic
+
 def GetTopicAction(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action"
     return topic
@@ -632,6 +637,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -728,6 +734,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -824,6 +831,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -920,6 +928,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -1016,6 +1025,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -1632,6 +1642,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
@@ -1708,6 +1719,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
             ret.append(GetTopicAction(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
             ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))

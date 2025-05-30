@@ -68,6 +68,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -164,6 +165,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -260,6 +262,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -356,6 +359,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -452,6 +456,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -1072,6 +1077,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -1148,6 +1154,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoNewLap(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
@@ -1248,6 +1255,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -1366,6 +1374,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -1484,6 +1493,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -1602,6 +1612,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -1720,6 +1731,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -1879,6 +1891,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -1997,6 +2010,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2076,6 +2090,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2214,6 +2229,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
@@ -2362,6 +2378,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2481,6 +2498,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2600,6 +2618,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2719,6 +2738,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2838,6 +2858,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config_content:
             case Topic::action_car_config_content:
@@ -2910,6 +2931,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -3027,6 +3049,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
@@ -3151,6 +3174,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3275,6 +3299,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_session_started:
             case Topic::info_session_stopped:
             case Topic::info_session_keepalive:
+            case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3451,6 +3476,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicInfoSessionStopped(vehicleId, deviceId);
         case Topic::info_session_keepalive: 
             return GetTopicInfoSessionKeepalive(vehicleId, deviceId);
+        case Topic::info_new_lap: 
+            return GetTopicInfoNewLap(vehicleId, deviceId);
         case Topic::action: 
             return GetTopicAction(vehicleId, deviceId);
         case Topic::action_telemetry_config: 
@@ -4026,6 +4053,14 @@ TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std:
 
 TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "info/session/logging";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicInfoNewLap(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "info/newLap";
     int qos = 0;
     bool retain = false;
 

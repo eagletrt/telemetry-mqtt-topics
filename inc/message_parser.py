@@ -64,6 +64,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/info/session/started",5)
         self.addNode("<vehicleId>/<deviceId>/info/session/stopped",5)
         self.addNode("<vehicleId>/<deviceId>/info/session/logging",5)
+        self.addNode("<vehicleId>/<deviceId>/info/newLap",4)
         self.addNode("<vehicleId>/<deviceId>/action",3)
         self.addNode("<vehicleId>/<deviceId>/action/telemetryConfig",4)
         self.addNode("<vehicleId>/<deviceId>/action/telemetryConfig/set",5)

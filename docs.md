@@ -472,6 +472,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## InfoNewLap
+### &lt;vehicleId>/&lt;deviceId>/info/newLap
+> &lt;vehicleId>/&lt;deviceId>/info
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## Action
 ### &lt;vehicleId>/&lt;deviceId>/action
 > &lt;vehicleId>/&lt;deviceId>/action

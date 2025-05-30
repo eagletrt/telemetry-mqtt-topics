@@ -1466,6 +1466,28 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/info/newLap",
+        "alias": "InfoNewLap",
+        "description": "<vehicleId>/<deviceId>/info",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/action",
         "alias": "Action",
         "description": "<vehicleId>/<deviceId>/action",
