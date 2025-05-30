@@ -381,6 +381,14 @@
                     "retain": false
                   }
                 }
+              },
+              "newLap": {
+                "alias": "InfoNewLap",
+                "description": "<vehicleId>/<deviceId>/info",
+                "qos": 0,
+                "retain": false,
+                "subscribe_roles": ["0", "1", "2", "3", "4"],
+                "publish_roles": ["128", "129"]
               }
             }
           },
