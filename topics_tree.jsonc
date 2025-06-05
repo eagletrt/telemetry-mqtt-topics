@@ -735,6 +735,26 @@
                     "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content"
                   }
                 }
+              },
+              "customPlots": {
+                "alias": "QueryCustomPlots",
+                "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots",
+                "subscribe_roles": ["0", "1", "2", "3", "4","131"],
+                "publish_roles": ["0", "1", "2", "3", "4","131"],
+                "sub_topics":{
+                  "get":{
+                    "alias": "QueryCustomPlotsGet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get"
+                  },
+                  "set":{
+                    "alias": "QueryCustomPlotsSet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set"
+                  },
+                  "content":{
+                    "alias": "QueryCustomPlotsContent",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content"
+                  }
+                }
               }
             }
           }
