@@ -123,7 +123,11 @@ class Topic(Enum):
     query_baseline = auto(),
     query_baseline_get = auto(),
     query_baseline_set = auto(),
-    query_baseline_content = auto()
+    query_baseline_content = auto(),
+    query_custom_plots = auto(),
+    query_custom_plots_get = auto(),
+    query_custom_plots_set = auto(),
+    query_custom_plots_content = auto()
 
 
 
@@ -574,6 +578,22 @@ def GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId):
 def GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline/content"
     return topic
+
+def GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots"
+    return topic
+
+def GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/get"
+    return topic
+
+def GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/set"
+    return topic
+
+def GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/content"
+    return topic
 def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
     ret = []
 
@@ -673,6 +693,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_1:
@@ -770,6 +794,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_2:
@@ -867,6 +895,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_3:
@@ -964,6 +996,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_4:
@@ -1061,6 +1097,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_128:
@@ -1226,6 +1266,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
 
 def GetPublishTopics(role, vehicleId, deviceId, transactionId):
@@ -1302,6 +1346,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_1:
@@ -1372,6 +1420,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_2:
@@ -1442,6 +1494,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_3:
@@ -1512,6 +1568,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_4:
@@ -1582,6 +1642,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_128:
@@ -1752,4 +1816,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret

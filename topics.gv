@@ -110,5 +110,9 @@ graph {
 "<transactionId>" -- "baseline";
 "baseline" -- "get";
 "baseline" -- "set";
-"baseline" -- "content"
+"baseline" -- "content";
+"<transactionId>" -- "customPlots";
+"customPlots" -- "get";
+"customPlots" -- "set";
+"customPlots" -- "content"
     }

@@ -2805,5 +2805,117 @@
             "deviceId",
             "transactionId"
         ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots",
+        "alias": "QueryCustomPlots",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get",
+        "alias": "QueryCustomPlotsGet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set",
+        "alias": "QueryCustomPlotsSet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content",
+        "alias": "QueryCustomPlotsContent",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
     }
 ]

@@ -104,6 +104,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_1:
@@ -201,6 +205,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_2:
@@ -298,6 +306,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_3:
@@ -395,6 +407,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_4:
@@ -492,6 +508,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_128:
@@ -657,6 +677,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
     }
 
@@ -737,6 +761,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_1:
@@ -807,6 +835,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_2:
@@ -877,6 +909,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_3:
@@ -947,6 +983,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_4:
@@ -1017,6 +1057,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_128:
@@ -1187,6 +1231,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
     }
     
@@ -1291,6 +1339,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1410,6 +1462,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1529,6 +1585,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1648,6 +1708,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1767,6 +1831,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
@@ -1905,6 +1973,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
             default:
               return false;
         }
@@ -2024,6 +2096,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
             default:
               return false;
         }
@@ -2143,6 +2219,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
             default:
               return false;
         }
@@ -2172,6 +2252,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -2343,6 +2427,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2461,6 +2549,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2581,6 +2673,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2701,6 +2797,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2821,6 +2921,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2987,6 +3091,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3107,6 +3215,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3227,6 +3339,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3239,6 +3355,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
+            case Topic::query_custom_plots:
+            case Topic::query_custom_plots_get:
+            case Topic::query_custom_plots_set:
+            case Topic::query_custom_plots_content:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -3582,6 +3702,14 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId);
         case Topic::query_baseline_content: 
             return GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId);
+        case Topic::query_custom_plots: 
+            return GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId);
+        case Topic::query_custom_plots_get: 
+            return GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId);
+        case Topic::query_custom_plots_set: 
+            return GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId);
+        case Topic::query_custom_plots_content: 
+            return GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId);
     }
 
     return TopicMessage("", 0, false);
@@ -4477,6 +4605,38 @@ TopicMessage GetTopicQueryBaselineSet(const std::string& vehicleId, const std::s
 
 TopicMessage GetTopicQueryBaselineContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline/content";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicQueryCustomPlots(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicQueryCustomPlotsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/get";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicQueryCustomPlotsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/set";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicQueryCustomPlotsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/content";
     int qos = 0;
     bool retain = false;
 

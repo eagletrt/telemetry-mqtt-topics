@@ -896,3 +896,35 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryCustomPlots
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryCustomPlotsGet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/get
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryCustomPlotsSet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/set
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryCustomPlotsContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/content
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/customPlots/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId

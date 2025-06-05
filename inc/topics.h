@@ -132,7 +132,11 @@ enum class Topic
     query_baseline = 108,
     query_baseline_get = 109,
     query_baseline_set = 110,
-    query_baseline_content = 111
+    query_baseline_content = 111,
+    query_custom_plots = 112,
+    query_custom_plots_get = 113,
+    query_custom_plots_set = 114,
+    query_custom_plots_content = 115
 };
 
 struct TopicMessage
@@ -263,6 +267,10 @@ TopicMessage GetTopicQueryBaseline(const std::string& vehicleId, const std::stri
 TopicMessage GetTopicQueryBaselineGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryBaselineSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryBaselineContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryCustomPlots(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryCustomPlotsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryCustomPlotsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryCustomPlotsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 }
 
 #endif

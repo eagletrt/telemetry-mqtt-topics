@@ -201,6 +201,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/set");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/baseline/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/customPlots");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content");
 }
 
 void MessageParser::setMessageParse(Topic topic, parse_t parse, void* argument) {
