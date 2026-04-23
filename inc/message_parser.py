@@ -174,9 +174,7 @@ class MessageParser:
                                 #matchV
                                 matchT = True
                     
-        if(matchV and matchD):
-            return _node
-        elif(foundT and matchV and matchD and matchT):
+        if(foundT and matchV and matchD and matchT):
             return _node
         else:
             return None
