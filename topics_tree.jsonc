@@ -169,6 +169,10 @@
                 "alias": "ExtraTlmDataVehicleState",
                 "description": "Protobuffer data of vehicle state"
               },
+              "odometer": {
+                "alias": "ExtraTlmDataOdometer",
+                "description": "Protobuffer data of odometer"
+              },
               "baseline": {
                 "alias": "ExtraTlmDataBaseline",
                 "description": "Protobuffer data of vehicle state",
