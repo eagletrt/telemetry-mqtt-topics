@@ -232,6 +232,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ExtraTlmDataOdometer
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/odometer
+> Protobuffer data of odometer
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## ExtraTlmDataBaseline
 ### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/baseline
 > Protobuffer data of vehicle state

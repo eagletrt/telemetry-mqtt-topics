@@ -34,6 +34,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/extra_data_to_log",3)
         self.addNode("<vehicleId>/<deviceId>/extra_tlm_data",3)
         self.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState",4)
+        self.addNode("<vehicleId>/<deviceId>/extra_tlm_data/odometer",4)
         self.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline",4)
         self.addNode("<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins",4)
         self.addNode("<vehicleId>/<deviceId>/last_update",3)

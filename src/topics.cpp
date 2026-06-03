@@ -38,6 +38,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -139,6 +140,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -240,6 +242,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -341,6 +344,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -442,6 +446,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -1092,6 +1097,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -1171,6 +1177,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
@@ -1273,6 +1280,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -1396,6 +1404,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -1519,6 +1528,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -1642,6 +1652,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -1765,6 +1776,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -1944,6 +1956,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -2066,6 +2079,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -2137,6 +2151,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -2286,6 +2301,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::data_last_update:
             case Topic::status:
@@ -2457,6 +2473,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::info_version:
@@ -2579,6 +2596,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::as_commands_set_values:
@@ -2703,6 +2721,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::as_commands_set_values:
@@ -2827,6 +2846,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::as_commands_set_values:
@@ -2951,6 +2971,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::as_commands_set_values:
@@ -3006,6 +3027,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -3130,6 +3152,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_camera_logger_gps_relposned:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -3259,6 +3282,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -3389,6 +3413,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
+            case Topic::extra_tlm_data_odometer:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::data_last_update:
@@ -3536,6 +3561,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicExtraTlmData(vehicleId, deviceId);
         case Topic::extra_tlm_data_vehicle_state: 
             return GetTopicExtraTlmDataVehicleState(vehicleId, deviceId);
+        case Topic::extra_tlm_data_odometer: 
+            return GetTopicExtraTlmDataOdometer(vehicleId, deviceId);
         case Topic::extra_tlm_data_baseline: 
             return GetTopicExtraTlmDataBaseline(vehicleId, deviceId);
         case Topic::extra_tlm_data_gps_map_origins: 
@@ -3941,6 +3968,14 @@ TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::strin
 
 TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/vehicleState";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicExtraTlmDataOdometer(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/odometer";
     int qos = 0;
     bool retain = false;
 
