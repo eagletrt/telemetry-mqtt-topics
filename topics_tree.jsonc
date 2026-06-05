@@ -169,10 +169,6 @@
                 "alias": "ExtraTlmDataVehicleState",
                 "description": "Protobuffer data of vehicle state"
               },
-              "odometer": {
-                "alias": "ExtraTlmDataOdometer",
-                "description": "Protobuffer data of odometer"
-              },
               "baseline": {
                 "alias": "ExtraTlmDataBaseline",
                 "description": "Protobuffer data of vehicle state",
@@ -605,6 +601,31 @@
                   "content": {
                     "alias": "ActionLapCounterTrackContent",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
+                    "subscribe_roles": ["0", "1", "2", "3", "4", "131"],
+                    "publish_roles": ["128", "129"]
+                  }
+                }
+              },
+              "odometer": {
+                "alias": "ActionOdometer",
+                "description": "<vehicleId>/<deviceId>/action/odometer",
+                "sub_topics": {
+                  "set": {
+                    "alias": "ActionOdometerSet",
+                    "description": "<vehicleId>/<deviceId>/action/odometer/set",
+                    "subscribe_roles": ["128", "129"],
+                    "publish_roles": ["0", "1", "2", "3", "4"]
+                  },
+                  "get": {
+                    "alias": "ActionOdometerGet",
+                    "description": "<vehicleId>/<deviceId>/action/odometer/get",
+                    "subscribe_roles": ["128", "129", "131"],
+                    "publish_roles": ["0", "1", "2", "3", "4"]
+                  },
+                  "content": {
+                    "alias": "ActionOdometerContent",
+                    "description": "<vehicleId>/<deviceId>/action/odometer/content",
+                    "retain": true,
                     "subscribe_roles": ["0", "1", "2", "3", "4", "131"],
                     "publish_roles": ["128", "129"]
                   }
