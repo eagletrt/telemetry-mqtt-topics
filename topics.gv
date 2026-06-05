@@ -28,7 +28,6 @@ graph {
 "<deviceId>" -- "extra_data_to_log";
 "<deviceId>" -- "extra_tlm_data";
 "extra_tlm_data" -- "vehicleState";
-"extra_tlm_data" -- "odometer";
 "extra_tlm_data" -- "baseline";
 "extra_tlm_data" -- "gpsMapOrigins";
 "<deviceId>" -- "last_update";
@@ -93,6 +92,10 @@ graph {
 "lapCounterTrack" -- "set";
 "lapCounterTrack" -- "get";
 "lapCounterTrack" -- "content";
+"action" -- "odometer";
+"odometer" -- "set";
+"odometer" -- "get";
+"odometer" -- "content";
 "action" -- "kill";
 "action" -- "start";
 "action" -- "reset";

@@ -672,28 +672,6 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/odometer",
-        "alias": "ExtraTlmDataOdometer",
-        "description": "Protobuffer data of odometer",
-        "qos": 0,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "publish_roles": [
-            "128",
-            "129"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/extra_tlm_data/baseline",
         "alias": "ExtraTlmDataBaseline",
         "description": "Protobuffer data of vehicle state",
@@ -2306,6 +2284,103 @@
             "129"
         ],
         "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/odometer",
+        "alias": "ActionOdometer",
+        "description": "<vehicleId>/<deviceId>/action/odometer",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/odometer/set",
+        "alias": "ActionOdometerSet",
+        "description": "<vehicleId>/<deviceId>/action/odometer/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/odometer/get",
+        "alias": "ActionOdometerGet",
+        "description": "<vehicleId>/<deviceId>/action/odometer/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/odometer/content",
+        "alias": "ActionOdometerContent",
+        "description": "<vehicleId>/<deviceId>/action/odometer/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"

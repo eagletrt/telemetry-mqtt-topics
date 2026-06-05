@@ -232,14 +232,6 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
-## ExtraTlmDataOdometer
-### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/odometer
-> Protobuffer data of odometer
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceId
 ## ExtraTlmDataBaseline
 ### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/baseline
 > Protobuffer data of vehicle state
@@ -750,6 +742,38 @@ vehicleIddeviceId
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometer
+### &lt;vehicleId>/&lt;deviceId>/action/odometer
+> &lt;vehicleId>/&lt;deviceId>/action/odometer
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerSet
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/set
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerGet
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/get
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 131 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerContent
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/content
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## ActionKill

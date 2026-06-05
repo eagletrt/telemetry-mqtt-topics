@@ -118,7 +118,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/extra_data_to_log");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState");
-    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/odometer");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins");
     this->tree.addNode("<vehicleId>/<deviceId>/last_update");
@@ -183,6 +182,10 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack/get");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/odometer");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/odometer/set");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/odometer/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/odometer/content");
     this->tree.addNode("<vehicleId>/<deviceId>/action/kill");
     this->tree.addNode("<vehicleId>/<deviceId>/action/start");
     this->tree.addNode("<vehicleId>/<deviceId>/action/reset");
