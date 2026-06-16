@@ -744,6 +744,38 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ActionOdometer
+### &lt;vehicleId>/&lt;deviceId>/action/odometer
+> &lt;vehicleId>/&lt;deviceId>/action/odometer
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerSet
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/set
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerGet
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/get
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 131 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionOdometerContent
+### &lt;vehicleId>/&lt;deviceId>/action/odometer/content
+> &lt;vehicleId>/&lt;deviceId>/action/odometer/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## ActionKill
 ### &lt;vehicleId>/&lt;deviceId>/action/kill
 > &lt;vehicleId>/&lt;deviceId>/action/kill
@@ -861,134 +893,6 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLayouts
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLayoutsGet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/get
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/get
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLayoutsSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLayoutsContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/content
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLayouts/content
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterTimes
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterTimesGet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/get
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/get
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterTimesSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterTimesContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/content
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterTimes/content
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLapRecords
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLapRecordsGet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/get
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/get
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLapRecordsSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryLapCounterLapRecordsContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/content
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/LapCounterLapRecords/content
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryGpsOrigins
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryGpsOriginsGet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/get
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/get
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryGpsOriginsSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryGpsOriginsContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/content
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/GpsOrigins/content
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId

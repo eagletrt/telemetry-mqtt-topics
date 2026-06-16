@@ -105,6 +105,10 @@ class Topic(Enum):
     action_lap_counter_track_set = auto(),
     action_lap_counter_track_get = auto(),
     action_lap_counter_track_content = auto(),
+    action_odometer = auto(),
+    action_odometer_set = auto(),
+    action_odometer_get = auto(),
+    action_odometer_content = auto(),
     action_kill = auto(),
     action_start = auto(),
     action_reset = auto(),
@@ -120,22 +124,6 @@ class Topic(Enum):
     action_reset_lap_counter = auto(),
     action_set_lap_counter_status = auto(),
     query = auto(),
-    query_lap_counter_layouts = auto(),
-    query_lap_counter_layouts_get = auto(),
-    query_lap_counter_layouts_set = auto(),
-    query_lap_counter_layouts_content = auto(),
-    query_lap_counter_times = auto(),
-    query_lap_counter_times_get = auto(),
-    query_lap_counter_times_set = auto(),
-    query_lap_counter_times_content = auto(),
-    query_lap_counter_lap_records = auto(),
-    query_lap_counter_lap_records_get = auto(),
-    query_lap_counter_lap_records_set = auto(),
-    query_lap_counter_lap_records_content = auto(),
-    query_gps_origins = auto(),
-    query_gps_origins_get = auto(),
-    query_gps_origins_set = auto(),
-    query_gps_origins_content = auto(),
     query_baseline = auto(),
     query_baseline_get = auto(),
     query_baseline_set = auto(),
@@ -519,6 +507,22 @@ def GetTopicActionLapCounterTrackContent(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/content"
     return topic
 
+def GetTopicActionOdometer(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/odometer"
+    return topic
+
+def GetTopicActionOdometerSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/odometer/set"
+    return topic
+
+def GetTopicActionOdometerGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/odometer/get"
+    return topic
+
+def GetTopicActionOdometerContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/odometer/content"
+    return topic
+
 def GetTopicActionKill(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/kill"
     return topic
@@ -577,70 +581,6 @@ def GetTopicActionSetLapCounterStatus(vehicleId, deviceId):
 
 def GetTopicQuery(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId
-    return topic
-
-def GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts"
-    return topic
-
-def GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/get"
-    return topic
-
-def GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/set"
-    return topic
-
-def GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/content"
-    return topic
-
-def GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes"
-    return topic
-
-def GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/get"
-    return topic
-
-def GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/set"
-    return topic
-
-def GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/content"
-    return topic
-
-def GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords"
-    return topic
-
-def GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/get"
-    return topic
-
-def GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/set"
-    return topic
-
-def GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/content"
-    return topic
-
-def GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins"
-    return topic
-
-def GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/get"
-    return topic
-
-def GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/set"
-    return topic
-
-def GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/content"
     return topic
 
 def GetTopicQueryBaseline(vehicleId, deviceId, transactionId):
@@ -755,6 +695,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -769,22 +711,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -872,6 +798,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -886,22 +814,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -989,6 +901,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1003,22 +917,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1106,6 +1004,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1120,22 +1020,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1223,6 +1107,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1237,22 +1123,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1308,6 +1178,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1368,6 +1241,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1419,6 +1295,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
@@ -1487,6 +1365,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1502,22 +1383,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1577,6 +1442,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1592,22 +1460,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1667,6 +1519,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1682,22 +1537,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1757,6 +1596,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1772,22 +1614,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1847,6 +1673,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerSet(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerGet(vehicleId, deviceId))
             ret.append(GetTopicActionKill(vehicleId, deviceId))
             ret.append(GetTopicActionStart(vehicleId, deviceId))
             ret.append(GetTopicActionReset(vehicleId, deviceId))
@@ -1862,22 +1691,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicActionSetLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
@@ -1964,6 +1777,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             return ret
             
@@ -2041,6 +1856,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicActionOdometerContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             return ret
             
