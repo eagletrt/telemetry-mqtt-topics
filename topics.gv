@@ -92,10 +92,6 @@ graph {
 "lapCounterTrack" -- "set";
 "lapCounterTrack" -- "get";
 "lapCounterTrack" -- "content";
-"action" -- "odometer";
-"odometer" -- "set";
-"odometer" -- "get";
-"odometer" -- "content";
 "action" -- "kill";
 "action" -- "start";
 "action" -- "reset";

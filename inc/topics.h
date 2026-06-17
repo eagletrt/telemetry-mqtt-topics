@@ -114,33 +114,29 @@ enum class Topic
     action_lap_counter_track_set = 90,
     action_lap_counter_track_get = 91,
     action_lap_counter_track_content = 92,
-    action_odometer = 93,
-    action_odometer_set = 94,
-    action_odometer_get = 95,
-    action_odometer_content = 96,
-    action_kill = 97,
-    action_start = 98,
-    action_reset = 99,
-    action_stop = 100,
-    action_start_baseline = 101,
-    action_stop_baseline = 102,
-    action_precharge = 103,
-    action_balance = 104,
-    action_stop_balance = 105,
-    action_charge = 106,
-    action_stop_charge = 107,
-    action_raw = 108,
-    action_reset_lap_counter = 109,
-    action_set_lap_counter_status = 110,
-    query = 111,
-    query_baseline = 112,
-    query_baseline_get = 113,
-    query_baseline_set = 114,
-    query_baseline_content = 115,
-    query_custom_plots = 116,
-    query_custom_plots_get = 117,
-    query_custom_plots_set = 118,
-    query_custom_plots_content = 119
+    action_kill = 93,
+    action_start = 94,
+    action_reset = 95,
+    action_stop = 96,
+    action_start_baseline = 97,
+    action_stop_baseline = 98,
+    action_precharge = 99,
+    action_balance = 100,
+    action_stop_balance = 101,
+    action_charge = 102,
+    action_stop_charge = 103,
+    action_raw = 104,
+    action_reset_lap_counter = 105,
+    action_set_lap_counter_status = 106,
+    query = 107,
+    query_baseline = 108,
+    query_baseline_get = 109,
+    query_baseline_set = 110,
+    query_baseline_content = 111,
+    query_custom_plots = 112,
+    query_custom_plots_get = 113,
+    query_custom_plots_set = 114,
+    query_custom_plots_content = 115
 };
 
 struct TopicMessage
@@ -252,10 +248,6 @@ TopicMessage GetTopicActionLapCounterTrack(const std::string& vehicleId, const s
 TopicMessage GetTopicActionLapCounterTrackSet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterTrackGet(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionLapCounterTrackContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionOdometer(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionOdometerSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionOdometerGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionOdometerContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionStart(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string& deviceId);
