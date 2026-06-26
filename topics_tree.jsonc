@@ -198,9 +198,9 @@
                     "sub_topics": {
                       "metaData": {
                         "alias": "DataLapsLastMetaData",
-                        "description": "<vehicleId>/<deviceId>/data/laps/last/metaData"
+                        "description": "<vehicleId>/<deviceId>/data/laps/last/metaData",
                         "qos": 1,
-                        "retain": true,
+                        "retain": true
                       }
                     }
                   }
