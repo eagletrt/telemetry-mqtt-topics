@@ -310,7 +310,7 @@
         "topic": "<vehicleId>/<deviceId>/data/laps/current",
         "alias": "DataLapsCurrent",
         "description": "<vehicleId>/<deviceId>/data/laps/current",
-        "qos": 0,
+        "qos": 1,
         "subscribe_roles": [
             "0",
             "1",
@@ -323,7 +323,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -333,7 +333,7 @@
         "topic": "<vehicleId>/<deviceId>/data/laps/current/metaData",
         "alias": "DataLapsCurrentMetaData",
         "description": "<vehicleId>/<deviceId>/data/laps/current/metaData",
-        "qos": 0,
+        "qos": 1,
         "subscribe_roles": [
             "0",
             "1",
@@ -346,7 +346,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -356,7 +356,7 @@
         "topic": "<vehicleId>/<deviceId>/data/laps/last",
         "alias": "DataLapsLast",
         "description": "<vehicleId>/<deviceId>/data/laps/last",
-        "qos": 0,
+        "qos": 1,
         "subscribe_roles": [
             "0",
             "1",
@@ -369,7 +369,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"
@@ -379,7 +379,7 @@
         "topic": "<vehicleId>/<deviceId>/data/laps/last/metaData",
         "alias": "DataLapsLastMetaData",
         "description": "<vehicleId>/<deviceId>/data/laps/last/metaData",
-        "qos": 0,
+        "qos": 1,
         "subscribe_roles": [
             "0",
             "1",
@@ -392,7 +392,7 @@
             "128",
             "129"
         ],
-        "retain": false,
+        "retain": true,
         "variables": [
             "vehicleId",
             "deviceId"

@@ -4441,32 +4441,32 @@ TopicMessage GetTopicDataLaps(const std::string& vehicleId, const std::string& d
 
 TopicMessage GetTopicDataLapsCurrent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/current";
-    int qos = 0;
-    bool retain = false;
+    int qos = 1;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataLapsCurrentMetaData(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/current/metaData";
-    int qos = 0;
-    bool retain = false;
+    int qos = 1;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataLapsLast(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/last";
-    int qos = 0;
-    bool retain = false;
+    int qos = 1;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
 TopicMessage GetTopicDataLapsLastMetaData(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/last/metaData";
-    int qos = 0;
-    bool retain = false;
+    int qos = 1;
+    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }

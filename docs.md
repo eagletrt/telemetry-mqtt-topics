@@ -107,33 +107,33 @@ vehicleIddeviceId
 ## DataLapsCurrent
 ### &lt;vehicleId>/&lt;deviceId>/data/laps/current
 > &lt;vehicleId>/&lt;deviceId>/data/laps/current
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## DataLapsCurrentMetaData
 ### &lt;vehicleId>/&lt;deviceId>/data/laps/current/metaData
 > &lt;vehicleId>/&lt;deviceId>/data/laps/current/metaData
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## DataLapsLast
 ### &lt;vehicleId>/&lt;deviceId>/data/laps/last
 > &lt;vehicleId>/&lt;deviceId>/data/laps/last
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## DataLapsLastMetaData
 ### &lt;vehicleId>/&lt;deviceId>/data/laps/last/metaData
 > &lt;vehicleId>/&lt;deviceId>/data/laps/last/metaData
-- **Quality of Service**: 0
+- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 130 - **Publish Roles**: 128 129 
-- **Retain**: No
+- **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
 ## DataCameraLogger
