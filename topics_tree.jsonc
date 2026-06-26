@@ -155,6 +155,8 @@
                   "current": {
                     "alias": "DataLapsCurrent",
                     "description": "<vehicleId>/<deviceId>/data/laps/current",
+                    "qos": 1,
+                    "retain": true,
                     "subscribe_roles": [
                       "0",
                       "1",
@@ -167,6 +169,8 @@
                       "metaData": {
                         "alias": "DataLapsCurrentMetaData",
                         "description": "<vehicleId>/<deviceId>/data/laps/current/metaData",
+                        "qos": 1,
+                        "retain": true,
                         "subscribe_roles": [
                           "0",
                           "1",
@@ -181,6 +185,8 @@
                   "last": {
                     "alias": "DataLapsLast",
                     "description": "<vehicleId>/<deviceId>/data/laps/last",
+                    "qos": 1,
+                    "retain": true,
                     "subscribe_roles": [
                       "0",
                       "1",
@@ -193,6 +199,8 @@
                       "metaData": {
                         "alias": "DataLapsLastMetaData",
                         "description": "<vehicleId>/<deviceId>/data/laps/last/metaData"
+                        "qos": 1,
+                        "retain": true,
                       }
                     }
                   }
