@@ -484,7 +484,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/session
 > &lt;vehicleId>/&lt;deviceId>/info
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -492,7 +492,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/session/started
 > Sent when the session is started
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -500,7 +500,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/session/stopped
 > Sent when the session is stopped
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -508,7 +508,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/session/logging
 > Repeatedly sent, like a keepalive, to indicate that the session is still active
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId

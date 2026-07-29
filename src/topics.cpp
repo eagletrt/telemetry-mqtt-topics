@@ -767,6 +767,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
@@ -2600,6 +2604,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_gps_map_origins:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
@@ -2682,10 +2690,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_telemetry_replay_start:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config_content:
