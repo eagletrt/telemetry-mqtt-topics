@@ -136,6 +136,14 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
+## ActionOdometer
+### &lt;vehicleId>/&lt;deviceId>/data/odometer
+> &lt;vehicleId>/&lt;deviceId>/data/odometer
+- **Quality of Service**: 0
+- **Subscribe Roles**: 128 129 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataCameraLogger
 ### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
 > &lt;vehicleId>/&lt;deviceId>/data/cameraLogger

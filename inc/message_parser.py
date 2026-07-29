@@ -22,6 +22,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/data/laps/current/metaData",6)
         self.addNode("<vehicleId>/<deviceId>/data/laps/last",5)
         self.addNode("<vehicleId>/<deviceId>/data/laps/last/metaData",6)
+        self.addNode("<vehicleId>/<deviceId>/data/odometer",4)
         self.addNode("<vehicleId>/<deviceId>/data/cameraLogger",4)
         self.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can",5)
         self.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate",6)

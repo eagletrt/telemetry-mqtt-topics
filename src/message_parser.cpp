@@ -106,6 +106,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/current/metaData");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last/metaData");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/odometer");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate");

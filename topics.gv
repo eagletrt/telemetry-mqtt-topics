@@ -16,6 +16,7 @@ graph {
 "current" -- "metaData";
 "laps" -- "last";
 "last" -- "metaData";
+"data" -- "odometer";
 "data" -- "cameraLogger";
 "cameraLogger" -- "can";
 "can" -- "imuAngularRate";

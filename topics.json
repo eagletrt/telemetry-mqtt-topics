@@ -399,6 +399,28 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/data/odometer",
+        "alias": "ActionOdometer",
+        "description": "<vehicleId>/<deviceId>/data/odometer",
+        "qos": 0,
+        "subscribe_roles": [
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/data/cameraLogger",
         "alias": "DataCameraLogger",
         "description": "<vehicleId>/<deviceId>/data/cameraLogger",
