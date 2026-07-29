@@ -210,15 +210,15 @@
                 "alias": "DataOdometer",
                 "description": "<vehicleId>/<deviceId>/data/odometer",
                 "subscribe_roles": [
-                  "128",
-                  "129"
-                ],
-                "publish_roles": [
                   "0",
                   "1",
                   "2",
                   "3",
                   "4"
+                ],
+                "publish_roles": [
+                  "128",
+                  "129"
                 ]
               },
               "cameraLogger": {
