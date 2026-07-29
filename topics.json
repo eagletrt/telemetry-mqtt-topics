@@ -400,7 +400,7 @@
     },
     {
         "topic": "<vehicleId>/<deviceId>/data/odometer",
-        "alias": "ActionOdometer",
+        "alias": "DataOdometer",
         "description": "<vehicleId>/<deviceId>/data/odometer",
         "qos": 0,
         "subscribe_roles": [

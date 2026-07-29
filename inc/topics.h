@@ -38,7 +38,7 @@ enum class Topic
     data_laps_current_meta_data = 14,
     data_laps_last = 15,
     data_laps_last_meta_data = 16,
-    action_odometer = 17,
+    data_odometer = 17,
     data_camera_logger = 18,
     data_camera_logger_can = 19,
     data_camera_logger_can_imu_angular_rate = 20,
@@ -194,7 +194,7 @@ TopicMessage GetTopicDataLapsCurrent(const std::string& vehicleId, const std::st
 TopicMessage GetTopicDataLapsCurrentMetaData(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataLapsLast(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataLapsLastMetaData(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionOdometer(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicDataOdometer(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCan(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataCameraLoggerCanImuAngularRate(const std::string& vehicleId, const std::string& deviceId);

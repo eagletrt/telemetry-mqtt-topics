@@ -29,7 +29,7 @@ class Topic(Enum):
     data_laps_current_meta_data = auto(),
     data_laps_last = auto(),
     data_laps_last_meta_data = auto(),
-    action_odometer = auto(),
+    data_odometer = auto(),
     data_camera_logger = auto(),
     data_camera_logger_can = auto(),
     data_camera_logger_can_imu_angular_rate = auto(),
@@ -221,7 +221,7 @@ def GetTopicDataLapsLastMetaData(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "data/laps/last/metaData"
     return topic
 
-def GetTopicActionOdometer(vehicleId, deviceId):
+def GetTopicDataOdometer(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "data/odometer"
     return topic
 
@@ -1322,7 +1322,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
@@ -1384,7 +1384,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
@@ -1506,7 +1506,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
@@ -1599,7 +1599,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
@@ -1690,7 +1690,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
@@ -1781,7 +1781,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
@@ -1872,7 +1872,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicVehicleId(vehicleId))
             ret.append(GetTopicDeviceId(vehicleId, deviceId))
             ret.append(GetTopicDeviceVersion(vehicleId, deviceId))
-            ret.append(GetTopicActionOdometer(vehicleId, deviceId))
+            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicExtraDataToLog(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))

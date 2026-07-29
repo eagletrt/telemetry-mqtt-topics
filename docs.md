@@ -136,7 +136,7 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
-## ActionOdometer
+## DataOdometer
 ### &lt;vehicleId>/&lt;deviceId>/data/odometer
 > &lt;vehicleId>/&lt;deviceId>/data/odometer
 - **Quality of Service**: 0
