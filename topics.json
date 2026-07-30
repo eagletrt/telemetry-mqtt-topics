@@ -857,7 +857,7 @@
         "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapTimes",
         "alias": "ExtraTlmDataLapTimes",
         "description": "Lap times of the running session",
-        "qos": 1,
+        "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
@@ -872,8 +872,6 @@
         ],
         "retain": true,
         "variables": [
-            "vehicleId",
-            "deviceId",
             "vehicleId",
             "deviceId"
         ]
@@ -882,7 +880,7 @@
         "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapRecords",
         "alias": "ExtraTlmDataLapRecords",
         "description": "Lap records of the running session",
-        "qos": 1,
+        "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
@@ -897,8 +895,6 @@
         ],
         "retain": true,
         "variables": [
-            "vehicleId",
-            "deviceId",
             "vehicleId",
             "deviceId"
         ]
@@ -907,7 +903,7 @@
         "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapLayout",
         "alias": "ExtraTlmDataLapLayout",
         "description": "Lap layout of the running session",
-        "qos": 1,
+        "qos": 0,
         "subscribe_roles": [
             "0",
             "1",
@@ -922,8 +918,6 @@
         ],
         "retain": true,
         "variables": [
-            "vehicleId",
-            "deviceId",
             "vehicleId",
             "deviceId"
         ]

@@ -217,9 +217,9 @@ TopicMessage GetTopicExtraTlmData(const std::string& vehicleId, const std::strin
 TopicMessage GetTopicExtraTlmDataVehicleState(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicExtraTlmDataLapTimes(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicExtraTlmDataLapRecords(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicExtraTlmDataLapLayout(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicExtraTlmDataLapTimes(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicExtraTlmDataLapRecords(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicExtraTlmDataLapLayout(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDataLastUpdate(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicStatus(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicStatusInfo(const std::string& vehicleId, const std::string& deviceId);

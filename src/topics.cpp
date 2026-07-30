@@ -46,9 +46,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -172,9 +172,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -298,9 +298,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -424,9 +424,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -550,9 +550,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -785,9 +785,9 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         
         case Role::role_131:
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
@@ -1317,9 +1317,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -1405,9 +1405,9 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
+        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -4238,11 +4238,11 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
         case Topic::extra_tlm_data_gps_map_origins: 
             return GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId);
         case Topic::extra_tlm_data_lap_times: 
-            return GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId);
+            return GetTopicExtraTlmDataLapTimes(vehicleId, deviceId);
         case Topic::extra_tlm_data_lap_records: 
-            return GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId);
+            return GetTopicExtraTlmDataLapRecords(vehicleId, deviceId);
         case Topic::extra_tlm_data_lap_layout: 
-            return GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId);
+            return GetTopicExtraTlmDataLapLayout(vehicleId, deviceId);
         case Topic::data_last_update: 
             return GetTopicDataLastUpdate(vehicleId, deviceId);
         case Topic::status: 
@@ -4746,25 +4746,25 @@ TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, con
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicExtraTlmDataLapTimes(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicExtraTlmDataLapTimes(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapTimes";
-    int qos = 1;
+    int qos = 0;
     bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicExtraTlmDataLapRecords(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicExtraTlmDataLapRecords(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapRecords";
-    int qos = 1;
+    int qos = 0;
     bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicExtraTlmDataLapLayout(const std::string& vehicleId, const std::string& deviceId, const std::string& vehicleId, const std::string& deviceId) {
+TopicMessage GetTopicExtraTlmDataLapLayout(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapLayout";
-    int qos = 1;
+    int qos = 0;
     bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
