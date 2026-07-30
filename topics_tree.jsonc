@@ -380,7 +380,6 @@
               "lapTimes": {
                 "alias": "ExtraTlmDataLapTimes",
                 "description": "Lap times of the running session",
-                "qos": 1,
                 "subscribe_roles": [
                   "0",
                   "1",
@@ -393,16 +392,11 @@
                   "128",
                   "129"
                 ],
-                "retain": true,
-                "variables": [
-                  "vehicleId",
-                  "deviceId"
-                ]
+                "retain": true
               },
               "lapRecords": {
                 "alias": "ExtraTlmDataLapRecords",
                 "description": "Lap records of the running session",
-                "qos": 1,
                 "subscribe_roles": [
                   "0",
                   "1",
@@ -415,16 +409,11 @@
                   "128",
                   "129"
                 ],
-                "retain": true,
-                "variables": [
-                  "vehicleId",
-                  "deviceId"
-                ]
+                "retain": true
               },
               "lapLayout": {
                 "alias": "ExtraTlmDataLapLayout",
                 "description": "Lap layout of the running session",
-                "qos": 1,
                 "subscribe_roles": [
                   "0",
                   "1",
@@ -437,11 +426,7 @@
                   "128",
                   "129"
                 ],
-                "retain": true,
-                "variables": [
-                  "vehicleId",
-                  "deviceId"
-                ]
+                "retain": true
               }
             }
           },
