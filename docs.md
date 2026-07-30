@@ -296,6 +296,30 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
+## ExtraTlmDataLapTimes
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapTimes
+> Lap times of the running session
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceIdvehicleIddeviceId
+## ExtraTlmDataLapRecords
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapRecords
+> Lap records of the running session
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceIdvehicleIddeviceId
+## ExtraTlmDataLapLayout
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapLayout
+> Lap layout of the running session
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceIdvehicleIddeviceId
 ## DataLastUpdate
 ### &lt;vehicleId>/&lt;deviceId>/last_update
 > Sends the last update timestamp of the data

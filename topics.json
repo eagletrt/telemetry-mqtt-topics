@@ -854,6 +854,81 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapTimes",
+        "alias": "ExtraTlmDataLapTimes",
+        "description": "Lap times of the running session",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapRecords",
+        "alias": "ExtraTlmDataLapRecords",
+        "description": "Lap records of the running session",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/extra_tlm_data/lapLayout",
+        "alias": "ExtraTlmDataLapLayout",
+        "description": "Lap layout of the running session",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/last_update",
         "alias": "DataLastUpdate",
         "description": "Sends the last update timestamp of the data",

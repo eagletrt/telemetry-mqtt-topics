@@ -49,6 +49,9 @@ class Topic(Enum):
     extra_tlm_data_vehicle_state = auto(),
     extra_tlm_data_baseline = auto(),
     extra_tlm_data_gps_map_origins = auto(),
+    extra_tlm_data_lap_times = auto(),
+    extra_tlm_data_lap_records = auto(),
+    extra_tlm_data_lap_layout = auto(),
     data_last_update = auto(),
     status = auto(),
     status_info = auto(),
@@ -299,6 +302,18 @@ def GetTopicExtraTlmDataBaseline(vehicleId, deviceId):
 
 def GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins"
+    return topic
+
+def GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapTimes"
+    return topic
+
+def GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapRecords"
+    return topic
+
+def GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapLayout"
     return topic
 
 def GetTopicDataLastUpdate(vehicleId, deviceId):
@@ -745,6 +760,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -868,6 +886,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -991,6 +1012,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1114,6 +1138,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1237,6 +1264,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1469,6 +1499,9 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             
         case Role.role_131:
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             ret.append(GetTopicInfoSession(vehicleId, deviceId))
@@ -1994,6 +2027,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -2079,6 +2115,9 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId, vehicleId, deviceId))
+            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId, vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
