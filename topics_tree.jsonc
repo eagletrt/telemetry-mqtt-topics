@@ -206,21 +206,6 @@
                   }
                 }
               },
-              "odometer": {
-                "alias": "DataOdometer",
-                "description": "<vehicleId>/<deviceId>/data/odometer",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4"
-                ],
-                "publish_roles": [
-                  "128",
-                  "129"
-                ]
-              },
               "cameraLogger": {
                 "alias": "DataCameraLogger",
                 "description": "<vehicleId>/<deviceId>/data/cameraLogger",
@@ -374,57 +359,6 @@
                   "3",
                   "4",
                   "131"
-                ],
-                "retain": true
-              },
-              "lapTimes": {
-                "alias": "ExtraTlmDataLapTimes",
-                "description": "Lap times of the running session",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "128",
-                  "129"
-                ],
-                "retain": true
-              },
-              "lapRecords": {
-                "alias": "ExtraTlmDataLapRecords",
-                "description": "Lap records of the running session",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "128",
-                  "129"
-                ],
-                "retain": true
-              },
-              "lapLayout": {
-                "alias": "ExtraTlmDataLapLayout",
-                "description": "Lap layout of the running session",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "128",
-                  "129"
                 ],
                 "retain": true
               }
@@ -1007,7 +941,8 @@
                     "description": "<vehicleId>/<deviceId>/action/baselineConfig/set",
                     "subscribe_roles": [
                       "128",
-                      "129"
+                      "129",
+                      "131"
                     ],
                     "publish_roles": [
                       "0",
