@@ -29,7 +29,6 @@ class Topic(Enum):
     data_laps_current_meta_data = auto(),
     data_laps_last = auto(),
     data_laps_last_meta_data = auto(),
-    data_odometer = auto(),
     data_camera_logger = auto(),
     data_camera_logger_can = auto(),
     data_camera_logger_can_imu_angular_rate = auto(),
@@ -49,9 +48,6 @@ class Topic(Enum):
     extra_tlm_data_vehicle_state = auto(),
     extra_tlm_data_baseline = auto(),
     extra_tlm_data_gps_map_origins = auto(),
-    extra_tlm_data_lap_times = auto(),
-    extra_tlm_data_lap_records = auto(),
-    extra_tlm_data_lap_layout = auto(),
     data_last_update = auto(),
     status = auto(),
     status_info = auto(),
@@ -224,10 +220,6 @@ def GetTopicDataLapsLastMetaData(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "data/laps/last/metaData"
     return topic
 
-def GetTopicDataOdometer(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "data/odometer"
-    return topic
-
 def GetTopicDataCameraLogger(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger"
     return topic
@@ -302,18 +294,6 @@ def GetTopicExtraTlmDataBaseline(vehicleId, deviceId):
 
 def GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins"
-    return topic
-
-def GetTopicExtraTlmDataLapTimes(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapTimes"
-    return topic
-
-def GetTopicExtraTlmDataLapRecords(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapRecords"
-    return topic
-
-def GetTopicExtraTlmDataLapLayout(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapLayout"
     return topic
 
 def GetTopicDataLastUpdate(vehicleId, deviceId):
@@ -741,7 +721,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -760,9 +739,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -867,7 +843,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -886,9 +861,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -993,7 +965,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -1012,9 +983,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1119,7 +1087,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -1138,9 +1105,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1245,7 +1209,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -1264,9 +1227,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -1499,9 +1459,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             
         case Role.role_131:
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterLaps(vehicleId, deviceId))
             ret.append(GetTopicInfoSession(vehicleId, deviceId))
@@ -1515,6 +1472,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
             ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
@@ -2008,7 +1966,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -2027,9 +1984,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))
@@ -2096,7 +2050,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
-            ret.append(GetTopicDataOdometer(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCan(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId))
@@ -2115,9 +2068,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataBaseline(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
-            ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicDataLastUpdate(vehicleId, deviceId))
             ret.append(GetTopicStatus(vehicleId, deviceId))
             ret.append(GetTopicStatusInfo(vehicleId, deviceId))

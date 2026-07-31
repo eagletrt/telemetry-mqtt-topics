@@ -16,7 +16,6 @@ graph {
 "current" -- "metaData";
 "laps" -- "last";
 "last" -- "metaData";
-"data" -- "odometer";
 "data" -- "cameraLogger";
 "cameraLogger" -- "can";
 "can" -- "imuAngularRate";
@@ -36,9 +35,6 @@ graph {
 "extra_tlm_data" -- "vehicleState";
 "extra_tlm_data" -- "baseline";
 "extra_tlm_data" -- "gpsMapOrigins";
-"extra_tlm_data" -- "lapTimes";
-"extra_tlm_data" -- "lapRecords";
-"extra_tlm_data" -- "lapLayout";
 "<deviceId>" -- "last_update";
 "<deviceId>" -- "status";
 "status" -- "info";

@@ -106,7 +106,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/current/metaData");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last/metaData");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/odometer");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can");
     this->tree.addNode("<vehicleId>/<deviceId>/data/cameraLogger/can/imuAngularRate");
@@ -126,9 +125,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/vehicleState");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/baseline");
     this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/gpsMapOrigins");
-    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/lapTimes");
-    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/lapRecords");
-    this->tree.addNode("<vehicleId>/<deviceId>/extra_tlm_data/lapLayout");
     this->tree.addNode("<vehicleId>/<deviceId>/last_update");
     this->tree.addNode("<vehicleId>/<deviceId>/status");
     this->tree.addNode("<vehicleId>/<deviceId>/status/info");

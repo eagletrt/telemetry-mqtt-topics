@@ -27,7 +27,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -46,9 +45,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -153,7 +149,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -172,9 +167,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -279,7 +271,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -298,9 +289,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -405,7 +393,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -424,9 +411,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -531,7 +515,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -550,9 +533,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -785,9 +765,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         
         case Role::role_131:
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterLaps(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
@@ -801,6 +778,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionBaselineConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionBaselineConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
@@ -1298,7 +1276,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -1317,9 +1294,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -1386,7 +1360,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCan(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLoggerCanImuAngularRate(vehicleId, deviceId));
@@ -1405,9 +1378,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicExtraTlmDataVehicleState(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapTimes(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
-        ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusInfo(vehicleId, deviceId));
@@ -1497,7 +1467,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -1516,9 +1485,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1645,7 +1611,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -1664,9 +1629,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1793,7 +1755,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -1812,9 +1773,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -1941,7 +1899,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -1960,9 +1917,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -2089,7 +2043,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -2108,9 +2061,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -2293,7 +2243,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -2312,9 +2261,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -2440,7 +2386,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -2459,9 +2404,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -2549,15 +2491,11 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_gps:
             case Topic::data_brusa:
             case Topic::data_temporary:
-            case Topic::data_odometer:
             case Topic::extra_data_to_log:
             case Topic::extra_tlm_data:
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -2665,9 +2603,6 @@ bool CanSubscribe(Role role, Topic topic) {
         case Role::role_131:
         switch(topic) {
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::status_lap_counter_status:
             case Topic::status_lap_counter_laps:
             case Topic::info_session:
@@ -2681,6 +2616,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config_content:
             case Topic::action_car_config_get:
             case Topic::action_car_config_content:
+            case Topic::action_baseline_config_set:
             case Topic::action_baseline_config_get:
             case Topic::action_baseline_config_content:
             case Topic::action_lap_counter_config_set:
@@ -2716,7 +2652,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -2765,7 +2700,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_baseline_config:
-            case Topic::action_baseline_config_set:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:
@@ -2922,7 +2856,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -2941,9 +2874,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::info_version:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
@@ -3069,7 +2999,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3088,9 +3017,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_version:
@@ -3218,7 +3144,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3237,9 +3162,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_version:
@@ -3367,7 +3289,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3386,9 +3307,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_version:
@@ -3516,7 +3434,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3535,9 +3452,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_version:
@@ -3580,7 +3494,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3599,9 +3512,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -3729,7 +3639,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3748,9 +3657,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -3882,7 +3788,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -3902,9 +3807,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -4037,7 +3939,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
-            case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
             case Topic::data_camera_logger_can_imu_angular_rate:
@@ -4057,9 +3958,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_vehicle_state:
             case Topic::extra_tlm_data_baseline:
             case Topic::extra_tlm_data_gps_map_origins:
-            case Topic::extra_tlm_data_lap_times:
-            case Topic::extra_tlm_data_lap_records:
-            case Topic::extra_tlm_data_lap_layout:
             case Topic::data_last_update:
             case Topic::status:
             case Topic::status_info:
@@ -4197,8 +4095,6 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicDataLapsLast(vehicleId, deviceId);
         case Topic::data_laps_last_meta_data: 
             return GetTopicDataLapsLastMetaData(vehicleId, deviceId);
-        case Topic::data_odometer: 
-            return GetTopicDataOdometer(vehicleId, deviceId);
         case Topic::data_camera_logger: 
             return GetTopicDataCameraLogger(vehicleId, deviceId);
         case Topic::data_camera_logger_can: 
@@ -4237,12 +4133,6 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicExtraTlmDataBaseline(vehicleId, deviceId);
         case Topic::extra_tlm_data_gps_map_origins: 
             return GetTopicExtraTlmDataGpsMapOrigins(vehicleId, deviceId);
-        case Topic::extra_tlm_data_lap_times: 
-            return GetTopicExtraTlmDataLapTimes(vehicleId, deviceId);
-        case Topic::extra_tlm_data_lap_records: 
-            return GetTopicExtraTlmDataLapRecords(vehicleId, deviceId);
-        case Topic::extra_tlm_data_lap_layout: 
-            return GetTopicExtraTlmDataLapLayout(vehicleId, deviceId);
         case Topic::data_last_update: 
             return GetTopicDataLastUpdate(vehicleId, deviceId);
         case Topic::status: 
@@ -4586,14 +4476,6 @@ TopicMessage GetTopicDataLapsLastMetaData(const std::string& vehicleId, const st
     return TopicMessage(std::move(topic), qos, retain);
 }
 
-TopicMessage GetTopicDataOdometer(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/odometer";
-    int qos = 0;
-    bool retain = false;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
 TopicMessage GetTopicDataCameraLogger(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/cameraLogger";
     int qos = 0;
@@ -4740,30 +4622,6 @@ TopicMessage GetTopicExtraTlmDataBaseline(const std::string& vehicleId, const st
 
 TopicMessage GetTopicExtraTlmDataGpsMapOrigins(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/gpsMapOrigins";
-    int qos = 0;
-    bool retain = true;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicExtraTlmDataLapTimes(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapTimes";
-    int qos = 0;
-    bool retain = true;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicExtraTlmDataLapRecords(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapRecords";
-    int qos = 0;
-    bool retain = true;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicExtraTlmDataLapLayout(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "extra_tlm_data/lapLayout";
     int qos = 0;
     bool retain = true;
 
