@@ -652,7 +652,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/baselineConfig/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 131 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId

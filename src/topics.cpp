@@ -1431,6 +1431,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_131:
+        ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
@@ -3912,6 +3913,7 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_131:
         switch(topic) {
+            case Topic::action_baseline_config_content:
             case Topic::query:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
@@ -4003,7 +4005,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_baseline_config:
             case Topic::action_baseline_config_set:
             case Topic::action_baseline_config_get:
-            case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings:
             case Topic::action_handcart_settings_set:
             case Topic::action_handcart_settings_get:

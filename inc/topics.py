@@ -2121,6 +2121,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             return ret
             
         case Role.role_131:
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
