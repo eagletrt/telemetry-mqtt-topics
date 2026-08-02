@@ -136,6 +136,14 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
+## DataOdometer
+### &lt;vehicleId>/&lt;deviceId>/data/odometer
+> &lt;vehicleId>/&lt;deviceId>/data/odometer
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataCameraLogger
 ### &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
 > &lt;vehicleId>/&lt;deviceId>/data/cameraLogger
@@ -283,6 +291,30 @@ vehicleIddeviceId
 ## ExtraTlmDataGpsMapOrigins
 ### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/gpsMapOrigins
 > Protobuffer data of gps map origins
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataLapTimes
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapTimes
+> Lap times of the running session
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataLapRecords
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapRecords
+> Lap records of the running session
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## ExtraTlmDataLapLayout
+### &lt;vehicleId>/&lt;deviceId>/extra_tlm_data/lapLayout
+> Lap layout of the running session
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: Yes
