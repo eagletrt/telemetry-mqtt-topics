@@ -132,7 +132,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/status/alert");
     this->tree.addNode("<vehicleId>/<deviceId>/status/canFrequencies");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
-    this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterLaps");
     this->tree.addNode("<vehicleId>/<deviceId>/commands");
     this->tree.addNode("<vehicleId>/<deviceId>/commands/setValues");
     this->tree.addNode("<vehicleId>/<deviceId>/commands/setStatus");
@@ -200,7 +199,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/stopCharge");
     this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
-    this->tree.addNode("<vehicleId>/<deviceId>/action/setLapcounterStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/get");

@@ -1024,36 +1024,6 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/status/lapCounterLaps",
-        "alias": "StatusLapCounterLaps",
-        "description": "<vehicleId>/<deviceId>/status/lapCounterLaps",
-        "qos": 1,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129",
-            "131"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "128",
-            "129"
-        ],
-        "retain": true,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/commands",
         "alias": "AsCommands",
         "description": "<vehicleId>/<deviceId>/asCommands",
@@ -2750,29 +2720,6 @@
             "4",
             "128",
             "129"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId"
-        ]
-    },
-    {
-        "topic": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
-        "alias": "ActionSetLapCounterStatus",
-        "description": "<vehicleId>/<deviceId>/action/setLapcounterStatus",
-        "qos": 2,
-        "subscribe_roles": [
-            "128",
-            "129",
-            "131"
         ],
         "publish_roles": [
             "0",

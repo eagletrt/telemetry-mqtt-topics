@@ -42,7 +42,6 @@ graph {
 "status" -- "alert";
 "status" -- "canFrequencies";
 "status" -- "lapCounterStatus";
-"status" -- "lapCounterLaps";
 "<deviceId>" -- "commands";
 "commands" -- "setValues";
 "commands" -- "setStatus";
@@ -110,7 +109,6 @@ graph {
 "action" -- "stopCharge";
 "action" -- "raw";
 "action" -- "resetLapcounter";
-"action" -- "setLapcounterStatus";
 "query" -- "<transactionId>";
 "<transactionId>" -- "LapCounterLayouts";
 "LapCounterLayouts" -- "get";

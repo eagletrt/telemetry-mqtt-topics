@@ -344,14 +344,6 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
-## StatusLapCounterLaps
-### &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
-> &lt;vehicleId>/&lt;deviceId>/status/lapCounterLaps
-- **Quality of Service**: 1
-- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 0 1 2 3 4 128 129 
-- **Retain**: Yes
-- **Variables**:
-vehicleIddeviceId
 ## AsCommands
 ### &lt;vehicleId>/&lt;deviceId>/commands
 > &lt;vehicleId>/&lt;deviceId>/asCommands
@@ -885,14 +877,6 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/action/resetLapcounter
 - **Quality of Service**: 2
 - **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceId
-## ActionSetLapCounterStatus
-### &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
-> &lt;vehicleId>/&lt;deviceId>/action/setLapcounterStatus
-- **Quality of Service**: 2
-- **Subscribe Roles**: 128 129 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
