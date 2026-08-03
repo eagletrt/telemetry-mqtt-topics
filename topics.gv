@@ -12,8 +12,6 @@ graph {
 "data" -- "brusa";
 "data" -- "temporary";
 "data" -- "laps";
-"laps" -- "current";
-"current" -- "metaData";
 "laps" -- "last";
 "last" -- "metaData";
 "data" -- "odometer";

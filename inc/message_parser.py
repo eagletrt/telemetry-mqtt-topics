@@ -18,8 +18,6 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/data/brusa",4)
         self.addNode("<vehicleId>/<deviceId>/data/temporary",4)
         self.addNode("<vehicleId>/<deviceId>/data/laps",4)
-        self.addNode("<vehicleId>/<deviceId>/data/laps/current",5)
-        self.addNode("<vehicleId>/<deviceId>/data/laps/current/metaData",6)
         self.addNode("<vehicleId>/<deviceId>/data/laps/last",5)
         self.addNode("<vehicleId>/<deviceId>/data/laps/last/metaData",6)
         self.addNode("<vehicleId>/<deviceId>/data/odometer",4)

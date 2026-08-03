@@ -102,8 +102,6 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/brusa");
     this->tree.addNode("<vehicleId>/<deviceId>/data/temporary");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/laps/current");
-    this->tree.addNode("<vehicleId>/<deviceId>/data/laps/current/metaData");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps/last/metaData");
     this->tree.addNode("<vehicleId>/<deviceId>/data/odometer");

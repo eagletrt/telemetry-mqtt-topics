@@ -23,8 +23,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -148,8 +146,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -273,8 +269,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -398,8 +392,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -523,8 +515,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -753,8 +743,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         
         case Role::role_130:
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataCameraLogger(vehicleId, deviceId));
@@ -1274,8 +1262,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -1361,8 +1347,6 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrent(vehicleId, deviceId));
-        ret.emplace_back(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataOdometer(vehicleId, deviceId));
@@ -1472,8 +1456,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -1618,8 +1600,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -1764,8 +1744,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -1910,8 +1888,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -2056,8 +2032,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -2256,8 +2230,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -2401,8 +2373,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -2482,8 +2452,6 @@ bool CanSubscribe(Role role, Topic topic) {
         case Role::role_130:
         switch(topic) {
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_camera_logger:
@@ -2674,8 +2642,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -2877,8 +2843,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3022,8 +2986,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3169,8 +3131,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3316,8 +3276,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3463,8 +3421,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3527,8 +3483,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3674,8 +3628,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3825,8 +3777,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -3979,8 +3929,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
-            case Topic::data_laps_current:
-            case Topic::data_laps_current_meta_data:
             case Topic::data_laps_last:
             case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
@@ -4132,10 +4080,6 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicDataTemporary(vehicleId, deviceId);
         case Topic::data_laps: 
             return GetTopicDataLaps(vehicleId, deviceId);
-        case Topic::data_laps_current: 
-            return GetTopicDataLapsCurrent(vehicleId, deviceId);
-        case Topic::data_laps_current_meta_data: 
-            return GetTopicDataLapsCurrentMetaData(vehicleId, deviceId);
         case Topic::data_laps_last: 
             return GetTopicDataLapsLast(vehicleId, deviceId);
         case Topic::data_laps_last_meta_data: 
@@ -4489,22 +4433,6 @@ TopicMessage GetTopicDataLaps(const std::string& vehicleId, const std::string& d
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps";
     int qos = 0;
     bool retain = false;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicDataLapsCurrent(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/current";
-    int qos = 1;
-    bool retain = true;
-
-    return TopicMessage(std::move(topic), qos, retain);
-}
-
-TopicMessage GetTopicDataLapsCurrentMetaData(const std::string& vehicleId, const std::string& deviceId) {
-    std::string topic = vehicleId + "/" + deviceId + "/" + "data/laps/current/metaData";
-    int qos = 1;
-    bool retain = true;
 
     return TopicMessage(std::move(topic), qos, retain);
 }

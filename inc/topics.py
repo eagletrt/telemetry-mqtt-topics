@@ -25,8 +25,6 @@ class Topic(Enum):
     data_brusa = auto(),
     data_temporary = auto(),
     data_laps = auto(),
-    data_laps_current = auto(),
-    data_laps_current_meta_data = auto(),
     data_laps_last = auto(),
     data_laps_last_meta_data = auto(),
     data_odometer = auto(),
@@ -204,14 +202,6 @@ def GetTopicDataTemporary(vehicleId, deviceId):
 
 def GetTopicDataLaps(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "data/laps"
-    return topic
-
-def GetTopicDataLapsCurrent(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "data/laps/current"
-    return topic
-
-def GetTopicDataLapsCurrentMetaData(vehicleId, deviceId):
-    topic = vehicleId + "/" + deviceId + "/" + "data/laps/current/metaData"
     return topic
 
 def GetTopicDataLapsLast(vehicleId, deviceId):
@@ -727,8 +717,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -852,8 +840,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -977,8 +963,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -1102,8 +1086,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -1227,8 +1209,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -1457,8 +1437,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             
         case Role.role_130:
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLogger(vehicleId, deviceId))
@@ -1974,8 +1952,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
@@ -2061,8 +2037,6 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataBrusa(vehicleId, deviceId))
             ret.append(GetTopicDataTemporary(vehicleId, deviceId))
             ret.append(GetTopicDataLaps(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrent(vehicleId, deviceId))
-            ret.append(GetTopicDataLapsCurrentMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLast(vehicleId, deviceId))
             ret.append(GetTopicDataLapsLastMetaData(vehicleId, deviceId))
             ret.append(GetTopicDataOdometer(vehicleId, deviceId))
