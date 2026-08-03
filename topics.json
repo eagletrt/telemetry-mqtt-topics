@@ -1407,6 +1407,94 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/info/version/serializers",
+        "alias": "InfoVersionSerializers",
+        "description": "<vehicleId>/<deviceId>/info/serializers",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/version/mqtt-topics",
+        "alias": "InfoVersionMqttTopics",
+        "description": "<vehicleId>/<deviceId>/info/mqtt-topics",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/version/gpslib",
+        "alias": "InfoVersionGpslib",
+        "description": "<vehicleId>/<deviceId>/info/gpslib",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/info/version/lib-communications",
+        "alias": "InfoVersionLibcommunications",
+        "description": "<vehicleId>/<deviceId>/info/lib-communications",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/info/user",
         "alias": "InfoUser",
         "description": "<vehicleId>/<deviceId>/info",

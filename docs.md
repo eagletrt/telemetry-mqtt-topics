@@ -456,6 +456,38 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## InfoVersionSerializers
+### &lt;vehicleId>/&lt;deviceId>/info/version/serializers
+> &lt;vehicleId>/&lt;deviceId>/info/serializers
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## InfoVersionMqttTopics
+### &lt;vehicleId>/&lt;deviceId>/info/version/mqtt-topics
+> &lt;vehicleId>/&lt;deviceId>/info/mqtt-topics
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## InfoVersionGpslib
+### &lt;vehicleId>/&lt;deviceId>/info/version/gpslib
+> &lt;vehicleId>/&lt;deviceId>/info/gpslib
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## InfoVersionLibcommunications
+### &lt;vehicleId>/&lt;deviceId>/info/version/lib-communications
+> &lt;vehicleId>/&lt;deviceId>/info/lib-communications
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## InfoUser
 ### &lt;vehicleId>/&lt;deviceId>/info/user
 > &lt;vehicleId>/&lt;deviceId>/info

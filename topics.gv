@@ -56,6 +56,10 @@ graph {
 "<transactionId>" -- "chunk_ack";
 "<deviceId>" -- "info";
 "info" -- "version";
+"version" -- "serializers";
+"version" -- "mqtt-topics";
+"version" -- "gpslib";
+"version" -- "lib-communications";
 "info" -- "user";
 "info" -- "telemetryReplay";
 "telemetryReplay" -- "ready";
