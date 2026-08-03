@@ -152,36 +152,6 @@
                   "130"
                 ],
                 "sub_topics": {
-                  "current": {
-                    "alias": "DataLapsCurrent",
-                    "description": "<vehicleId>/<deviceId>/data/laps/current",
-                    "qos": 1,
-                    "retain": true,
-                    "subscribe_roles": [
-                      "0",
-                      "1",
-                      "2",
-                      "3",
-                      "4",
-                      "130"
-                    ],
-                    "sub_topics": {
-                      "metaData": {
-                        "alias": "DataLapsCurrentMetaData",
-                        "description": "<vehicleId>/<deviceId>/data/laps/current/metaData",
-                        "qos": 1,
-                        "retain": true,
-                        "subscribe_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4",
-                          "130"
-                        ]
-                      }
-                    }
-                  },
                   "last": {
                     "alias": "DataLapsLast",
                     "description": "<vehicleId>/<deviceId>/data/laps/last",
