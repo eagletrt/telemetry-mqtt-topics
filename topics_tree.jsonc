@@ -627,27 +627,33 @@
                   "129"
                 ],
                 "sub_topics": {
+                  "libcan": {
+                    "alias": "InfoVersionLibcan",
+                    "description": "libcan version hash",
+                    "qos": 0,
+                    "retain": true
+                  },
                   "serializers": {
                     "alias": "InfoVersionSerializers",
-                    "description": "<vehicleId>/<deviceId>/info/serializers",
+                    "description": "serializers version hash",
                     "qos": 0,
                     "retain": true
                   },
                   "mqtt-topics": {
                     "alias": "InfoVersionMqttTopics",
-                    "description": "<vehicleId>/<deviceId>/info/mqtt-topics",
+                    "description": "mqtt-topics version hash",
                     "qos": 0,
                     "retain": true
                   },
                   "gpslib": {
                     "alias": "InfoVersionGpslib",
-                    "description": "<vehicleId>/<deviceId>/info/gpslib",
+                    "description": "gpslib version hash",
                     "qos": 0,
                     "retain": true
                   },
                   "lib-communications": {
                     "alias": "InfoVersionLibcommunications",
-                    "description": "<vehicleId>/<deviceId>/info/lib-communications",
+                    "description": "lib-communications version hash",
                     "qos": 0,
                     "retain": true
                   }
