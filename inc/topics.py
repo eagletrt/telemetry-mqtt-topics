@@ -69,6 +69,7 @@ class Topic(Enum):
     file_transaction_chunk_ack = auto(),
     info = auto(),
     info_version = auto(),
+    info_version_libcan = auto(),
     info_version_serializers = auto(),
     info_version_mqtt_topics = auto(),
     info_version_gpslib = auto(),
@@ -382,6 +383,10 @@ def GetTopicInfo(vehicleId, deviceId):
 
 def GetTopicInfoVersion(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "info/version"
+    return topic
+
+def GetTopicInfoVersionLibcan(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/libcan"
     return topic
 
 def GetTopicInfoVersionSerializers(vehicleId, deviceId):
@@ -780,6 +785,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -907,6 +913,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -1034,6 +1041,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -1161,6 +1169,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -1288,6 +1297,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -2035,6 +2045,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
@@ -2122,6 +2133,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
             ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))

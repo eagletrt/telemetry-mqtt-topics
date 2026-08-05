@@ -146,6 +146,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack");
     this->tree.addNode("<vehicleId>/<deviceId>/info");
     this->tree.addNode("<vehicleId>/<deviceId>/info/version");
+    this->tree.addNode("<vehicleId>/<deviceId>/info/version/libcan");
     this->tree.addNode("<vehicleId>/<deviceId>/info/version/serializers");
     this->tree.addNode("<vehicleId>/<deviceId>/info/version/mqtt-topics");
     this->tree.addNode("<vehicleId>/<deviceId>/info/version/gpslib");

@@ -456,9 +456,17 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## InfoVersionLibcan
+### &lt;vehicleId>/&lt;deviceId>/info/version/libcan
+> libcan version hash
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## InfoVersionSerializers
 ### &lt;vehicleId>/&lt;deviceId>/info/version/serializers
-> &lt;vehicleId>/&lt;deviceId>/info/serializers
+> serializers version hash
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: Yes
@@ -466,7 +474,7 @@ vehicleIddeviceId
 vehicleIddeviceId
 ## InfoVersionMqttTopics
 ### &lt;vehicleId>/&lt;deviceId>/info/version/mqtt-topics
-> &lt;vehicleId>/&lt;deviceId>/info/mqtt-topics
+> mqtt-topics version hash
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: Yes
@@ -474,7 +482,7 @@ vehicleIddeviceId
 vehicleIddeviceId
 ## InfoVersionGpslib
 ### &lt;vehicleId>/&lt;deviceId>/info/version/gpslib
-> &lt;vehicleId>/&lt;deviceId>/info/gpslib
+> gpslib version hash
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: Yes
@@ -482,7 +490,7 @@ vehicleIddeviceId
 vehicleIddeviceId
 ## InfoVersionLibcommunications
 ### &lt;vehicleId>/&lt;deviceId>/info/version/lib-communications
-> &lt;vehicleId>/&lt;deviceId>/info/lib-communications
+> lib-communications version hash
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
 - **Retain**: Yes

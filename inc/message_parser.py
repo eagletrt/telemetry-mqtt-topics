@@ -62,6 +62,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/fileTransaction/<transactionId>/chunk_ack",5)
         self.addNode("<vehicleId>/<deviceId>/info",3)
         self.addNode("<vehicleId>/<deviceId>/info/version",4)
+        self.addNode("<vehicleId>/<deviceId>/info/version/libcan",5)
         self.addNode("<vehicleId>/<deviceId>/info/version/serializers",5)
         self.addNode("<vehicleId>/<deviceId>/info/version/mqtt-topics",5)
         self.addNode("<vehicleId>/<deviceId>/info/version/gpslib",5)
