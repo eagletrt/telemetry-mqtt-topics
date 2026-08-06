@@ -798,6 +798,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoTrackConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
@@ -2690,6 +2691,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
             case Topic::status_lap_counter_status:
+            case Topic::info_track_config:
             case Topic::info_session:
             case Topic::info_session_started:
             case Topic::info_session_stopped:
@@ -2770,7 +2772,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
-            case Topic::info_track_config:
             case Topic::info_version:
             case Topic::info_version_libcan:
             case Topic::info_version_serializers:

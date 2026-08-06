@@ -452,7 +452,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/trackConfig
 > lap splitter and baseline configurations
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
