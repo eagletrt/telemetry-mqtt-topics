@@ -77,92 +77,11 @@ enum class Topic
     file_transaction_chunk = 53,
     file_transaction_chunk_ack = 54,
     info = 55,
-    info_version = 56,
-    info_version_libcan = 57,
-    info_version_serializers = 58,
-    info_version_mqtt_topics = 59,
-    info_version_gpslib = 60,
-    info_version_libcommunications = 61,
-    info_user = 62,
-    info_telemetry_replay = 63,
-    info_telemetry_replay_ready = 64,
-    info_telemetry_replay_start = 65,
-    info_session = 66,
-    info_session_started = 67,
-    info_session_stopped = 68,
-    info_session_keepalive = 69,
-    info_new_lap = 70,
-    action = 71,
-    action_telemetry_config = 72,
-    action_telemetry_config_set = 73,
-    action_telemetry_config_get = 74,
-    action_telemetry_config_content = 75,
-    action_session_config = 76,
-    action_session_config_set = 77,
-    action_session_config_get = 78,
-    action_session_config_content = 79,
-    action_car_config = 80,
-    action_car_config_set = 81,
-    action_car_config_get = 82,
-    action_car_config_content = 83,
-    action_baseline_config = 84,
-    action_baseline_config_set = 85,
-    action_baseline_config_get = 86,
-    action_baseline_config_content = 87,
-    action_handcart_settings = 88,
-    action_handcart_settings_set = 89,
-    action_handcart_settings_get = 90,
-    action_handcart_settings_content = 91,
-    raw_json_config = 92,
-    raw_json_config_set = 93,
-    raw_json_config_get = 94,
-    raw_json_config_content = 95,
-    action_lap_counter_config = 96,
-    action_lap_counter_config_set = 97,
-    action_lap_counter_config_get = 98,
-    action_lap_counter_config_content = 99,
-    action_lap_counter_track = 100,
-    action_lap_counter_track_set = 101,
-    action_lap_counter_track_get = 102,
-    action_lap_counter_track_content = 103,
-    action_kill = 104,
-    action_start = 105,
-    action_reset = 106,
-    action_stop = 107,
-    action_start_baseline = 108,
-    action_stop_baseline = 109,
-    action_precharge = 110,
-    action_balance = 111,
-    action_stop_balance = 112,
-    action_charge = 113,
-    action_stop_charge = 114,
-    action_raw = 115,
-    action_reset_lap_counter = 116,
-    query = 117,
-    query_lap_counter_layouts = 118,
-    query_lap_counter_layouts_get = 119,
-    query_lap_counter_layouts_set = 120,
-    query_lap_counter_layouts_content = 121,
-    query_lap_counter_times = 122,
-    query_lap_counter_times_get = 123,
-    query_lap_counter_times_set = 124,
-    query_lap_counter_times_content = 125,
-    query_lap_counter_lap_records = 126,
-    query_lap_counter_lap_records_get = 127,
-    query_lap_counter_lap_records_set = 128,
-    query_lap_counter_lap_records_content = 129,
-    query_gps_origins = 130,
-    query_gps_origins_get = 131,
-    query_gps_origins_set = 132,
-    query_gps_origins_content = 133,
-    query_baseline = 134,
-    query_baseline_get = 135,
-    query_baseline_set = 136,
-    query_baseline_content = 137,
-    query_custom_plots = 138,
-    query_custom_plots_get = 139,
-    query_custom_plots_set = 140,
-    query_custom_plots_content = 141
+    info_track_config = 56,
+    simulator = 57,
+    simulator_inputs = 58,
+    simulator_outputs = 59,
+    simulator_initial_state = 60
 };
 
 struct TopicMessage
@@ -237,92 +156,11 @@ TopicMessage GetTopicFileTransactionEnd(const std::string& vehicleId, const std:
 TopicMessage GetTopicFileTransactionChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicFileTransactionChunkAck(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicInfo(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersion(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersionLibcan(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersionSerializers(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersionMqttTopics(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersionGpslib(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoVersionLibcommunications(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoUser(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoTelemetryReplay(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoTelemetryReplayReady(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoTelemetryReplayStart(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoSession(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoSessionStarted(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoSessionStopped(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoSessionKeepalive(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicInfoNewLap(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicAction(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionTelemetryConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionTelemetryConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionTelemetryConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionTelemetryConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionSessionConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionSessionConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionSessionConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionSessionConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionCarConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionCarConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionCarConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionCarConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionBaselineConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionBaselineConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionBaselineConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionBaselineConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionHandcartSettings(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionHandcartSettingsSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionHandcartSettingsGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionHandcartSettingsContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicRawJsonConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicRawJsonConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicRawJsonConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicRawJsonConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterConfig(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterConfigSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterConfigGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterConfigContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterTrack(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterTrackSet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterTrackGet(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionLapCounterTrackContent(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionKill(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStart(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionReset(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStop(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStartBaseline(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStopBaseline(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionPrecharge(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionBalance(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStopBalance(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionCharge(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
-TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLayouts(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLayoutsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLayoutsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLayoutsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterTimes(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterTimesGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterTimesSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterTimesContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLapRecords(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLapRecordsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLapRecordsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryLapCounterLapRecordsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryGpsOrigins(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryGpsOriginsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryGpsOriginsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryGpsOriginsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryBaseline(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryBaselineGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryBaselineSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryBaselineContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryCustomPlots(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryCustomPlotsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryCustomPlotsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryCustomPlotsContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicInfoTrackConfig(const std::string& vehicleId, const std::string& deviceId);
+TopicMessage GetTopicSimulator(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorInputs(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorOutputs(const std::string& vehicleId);
+TopicMessage GetTopicSimulatorInitialState(const std::string& vehicleId);
 }
 
 #endif
