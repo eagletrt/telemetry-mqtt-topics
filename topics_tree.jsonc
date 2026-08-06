@@ -610,9 +610,9 @@
             "qos": 0,
             "retain": false,
             "sub_topics": {
-              "trackSetup": {
-                "alias": "InfoTracksSetup",
-                "description": "All congfiguration of the track setup, including the track layout, the lap records and the lap times.",
+              "trackConfig": {
+                "alias": "InfoTrackConfig",
+                "description": "All configuration of the track setup, including the track layout, the lap records and the lap times.",
                 "qos": 0,
                 "retain": true,
                 "subscribe_roles": [
@@ -1804,5 +1804,4 @@
       }
     }
   }
-}
 }
