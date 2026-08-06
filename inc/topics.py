@@ -69,10 +69,92 @@ class Topic(Enum):
     file_transaction_chunk_ack = auto(),
     info = auto(),
     info_track_config = auto(),
-    simulator = auto(),
-    simulator_inputs = auto(),
-    simulator_outputs = auto(),
-    simulator_initial_state = auto()
+    info_version = auto(),
+    info_version_libcan = auto(),
+    info_version_serializers = auto(),
+    info_version_mqtt_topics = auto(),
+    info_version_gpslib = auto(),
+    info_version_libcommunications = auto(),
+    info_user = auto(),
+    info_telemetry_replay = auto(),
+    info_telemetry_replay_ready = auto(),
+    info_telemetry_replay_start = auto(),
+    info_session = auto(),
+    info_session_started = auto(),
+    info_session_stopped = auto(),
+    info_session_keepalive = auto(),
+    info_new_lap = auto(),
+    action = auto(),
+    action_telemetry_config = auto(),
+    action_telemetry_config_set = auto(),
+    action_telemetry_config_get = auto(),
+    action_telemetry_config_content = auto(),
+    action_session_config = auto(),
+    action_session_config_set = auto(),
+    action_session_config_get = auto(),
+    action_session_config_content = auto(),
+    action_car_config = auto(),
+    action_car_config_set = auto(),
+    action_car_config_get = auto(),
+    action_car_config_content = auto(),
+    action_baseline_config = auto(),
+    action_baseline_config_set = auto(),
+    action_baseline_config_get = auto(),
+    action_baseline_config_content = auto(),
+    action_handcart_settings = auto(),
+    action_handcart_settings_set = auto(),
+    action_handcart_settings_get = auto(),
+    action_handcart_settings_content = auto(),
+    raw_json_config = auto(),
+    raw_json_config_set = auto(),
+    raw_json_config_get = auto(),
+    raw_json_config_content = auto(),
+    action_lap_counter_config = auto(),
+    action_lap_counter_config_set = auto(),
+    action_lap_counter_config_get = auto(),
+    action_lap_counter_config_content = auto(),
+    action_lap_counter_track = auto(),
+    action_lap_counter_track_set = auto(),
+    action_lap_counter_track_get = auto(),
+    action_lap_counter_track_content = auto(),
+    action_kill = auto(),
+    action_start = auto(),
+    action_reset = auto(),
+    action_stop = auto(),
+    action_start_baseline = auto(),
+    action_stop_baseline = auto(),
+    action_precharge = auto(),
+    action_balance = auto(),
+    action_stop_balance = auto(),
+    action_charge = auto(),
+    action_stop_charge = auto(),
+    action_raw = auto(),
+    action_reset_lap_counter = auto(),
+    query = auto(),
+    query_lap_counter_layouts = auto(),
+    query_lap_counter_layouts_get = auto(),
+    query_lap_counter_layouts_set = auto(),
+    query_lap_counter_layouts_content = auto(),
+    query_lap_counter_times = auto(),
+    query_lap_counter_times_get = auto(),
+    query_lap_counter_times_set = auto(),
+    query_lap_counter_times_content = auto(),
+    query_lap_counter_lap_records = auto(),
+    query_lap_counter_lap_records_get = auto(),
+    query_lap_counter_lap_records_set = auto(),
+    query_lap_counter_lap_records_content = auto(),
+    query_gps_origins = auto(),
+    query_gps_origins_get = auto(),
+    query_gps_origins_set = auto(),
+    query_gps_origins_content = auto(),
+    query_baseline = auto(),
+    query_baseline_get = auto(),
+    query_baseline_set = auto(),
+    query_baseline_content = auto(),
+    query_custom_plots = auto(),
+    query_custom_plots_get = auto(),
+    query_custom_plots_set = auto(),
+    query_custom_plots_content = auto()
 
 
 
@@ -304,20 +386,348 @@ def GetTopicInfoTrackConfig(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "info/trackConfig"
     return topic
 
-def GetTopicSimulator(vehicleId):
-    topic = vehicleId + "/" + "simulator"
+def GetTopicInfoVersion(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version"
     return topic
 
-def GetTopicSimulatorInputs(vehicleId):
-    topic = vehicleId + "/" + "simulator/inputs"
+def GetTopicInfoVersionLibcan(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/libcan"
     return topic
 
-def GetTopicSimulatorOutputs(vehicleId):
-    topic = vehicleId + "/" + "simulator/outputs"
+def GetTopicInfoVersionSerializers(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/serializers"
     return topic
 
-def GetTopicSimulatorInitialState(vehicleId):
-    topic = vehicleId + "/" + "simulator/initialState"
+def GetTopicInfoVersionMqttTopics(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/mqtt-topics"
+    return topic
+
+def GetTopicInfoVersionGpslib(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/gpslib"
+    return topic
+
+def GetTopicInfoVersionLibcommunications(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/version/lib-communications"
+    return topic
+
+def GetTopicInfoUser(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/user"
+    return topic
+
+def GetTopicInfoTelemetryReplay(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay"
+    return topic
+
+def GetTopicInfoTelemetryReplayReady(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/ready"
+    return topic
+
+def GetTopicInfoTelemetryReplayStart(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/telemetryReplay/start"
+    return topic
+
+def GetTopicInfoSession(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session"
+    return topic
+
+def GetTopicInfoSessionStarted(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/started"
+    return topic
+
+def GetTopicInfoSessionStopped(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/stopped"
+    return topic
+
+def GetTopicInfoSessionKeepalive(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/session/logging"
+    return topic
+
+def GetTopicInfoNewLap(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "info/newLap"
+    return topic
+
+def GetTopicAction(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action"
+    return topic
+
+def GetTopicActionTelemetryConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig"
+    return topic
+
+def GetTopicActionTelemetryConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/set"
+    return topic
+
+def GetTopicActionTelemetryConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/get"
+    return topic
+
+def GetTopicActionTelemetryConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/telemetryConfig/content"
+    return topic
+
+def GetTopicActionSessionConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig"
+    return topic
+
+def GetTopicActionSessionConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/set"
+    return topic
+
+def GetTopicActionSessionConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/get"
+    return topic
+
+def GetTopicActionSessionConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/sessionConfig/content"
+    return topic
+
+def GetTopicActionCarConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig"
+    return topic
+
+def GetTopicActionCarConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/set"
+    return topic
+
+def GetTopicActionCarConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/get"
+    return topic
+
+def GetTopicActionCarConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/carConfig/content"
+    return topic
+
+def GetTopicActionBaselineConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig"
+    return topic
+
+def GetTopicActionBaselineConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/set"
+    return topic
+
+def GetTopicActionBaselineConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/get"
+    return topic
+
+def GetTopicActionBaselineConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/baselineConfig/content"
+    return topic
+
+def GetTopicActionHandcartSettings(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings"
+    return topic
+
+def GetTopicActionHandcartSettingsSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/set"
+    return topic
+
+def GetTopicActionHandcartSettingsGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/get"
+    return topic
+
+def GetTopicActionHandcartSettingsContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/handcartSettings/content"
+    return topic
+
+def GetTopicRawJsonConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig"
+    return topic
+
+def GetTopicRawJsonConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/set"
+    return topic
+
+def GetTopicRawJsonConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/get"
+    return topic
+
+def GetTopicRawJsonConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/rawJsonConfig/content"
+    return topic
+
+def GetTopicActionLapCounterConfig(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig"
+    return topic
+
+def GetTopicActionLapCounterConfigSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/set"
+    return topic
+
+def GetTopicActionLapCounterConfigGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/get"
+    return topic
+
+def GetTopicActionLapCounterConfigContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterConfig/content"
+    return topic
+
+def GetTopicActionLapCounterTrack(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack"
+    return topic
+
+def GetTopicActionLapCounterTrackSet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/set"
+    return topic
+
+def GetTopicActionLapCounterTrackGet(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/get"
+    return topic
+
+def GetTopicActionLapCounterTrackContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/lapCounterTrack/content"
+    return topic
+
+def GetTopicActionKill(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/kill"
+    return topic
+
+def GetTopicActionStart(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/start"
+    return topic
+
+def GetTopicActionReset(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/reset"
+    return topic
+
+def GetTopicActionStop(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stop"
+    return topic
+
+def GetTopicActionStartBaseline(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/startBaseline"
+    return topic
+
+def GetTopicActionStopBaseline(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopBaseline"
+    return topic
+
+def GetTopicActionPrecharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/precharge"
+    return topic
+
+def GetTopicActionBalance(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/balance"
+    return topic
+
+def GetTopicActionStopBalance(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopBalance"
+    return topic
+
+def GetTopicActionCharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/charge"
+    return topic
+
+def GetTopicActionStopCharge(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/stopCharge"
+    return topic
+
+def GetTopicActionRaw(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/raw"
+    return topic
+
+def GetTopicActionResetLapCounter(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/resetLapcounter"
+    return topic
+
+def GetTopicQuery(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId
+    return topic
+
+def GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts"
+    return topic
+
+def GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/get"
+    return topic
+
+def GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/set"
+    return topic
+
+def GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLayouts/content"
+    return topic
+
+def GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes"
+    return topic
+
+def GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/get"
+    return topic
+
+def GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/set"
+    return topic
+
+def GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterTimes/content"
+    return topic
+
+def GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords"
+    return topic
+
+def GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/get"
+    return topic
+
+def GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/set"
+    return topic
+
+def GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "LapCounterLapRecords/content"
+    return topic
+
+def GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins"
+    return topic
+
+def GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/get"
+    return topic
+
+def GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/set"
+    return topic
+
+def GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "GpsOrigins/content"
+    return topic
+
+def GetTopicQueryBaseline(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline"
+    return topic
+
+def GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline/get"
+    return topic
+
+def GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline/set"
+    return topic
+
+def GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "baseline/content"
+    return topic
+
+def GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots"
+    return topic
+
+def GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/get"
+    return topic
+
+def GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/set"
+    return topic
+
+def GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "customPlots/content"
     return topic
 def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
     ret = []
@@ -380,10 +790,76 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_1:
@@ -443,10 +919,76 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_2:
@@ -506,10 +1048,76 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_3:
@@ -569,10 +1177,76 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_4:
@@ -632,10 +1306,76 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_128:
@@ -655,6 +1395,46 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             return ret
             
         case Role.role_129:
@@ -674,6 +1454,45 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             return ret
             
         case Role.role_130:
@@ -694,6 +1513,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicDataCameraLoggerGpsHpposllh(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerGpsPvt(vehicleId, deviceId))
             ret.append(GetTopicDataCameraLoggerGpsRelposned(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
             return ret
             
         case Role.role_131:
@@ -702,6 +1522,34 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
 
 def GetPublishTopics(role, vehicleId, deviceId, transactionId):
@@ -731,10 +1579,71 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_1:
@@ -758,10 +1667,71 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_2:
@@ -785,10 +1755,71 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_3:
@@ -812,10 +1843,71 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_4:
@@ -839,10 +1931,71 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId))
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
-            ret.append(GetTopicSimulator(vehicleId))
-            ret.append(GetTopicSimulatorInputs(vehicleId))
-            ret.append(GetTopicSimulatorOutputs(vehicleId))
-            ret.append(GetTopicSimulatorInitialState(vehicleId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsSet(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsGet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigGet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackSet(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
+            ret.append(GetTopicActionKill(vehicleId, deviceId))
+            ret.append(GetTopicActionStart(vehicleId, deviceId))
+            ret.append(GetTopicActionReset(vehicleId, deviceId))
+            ret.append(GetTopicActionStop(vehicleId, deviceId))
+            ret.append(GetTopicActionStartBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBaseline(vehicleId, deviceId))
+            ret.append(GetTopicActionPrecharge(vehicleId, deviceId))
+            ret.append(GetTopicActionBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionStopBalance(vehicleId, deviceId))
+            ret.append(GetTopicActionCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
             
         case Role.role_128:
@@ -902,6 +2055,38 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
             return ret
             
         case Role.role_129:
@@ -959,12 +2144,55 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId))
             ret.append(GetTopicInfo(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersion(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcan(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionSerializers(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionMqttTopics(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionGpslib(vehicleId, deviceId))
+            ret.append(GetTopicInfoVersionLibcommunications(vehicleId, deviceId))
+            ret.append(GetTopicInfoUser(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplay(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayReady(vehicleId, deviceId))
+            ret.append(GetTopicInfoSession(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionStopped(vehicleId, deviceId))
+            ret.append(GetTopicInfoSessionKeepalive(vehicleId, deviceId))
+            ret.append(GetTopicInfoNewLap(vehicleId, deviceId))
+            ret.append(GetTopicAction(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionTelemetryConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionSessionConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionCarConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettings(vehicleId, deviceId))
+            ret.append(GetTopicActionHandcartSettingsContent(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfig(vehicleId, deviceId))
+            ret.append(GetTopicRawJsonConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfig(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
+            ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
+            ret.append(GetTopicActionRaw(vehicleId, deviceId))
             return ret
             
         case Role.role_130:
             ret.append(GetTopicAsCommandsSetValues(vehicleId, deviceId))
             ret.append(GetTopicAsCommandsSetStatus(vehicleId, deviceId))
+            ret.append(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId))
             return ret
             
         case Role.role_131:
+            ret.append(GetTopicActionBaselineConfigContent(vehicleId, deviceId))
+            ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaseline(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId))
             return ret
