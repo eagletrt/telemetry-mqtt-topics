@@ -464,6 +464,23 @@
                   "129",
                   "131"
                 ]
+              },
+              "MongoManagerStatus" : {
+                "alias" : "StatusMongoManagerStatus",
+                "description" : "MongoManager status",
+                "subscribe_roles" : [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "128",
+                  "129",
+                  "131"
+                ],
+                "publish_roles" : [
+                  "131"
+                ]
               }
             }
           },
