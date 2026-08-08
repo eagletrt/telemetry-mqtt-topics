@@ -118,6 +118,14 @@ graph {
 "action" -- "raw";
 "action" -- "resetLapcounter";
 "query" -- "<transactionId>";
+"<transactionId>" -- "SessionByYearMonth";
+"SessionByYearMonth" -- "get";
+"SessionByYearMonth" -- "set";
+"SessionByYearMonth" -- "content";
+"<transactionId>" -- "SessionByDayRange";
+"SessionByDayRange" -- "get";
+"SessionByDayRange" -- "set";
+"SessionByDayRange" -- "content";
 "<transactionId>" -- "LapCounterLayouts";
 "LapCounterLayouts" -- "get";
 "LapCounterLayouts" -- "set";

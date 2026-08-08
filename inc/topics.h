@@ -140,30 +140,38 @@ enum class Topic
     action_raw = 116,
     action_reset_lap_counter = 117,
     query = 118,
-    query_lap_counter_layouts = 119,
-    query_lap_counter_layouts_get = 120,
-    query_lap_counter_layouts_set = 121,
-    query_lap_counter_layouts_content = 122,
-    query_lap_counter_times = 123,
-    query_lap_counter_times_get = 124,
-    query_lap_counter_times_set = 125,
-    query_lap_counter_times_content = 126,
-    query_lap_counter_lap_records = 127,
-    query_lap_counter_lap_records_get = 128,
-    query_lap_counter_lap_records_set = 129,
-    query_lap_counter_lap_records_content = 130,
-    query_gps_origins = 131,
-    query_gps_origins_get = 132,
-    query_gps_origins_set = 133,
-    query_gps_origins_content = 134,
-    query_baseline = 135,
-    query_baseline_get = 136,
-    query_baseline_set = 137,
-    query_baseline_content = 138,
-    query_custom_plots = 139,
-    query_custom_plots_get = 140,
-    query_custom_plots_set = 141,
-    query_custom_plots_content = 142
+    query_session_by_year_month = 119,
+    query_session_by_year_month_get = 120,
+    query_session_by_year_month_set = 121,
+    query_session_by_year_month_content = 122,
+    query_session_by_day_range = 123,
+    query_session_by_day_range_get = 124,
+    query_session_by_day_range_set = 125,
+    query_session_by_day_range_content = 126,
+    query_lap_counter_layouts = 127,
+    query_lap_counter_layouts_get = 128,
+    query_lap_counter_layouts_set = 129,
+    query_lap_counter_layouts_content = 130,
+    query_lap_counter_times = 131,
+    query_lap_counter_times_get = 132,
+    query_lap_counter_times_set = 133,
+    query_lap_counter_times_content = 134,
+    query_lap_counter_lap_records = 135,
+    query_lap_counter_lap_records_get = 136,
+    query_lap_counter_lap_records_set = 137,
+    query_lap_counter_lap_records_content = 138,
+    query_gps_origins = 139,
+    query_gps_origins_get = 140,
+    query_gps_origins_set = 141,
+    query_gps_origins_content = 142,
+    query_baseline = 143,
+    query_baseline_get = 144,
+    query_baseline_set = 145,
+    query_baseline_content = 146,
+    query_custom_plots = 147,
+    query_custom_plots_get = 148,
+    query_custom_plots_set = 149,
+    query_custom_plots_content = 150
 };
 
 struct TopicMessage
@@ -301,6 +309,14 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByYearMonth(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByYearMonthGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByYearMonthSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByYearMonthContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByDayRange(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByDayRangeGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByDayRangeSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQuerySessionByDayRangeContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayouts(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayoutsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayoutsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
