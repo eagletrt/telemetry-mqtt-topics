@@ -465,10 +465,10 @@
                   "131"
                 ]
               },
-              "MongoManagerStatus" : {
-                "alias" : "StatusMongoManagerStatus",
-                "description" : "MongoManager status",
-                "subscribe_roles" : [
+              "MongoManagerStatus": {
+                "alias": "StatusMongoManagerStatus",
+                "description": "MongoManager status",
+                "subscribe_roles": [
                   "0",
                   "1",
                   "2",
@@ -477,7 +477,7 @@
                   "128",
                   "129"
                 ],
-                "publish_roles" : [
+                "publish_roles": [
                   "131"
                 ]
               }
@@ -1587,6 +1587,38 @@
             "variables": [
               "transactionId"
             ],
+            "data": {
+              "alias": "QueryInfluxData",
+              "description": "get influx data",
+              "subscribe_roles": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "publish_roles": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "sub_topics": {
+                "get": {
+                  "alias": "QueryInfluxDataGet",
+                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get"
+                },
+                "set": {
+                  "alias": "QueryInfluxDataSet",
+                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set"
+                },
+                "content": {
+                  "alias": "QueryInfluxDataContent",
+                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
+                }
+              }
+            },
             "sub_topics": {
               "SessionByYearMonth": {
                 "alias": "QuerySessionByYearMonth",
@@ -1622,7 +1654,7 @@
                   }
                 }
               },
-              "SessionByDayRange" : {
+              "SessionByDayRange": {
                 "alias": "QuerySessionByDayRange",
                 "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange",
                 "subscribe_roles": [
