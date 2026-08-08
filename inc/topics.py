@@ -1614,7 +1614,6 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId))
             ret.append(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId))
             ret.append(GetTopicStatusLapCounterStatus(vehicleId, deviceId))
-            ret.append(GetTopicStatusMongoManagerStatus(vehicleId, deviceId))
             ret.append(GetTopicInfoTrackConfig(vehicleId, deviceId))
             ret.append(GetTopicInfoSession(vehicleId, deviceId))
             ret.append(GetTopicInfoSessionStarted(vehicleId, deviceId))

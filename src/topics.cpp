@@ -845,7 +845,6 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
-        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTrackConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
@@ -2900,7 +2899,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
             case Topic::status_lap_counter_status:
-            case Topic::status_mongo_manager_status:
             case Topic::info_track_config:
             case Topic::info_session:
             case Topic::info_session_started:
@@ -2995,6 +2993,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_error:
             case Topic::status_alert:
             case Topic::status_can_frequencies:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:

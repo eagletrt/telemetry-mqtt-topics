@@ -364,7 +364,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/status/MongoManagerStatus
 > MongoManager status
 - **Quality of Service**: 1
-- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 131 
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 131 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
