@@ -119,6 +119,10 @@ graph {
 "action" -- "raw";
 "action" -- "resetLapcounter";
 "query" -- "<transactionId>";
+"<transactionId>" -- "data";
+"data" -- "get";
+"data" -- "set";
+"data" -- "content";
 "<transactionId>" -- "SessionByYearMonth";
 "SessionByYearMonth" -- "get";
 "SessionByYearMonth" -- "set";

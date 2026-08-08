@@ -141,38 +141,42 @@ enum class Topic
     action_raw = 117,
     action_reset_lap_counter = 118,
     query = 119,
-    query_session_by_year_month = 120,
-    query_session_by_year_month_get = 121,
-    query_session_by_year_month_set = 122,
-    query_session_by_year_month_content = 123,
-    query_session_by_day_range = 124,
-    query_session_by_day_range_get = 125,
-    query_session_by_day_range_set = 126,
-    query_session_by_day_range_content = 127,
-    query_lap_counter_layouts = 128,
-    query_lap_counter_layouts_get = 129,
-    query_lap_counter_layouts_set = 130,
-    query_lap_counter_layouts_content = 131,
-    query_lap_counter_times = 132,
-    query_lap_counter_times_get = 133,
-    query_lap_counter_times_set = 134,
-    query_lap_counter_times_content = 135,
-    query_lap_counter_lap_records = 136,
-    query_lap_counter_lap_records_get = 137,
-    query_lap_counter_lap_records_set = 138,
-    query_lap_counter_lap_records_content = 139,
-    query_gps_origins = 140,
-    query_gps_origins_get = 141,
-    query_gps_origins_set = 142,
-    query_gps_origins_content = 143,
-    query_baseline = 144,
-    query_baseline_get = 145,
-    query_baseline_set = 146,
-    query_baseline_content = 147,
-    query_custom_plots = 148,
-    query_custom_plots_get = 149,
-    query_custom_plots_set = 150,
-    query_custom_plots_content = 151
+    query_influx_data = 120,
+    query_influx_data_get = 121,
+    query_influx_data_set = 122,
+    query_influx_data_content = 123,
+    query_session_by_year_month = 124,
+    query_session_by_year_month_get = 125,
+    query_session_by_year_month_set = 126,
+    query_session_by_year_month_content = 127,
+    query_session_by_day_range = 128,
+    query_session_by_day_range_get = 129,
+    query_session_by_day_range_set = 130,
+    query_session_by_day_range_content = 131,
+    query_lap_counter_layouts = 132,
+    query_lap_counter_layouts_get = 133,
+    query_lap_counter_layouts_set = 134,
+    query_lap_counter_layouts_content = 135,
+    query_lap_counter_times = 136,
+    query_lap_counter_times_get = 137,
+    query_lap_counter_times_set = 138,
+    query_lap_counter_times_content = 139,
+    query_lap_counter_lap_records = 140,
+    query_lap_counter_lap_records_get = 141,
+    query_lap_counter_lap_records_set = 142,
+    query_lap_counter_lap_records_content = 143,
+    query_gps_origins = 144,
+    query_gps_origins_get = 145,
+    query_gps_origins_set = 146,
+    query_gps_origins_content = 147,
+    query_baseline = 148,
+    query_baseline_get = 149,
+    query_baseline_set = 150,
+    query_baseline_content = 151,
+    query_custom_plots = 152,
+    query_custom_plots_get = 153,
+    query_custom_plots_set = 154,
+    query_custom_plots_content = 155
 };
 
 struct TopicMessage
@@ -311,6 +315,10 @@ TopicMessage GetTopicActionStopCharge(const std::string& vehicleId, const std::s
 TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxData(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxDataGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxDataSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxDataContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonth(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);

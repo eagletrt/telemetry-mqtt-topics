@@ -960,6 +960,38 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryInfluxData
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data
+> get influx data
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryInfluxDataGet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/get
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryInfluxDataSet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/set
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryInfluxDataContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/content
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
 ## QuerySessionByYearMonth
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth

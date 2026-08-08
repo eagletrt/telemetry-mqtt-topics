@@ -132,6 +132,10 @@ class Topic(Enum):
     action_raw = auto(),
     action_reset_lap_counter = auto(),
     query = auto(),
+    query_influx_data = auto(),
+    query_influx_data_get = auto(),
+    query_influx_data_set = auto(),
+    query_influx_data_content = auto(),
     query_session_by_year_month = auto(),
     query_session_by_year_month_get = auto(),
     query_session_by_year_month_set = auto(),
@@ -647,6 +651,22 @@ def GetTopicQuery(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId
     return topic
 
+def GetTopicQueryInfluxData(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data"
+    return topic
+
+def GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data/get"
+    return topic
+
+def GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data/set"
+    return topic
+
+def GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data/content"
+    return topic
+
 def GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "SessionByYearMonth"
     return topic
@@ -882,6 +902,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1020,6 +1044,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1158,6 +1186,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1296,6 +1328,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1434,6 +1470,10 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1737,6 +1777,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1833,6 +1877,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -1929,6 +1977,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -2025,6 +2077,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))
@@ -2121,6 +2177,10 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId))

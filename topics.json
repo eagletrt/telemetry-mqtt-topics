@@ -2964,6 +2964,110 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data",
+        "alias": "QueryInfluxData",
+        "description": "get influx data",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data/get",
+        "alias": "QueryInfluxDataGet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data/set",
+        "alias": "QueryInfluxDataSet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data/content",
+        "alias": "QueryInfluxDataContent",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
         "alias": "QuerySessionByYearMonth",
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
