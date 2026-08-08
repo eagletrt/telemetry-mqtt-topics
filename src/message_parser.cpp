@@ -134,6 +134,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/status/alert");
     this->tree.addNode("<vehicleId>/<deviceId>/status/canFrequencies");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/MongoManagerStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/commands");
     this->tree.addNode("<vehicleId>/<deviceId>/commands/setValues");
     this->tree.addNode("<vehicleId>/<deviceId>/commands/setStatus");

@@ -360,6 +360,14 @@ vehicleIddeviceId
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
+## StatusMongoManagerStatus
+### &lt;vehicleId>/&lt;deviceId>/status/MongoManagerStatus
+> MongoManager status
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 131 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## AsCommands
 ### &lt;vehicleId>/&lt;deviceId>/commands
 > &lt;vehicleId>/&lt;deviceId>/asCommands

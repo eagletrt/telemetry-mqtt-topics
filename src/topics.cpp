@@ -54,6 +54,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -191,6 +192,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -328,6 +330,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -465,6 +468,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -602,6 +606,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -700,6 +705,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -759,6 +765,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetStatus(vehicleId, deviceId));
@@ -838,6 +845,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicExtraTlmDataLapRecords(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraTlmDataLapLayout(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTrackConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
@@ -1570,6 +1578,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         break;
         
         case Role::role_131:
+        ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
@@ -1658,6 +1667,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -1816,6 +1826,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -1974,6 +1985,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2132,6 +2144,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2290,6 +2303,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2409,6 +2423,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_version:
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2567,6 +2582,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::device_version:
             case Topic::extra_data_to_log:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2767,6 +2783,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
@@ -2883,6 +2900,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::info_track_config:
             case Topic::info_session:
             case Topic::info_session_started:
@@ -3172,6 +3190,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_times:
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
+            case Topic::status_mongo_manager_status:
             case Topic::info_track_config:
             case Topic::info_version:
             case Topic::info_version_libcan:
@@ -3329,6 +3348,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_times:
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
@@ -3488,6 +3508,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_times:
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
@@ -3647,6 +3668,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_times:
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
@@ -3806,6 +3828,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_times:
             case Topic::extra_tlm_data_lap_records:
             case Topic::extra_tlm_data_lap_layout:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
@@ -3927,6 +3950,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::extra_data_to_log:
+            case Topic::status_mongo_manager_status:
             case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
@@ -4084,6 +4108,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_raw:
               return true;
             case Topic::extra_data_to_log:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_telemetry_replay_start:
@@ -4204,6 +4229,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_lap_counter_status:
+            case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
             case Topic::file_transaction_response:
@@ -4314,6 +4340,7 @@ bool CanPublish(Role role, Topic topic) {
         
         case Role::role_131:
         switch(topic) {
+            case Topic::status_mongo_manager_status:
             case Topic::action_baseline_config_content:
             case Topic::query:
             case Topic::query_session_by_year_month:
@@ -4567,6 +4594,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicStatusCanFrequencies(vehicleId, deviceId);
         case Topic::status_lap_counter_status: 
             return GetTopicStatusLapCounterStatus(vehicleId, deviceId);
+        case Topic::status_mongo_manager_status: 
+            return GetTopicStatusMongoManagerStatus(vehicleId, deviceId);
         case Topic::as_commands: 
             return GetTopicAsCommands(vehicleId, deviceId);
         case Topic::as_commands_set_values: 
@@ -5138,6 +5167,14 @@ TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const st
 
 TopicMessage GetTopicStatusLapCounterStatus(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/lapCounterStatus";
+    int qos = 1;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicStatusMongoManagerStatus(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "status/MongoManagerStatus";
     int qos = 1;
     bool retain = true;
 

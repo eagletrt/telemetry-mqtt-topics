@@ -50,6 +50,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/status/alert",4)
         self.addNode("<vehicleId>/<deviceId>/status/canFrequencies",4)
         self.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus",4)
+        self.addNode("<vehicleId>/<deviceId>/status/MongoManagerStatus",4)
         self.addNode("<vehicleId>/<deviceId>/commands",3)
         self.addNode("<vehicleId>/<deviceId>/commands/setValues",4)
         self.addNode("<vehicleId>/<deviceId>/commands/setStatus",4)
