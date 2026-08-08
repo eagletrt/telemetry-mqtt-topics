@@ -1587,39 +1587,39 @@
             "variables": [
               "transactionId"
             ],
-            "data": {
-              "alias": "QueryInfluxData",
-              "description": "get influx data",
-              "subscribe_roles": [
-                "0",
-                "1",
-                "2",
-                "3",
-                "4"
-              ],
-              "publish_roles": [
-                "0",
-                "1",
-                "2",
-                "3",
-                "4"
-              ],
-              "sub_topics": {
-                "get": {
-                  "alias": "QueryInfluxDataGet",
-                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get"
-                },
-                "set": {
-                  "alias": "QueryInfluxDataSet",
-                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set"
-                },
-                "content": {
-                  "alias": "QueryInfluxDataContent",
-                  "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
-                }
-              }
-            },
             "sub_topics": {
+              "data": {
+                "alias": "QueryInfluxData",
+                "description": "get influx data",
+                "subscribe_roles": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ],
+                "publish_roles": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ],
+                "sub_topics": {
+                  "get": {
+                    "alias": "QueryInfluxDataGet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get"
+                  },
+                  "set": {
+                    "alias": "QueryInfluxDataSet",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set"
+                  },
+                  "content": {
+                    "alias": "QueryInfluxDataContent",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
+                  }
+                }
+              },
               "SessionByYearMonth": {
                 "alias": "QuerySessionByYearMonth",
                 "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
