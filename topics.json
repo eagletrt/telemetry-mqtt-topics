@@ -3130,11 +3130,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3142,8 +3137,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3190,15 +3184,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3242,11 +3230,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3254,8 +3237,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3302,15 +3284,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3354,11 +3330,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3366,8 +3337,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3414,15 +3384,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3466,11 +3430,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3478,8 +3437,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3526,15 +3484,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3578,11 +3530,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3590,8 +3537,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3638,15 +3584,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3690,11 +3630,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3702,8 +3637,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3750,15 +3684,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3802,11 +3730,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3814,8 +3737,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3862,15 +3784,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,
@@ -3914,11 +3830,6 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get",
         "qos": 0,
         "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "publish_roles": [
@@ -3926,8 +3837,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "retain": false,
         "variables": [
@@ -3974,15 +3884,9 @@
             "1",
             "2",
             "3",
-            "4",
-            "131"
+            "4"
         ],
         "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
             "131"
         ],
         "retain": false,

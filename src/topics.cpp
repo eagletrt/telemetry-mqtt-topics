@@ -119,35 +119,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -262,35 +254,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -405,35 +389,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -548,35 +524,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -691,35 +659,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -896,35 +856,27 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
     }
 
@@ -1007,35 +959,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_1:
@@ -1108,35 +1052,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_2:
@@ -1209,35 +1145,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_3:
@@ -1310,35 +1238,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_4:
@@ -1411,35 +1331,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_128:
@@ -1635,35 +1547,27 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
-        ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsContent(vehicleId, deviceId, transactionId));
         break;
@@ -1785,35 +1689,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -1834,6 +1730,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
             default:
               return false;
         }
@@ -1949,35 +1853,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -1998,6 +1894,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
             default:
               return false;
         }
@@ -2113,35 +2017,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -2162,6 +2058,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
             default:
               return false;
         }
@@ -2277,35 +2181,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -2326,6 +2222,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
             default:
               return false;
         }
@@ -2441,35 +2345,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -2490,6 +2386,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
             default:
               return false;
         }
@@ -3017,35 +2921,27 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::vehicle_id:
             case Topic::device_id:
@@ -3146,6 +3042,14 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
             default:
               return false;
         }
@@ -3229,35 +3133,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -3316,6 +3212,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3392,35 +3296,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -3481,6 +3377,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3557,35 +3461,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -3646,6 +3542,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3722,35 +3626,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -3811,6 +3707,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -3887,35 +3791,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
-            case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
             case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
-            case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
             case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
-            case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
-            case Topic::query_custom_plots_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -3976,6 +3872,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track_content:
+            case Topic::query_session_by_year_month_content:
+            case Topic::query_session_by_day_range_content:
+            case Topic::query_lap_counter_layouts_content:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline_content:
+            case Topic::query_custom_plots_content:
              
             default: 
               return false;
@@ -4482,35 +4386,27 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_baseline_config_content:
             case Topic::query:
             case Topic::query_session_by_year_month:
-            case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_set:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
-            case Topic::query_session_by_day_range_get:
             case Topic::query_session_by_day_range_set:
             case Topic::query_session_by_day_range_content:
             case Topic::query_lap_counter_layouts:
-            case Topic::query_lap_counter_layouts_get:
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
-            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
-            case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
             case Topic::query_custom_plots_content:
               return true;
@@ -4636,6 +4532,14 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_session_by_year_month_get:
+            case Topic::query_session_by_day_range_get:
+            case Topic::query_lap_counter_layouts_get:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_gps_origins_get:
+            case Topic::query_baseline_get:
+            case Topic::query_custom_plots_get:
              
             default: 
               return false;
