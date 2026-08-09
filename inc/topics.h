@@ -148,36 +148,34 @@ enum class Topic
     query_influx_data_content = 124,
     query_session_by_year_month = 125,
     query_session_by_year_month_get = 126,
-    query_session_by_year_month_set = 127,
-    query_session_by_year_month_content = 128,
-    query_session_by_day_range = 129,
-    query_session_by_day_range_get = 130,
-    query_session_by_day_range_set = 131,
-    query_session_by_day_range_content = 132,
-    query_lap_counter_layouts = 133,
-    query_lap_counter_layouts_get = 134,
-    query_lap_counter_layouts_set = 135,
-    query_lap_counter_layouts_content = 136,
-    query_lap_counter_times = 137,
-    query_lap_counter_times_get = 138,
-    query_lap_counter_times_set = 139,
-    query_lap_counter_times_content = 140,
-    query_lap_counter_lap_records = 141,
-    query_lap_counter_lap_records_get = 142,
-    query_lap_counter_lap_records_set = 143,
-    query_lap_counter_lap_records_content = 144,
-    query_gps_origins = 145,
-    query_gps_origins_get = 146,
-    query_gps_origins_set = 147,
-    query_gps_origins_content = 148,
-    query_baseline = 149,
-    query_baseline_get = 150,
-    query_baseline_set = 151,
-    query_baseline_content = 152,
-    query_custom_plots = 153,
-    query_custom_plots_get = 154,
-    query_custom_plots_set = 155,
-    query_custom_plots_content = 156
+    query_session_by_year_month_content = 127,
+    query_session_by_day_range = 128,
+    query_session_by_day_range_get = 129,
+    query_session_by_day_range_content = 130,
+    query_lap_counter_layouts = 131,
+    query_lap_counter_layouts_get = 132,
+    query_lap_counter_layouts_set = 133,
+    query_lap_counter_layouts_content = 134,
+    query_lap_counter_times = 135,
+    query_lap_counter_times_get = 136,
+    query_lap_counter_times_set = 137,
+    query_lap_counter_times_content = 138,
+    query_lap_counter_lap_records = 139,
+    query_lap_counter_lap_records_get = 140,
+    query_lap_counter_lap_records_set = 141,
+    query_lap_counter_lap_records_content = 142,
+    query_gps_origins = 143,
+    query_gps_origins_get = 144,
+    query_gps_origins_set = 145,
+    query_gps_origins_content = 146,
+    query_baseline = 147,
+    query_baseline_get = 148,
+    query_baseline_set = 149,
+    query_baseline_content = 150,
+    query_custom_plots = 151,
+    query_custom_plots_get = 152,
+    query_custom_plots_set = 153,
+    query_custom_plots_content = 154
 };
 
 struct TopicMessage
@@ -323,11 +321,9 @@ TopicMessage GetTopicQueryInfluxDataSet(const std::string& vehicleId, const std:
 TopicMessage GetTopicQueryInfluxDataContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonth(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQuerySessionByYearMonthSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByDayRange(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByDayRangeGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQuerySessionByDayRangeSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByDayRangeContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayouts(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayoutsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);

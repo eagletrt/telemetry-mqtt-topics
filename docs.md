@@ -1012,15 +1012,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth/get
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/QuerySessionByYearMonth/get
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QuerySessionByYearMonthSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/QuerySessionByYearMonth/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Subscribe Roles**: 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
@@ -1028,7 +1020,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth/content
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/QuerySessionByYearMonth/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
@@ -1036,7 +1028,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
@@ -1044,15 +1036,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/get
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/get
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QuerySessionByDayRangeSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Subscribe Roles**: 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
@@ -1060,7 +1044,7 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
