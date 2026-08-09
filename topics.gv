@@ -118,6 +118,7 @@ graph {
 "action" -- "stopCharge";
 "action" -- "raw";
 "action" -- "resetLapcounter";
+"<deviceId>" -- "query";
 "query" -- "<transactionId>";
 "<transactionId>" -- "data";
 "data" -- "get";

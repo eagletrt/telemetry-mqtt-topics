@@ -124,6 +124,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/action/stopCharge",4)
         self.addNode("<vehicleId>/<deviceId>/action/raw",4)
         self.addNode("<vehicleId>/<deviceId>/action/resetLapcounter",4)
+        self.addNode("<vehicleId>/<deviceId>/query",3)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>",4)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data",5)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get",6)

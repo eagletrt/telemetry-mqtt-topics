@@ -131,6 +131,7 @@ class Topic(Enum):
     action_stop_charge = auto(),
     action_raw = auto(),
     action_reset_lap_counter = auto(),
+    query_plain = auto(),
     query = auto(),
     query_influx_data = auto(),
     query_influx_data_get = auto(),
@@ -647,6 +648,10 @@ def GetTopicActionResetLapCounter(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/resetLapcounter"
     return topic
 
+def GetTopicQueryPlain(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "query"
+    return topic
+
 def GetTopicQuery(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId
     return topic
@@ -901,6 +906,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1043,6 +1049,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1185,6 +1192,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1327,6 +1335,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1469,6 +1478,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1566,6 +1576,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             return ret
             
         case Role.role_129:
@@ -1625,6 +1636,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             return ret
             
         case Role.role_130:
@@ -1776,6 +1788,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1876,6 +1889,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -1976,6 +1990,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -2076,6 +2091,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -2176,6 +2192,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId))
@@ -2304,6 +2321,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             return ret
             
         case Role.role_129:
@@ -2393,6 +2411,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrack(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             return ret
             
         case Role.role_130:

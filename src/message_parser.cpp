@@ -208,6 +208,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/stopCharge");
     this->tree.addNode("<vehicleId>/<deviceId>/action/raw");
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
+    this->tree.addNode("<vehicleId>/<deviceId>/query");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get");

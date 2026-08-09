@@ -952,6 +952,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## QueryPlain
+### &lt;vehicleId>/&lt;deviceId>/query
+> base query node, transactionId needed
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## Query
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>

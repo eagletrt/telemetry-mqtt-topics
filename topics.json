@@ -2936,6 +2936,35 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/query",
+        "alias": "QueryPlain",
+        "description": "base query node, transactionId needed",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/query/<transactionId>",
         "alias": "Query",
         "description": "<vehicleId>/<deviceId>/query/<transactionId>",
