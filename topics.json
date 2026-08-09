@@ -3130,6 +3130,39 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/get",
         "qos": 0,
         "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/set",
+        "alias": "QuerySessionByYearMonthSet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
             "131"
         ],
         "publish_roles": [
@@ -3161,6 +3194,11 @@
             "131"
         ],
         "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
             "131"
         ],
         "retain": false,
@@ -3180,14 +3218,16 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
             "0",
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
@@ -3202,6 +3242,11 @@
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/get",
         "qos": 0,
         "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
             "131"
         ],
         "publish_roles": [
@@ -3209,7 +3254,36 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/set",
+        "alias": "QuerySessionByDayRangeSet",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "131"
         ],
         "retain": false,
         "variables": [
@@ -3228,9 +3302,15 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "131"
         ],
         "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
             "131"
         ],
         "retain": false,
