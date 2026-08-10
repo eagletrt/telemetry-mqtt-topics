@@ -220,9 +220,9 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content");
-    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession");
-    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/get");
-    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession/get");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession/content");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/set");

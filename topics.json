@@ -3241,9 +3241,9 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession",
-        "alias": "QueryDocumentsBySession",
-        "description": "request topic for retrieving session related documents",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession",
+        "alias": "QueryTrackBySession",
+        "description": "request topic for retrieving session related track",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -3269,8 +3269,8 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/get",
-        "alias": "QueryDocumentsBySessionGet",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession/get",
+        "alias": "QueryTrackBySessionGet",
         "description": "topic for making the request giving a session",
         "qos": 0,
         "subscribe_roles": [
@@ -3291,8 +3291,8 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/content",
-        "alias": "QueryDocumentsBySessionContent",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/TrackBySession/content",
+        "alias": "QueryTrackBySessionContent",
         "description": "response topic after the 'get' one",
         "qos": 0,
         "subscribe_roles": [

@@ -1048,24 +1048,24 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QueryDocumentsBySession
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession
-> request topic for retrieving session related documents
+## QueryTrackBySession
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/TrackBySession
+> request topic for retrieving session related track
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QueryDocumentsBySessionGet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession/get
+## QueryTrackBySessionGet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/TrackBySession/get
 > topic for making the request giving a session
 - **Quality of Service**: 0
 - **Subscribe Roles**: 131 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QueryDocumentsBySessionContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession/content
+## QueryTrackBySessionContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/TrackBySession/content
 > response topic after the 'get' one
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 131 

@@ -130,9 +130,9 @@ graph {
 "<transactionId>" -- "SessionByDayRange";
 "SessionByDayRange" -- "get";
 "SessionByDayRange" -- "content";
-"<transactionId>" -- "DocumentsBySession";
-"DocumentsBySession" -- "get";
-"DocumentsBySession" -- "content";
+"<transactionId>" -- "TrackBySession";
+"TrackBySession" -- "get";
+"TrackBySession" -- "content";
 "<transactionId>" -- "LapCounterLayouts";
 "LapCounterLayouts" -- "get";
 "LapCounterLayouts" -- "set";

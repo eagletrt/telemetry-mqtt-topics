@@ -143,9 +143,9 @@ class Topic(Enum):
     query_session_by_day_range = auto(),
     query_session_by_day_range_get = auto(),
     query_session_by_day_range_content = auto(),
-    query_documents_by_session = auto(),
-    query_documents_by_session_get = auto(),
-    query_documents_by_session_content = auto(),
+    query_track_by_session = auto(),
+    query_track_by_session_get = auto(),
+    query_track_by_session_content = auto(),
     query_lap_counter_layouts = auto(),
     query_lap_counter_layouts_get = auto(),
     query_lap_counter_layouts_set = auto(),
@@ -697,16 +697,16 @@ def GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId):
     topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "SessionByDayRange/content"
     return topic
 
-def GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "DocumentsBySession"
+def GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "TrackBySession"
     return topic
 
-def GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "DocumentsBySession/get"
+def GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "TrackBySession/get"
     return topic
 
-def GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId):
-    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "DocumentsBySession/content"
+def GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId):
+    topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "TrackBySession/content"
     return topic
 
 def GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId):
@@ -921,8 +921,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
@@ -1056,8 +1056,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
@@ -1191,8 +1191,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
@@ -1326,8 +1326,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
@@ -1461,8 +1461,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))
@@ -1656,8 +1656,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -1755,8 +1755,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -1848,8 +1848,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -1941,8 +1941,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -2034,8 +2034,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -2127,8 +2127,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeGet(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionGet(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
@@ -2345,8 +2345,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQuerySessionByDayRangeContent(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySession(vehicleId, deviceId, transactionId))
-            ret.append(GetTopicQueryDocumentsBySessionContent(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySession(vehicleId, deviceId, transactionId))
+            ret.append(GetTopicQueryTrackBySessionContent(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayouts(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId))

@@ -152,9 +152,9 @@ enum class Topic
     query_session_by_day_range = 128,
     query_session_by_day_range_get = 129,
     query_session_by_day_range_content = 130,
-    query_documents_by_session = 131,
-    query_documents_by_session_get = 132,
-    query_documents_by_session_content = 133,
+    query_track_by_session = 131,
+    query_track_by_session_get = 132,
+    query_track_by_session_content = 133,
     query_lap_counter_layouts = 134,
     query_lap_counter_layouts_get = 135,
     query_lap_counter_layouts_set = 136,
@@ -328,9 +328,9 @@ TopicMessage GetTopicQuerySessionByYearMonthContent(const std::string& vehicleId
 TopicMessage GetTopicQuerySessionByDayRange(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByDayRangeGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByDayRangeContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryDocumentsBySession(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryDocumentsBySessionGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryDocumentsBySessionContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryTrackBySession(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryTrackBySessionGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryTrackBySessionContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayouts(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayoutsGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryLapCounterLayoutsSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
