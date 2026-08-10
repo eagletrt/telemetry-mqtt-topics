@@ -3147,34 +3147,6 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/set",
-        "alias": "QuerySessionByYearMonthSet",
-        "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/set",
-        "qos": 0,
-        "subscribe_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "131"
-        ],
-        "publish_roles": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "131"
-        ],
-        "retain": false,
-        "variables": [
-            "vehicleId",
-            "deviceId",
-            "transactionId"
-        ]
-    },
-    {
         "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/content",
         "alias": "QuerySessionByYearMonthContent",
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/content",
@@ -3247,9 +3219,31 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/set",
-        "alias": "QuerySessionByDayRangeSet",
-        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/set",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content",
+        "alias": "QuerySessionByDayRangeContent",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession",
+        "alias": "QueryDocumentsBySession",
+        "description": "request topic for retrieving session related documents",
         "qos": 0,
         "subscribe_roles": [
             "0",
@@ -3275,9 +3269,31 @@
         ]
     },
     {
-        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content",
-        "alias": "QuerySessionByDayRangeContent",
-        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content",
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/get",
+        "alias": "QueryDocumentsBySessionGet",
+        "description": "topic for making the request giving a session",
+        "qos": 0,
+        "subscribe_roles": [
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/DocumentsBySession/content",
+        "alias": "QueryDocumentsBySessionContent",
+        "description": "response topic after the 'get' one",
         "qos": 0,
         "subscribe_roles": [
             "0",

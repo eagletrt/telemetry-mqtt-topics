@@ -126,12 +126,13 @@ graph {
 "data" -- "content";
 "<transactionId>" -- "SessionByYearMonth";
 "SessionByYearMonth" -- "get";
-"SessionByYearMonth" -- "set";
 "SessionByYearMonth" -- "content";
 "<transactionId>" -- "SessionByDayRange";
 "SessionByDayRange" -- "get";
-"SessionByDayRange" -- "set";
 "SessionByDayRange" -- "content";
+"<transactionId>" -- "DocumentsBySession";
+"DocumentsBySession" -- "get";
+"DocumentsBySession" -- "content";
 "<transactionId>" -- "LapCounterLayouts";
 "LapCounterLayouts" -- "get";
 "LapCounterLayouts" -- "set";

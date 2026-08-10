@@ -1016,14 +1016,6 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QuerySessionByYearMonthSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/QuerySessionByYearMonth/set
-- **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
 ## QuerySessionByYearMonthContent
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth/content
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/QuerySessionByYearMonth/content
@@ -1048,17 +1040,33 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QuerySessionByDayRangeSet
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/set
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/set
+## QuerySessionByDayRangeContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryDocumentsBySession
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession
+> request topic for retrieving session related documents
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
-## QuerySessionByDayRangeContent
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByDayRange/content
+## QueryDocumentsBySessionGet
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession/get
+> topic for making the request giving a session
+- **Quality of Service**: 0
+- **Subscribe Roles**: 131 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
+## QueryDocumentsBySessionContent
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/DocumentsBySession/content
+> response topic after the 'get' one
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 131 
 - **Retain**: No
