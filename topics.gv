@@ -120,11 +120,11 @@ graph {
 "action" -- "resetLapcounter";
 "<deviceId>" -- "query";
 "query" -- "<transactionId>";
+"<transactionId>" -- "status";
 "<transactionId>" -- "data";
 "data" -- "get";
 "data" -- "set";
 "data" -- "content";
-"data" -- "status";
 "<transactionId>" -- "SessionByYearMonth";
 "SessionByYearMonth" -- "get";
 "SessionByYearMonth" -- "content";

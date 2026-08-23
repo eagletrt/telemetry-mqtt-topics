@@ -210,11 +210,11 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/resetLapcounter");
     this->tree.addNode("<vehicleId>/<deviceId>/query");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/status");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/set");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/content");
-    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/status");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/content");

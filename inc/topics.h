@@ -142,11 +142,11 @@ enum class Topic
     action_reset_lap_counter = 118,
     query_plain = 119,
     query = 120,
-    query_influx_data = 121,
-    query_influx_data_get = 122,
-    query_influx_data_set = 123,
-    query_influx_data_content = 124,
-    query_influx_data_status = 125,
+    query_influx_status = 121,
+    query_influx_data = 122,
+    query_influx_data_get = 123,
+    query_influx_data_set = 124,
+    query_influx_data_content = 125,
     query_session_by_year_month = 126,
     query_session_by_year_month_get = 127,
     query_session_by_year_month_content = 128,
@@ -319,11 +319,11 @@ TopicMessage GetTopicActionRaw(const std::string& vehicleId, const std::string& 
 TopicMessage GetTopicActionResetLapCounter(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQueryPlain(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxStatus(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxData(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-TopicMessage GetTopicQueryInfluxDataStatus(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonth(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);

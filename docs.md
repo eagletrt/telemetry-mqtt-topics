@@ -968,6 +968,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryInfluxStatus
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/status
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/Influx/status
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 131 - **Publish Roles**: 0 1 2 3 4 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
 ## QueryInfluxData
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data
 > get influx data
@@ -996,14 +1004,6 @@ vehicleIddeviceIdtransactionId
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/content
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/content
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
-- **Retain**: No
-- **Variables**:
-vehicleIddeviceIdtransactionId
-## QueryInfluxDataStatus
-### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/status
-> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/status
-- **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
 - **Retain**: No
 - **Variables**:
