@@ -1563,66 +1563,17 @@
               }
             }
           },
-          "query/<transactionId>": {
-            "alias": "Query",
-            "description": "<vehicleId>/<deviceId>/query/<transactionId>",
+          "query": {
+            "alias": "QueryPlain",
+            "description": "base query node, transactionId needed",
             "qos": 0,
             "retain": false,
-            "subscribe_roles": [
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "131"
-            ],
-            "publish_roles": [
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "131"
-            ],
-            "variables": [
-              "transactionId"
-            ],
             "sub_topics": {
-              "data": {
-                "alias": "QueryInfluxData",
-                "description": "get influx data",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryInfluxDataGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get"
-                  },
-                  "set": {
-                    "alias": "QueryInfluxDataSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set"
-                  },
-                  "content": {
-                    "alias": "QueryInfluxDataContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
-                  }
-                }
-              },
-              "SessionByYearMonth": {
-                "alias": "QuerySessionByYearMonth",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
+              "<transactionId>": {
+                "alias": "Query",
+                "description": "<vehicleId>/<deviceId>/query/<transactionId>",
+                "qos": 0,
+                "retain": false,
                 "subscribe_roles": [
                   "0",
                   "1",
@@ -1639,256 +1590,520 @@
                   "4",
                   "131"
                 ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QuerySessionByYearMonthGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/get"
-                  },
-                  "set": {
-                    "alias": "QuerySessionByYearMonthSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/set"
-                  },
-                  "content": {
-                    "alias": "QuerySessionByYearMonthContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/content"
-                  }
-                }
-              },
-              "SessionByDayRange": {
-                "alias": "QuerySessionByDayRange",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
+                "variables": [
+                  "transactionId"
                 ],
                 "sub_topics": {
-                  "get": {
-                    "alias": "QuerySessionByDayRangeGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/get"
+                  "data": {
+                    "alias": "QueryInfluxData",
+                    "description": "get influx data",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryInfluxDataGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/get"
+                      },
+                      "set": {
+                        "alias": "QueryInfluxDataSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/set"
+                      },
+                      "content": {
+                        "alias": "QueryInfluxDataContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
+                      },
+                      "status": {
+                        "alias": "QueryInfluxDataStatus",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/status",
+                        "qos": 1
+                      }
+                    }
                   },
-                  "set": {
-                    "alias": "QuerySessionByDayRangeSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/set"
+                  "SessionByYearMonth": {
+                    "alias": "QuerySessionByYearMonth",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QuerySessionByYearMonthGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "content": {
+                        "alias": "QuerySessionByYearMonthContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/QuerySessionByYearMonth/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "content": {
-                    "alias": "QuerySessionByDayRangeContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content"
-                  }
-                }
-              },
-              "LapCounterLayouts": {
-                "alias": "QueryLapCounterLayouts",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryLapCounterLayoutsGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/get"
+                  "SessionByDayRange": {
+                    "alias": "QuerySessionByDayRange",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QuerySessionByDayRangeGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "content": {
+                        "alias": "QuerySessionByDayRangeContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByDayRange/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "set": {
-                    "alias": "QueryLapCounterLayoutsSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/set"
+                  "TrackBySession": {
+                    "alias": "QueryTrackBySession",
+                    "description": "request topic for retrieving session related track",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryTrackBySessionGet",
+                        "description": "topic for making the request giving a session",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "content": {
+                        "alias": "QueryTrackBySessionContent",
+                        "description": "response topic after the 'get' one",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "content": {
-                    "alias": "QueryLapCounterLayoutsContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/content"
-                  }
-                }
-              },
-              "LapCounterTimes": {
-                "alias": "QueryLapCounterTimes",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryLapCounterTimesGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/get"
+                  "LapCounterLayouts": {
+                    "alias": "QueryLapCounterLayouts",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryLapCounterLayoutsGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryLapCounterLayoutsSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/set"
+                      },
+                      "content": {
+                        "alias": "QueryLapCounterLayoutsContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLayouts/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "set": {
-                    "alias": "QueryLapCounterTimesSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/set"
+                  "LapCounterTimes": {
+                    "alias": "QueryLapCounterTimes",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryLapCounterTimesGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryLapCounterTimesSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/set"
+                      },
+                      "content": {
+                        "alias": "QueryLapCounterTimesContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "content": {
-                    "alias": "QueryLapCounterTimesContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/content"
-                  }
-                }
-              },
-              "LapCounterLapRecords": {
-                "alias": "QueryLapCounterLapRecords",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryLapCounterLapRecordsGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/get"
+                  "LapCounterLapRecords": {
+                    "alias": "QueryLapCounterLapRecords",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryLapCounterLapRecordsGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryLapCounterLapRecordsSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/set"
+                      },
+                      "content": {
+                        "alias": "QueryLapCounterLapRecordsContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "set": {
-                    "alias": "QueryLapCounterLapRecordsSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/set"
+                  "GpsOrigins": {
+                    "alias": "QueryGpsOrigins",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryGpsOriginsGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryGpsOriginsSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/set"
+                      },
+                      "content": {
+                        "alias": "QueryGpsOriginsContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "content": {
-                    "alias": "QueryLapCounterLapRecordsContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/content"
-                  }
-                }
-              },
-              "GpsOrigins": {
-                "alias": "QueryGpsOrigins",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryGpsOriginsGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/get"
+                  "baseline": {
+                    "alias": "QueryBaseline",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryBaselineGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryBaselineSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/set"
+                      },
+                      "content": {
+                        "alias": "QueryBaselineContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   },
-                  "set": {
-                    "alias": "QueryGpsOriginsSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/set"
-                  },
-                  "content": {
-                    "alias": "QueryGpsOriginsContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/content"
-                  }
-                }
-              },
-              "baseline": {
-                "alias": "QueryBaseline",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryBaselineGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get"
-                  },
-                  "set": {
-                    "alias": "QueryBaselineSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/set"
-                  },
-                  "content": {
-                    "alias": "QueryBaselineContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content"
-                  }
-                }
-              },
-              "customPlots": {
-                "alias": "QueryCustomPlots",
-                "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots",
-                "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "publish_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
-                ],
-                "sub_topics": {
-                  "get": {
-                    "alias": "QueryCustomPlotsGet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get"
-                  },
-                  "set": {
-                    "alias": "QueryCustomPlotsSet",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set"
-                  },
-                  "content": {
-                    "alias": "QueryCustomPlotsContent",
-                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content"
+                  "customPlots": {
+                    "alias": "QueryCustomPlots",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "131"
+                    ],
+                    "sub_topics": {
+                      "get": {
+                        "alias": "QueryCustomPlotsGet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/get",
+                        "subscribe_roles": [
+                          "131"
+                        ],
+                        "publish_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "set": {
+                        "alias": "QueryCustomPlotsSet",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/set"
+                      },
+                      "content": {
+                        "alias": "QueryCustomPlotsContent",
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/customPlots/content",
+                        "subscribe_roles": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "publish_roles": [
+                          "131"
+                        ]
+                      }
+                    }
                   }
                 }
               }

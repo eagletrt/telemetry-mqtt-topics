@@ -36,37 +36,30 @@ class MessageParser:
                 )
 
     def findNode(self, variables, topic):
-        topic_splitWithVariables = topic.split("/")
-        _node = None
-        matchV = matchD = matchT = False
-        foundT = False
-
-        for i in range(len(topic_splitWithVariables)):
-            for node in LevelOrderIter(self.tree, maxlevel=i + 1):
-                    if node.name == topic_splitWithVariables[i]:
-                        _node = node
-                    else:
-                        if(node.name == "<vehicleId>"):
-                            if(topic_splitWithVariables[i] in variables or "#" in variables):
-                                #matchV
-                                matchV = True
-                        
-
-                        if(node.name == "<deviceId>"):
-                            if(topic_splitWithVariables[i] in variables or "#" in variables):
-                                #matchV
-                                matchD = True
-                        
-                        if(node.name == "<transactionId>"):
-                            foundT = True
-                            if(topic_splitWithVariables[i] in variables or "#" in variables):
-                                #matchV
-                                matchT = True
-                    
-        if(foundT and matchV and matchD and matchT):
-            return _node
-        else:
+        if self.tree is None:
             return None
+
+        topic_split = topic.split("/")
+
+        def segment_matches(node_name, segment):
+            return node_name == segment or node_name in ("<vehicleId>", "<deviceId>", "<transactionId>", "+", "#")
+
+        def walk(node, index):
+            if index == len(topic_split):
+                return node
+
+            for child in node.children:
+                if segment_matches(child.name, topic_split[index]):
+                    matched_node = walk(child, index + 1)
+                    if matched_node is not None:
+                        return matched_node
+
+            return None
+
+        if segment_matches(self.tree.name, topic_split[0]):
+            return walk(self.tree, 1)
+
+        return None
 
 
     def setMessageParse(self, topic, parse_function, argument):
