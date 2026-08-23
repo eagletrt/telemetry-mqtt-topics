@@ -214,6 +214,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/set");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/status");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/content");

@@ -3097,6 +3097,32 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data/status",
+        "alias": "QueryInfluxDataStatus",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/status",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",
         "alias": "QuerySessionByYearMonth",
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",

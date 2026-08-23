@@ -124,6 +124,7 @@ graph {
 "data" -- "get";
 "data" -- "set";
 "data" -- "content";
+"data" -- "status";
 "<transactionId>" -- "SessionByYearMonth";
 "SessionByYearMonth" -- "get";
 "SessionByYearMonth" -- "content";

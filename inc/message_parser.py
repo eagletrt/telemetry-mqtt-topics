@@ -130,6 +130,7 @@ class MessageParser:
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get",6)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/set",6)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/content",6)
+        self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/status",6)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth",5)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/get",6)
         self.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/content",6)

@@ -1000,6 +1000,14 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryInfluxDataStatus
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/status
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/InfluxData/status
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
 ## QuerySessionByYearMonth
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth
