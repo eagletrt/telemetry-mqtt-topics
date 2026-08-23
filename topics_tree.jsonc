@@ -1594,6 +1594,11 @@
                   "transactionId"
                 ],
                 "sub_topics": {
+                  "status": {
+                    "alias": "QueryInfluxStatus",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/Influx/status",
+                    "qos": 1
+                  },
                   "data": {
                     "alias": "QueryInfluxData",
                     "description": "get influx data",
@@ -1623,11 +1628,6 @@
                       "content": {
                         "alias": "QueryInfluxDataContent",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
-                      },
-                      "status": {
-                        "alias": "QueryInfluxDataStatus",
-                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/status",
-                        "qos": 1
                       }
                     }
                   },
