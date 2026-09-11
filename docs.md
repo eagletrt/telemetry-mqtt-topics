@@ -468,7 +468,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version
 > &lt;vehicleId>/&lt;deviceId>/info
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
@@ -476,7 +476,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version/libcan
 > libcan version hash
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
@@ -484,7 +484,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version/serializers
 > serializers version hash
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
@@ -492,7 +492,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version/mqtt-topics
 > mqtt-topics version hash
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
@@ -500,7 +500,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version/gpslib
 > gpslib version hash
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId
@@ -508,7 +508,7 @@ vehicleIddeviceId
 ### &lt;vehicleId>/&lt;deviceId>/info/version/lib-communications
 > lib-communications version hash
 - **Quality of Service**: 0
-- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 128 129 
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
 - **Variables**:
 vehicleIddeviceId

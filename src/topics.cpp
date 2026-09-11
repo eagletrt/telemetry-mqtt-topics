@@ -916,6 +916,12 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionSerializers(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionMqttTopics(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionGpslib(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
@@ -1010,6 +1016,12 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionSerializers(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionMqttTopics(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionGpslib(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
@@ -1104,6 +1116,12 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionSerializers(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionMqttTopics(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionGpslib(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
@@ -1198,6 +1216,12 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionSerializers(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionMqttTopics(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionGpslib(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
@@ -1292,6 +1316,12 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicFileTransactionChunk(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcan(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionSerializers(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionMqttTopics(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionGpslib(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
@@ -3114,6 +3144,12 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_version:
+            case Topic::info_version_libcan:
+            case Topic::info_version_serializers:
+            case Topic::info_version_mqtt_topics:
+            case Topic::info_version_gpslib:
+            case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
@@ -3222,12 +3258,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::extra_tlm_data_lap_layout:
             case Topic::status_mongo_manager_status:
             case Topic::info_track_config:
-            case Topic::info_version:
-            case Topic::info_version_libcan:
-            case Topic::info_version_serializers:
-            case Topic::info_version_mqtt_topics:
-            case Topic::info_version_gpslib:
-            case Topic::info_version_libcommunications:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
@@ -3279,6 +3309,12 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_version:
+            case Topic::info_version_libcan:
+            case Topic::info_version_serializers:
+            case Topic::info_version_mqtt_topics:
+            case Topic::info_version_gpslib:
+            case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
@@ -3389,12 +3425,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
-            case Topic::info_version:
-            case Topic::info_version_libcan:
-            case Topic::info_version_serializers:
-            case Topic::info_version_mqtt_topics:
-            case Topic::info_version_gpslib:
-            case Topic::info_version_libcommunications:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
@@ -3446,6 +3476,12 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_version:
+            case Topic::info_version_libcan:
+            case Topic::info_version_serializers:
+            case Topic::info_version_mqtt_topics:
+            case Topic::info_version_gpslib:
+            case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
@@ -3556,12 +3592,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
-            case Topic::info_version:
-            case Topic::info_version_libcan:
-            case Topic::info_version_serializers:
-            case Topic::info_version_mqtt_topics:
-            case Topic::info_version_gpslib:
-            case Topic::info_version_libcommunications:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
@@ -3613,6 +3643,12 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_version:
+            case Topic::info_version_libcan:
+            case Topic::info_version_serializers:
+            case Topic::info_version_mqtt_topics:
+            case Topic::info_version_gpslib:
+            case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
@@ -3723,12 +3759,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
-            case Topic::info_version:
-            case Topic::info_version_libcan:
-            case Topic::info_version_serializers:
-            case Topic::info_version_mqtt_topics:
-            case Topic::info_version_gpslib:
-            case Topic::info_version_libcommunications:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
@@ -3780,6 +3810,12 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::file_transaction_chunk:
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
+            case Topic::info_version:
+            case Topic::info_version_libcan:
+            case Topic::info_version_serializers:
+            case Topic::info_version_mqtt_topics:
+            case Topic::info_version_gpslib:
+            case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
             case Topic::action:
@@ -3890,12 +3926,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::as_commands_set_values:
             case Topic::as_commands_set_status:
             case Topic::info_track_config:
-            case Topic::info_version:
-            case Topic::info_version_libcan:
-            case Topic::info_version_serializers:
-            case Topic::info_version_mqtt_topics:
-            case Topic::info_version_gpslib:
-            case Topic::info_version_libcommunications:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_session:
