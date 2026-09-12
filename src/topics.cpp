@@ -86,6 +86,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -96,8 +98,12 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
@@ -129,15 +135,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -222,6 +232,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -232,8 +244,12 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
@@ -265,15 +281,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -358,6 +378,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -368,8 +390,12 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
@@ -401,15 +427,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -494,6 +524,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -504,8 +536,12 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
@@ -537,15 +573,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -630,6 +670,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -640,8 +682,12 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
@@ -673,15 +719,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -709,6 +759,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplay(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -716,6 +770,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -731,9 +786,11 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -748,6 +805,20 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_129:
@@ -769,6 +840,10 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicFileTransactionChunkAck(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicInfo(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -776,6 +851,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -791,9 +867,11 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -808,6 +886,20 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_130:
@@ -845,6 +937,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -855,6 +948,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
@@ -871,15 +966,19 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -924,6 +1023,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -931,6 +1034,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -946,9 +1050,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -981,15 +1087,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -1024,6 +1134,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -1031,6 +1145,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -1046,9 +1161,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -1081,15 +1198,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -1124,6 +1245,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -1131,6 +1256,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -1146,9 +1272,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -1181,15 +1309,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -1224,6 +1356,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -1231,6 +1367,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -1246,9 +1383,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -1281,15 +1420,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -1324,6 +1467,10 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicInfoVersionLibcommunications(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoUser(vehicleId, deviceId));
         ret.emplace_back(GetTopicInfoTelemetryReplayStart(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
         ret.emplace_back(GetTopicAction(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigSet(vehicleId, deviceId));
@@ -1331,6 +1478,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigGet(vehicleId, deviceId));
@@ -1346,9 +1494,11 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionKill(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStart(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionReset(vehicleId, deviceId));
@@ -1381,15 +1531,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlotsSet(vehicleId, deviceId, transactionId));
@@ -1470,6 +1624,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -1480,11 +1636,29 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_129:
@@ -1560,6 +1734,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionTelemetryConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionTelemetryConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionCarConfigContent(vehicleId, deviceId));
@@ -1570,11 +1746,29 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicRawJsonConfig(vehicleId, deviceId));
         ret.emplace_back(GetTopicRawJsonConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionRaw(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         break;
         
         case Role::role_130:
@@ -1585,7 +1779,20 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         
         case Role::role_131:
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSession(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStarted(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionStopped(vehicleId, deviceId));
+        ret.emplace_back(GetTopicInfoSessionKeepalive(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionSessionConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionBaselineConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
@@ -1598,15 +1805,19 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicQueryLapCounterLayoutsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLayoutsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimes(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecords(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryLapCounterLapRecordsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryLapCounterLapRecordsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOrigins(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryGpsOriginsGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryGpsOriginsContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaseline(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryBaselineGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryBaselineContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryCustomPlots(vehicleId, deviceId, transactionId));
@@ -1698,6 +1909,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -1708,8 +1921,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1741,15 +1958,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -1759,8 +1980,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -1769,18 +1988,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
             default:
               return false;
@@ -1864,6 +2075,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -1874,8 +2087,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -1907,15 +2124,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -1925,8 +2146,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -1935,18 +2154,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
             default:
               return false;
@@ -2030,6 +2241,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -2040,8 +2253,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -2073,15 +2290,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -2091,8 +2312,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -2101,18 +2320,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
             default:
               return false;
@@ -2196,6 +2407,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -2206,8 +2419,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -2239,15 +2456,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -2257,8 +2478,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -2267,18 +2486,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
             default:
               return false;
@@ -2362,6 +2573,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -2372,8 +2585,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
@@ -2405,15 +2622,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -2423,8 +2644,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::extra_data_to_log:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -2433,18 +2652,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
             default:
               return false;
@@ -2471,6 +2682,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2478,6 +2693,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -2493,9 +2709,11 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -2510,6 +2728,20 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
+            case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline:
+            case Topic::query_baseline_get:
+            case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2560,19 +2792,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
@@ -2593,21 +2818,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
-            case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline:
-            case Topic::query_baseline_get:
-            case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -2636,6 +2847,10 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::file_transaction_chunk_ack:
             case Topic::info:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -2643,6 +2858,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -2658,9 +2874,11 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -2675,6 +2893,20 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_raw:
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
+            case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline:
+            case Topic::query_baseline_get:
+            case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
               return true;
             case Topic::data:
             case Topic::data_primary:
@@ -2726,19 +2958,12 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::info_user:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
@@ -2759,21 +2984,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
-            case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline:
-            case Topic::query_baseline_get:
-            case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -2963,6 +3174,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
+            case Topic::action_session_config_set:
             case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config_get:
@@ -2973,6 +3185,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_stop_baseline:
             case Topic::query:
@@ -2989,15 +3203,19 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3068,7 +3286,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_baseline_config:
@@ -3082,8 +3299,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_track:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3105,10 +3320,6 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
             default:
               return false;
@@ -3152,6 +3363,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3159,6 +3374,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -3174,9 +3390,11 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3209,15 +3427,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3260,27 +3482,16 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_track_config:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
              
             default: 
@@ -3317,6 +3528,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3324,6 +3539,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -3339,9 +3555,11 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3374,15 +3592,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3427,27 +3649,16 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_track_config:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
              
             default: 
@@ -3484,6 +3695,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3491,6 +3706,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -3506,9 +3722,11 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3541,15 +3759,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3594,27 +3816,16 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_track_config:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
              
             default: 
@@ -3651,6 +3862,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3658,6 +3873,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -3673,9 +3889,11 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3708,15 +3926,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3761,27 +3983,16 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_track_config:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
              
             default: 
@@ -3818,6 +4029,10 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_version_libcommunications:
             case Topic::info_user:
             case Topic::info_telemetry_replay_start:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
             case Topic::action:
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_set:
@@ -3825,6 +4040,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_session_config:
             case Topic::action_session_config_set:
             case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -3840,9 +4056,11 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config:
             case Topic::action_lap_counter_config_set:
             case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -3875,15 +4093,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_times:
             case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
+            case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
             case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
             case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
             case Topic::query_baseline:
             case Topic::query_baseline_get:
             case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -3928,27 +4150,16 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_track_config:
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action_telemetry_config_content:
-            case Topic::action_session_config_content:
             case Topic::action_car_config_content:
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
-            case Topic::action_lap_counter_config_content:
-            case Topic::action_lap_counter_track_content:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
             case Topic::query_lap_counter_layouts_content:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots_content:
              
             default: 
@@ -4031,6 +4242,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -4041,19 +4254,35 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_raw:
             case Topic::query_plain:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
+            case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline:
+            case Topic::query_baseline_get:
+            case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::status_mongo_manager_status:
             case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -4062,10 +4291,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -4098,21 +4323,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
-            case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline:
-            case Topic::query_baseline_get:
-            case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -4196,6 +4407,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
             case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_content:
@@ -4206,11 +4419,29 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
             case Topic::action_raw:
             case Topic::query_plain:
+            case Topic::query_lap_counter_times_get:
+            case Topic::query_lap_counter_times_content:
+            case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
+            case Topic::query_lap_counter_lap_records_set:
+            case Topic::query_lap_counter_lap_records_content:
+            case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
+            case Topic::query_gps_origins_set:
+            case Topic::query_gps_origins_content:
+            case Topic::query_baseline:
+            case Topic::query_baseline_get:
+            case Topic::query_baseline_set:
+            case Topic::query_baseline_content:
               return true;
             case Topic::extra_data_to_log:
             case Topic::status_mongo_manager_status:
@@ -4219,8 +4450,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_telemetry_replay_start:
             case Topic::action_telemetry_config_set:
             case Topic::action_telemetry_config_get:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
             case Topic::action_baseline_config_set:
@@ -4229,10 +4458,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -4265,21 +4490,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
-            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
-            case Topic::query_lap_counter_times_content:
-            case Topic::query_lap_counter_lap_records:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_lap_counter_lap_records_set:
-            case Topic::query_lap_counter_lap_records_content:
-            case Topic::query_gps_origins:
-            case Topic::query_gps_origins_get:
-            case Topic::query_gps_origins_set:
-            case Topic::query_gps_origins_content:
-            case Topic::query_baseline:
-            case Topic::query_baseline_get:
-            case Topic::query_baseline_set:
-            case Topic::query_baseline_content:
             case Topic::query_custom_plots:
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
@@ -4459,7 +4670,20 @@ bool CanPublish(Role role, Topic topic) {
         case Role::role_131:
         switch(topic) {
             case Topic::status_mongo_manager_status:
+            case Topic::info_session:
+            case Topic::info_session_started:
+            case Topic::info_session_stopped:
+            case Topic::info_session_keepalive:
+            case Topic::action_session_config_set:
+            case Topic::action_session_config_get:
+            case Topic::action_session_config_content:
             case Topic::action_baseline_config_content:
+            case Topic::action_lap_counter_config_set:
+            case Topic::action_lap_counter_config_get:
+            case Topic::action_lap_counter_config_content:
+            case Topic::action_lap_counter_track_set:
+            case Topic::action_lap_counter_track_get:
+            case Topic::action_lap_counter_track_content:
             case Topic::query:
             case Topic::query_influx_status:
             case Topic::query_session_by_year_month:
@@ -4472,15 +4696,19 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_lap_counter_layouts_set:
             case Topic::query_lap_counter_layouts_content:
             case Topic::query_lap_counter_times:
+            case Topic::query_lap_counter_times_get:
             case Topic::query_lap_counter_times_set:
             case Topic::query_lap_counter_times_content:
             case Topic::query_lap_counter_lap_records:
+            case Topic::query_lap_counter_lap_records_get:
             case Topic::query_lap_counter_lap_records_set:
             case Topic::query_lap_counter_lap_records_content:
             case Topic::query_gps_origins:
+            case Topic::query_gps_origins_get:
             case Topic::query_gps_origins_set:
             case Topic::query_gps_origins_content:
             case Topic::query_baseline:
+            case Topic::query_baseline_get:
             case Topic::query_baseline_set:
             case Topic::query_baseline_content:
             case Topic::query_custom_plots:
@@ -4554,10 +4782,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::info_telemetry_replay:
             case Topic::info_telemetry_replay_ready:
             case Topic::info_telemetry_replay_start:
-            case Topic::info_session:
-            case Topic::info_session_started:
-            case Topic::info_session_stopped:
-            case Topic::info_session_keepalive:
             case Topic::info_new_lap:
             case Topic::action:
             case Topic::action_telemetry_config:
@@ -4565,9 +4789,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_telemetry_config_get:
             case Topic::action_telemetry_config_content:
             case Topic::action_session_config:
-            case Topic::action_session_config_set:
-            case Topic::action_session_config_get:
-            case Topic::action_session_config_content:
             case Topic::action_car_config:
             case Topic::action_car_config_set:
             case Topic::action_car_config_get:
@@ -4584,13 +4805,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_get:
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
-            case Topic::action_lap_counter_config_set:
-            case Topic::action_lap_counter_config_get:
-            case Topic::action_lap_counter_config_content:
             case Topic::action_lap_counter_track:
-            case Topic::action_lap_counter_track_set:
-            case Topic::action_lap_counter_track_get:
-            case Topic::action_lap_counter_track_content:
             case Topic::action_kill:
             case Topic::action_start:
             case Topic::action_reset:
@@ -4613,10 +4828,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
             case Topic::query_lap_counter_layouts_get:
-            case Topic::query_lap_counter_times_get:
-            case Topic::query_lap_counter_lap_records_get:
-            case Topic::query_gps_origins_get:
-            case Topic::query_baseline_get:
             case Topic::query_custom_plots_get:
              
             default: 
