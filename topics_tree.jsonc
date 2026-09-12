@@ -787,16 +787,24 @@
                 "qos": 0,
                 "retain": false,
                 "subscribe_roles": [
-                  "0",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "131"
+                   "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                 ],
                 "publish_roles": [
-                  "128",
-                  "129"
+                   "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                 ],
                 "sub_topics": {
                   "started": {
@@ -925,21 +933,11 @@
                     "alias": "ActionSessionConfigSet",
                     "description": "<vehicleId>/<deviceId>/action/sessionConfig/set",
                     "subscribe_roles": [
-                      "128",
-                      "129"
-                    ],
-                    "publish_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
-                      "4"
-                    ]
-                  },
-                  "get": {
-                    "alias": "ActionSessionConfigGet",
-                    "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
-                    "subscribe_roles": [
+                      "4",
                       "128",
                       "129",
                       "131"
@@ -949,7 +947,34 @@
                       "1",
                       "2",
                       "3",
-                      "4"
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ]
+                  },
+                  "get": {
+                    "alias": "ActionSessionConfigGet",
+                    "description": "<vehicleId>/<deviceId>/action/sessionConfig/get",
+                    "subscribe_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                     ]
                   },
                   "content": {
@@ -962,11 +987,19 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
                       "128",
-                      "129"
+                      "129",
+                      "131"
                     ]
                   }
                 }
@@ -1192,6 +1225,11 @@
                     "alias": "ActionLapCounterConfigSet",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/set",
                     "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
                       "128",
                       "129",
                       "131"
@@ -1201,39 +1239,58 @@
                       "1",
                       "2",
                       "3",
-                      "4"
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                     ]
                   },
                   "get": {
                     "alias": "ActionLapCounterConfigGet",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/get",
                     "subscribe_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
                       "128",
                       "129",
                       "131"
                     ],
                     "publish_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
-                      "4"
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                     ]
                   },
                   "content": {
                     "alias": "ActionLapCounterConfigContent",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
                     "subscribe_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
                       "128",
-                      "129"
+                      "129",
+                      "131"
                     ]
                   }
                 }
@@ -1246,46 +1303,72 @@
                     "alias": "ActionLapCounterTrackSet",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/set",
                     "subscribe_roles": [
-                      "128",
-                      "129"
-                    ],
-                    "publish_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
-                      "4"
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                     ]
                   },
                   "get": {
                     "alias": "ActionLapCounterTrackGet",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/get",
                     "subscribe_roles": [
-                      "128",
-                      "129"
-                    ],
-                    "publish_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
-                      "4"
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                     ]
                   },
                   "content": {
                     "alias": "ActionLapCounterTrackContent",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterTrack/content",
                     "subscribe_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
+                       "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
                       "128",
-                      "129"
+                      "129",
+                      "131"
                     ]
                   }
                 }
@@ -1864,14 +1947,24 @@
                         "alias": "QueryLapCounterTimesGet",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/get",
                         "subscribe_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                         "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       },
                       "set": {
@@ -1882,14 +1975,24 @@
                         "alias": "QueryLapCounterTimesContent",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterTimes/content",
                         "subscribe_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                         "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "131"
+                          "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       }
                     }
@@ -1903,6 +2006,8 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
@@ -1911,6 +2016,8 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "sub_topics": {
@@ -1918,14 +2025,24 @@
                         "alias": "QueryLapCounterLapRecordsGet",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/get",
                         "subscribe_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
                           "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       },
                       "set": {
@@ -1936,14 +2053,24 @@
                         "alias": "QueryLapCounterLapRecordsContent",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/LapCounterLapRecords/content",
                         "subscribe_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                         "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       }
                     }
@@ -1957,14 +2084,18 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
-                      "0",
+                       "0",
                       "1",
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "sub_topics": {
@@ -1972,14 +2103,24 @@
                         "alias": "QueryGpsOriginsGet",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/get",
                         "subscribe_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       },
                       "set": {
@@ -1990,14 +2131,24 @@
                         "alias": "QueryGpsOriginsContent",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/GpsOrigins/content",
                         "subscribe_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       }
                     }
@@ -2011,6 +2162,8 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "publish_roles": [
@@ -2019,6 +2172,8 @@
                       "2",
                       "3",
                       "4",
+                      "128",
+                      "129",
                       "131"
                     ],
                     "sub_topics": {
@@ -2026,14 +2181,24 @@
                         "alias": "QueryBaselineGet",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/get",
                         "subscribe_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
                           "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       },
                       "set": {
@@ -2044,14 +2209,24 @@
                         "alias": "QueryBaselineContent",
                         "description": "<vehicleId>/<deviceId>/query/<transactionId>/baseline/content",
                         "subscribe_roles": [
-                          "0",
-                          "1",
-                          "2",
-                          "3",
-                          "4"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ],
                         "publish_roles": [
-                          "131"
+                           "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
                         ]
                       }
                     }
