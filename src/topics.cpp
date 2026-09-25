@@ -996,6 +996,18 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicVehicleId(vehicleId));
         ret.emplace_back(GetTopicDeviceId(vehicleId, deviceId));
         ret.emplace_back(GetTopicDeviceVersion(vehicleId, deviceId));
+        ret.emplace_back(GetTopicData(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataPrimary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSecondary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBms(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataInverter(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLapsLast(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataLapsLastMetaData(vehicleId, deviceId));
         ret.emplace_back(GetTopicExtraDataToLog(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLastUpdate(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatus(vehicleId, deviceId));
@@ -3336,6 +3348,18 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::vehicle_id:
             case Topic::device_id:
             case Topic::device_version:
+            case Topic::data:
+            case Topic::data_primary:
+            case Topic::data_secondary:
+            case Topic::data_bms:
+            case Topic::data_inverter:
+            case Topic::data_simulator:
+            case Topic::data_gps:
+            case Topic::data_brusa:
+            case Topic::data_temporary:
+            case Topic::data_laps:
+            case Topic::data_laps_last:
+            case Topic::data_laps_last_meta_data:
             case Topic::extra_data_to_log:
             case Topic::data_last_update:
             case Topic::status:
@@ -3444,18 +3468,6 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::query_custom_plots_get:
             case Topic::query_custom_plots_set:
               return true;
-            case Topic::data:
-            case Topic::data_primary:
-            case Topic::data_secondary:
-            case Topic::data_bms:
-            case Topic::data_inverter:
-            case Topic::data_simulator:
-            case Topic::data_gps:
-            case Topic::data_brusa:
-            case Topic::data_temporary:
-            case Topic::data_laps:
-            case Topic::data_laps_last:
-            case Topic::data_laps_last_meta_data:
             case Topic::data_odometer:
             case Topic::data_camera_logger:
             case Topic::data_camera_logger_can:
