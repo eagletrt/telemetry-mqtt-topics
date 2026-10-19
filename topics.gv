@@ -118,6 +118,8 @@ graph {
 "action" -- "stopCharge";
 "action" -- "raw";
 "action" -- "resetLapcounter";
+"action" -- "canSend";
+"canSend" -- "content";
 "<deviceId>" -- "query";
 "query" -- "<transactionId>";
 "<transactionId>" -- "status";

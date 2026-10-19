@@ -952,6 +952,22 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## ActionCanSend
+### &lt;vehicleId>/&lt;deviceId>/action/canSend
+> &lt;vehicleId>/&lt;deviceId>/action/canSend, trigger to send can messages, content is a list of can messages to send
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 128 129 - **Publish Roles**: 0 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionCanSendContent
+### &lt;vehicleId>/&lt;deviceId>/action/canSend/content
+> &lt;vehicleId>/&lt;deviceId>/action/canSend/content, list of can messages to send
+- **Quality of Service**: 2
+- **Subscribe Roles**: 0 - **Publish Roles**: 0 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
 ## QueryPlain
 ### &lt;vehicleId>/&lt;deviceId>/query
 > base query node, transactionId needed

@@ -131,6 +131,8 @@ class Topic(Enum):
     action_stop_charge = auto(),
     action_raw = auto(),
     action_reset_lap_counter = auto(),
+    action_can_send = auto(),
+    action_can_send_content = auto(),
     query_plain = auto(),
     query = auto(),
     query_influx_status = auto(),
@@ -650,6 +652,14 @@ def GetTopicActionResetLapCounter(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "action/resetLapcounter"
     return topic
 
+def GetTopicActionCanSend(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/canSend"
+    return topic
+
+def GetTopicActionCanSendContent(vehicleId, deviceId):
+    topic = vehicleId + "/" + deviceId + "/" + "action/canSend/content"
+    return topic
+
 def GetTopicQueryPlain(vehicleId, deviceId):
     topic = vehicleId + "/" + deviceId + "/" + "query"
     return topic
@@ -922,6 +932,8 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSend(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSendContent(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId))
@@ -1608,6 +1620,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSend(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
@@ -1689,6 +1702,7 @@ def GetSubscribeTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSend(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
@@ -1880,6 +1894,8 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionStopCharge(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
             ret.append(GetTopicActionResetLapCounter(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSend(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSendContent(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQuery(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId))
@@ -2456,6 +2472,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSendContent(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
@@ -2566,6 +2583,7 @@ def GetPublishTopics(role, vehicleId, deviceId, transactionId):
             ret.append(GetTopicActionLapCounterTrackGet(vehicleId, deviceId))
             ret.append(GetTopicActionLapCounterTrackContent(vehicleId, deviceId))
             ret.append(GetTopicActionRaw(vehicleId, deviceId))
+            ret.append(GetTopicActionCanSendContent(vehicleId, deviceId))
             ret.append(GetTopicQueryPlain(vehicleId, deviceId))
             ret.append(GetTopicQueryLapCounterTimesGet(vehicleId, deviceId, transactionId))
             ret.append(GetTopicQueryLapCounterTimesContent(vehicleId, deviceId, transactionId))
