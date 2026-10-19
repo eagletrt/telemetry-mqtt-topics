@@ -1649,6 +1649,35 @@
                   "3",
                   "4"
                 ]
+              },
+              "canSend": {
+                "alias": "ActionCanSend",
+                "description": "<vehicleId>/<deviceId>/action/canSend, trigger to send can messages, content is a list of can messages to send",
+                "qos": 2,
+                "subscribe_roles": [
+                  "0",
+                  "128",
+                  "129"
+                ],
+                "publish_roles": [
+                  "0"
+                ],
+                "sub_topics": {
+                  "content": {
+                    "alias": "ActionCanSendContent",
+                    "description": "<vehicleId>/<deviceId>/action/canSend/content, list of can messages to send",
+                    "qos": 2,
+                    "retain": true,
+                    "subscribe_roles": [
+                      "0"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "128",
+                      "129"
+                    ]
+                  }
+                }
               }
             }
           },
