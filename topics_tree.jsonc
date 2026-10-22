@@ -133,6 +133,10 @@
                 "alias": "DataGps",
                 "description": "Protobuffer data of gps network"
               },
+              "rtcm": {
+                "alias": "DataRtcm",
+                "description": "Raw RTCM3 frames (not protobuf) of the base station corrections"
+              },
               "brusa": {
                 "alias": "DataBrusa",
                 "description": "<vehicleId>/<deviceId>/data/brusa"
@@ -451,6 +455,10 @@
               "canFrequencies": {
                 "alias": "StatusCanFrequencies",
                 "description": "<vehicleId>/<deviceId>/status/canFrequencies"
+              },
+              "ntripBase": {
+                "alias": "StatusNtripBase",
+                "description": "<vehicleId>/<deviceId>/status/ntripBase"
               },
               "lapCounterStatus": {
                 "alias": "StatusLapCounterStatus",
@@ -1273,6 +1281,84 @@
                   "content": {
                     "alias": "ActionLapCounterConfigContent",
                     "description": "<vehicleId>/<deviceId>/action/lapCounterConfig/content",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ]
+                  }
+                }
+              },
+              "ntripBaseConfig": {
+                "alias": "ActionNtripBaseConfig",
+                "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig",
+                "sub_topics": {
+                  "set": {
+                    "alias": "ActionNtripBaseConfigSet",
+                    "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/set",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ]
+                  },
+                  "get": {
+                    "alias": "ActionNtripBaseConfigGet",
+                    "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/get",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "128",
+                      "129",
+                      "131"
+                    ]
+                  },
+                  "content": {
+                    "alias": "ActionNtripBaseConfigContent",
+                    "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
                     "subscribe_roles": [
                       "0",
                       "1",
