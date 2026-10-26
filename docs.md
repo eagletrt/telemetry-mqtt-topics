@@ -80,6 +80,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## DataRtcm
+### &lt;vehicleId>/&lt;deviceId>/data/rtcm
+> Raw RTCM3 frames (not protobuf) of the base station corrections
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataBrusa
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
@@ -347,6 +355,14 @@ vehicleIddeviceId
 ## StatusCanFrequencies
 ### &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
 > &lt;vehicleId>/&lt;deviceId>/status/canFrequencies
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## StatusNtripBase
+### &lt;vehicleId>/&lt;deviceId>/status/ntripBase
+> &lt;vehicleId>/&lt;deviceId>/status/ntripBase
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
@@ -813,6 +829,38 @@ vehicleIddeviceId
 > &lt;vehicleId>/&lt;deviceId>/action/lapCounterConfig/content
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 2 3 4 128 129 131 - **Publish Roles**: 0 1 2 3 4 128 129 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionNtripBaseConfig
+### &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig
+> &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionNtripBaseConfigSet
+### &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/set
+> &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/set
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 128 129 131 - **Publish Roles**: 0 1 128 129 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionNtripBaseConfigGet
+### &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/get
+> &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/get
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 128 129 131 - **Publish Roles**: 0 1 128 129 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionNtripBaseConfigContent
+### &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/content
+> &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 128 129 131 - **Publish Roles**: 0 1 128 129 131 
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId

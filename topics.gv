@@ -9,6 +9,7 @@ graph {
 "data" -- "inverters";
 "data" -- "simulator";
 "data" -- "gps";
+"data" -- "rtcm";
 "data" -- "brusa";
 "data" -- "temporary";
 "data" -- "laps";
@@ -43,6 +44,7 @@ graph {
 "status" -- "error";
 "status" -- "alert";
 "status" -- "canFrequencies";
+"status" -- "ntripBase";
 "status" -- "lapCounterStatus";
 "status" -- "MongoManagerStatus";
 "<deviceId>" -- "commands";
@@ -101,6 +103,10 @@ graph {
 "lapCounterConfig" -- "set";
 "lapCounterConfig" -- "get";
 "lapCounterConfig" -- "content";
+"action" -- "ntripBaseConfig";
+"ntripBaseConfig" -- "set";
+"ntripBaseConfig" -- "get";
+"ntripBaseConfig" -- "content";
 "action" -- "lapCounterTrack";
 "lapCounterTrack" -- "set";
 "lapCounterTrack" -- "get";

@@ -247,6 +247,29 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/data/rtcm",
+        "alias": "DataRtcm",
+        "description": "Raw RTCM3 frames (not protobuf) of the base station corrections",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/data/brusa",
         "alias": "DataBrusa",
         "description": "<vehicleId>/<deviceId>/data/brusa",
@@ -1027,6 +1050,33 @@
         "topic": "<vehicleId>/<deviceId>/status/canFrequencies",
         "alias": "StatusCanFrequencies",
         "description": "<vehicleId>/<deviceId>/status/canFrequencies",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/status/ntripBase",
+        "alias": "StatusNtripBase",
+        "description": "<vehicleId>/<deviceId>/status/ntripBase",
         "qos": 1,
         "subscribe_roles": [
             "0",
@@ -2598,6 +2648,110 @@
             "2",
             "3",
             "4",
+            "128",
+            "129",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/ntripBaseConfig",
+        "alias": "ActionNtripBaseConfig",
+        "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/ntripBaseConfig/set",
+        "alias": "ActionNtripBaseConfigSet",
+        "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/set",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/ntripBaseConfig/get",
+        "alias": "ActionNtripBaseConfigGet",
+        "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/get",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
+        "alias": "ActionNtripBaseConfigContent",
+        "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
             "128",
             "129",
             "131"
