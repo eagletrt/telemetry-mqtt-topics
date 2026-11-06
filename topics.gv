@@ -10,6 +10,7 @@ graph {
 "data" -- "simulator";
 "data" -- "gps";
 "data" -- "rtcm";
+"data" -- "rtcmRef";
 "data" -- "brusa";
 "data" -- "temporary";
 "data" -- "laps";
@@ -45,6 +46,7 @@ graph {
 "status" -- "alert";
 "status" -- "canFrequencies";
 "status" -- "ntripBase";
+"status" -- "rtcmSource";
 "status" -- "lapCounterStatus";
 "status" -- "MongoManagerStatus";
 "<deviceId>" -- "commands";
@@ -107,6 +109,8 @@ graph {
 "ntripBaseConfig" -- "set";
 "ntripBaseConfig" -- "get";
 "ntripBaseConfig" -- "content";
+"action" -- "rtcmSource";
+"rtcmSource" -- "set";
 "action" -- "lapCounterTrack";
 "lapCounterTrack" -- "set";
 "lapCounterTrack" -- "get";

@@ -100,6 +100,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/data/simulator");
     this->tree.addNode("<vehicleId>/<deviceId>/data/gps");
     this->tree.addNode("<vehicleId>/<deviceId>/data/rtcm");
+    this->tree.addNode("<vehicleId>/<deviceId>/data/rtcmRef");
     this->tree.addNode("<vehicleId>/<deviceId>/data/brusa");
     this->tree.addNode("<vehicleId>/<deviceId>/data/temporary");
     this->tree.addNode("<vehicleId>/<deviceId>/data/laps");
@@ -135,6 +136,7 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/status/alert");
     this->tree.addNode("<vehicleId>/<deviceId>/status/canFrequencies");
     this->tree.addNode("<vehicleId>/<deviceId>/status/ntripBase");
+    this->tree.addNode("<vehicleId>/<deviceId>/status/rtcmSource");
     this->tree.addNode("<vehicleId>/<deviceId>/status/lapCounterStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/status/MongoManagerStatus");
     this->tree.addNode("<vehicleId>/<deviceId>/commands");
@@ -197,6 +199,8 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/ntripBaseConfig/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/ntripBaseConfig/get");
     this->tree.addNode("<vehicleId>/<deviceId>/action/ntripBaseConfig/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rtcmSource");
+    this->tree.addNode("<vehicleId>/<deviceId>/action/rtcmSource/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack/set");
     this->tree.addNode("<vehicleId>/<deviceId>/action/lapCounterTrack/get");

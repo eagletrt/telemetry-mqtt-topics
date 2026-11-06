@@ -88,6 +88,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceId
+## DataRtcmRef
+### &lt;vehicleId>/&lt;deviceId>/data/rtcmRef
+> Last RTCM3 1005/1006 frame (position of the base antenna), retained: whoever switches to a base has its position at once
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
 ## DataBrusa
 ### &lt;vehicleId>/&lt;deviceId>/data/brusa
 > &lt;vehicleId>/&lt;deviceId>/data/brusa
@@ -363,6 +371,14 @@ vehicleIddeviceId
 ## StatusNtripBase
 ### &lt;vehicleId>/&lt;deviceId>/status/ntripBase
 > &lt;vehicleId>/&lt;deviceId>/status/ntripBase
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: Yes
+- **Variables**:
+vehicleIddeviceId
+## StatusRtcmSource
+### &lt;vehicleId>/&lt;deviceId>/status/rtcmSource
+> &lt;vehicleId>/&lt;deviceId>/status/rtcmSource (JSON, retained): ack of the forwarder to the source command and periodic status of the RTCM it receives
 - **Quality of Service**: 1
 - **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 0 1 2 3 4 128 129 
 - **Retain**: Yes
@@ -859,6 +875,22 @@ vehicleIddeviceId
 ## ActionNtripBaseConfigContent
 ### &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/content
 > &lt;vehicleId>/&lt;deviceId>/action/ntripBaseConfig/content
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 128 129 131 - **Publish Roles**: 0 1 128 129 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionRtcmSource
+### &lt;vehicleId>/&lt;deviceId>/action/rtcmSource
+> &lt;vehicleId>/&lt;deviceId>/action/rtcmSource
+- **Quality of Service**: 0
+- **Subscribe Roles**: 0 1 2 3 4 128 129 - **Publish Roles**: 0 1 2 3 4 128 129 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceId
+## ActionRtcmSourceSet
+### &lt;vehicleId>/&lt;deviceId>/action/rtcmSource/set
+> &lt;vehicleId>/&lt;deviceId>/action/rtcmSource/set (JSON, retained): the server tells the forwarder which RTCM source to read (mqtt topic or ntrip profile)
 - **Quality of Service**: 0
 - **Subscribe Roles**: 0 1 128 129 131 - **Publish Roles**: 0 1 128 129 131 
 - **Retain**: No

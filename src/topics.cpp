@@ -21,6 +21,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -55,6 +56,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
@@ -107,6 +109,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -175,6 +179,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -209,6 +214,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
@@ -261,6 +267,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -327,6 +335,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -361,6 +370,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
@@ -410,6 +420,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -476,6 +487,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -510,6 +522,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
@@ -559,6 +572,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -625,6 +639,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -659,6 +674,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusMongoManagerStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
@@ -708,6 +724,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -814,6 +831,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -900,6 +919,8 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -984,6 +1005,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
@@ -1040,6 +1062,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -1053,6 +1076,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
@@ -1105,6 +1129,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1173,6 +1199,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
@@ -1223,6 +1250,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1289,6 +1318,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
@@ -1336,6 +1366,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1402,6 +1433,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
@@ -1449,6 +1481,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1515,6 +1548,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
@@ -1562,6 +1596,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterConfigContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfig(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1628,6 +1663,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -1662,6 +1698,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommandsSetValues(vehicleId, deviceId));
@@ -1712,6 +1749,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1747,6 +1786,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicDataSimulator(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataGps(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataRtcm(vehicleId, deviceId));
+        ret.emplace_back(GetTopicDataRtcmRef(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataBrusa(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataTemporary(vehicleId, deviceId));
         ret.emplace_back(GetTopicDataLaps(vehicleId, deviceId));
@@ -1781,6 +1821,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicStatusAlert(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusCanFrequencies(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusNtripBase(vehicleId, deviceId));
+        ret.emplace_back(GetTopicStatusRtcmSource(vehicleId, deviceId));
         ret.emplace_back(GetTopicStatusLapCounterStatus(vehicleId, deviceId));
         ret.emplace_back(GetTopicAsCommands(vehicleId, deviceId));
         ret.emplace_back(GetTopicFileTransactionRequest(vehicleId, deviceId));
@@ -1829,6 +1870,8 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSource(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrack(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
@@ -1874,6 +1917,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionNtripBaseConfigSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionNtripBaseConfigContent(vehicleId, deviceId));
+        ret.emplace_back(GetTopicActionRtcmSourceSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackSet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackGet(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
@@ -1928,6 +1972,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -1962,6 +2007,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -2014,6 +2060,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2102,6 +2150,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -2136,6 +2185,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -2188,6 +2238,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2276,6 +2328,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -2310,6 +2363,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -2359,6 +2413,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2426,6 +2481,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_get:
@@ -2450,6 +2506,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -2484,6 +2541,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -2533,6 +2591,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2600,6 +2659,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_get:
@@ -2624,6 +2684,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -2658,6 +2719,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -2707,6 +2769,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2774,6 +2837,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_get:
@@ -2838,6 +2902,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -2880,6 +2946,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -2914,6 +2981,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::info_track_config:
             case Topic::info_version:
             case Topic::info_version_libcan:
@@ -3011,6 +3079,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -3053,6 +3123,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -3087,6 +3158,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::info_track_config:
             case Topic::info_version:
             case Topic::info_version_libcan:
@@ -3165,6 +3237,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_odometer:
@@ -3183,6 +3256,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -3244,6 +3318,8 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -3336,6 +3412,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
@@ -3382,6 +3459,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -3413,6 +3491,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
@@ -3452,6 +3531,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_kill:
             case Topic::action_start:
@@ -3500,6 +3580,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -3513,6 +3594,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
@@ -3565,6 +3647,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -3675,6 +3759,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
@@ -3725,6 +3810,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -3786,6 +3873,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -3850,6 +3938,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
@@ -3897,6 +3986,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -3958,6 +4048,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4000,6 +4091,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_content:
@@ -4025,6 +4117,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
@@ -4072,6 +4165,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -4133,6 +4227,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4175,6 +4270,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_content:
@@ -4200,6 +4296,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
@@ -4247,6 +4344,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_config_get:
             case Topic::action_lap_counter_config_content:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -4308,6 +4406,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4350,6 +4449,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_session_by_year_month_content:
@@ -4375,6 +4475,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4409,6 +4510,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
@@ -4459,6 +4561,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -4550,6 +4654,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4584,6 +4689,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::file_transaction_request:
@@ -4632,6 +4738,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -4729,6 +4837,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4764,6 +4873,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::status_mongo_manager_status:
             case Topic::as_commands:
@@ -4823,6 +4933,8 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
@@ -4904,6 +5016,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_ntrip_base_config_set:
             case Topic::action_ntrip_base_config_get:
             case Topic::action_ntrip_base_config_content:
+            case Topic::action_rtcm_source_set:
             case Topic::action_lap_counter_track_set:
             case Topic::action_lap_counter_track_get:
             case Topic::action_lap_counter_track_content:
@@ -4949,6 +5062,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::data_simulator:
             case Topic::data_gps:
             case Topic::data_rtcm:
+            case Topic::data_rtcm_ref:
             case Topic::data_brusa:
             case Topic::data_temporary:
             case Topic::data_laps:
@@ -4984,6 +5098,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::status_alert:
             case Topic::status_can_frequencies:
             case Topic::status_ntrip_base:
+            case Topic::status_rtcm_source:
             case Topic::status_lap_counter_status:
             case Topic::as_commands:
             case Topic::as_commands_set_values:
@@ -5031,6 +5146,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_lap_counter_config:
             case Topic::action_ntrip_base_config:
+            case Topic::action_rtcm_source:
             case Topic::action_lap_counter_track:
             case Topic::action_kill:
             case Topic::action_start:
@@ -5090,6 +5206,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicDataGps(vehicleId, deviceId);
         case Topic::data_rtcm: 
             return GetTopicDataRtcm(vehicleId, deviceId);
+        case Topic::data_rtcm_ref: 
+            return GetTopicDataRtcmRef(vehicleId, deviceId);
         case Topic::data_brusa: 
             return GetTopicDataBrusa(vehicleId, deviceId);
         case Topic::data_temporary: 
@@ -5160,6 +5278,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicStatusCanFrequencies(vehicleId, deviceId);
         case Topic::status_ntrip_base: 
             return GetTopicStatusNtripBase(vehicleId, deviceId);
+        case Topic::status_rtcm_source: 
+            return GetTopicStatusRtcmSource(vehicleId, deviceId);
         case Topic::status_lap_counter_status: 
             return GetTopicStatusLapCounterStatus(vehicleId, deviceId);
         case Topic::status_mongo_manager_status: 
@@ -5284,6 +5404,10 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicActionNtripBaseConfigGet(vehicleId, deviceId);
         case Topic::action_ntrip_base_config_content: 
             return GetTopicActionNtripBaseConfigContent(vehicleId, deviceId);
+        case Topic::action_rtcm_source: 
+            return GetTopicActionRtcmSource(vehicleId, deviceId);
+        case Topic::action_rtcm_source_set: 
+            return GetTopicActionRtcmSourceSet(vehicleId, deviceId);
         case Topic::action_lap_counter_track: 
             return GetTopicActionLapCounterTrack(vehicleId, deviceId);
         case Topic::action_lap_counter_track_set: 
@@ -5489,6 +5613,14 @@ TopicMessage GetTopicDataGps(const std::string& vehicleId, const std::string& de
 
 TopicMessage GetTopicDataRtcm(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "data/rtcm";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicDataRtcmRef(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "data/rtcmRef";
     int qos = 0;
     bool retain = false;
 
@@ -5769,6 +5901,14 @@ TopicMessage GetTopicStatusCanFrequencies(const std::string& vehicleId, const st
 
 TopicMessage GetTopicStatusNtripBase(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "status/ntripBase";
+    int qos = 1;
+    bool retain = true;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicStatusRtcmSource(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "status/rtcmSource";
     int qos = 1;
     bool retain = true;
 
@@ -6265,6 +6405,22 @@ TopicMessage GetTopicActionNtripBaseConfigGet(const std::string& vehicleId, cons
 
 TopicMessage GetTopicActionNtripBaseConfigContent(const std::string& vehicleId, const std::string& deviceId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "action/ntripBaseConfig/content";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionRtcmSource(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rtcmSource";
+    int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicActionRtcmSourceSet(const std::string& vehicleId, const std::string& deviceId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "action/rtcmSource/set";
     int qos = 0;
     bool retain = false;
 

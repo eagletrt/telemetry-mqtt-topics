@@ -270,6 +270,29 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/data/rtcmRef",
+        "alias": "DataRtcmRef",
+        "description": "Last RTCM3 1005/1006 frame (position of the base antenna), retained: whoever switches to a base has its position at once",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/data/brusa",
         "alias": "DataBrusa",
         "description": "<vehicleId>/<deviceId>/data/brusa",
@@ -1077,6 +1100,33 @@
         "topic": "<vehicleId>/<deviceId>/status/ntripBase",
         "alias": "StatusNtripBase",
         "description": "<vehicleId>/<deviceId>/status/ntripBase",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": true,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/status/rtcmSource",
+        "alias": "StatusRtcmSource",
+        "description": "<vehicleId>/<deviceId>/status/rtcmSource (JSON, retained): ack of the forwarder to the source command and periodic status of the RTCM it receives",
         "qos": 1,
         "subscribe_roles": [
             "0",
@@ -2741,6 +2791,60 @@
         "topic": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
         "alias": "ActionNtripBaseConfigContent",
         "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "128",
+            "129",
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rtcmSource",
+        "alias": "ActionRtcmSource",
+        "description": "<vehicleId>/<deviceId>/action/rtcmSource",
+        "qos": 0,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "128",
+            "129"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/action/rtcmSource/set",
+        "alias": "ActionRtcmSourceSet",
+        "description": "<vehicleId>/<deviceId>/action/rtcmSource/set (JSON, retained): the server tells the forwarder which RTCM source to read (mqtt topic or ntrip profile)",
         "qos": 0,
         "subscribe_roles": [
             "0",
