@@ -137,6 +137,10 @@
                 "alias": "DataRtcm",
                 "description": "Raw RTCM3 frames (not protobuf) of the base station corrections"
               },
+              "rtcmRef": {
+                "alias": "DataRtcmRef",
+                "description": "Last RTCM3 1005/1006 frame (position of the base antenna), retained: whoever switches to a base has its position at once"
+              },
               "brusa": {
                 "alias": "DataBrusa",
                 "description": "<vehicleId>/<deviceId>/data/brusa"
@@ -459,6 +463,10 @@
               "ntripBase": {
                 "alias": "StatusNtripBase",
                 "description": "<vehicleId>/<deviceId>/status/ntripBase"
+              },
+              "rtcmSource": {
+                "alias": "StatusRtcmSource",
+                "description": "<vehicleId>/<deviceId>/status/rtcmSource (JSON, retained): ack of the forwarder to the source command and periodic status of the RTCM it receives"
               },
               "lapCounterStatus": {
                 "alias": "StatusLapCounterStatus",
@@ -1347,6 +1355,30 @@
                   "content": {
                     "alias": "ActionNtripBaseConfigContent",
                     "description": "<vehicleId>/<deviceId>/action/ntripBaseConfig/content",
+                    "subscribe_roles": [
+                      "0",
+                      "1",
+                      "128",
+                      "129",
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "128",
+                      "129",
+                      "131"
+                    ]
+                  }
+                }
+              },
+              "rtcmSource": {
+                "alias": "ActionRtcmSource",
+                "description": "<vehicleId>/<deviceId>/action/rtcmSource",
+                "sub_topics": {
+                  "set": {
+                    "alias": "ActionRtcmSourceSet",
+                    "description": "<vehicleId>/<deviceId>/action/rtcmSource/set (JSON, retained): the server tells the forwarder which RTCM source to read (mqtt topic or ntrip profile)",
                     "subscribe_roles": [
                       "0",
                       "1",
