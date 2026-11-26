@@ -1812,6 +1812,21 @@
                   "transactionId"
                 ],
                 "sub_topics": {
+                  "request": {
+                    "alias": "QueryInfluxRequest",
+                    "description": "<vehicleId>/<deviceId>/query/<transactionId>/request",
+                    "qos": 1,
+                    "subscribe_roles": [
+                      "131"
+                    ],
+                    "publish_roles": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4"
+                    ]
+                  },
                   "status": {
                     "alias": "QueryInfluxStatus",
                     "description": "<vehicleId>/<deviceId>/query/<transactionId>/Influx/status",
@@ -1845,7 +1860,27 @@
                       },
                       "content": {
                         "alias": "QueryInfluxDataContent",
-                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content"
+                        "description": "<vehicleId>/<deviceId>/query/<transactionId>/InfluxData/content",
+                        "sub_topics": {
+                          "<dataName>": {
+                            "alias": "QueryInfluxDataChunk",
+                            "description": "<vehicleId>/<deviceId>/query/<transactionId>/data/content/<network>--<measurement>",
+                            "qos": 1,
+                            "variables": [
+                              "dataName"
+                            ],
+                            "subscribe_roles": [
+                              "0",
+                              "1",
+                              "2",
+                              "3",
+                              "4"
+                            ],
+                            "publish_roles": [
+                              "131"
+                            ]
+                          }
+                        }
                       }
                     }
                   },
