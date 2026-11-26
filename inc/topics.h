@@ -154,44 +154,46 @@ enum class Topic
     action_can_send_content = 130,
     query_plain = 131,
     query = 132,
-    query_influx_status = 133,
-    query_influx_data = 134,
-    query_influx_data_get = 135,
-    query_influx_data_set = 136,
-    query_influx_data_content = 137,
-    query_session_by_year_month = 138,
-    query_session_by_year_month_get = 139,
-    query_session_by_year_month_content = 140,
-    query_session_by_day_range = 141,
-    query_session_by_day_range_get = 142,
-    query_session_by_day_range_content = 143,
-    query_track_by_session = 144,
-    query_track_by_session_get = 145,
-    query_track_by_session_content = 146,
-    query_lap_counter_layouts = 147,
-    query_lap_counter_layouts_get = 148,
-    query_lap_counter_layouts_set = 149,
-    query_lap_counter_layouts_content = 150,
-    query_lap_counter_times = 151,
-    query_lap_counter_times_get = 152,
-    query_lap_counter_times_set = 153,
-    query_lap_counter_times_content = 154,
-    query_lap_counter_lap_records = 155,
-    query_lap_counter_lap_records_get = 156,
-    query_lap_counter_lap_records_set = 157,
-    query_lap_counter_lap_records_content = 158,
-    query_gps_origins = 159,
-    query_gps_origins_get = 160,
-    query_gps_origins_set = 161,
-    query_gps_origins_content = 162,
-    query_baseline = 163,
-    query_baseline_get = 164,
-    query_baseline_set = 165,
-    query_baseline_content = 166,
-    query_custom_plots = 167,
-    query_custom_plots_get = 168,
-    query_custom_plots_set = 169,
-    query_custom_plots_content = 170
+    query_influx_request = 133,
+    query_influx_status = 134,
+    query_influx_data = 135,
+    query_influx_data_get = 136,
+    query_influx_data_set = 137,
+    query_influx_data_content = 138,
+    query_influx_data_chunk = 139,
+    query_session_by_year_month = 140,
+    query_session_by_year_month_get = 141,
+    query_session_by_year_month_content = 142,
+    query_session_by_day_range = 143,
+    query_session_by_day_range_get = 144,
+    query_session_by_day_range_content = 145,
+    query_track_by_session = 146,
+    query_track_by_session_get = 147,
+    query_track_by_session_content = 148,
+    query_lap_counter_layouts = 149,
+    query_lap_counter_layouts_get = 150,
+    query_lap_counter_layouts_set = 151,
+    query_lap_counter_layouts_content = 152,
+    query_lap_counter_times = 153,
+    query_lap_counter_times_get = 154,
+    query_lap_counter_times_set = 155,
+    query_lap_counter_times_content = 156,
+    query_lap_counter_lap_records = 157,
+    query_lap_counter_lap_records_get = 158,
+    query_lap_counter_lap_records_set = 159,
+    query_lap_counter_lap_records_content = 160,
+    query_gps_origins = 161,
+    query_gps_origins_get = 162,
+    query_gps_origins_set = 163,
+    query_gps_origins_content = 164,
+    query_baseline = 165,
+    query_baseline_get = 166,
+    query_baseline_set = 167,
+    query_baseline_content = 168,
+    query_custom_plots = 169,
+    query_custom_plots_get = 170,
+    query_custom_plots_set = 171,
+    query_custom_plots_content = 172
 };
 
 struct TopicMessage
@@ -203,13 +205,13 @@ struct TopicMessage
     bool retain;
 };
 
-std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
-std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName);
+std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName);
 
 bool CanSubscribe(Role role, Topic topic);
 bool CanPublish(Role role, Topic topic);
 
-TopicMessage GetTopic(Topic topic, const std::string& vehicleId = "<vehicleId>", const std::string& deviceId = "<deviceId>", const std::string& transactionId = "<transactionId>");
+TopicMessage GetTopic(Topic topic, const std::string& vehicleId = "<vehicleId>", const std::string& deviceId = "<deviceId>", const std::string& transactionId = "<transactionId>", const std::string& dataName = "<dataName>");
 TopicMessage GetTopicVehicleId(const std::string& vehicleId);
 TopicMessage GetTopicDeviceId(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicDeviceVersion(const std::string& vehicleId, const std::string& deviceId);
@@ -343,11 +345,13 @@ TopicMessage GetTopicActionCanSend(const std::string& vehicleId, const std::stri
 TopicMessage GetTopicActionCanSendContent(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQueryPlain(const std::string& vehicleId, const std::string& deviceId);
 TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxRequest(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxStatus(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxData(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataSet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQueryInfluxDataContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+TopicMessage GetTopicQueryInfluxDataChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName);
 TopicMessage GetTopicQuerySessionByYearMonth(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthGet(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
 TopicMessage GetTopicQuerySessionByYearMonthContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);

@@ -1064,6 +1064,14 @@ vehicleIddeviceId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryInfluxRequest
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/request
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/request
+- **Quality of Service**: 1
+- **Subscribe Roles**: 131 - **Publish Roles**: 0 1 2 3 4 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionId
 ## QueryInfluxStatus
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/status
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/Influx/status
@@ -1104,6 +1112,14 @@ vehicleIddeviceIdtransactionId
 - **Retain**: No
 - **Variables**:
 vehicleIddeviceIdtransactionId
+## QueryInfluxDataChunk
+### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/content/&lt;dataName>
+> &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/data/content/&lt;network>--&lt;measurement>
+- **Quality of Service**: 1
+- **Subscribe Roles**: 0 1 2 3 4 - **Publish Roles**: 131 
+- **Retain**: No
+- **Variables**:
+vehicleIddeviceIdtransactionIddataName
 ## QuerySessionByYearMonth
 ### &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth
 > &lt;vehicleId>/&lt;deviceId>/query/&lt;transactionId>/SessionByYearMonth

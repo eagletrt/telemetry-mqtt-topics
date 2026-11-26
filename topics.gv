@@ -132,11 +132,13 @@ graph {
 "canSend" -- "content";
 "<deviceId>" -- "query";
 "query" -- "<transactionId>";
+"<transactionId>" -- "request";
 "<transactionId>" -- "status";
 "<transactionId>" -- "data";
 "data" -- "get";
 "data" -- "set";
 "data" -- "content";
+"content" -- "<dataName>";
 "<transactionId>" -- "SessionByYearMonth";
 "SessionByYearMonth" -- "get";
 "SessionByYearMonth" -- "content";

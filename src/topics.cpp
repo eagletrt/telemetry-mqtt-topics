@@ -5,7 +5,7 @@ namespace MQTTTopics
 TopicMessage::TopicMessage(std::string&& topic, int qos, bool retain) :
     topic(topic), qos(qos), retain(retain) {}
 
-std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName) {
     std::vector<TopicMessage> ret;
     
     switch(role) {
@@ -137,6 +137,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -293,6 +294,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -445,6 +447,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -597,6 +600,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -749,6 +753,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -1011,6 +1016,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicActionStopBaseline(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthGet(vehicleId, deviceId, transactionId));
@@ -1046,7 +1052,7 @@ std::vector<TopicMessage> GetSubscribeTopics(Role role, const std::string& vehic
     return ret;
 }
 
-std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName) {
     std::vector<TopicMessage> ret;
     
     switch(role) {
@@ -1152,6 +1158,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionCanSendContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
@@ -1271,6 +1278,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
@@ -1386,6 +1394,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
@@ -1501,6 +1510,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
@@ -1616,6 +1626,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionResetLapCounter(vehicleId, deviceId));
         ret.emplace_back(GetTopicQueryPlain(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxData(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxDataGet(vehicleId, deviceId, transactionId));
@@ -1923,6 +1934,7 @@ std::vector<TopicMessage> GetPublishTopics(Role role, const std::string& vehicle
         ret.emplace_back(GetTopicActionLapCounterTrackContent(vehicleId, deviceId));
         ret.emplace_back(GetTopicQuery(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId));
+        ret.emplace_back(GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName));
         ret.emplace_back(GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByYearMonthContent(vehicleId, deviceId, transactionId));
         ret.emplace_back(GetTopicQuerySessionByDayRange(vehicleId, deviceId, transactionId));
@@ -2088,6 +2100,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -2128,6 +2141,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_handcart_settings_get:
             case Topic::raw_json_config_set:
             case Topic::raw_json_config_get:
+            case Topic::query_influx_request:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
@@ -2264,6 +2278,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -2306,6 +2321,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_get:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_request:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
@@ -2438,6 +2454,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -2484,6 +2501,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_request:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
@@ -2616,6 +2634,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -2662,6 +2681,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_request:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
@@ -2794,6 +2814,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -2840,6 +2861,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_request:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_day_range_get:
             case Topic::query_track_by_session_get:
@@ -2999,11 +3021,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_can_send_content:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -3177,11 +3201,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_can_send_content:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -3341,11 +3367,13 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_can_send_content:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -3418,6 +3446,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::action_lap_counter_track_content:
             case Topic::action_stop_baseline:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
@@ -3552,6 +3581,7 @@ bool CanSubscribe(Role role, Topic topic) {
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -3670,6 +3700,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_can_send_content:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
@@ -3736,6 +3767,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_baseline_config_content:
             case Topic::action_handcart_settings_content:
             case Topic::raw_json_config_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -3831,6 +3863,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
@@ -3915,6 +3948,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::raw_json_config_content:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -4006,6 +4040,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
@@ -4094,6 +4129,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -4185,6 +4221,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
@@ -4273,6 +4310,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -4364,6 +4402,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
@@ -4452,6 +4491,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_rtcm_source_set:
             case Topic::action_can_send:
             case Topic::action_can_send_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range_content:
             case Topic::query_track_by_session_content:
@@ -4612,11 +4652,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_can_send:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -4791,11 +4833,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_reset_lap_counter:
             case Topic::action_can_send:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -4956,11 +5000,13 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_can_send_content:
             case Topic::query_plain:
             case Topic::query:
+            case Topic::query_influx_request:
             case Topic::query_influx_status:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
             case Topic::query_influx_data_content:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_get:
             case Topic::query_session_by_year_month_content:
@@ -5022,6 +5068,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_lap_counter_track_content:
             case Topic::query:
             case Topic::query_influx_status:
+            case Topic::query_influx_data_chunk:
             case Topic::query_session_by_year_month:
             case Topic::query_session_by_year_month_content:
             case Topic::query_session_by_day_range:
@@ -5164,6 +5211,7 @@ bool CanPublish(Role role, Topic topic) {
             case Topic::action_can_send:
             case Topic::action_can_send_content:
             case Topic::query_plain:
+            case Topic::query_influx_request:
             case Topic::query_influx_data:
             case Topic::query_influx_data_get:
             case Topic::query_influx_data_set:
@@ -5182,7 +5230,7 @@ bool CanPublish(Role role, Topic topic) {
     return false;
 }
 
-TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName) {
     switch(topic) {
         case Topic::vehicle_id: 
             return GetTopicVehicleId(vehicleId);
@@ -5450,6 +5498,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicQueryPlain(vehicleId, deviceId);
         case Topic::query: 
             return GetTopicQuery(vehicleId, deviceId, transactionId);
+        case Topic::query_influx_request: 
+            return GetTopicQueryInfluxRequest(vehicleId, deviceId, transactionId);
         case Topic::query_influx_status: 
             return GetTopicQueryInfluxStatus(vehicleId, deviceId, transactionId);
         case Topic::query_influx_data: 
@@ -5460,6 +5510,8 @@ TopicMessage GetTopic(Topic topic, const std::string& vehicleId, const std::stri
             return GetTopicQueryInfluxDataSet(vehicleId, deviceId, transactionId);
         case Topic::query_influx_data_content: 
             return GetTopicQueryInfluxDataContent(vehicleId, deviceId, transactionId);
+        case Topic::query_influx_data_chunk: 
+            return GetTopicQueryInfluxDataChunk(vehicleId, deviceId, transactionId, dataName);
         case Topic::query_session_by_year_month: 
             return GetTopicQuerySessionByYearMonth(vehicleId, deviceId, transactionId);
         case Topic::query_session_by_year_month_get: 
@@ -6595,6 +6647,14 @@ TopicMessage GetTopicQuery(const std::string& vehicleId, const std::string& devi
     return TopicMessage(std::move(topic), qos, retain);
 }
 
+TopicMessage GetTopicQueryInfluxRequest(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "request";
+    int qos = 1;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
 TopicMessage GetTopicQueryInfluxStatus(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "status";
     int qos = 1;
@@ -6630,6 +6690,14 @@ TopicMessage GetTopicQueryInfluxDataSet(const std::string& vehicleId, const std:
 TopicMessage GetTopicQueryInfluxDataContent(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) {
     std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data/content";
     int qos = 0;
+    bool retain = false;
+
+    return TopicMessage(std::move(topic), qos, retain);
+}
+
+TopicMessage GetTopicQueryInfluxDataChunk(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName) {
+    std::string topic = vehicleId + "/" + deviceId + "/" + "query" + "/" + transactionId + "/" + "data/content" + "/" + dataName;
+    int qos = 1;
     bool retain = false;
 
     return TopicMessage(std::move(topic), qos, retain);

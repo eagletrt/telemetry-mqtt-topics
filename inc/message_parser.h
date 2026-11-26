@@ -16,11 +16,12 @@ public:
     
     struct Variables
     {
-        Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId);
+        Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName);
 
         std::string vehicleId;
         std::string deviceId;
         std::string transactionId;
+        std::string dataName;
     };
 
 private:

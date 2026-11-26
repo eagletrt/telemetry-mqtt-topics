@@ -4,8 +4,8 @@
 
 namespace MQTTTopics
 {
-MessageParser::Variables::Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId) :
-    vehicleId(vehicleId), deviceId(deviceId), transactionId(transactionId) {}
+MessageParser::Variables::Variables(const std::string& vehicleId, const std::string& deviceId, const std::string& transactionId, const std::string& dataName) :
+    vehicleId(vehicleId), deviceId(deviceId), transactionId(transactionId), dataName(dataName) {}
 
 void MessageParser::TopicNode::addNode(const std::string& topic) {
     if(topic.empty()) {
@@ -74,6 +74,8 @@ void MessageParser::TopicNode::findNodesVariablesRec(const std::string& topic, c
             } else if(next.first == "<deviceId>" && subTopic == variables.deviceId) {
                 match = true;
             } else if(next.first == "<transactionId>" && subTopic == variables.transactionId) {
+                match = true;
+            } else if(next.first == "<dataName>" && subTopic == variables.dataName) {
                 match = true;
             }
 
@@ -222,11 +224,13 @@ MessageParser::MessageParser() {
     this->tree.addNode("<vehicleId>/<deviceId>/action/canSend/content");
     this->tree.addNode("<vehicleId>/<deviceId>/query");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/request");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/status");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/set");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/content");
+    this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/data/content/<dataName>");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/get");
     this->tree.addNode("<vehicleId>/<deviceId>/query/<transactionId>/SessionByYearMonth/content");

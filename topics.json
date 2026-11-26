@@ -3438,6 +3438,28 @@
         ]
     },
     {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/request",
+        "alias": "QueryInfluxRequest",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/request",
+        "qos": 1,
+        "subscribe_roles": [
+            "131"
+        ],
+        "publish_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId"
+        ]
+    },
+    {
         "topic": "<vehicleId>/<deviceId>/query/<transactionId>/status",
         "alias": "QueryInfluxStatus",
         "description": "<vehicleId>/<deviceId>/query/<transactionId>/Influx/status",
@@ -3567,6 +3589,29 @@
             "vehicleId",
             "deviceId",
             "transactionId"
+        ]
+    },
+    {
+        "topic": "<vehicleId>/<deviceId>/query/<transactionId>/data/content/<dataName>",
+        "alias": "QueryInfluxDataChunk",
+        "description": "<vehicleId>/<deviceId>/query/<transactionId>/data/content/<network>--<measurement>",
+        "qos": 1,
+        "subscribe_roles": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "publish_roles": [
+            "131"
+        ],
+        "retain": false,
+        "variables": [
+            "vehicleId",
+            "deviceId",
+            "transactionId",
+            "dataName"
         ]
     },
     {
